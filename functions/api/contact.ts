@@ -59,9 +59,9 @@ export async function onRequest(context: EventContext<Env, any, any>) {
     }
     
     // Save to database
-    console.log('[contact] Attempting database insert...');
+    console.log('[contact] Attempting database insert with status...');
     const insertStatement = env.DB.prepare(
-      'INSERT INTO contacts (name, email, phone, business, city, state, message) VALUES (?, ?, ?, ?, ?, ?, ?)'
+      'INSERT INTO contacts (name, email, phone, business, city, state, message, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
     )
       .bind(
         body.name,
@@ -71,10 +71,11 @@ export async function onRequest(context: EventContext<Env, any, any>) {
         body.city || null,
         body.state || null,
         body.message,
+        'new'
       );
 
     const result = await insertStatement.run();
-    console.log('[contact] Insert result success:', result.success);
+    console.log('[contact] Insert result:', JSON.stringify(result));
     
     const contactId = result.meta?.last_row_id ?? null;
     
@@ -96,6 +97,7 @@ export async function onRequest(context: EventContext<Env, any, any>) {
       id: contactId,
       message: 'Contact submitted successfully',
       emailSent: emailResponse.success,
+      emailError: emailResponse.error,
     }), {
       headers: { 
         'Content-Type': 'application/json',
@@ -125,7 +127,7 @@ async function sendEmailNotification(env: Env, contact: {
 }) {
   try {
     // Get admin email from environment or use a default
-    const adminEmail = env.ADMIN_EMAIL || 'admin@salescowboy.com.ng';
+    const adminEmail = env.ADMIN_EMAIL || 'hello@salescowboy.com.ng';
     
     // MailChannels API endpoint
     const emailRequest = {

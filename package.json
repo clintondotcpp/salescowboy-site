@@ -9,7 +9,7 @@
     "preview": "npx wrangler pages dev out",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "yarn build && npx wrangler pages deploy out",
+    "deploy": "yarn build && npx wrangler pages deploy out --branch master",
     "db:create": "npx wrangler d1 create salescowboy-db",
     "db:migrate": "npx wrangler d1 execute salescowboy-db --file=./schema.sql",
     "db:migrate:local": "npx wrangler d1 execute salescowboy-db --local --file=./schema.sql",

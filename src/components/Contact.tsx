@@ -85,7 +85,8 @@ const Contact = () => {
         userData.country = await hashSHA256("ng");
 
         try {
-          await fetch("/api/meta-capi", {
+          console.log("[Contact] Sending CAPI Lead event...");
+          const capResponse = await fetch("/api/meta-capi", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -96,13 +97,21 @@ const Contact = () => {
               customData: { currency: "NGN", value: 0 },
             }),
           });
+          const capData = await capResponse.json();
+          console.log("[Contact] CAPI Response:", capData);
         } catch (capError) {
-          console.error("Meta CAPI error", capError);
+          console.error("[Contact] Meta CAPI error", capError);
         }
 
+        console.log("[Contact] Submission result:", data);
+        // Temporary alert to help debug when console logs aren't visible
+        alert("Server Result: " + JSON.stringify(data));
+        
         toast({
-          title: "Message Sent!",
-          description: "We'll get back to you within 24 hours.",
+          title: data.emailSent ? "Message Sent!" : "Message Stored (Email Failed)",
+          description: data.emailSent 
+            ? "We'll get back to you within 24 hours." 
+            : `Data saved but email failed: ${data.emailError || 'Unknown error'}.`,
         });
         setFormData({
           name: "",

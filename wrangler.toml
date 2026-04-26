@@ -1,0 +1,25 @@
+name = "salescowboy-site"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "out"
+
+# Custom domain configuration
+# Domain (planned): salescowboy.com.ng
+# Note: Cloudflare will route traffic to this worker once the domain routes are active in the dashboard.
+
+[[d1_databases]]
+binding = "DB"
+database_name = "salescowboy-db"
+database_id = "0467a96a-b7b5-4fd9-a70c-26b8359f31f4"
+
+[env.production]
+name = "salescowboy-site"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "salescowboy-db"
+database_id = "0467a96a-b7b5-4fd9-a70c-26b8359f31f4"
+
+[env.production.vars]
+ENVIRONMENT = "production"
+DOMAIN = "salescowboy.com.ng"
+ADMIN_EMAIL = "hello@salescowboy.com.ng"

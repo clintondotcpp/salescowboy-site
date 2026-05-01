@@ -28,7 +28,14 @@ export async function onRequest(context: EventContext<{ META_PIXEL_ID: string; M
     }
   
     try {
-      const { eventName, eventId, userData = {}, customData = {}, url } = await request.json();
+      const body = (await request.json()) as {
+        eventName: string;
+        eventId: string;
+        userData?: Record<string, any>;
+        customData?: Record<string, any>;
+        url: string;
+      };
+      const { eventName, eventId, userData = {}, customData = {}, url } = body;
       const clientUserAgent = request.headers.get("user-agent") ?? undefined;
       const clientIp = request.headers.get("cf-connecting-ip") ?? request.headers.get("x-forwarded-for") ?? undefined;
 

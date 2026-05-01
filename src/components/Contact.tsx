@@ -104,14 +104,10 @@ const Contact = () => {
         }
 
         console.log("[Contact] Submission result:", data);
-        // Temporary alert to help debug when console logs aren't visible
-        alert("Server Result: " + JSON.stringify(data));
         
         toast({
-          title: data.emailSent ? "Message Sent!" : "Message Stored (Email Failed)",
-          description: data.emailSent 
-            ? "We'll get back to you within 24 hours." 
-            : `Data saved but email failed: ${data.emailError || 'Unknown error'}.`,
+          title: "Message Sent!",
+          description: "We'll get back to you within 24 hours.",
         });
         setFormData({
           name: "",

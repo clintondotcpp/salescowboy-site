@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "noEmit": true,
     "isolatedModules": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "typeRoots": ["../node_modules/@types", "../node_modules"]
   },
   "include": ["**/*.ts"]
 }

@@ -1,15 +1,18 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const CTABanner = () => {
   return (
     <section 
       className="relative py-32 overflow-hidden"
-      style={{
-        backgroundImage: `url(/assets/sunset-cta.jpg)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
     >
+      <Image
+        src="/assets/sunset-cta.jpg"
+        alt="CTA Background"
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
       <div className="absolute inset-0 bg-background/70" />
       
       <div className="container mx-auto px-4 relative z-10">

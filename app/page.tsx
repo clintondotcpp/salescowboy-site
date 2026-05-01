@@ -12,6 +12,7 @@ import WhyChoose from "@/components/WhyChoose";
 import Testimonials from "@/components/Testimonials";
 import CTABanner from "@/components/CTABanner";
 import Contact from "@/components/Contact";
+import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PromoBanner />
         <About />
         <Services />
         <SoftwareDevelopment />
@@ -32,6 +34,7 @@ export default function Home() {
         <WhyChoose />
         <Testimonials />
         <CTABanner />
+        <PromoBanner />
         <Contact />
       </main>
       <Footer />

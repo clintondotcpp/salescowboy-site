@@ -1,16 +1,20 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <section 
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(/assets/hero-bg.jpg)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
     >
+      <Image
+        src="/assets/hero-bg.jpg"
+        alt="SalesCowboy Hero Background"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90" />
       
@@ -23,6 +27,15 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <a 
+            href="/website-promo" 
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-accent mb-8 hover:bg-primary/20 transition-all group"
+          >
+            <span className="flex w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-sm font-semibold tracking-wide uppercase">Limited Offer: Get a Website for ₦75,000</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+          
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Rye, serif' }}>
             Ride Your Brand to the Top.
           </h1>

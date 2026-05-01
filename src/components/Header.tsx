@@ -42,6 +42,9 @@ const Header = () => {
           <a href="#why-us" className="text-foreground hover:text-accent transition-colors">
             Why Us
           </a>
+          <a href="/website-promo" className="text-accent font-bold hover:text-primary transition-colors flex items-center gap-1">
+            ₦75k Website <span className="bg-primary text-white text-[10px] px-1 rounded uppercase">Hot</span>
+          </a>
           <a href="#contact" className="text-foreground hover:text-accent transition-colors">
             Contact
           </a>

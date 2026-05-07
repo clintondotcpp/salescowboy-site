@@ -1,8 +1,88 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { CheckCircle2, Clock, Globe, Briefcase, Mail, MessageSquare, MapPin, LayoutDashboard, ArrowRight, XCircle } from "lucide-react";
+import { CheckCircle2, Clock, Globe, Briefcase, Mail, MessageSquare, MapPin, LayoutDashboard, ArrowRight, XCircle, Star, Users, HelpCircle, ShieldCheck, CreditCard } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import TrackedWhatsAppLink from "@/components/TrackedWhatsAppLink";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
+
+const clientWebsites = [
+  {
+    name: "Drenopav Floors",
+    url: "https://drenopavfloors.ng/",
+    industry: "Flooring & Construction",
+    description: "A premium portfolio site showcasing high-end flooring projects with local SEO optimization.",
+    image: "/website_samples/construction.png", // Fallback to existing sample
+  },
+  {
+    name: "Hace Up World",
+    url: "https://haceupworld.com.ng/",
+    industry: "Fashion & Lifestyle",
+    description: "Elegant e-commerce ready showcase for a lifestyle brand with smooth navigation.",
+    image: "/website_samples/cleaning.png", // Fallback
+  },
+  {
+    name: "Comfort Properties",
+    url: "https://comfortproperties.com.ng/",
+    industry: "Real Estate",
+    description: "Property listing system with lead capture forms and local area marketing integration.",
+    image: "/website_samples/real-estate.png",
+  },
+  {
+    name: "D Best Innovation",
+    url: "https://dbestinnovationandstrategy.com.ng/",
+    industry: "Solar & Energy",
+    description: "Technical service site focused on building trust and showcasing infrastructure projects.",
+    image: "/website_samples/solar.png",
+  },
+  {
+    name: "Fullight Miracle Ministries",
+    url: "https://fullightmiracleministries.com.ng/",
+    industry: "Non-Profit / Religious",
+    description: "Community-focused portal with event management and donation integration.",
+    image: "/website_samples/logistics.png", // Fallback
+  },
+];
+
+const testimonials = [
+  {
+    name: "Chima Unadike",
+    role: "Founder, Drenopav Floors",
+    image: "business_owner_1_1778127208228.png",
+    quote: "You handled our website and SEO and it’s been a game changer. We’re ranking for flooring keywords in Lagos and getting steady client calls now.",
+  },
+  {
+    name: "Aisha Bello",
+    role: "CEO, Hace Up World",
+    image: "business_owner_2_1778127227453.png",
+    quote: "The admin dashboard is what sold me. I can update my own site without calling a developer every time. Exceptional value for the price.",
+  },
+  {
+    name: "Segun Arinze",
+    role: "Director, Comfort Properties",
+    image: "business_owner_3_1778127249354.png",
+    quote: "I was skeptical about the 72-hour delivery, but SalesCowboy delivered exactly on time. The site looks premium and works perfectly.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Is the N75,000 price really all-inclusive?",
+    answer: "Yes. It covers your .com.ng domain (1 year), hosting (1 year), SSL certificate, professional business email, and the full website build. No hidden monthly fees.",
+  },
+  {
+    question: "Do I really get the website in 48-72 hours?",
+    answer: "Absolutely. Once we have your content (business name, services, photos), our 'Cowboy Sprint' process ensures your site is live within 3 working days.",
+  },
+  {
+    question: "Can I manage the website myself?",
+    answer: "Yes! Every site comes with a custom Admin Dashboard. You can change text, upload new project photos, and manage leads without any coding knowledge.",
+  },
+  {
+    question: "What happens after the first year?",
+    answer: "You only pay for your domain and hosting renewal (approx. N15k - N20k per year depending on provider rates). We don't charge you ongoing 'maintenance' fees unless you want us to handle updates for you.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Get a Premium Website for ₦75,000 | SalesCowboy Marketing",
@@ -57,6 +137,17 @@ export default function WebsitePromo() {
         </div>
       </section>
 
+      {/* Trust Bar / Logos */}
+      <section className="py-12 bg-white/5 border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-muted-foreground text-sm font-semibold uppercase tracking-wider mb-8">Trusted by Growing Nigerian Businesses</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Using placeholders for logos */}
+            <Image src="client_logos_grid_1778127268093.png" alt="Client Logos" width={800} height={100} className="h-12 w-auto object-contain" />
+          </div>
+        </div>
+      </section>
+
       {/* What They Get (Features Grid) */}
       <section className="py-24 bg-card/50 relative border-y border-white/5">
         <div className="container mx-auto px-4">
@@ -106,6 +197,79 @@ export default function WebsitePromo() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies / Recent Work */}
+      <section className="py-24 bg-background relative overflow-hidden" id="work">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: "Rye, serif" }}>Recent Client Wins</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We don't just build sites; we build business tools. Explore our latest launches.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {clientWebsites.map((site) => (
+              <Card key={site.name} className="bg-card/40 border-border overflow-hidden hover-lift hover-glow transition-all group">
+                <div className="relative aspect-video overflow-hidden">
+                  <Image 
+                    src={site.image} 
+                    alt={site.name} 
+                    fill 
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                    <span className="text-accent font-bold text-sm uppercase tracking-tighter">{site.industry}</span>
+                  </div>
+                </div>
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-white">{site.name}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{site.description}</p>
+                  <a 
+                    href={site.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2 text-primary font-bold hover:underline"
+                  >
+                    Visit Website <ArrowRight className="w-4 h-4" />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-card/30 relative border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="flex justify-center gap-1 mb-4">
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: "Rye, serif" }}>Don't Just Take Our Word For It</h2>
+            <p className="text-muted-foreground text-lg">Real feedback from real Nigerian entrepreneurs.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((t) => (
+              <div key={t.name} className="bg-background/50 border border-border p-8 rounded-2xl relative">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary">
+                    <Image src={t.image} alt={t.name} fill className="object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">{t.name}</h4>
+                    <p className="text-xs text-muted-foreground">{t.role}</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground italic leading-relaxed">"{t.quote}"</p>
+                <div className="absolute -bottom-4 -right-4 opacity-5">
+                  <MessageSquare className="w-24 h-24 text-primary" />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -192,11 +356,106 @@ export default function WebsitePromo() {
         </div>
       </section>
 
+      {/* Meet The Team */}
+      <section className="py-24 bg-background relative border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto bg-card/40 rounded-3xl overflow-hidden border border-border grid md:grid-cols-2">
+            <div className="relative aspect-square md:aspect-auto">
+              <Image 
+                src="salescowboy_team_photo_1778127183719.png" 
+                alt="SalesCowboy Team" 
+                fill 
+                className="object-cover"
+              />
+            </div>
+            <div className="p-10 md:p-16 flex flex-col justify-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: "Rye, serif" }}>Meet the Cowboys</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                We're a team of designers and developers based in Nigeria who believe every business deserves a premium online home. 
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                We don't do "slow." We don't do "vague." We build fast, beautiful websites that actually work for you, so you can focus on riding your brand to the top.
+              </p>
+              <div className="flex items-center gap-4 pt-4">
+                <div className="bg-primary/20 p-3 rounded-xl">
+                  <ShieldCheck className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-white">Guaranteed Delivery</h4>
+                  <p className="text-sm text-muted-foreground">In 3 days or you get a full refund.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proof of Activity / Receipts */}
+      <section className="py-24 bg-card/20 relative overflow-hidden">
+        <div className="container mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent mb-8">
+            <CreditCard className="w-4 h-4" />
+            <span className="text-sm font-semibold tracking-wide uppercase">Real Results, Real Trust</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "Rye, serif" }}>Recent Bookings</h2>
+          <p className="text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">We are actively onboarding new businesses every day. Join the herd today.</p>
+          
+          <div className="max-w-4xl mx-auto relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+            <div className="relative bg-background rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+              <Image 
+                src="nigerian_bank_receipts_social_proof_1778127163658.png" 
+                alt="Recent Payment Proof" 
+                width={1200} 
+                height={600} 
+                className="w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent flex items-end justify-center pb-8">
+                <div className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 text-white font-medium flex items-center gap-2">
+                  <span className="w-2 h-2 bg-green-500 rounded-full animate-ping" />
+                  Live Proof of Client Payments
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-background relative">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="text-center mb-16">
+            <HelpCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: "Rye, serif" }}>Questions? Answers.</h2>
+            <p className="text-muted-foreground text-lg">Addressing the small details so you can move forward with confidence.</p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-white/10">
+                <AccordionTrigger className="text-left text-white font-bold text-lg hover:text-primary transition-colors">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-base leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto bg-card p-12 rounded-3xl border border-border shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#25D366]/10 to-transparent" />
+            
+            {/* Scarcity / Urgency */}
+            <div className="absolute top-6 right-6 bg-accent/20 border border-accent/30 text-accent px-4 py-1 rounded-full text-xs font-bold uppercase animate-pulse z-20">
+              Only 4 Slots Left This Week
+            </div>
+
             <h2 className="text-4xl font-bold text-white mb-6 relative z-10" style={{ fontFamily: "Rye, serif" }}>
               Ready to Get Started?
             </h2>

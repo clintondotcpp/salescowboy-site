@@ -15,17 +15,27 @@ const TrackedWhatsAppLink = ({
   children, 
   eventName = "Lead" 
 }: TrackedWhatsAppLinkProps) => {
-  const handleClick = async () => {
-    const eventId = crypto.randomUUID();
+  const handleClick = async (e: React.MouseEvent) => {
+    // We don't prevent default as we want the link to open, 
+    // but we fire tracking first or in parallel.
+    
+    const eventId = typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2, 15);
     
     // Pixel tracking
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", eventName, { content_name: "WhatsApp Button Click" }, { eventID: eventId });
+      console.log(`[TrackedWhatsAppLink] Firing Pixel ${eventName} event...`);
+      window.fbq("track", eventName, { 
+        content_name: "WhatsApp Button Click",
+        content_category: "Conversion",
+        value: 0,
+        currency: "NGN"
+      }, { eventID: eventId });
     }
 
     // CAPI tracking
     try {
-      await fetch("/api/meta-capi", {
+      console.log(`[TrackedWhatsAppLink] Sending CAPI ${eventName} event...`);
+      const response = await fetch("/api/meta-capi", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -33,11 +43,17 @@ const TrackedWhatsAppLink = ({
           eventId,
           url: typeof window !== "undefined" ? window.location.href : "",
           userData: {},
-          customData: { content_name: "WhatsApp Button Click" },
+          customData: { 
+            content_name: "WhatsApp Button Click",
+            value: 0,
+            currency: "NGN"
+          },
         }),
       });
+      const data = await response.json();
+      console.log(`[TrackedWhatsAppLink] CAPI Response:`, data);
     } catch (error) {
-      console.error("CAPI error:", error);
+      console.error("[TrackedWhatsAppLink] Tracking error:", error);
     }
   };
 

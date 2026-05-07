@@ -15,16 +15,23 @@ const WhatsAppButton = ({
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const handleClick = async () => {
-    const eventId = crypto.randomUUID();
+    const eventId = typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2, 15);
     
     // Pixel tracking
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", eventName, { content_name: "WhatsApp Click" }, { eventID: eventId });
+      console.log(`[WhatsAppButton] Firing Pixel ${eventName} event...`);
+      window.fbq("track", eventName, { 
+        content_name: "WhatsApp Floating Click",
+        content_category: "Contact",
+        value: 0,
+        currency: "NGN"
+      }, { eventID: eventId });
     }
 
     // CAPI tracking
     try {
-      await fetch("/api/meta-capi", {
+      console.log(`[WhatsAppButton] Sending CAPI ${eventName} event...`);
+      const response = await fetch("/api/meta-capi", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -32,11 +39,17 @@ const WhatsAppButton = ({
           eventId,
           url: typeof window !== "undefined" ? window.location.href : "",
           userData: {},
-          customData: { content_name: "WhatsApp Click" },
+          customData: { 
+            content_name: "WhatsApp Floating Click",
+            value: 0,
+            currency: "NGN"
+          },
         }),
       });
+      const data = await response.json();
+      console.log(`[WhatsAppButton] CAPI Response:`, data);
     } catch (error) {
-      console.error("CAPI error:", error);
+      console.error("[WhatsAppButton] Tracking error:", error);
     }
   };
 

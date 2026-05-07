@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CheckCircle2, Globe, PenTool, TrendingUp, BarChart3, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import TrackedWhatsAppLink from "@/components/TrackedWhatsAppLink";
 
 export const metadata: Metadata = {
   title: "Real Estate Website & SEO Services | SalesCowboy Marketing Nigeria",
@@ -87,7 +88,7 @@ const RealEstateAgentsPage = () => {
                 <Link href="/#contact">Book Your Free Strategy Call</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="tel:+2348024045815">Talk to a Specialist</a>
+                <a href="tel:+2348104933232">Talk to a Specialist</a>
               </Button>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">Custom realtor website package: <span className="font-semibold">₦300,000</span> — delivered in 3 days with blog, admin dashboard, professional email, and Google Business Profile.</p>
@@ -248,9 +249,13 @@ const RealEstateAgentsPage = () => {
                 </a>
               </Button>
               <Button size="lg" variant="ghost" asChild>
-                <a href="https://wa.me/2348024045815" target="_blank" rel="noreferrer" className="text-primary">
+                <TrackedWhatsAppLink 
+                  href="https://wa.me/2348104933232" 
+                  eventName="Contact"
+                  className="text-primary font-semibold"
+                >
                   Chat on WhatsApp
-                </a>
+                </TrackedWhatsAppLink>
               </Button>
             </div>
           </div>

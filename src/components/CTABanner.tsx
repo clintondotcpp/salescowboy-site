@@ -22,7 +22,7 @@ const CTABanner = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground">
-            Let's build something legendary.
+            <strong>Sales Cowboy Marketing</strong> — Let's build something legendary for your Nigerian business.
           </p>
 
           <Button 

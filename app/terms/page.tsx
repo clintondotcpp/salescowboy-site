@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | SalesCowboy Marketing",
-  description: "Terms and conditions for using our services.",
+  title: "Terms of Service | Sales Cowboy Marketing Nigeria",
+  description: "Terms and conditions for using Sales Cowboy Marketing services and website.",
 };
 
 export default function TermsOfService() {
@@ -27,7 +27,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-bold text-foreground">2. Services</h2>
             <p>
-              SalesCowboy Marketing provides digital marketing, web development, and SEO services. All services are provided "as is" and are subject to availability.
+              <strong>Sales Cowboy Marketing</strong> provides digital marketing, web development, and SEO services. All services are provided "as is" and are subject to availability.
             </p>
           </section>
 

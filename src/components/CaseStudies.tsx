@@ -37,7 +37,7 @@ const CaseStudies = () => {
             From Rust to Gold — Real Client Wins.
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Results that speak louder than words
+            Sales Cowboy Marketing delivers results that speak louder than words. Client success stories and proven case studies.
           </p>
         </div>
 

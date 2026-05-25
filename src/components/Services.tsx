@@ -6,22 +6,22 @@ const services = [
   {
     icon: Code,
     title: "Web & Mobile Development",
-    description: "We build fast, beautiful, and conversion-ready websites and apps that turn visitors into customers.",
+    description: "We build fast, beautiful, and conversion-ready websites and apps that turn visitors into customers. Perfect for Nigerian businesses looking to establish their online presence.",
   },
   {
     icon: TrendingUp,
     title: "SEO Mastery",
-    description: "Outrank your competition and dominate Google search with our proven optimization strategies.",
+    description: "Outrank your competition and dominate Google search with our proven optimization strategies across Lagos, Abuja, and Nigeria.",
   },
   {
     icon: Share2,
     title: "Facebook Ads",
-    description: "High-ROI campaigns that capture leads, not just clicks. We turn ad spend into revenue.",
+    description: "High-ROI campaigns that capture leads, not just clicks. We turn ad spend into revenue for Nigerian businesses.",
   },
   {
     icon: Target,
     title: "Google Ads",
-    description: "Laser-targeted ad strategies that deliver measurable growth and maximum return on investment.",
+    description: "Laser-targeted ad strategies that deliver measurable growth and maximum return on investment for your business.",
   },
 ];
 
@@ -34,7 +34,7 @@ const Services = () => {
             Our Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive digital marketing solutions for Nigerian businesses that drive real results
+            Comprehensive digital marketing solutions offered by <strong>Sales Cowboy Marketing</strong> for Nigerian businesses that drive real results
           </p>
         </div>
 

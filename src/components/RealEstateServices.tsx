@@ -41,10 +41,10 @@ const RealEstateServices = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: 'Rye, serif' }}>
-            Real Estate Marketing Solutions
+            Real Estate Marketing Solutions by Sales Cowboy Marketing
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tailored digital marketing services for real estate agents and companies. Get more listings, more leads, and more closed deals.
+            Tailored digital marketing services from <strong>Sales Cowboy Marketing</strong> for real estate agents and companies across Lagos, Abuja and Nigeria. Get more listings, more leads, and more closed deals.
           </p>
         </div>
 

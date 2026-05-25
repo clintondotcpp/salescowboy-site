@@ -41,7 +41,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Web, SEO, and Ad Strategies That Conquer the Nigerian Market.
+            <strong>Sales Cowboy Marketing</strong> - Web, SEO, and Ad Strategies That Conquer the Nigerian Market in Lagos, Abuja & Beyond.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

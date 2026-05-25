@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | SalesCowboy Marketing",
-  description: "Our privacy policy and how we protect your data.",
+  title: "Privacy Policy | Sales Cowboy Marketing Nigeria",
+  description: "Privacy policy for Sales Cowboy Marketing - how we protect your data and privacy.",
 };
 
 export default function PrivacyPolicy() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-bold text-foreground">1. Introduction</h2>
             <p>
-              Welcome to SalesCowboy Marketing ("we," "our," or "us"). We are committed to protecting your personal data and your right to privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website salescowboy.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
+              Welcome to <strong>Sales Cowboy Marketing</strong> ("we," "our," or "us"). We are committed to protecting your personal data and your right to privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website salescowboy.com.ng, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
             </p>
           </section>
 

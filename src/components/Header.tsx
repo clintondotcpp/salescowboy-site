@@ -23,7 +23,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center">
-          <Image src="/assets/salescowboy-logo.png" alt="SalesCowboy Marketing" className="h-12 w-auto" width={48} height={48} />
+          <Image src="/assets/salescowboy-logo.png" alt="Sales Cowboy Marketing" className="h-12 w-auto" width={48} height={48} />
         </a>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -32,6 +32,9 @@ const Header = () => {
           </a>
           <a href="/real-estate-agents" className="text-foreground hover:text-accent transition-colors">
             Real Estate
+          </a>
+          <a href="/web-app-promo" className="text-foreground hover:text-accent transition-colors font-semibold">
+            Custom Apps
           </a>
           <a href="#software-development" className="text-foreground hover:text-accent transition-colors">
             Development

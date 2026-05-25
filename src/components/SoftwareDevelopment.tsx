@@ -46,10 +46,10 @@ const SoftwareDevelopment = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: 'Rye, serif' }}>
-            Software Development
+            Software Development Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We build powerful web and mobile applications that drive your business forward. From concept to deployment, we've got you covered.
+            Professional web and mobile applications by <strong>Sales Cowboy Marketing</strong>. We build powerful solutions that drive your business forward. From concept to deployment, we've got you covered.
           </p>
         </div>
 

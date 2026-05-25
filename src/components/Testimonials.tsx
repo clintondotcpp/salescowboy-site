@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     title: "CEO, TechStart Inc",
-    content: "SalesCowboy transformed our digital presence. Their SEO work tripled our organic traffic in just 4 months. The team's dedication and expertise are unmatched.",
+    content: "Sales Cowboy Marketing transformed our digital presence. Their SEO work tripled our organic traffic in just 4 months. The team's dedication and expertise are unmatched.",
     rating: 5,
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "David Martinez",
     title: "Marketing Director, Elite Services",
-    content: "Our new website is not just beautiful—it converts. SalesCowboy built us a site that perfectly represents our brand and drives real business results.",
+    content: "Our new website is not just beautiful—it converts. Sales Cowboy Marketing built us a site that perfectly represents our brand and drives real business results.",
     rating: 5,
   },
 ];

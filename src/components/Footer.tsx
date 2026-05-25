@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Image src="/assets/salescowboy-logo.png" alt="SalesCowboy Marketing" className="h-16 w-auto mb-4" width={200} height={64} />
             <p className="text-muted-foreground max-w-md">
-              Bold digital marketing strategies for Nigerian businesses. We ride hard and win big for our clients across Nigeria.
+              Bold digital marketing strategies for Nigerian businesses. <strong>Sales Cowboy Marketing</strong> rides hard and wins big for clients across Lagos, Abuja, and all of Nigeria.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2025 SalesCowboy Marketing Nigeria. All rights reserved.
+              © 2025 Sales Cowboy Marketing Nigeria. All rights reserved.
             </p>
             <div className="flex gap-4 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               <a href="/privacy-policy" className="hover:text-accent transition-colors underline-offset-4 hover:underline">Privacy Policy</a>

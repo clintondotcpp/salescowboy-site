@@ -48,19 +48,19 @@ const testimonials = [
   {
     name: "Chima Unadike",
     role: "Founder, Drenopav Floors",
-    image: "business_owner_1_1778127208228.png",
+    image: "/business_owner_1_1778127208228.png",
     quote: "You handled our website and SEO and it’s been a game changer. We’re ranking for flooring keywords in Lagos and getting steady client calls now.",
   },
   {
     name: "Aisha Bello",
     role: "CEO, Hace Up World",
-    image: "business_owner_2_1778127227453.png",
+    image: "/business_owner_2_1778127227453.png",
     quote: "The admin dashboard is what sold me. I can update my own site without calling a developer every time. Exceptional value for the price.",
   },
   {
     name: "Segun Arinze",
     role: "Director, Comfort Properties",
-    image: "business_owner_3_1778127249354.png",
+    image: "/business_owner_3_1778127249354.png",
     quote: "I was skeptical about the 72-hour delivery, but SalesCowboy delivered exactly on time. The site looks premium and works perfectly.",
   },
 ];
@@ -85,8 +85,10 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Get a Premium Website for ₦75,000 | SalesCowboy Marketing",
-  description: "Stop losing customers. Get a fully functional website, business email, and Google Maps setup in 48-72 hours for just ₦75,000. No hidden fees.",
+  title: "Website Design & Development ₦75,000 | Sales Cowboy Marketing Nigeria | Fast Turnaround",
+  description:
+    "Professional website design from Sales Cowboy Marketing for just ₦75,000. Fast 3-day turnaround, SEO-optimized, mobile-responsive. Perfect for Nigerian businesses in Lagos, Abuja and nationwide.",
+  keywords: "affordable website design Nigeria, website builder Lagos, web development Abuja, cheap website Nigeria, professional website creation, SEO website design",
 };
 
 export default function WebsitePromo() {
@@ -143,7 +145,7 @@ export default function WebsitePromo() {
           <p className="text-center text-muted-foreground text-sm font-semibold uppercase tracking-wider mb-8">Trusted by Growing Nigerian Businesses</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Using placeholders for logos */}
-            <Image src="client_logos_grid_1778127268093.png" alt="Client Logos" width={800} height={100} className="h-12 w-auto object-contain" />
+            <Image src="/client_logos_grid_1778127268093.png" alt="Client Logos" width={800} height={100} className="h-12 w-auto object-contain" />
           </div>
         </div>
       </section>
@@ -362,7 +364,7 @@ export default function WebsitePromo() {
           <div className="max-w-5xl mx-auto bg-card/40 rounded-3xl overflow-hidden border border-border grid md:grid-cols-2">
             <div className="relative aspect-square md:aspect-auto">
               <Image 
-                src="salescowboy_team_photo_1778127183719.png" 
+                src="/salescowboy_team_photo_1778127183719.png" 
                 alt="SalesCowboy Team" 
                 fill 
                 className="object-cover"
@@ -404,7 +406,7 @@ export default function WebsitePromo() {
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             <div className="relative bg-background rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
               <Image 
-                src="nigerian_bank_receipts_social_proof_1778127163658.png" 
+                src="/nigerian_bank_receipts_social_proof_1778127163658.png" 
                 alt="Recent Payment Proof" 
                 width={1200} 
                 height={600} 

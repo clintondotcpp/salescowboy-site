@@ -20,10 +20,10 @@ const WhyChoose = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ fontFamily: 'Rye, serif' }}>
-              Why Ride With SalesCowboy?
+              Why Ride With Sales Cowboy Marketing?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We combine the best of both worlds: U.S. marketing expertise with Nigerian creativity and hustle. This unique blend gives us a global edge and local insight that most agencies can't match.
+              We combine the best of both worlds: U.S. marketing expertise with Nigerian creativity and hustle. This unique blend gives us a global edge and local insight that most agencies can't match. Our team serves businesses across Lagos, Abuja, and all of Nigeria.
             </p>
           </div>
 

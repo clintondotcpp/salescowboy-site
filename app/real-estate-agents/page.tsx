@@ -6,9 +6,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import TrackedWhatsAppLink from "@/components/TrackedWhatsAppLink";
 
 export const metadata: Metadata = {
-  title: "Real Estate Website & SEO Services | SalesCowboy Marketing Nigeria",
+  title: "Real Estate Website & SEO Services | Sales Cowboy Marketing Nigeria | Lagos, Abuja",
   description:
-    "Custom realtor websites, blog content, and local SEO for Nigerian real estate agents. ₦300,000 package delivered in 3 days with blogs, Google Business Profile, and admin dashboard.",
+    "Custom realtor websites, blog content, and local SEO for Nigerian real estate agents by Sales Cowboy Marketing. ₦300,000 package delivered in 3 days with blogs, Google Business Profile, and admin dashboard. Serve Lagos, Abuja & all of Nigeria.",
+  keywords: "real estate website Nigeria, realtor SEO Lagos, agent website Abuja, real estate marketing Nigeria, property listing website, real estate digital marketing",
 };
 
 const websiteDeliverables = [
@@ -51,12 +52,12 @@ const processSteps = [
 
 const testimonials = [
   {
-    quote: "SalesCowboy took my site from invisible to the first page. I closed two Lekki listings in the first month after launch.",
+    quote: "Sales Cowboy Marketing took my site from invisible to the first page. I closed two Lekki listings in the first month after launch.",
     name: "Chidinma Okoro",
     role: "Realtor, Lagos",
   },
   {
-    quote: "You handled our website and SEO and it’s been a game changer. We’re ranking for flooring keywords in Lagos and getting steady client calls now. Highly recommend them, they actually deliver results. Thank you 🙏",
+    quote: "Sales Cowboy Marketing handled our website and SEO and it's been a game changer. We're ranking for flooring keywords in Lagos and getting steady client calls now. Highly recommend them, they actually deliver results. Thank you 🙏",
     name: "Chima Unadike",
     role: "Founder, Drenopav Floors",
     url: "https://drenopavfloors.ng/",

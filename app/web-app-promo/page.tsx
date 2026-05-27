@@ -424,28 +424,61 @@ export default function WebAppPromoPage() {
 
           {/* Solution 4: Property Listing Platforms */}
           <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto lg:flex-row-reverse">
-            <div className="lg:col-span-7">
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-card p-6 shadow-2xl space-y-4">
-                <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                  <span className="text-xs uppercase tracking-wider text-primary font-bold">Custom Estate Showcase</span>
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 fill-amber-500 text-amber-500" />
-                    <span className="text-xs font-bold text-white">4.9 (Verified)</span>
-                  </div>
+            <div className="lg:col-span-7 space-y-6">
+              {/* Property Screenshot 1 */}
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-950 p-2 shadow-2xl">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 border-b border-white/5 rounded-t-lg">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                  <span className="text-[10px] text-muted-foreground font-mono ml-4">comfortproperties.com.ng/listings</span>
                 </div>
-                <div className="space-y-2">
-                  <div className="h-8 bg-slate-800 rounded w-1/3 animate-pulse" />
-                  <div className="h-4 bg-slate-800 rounded w-2/3 animate-pulse" />
-                  <div className="h-4 bg-slate-800 rounded w-1/2 animate-pulse" />
+                <div className="relative aspect-[16/10] w-full bg-slate-900">
+                  <Image
+                    src="/property_screenshots/property_screenshot.png"
+                    alt="Premium Property Listing Showcase Interface"
+                    fill
+                    className="object-cover"
+                    sizes="(max-w-1024px) 100vw, 600px"
+                  />
                 </div>
-                <div className="grid grid-cols-3 gap-2">
-                  <div className="aspect-square bg-slate-800 rounded animate-pulse" />
-                  <div className="aspect-square bg-slate-800 rounded animate-pulse" />
-                  <div className="aspect-square bg-slate-800 rounded animate-pulse" />
+              </div>
+              
+              {/* Property Screenshot 2 */}
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-950 p-2 shadow-2xl lg:ml-12">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 border-b border-white/5 rounded-t-lg">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                  <span className="text-[10px] text-muted-foreground font-mono ml-4">bigdealshomes.com/properties</span>
                 </div>
-                <div className="flex justify-between items-center pt-2">
-                  <span className="text-emerald-500 font-extrabold">₦75,000,000</span>
-                  <div className="px-3 py-1 bg-primary/20 text-primary rounded-lg text-xs font-bold">WhatsApp Broker Sync</div>
+                <div className="relative aspect-[16/10] w-full bg-slate-900">
+                  <Image
+                    src="/property_screenshots/property_screenshot_2.png"
+                    alt="Advanced Property Search & Filter Dashboard"
+                    fill
+                    className="object-cover"
+                    sizes="(max-w-1024px) 100vw, 600px"
+                  />
+                </div>
+              </div>
+
+              {/* Property Screenshot 3 */}
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-950 p-2 shadow-2xl">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 border-b border-white/5 rounded-t-lg">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                  <span className="text-[10px] text-muted-foreground font-mono ml-4">dejohhomes.com.ng/admin-console</span>
+                </div>
+                <div className="relative aspect-[16/10] w-full bg-slate-900">
+                  <Image
+                    src="/property_screenshots/property_screenshot_3.png"
+                    alt="Property Management Admin Console"
+                    fill
+                    className="object-cover"
+                    sizes="(max-w-1024px) 100vw, 600px"
+                  />
                 </div>
               </div>
             </div>
@@ -788,7 +821,7 @@ export default function WebAppPromoPage() {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed italic">
-                  "We partnered with Sales Cowboy for a custom VTU and marketing gateway integration. Their team delivered the database schema and live APIs faster than any agency we've ever worked with. The customer dashboard is clean and transaction processing is sub-second. 100% recommended for serious brands in Nigeria!"
+                  "He delivered excellently, didn't get the full package cus of my budget but it was worth the price. Nice guy, delivered well without complains."
                 </p>
               </div>
               <div className="flex items-center justify-between pt-6 border-t border-white/5 mt-6">
@@ -1044,13 +1077,13 @@ export default function WebAppPromoPage() {
               </div>
             </div>
             <div className="lg:col-span-6">
-              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 <Image
-                  src="/salescowboy_team_photo_1778127183719.png"
-                  alt="Sales Cowboy Tech Development Team Photo"
+                  src="/profile_photo.png"
+                  alt="Clinton Chukwunyere - Chief Software & Cloud Engineer"
                   fill
                   className="object-cover"
-                  sizes="(max-w-768px) 100vw, 500px"
+                  sizes="(max-w-768px) 100vw, 600px"
                 />
               </div>
             </div>
@@ -1279,15 +1312,6 @@ export default function WebAppPromoPage() {
             </AccordionItem>
 
             <AccordionItem value="item-5" className="border border-white/10 rounded-2xl px-6 bg-card/20 hover:bg-card/50 transition-colors">
-              <AccordionTrigger className="text-white hover:no-underline font-bold text-left py-5">
-                Is Meta Pixel and Conversions API (CAPI) set up?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed text-sm pb-5">
-                Yes! Every CTA and inquiry button on our landing pages automatically triggers deduplicated Meta Pixel and server-side Conversions API (CAPI) events. This guarantees precise Facebook Ads performance attribution without losing conversion events to adblockers.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-6" className="border border-white/10 rounded-2xl px-6 bg-card/20 hover:bg-card/50 transition-colors">
               <AccordionTrigger className="text-white hover:no-underline font-bold text-left py-5">
                 Are native iOS and Android mobile apps included in this price?
               </AccordionTrigger>

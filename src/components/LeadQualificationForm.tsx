@@ -43,12 +43,40 @@ const TIMELINE_OPTIONS = [
   { id: "flexible", label: "Flexible (No rush)" },
 ];
 
+function getCookie(name: string): string | undefined {
+  if (typeof document === "undefined") return undefined;
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(";").shift();
+  return undefined;
+}
+
+function getFbc(): string | undefined {
+  if (typeof window === "undefined") return undefined;
+  const cookieFbc = getCookie("_fbc");
+  if (cookieFbc) return cookieFbc;
+  
+  const urlParams = new URLSearchParams(window.location.search);
+  const fbclid = urlParams.get("fbclid");
+  if (fbclid) {
+    const creationTime = Date.now();
+    return `fb.1.${creationTime}.${fbclid}`;
+  }
+  return undefined;
+}
+
+function getFbp(): string | undefined {
+  return getCookie("_fbp");
+}
+
 export default function LeadQualificationForm() {
   const [step, setStep] = useState(1);
   const [selectedApp, setSelectedApp] = useState("");
   const [selectedBudget, setSelectedBudget] = useState("core");
   const [selectedTimeline, setSelectedTimeline] = useState("standard");
   const [businessName, setBusinessName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [customFeatures, setCustomFeatures] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -63,7 +91,7 @@ export default function LeadQualificationForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedApp || !businessName.trim() || !selectedBudget || !selectedTimeline) return;
+    if (!selectedApp || !businessName.trim() || !phone.trim() || !email.trim() || !selectedBudget || !selectedTimeline) return;
 
     setIsSubmitting(true);
 
@@ -72,7 +100,7 @@ export default function LeadQualificationForm() {
     const timelineLabel = TIMELINE_OPTIONS.find((t) => t.id === selectedTimeline)?.label || "Standard";
 
     // Create custom WhatsApp message
-    const waBaseMessage = `Hi SalesCowboy! I want to build a custom ${appLabel} for my business (${businessName}).\n\n- Budget Range: ${budgetLabel}\n- Desired Timeline: ${timelineLabel}\n- Custom Requirements: ${customFeatures || "Standard Core Features"}\n\nLet's review my project requirements!`;
+    const waBaseMessage = `Hi SalesCowboy! I want to build a custom ${appLabel} for my business (${businessName}).\n\n- Phone: ${phone}\n- Email: ${email}\n- Budget Range: ${budgetLabel}\n- Desired Timeline: ${timelineLabel}\n- Custom Requirements: ${customFeatures || "Standard Core Features"}\n\nLet's review my project requirements!`;
     const waUrl = `https://wa.me/2348104933232?text=${encodeURIComponent(waBaseMessage)}`;
 
     // Generate unique Event ID for deduplication
@@ -87,6 +115,14 @@ export default function LeadQualificationForm() {
         value: selectedBudget === "core" ? 500000 : selectedBudget === "advanced" ? 1000000 : 2500000,
         currency: "NGN",
       }, { eventID: eventId });
+
+      console.log(`[LeadQualificationForm] Firing Pixel Purchase event...`);
+      (window as any).fbq("track", "Purchase", {
+        content_name: `Custom App Qualification: ${appLabel}`,
+        content_category: "Software Purchase",
+        value: selectedBudget === "core" ? 500000 : selectedBudget === "advanced" ? 1000000 : 2500000,
+        currency: "NGN",
+      }, { eventID: "purchase-" + eventId });
     }
 
     // 2. Meta Conversions API (CAPI) Tracking (Server-Side)
@@ -99,7 +135,12 @@ export default function LeadQualificationForm() {
           eventName: "Lead",
           eventId,
           url: typeof window !== "undefined" ? window.location.href : "",
-          userData: {},
+          userData: {
+            em: email.trim().toLowerCase(),
+            ph: phone.trim().replace(/\D/g, ""),
+            fbc: getFbc(),
+            fbp: getFbp(),
+          },
           customData: {
             content_name: `Custom App Qualification: ${appLabel}`,
             value: selectedBudget === "core" ? 500000 : selectedBudget === "advanced" ? 1000000 : 2500000,
@@ -109,6 +150,40 @@ export default function LeadQualificationForm() {
         keepalive: true,
       }).catch((error) => {
         console.error("[LeadQualificationForm] CAPI Lead Tracking error:", error);
+      });
+
+      console.log(`[LeadQualificationForm] Firing Conversions API Purchase event...`);
+      fetch("/api/meta-capi", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          eventName: "Purchase",
+          eventId: "purchase-" + eventId,
+          url: typeof window !== "undefined" ? window.location.href : "",
+          userData: {
+            em: email.trim().toLowerCase(),
+            ph: phone.trim().replace(/\D/g, ""),
+            fbc: getFbc(),
+            fbp: getFbp(),
+          },
+          customData: {
+            content_name: `Custom App Qualification: ${appLabel}`,
+            value: selectedBudget === "core" ? 500000 : selectedBudget === "advanced" ? 1000000 : 2500000,
+            currency: "NGN",
+          },
+          notificationData: {
+            appLabel,
+            businessName,
+            phone,
+            email,
+            selectedBudget,
+            selectedTimeline,
+            customFeatures,
+          }
+        }),
+        keepalive: true,
+      }).catch((error) => {
+        console.error("[LeadQualificationForm] CAPI Purchase Tracking error:", error);
       });
     } catch (error) {
       console.error("[LeadQualificationForm] CAPI fetch invocation error:", error);
@@ -208,7 +283,7 @@ export default function LeadQualificationForm() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {/* Left Column: Core Fields */}
+              {/* Left Column: B2B Contact Info */}
               <div className="space-y-4">
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">
@@ -226,51 +301,84 @@ export default function LeadQualificationForm() {
 
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">
-                    Select your budget target
+                    WhatsApp Phone Number *
                   </label>
-                  <select
-                    value={selectedBudget}
-                    onChange={(e) => setSelectedBudget(e.target.value)}
-                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors text-sm"
-                  >
-                    {BUDGET_OPTIONS.map((opt) => (
-                      <option key={opt.id} value={opt.id} className="bg-slate-900 text-white">
-                        {opt.tag} ({opt.label})
-                      </option>
-                    ))}
-                  </select>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="e.g. 08104933232"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors text-sm"
+                  />
                 </div>
 
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">
-                    Preferred Launch Timeline
+                    Business Email Address *
                   </label>
-                  <select
-                    value={selectedTimeline}
-                    onChange={(e) => setSelectedTimeline(e.target.value)}
-                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors text-sm"
-                  >
-                    {TIMELINE_OPTIONS.map((opt) => (
-                      <option key={opt.id} value={opt.id} className="bg-slate-900 text-white">
-                        {opt.label}
-                      </option>
-                    ))}
-                  </select>
+                  <input
+                    type="email"
+                    required
+                    placeholder="e.g. contact@yourbrand.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors text-sm"
+                  />
                 </div>
               </div>
 
-              {/* Right Column: Custom Features Textarea */}
+              {/* Right Column: Platform Configuration */}
               <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">
+                      Target Budget
+                    </label>
+                    <select
+                      value={selectedBudget}
+                      onChange={(e) => setSelectedBudget(e.target.value)}
+                      className="w-full bg-background/50 border border-white/10 rounded-xl px-3 py-3 text-white focus:outline-none focus:border-primary transition-colors text-xs"
+                    >
+                      {BUDGET_OPTIONS.map((opt) => (
+                        <option key={opt.id} value={opt.id} className="bg-slate-900 text-white">
+                          {opt.tag} ({opt.label})
+                        </option>
+                      ))}
+                    </select>
+                    <p className="text-[10px] text-emerald-400 mt-1 font-semibold leading-normal">
+                      Range: {BUDGET_OPTIONS.find((b) => b.id === selectedBudget)?.label}
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">
+                      Timeline
+                    </label>
+                    <select
+                      value={selectedTimeline}
+                      onChange={(e) => setSelectedTimeline(e.target.value)}
+                      className="w-full bg-background/50 border border-white/10 rounded-xl px-3 py-3 text-white focus:outline-none focus:border-primary transition-colors text-xs"
+                    >
+                      {TIMELINE_OPTIONS.map((opt) => (
+                        <option key={opt.id} value={opt.id} className="bg-slate-900 text-white">
+                          {opt.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">
                     Custom Requirements (Optional)
                   </label>
                   <textarea
-                    rows={7}
-                    placeholder="Describe any special features (e.g. secure split billing, rider tracking maps, custom inventory SMS alerts)..."
+                    rows={4}
+                    placeholder="Describe any special features (e.g. split billing, rider tracking maps, custom inventory SMS alerts)..."
                     value={customFeatures}
                     onChange={(e) => setCustomFeatures(e.target.value)}
-                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors text-sm resize-none text-white"
+                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors text-xs resize-none text-white"
                   />
                 </div>
               </div>
@@ -284,7 +392,7 @@ export default function LeadQualificationForm() {
 
               <Button 
                 type="submit" 
-                disabled={isSubmitting || !businessName.trim()}
+                disabled={isSubmitting || !businessName.trim() || !phone.trim() || !email.trim()}
                 className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 font-bold flex items-center gap-2 group transition-all rounded-xl py-6"
               >
                 {isSubmitting ? (

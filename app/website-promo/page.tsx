@@ -292,7 +292,7 @@ export default function WebsitePromo() {
             <div className="bg-gradient-to-br from-primary/10 to-transparent p-10 flex flex-col justify-center text-center relative overflow-hidden">
               <div className="absolute inset-0 bg-primary/5 opacity-50 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
               <CheckCircle2 className="w-12 h-12 text-primary mx-auto mb-6 relative z-10" />
-              <h3 className="text-2xl font-bold text-white mb-4 relative z-10">SalesCowboy Marketing</h3>
+              <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Sales Cowboy Marketing</h3>
               <div className="text-5xl font-black text-white mb-4 relative z-10">₦75,000</div>
               <p className="text-primary/90 text-lg font-medium relative z-10">One flat fee. 48-72 hours delivery. Period.</p>
             </div>

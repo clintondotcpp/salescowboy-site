@@ -57,7 +57,6 @@ export default function WebAppPromoPage() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary animate-pulse">
-              <Sparkles className="w-4 h-4" />
               <span className="text-sm font-bold tracking-wider uppercase">Premium Software Engineering</span>
             </div>
 
@@ -213,7 +212,7 @@ export default function WebAppPromoPage() {
               <div className="pt-4 flex gap-4">
                 <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2" asChild>
                   <TrackedWhatsAppLink
-                    href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20building%20a%20custom%20Logistics%20%26%20Courier%20Tracker.%20Let's%20discuss%20our%20project%20scope."
+                    href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20building%20a%20custom%20Logistics%20%26%20Courier%20Tracker.%20Let's%20discuss%20our%20project%20scope."
                     eventName="Lead"
                   >
                     <>
@@ -326,7 +325,7 @@ export default function WebAppPromoPage() {
               <div className="pt-4 flex gap-4">
                 <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2" asChild>
                   <TrackedWhatsAppLink
-                    href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20building%20a%20custom%20School%20Portal%20%26%20Fee%20Installment%20Ledger.%20Let's%20discuss!"
+                    href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20building%20a%20custom%20School%20Portal%20%26%20Fee%20Installment%20Ledger.%20Let's%20discuss!"
                     eventName="Lead"
                   >
                     <>
@@ -381,7 +380,7 @@ export default function WebAppPromoPage() {
               <div className="pt-4 flex gap-4">
                 <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2" asChild>
                   <TrackedWhatsAppLink
-                    href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20building%20a%20custom%20Multi-Branch%20POS%20%26%20Inventory%20System.%20Let's%20discuss!"
+                    href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20building%20a%20custom%20Multi-Branch%20POS%20%26%20Inventory%20System.%20Let's%20discuss!"
                     eventName="Lead"
                   >
                     <>
@@ -513,7 +512,7 @@ export default function WebAppPromoPage() {
               <div className="pt-4 flex gap-4">
                 <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2" asChild>
                   <TrackedWhatsAppLink
-                    href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20building%20a%20custom%20Property%20Listing%20Platform.%20Let's%20discuss!"
+                    href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20building%20a%20custom%20Property%20Listing%20Platform.%20Let's%20discuss!"
                     eventName="Lead"
                   >
                     <>
@@ -568,7 +567,7 @@ export default function WebAppPromoPage() {
               <div className="pt-4 flex gap-4">
                 <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2" asChild>
                   <TrackedWhatsAppLink
-                    href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20building%20a%20custom%20VTU%20Gateway.%20Let's%20discuss!"
+                    href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20building%20a%20custom%20VTU%20Gateway.%20Let's%20discuss!"
                     eventName="Lead"
                   >
                     <>
@@ -640,7 +639,7 @@ export default function WebAppPromoPage() {
               <div className="p-6 pt-0 border-t border-white/5 mt-4 flex items-center justify-between">
                 <span className="text-xs font-bold text-primary">Starting from ₦500,000</span>
                 <TrackedWhatsAppLink
-                  href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20a%20Shortlet%20Management%20System.%20Let's%20talk!"
+                  href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20a%20Shortlet%20Management%20System.%20Let's%20talk!"
                   eventName="Lead"
                   className="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5"
                 >
@@ -665,7 +664,7 @@ export default function WebAppPromoPage() {
               <div className="p-6 pt-0 border-t border-white/5 mt-4 flex items-center justify-between">
                 <span className="text-xs font-bold text-primary">Starting from ₦500,000</span>
                 <TrackedWhatsAppLink
-                  href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20a%20Church%20Management%20Engine.%20Let's%20talk!"
+                  href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20a%20Church%20Management%20Engine.%20Let's%20talk!"
                   eventName="Lead"
                   className="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5"
                 >
@@ -690,7 +689,7 @@ export default function WebAppPromoPage() {
               <div className="p-6 pt-0 border-t border-white/5 mt-4 flex items-center justify-between">
                 <span className="text-xs font-bold text-primary">Starting from ₦500,000</span>
                 <TrackedWhatsAppLink
-                  href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20a%20Savings%20%26%20Micro-Loan%20Platform.%20Let's%20talk!"
+                  href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20a%20Savings%20%26%20Micro-Loan%20Platform.%20Let's%20talk!"
                   eventName="Lead"
                   className="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5"
                 >
@@ -746,7 +745,7 @@ export default function WebAppPromoPage() {
 
               <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2 py-6 px-6 rounded-2xl w-full sm:w-auto" asChild>
                 <TrackedWhatsAppLink
-                  href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I've%20read%20your%20Google%20reviews%20and%20want%20to%20discuss%20building%20a%20custom%20app."
+                  href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I've%20read%20your%20Google%20reviews%20and%20want%20to%20discuss%20building%20a%20custom%20app."
                   eventName="Lead"
                 >
                   <svg className="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
@@ -913,7 +912,7 @@ export default function WebAppPromoPage() {
             </p>
             <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2 py-6 px-8 rounded-2xl mx-auto" asChild>
               <TrackedWhatsAppLink
-                href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20impressed%20by%20your%20live%20production%20portfolio%20deployments.%20Let's%20discuss%20building%20a%20similar%20high-performance%20web%20app%20for%20my%20business!"
+                href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20impressed%20by%20your%20live%20production%20portfolio%20deployments.%20Let's%20discuss%20building%20a%20similar%20high-performance%20web%20app%20for%20my%20business!"
                 eventName="Lead"
               >
                 <svg className="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
@@ -1018,7 +1017,7 @@ export default function WebAppPromoPage() {
           <div className="text-center mt-12">
             <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold gap-2 py-6 px-8 rounded-2xl mx-auto" asChild>
               <TrackedWhatsAppLink
-                href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20impressed%20by%20the%20unedited%20WhatsApp%20chat%20feedback%20from%20your%20clients.%20Let's%20discuss%20my%20own%20custom%20software%20project!"
+                href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20impressed%20by%20the%20unedited%20WhatsApp%20chat%20feedback%20from%20your%20clients.%20Let's%20discuss%20my%20own%20custom%20software%20project!"
                 eventName="Lead"
               >
                 <svg className="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
@@ -1036,9 +1035,7 @@ export default function WebAppPromoPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-bold uppercase tracking-wider">
-                Nigerian Tech Presence
-              </div>
+              
               <h2 className="text-3xl md:text-5xl font-bold text-white" style={{ fontFamily: "Rye, serif" }}>
                 Our Development Team
               </h2>
@@ -1068,7 +1065,10 @@ export default function WebAppPromoPage() {
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div className="space-y-1">
                   <span className="text-white font-bold text-sm block">Local Accountability</span>
-                  <span className="text-xs text-muted-foreground block">Meet with our team physically or virtually anytime.</span>
+                  <span className="text-xs text-muted-foreground block">
+                    Meet with our team physically or virtually anytime at our office:
+                    <strong className="text-primary block mt-1.5 font-semibold">Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos</strong>
+                  </span>
                 </div>
                 <div className="space-y-1">
                   <span className="text-white font-bold text-sm block">Custom Training</span>
@@ -1172,7 +1172,7 @@ export default function WebAppPromoPage() {
               <div className="pt-8">
                 <Button className="w-full bg-primary hover:bg-primary/95 text-white font-bold py-6 rounded-xl" asChild>
                   <TrackedWhatsAppLink
-                    href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20ready%20to%20get%20started%20with%20the%20Core%20Web%20App%20Package%20starting%20from%20₦500,000.%20Let's%20build!"
+                    href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20ready%20to%20get%20started%20with%20the%20Core%20Web%20App%20Package%20starting%20from%20₦500,000.%20Let's%20build!"
                     eventName="Lead"
                   >
                     Deploy Core App
@@ -1235,7 +1235,7 @@ export default function WebAppPromoPage() {
               <div className="pt-8">
                 <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-6 rounded-xl" asChild>
                   <TrackedWhatsAppLink
-                    href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20interested%20in%20the%20Enterprise%20Software%20Package%20starting%20from%20₦1.2M.%20Let's%20discuss%20my%20complex%20requirements!"
+                    href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20interested%20in%20the%20Enterprise%20Software%20Package%20starting%20from%20₦1.2M.%20Let's%20discuss%20my%20complex%20requirements!"
                     eventName="Lead"
                   >
                     Deploy Enterprise ERP
@@ -1350,7 +1350,7 @@ export default function WebAppPromoPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-8 py-7 rounded-2xl gap-2 shadow-[0_0_30px_rgba(16,185,129,0.2)]" asChild>
                 <TrackedWhatsAppLink
-                  href="https://wa.me/2348104933232?text=Hi%20SalesCowboy!%20I'm%20ready%20to%20discuss%20my%20custom%20software%20project.%20Can%20we%20schedule%20a%20planning%20session%3F"
+                  href="https://wa.me/2348104933232?text=Hi%20Sales%20Cowboy!%20I'm%20ready%20to%20discuss%20my%20custom%20software%20project.%20Can%20we%20schedule%20a%20planning%20session%3F"
                   eventName="Lead"
                 >
                   <svg className="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24">

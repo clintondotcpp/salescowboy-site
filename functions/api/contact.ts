@@ -138,7 +138,7 @@ async function sendEmailNotification(env: Env, contact: {
       ],
       from: {
         email: 'noreply@salescowboy.com.ng',
-        name: 'SalesCowboy Contact Form',
+        name: 'Sales Cowboy Contact Form',
       },
       subject: `New Contact Form Submission from ${contact.name}`,
       content: [

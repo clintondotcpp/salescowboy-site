@@ -59,9 +59,10 @@ export default function RootLayout({
               "description": "Bold digital marketing strategies for Nigerian businesses. Expert web development, SEO, and high-ROI ad campaigns.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Nigeria",
-                "addressRegion": "NG",
-                "addressCountry": "NG",
+                "streetAddress": "Red Brick House, Peace Land Estate, Ogombo, Ajah",
+                "addressLocality": "Lagos",
+                "addressRegion": "Lagos State",
+                "addressCountry": "NG"
               },
               "areaServed": [
                 {

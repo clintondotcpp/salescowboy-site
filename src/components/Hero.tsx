@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <Image
         src="/assets/hero-bg.jpg"
-        alt="SalesCowboy Hero Background"
+        alt="Sales Cowboy Hero Background"
         fill
         priority
         sizes="100vw"

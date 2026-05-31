@@ -9,6 +9,32 @@ declare global {
   }
 }
 
+function getCookie(name: string): string | undefined {
+  if (typeof document === "undefined") return undefined;
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(";").shift();
+  return undefined;
+}
+
+function getFbc(): string | undefined {
+  if (typeof window === "undefined") return undefined;
+  const cookieFbc = getCookie("_fbc");
+  if (cookieFbc) return cookieFbc;
+  
+  const urlParams = new URLSearchParams(window.location.search);
+  const fbclid = urlParams.get("fbclid");
+  if (fbclid) {
+    const creationTime = Date.now();
+    return `fb.1.${creationTime}.${fbclid}`;
+  }
+  return undefined;
+}
+
+function getFbp(): string | undefined {
+  return getCookie("_fbp");
+}
+
 const PageViewTracker = () => {
   const pathname = usePathname();
   const hasMounted = useRef(false);
@@ -35,7 +61,10 @@ const PageViewTracker = () => {
         eventName: "PageView",
         eventId,
         url: currentUrl,
-        userData: {},
+        userData: {
+          fbc: getFbc(),
+          fbp: getFbp(),
+        },
         customData: {
           currency: "NGN",
           source: "website",

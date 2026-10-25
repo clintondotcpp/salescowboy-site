@@ -1,44 +1,52 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import SoftwareDevelopment from "@/components/SoftwareDevelopment";
-import RealEstateServices from "@/components/RealEstateServices";
-import ConstructionServices from "@/components/ConstructionServices";
-import InteriorDesignServices from "@/components/InteriorDesignServices";
-import CleaningServices from "@/components/CleaningServices";
-import CaseStudies from "@/components/CaseStudies";
-import WhyChoose from "@/components/WhyChoose";
-import Testimonials from "@/components/Testimonials";
-import CTABanner from "@/components/CTABanner";
+import {
+  Services,
+  DeliveryModel,
+  CaseStudies,
+  WhoWeServe,
+  Process,
+  TestimonialsAndFAQ,
+  CTABand,
+} from "@/components/HomeSections";
 import Contact from "@/components/Contact";
-import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground antialiased selection:bg-accent selection:text-white">
       <Header />
       <main>
+        {/* 01. Hero & 02. Proof Strip */}
         <Hero />
-        <PromoBanner />
-        <About />
+
+        {/* 03. Four Strategic Service Divisions */}
         <Services />
-        <SoftwareDevelopment />
-        <RealEstateServices />
-        <ConstructionServices />
-        <InteriorDesignServices />
-        <CleaningServices />
+
+        {/* Delivery Model & Direct Accountability (Addressing trust / why one team) */}
+        <DeliveryModel />
+
+        {/* 04. Featured Case Studies */}
         <CaseStudies />
-        <WhyChoose />
-        <Testimonials />
-        <CTABanner />
-        <PromoBanner />
+
+        {/* 05. Who We Help (Priority Industries) */}
+        <WhoWeServe />
+
+        {/* 06. How Engagement Works (5 Milestones) */}
+        <Process />
+
+        {/* 07. Client Testimonials & Objection FAQs */}
+        <TestimonialsAndFAQ />
+
+        {/* 08. Conversion & Qualification Form */}
         <Contact />
+
+        {/* Final Conversion Band */}
+        <CTABand />
       </main>
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppButton message="Hello Sales Cowboy! I want to discuss a project for my business." />
     </div>
   );
 }

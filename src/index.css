@@ -8,68 +8,64 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 40 28% 97%;
+    --foreground: 28 35% 12%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 28 35% 12%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 28 35% 12%;
 
-    --primary: 30 62% 30%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 25 65% 26%;
+    --primary-foreground: 40 30% 98%;
 
-    --secondary: 30 15% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 36 30% 93%;
+    --secondary-foreground: 25 40% 16%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 36 20% 90%;
+    --muted-foreground: 28 15% 40%;
 
-    --accent: 36 50% 60%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 36 90% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 30 62% 30%;
+    --border: 35 22% 86%;
+    --input: 35 22% 88%;
+    --ring: 36 90% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
     
-    --cowboy-brown: 30 62% 30%;
-    --cowboy-gold: 36 50% 60%;
-    --leather-dark: 30 15% 15%;
-    --wood-texture: 30 25% 25%;
+    --cowboy-brown: 25 65% 26%;
+    --cowboy-gold: 36 90% 45%;
+    --leather-dark: 25 40% 18%;
+    --wood-texture: 28 35% 22%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(30 15% 8%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(36 50% 60%) 0%, hsl(30 62% 40%) 100%);
-    --shadow-glow: 0 10px 40px -10px hsl(36 50% 60% / 0.4);
-    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.8);
+    --gradient-hero: linear-gradient(180deg, hsl(40 30% 98%) 0%, hsl(36 28% 93%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(36 90% 45%) 0%, hsl(25 65% 35%) 100%);
+    --shadow-glow: 0 10px 30px -8px hsl(36 90% 45% / 0.3);
+    --shadow-elegant: 0 20px 40px -15px hsl(28 35% 12% / 0.08);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 28% 97%;
+    --sidebar-foreground: 28 35% 12%;
+    --sidebar-primary: 25 65% 26%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 36 30% 93%;
+    --sidebar-accent-foreground: 25 40% 16%;
+    --sidebar-border: 35 22% 86%;
+    --sidebar-ring: 36 90% 45%;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 40 28% 97%;
+    --foreground: 28 35% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 28 35% 12%;
+    --border: 35 22% 86%;
   }
 }
 
@@ -96,16 +92,23 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rye', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
-  
-  html {
-    scroll-behavior: smooth;
+
+  .font-cowboy {
+    font-family: 'Rye', serif;
   }
 }

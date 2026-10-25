@@ -40,11 +40,11 @@ const RealEstateServices = () => {
     <section id="real-estate" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: 'Rye, serif' }}>
-            Real Estate Marketing Solutions by Sales Cowboy Marketing
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
+            Real Estate Marketing Solutions by Sales Cowboy Marketing Solutions
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tailored digital marketing services from <strong>Sales Cowboy Marketing</strong> for real estate agents and companies across Lagos, Abuja and Nigeria. Get more listings, more leads, and more closed deals.
+            Tailored digital marketing services from <strong>Sales Cowboy Marketing Solutions</strong> for real estate agents and companies across Lagos, Abuja and Nigeria. Get more listings, more leads, and more closed deals.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const RealEstateServices = () => {
                 className="bg-card border-border hover-lift hover-glow group transition-all duration-300"
               >
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{service.title}</h3>

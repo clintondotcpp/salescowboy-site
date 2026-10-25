@@ -40,7 +40,7 @@ const ConstructionServices = () => {
     <section id="construction" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: 'Rye, serif' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
             Construction & Contractor Marketing
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -57,7 +57,7 @@ const ConstructionServices = () => {
                 className="bg-background border-border hover-lift hover-glow group transition-all duration-300"
               >
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{service.title}</h3>

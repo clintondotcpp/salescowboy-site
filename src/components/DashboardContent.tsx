@@ -183,7 +183,7 @@ export default function DashboardContent({ user, onLogout }: DashboardContentPro
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold" style={{ fontFamily: 'Rye, serif' }}>
+            <h1 className="text-2xl font-bold tracking-tight">
               Contact Dashboard
             </h1>
             <p className="text-sm text-muted-foreground">Welcome, {user.name || user.email}</p>

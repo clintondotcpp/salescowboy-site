@@ -213,7 +213,7 @@ export default function LeadQualificationForm() {
           {[1, 2].map((s) => (
             <div 
               key={s} 
-              className={`w-12 h-1.5 rounded-full transition-all duration-300 ${
+              className={`w-12 h-1.5 rounded-sm transition-all duration-300 ${
                 s === step 
                   ? "bg-primary w-16" 
                   : s < step 

@@ -1,22 +1,23 @@
 import { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Sales Cowboy Marketing Nigeria",
-  description: "Terms and conditions for using Sales Cowboy Marketing services and website.",
+  title: "Terms of Service | Sales Cowboy Marketing Solutions",
+  description: "Terms and conditions for using Sales Cowboy Marketing Solutions services and website.",
 };
 
 export default function TermsOfService() {
   return (
-    <main className="min-h-screen bg-background text-foreground py-24">
+    <>
+    <Header />
+    <main className="min-h-screen bg-background text-foreground pt-36 pb-24">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 
-          className="text-5xl md:text-6xl font-bold mb-12 text-center" 
-          style={{ fontFamily: "Rye, serif" }}
-        >
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-12">
           Terms of Service
         </h1>
         
-        <div className="prose prose-invert max-w-none space-y-8 text-lg leading-relaxed text-muted-foreground">
+        <div className="max-w-none space-y-8 text-lg leading-relaxed text-muted-foreground">
           <section>
             <h2 className="text-2xl font-bold text-foreground">1. Acceptance of Terms</h2>
             <p>
@@ -27,7 +28,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-bold text-foreground">2. Services</h2>
             <p>
-              <strong>Sales Cowboy Marketing</strong> provides digital marketing, web development, and SEO services. All services are provided "as is" and are subject to availability.
+              <strong>Sales Cowboy Marketing Solutions</strong> provides digital marketing, web development, and SEO services. All services are provided "as is" and are subject to availability.
             </p>
           </section>
 
@@ -41,14 +42,14 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-bold text-foreground">4. Intellectual Property</h2>
             <p>
-              All content on this website, including text, graphics, logos, and images, is the property of SalesCowboy Marketing and is protected by international copyright laws.
+              All content on this website, including text, graphics, logos, and images, is the property of Sales Cowboy Marketing Solutions and is protected by international copyright laws.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-foreground">5. Limitation of Liability</h2>
             <p>
-              SalesCowboy Marketing will not be liable for any damages that arise from the use of, or inability to use, the materials on this site.
+              Sales Cowboy Marketing Solutions will not be liable for any damages that arise from the use of, or inability to use, the materials on this site.
             </p>
           </section>
 
@@ -65,5 +66,7 @@ export default function TermsOfService() {
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

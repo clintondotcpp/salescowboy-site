@@ -126,21 +126,25 @@ async function sendEmailNotification(env: Env, contact: {
   message: string;
 }) {
   try {
-    // Get admin email from environment or use a default
-    const adminEmail = env.ADMIN_EMAIL || 'hello@salescowboy.com.ng';
+    // Get admin email from environment or use defaults
+    const primaryAdmin = env.ADMIN_EMAIL || 'hello@salescowboy.com.ng';
+    const secondaryAdmin = 'chukwunyereclinton@gmail.com';
     
-    // MailChannels API endpoint
+    // MailChannels API endpoint with multiple recipients
     const emailRequest = {
       personalizations: [
         {
-          to: [{ email: adminEmail }],
+          to: [
+            { email: primaryAdmin },
+            { email: secondaryAdmin }
+          ],
         },
       ],
       from: {
         email: 'noreply@salescowboy.com.ng',
         name: 'Sales Cowboy Contact Form',
       },
-      subject: `New Contact Form Submission from ${contact.name}`,
+      subject: `[LEAD] New Sales Cowboy Submission from ${contact.name}`,
       content: [
         {
           type: 'text/html',

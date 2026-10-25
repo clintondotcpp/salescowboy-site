@@ -33,11 +33,11 @@ const CaseStudies = () => {
     <section id="results" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: 'Rye, serif' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
             From Rust to Gold — Real Client Wins.
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Sales Cowboy Marketing delivers results that speak louder than words. Client success stories and proven case studies.
+            Sales Cowboy Marketing Solutions delivers results that speak louder than words. Client success stories and proven case studies.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ const CaseStudies = () => {
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="space-y-2">
-                    <div className="text-4xl font-bold text-accent" style={{ fontFamily: 'Rye, serif' }}>
+                    <div className="text-4xl font-extrabold text-accent">
                       {study.metric}
                     </div>
                     <p className="text-lg font-semibold text-foreground">{study.description}</p>

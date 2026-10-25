@@ -1,74 +1,129 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, TrendingUp } from "lucide-react";
+
+const stats = [
+  { value: "₦50M+", label: "Client pipeline & revenue generated" },
+  { value: "3.8x", label: "Average verified ROAS on paid ads" },
+  { value: "7 Days", label: "Average sprint delivery (custom apps scaled by scope)" },
+  { value: "100%", label: "Direct execution (zero outsourced guesswork)" },
+];
 
 const Hero = () => {
   return (
-    <section 
-      id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
-      <Image
-        src="/assets/hero-bg.jpg"
-        alt="Sales Cowboy Hero Background"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90" />
-      
-      {/* Animated particles effect */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-accent rounded-full animate-pulse" />
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-cowboy-gold rounded-full animate-pulse delay-75" />
-        <div className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-accent rounded-full animate-pulse delay-150" />
-      </div>
+    <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <div className="absolute -top-40 right-[-10%] w-[620px] h-[620px] rounded-full bg-accent/10 blur-[130px] pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <a 
-            href="/website-promo" 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-accent mb-8 hover:bg-primary/20 transition-all group"
-          >
-            <span className="flex w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-semibold tracking-wide uppercase">Limited Offer: Get a Website for ₦75,000</span>
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </a>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Rye, serif' }}>
-            Ride Your Brand to the Top.
-          </h1>
-          
-          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            <strong>Sales Cowboy Marketing</strong> - Web, SEO, and Ad Strategies That Conquer the Nigerian Market in Lagos, Abuja & Beyond.
-          </p>
+      <div className="container mx-auto px-4 relative">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          {/* Main Value Proposition */}
+          <div className="lg:col-span-7">
+           
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg hover-lift hover-glow shadow-glow"
-            >
-              <a href="#contact">Book a Strategy Call</a>
-            </Button>
-            
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-6 text-lg hover-lift"
-            >
-              <a href="#results">See Our Work</a>
-            </Button>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-extrabold tracking-tight text-foreground leading-[1.1]">
+              We help businesses get customers, operate smarter and{" "}
+              <span className="text-accent">grow.</span>
+            </h1>
+
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed font-sans">
+              From advertising and websites to custom software and AI automation, Sales Cowboy helps businesses attract customers and build the systems to serve them.
+            </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-foreground text-background px-8 py-4 text-base font-semibold transition-all hover:bg-primary shadow-sm"
+              >
+                Start a project
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center rounded-xl border border-border bg-background/50 px-8 py-4 text-base font-semibold text-foreground transition-colors hover:border-foreground hover:bg-card"
+              >
+                Explore our services
+              </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-muted-foreground font-medium">
+              <span className="inline-flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-accent" /> Fixed, transparent proposals
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-accent" /> You own 100% of your code & IP
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-accent" /> Dedicated lead engineer & strategist
+              </span>
+            </div>
+          </div>
+
+          {/* Featured Proof / Recent Sprint Highlight */}
+          <div className="lg:col-span-5">
+            <div className="rounded-2xl border border-border bg-card/80 p-6 md:p-8 backdrop-blur shadow-sm relative overflow-hidden">
+              <div className="flex items-center justify-between pb-5 border-b border-border">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-accent" />
+                  <span className="text-xs uppercase tracking-wider font-semibold text-accent">
+                    Featured Client Outcome
+                  </span>
+                </div>
+                <span className="text-xs text-muted-foreground font-medium">Lagos, Nigeria</span>
+              </div>
+
+              <div className="mt-5 space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">Drenopav Floors</h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Industrial & decorative flooring contractor needing direct inbound commercial clients in Lagos & Abuja.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 pt-2">
+                  <div className="p-3.5 rounded-xl bg-background border border-border">
+                    <div className="text-2xl font-bold text-accent">#1 Rank</div>
+                    <div className="text-xs text-muted-foreground mt-0.5">Google local search for Lagos flooring</div>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-background border border-border">
+                    <div className="text-2xl font-bold text-foreground">₦18M+</div>
+                    <div className="text-xs text-muted-foreground mt-0.5">Inbound pipeline within 90 days</div>
+                  </div>
+                </div>
+
+                <p className="text-xs text-muted-foreground/90 leading-relaxed border-t border-border pt-4">
+                  Delivered high-speed mobile showcase, Google Business Profile dominance, and automated WhatsApp inquiry routing in a 10-day sprint.
+                </p>
+
+                <div className="pt-2 flex items-center justify-between">
+                  <a
+                    href="#case-studies"
+                    className="text-xs font-semibold text-accent hover:underline inline-flex items-center gap-1"
+                  >
+                    View all 3 case studies <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                  <span className="text-[11px] text-muted-foreground">Verified client project</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-accent rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-accent rounded-full animate-pulse" />
+        {/* 02. Verified Proof Strip */}
+        <div className="mt-16 pt-10 border-t border-border">
+          <p className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-6">
+            Verified execution metrics across our active client portfolio
+          </p>
+          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {stats.map((s) => (
+              <div key={s.label} className="border-l-2 border-accent/40 pl-4">
+                <dt className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground font-sans">
+                  {s.value}
+                </dt>
+                <dd className="mt-1.5 text-xs sm:text-sm text-muted-foreground leading-snug">
+                  {s.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

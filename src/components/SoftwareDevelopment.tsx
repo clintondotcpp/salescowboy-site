@@ -45,11 +45,11 @@ const SoftwareDevelopment = () => {
     <section id="software-development" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: 'Rye, serif' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
             Software Development Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Professional web and mobile applications by <strong>Sales Cowboy Marketing</strong>. We build powerful solutions that drive your business forward. From concept to deployment, we've got you covered.
+            Professional web and mobile applications by <strong>Sales Cowboy Marketing Solutions</strong>. We build powerful solutions that drive your business forward. From concept to deployment, we've got you covered.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const SoftwareDevelopment = () => {
                 className="bg-background border-border hover-lift hover-glow group transition-all duration-300"
               >
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{type.title}</h3>

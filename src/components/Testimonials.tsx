@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     title: "CEO, TechStart Inc",
-    content: "Sales Cowboy Marketing transformed our digital presence. Their SEO work tripled our organic traffic in just 4 months. The team's dedication and expertise are unmatched.",
+    content: "Sales Cowboy Marketing Solutions transformed our digital presence. Their SEO work tripled our organic traffic in just 4 months. The team's dedication and expertise are unmatched.",
     rating: 5,
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "David Martinez",
     title: "Marketing Director, Elite Services",
-    content: "Our new website is not just beautiful—it converts. Sales Cowboy Marketing built us a site that perfectly represents our brand and drives real business results.",
+    content: "Our new website is not just beautiful—it converts. Sales Cowboy Marketing Solutions built us a site that perfectly represents our brand and drives real business results.",
     rating: 5,
   },
 ];
@@ -27,7 +27,7 @@ const Testimonials = () => {
     <section className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: 'Rye, serif' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
             What Our Clients Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

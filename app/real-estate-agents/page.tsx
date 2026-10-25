@@ -1,269 +1,115 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CheckCircle2, Globe, PenTool, TrendingUp, BarChart3, Users, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import TrackedWhatsAppLink from "@/components/TrackedWhatsAppLink";
+import PricingComparisonPage, {
+  PackageTier,
+  ComparisonRow,
+} from "@/components/PricingComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Real Estate Website & SEO Services | Sales Cowboy Marketing Nigeria | Lagos, Abuja",
+  title: "Real Estate Website Packages (₦110,000 vs ₦165,000) | Sales Cowboy",
   description:
-    "Custom realtor websites, blog content, and local SEO for Nigerian real estate agents by Sales Cowboy Marketing. ₦300,000 package delivered in 3 days with blogs, Google Business Profile, and admin dashboard. Serve Lagos, Abuja & all of Nigeria.",
-  keywords: "real estate website Nigeria, realtor SEO Lagos, agent website Abuja, real estate marketing Nigeria, property listing website, real estate digital marketing",
+    "Compare our Standard Real Estate Website (₦110,000) and Corporate Property Portal (₦165,000). Includes property search, admin dashboard, WhatsApp lead capture, and appointment booking.",
 };
 
-const websiteDeliverables = [
+const standardRealEstateTier: PackageTier = {
+  name: "Standard Real Estate Showcase",
+  badge: "High-Value Starter",
+  price: "₦110,000",
+  renewalNote: "₦45,000 / year (Managed Hosting, Domain & SSL)",
+  tagline: "Designed for independent realtors and boutique agencies wanting to showcase listings and capture buyer leads.",
+  deliverables: [
+    "5 to 8 Professional Website Pages",
+    "Unlimited Property Listings & Dedicated Listing Pages",
+    "Property Search & Filtering (Location, Price, Buy/Rent)",
+    "Property Management Admin Dashboard",
+    "Property Inquiry & WhatsApp Lead Capture System",
+    "Property Viewing & Inspection Appointment Booking",
+    "On-Page SEO Setup & Google Maps / Business Profile Setup",
+    "Managed Cloud Hosting for 1 Year Included",
+    ".COM.NG Domain Name & Free SSL Certificate",
+    "Contact Forms & Instant Client Routing",
+  ],
+  whatsappMessage:
+    "Hello Sales Cowboy! I want to order the ₦110,000 Standard Real Estate Website package.",
+};
+
+const corporateRealEstateTier: PackageTier = {
+  name: "Corporate Real Estate & Property Portal",
+  badge: "Most Popular & Recommended",
+  price: "₦165,000",
+  renewalNote: "₦75,000 / year (Dedicated Server, Domain & SSL)",
+  tagline: "For property developers and corporate real estate firms needing advanced filtering, mortgage calculators, multi-agent profiles, and backend access.",
+  featured: true,
+  deliverables: [
+    "7 to 15 Professional Website Pages",
+    "Unlimited Property Listings & Dedicated High-Res Listing Pages",
+    "Advanced Property Search & Multi-Filters (Location, Price, Type, Bedrooms)",
+    "Property Management Admin Dashboard with Full Backend Access",
+    "Property Inquiry & Automated Lead Capture System",
+    "WhatsApp Lead Funnel & Automated Brochure Dispatch",
+    "Property Viewing & Site Tour Appointment Booking Calendar",
+    "Built-in Mortgage & Affordability Calculator",
+    "Multi-Agent Profiles with Individual Contact Links",
+    "Real Estate Blog, Market News & Project Updates",
+    "Newsletter & High-Intent Investor Email Capture",
+    "Full SEO Architecture & Google Business Profile Setup",
+    "Google Analytics & Google Search Console Integration",
+    "30GB High-Performance Dedicated Storage",
+    "Unlimited Company & Staff Email Accounts",
+    ".COM or .COM.NG Domain Name Included (1 Year)",
+    "Dedicated High-Speed Server & Hosting (1 Year)",
+  ],
+  whatsappMessage:
+    "Hello Sales Cowboy! I want to order the ₦165,000 Corporate Real Estate & Property Portal package.",
+};
+
+const comparisonRows: ComparisonRow[] = [
+  { feature: "Website Scope", tier1: "5 to 8 Pages", tier2: "7 to 15 Pages" },
+  { feature: "Property Listings", tier1: "Unlimited Listings", tier2: "Unlimited Listings" },
+  { feature: "Search & Filtering", tier1: "Search by Location, Price, Buy/Rent", tier2: "Advanced Multi-Filter (Beds, Baths, Location, Price, Type)" },
+  { feature: "Property Admin Dashboard", tier1: true, tier2: true },
+  { feature: "Full Backend Access", tier1: false, tier2: true },
+  { feature: "Mortgage / Affordability Calculator", tier1: false, tier2: true },
+  { feature: "Multi-Agent Profiles", tier1: false, tier2: "Unlimited Agent Team Profiles" },
+  { feature: "Inspection Booking Calendar", tier1: true, tier2: true },
+  { feature: "WhatsApp Lead Capture", tier1: true, tier2: true },
+  { feature: "Real Estate Blog / Market Updates", tier1: false, tier2: true },
+  { feature: "Investor Newsletter Capture", tier1: false, tier2: true },
+  { feature: "Server & Hosting", tier1: "Managed Cloud Hosting (1 Year)", tier2: "Dedicated High-Speed Server (1 Year)" },
+  { feature: "Storage Capacity", tier1: "Managed Storage", tier2: "30GB Dedicated SSD" },
+  { feature: "Domain Name Included", tier1: ".COM.NG (1 Year Free)", tier2: ".COM or .COM.NG (1 Year Free)" },
+  { feature: "Staff Email Accounts", tier1: "—", tier2: "Unlimited Accounts" },
+  { feature: "Google Business Profile & SEO Setup", tier1: true, tier2: true },
+  { feature: "Google Analytics & Search Console", tier1: true, tier2: true },
+  { feature: "Turnaround Delivery Time", tier1: "7 Days", tier2: "7 Days" },
+  { feature: "Year 2 Renewal Fee", tier1: "₦45,000 / year", tier2: "₦75,000 / year" },
+];
+
+const faqs = [
   {
-    icon: Globe,
-    title: "Custom Realtor Website",
-    description: "Modern design tailored to your brand with property listings, lead forms, and conversion-optimized layouts.",
+    q: "How quickly will our real estate website launch?",
+    a: "We design and deploy our real estate packages within 7 days once you provide your company profile and initial property listings. Custom bespoke portals and advanced integrations may take longer depending on technical scope.",
   },
   {
-    icon: PenTool,
-    title: "Blog & Content Hub",
-    description: "We set up your blog and deliver SEO-ready articles that rank for searches like “houses for sale in Lekki”.",
+    q: "Can my team upload and manage property listings easily?",
+    a: "Yes. Both packages include an intuitive Property Management Admin Dashboard where you can add, edit, or remove listings, upload photos, set prices, and mark properties as Sold or Under Offer with no coding required.",
   },
   {
-    icon: TrendingUp,
-    title: "Local SEO Setup",
-    description: "Google Business Profile, schema markup, and on-page optimization so you dominate local search results.",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics & Email",
-    description: "Professional email, analytics dashboard, and lead tracking so you know exactly what’s working.",
+    q: "How do inquiries reach our agents?",
+    a: "Every listing has a dedicated inquiry form and direct WhatsApp chat button that routes buyer inquiries straight to your phone or assigned sales agent.",
   },
 ];
 
-const processSteps = [
-  {
-    title: "Day 1: Strategy Call",
-    description: "We review your brand, service areas, and target keywords, then lock in design direction and copy."
-  },
-  {
-    title: "Day 2: Build & Content",
-    description: "Our design + dev team builds your site while the content team writes blog posts targeting high-intent Nigerian searches."
-  },
-  {
-    title: "Day 3: Launch & SEO",
-    description: "We launch, connect Google Business Profile, configure analytics, and submit sitemaps so you start ranking."
-  }
-];
-
-const testimonials = [
-  {
-    quote: "Sales Cowboy Marketing took my site from invisible to the first page. I closed two Lekki listings in the first month after launch.",
-    name: "Chidinma Okoro",
-    role: "Realtor, Lagos",
-  },
-  {
-    quote: "Sales Cowboy Marketing handled our website and SEO and it's been a game changer. We're ranking for flooring keywords in Lagos and getting steady client calls now. Highly recommend them, they actually deliver results. Thank you 🙏",
-    name: "Chima Unadike",
-    role: "Founder, Drenopav Floors",
-    url: "https://drenopavfloors.ng/",
-  },
-];
-
-const stats = [
-  { value: "200+", label: "Nigerian real estate websites delivered" },
-  { value: "3 Days", label: "Average turnaround time" },
-  { value: "₦300K", label: "All-inclusive launch package" },
-];
-
-const RealEstateAgentsPage = () => {
+export default function RealEstateAgentsPage() {
   return (
-    <main className="bg-background text-foreground">
-      <section className="relative overflow-hidden py-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background pointer-events-none" />
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">Real Estate Growth</span>
-            <h1 className="mt-6 text-4xl md:text-6xl font-bold" style={{ fontFamily: "Rye, serif" }}>
-              Your Real Estate Website Should Bring Clients, Not Just Look Pretty
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground">
-              When Nigerians search for “houses for sale in Lekki” or “shortlet in Abuja,” your website should appear. Our team builds high-converting realtor websites, writes SEO blog posts, and manages your local presence so Google sends you real leads.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <Link href="/#contact">Book Your Free Strategy Call</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="tel:+2348104933232">Talk to a Specialist</a>
-              </Button>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground">Custom realtor website package: <span className="font-semibold">₦300,000</span> — delivered in 3 days with blog, admin dashboard, professional email, and Google Business Profile.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-card border-y border-border">
-        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
-          {stats.map((stat) => (
-            <div key={stat.label} className="space-y-2">
-              <p className="text-4xl font-bold" style={{ fontFamily: "Rye, serif" }}>{stat.value}</p>
-              <p className="text-muted-foreground">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "Rye, serif" }}>Everything Your Real Estate Website Needs to Rank & Convert</h2>
-            <p className="mt-4 text-muted-foreground">From the first impression to ongoing SEO, we set up every system you need to capture buyers and renters in Nigeria.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {websiteDeliverables.map((item) => (
-              <Card key={item.title} className="bg-card/70 border-border hover-lift hover-glow transition-all">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <item.icon className="h-10 w-10 text-primary" />
-                    <CardTitle className="text-foreground">{item.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground text-base leading-relaxed">{item.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-card border-y border-border" id="pricing">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "Rye, serif" }}>Launch in 3 Days – ₦300,000</h2>
-              <p className="mt-4 text-muted-foreground text-lg">We’ve built over 200 real estate websites across Lagos, Abuja, Port Harcourt, Enugu, and beyond. Our launch package gives you everything you need to start ranking and capturing leads immediately.</p>
-              <ul className="mt-6 space-y-3 text-muted-foreground">
-                {[
-                  "Custom responsive design aligned with your brand",
-                  "Property listing templates and lead capture forms",
-                  "SEO-optimized copy for service areas and property types",
-                  "Three blog posts targeting high-intent Nigerian keywords",
-                  "Google Business Profile setup and optimization",
-                  "Professional email, CRM-ready lead notifications, and analytics dashboard",
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                  <Link href="/#contact">Reserve Your Slot</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="mailto:hello@salescowboy.com.ng">Request Portfolio</a>
-                </Button>
-              </div>
-            </div>
-            <div className="bg-background border border-border rounded-xl p-6 space-y-6">
-              <h3 className="text-xl font-semibold flex items-center gap-2"><Users className="h-6 w-6 text-primary" /> Why Real Estate Agents Choose SalesCowboy</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Team in Nigeria that understands local neighborhoods and buyer behaviour.</li>
-                <li>• Dedicated content writers producing city-specific blog posts that rank.</li>
-                <li>• SEO engineers monitoring new Google searches for properties and shortlets.</li>
-                <li>• Fast communication: updates and new listings added within 24 hours.</li>
-              </ul>
-              <div className="rounded-lg bg-primary/10 p-5 border border-primary/20">
-                <h4 className="text-lg font-semibold mb-2" style={{ fontFamily: "Rye, serif" }}>Running ads right now?</h4>
-                <p className="text-muted-foreground text-sm">We’ll align your landing pages and blogs with your campaigns so every click has a conversion path.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24" id="process">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "Rye, serif" }}>Launch Blueprint: 3-Day Real Estate Website Sprint</h2>
-            <p className="mt-4 text-muted-foreground">No long delays. You’ll review designs, content, and final launch inside three working days.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {processSteps.map((step) => (
-              <Card key={step.title} className="bg-card/70 border-border">
-                <CardHeader>
-                  <CardTitle>{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground text-base leading-relaxed">{step.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-card border-t border-border" id="case-studies">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "Rye, serif" }}>What Nigerian Agents Are Saying</h2>
-            <p className="mt-4 text-muted-foreground">A few words from the 200+ realtors and shortlet operators we’ve supported.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="bg-background border-border">
-                <CardContent className="p-6 space-y-4">
-                  <p className="text-lg text-muted-foreground italic">“{testimonial.quote}”</p>
-                  <div>
-                    {testimonial.url ? (
-                      <a
-                        href={testimonial.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-semibold text-primary hover:underline"
-                      >
-                        {testimonial.name}
-                      </a>
-                    ) : (
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    )}
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24" id="lead-capture">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center bg-card border border-border rounded-xl p-10">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "Rye, serif" }}>Let’s Make Your Website Work for You</h2>
-            <p className="mt-4 text-muted-foreground">
-              Fill the contact form below or reach out directly. We’ll review your current website (or lack of one), share our portfolio, and deliver a custom plan for your location and property niche.
-            </p>
-            <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <Link href="/#contact">Get Started</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="mailto:hello@salescowboy.com.ng" className="inline-flex items-center gap-2">
-                  <Mail className="h-5 w-5" /> hello@salescowboy.com.ng
-                </a>
-              </Button>
-              <Button size="lg" variant="ghost" asChild>
-                <TrackedWhatsAppLink 
-                  href="https://wa.me/2348104933232" 
-                  eventName="Contact"
-                  className="text-primary font-semibold"
-                >
-                  Chat on WhatsApp
-                </TrackedWhatsAppLink>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    <PricingComparisonPage
+      categoryBadge="Real Estate & Property Development"
+      title="Compare Real Estate Website Packages"
+      description="Showcase luxury properties, capture high-net-worth buyers, and automate inspection appointments with a custom real estate portal."
+      tier1={standardRealEstateTier}
+      tier2={corporateRealEstateTier}
+      comparisonRows={comparisonRows}
+      faqs={faqs}
+      defaultWhatsappMessage="Hello Sales Cowboy! I want to discuss building a real estate website for my agency."
+    />
   );
-};
-
-export default RealEstateAgentsPage;
+}

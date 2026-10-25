@@ -1,6 +1,7 @@
-// Local business information for Sales Cowboy Marketing
+// Local business information for Sales Cowboy Marketing Solutions
 export const localBusinessInfo = {
-  name: "Sales Cowboy Marketing",
+  name: "Sales Cowboy Marketing Solutions",
+  legalName: "Sales Cowboy Marketing Solutions",
   url: "https://salescowboy.com.ng",
   logo: "https://salescowboy.com.ng/assets/salescowboy-logo.png",
   description: "Bold digital marketing strategies for Nigerian businesses",

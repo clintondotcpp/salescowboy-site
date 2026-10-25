@@ -33,6 +33,32 @@ declare interface D1ExecResult {
   duration: number;
 }
 
+declare interface R2Object {
+  key: string;
+  version: string;
+  size: number;
+  etag: string;
+  httpEtag: string;
+  uploaded: Date;
+  customMetadata?: Record<string, string>;
+}
+
+declare interface R2ObjectBody extends R2Object {
+  body: ReadableStream;
+  bodyUsed: boolean;
+  arrayBuffer(): Promise<ArrayBuffer>;
+  text(): Promise<string>;
+  json<T = unknown>(): Promise<T>;
+  blob(): Promise<Blob>;
+}
+
+declare interface R2Bucket {
+  get(key: string): Promise<R2ObjectBody | null>;
+  put(key: string, value: ReadableStream | ArrayBuffer | ArrayBufferView | string | null | Blob, options?: any): Promise<R2Object>;
+  delete(keys: string | string[]): Promise<void>;
+  list(options?: any): Promise<{ objects: R2Object[]; truncated: boolean; cursor?: string }>;
+}
+
 declare interface EventContext<Env, P extends string, Data> {
   request: Request;
   env: Env;

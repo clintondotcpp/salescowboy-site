@@ -10,19 +10,28 @@ import PageViewTracker from "@/components/PageViewTracker";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Sales Cowboy Marketing Nigeria | Web, Mobile and Desktop App Development, SEO & Ads That Convert",
+  title: "Sales Cowboy Marketing Solutions | Web, Mobile and Desktop App Development, SEO & Ads That Convert",
   description: "Bold digital marketing strategies for Nigerian businesses. Expert web & mobile development, SEO dominance, and high-ROI Facebook & Google Ads campaigns across Lagos, Abuja & Nigeria.",
   keywords: "digital marketing Nigeria, web development Nigeria, SEO Nigeria, Facebook Ads Nigeria, Google Ads Nigeria, marketing agency Lagos, marketing agency Abuja",
-  authors: [{ name: "Sales Cowboy Marketing" }],
+  authors: [{ name: "Sales Cowboy Marketing Solutions" }],
   openGraph: {
-    title: "Sales Cowboy Marketing Nigeria | Digital Marketing That Rides Hard & Wins Big",
+    title: "Sales Cowboy Marketing Solutions | Digital Marketing That Rides Hard & Wins Big",
     description: "Web development, SEO, Facebook Ads, and Google Ads strategies that conquer the Nigerian market.",
     type: "website",
     locale: "en_NG",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
   twitter: {
     card: "summary_large_image",
-    title: "Sales Cowboy Marketing Nigeria",
+    title: "Sales Cowboy Marketing Solutions",
     description: "Bold digital marketing strategies for Nigerian businesses.",
   },
 };
@@ -42,6 +51,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <link rel="canonical" href="https://salescowboy.com.ng/" />
         <link rel="sitemap" href="/sitemap.xml" />
         <meta name="geo.position" content="6.5244;3.3792" />
@@ -54,7 +65,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Sales Cowboy Marketing",
+              "name": "Sales Cowboy Marketing Solutions",
+              "legalName": "Sales Cowboy Marketing Solutions",
               "image": "https://salescowboy.com.ng/assets/salescowboy-logo.png",
               "description": "Bold digital marketing strategies for Nigerian businesses. Expert web development, SEO, and high-ROI ad campaigns.",
               "address": {
@@ -98,7 +110,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Sales Cowboy Marketing",
+              "name": "Sales Cowboy Marketing Solutions",
+              "legalName": "Sales Cowboy Marketing Solutions",
               "url": "https://salescowboy.com.ng",
               "logo": "https://salescowboy.com.ng/assets/salescowboy-logo.png",
               "description": "Digital marketing agency in Nigeria offering web development, SEO, and ad services.",
@@ -122,7 +135,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Sales Cowboy Marketing",
+              "name": "Sales Cowboy Marketing Solutions",
               "url": "https://salescowboy.com.ng",
               "potentialAction": {
                 "@type": "SearchAction",

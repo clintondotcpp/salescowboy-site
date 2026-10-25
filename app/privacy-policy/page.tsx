@@ -1,26 +1,27 @@
 import { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Sales Cowboy Marketing Nigeria",
-  description: "Privacy policy for Sales Cowboy Marketing - how we protect your data and privacy.",
+  title: "Privacy Policy | Sales Cowboy Marketing Solutions",
+  description: "Privacy policy for Sales Cowboy Marketing Solutions - how we protect your data and privacy.",
 };
 
 export default function PrivacyPolicy() {
   return (
-    <main className="min-h-screen bg-background text-foreground py-24">
+    <>
+    <Header />
+    <main className="min-h-screen bg-background text-foreground pt-36 pb-24">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 
-          className="text-5xl md:text-6xl font-bold mb-12 text-center" 
-          style={{ fontFamily: "Rye, serif" }}
-        >
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-12">
           Privacy Policy
         </h1>
         
-        <div className="prose prose-invert max-w-none space-y-8 text-lg leading-relaxed text-muted-foreground">
+        <div className="max-w-none space-y-8 text-lg leading-relaxed text-muted-foreground">
           <section>
             <h2 className="text-2xl font-bold text-foreground">1. Introduction</h2>
             <p>
-              Welcome to <strong>Sales Cowboy Marketing</strong> ("we," "our," or "us"). We are committed to protecting your personal data and your right to privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website salescowboy.com.ng, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
+              Welcome to <strong>Sales Cowboy Marketing Solutions</strong> ("we," "our," or "us"). We are committed to protecting your personal data and your right to privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website salescowboy.com.ng, including any other media form, media channel, mobile website, or mobile application related or connected thereto.
             </p>
           </section>
 
@@ -81,5 +82,7 @@ export default function PrivacyPolicy() {
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

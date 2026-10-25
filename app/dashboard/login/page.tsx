@@ -42,7 +42,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl" style={{ fontFamily: 'Rye, serif' }}>
+          <CardTitle className="text-2xl font-bold tracking-tight">
             SalesCowboy Dashboard
           </CardTitle>
           <CardDescription>

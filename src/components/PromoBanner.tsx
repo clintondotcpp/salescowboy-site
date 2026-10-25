@@ -9,15 +9,15 @@ const PromoBanner = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl mx-auto">
           <div className="flex items-center gap-4">
-            <div className="bg-primary p-3 rounded-full animate-pulse shadow-glow">
+            <div className="bg-primary p-3 rounded-xl animate-pulse shadow-glow">
               <Sparkles className="w-6 h-6 text-primary-foreground" />
             </div>
             <div className="space-y-1">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Rye, serif' }}>
+              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-foreground">
                 Limited Time: Premium Websites for <span className="text-accent underline decoration-primary">₦75,000</span>
               </h2>
               <p className="text-muted-foreground font-medium">
-                Domain, Hosting, Professional Email & Admin Dashboard Included. Done in 48-72 hours.
+                Domain, Hosting, Professional Email & Admin Dashboard Included. Done in 7 days.
               </p>
             </div>
           </div>

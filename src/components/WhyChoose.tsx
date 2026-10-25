@@ -19,8 +19,8 @@ const WhyChoose = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ fontFamily: 'Rye, serif' }}>
-              Why Ride With Sales Cowboy Marketing?
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-8">
+              Why Ride With Sales Cowboy Marketing Solutions?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               We combine the best of both worlds: U.S. marketing expertise with Nigerian creativity and hustle. This unique blend gives us a global edge and local insight that most agencies can't match. Our team serves businesses across Lagos, Abuja, and all of Nigeria.
@@ -33,7 +33,7 @@ const WhyChoose = () => {
                 key={index}
                 className="flex items-center gap-3 bg-card p-4 rounded-lg border border-border hover-lift"
               >
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                <div className="flex-shrink-0 w-8 h-8 rounded-md bg-primary/20 flex items-center justify-center">
                   <Check className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-foreground font-semibold">{benefit}</span>

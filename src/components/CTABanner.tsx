@@ -17,12 +17,12 @@ const CTABanner = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground" style={{ fontFamily: 'Rye, serif' }}>
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground">
             Your Brand Deserves a Wild Ride.
           </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground">
-            <strong>Sales Cowboy Marketing</strong> — Let's build something legendary for your Nigerian business.
+            <strong>Sales Cowboy Marketing Solutions</strong> — Let's build something legendary for your Nigerian business.
           </p>
 
           <Button 

@@ -86,7 +86,7 @@ const PRESETS = [
       {
         id: "1",
         title: "Module 1: Real-Time Geospatial Indexing, Location Cache & WebSockets Infrastructure",
-        timeline: "7 - 10 Days",
+        timeline: "Week 1 (Days 1 - 7)",
         cost: 160000,
         description: "High-throughput backend infrastructure engineered to handle real-time geospatial queries, provider location pings, and low-latency bidirectional location streaming without database lockups.",
         deliverables: [
@@ -100,7 +100,7 @@ const PRESETS = [
       {
         id: "2",
         title: "Module 2: Customer Client Application (Discovery, Booking, Escrow Checkout & Live Tracking)",
-        timeline: "8 - 10 Days",
+        timeline: "Week 2 (Days 8 - 14)",
         cost: 165000,
         description: "Responsive, mobile-optimized cross-platform application empowering customers to discover nearby verified providers, compare transparent rates, book, and track approaching providers on a live interactive map.",
         deliverables: [
@@ -115,7 +115,7 @@ const PRESETS = [
       {
         id: "3",
         title: "Module 3: Provider Partner Application (Radar Dispatch, Turn Navigation & Background GPS)",
-        timeline: "8 - 10 Days",
+        timeline: "Week 3 (Days 15 - 21)",
         cost: 165000,
         description: "Dedicated mobile partner interface providing gig workers with real-time job radar dispatch alerts, turn-by-turn route guidance, earnings tracking, and hardened background location tracking.",
         deliverables: [
@@ -130,7 +130,7 @@ const PRESETS = [
       {
         id: "4",
         title: "Module 4: Booking Finite State Machine (FSM), Dispatch Logic & Escrow Settlement Engine",
-        timeline: "7 - 9 Days",
+        timeline: "Week 4 (Sprint A)",
         cost: 140000,
         description: "The core deterministic business logic engine managing job transitions, dispatch queue algorithms, cancellation windows, dead-mileage penalties, and automated wallet settlements.",
         deliverables: [
@@ -144,7 +144,7 @@ const PRESETS = [
       {
         id: "5",
         title: "Module 5: Super-Admin Control Console, Fleet Oversight, Dispute Resolution & Analytics",
-        timeline: "5 - 7 Days",
+        timeline: "Week 4 (Sprint B)",
         cost: 120000,
         description: "Comprehensive back-office administrative portal providing operational oversight over active bookings, provider KYC verification, dispute resolution, and platform revenue metrics.",
         deliverables: [
@@ -353,7 +353,7 @@ function ProposalContent() {
       {
         id: "1",
         title: "Module 1: Real-Time Geospatial Indexing, Location Cache & WebSockets Infrastructure",
-        timeline: "7 - 10 Days",
+        timeline: "Week 1 (Days 1 - 7)",
         cost: 160000,
         description: "High-throughput backend infrastructure engineered to handle real-time geospatial queries, provider location pings, and low-latency bidirectional location streaming without database lockups.",
         deliverables: [
@@ -367,7 +367,7 @@ function ProposalContent() {
       {
         id: "2",
         title: "Module 2: Customer Client Application (Discovery, Booking, Escrow Checkout & Live Tracking)",
-        timeline: "8 - 10 Days",
+        timeline: "Week 2 (Days 8 - 14)",
         cost: 165000,
         description: "Responsive, mobile-optimized cross-platform application empowering customers to discover nearby verified providers, compare transparent rates, book, and track approaching providers on a live interactive map.",
         deliverables: [
@@ -382,7 +382,7 @@ function ProposalContent() {
       {
         id: "3",
         title: "Module 3: Provider Partner Application (Radar Dispatch, Turn Navigation & Background GPS)",
-        timeline: "8 - 10 Days",
+        timeline: "Week 3 (Days 15 - 21)",
         cost: 165000,
         description: "Dedicated mobile partner interface providing gig workers with real-time job radar dispatch alerts, turn-by-turn route guidance, earnings tracking, and hardened background location tracking.",
         deliverables: [
@@ -397,7 +397,7 @@ function ProposalContent() {
       {
         id: "4",
         title: "Module 4: Booking Finite State Machine (FSM), Dispatch Logic & Escrow Settlement Engine",
-        timeline: "7 - 9 Days",
+        timeline: "Week 4 (Sprint A)",
         cost: 140000,
         description: "The core deterministic business logic engine managing job transitions, dispatch queue algorithms, cancellation windows, dead-mileage penalties, and automated wallet settlements.",
         deliverables: [
@@ -411,7 +411,7 @@ function ProposalContent() {
       {
         id: "5",
         title: "Module 5: Super-Admin Control Console, Fleet Oversight, Dispute Resolution & Analytics",
-        timeline: "5 - 7 Days",
+        timeline: "Week 4 (Sprint B)",
         cost: 120000,
         description: "Comprehensive back-office administrative portal providing operational oversight over active bookings, provider KYC verification, dispute resolution, and platform revenue metrics.",
         deliverables: [
@@ -434,7 +434,7 @@ function ProposalContent() {
       { label: "Milestone 3: Admin Console, Escrow Settlements, Field Testing & Live Deployment (20%)", percentage: 20 },
     ],
     paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Terms: 40% Kickoff Deposit (₦300,000), 40% Mobile Core & Tracking Milestone (₦300,000), 20% Final Testing & Cloud Production Deployment (₦150,000).\n3. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n4. Delivery Timeline: 3 to 4 weeks total elapsed sprint time including end-to-end integration, stress testing, and cloud deployment.",
+    notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Terms: 40% Kickoff Deposit (₦300,000), 40% Mobile Core & Tracking Milestone (₦300,000), 20% Final Testing & Cloud Production Deployment (₦150,000).\n3. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n4. Delivery Timeline: Exactly 4 weeks total elapsed sprint time (28 calendar days) structured into 4 sequential 1-week sprint phases, including end-to-end integration, real-world field GPS stress testing, and production cloud deployment.",
   });
 
   // Load state from URL parameters

@@ -79,6 +79,79 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
+    name: "RWA PropTech & Asset Tokenization (Scope Breakdown)",
+    title: "Enterprise Real World Asset (RWA) Tokenization & PropTech Construction ERP Ecosystem",
+    overview: "This architectural scope and engineering proposal details the complete technical blueprint for an end-to-end PropTech lifecycle ecosystem (Land Acquisition → Construction PM → Facility Tenancy) fused with a fractional liquidity Real World Asset (RWA) Tokenization engine. The platform connects three client portals (Investor/Buyer, Contractor/Field, and Tenant/Resident) to a central high-throughput API gateway, combining traditional relational construction ERP ledgers (PostgreSQL), IoT utility telemetry, and permissioned Ethereum Virtual Machine (EVM) security token smart contracts (ERC-3643/ERC-1400) for compliant yield distribution.",
+    modules: [
+      {
+        id: "1",
+        title: "Module 1: Land Acquisition, Document Vault & Due Diligence Pipeline",
+        timeline: "Phase 1 (Sprint 1 - 2)",
+        cost: 0,
+        description: "Secure, tamper-evident digital repository and workflow tracker managing pre-construction land acquisition, title verification, municipal zoning approvals, and land purchase escrow accounts.",
+        deliverables: [
+          "Cryptographic Title & Survey Vault: SHA-256 document hashing engine storing Deeds of Assignment, Governor's Consent, C of O, and digital survey plans with immutable audit trails",
+          "Zoning & Feasibility Stage Tracker: Multi-stage pipeline tracking Environmental Impact Assessments (EIA), geotechnical soil tests, and state town-planning clearance permits",
+          "Land Purchase Escrow Protocol: Milestone-governed disbursement engine holding land acquisition funds until legal due diligence and deed transfer milestones are satisfied",
+          "Role-Based Legal Access Portal: Restricted portal enabling solicitors, surveyors, and government liaison officers to upload and counter-sign title certificates"
+        ]
+      },
+      {
+        id: "2",
+        title: "Module 2: Construction Project Management ERP & Field Proof-of-Work",
+        timeline: "Phase 2 (Sprint 3 - 4)",
+        cost: 0,
+        description: "Enterprise construction management engine tracking Bills of Quantities (BOQ), subcontractor procurement, purchase orders, and GPS-geofenced mobile field inspections.",
+        deliverables: [
+          "Dynamic Bill of Quantities (BOQ) Ledger: Hierarchical line-item cost tracker calculating material variances against actual real-time disbursements across civil, structural, and MEP works",
+          "Subcontractor & Vendor Procurement Desk: Request-for-Quote (RFQ) dispatch, competitive bid evaluation matrix, purchase order tracking, and vendor rating logs",
+          "Geofenced Mobile Field Inspection Suite: Dedicated mobile app for on-site project engineers requiring geofenced GPS verification and time-stamped photo/video uploads before milestone fund drawdowns are unlocked",
+          "Site Material Inventory & Delivery Reconciliation: Delivery receipt capture, low-stock threshold alerts, and wastage tracking for cement, steel, and electrical fittings"
+        ]
+      },
+      {
+        id: "3",
+        title: "Module 3: Facility Management, Tenancy Lifecycle & IoT Smart Metering",
+        timeline: "Phase 3 (Sprint 5 - 6)",
+        cost: 0,
+        description: "Comprehensive property management and tenant experience system automating digital leasing, recurring rent collection, maintenance dispatch, and smart utility metering.",
+        deliverables: [
+          "Digital Leasing & Auto-Debit Engine: Digital lease agreement generation, legally binding e-signatures, automated card/bank debit rent collection, and condition inspection logs",
+          "Work Order & Maintenance Desk: Self-service resident ticketing system for HVAC, electrical, plumbing, and structural repairs with automated routing to assigned facility technicians",
+          "IoT Smart Metering & Energy Auditing: Bi-directional telemetry integration with smart electricity/water meters providing automated utility billing, consumption analytics, and leakage alerts",
+          "Visitor Access & Gate Pass Engine: Resident-generated short-code / QR access passes integrated with estate security checkpoints for gated communities"
+        ]
+      },
+      {
+        id: "4",
+        title: "Module 4: Real World Asset (RWA) Tokenization & Smart Contract Yield Distribution",
+        timeline: "Phase 4 (Sprint 7 - 8)",
+        cost: 0,
+        description: "Permissioned security token infrastructure mapping off-chain property Special Purpose Vehicles (SPVs) into compliant digital asset tokens on Layer-2 blockchain networks.",
+        deliverables: [
+          "Off-Chain SPV Legal-to-Code Mapping: Contractual architecture mapping physical property title deeds into legally insulated SPVs, where tokens represent fractional shares in the legal holding entity",
+          "Permissioned Security Token Standard (ERC-3643 / ERC-1400): On-chain compliance smart contracts enforcing investor wallet whitelisting, jurisdiction locks, and transfer restrictions",
+          "Biometric KYC/AML Identity Gateway: Automated investor verification (Sumsub / Persona) automatically syncing verified national ID/passport credentials with the smart contract compliance registry",
+          "Automated Smart Contract Yield Distribution: Automated dividend disbursement routing collected tenant rents into net yield payouts (minus maintenance reserve and management fees) to investor wallets",
+          "Decentralized Document Custody (IPFS / Arweave): Permanent, decentralized storage of verified title deeds, valuation reports, and audit certificates"
+        ]
+      },
+      {
+        id: "5",
+        title: "Module 5: Multi-Portal Experience Suite & Super-Admin Command Center",
+        timeline: "Phase 5 (Sprint 9 - 10)",
+        cost: 0,
+        description: "High-performance cross-platform portal suite tailored for Investors, Field Engineers, Residents, and Senior Platform Administrators.",
+        deliverables: [
+          "Investor & Buyer Web/Mobile Portal: Interactive property marketplace, fractional equity calculator, title deed viewer, wallet portfolio tracker, and historical rental yield performance",
+          "Contractor & Field Engineer App: Low-bandwidth, mobile-optimized site dashboard for updating BOQ completion percentages, logging worker logs, and uploading inspection media",
+          "Tenant & Resident App: Streamlined resident mobile app for one-tap rent payments, maintenance requests, visitor passes, and real-time utility usage tracking",
+          "Super-Admin Enterprise Command Center: Executive analytics tracking Gross Asset Value (GAV), total tokenized square footage, active rental yields, investor KYC approvals, and construction disbursement milestones"
+        ]
+      }
+    ]
+  },
+  {
     name: "On-Demand Geolocation Dispatch (₦750k)",
     title: "On-Demand Geolocation Dispatch, Real-Time Tracking & Provider Booking Ecosystem",
     overview: "This technical proposal details the end-to-end design, system architecture, custom development, and cloud deployment of a real-time on-demand service and dispatch ecosystem (comparable to Uber/Bolt architecture). The system interconnects three synchronized applications: a Customer App (discovery, booking, live tracking, and escrow checkout), a Provider App (online/offline toggle, radar dispatch notifications, background GPS emission, and job lifecycle execution), and a central Backend Infrastructure featuring Redis Geospatial indexing, WebSocket event streams, a strict Finite State Machine (FSM), and an Admin Control Console.",
@@ -336,90 +409,84 @@ function ProposalContent() {
 
   // Form State
   const [state, setState] = useState<ProposalState>({
-    proposalTitle: "On-Demand Geolocation Dispatch, Real-Time Tracking & Provider Booking Ecosystem",
+    proposalTitle: "Enterprise Real World Asset (RWA) Tokenization & PropTech Construction ERP Ecosystem",
     proposalId: "",
     proposalDate: "",
     
     ...DEFAULT_SENDER,
     
-    clientName: "On-Demand Platform Sponsors",
-    clientContact: "Founding Team & Product Leadership",
-    clientAddress: "Nigeria",
+    clientName: "Real Estate Development & Tokenization Sponsors",
+    clientContact: "Executive Board & Product Leadership",
+    clientAddress: "Nigeria & Global Operations",
     clientEmail: "",
     clientPhone: "",
     
-    projectOverview: "This technical proposal details the end-to-end design, system architecture, custom development, and cloud deployment of a real-time on-demand service and dispatch ecosystem (comparable to Uber/Bolt architecture). The system interconnects three synchronized applications: a Customer App (discovery, booking, live tracking, and escrow checkout), a Provider App (online/offline toggle, radar dispatch notifications, background GPS emission, and job lifecycle execution), and a central Backend Infrastructure featuring Redis Geospatial indexing, WebSocket event streams, a strict Finite State Machine (FSM), and an Admin Control Console.",
+    projectOverview: "This architectural scope and engineering proposal details the complete technical blueprint for an end-to-end PropTech lifecycle ecosystem (Land Acquisition → Construction PM → Facility Tenancy) fused with a fractional liquidity Real World Asset (RWA) Tokenization engine. The platform connects three client portals (Investor/Buyer, Contractor/Field, and Tenant/Resident) to a central high-throughput API gateway, combining traditional relational construction ERP ledgers (PostgreSQL), IoT utility telemetry, and permissioned Ethereum Virtual Machine (EVM) security token smart contracts (ERC-3643/ERC-1400) for compliant yield distribution.",
     modules: [
       {
         id: "1",
-        title: "Module 1: Real-Time Geospatial Indexing, Location Cache & WebSockets Infrastructure",
-        timeline: "Week 1 (Days 1 - 7)",
-        cost: 160000,
-        description: "High-throughput backend infrastructure engineered to handle real-time geospatial queries, provider location pings, and low-latency bidirectional location streaming without database lockups.",
+        title: "Module 1: Land Acquisition, Document Vault & Due Diligence Pipeline",
+        timeline: "Phase 1 (Sprint 1 - 2)",
+        cost: 0,
+        description: "Secure, tamper-evident digital repository and workflow tracker managing pre-construction land acquisition, title verification, municipal zoning approvals, and land purchase escrow accounts.",
         deliverables: [
-          "In-memory Redis Geospatial Indexing (GEOADD, GEORADIUS/GEOSEARCH) handling high-frequency provider (lat, lng) pings with automated TTL expiration to prevent PostgreSQL write contention",
-          "Radial geofenced query engine filtering active providers within 5km/10km radius with metadata (base fee, hourly rate, rating, ETA)",
-          "WebSocket / PubSub gateway (Socket.io/Redis PubSub) multiplexing sub-second location updates into dedicated 'job:{id}:tracking' channels",
-          "Event throttling pipeline (emitting coordinates every 3-5 seconds or 10 meters) to optimize server bandwidth and prevent client battery drain",
-          "PostgreSQL + PostGIS persistent master database schema for user profiles, transaction ledgers, service categories, and polygon service boundaries"
+          "Cryptographic Title & Survey Vault: SHA-256 document hashing engine storing Deeds of Assignment, Governor's Consent, C of O, and digital survey plans with immutable audit trails",
+          "Zoning & Feasibility Stage Tracker: Multi-stage pipeline tracking Environmental Impact Assessments (EIA), geotechnical soil tests, and state town-planning clearance permits",
+          "Land Purchase Escrow Protocol: Milestone-governed disbursement engine holding land acquisition funds until legal due diligence and deed transfer milestones are satisfied",
+          "Role-Based Legal Access Portal: Restricted portal enabling solicitors, surveyors, and government liaison officers to upload and counter-sign title certificates"
         ]
       },
       {
         id: "2",
-        title: "Module 2: Customer Client Application (Discovery, Booking, Escrow Checkout & Live Tracking)",
-        timeline: "Week 2 (Days 8 - 14)",
-        cost: 165000,
-        description: "Responsive, mobile-optimized cross-platform application empowering customers to discover nearby verified providers, compare transparent rates, book, and track approaching providers on a live interactive map.",
+        title: "Module 2: Construction Project Management ERP & Field Proof-of-Work",
+        timeline: "Phase 2 (Sprint 3 - 4)",
+        cost: 0,
+        description: "Enterprise construction management engine tracking Bills of Quantities (BOQ), subcontractor procurement, purchase orders, and GPS-geofenced mobile field inspections.",
         deliverables: [
-          "Location Discovery & Radial Map View: Interactive map rendering nearby available service providers with dynamic category filtering and price tags",
-          "Provider Dossier & Rate Card: Detailed provider profiles displaying verified badges, past client ratings/reviews, base call-out fees, and estimated arrival times (ETA)",
-          "Direct & Broadcast Booking Checkout: Dual booking flow supporting both direct provider selection (with 30-45s accept timer) and auto-pool broadcast dispatch",
-          "Live Interactive Turn-by-Turn Map Tracking: Smooth vector marker interpolation showing the provider's vehicle/marker approaching along calculated route polylines",
-          "Payment & Escrow Integration: Card / USSD / Bank Transfer payment capture with automated platform escrow hold (funds locked until service delivery confirmation)",
-          "Security Handshake (OTP): 4-digit verification code generated for the customer to give to the provider upon physical arrival"
+          "Dynamic Bill of Quantities (BOQ) Ledger: Hierarchical line-item cost tracker calculating material variances against actual real-time disbursements across civil, structural, and MEP works",
+          "Subcontractor & Vendor Procurement Desk: Request-for-Quote (RFQ) dispatch, competitive bid evaluation matrix, purchase order tracking, and vendor rating logs",
+          "Geofenced Mobile Field Inspection Suite: Dedicated mobile app for on-site project engineers requiring geofenced GPS verification and time-stamped photo/video uploads before milestone fund drawdowns are unlocked",
+          "Site Material Inventory & Delivery Reconciliation: Delivery receipt capture, low-stock threshold alerts, and wastage tracking for cement, steel, and electrical fittings"
         ]
       },
       {
         id: "3",
-        title: "Module 3: Provider Partner Application (Radar Dispatch, Turn Navigation & Background GPS)",
-        timeline: "Week 3 (Days 15 - 21)",
-        cost: 165000,
-        description: "Dedicated mobile partner interface providing gig workers with real-time job radar dispatch alerts, turn-by-turn route guidance, earnings tracking, and hardened background location tracking.",
+        title: "Module 3: Facility Management, Tenancy Lifecycle & IoT Smart Metering",
+        timeline: "Phase 3 (Sprint 5 - 6)",
+        cost: 0,
+        description: "Comprehensive property management and tenant experience system automating digital leasing, recurring rent collection, maintenance dispatch, and smart utility metering.",
         deliverables: [
-          "Availability State Manager: Single-tap Online / Offline toggle broadcasting availability to the Redis Geospatial cache",
-          "Incoming Dispatch Radar: Audio/visual modal alert with countdown timer (30-45s) displaying customer distance, service type, and estimated earnings",
-          "Persistent Background Location Service: Foreground service (Android) & background location tracking (iOS) with persistent notification channel preventing OS battery-saver killing",
-          "Integrated Route Navigation: One-tap launch to Google Maps / Mapbox turn navigation directly to customer destination",
-          "In-App Arrival Handshake & OTP Verification: Arrival trigger requiring input of customer's 4-digit OTP to transition status to IN_PROGRESS",
-          "Partner Wallet & Instant Payouts: In-app ledger displaying daily completed jobs, tips, gross earnings, platform commission deductions, and withdrawal triggers"
+          "Digital Leasing & Auto-Debit Engine: Digital lease agreement generation, legally binding e-signatures, automated card/bank debit rent collection, and condition inspection logs",
+          "Work Order & Maintenance Desk: Self-service resident ticketing system for HVAC, electrical, plumbing, and structural repairs with automated routing to assigned facility technicians",
+          "IoT Smart Metering & Energy Auditing: Bi-directional telemetry integration with smart electricity/water meters providing automated utility billing, consumption analytics, and leakage alerts",
+          "Visitor Access & Gate Pass Engine: Resident-generated short-code / QR access passes integrated with estate security checkpoints for gated communities"
         ]
       },
       {
         id: "4",
-        title: "Module 4: Booking Finite State Machine (FSM), Dispatch Logic & Escrow Settlement Engine",
-        timeline: "Week 4 (Sprint A)",
-        cost: 140000,
-        description: "The core deterministic business logic engine managing job transitions, dispatch queue algorithms, cancellation windows, dead-mileage penalties, and automated wallet settlements.",
+        title: "Module 4: Real World Asset (RWA) Tokenization & Smart Contract Yield Distribution",
+        timeline: "Phase 4 (Sprint 7 - 8)",
+        cost: 0,
+        description: "Permissioned security token infrastructure mapping off-chain property Special Purpose Vehicles (SPVs) into compliant digital asset tokens on Layer-2 blockchain networks.",
         deliverables: [
-          "Strict Finite State Machine (FSM) implementation: PENDING_ACCEPTANCE ➔ ACCEPTED ➔ ON_ROUTE ➔ ARRIVED ➔ IN_PROGRESS ➔ COMPLETED ➔ PAID / CANCELLED",
-          "Automated Dispatch Waterfall Logic: Nearest 3-5 providers ranked by distance and rating; sequential 35s timeout fallback to next provider",
-          "Cancellation Window & Dead-Mileage Fee Engine: Automated cancellation penalty applied if customer cancels after provider has traveled for >3 minutes, compensating provider's transit fuel/time",
-          "Map API Cost-Optimization Architecture: Routing polylines computed once upon job acceptance; client-side vector bearing calculations handle real-time marker rotation to eliminate third-party API fee burn",
-          "Automated Escrow Release: Automatic split logic releasing customer escrow hold to provider wallet (minus configurable platform commission 15-20%) upon verified job completion"
+          "Off-Chain SPV Legal-to-Code Mapping: Contractual architecture mapping physical property title deeds into legally insulated SPVs, where tokens represent fractional shares in the legal holding entity",
+          "Permissioned Security Token Standard (ERC-3643 / ERC-1400): On-chain compliance smart contracts enforcing investor wallet whitelisting, jurisdiction locks, and transfer restrictions",
+          "Biometric KYC/AML Identity Gateway: Automated investor verification (Sumsub / Persona) automatically syncing verified national ID/passport credentials with the smart contract compliance registry",
+          "Automated Smart Contract Yield Distribution: Automated dividend disbursement routing collected tenant rents into net yield payouts (minus maintenance reserve and management fees) to investor wallets",
+          "Decentralized Document Custody (IPFS / Arweave): Permanent, decentralized storage of verified title deeds, valuation reports, and audit certificates"
         ]
       },
       {
         id: "5",
-        title: "Module 5: Super-Admin Control Console, Fleet Oversight, Dispute Resolution & Analytics",
-        timeline: "Week 4 (Sprint B)",
-        cost: 120000,
-        description: "Comprehensive back-office administrative portal providing operational oversight over active bookings, provider KYC verification, dispute resolution, and platform revenue metrics.",
+        title: "Module 5: Multi-Portal Experience Suite & Super-Admin Command Center",
+        timeline: "Phase 5 (Sprint 9 - 10)",
+        cost: 0,
+        description: "High-performance cross-platform portal suite tailored for Investors, Field Engineers, Residents, and Senior Platform Administrators.",
         deliverables: [
-          "Live Fleet Radar: Real-time map dashboard monitoring all active jobs, online providers, and current transit status across the city",
-          "Provider KYC & Onboarding Review: Verification portal for driver's licenses, government IDs, background checks, and vehicle/equipment inspection photos",
-          "Manual Dispatch & Emergency Override: Capability for support agents to reassign jobs, cancel stalled bookings, or manually reroute dispatch orders",
-          "Dispute & Refund Management Console: Structured dispute workflow with access to GPS route breadcrumbs, chat history, and one-click escrow refund or partial payout allocation",
-          "Financial Analytics & Settlement Reports: Executive KPIs tracking gross booking volume (GMV), platform net commission, provider payouts, cancellation rates, and exportable financial ledgers"
+          "Investor & Buyer Web/Mobile Portal: Interactive property marketplace, fractional equity calculator, title deed viewer, wallet portfolio tracker, and historical rental yield performance",
+          "Contractor & Field Engineer App: Low-bandwidth, mobile-optimized site dashboard for updating BOQ completion percentages, logging worker logs, and uploading inspection media",
+          "Tenant & Resident App: Streamlined resident mobile app for one-tap rent payments, maintenance requests, visitor passes, and real-time utility usage tracking",
+          "Super-Admin Enterprise Command Center: Executive analytics tracking Gross Asset Value (GAV), total tokenized square footage, active rental yields, investor KYC approvals, and construction disbursement milestones"
         ]
       }
     ],
@@ -429,12 +496,14 @@ function ProposalContent() {
     includeTax: false,
     
     paymentMilestones: [
-      { label: "Milestone 1: Project Mobilization, Database & Geospatial Architecture Setup (50%)", percentage: 50 },
-      { label: "Milestone 2: Mobile Apps Core, Dispatch Radar & Live Tracking Integration (30%)", percentage: 30 },
-      { label: "Milestone 3: Admin Console, Escrow Settlements, Field Testing & Live Deployment (20%)", percentage: 20 },
+      { label: "Phase 1: Land Acquisition & Due Diligence Subsystem", percentage: 20 },
+      { label: "Phase 2: Construction Management ERP & Field Proof-of-Work", percentage: 25 },
+      { label: "Phase 3: Facility Management & IoT Smart Metering Hub", percentage: 25 },
+      { label: "Phase 4: RWA Tokenization Smart Contracts & Yield Engine", percentage: 20 },
+      { label: "Phase 5: Unified Portals Suite, Security Audit & Cloud Launch", percentage: 10 },
     ],
-    paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Terms: 50% Kickoff Deposit (₦375,000), 30% Mobile Core & Tracking Milestone (₦225,000), 20% Final Testing & Cloud Production Deployment (₦150,000).\n3. Cloud Infrastructure & Hosting: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway at roughly $5 to $10 monthly based on active database and compute usage).\n4. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n5. Delivery Timeline: Exactly 4 weeks total elapsed sprint time (28 calendar days) structured into 4 sequential 1-week sprint phases, including end-to-end integration, real-world field GPS stress testing, and production cloud deployment.",
+    paymentInfo: "Commercial budget & resource allocation to be established following architectural review and regulatory alignment.",
+    notes: "1. Scope Objective: This document serves as a comprehensive technical architecture and functional decomposition proposal for the client, breaking down the 5 core operational pillars without commercial costs attached.\n2. Regulatory & Securities Counsel: Fractional real estate tokens constitute securities under global and regional frameworks (SEC Nigeria, US SEC, UK FCA). An off-chain Special Purpose Vehicle (SPV) legal structure and regulatory sandboxing or accredited investor registration is required prior to mainnet token issuance.\n3. Custody & Onboarding Model: To achieve mass market adoption among traditional real estate investors, a hybrid-custodial wallet model is strongly advised, allowing investors to purchase using debit cards / bank transfers without mandatory MetaMask handling.\n4. Phased Launch Recommendation: Due to the enterprise scale of both an ERP and a tokenized secondary market, we recommend launching Phase 4 (Investor Tokenization & Rental Yield on completed properties) first, followed by Phase 2 (Construction ERP) and Phase 3 (Facility IoT).\n5. Cloud Hosting: Production infrastructure to be deployed on enterprise clusters (e.g., AWS / Railway) with dedicated PostgreSQL, Redis queues, and IPFS document nodes.",
   });
 
   // Load state from URL parameters
@@ -699,7 +768,9 @@ function ProposalContent() {
   // WhatsApp Redirect url
   const getWhatsAppAcceptLink = () => {
     const cleanPhone = state.senderPhone.replace(/\D/g, "");
-    const baseMsg = `Hi ${state.senderName.split(" ")[0]}! I reviewed the project scope & proposal for "${state.proposalTitle || "Software Project"}" (Proposal ID: ${state.proposalId || "—"}).\n\nI accept the deliverables and timeline listed. Total investment is ${state.currency}${formatNumber(getGrandTotal())}.\n\nLet's get started on Milestone 1! Please send over the contract and onboarding onboarding details.`;
+    const baseMsg = getGrandTotal() > 0 
+      ? `Hi ${state.senderName.split(" ")[0]}! I reviewed the project scope & proposal for "${state.proposalTitle || "Software Project"}" (Proposal ID: ${state.proposalId || "—"}).\n\nI accept the deliverables and timeline listed. Total investment is ${state.currency}${formatNumber(getGrandTotal())}.\n\nLet's get started on Milestone 1! Please send over the contract and onboarding details.`
+      : `Hi ${state.senderName.split(" ")[0]}! I reviewed the architectural scope & system breakdown for "${state.proposalTitle || "Software Project"}" (Proposal ID: ${state.proposalId || "—"}).\n\nI reviewed the proposed phases and technical stack. Let's schedule a kickoff call to align on timelines and commercial resourcing!`;
     return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(baseMsg)}`;
   };
 
@@ -1448,8 +1519,14 @@ function ProposalContent() {
                 
                 <div className="flex sm:justify-end items-end no-print">
                   <div className="bg-slate-50 border border-slate-100 rounded-lg p-3.5 text-[11px] text-slate-500 max-w-[280px]">
-                    <span className="font-bold text-[#7c4a1e] block mb-1">Scope Approval Workflow</span>
-                    <p>To accept this proposal and initialize the kickoff sprint, tap the "Accept & Start" action above or sign the back page.</p>
+                    <span className="font-bold text-[#7c4a1e] block mb-1">
+                      {getGrandTotal() > 0 ? "Scope Approval Workflow" : "Architecture Review Notice"}
+                    </span>
+                    <p>
+                      {getGrandTotal() > 0 
+                        ? 'To accept this proposal and initialize the kickoff sprint, tap the "Accept & Start" action above or sign the back page.'
+                        : 'This document presents the functional breakdown and systems architecture. Financial budgeting to be scheduled upon scope ratification.'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1482,7 +1559,7 @@ function ProposalContent() {
                             {mod.timeline || "—"}
                           </span>
                           <span className="bg-slate-200/80 text-slate-800 px-2 py-0.5 rounded">
-                            {state.currency}{formatNumber(mod.cost)}
+                            {mod.cost > 0 ? `${state.currency}${formatNumber(mod.cost)}` : "Architecture & Spec"}
                           </span>
                         </div>
                       </div>
@@ -1518,7 +1595,7 @@ function ProposalContent() {
               {/* Scope Costs Table */}
               <div className="py-6">
                 <span className="text-[10px] font-bold text-[#cca066] uppercase tracking-widest block mb-3 font-mono">
-                  3. INVESTMENT ESTIMATES SUMMARY
+                  {getGrandTotal() > 0 ? "3. INVESTMENT ESTIMATES SUMMARY" : "3. PROJECT PHASING & DELIVERABLES ROADMAP"}
                 </span>
                 
                 <table className="w-full text-left border-collapse">
@@ -1526,8 +1603,12 @@ function ProposalContent() {
                     <tr className="border-b border-slate-200 text-[10px] font-bold text-slate-400 uppercase tracking-widest font-mono">
                       <th className="pb-2 w-12 text-center">Phase</th>
                       <th className="pb-2 pl-2">Description</th>
-                      <th className="pb-2 text-center w-24">Timeline</th>
-                      <th className="pb-2 text-right w-32">Total Cost</th>
+                      <th className="pb-2 text-center w-28">Sprint Timeline</th>
+                      {getGrandTotal() > 0 ? (
+                        <th className="pb-2 text-right w-32">Total Cost</th>
+                      ) : (
+                        <th className="pb-2 text-right w-36">Delivery Type</th>
+                      )}
                     </tr>
                   </thead>
                   <tbody>
@@ -1536,49 +1617,55 @@ function ProposalContent() {
                         <td className="py-3 text-center text-slate-400 font-mono">#{idx + 1}</td>
                         <td className="py-3 pl-2 font-semibold text-slate-800">{mod.title || "—"}</td>
                         <td className="py-3 text-center text-slate-600 font-mono">{mod.timeline || "—"}</td>
-                        <td className="py-3 text-right font-bold text-slate-900 font-mono">{state.currency}{formatNumber(mod.cost)}</td>
+                        {getGrandTotal() > 0 ? (
+                          <td className="py-3 text-right font-bold text-slate-900 font-mono">{state.currency}{formatNumber(mod.cost)}</td>
+                        ) : (
+                          <td className="py-3 text-right text-slate-500 font-mono font-medium">Core Subsystem</td>
+                        )}
                       </tr>
                     ))}
                   </tbody>
                 </table>
 
                 {/* Totals Box */}
-                <div className="flex justify-end pt-4">
-                  <div className="w-64 space-y-2 text-xs">
-                    <div className="flex justify-between text-slate-500">
-                      <span>Subtotal Investment:</span>
-                      <span className="font-mono text-slate-800">{state.currency}{formatNumber(getSubtotal())}</span>
-                    </div>
-
-                    {state.discount > 0 && (
-                      <div className="flex justify-between text-emerald-600">
-                        <span>Discount ({state.discount}%):</span>
-                        <span className="font-mono">-{state.currency}{formatNumber(getDiscountAmount())}</span>
-                      </div>
-                    )}
-
-                    {state.includeTax && state.taxRate > 0 && (
+                {getGrandTotal() > 0 && (
+                  <div className="flex justify-end pt-4">
+                    <div className="w-64 space-y-2 text-xs">
                       <div className="flex justify-between text-slate-500">
-                        <span>VAT ({state.taxRate}%):</span>
-                        <span className="font-mono text-slate-800">+{state.currency}{formatNumber(getTaxAmount())}</span>
+                        <span>Subtotal Investment:</span>
+                        <span className="font-mono text-slate-800">{state.currency}{formatNumber(getSubtotal())}</span>
                       </div>
-                    )}
 
-                    <div className="border-t border-slate-200 pt-2 flex justify-between items-center text-sm font-bold text-slate-900">
-                      <span>Grand Total:</span>
-                      <span className="text-base font-mono font-extrabold text-[#7c4a1e]">
-                        {state.currency}{formatNumber(getGrandTotal())}
-                      </span>
+                      {state.discount > 0 && (
+                        <div className="flex justify-between text-emerald-600">
+                          <span>Discount ({state.discount}%):</span>
+                          <span className="font-mono">-{state.currency}{formatNumber(getDiscountAmount())}</span>
+                        </div>
+                      )}
+
+                      {state.includeTax && state.taxRate > 0 && (
+                        <div className="flex justify-between text-slate-500">
+                          <span>VAT ({state.taxRate}%):</span>
+                          <span className="font-mono text-slate-800">+{state.currency}{formatNumber(getTaxAmount())}</span>
+                        </div>
+                      )}
+
+                      <div className="border-t border-slate-200 pt-2 flex justify-between items-center text-sm font-bold text-slate-900">
+                        <span>Grand Total:</span>
+                        <span className="text-base font-mono font-extrabold text-[#7c4a1e]">
+                          {state.currency}{formatNumber(getGrandTotal())}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Milestones Schedule */}
               {state.paymentMilestones.length > 0 && (
                 <div className="py-6">
                   <span className="text-[10px] font-bold text-[#cca066] uppercase tracking-widest block mb-2 font-mono">
-                    4. MILESTONE PAYMENT SCHEDULE
+                    {getGrandTotal() > 0 ? "4. MILESTONE PAYMENT SCHEDULE" : "4. PHASING & WORKLOAD DISTRIBUTION"}
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {state.paymentMilestones.map((ms, idx) => {
@@ -1587,15 +1674,17 @@ function ProposalContent() {
                         <div key={idx} className="bg-slate-50 border border-slate-150 p-4 rounded-lg flex flex-col justify-between">
                           <div>
                             <span className="text-[9px] font-bold text-[#7c4a1e] uppercase tracking-wider block font-mono">
-                              Milestone {idx + 1} ({Number(ms.percentage).toFixed(2)}%)
+                              {getGrandTotal() > 0 ? `Milestone ${idx + 1} (${Number(ms.percentage).toFixed(0)}%)` : `Phase ${idx + 1} (${Number(ms.percentage).toFixed(0)}% Allocation)`}
                             </span>
                             <p className="text-[11px] text-slate-600 leading-snug mt-1 font-medium">
                               {ms.label}
                             </p>
                           </div>
-                          <span className="text-sm font-bold text-slate-900 font-mono mt-3 pt-2 border-t border-slate-200">
-                            {state.currency}{formatNumber(milestoneValue)}
-                          </span>
+                          {getGrandTotal() > 0 && (
+                            <span className="text-sm font-bold text-slate-900 font-mono mt-3 pt-2 border-t border-slate-200">
+                              {state.currency}{formatNumber(milestoneValue)}
+                            </span>
+                          )}
                         </div>
                       );
                     })}
@@ -1607,7 +1696,7 @@ function ProposalContent() {
               {state.notes && (
                 <div className="py-6">
                   <span className="text-[10px] font-bold text-[#cca066] uppercase tracking-widest block mb-1 font-mono">
-                    5. ASSUMPTIONS & CONTRACT TERMS
+                    5. ARCHITECTURAL ADVISORY & ENGAGEMENT TERMS
                   </span>
                   <p className="text-[10px] leading-relaxed whitespace-pre-line text-slate-500 text-justify">
                     {state.notes}
@@ -1624,7 +1713,7 @@ function ProposalContent() {
                 {/* Payment bank details */}
                 <div className="space-y-1">
                   <span className="font-bold text-slate-700 block uppercase tracking-wider font-mono">
-                    BANK DISBURSEMENT INSTRUCTIONS
+                    {getGrandTotal() > 0 ? "BANK DISBURSEMENT INSTRUCTIONS" : "ENGAGEMENT & RESOURCING NOTICE"}
                   </span>
                   <p className="whitespace-pre-line leading-relaxed font-mono bg-slate-50 border border-slate-100 p-2.5 rounded text-slate-600 max-w-[280px]">
                     {state.paymentInfo}

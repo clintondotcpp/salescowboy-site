@@ -79,6 +79,68 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
+    name: "2-Level Binary Matrix & Food MLM (₦300k)",
+    title: "2-Level Binary Matrix Referral & Foodstuff Empowerment Cooperative Platform",
+    overview: "This technical proposal details the end-to-end development and deployment of an automated 2-Level Binary Matrix referral and food empowerment platform. The system operates on a high-throughput referral logic model: members register through unique sponsor links, submit their activation deposits via bank transfer or automated virtual accounts, fill their 2-person binary tree (Left and Right downlines), trigger cycle-out qualifications to receive physical foodstuff incentive packages (rice, vegetable oil, provisions), and seamlessly re-enter new matrices upon completing reward cycles.",
+    modules: [
+      {
+        id: "1",
+        title: "Module 1: Member Onboarding, Referral Binding & Binary Matrix Tree Engine",
+        timeline: "5 - 7 Days",
+        cost: 85000,
+        description: "High-performance member registration and deterministic binary tree engine that binds sponsor referral relationships and prevents orphan accounts.",
+        deliverables: [
+          "Referral URL Capture & Sponsor Binding: Query-string tracker (/register?ref=username) automatically locking and validating upline sponsors upon registration",
+          "Orphan Node Prevention Guardrails: Fallback routing assigning unreferred registrations to master system admin root nodes to maintain tree structural integrity",
+          "2-Child Binary Matrix Logic: Strict 1 → 2 parent-child relationship tree calculating left and right downline placement rules and active status validation",
+          "Account State Machine: Real-time user status workflow tracking states: INACTIVE_UNPAID ➔ ACTIVE_SEARCHING ➔ CYCLE_COMPLETED_ELIGIBLE ➔ REWARD_CLAIMED ➔ RE_ENTERED",
+          "Secure Member Authentication: Encrypted password hashing, mobile phone verification, and session token management"
+        ]
+      },
+      {
+        id: "2",
+        title: "Module 2: Deposit Gateway, Proof of Payment (POP) Upload & Virtual Accounts",
+        timeline: "4 - 5 Days",
+        cost: 70000,
+        description: "Flexible multi-channel payment gateway supporting both manual Nigerian bank transfers with receipt uploads and automated gateway webhooks.",
+        deliverables: [
+          "Manual Bank Transfer Desk: Dynamic member view displaying cooperative corporate bank account details (Bank Name, Account Number, Account Name)",
+          "Proof of Payment (POP) Upload Engine: Mobile-friendly image and PDF receipt uploader with client-side compression and bank transaction reference logging",
+          "Automated Payment Webhook Integration (Paystack/Moniepoint): Support for automated instant virtual account generation with instant callback account activation upon transfer",
+          "Payment Audit Ledger: Immutable transactional database recording payment timestamps, approval operators, deposit amounts, and reference codes"
+        ]
+      },
+      {
+        id: "3",
+        title: "Module 3: Responsive Member Portal, Live Matrix Visualizer & Reward Desk",
+        timeline: "5 - 7 Days",
+        cost: 75000,
+        description: "Modern, mobile-first user dashboard giving members complete visibility over their referral growth, incentive qualification, and food pickup codes.",
+        deliverables: [
+          "Executive Member Dashboard: Snapshot view showing personal activation status, direct downline progress counter (0/2 or 2/2), and copyable personal referral link",
+          "Interactive Binary Tree Visualizer: Graphical visual matrix displaying the user's root node and their two assigned child nodes with live payment/activation indicators",
+          "Foodstuff Incentive Claim Center: Automated reward qualification badge generating secure, tamper-evident 6-digit claim codes and QR verification passes once 2 downlines activate",
+          "Pick-Up Location Selector: State and Local Government pick-up center directory allowing members to choose their nearest partner food fulfillment hub",
+          "One-Click Re-Entry Action: Self-service re-entry trigger allowing cycled-out members to submit a new deposit and spawn a fresh binary matrix node"
+        ]
+      },
+      {
+        id: "4",
+        title: "Module 4: Super-Admin Control Center, Payment Approvals & Food Fulfillment Desk",
+        timeline: "4 - 6 Days",
+        cost: 70000,
+        description: "Comprehensive administrative command room for cooperative managers to verify bank payments, audit tree structures, and dispatch foodstuff inventory.",
+        deliverables: [
+          "POP Verification Queue: Interactive review panel displaying pending payment receipts, member details, transfer amounts, and one-click 'Approve & Activate' or 'Decline' actions",
+          "Referral Tree & Cycle Management Console: Master overview of all active binary matrices with search, filter, and manual node reassignment tools",
+          "Foodstuff Inventory & Dispatch Manager: Order fulfillment ledger tracking foodstuff package statuses (Pending Verification ➔ Packaged ➔ Shipped to Depot ➔ Collected)",
+          "Pick-Up Agent QR / Code Verifier: Lightweight validation tool for state coordinators to verify members' 6-digit claim codes upon physical food handover",
+          "Re-entry Ledger & Financial Reports: Exportable CSV reports tracking total revenue, active member cycles, food packages distributed, and cooperative growth metrics"
+        ]
+      }
+    ]
+  },
+  {
     name: "RWA PropTech & Asset Tokenization (Scope Breakdown)",
     title: "Enterprise Real World Asset (RWA) Tokenization & PropTech Construction ERP Ecosystem",
     overview: "This architectural scope and engineering proposal details the complete technical blueprint for an end-to-end PropTech lifecycle ecosystem (Land Acquisition → Construction PM → Facility Tenancy) fused with a fractional liquidity Real World Asset (RWA) Tokenization engine. The platform connects three client portals (Investor/Buyer, Contractor/Field, and Tenant/Resident) to a central high-throughput API gateway, combining traditional relational construction ERP ledgers (PostgreSQL), IoT utility telemetry, and permissioned Ethereum Virtual Machine (EVM) security token smart contracts (ERC-3643/ERC-1400) for compliant yield distribution.",
@@ -409,84 +471,73 @@ function ProposalContent() {
 
   // Form State
   const [state, setState] = useState<ProposalState>({
-    proposalTitle: "Enterprise Real World Asset (RWA) Tokenization & PropTech Construction ERP Ecosystem",
+    proposalTitle: "2-Level Binary Matrix Referral & Foodstuff Empowerment Cooperative Platform",
     proposalId: "",
     proposalDate: "",
     
     ...DEFAULT_SENDER,
     
-    clientName: "Real Estate Development & Tokenization Sponsors",
-    clientContact: "Executive Board & Product Leadership",
-    clientAddress: "Nigeria & Global Operations",
+    clientName: "Agro-Cooperative & Food Empowerment Leadership",
+    clientContact: "Project Director & Management Board",
+    clientAddress: "Nigeria",
     clientEmail: "",
     clientPhone: "",
     
-    projectOverview: "This architectural scope and engineering proposal details the complete technical blueprint for an end-to-end PropTech lifecycle ecosystem (Land Acquisition → Construction PM → Facility Tenancy) fused with a fractional liquidity Real World Asset (RWA) Tokenization engine. The platform connects three client portals (Investor/Buyer, Contractor/Field, and Tenant/Resident) to a central high-throughput API gateway, combining traditional relational construction ERP ledgers (PostgreSQL), IoT utility telemetry, and permissioned Ethereum Virtual Machine (EVM) security token smart contracts (ERC-3643/ERC-1400) for compliant yield distribution.",
+    projectOverview: "This technical proposal details the end-to-end development and deployment of an automated 2-Level Binary Matrix referral and food empowerment platform. The system operates on a high-throughput referral logic model: members register through unique sponsor links, submit their activation deposits via bank transfer or automated virtual accounts, fill their 2-person binary tree (Left and Right downlines), trigger cycle-out qualifications to receive physical foodstuff incentive packages (rice, vegetable oil, provisions), and seamlessly re-enter new matrices upon completing reward cycles.",
     modules: [
       {
         id: "1",
-        title: "Module 1: Land Acquisition, Document Vault & Due Diligence Pipeline",
-        timeline: "Phase 1 (Sprint 1 - 2)",
-        cost: 0,
-        description: "Secure, tamper-evident digital repository and workflow tracker managing pre-construction land acquisition, title verification, municipal zoning approvals, and land purchase escrow accounts.",
+        title: "Module 1: Member Onboarding, Referral Binding & Binary Matrix Tree Engine",
+        timeline: "5 - 7 Days",
+        cost: 85000,
+        description: "High-performance member registration and deterministic binary tree engine that binds sponsor referral relationships and prevents orphan accounts.",
         deliverables: [
-          "Cryptographic Title & Survey Vault: SHA-256 document hashing engine storing Deeds of Assignment, Governor's Consent, C of O, and digital survey plans with immutable audit trails",
-          "Zoning & Feasibility Stage Tracker: Multi-stage pipeline tracking Environmental Impact Assessments (EIA), geotechnical soil tests, and state town-planning clearance permits",
-          "Land Purchase Escrow Protocol: Milestone-governed disbursement engine holding land acquisition funds until legal due diligence and deed transfer milestones are satisfied",
-          "Role-Based Legal Access Portal: Restricted portal enabling solicitors, surveyors, and government liaison officers to upload and counter-sign title certificates"
+          "Referral URL Capture & Sponsor Binding: Query-string tracker (/register?ref=username) automatically locking and validating upline sponsors upon registration",
+          "Orphan Node Prevention Guardrails: Fallback routing assigning unreferred registrations to master system admin root nodes to maintain tree structural integrity",
+          "2-Child Binary Matrix Logic: Strict 1 → 2 parent-child relationship tree calculating left and right downline placement rules and active status validation",
+          "Account State Machine: Real-time user status workflow tracking states: INACTIVE_UNPAID ➔ ACTIVE_SEARCHING ➔ CYCLE_COMPLETED_ELIGIBLE ➔ REWARD_CLAIMED ➔ RE_ENTERED",
+          "Secure Member Authentication: Encrypted password hashing, mobile phone verification, and session token management"
         ]
       },
       {
         id: "2",
-        title: "Module 2: Construction Project Management ERP & Field Proof-of-Work",
-        timeline: "Phase 2 (Sprint 3 - 4)",
-        cost: 0,
-        description: "Enterprise construction management engine tracking Bills of Quantities (BOQ), subcontractor procurement, purchase orders, and GPS-geofenced mobile field inspections.",
+        title: "Module 2: Deposit Gateway, Proof of Payment (POP) Upload & Virtual Accounts",
+        timeline: "4 - 5 Days",
+        cost: 70000,
+        description: "Flexible multi-channel payment gateway supporting both manual Nigerian bank transfers with receipt uploads and automated gateway webhooks.",
         deliverables: [
-          "Dynamic Bill of Quantities (BOQ) Ledger: Hierarchical line-item cost tracker calculating material variances against actual real-time disbursements across civil, structural, and MEP works",
-          "Subcontractor & Vendor Procurement Desk: Request-for-Quote (RFQ) dispatch, competitive bid evaluation matrix, purchase order tracking, and vendor rating logs",
-          "Geofenced Mobile Field Inspection Suite: Dedicated mobile app for on-site project engineers requiring geofenced GPS verification and time-stamped photo/video uploads before milestone fund drawdowns are unlocked",
-          "Site Material Inventory & Delivery Reconciliation: Delivery receipt capture, low-stock threshold alerts, and wastage tracking for cement, steel, and electrical fittings"
+          "Manual Bank Transfer Desk: Dynamic member view displaying cooperative corporate bank account details (Bank Name, Account Number, Account Name)",
+          "Proof of Payment (POP) Upload Engine: Mobile-friendly image and PDF receipt uploader with client-side compression and bank transaction reference logging",
+          "Automated Payment Webhook Integration (Paystack/Moniepoint): Support for automated instant virtual account generation with instant callback account activation upon transfer",
+          "Payment Audit Ledger: Immutable transactional database recording payment timestamps, approval operators, deposit amounts, and reference codes"
         ]
       },
       {
         id: "3",
-        title: "Module 3: Facility Management, Tenancy Lifecycle & IoT Smart Metering",
-        timeline: "Phase 3 (Sprint 5 - 6)",
-        cost: 0,
-        description: "Comprehensive property management and tenant experience system automating digital leasing, recurring rent collection, maintenance dispatch, and smart utility metering.",
+        title: "Module 3: Responsive Member Portal, Live Matrix Visualizer & Reward Desk",
+        timeline: "5 - 7 Days",
+        cost: 75000,
+        description: "Modern, mobile-first user dashboard giving members complete visibility over their referral growth, incentive qualification, and food pickup codes.",
         deliverables: [
-          "Digital Leasing & Auto-Debit Engine: Digital lease agreement generation, legally binding e-signatures, automated card/bank debit rent collection, and condition inspection logs",
-          "Work Order & Maintenance Desk: Self-service resident ticketing system for HVAC, electrical, plumbing, and structural repairs with automated routing to assigned facility technicians",
-          "IoT Smart Metering & Energy Auditing: Bi-directional telemetry integration with smart electricity/water meters providing automated utility billing, consumption analytics, and leakage alerts",
-          "Visitor Access & Gate Pass Engine: Resident-generated short-code / QR access passes integrated with estate security checkpoints for gated communities"
+          "Executive Member Dashboard: Snapshot view showing personal activation status, direct downline progress counter (0/2 or 2/2), and copyable personal referral link",
+          "Interactive Binary Tree Visualizer: Graphical visual matrix displaying the user's root node and their two assigned child nodes with live payment/activation indicators",
+          "Foodstuff Incentive Claim Center: Automated reward qualification badge generating secure, tamper-evident 6-digit claim codes and QR verification passes once 2 downlines activate",
+          "Pick-Up Location Selector: State and Local Government pick-up center directory allowing members to choose their nearest partner food fulfillment hub",
+          "One-Click Re-Entry Action: Self-service re-entry trigger allowing cycled-out members to submit a new deposit and spawn a fresh binary matrix node"
         ]
       },
       {
         id: "4",
-        title: "Module 4: Real World Asset (RWA) Tokenization & Smart Contract Yield Distribution",
-        timeline: "Phase 4 (Sprint 7 - 8)",
-        cost: 0,
-        description: "Permissioned security token infrastructure mapping off-chain property Special Purpose Vehicles (SPVs) into compliant digital asset tokens on Layer-2 blockchain networks.",
+        title: "Module 4: Super-Admin Control Center, Payment Approvals & Food Fulfillment Desk",
+        timeline: "4 - 6 Days",
+        cost: 70000,
+        description: "Comprehensive administrative command room for cooperative managers to verify bank payments, audit tree structures, and dispatch foodstuff inventory.",
         deliverables: [
-          "Off-Chain SPV Legal-to-Code Mapping: Contractual architecture mapping physical property title deeds into legally insulated SPVs, where tokens represent fractional shares in the legal holding entity",
-          "Permissioned Security Token Standard (ERC-3643 / ERC-1400): On-chain compliance smart contracts enforcing investor wallet whitelisting, jurisdiction locks, and transfer restrictions",
-          "Biometric KYC/AML Identity Gateway: Automated investor verification (Sumsub / Persona) automatically syncing verified national ID/passport credentials with the smart contract compliance registry",
-          "Automated Smart Contract Yield Distribution: Automated dividend disbursement routing collected tenant rents into net yield payouts (minus maintenance reserve and management fees) to investor wallets",
-          "Decentralized Document Custody (IPFS / Arweave): Permanent, decentralized storage of verified title deeds, valuation reports, and audit certificates"
-        ]
-      },
-      {
-        id: "5",
-        title: "Module 5: Multi-Portal Experience Suite & Super-Admin Command Center",
-        timeline: "Phase 5 (Sprint 9 - 10)",
-        cost: 0,
-        description: "High-performance cross-platform portal suite tailored for Investors, Field Engineers, Residents, and Senior Platform Administrators.",
-        deliverables: [
-          "Investor & Buyer Web/Mobile Portal: Interactive property marketplace, fractional equity calculator, title deed viewer, wallet portfolio tracker, and historical rental yield performance",
-          "Contractor & Field Engineer App: Low-bandwidth, mobile-optimized site dashboard for updating BOQ completion percentages, logging worker logs, and uploading inspection media",
-          "Tenant & Resident App: Streamlined resident mobile app for one-tap rent payments, maintenance requests, visitor passes, and real-time utility usage tracking",
-          "Super-Admin Enterprise Command Center: Executive analytics tracking Gross Asset Value (GAV), total tokenized square footage, active rental yields, investor KYC approvals, and construction disbursement milestones"
+          "POP Verification Queue: Interactive review panel displaying pending payment receipts, member details, transfer amounts, and one-click 'Approve & Activate' or 'Decline' actions",
+          "Referral Tree & Cycle Management Console: Master overview of all active binary matrices with search, filter, and manual node reassignment tools",
+          "Foodstuff Inventory & Dispatch Manager: Order fulfillment ledger tracking foodstuff package statuses (Pending Verification ➔ Packaged ➔ Shipped to Depot ➔ Collected)",
+          "Pick-Up Agent QR / Code Verifier: Lightweight validation tool for state coordinators to verify members' 6-digit claim codes upon physical food handover",
+          "Re-entry Ledger & Financial Reports: Exportable CSV reports tracking total revenue, active member cycles, food packages distributed, and cooperative growth metrics"
         ]
       }
     ],
@@ -496,14 +547,12 @@ function ProposalContent() {
     includeTax: false,
     
     paymentMilestones: [
-      { label: "Phase 1: Land Acquisition & Due Diligence Subsystem", percentage: 20 },
-      { label: "Phase 2: Construction Management ERP & Field Proof-of-Work", percentage: 25 },
-      { label: "Phase 3: Facility Management & IoT Smart Metering Hub", percentage: 25 },
-      { label: "Phase 4: RWA Tokenization Smart Contracts & Yield Engine", percentage: 20 },
-      { label: "Phase 5: Unified Portals Suite, Security Audit & Cloud Launch", percentage: 10 },
+      { label: "Milestone 1: Project Mobilization, Database & Binary Matrix Tree Engine (50%)", percentage: 50 },
+      { label: "Milestone 2: Member Portal, Deposit Gateway & Matrix Visualizer (30%)", percentage: 30 },
+      { label: "Milestone 3: Admin Console, Food Fulfillment Desk, QA Testing & Live Deployment (20%)", percentage: 20 },
     ],
-    paymentInfo: "Commercial budget & resource allocation to be established following architectural review and regulatory alignment.",
-    notes: "1. Scope Objective: This document serves as a comprehensive technical architecture and functional decomposition proposal for the client, breaking down the 5 core operational pillars without commercial costs attached.\n2. Regulatory & Securities Counsel: Fractional real estate tokens constitute securities under global and regional frameworks (SEC Nigeria, US SEC, UK FCA). An off-chain Special Purpose Vehicle (SPV) legal structure and regulatory sandboxing or accredited investor registration is required prior to mainnet token issuance.\n3. Custody & Onboarding Model: To achieve mass market adoption among traditional real estate investors, a hybrid-custodial wallet model is strongly advised, allowing investors to purchase using debit cards / bank transfers without mandatory MetaMask handling.\n4. Phased Launch Recommendation: Due to the enterprise scale of both an ERP and a tokenized secondary market, we recommend launching Phase 4 (Investor Tokenization & Rental Yield on completed properties) first, followed by Phase 2 (Construction ERP) and Phase 3 (Facility IoT).\n5. Cloud Hosting: Production infrastructure to be deployed on enterprise clusters (e.g., AWS / Railway) with dedicated PostgreSQL, Redis queues, and IPFS document nodes.",
+    paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
+    notes: "1. Total Project Investment: ₦300,000 fixed price.\n2. Milestone Terms: 50% Kickoff Deposit (₦150,000), 30% Member Portal & Payment Milestone (₦90,000), 20% Admin Console, Testing & Production Cloud Handover (₦60,000).\n3. Cloud Infrastructure & Hosting: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway at roughly $5 to $10 monthly based on active database and compute usage).\n4. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n5. Delivery Timeline: 2 to 3 weeks total elapsed delivery schedule including testing and training.",
   });
 
   // Load state from URL parameters

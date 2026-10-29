@@ -1,89 +1,66 @@
-This is an enterprise Real World Asset (RWA) tokenization and PropTech ERP platform condensed into two bullet points.
+Yes, this is completely clear. Stripping away the conversational wording, this is a **2-Level Binary Matrix / Foodstuff Network Marketing (MLM) platform**.
 
-Building an end-to-end lifecycle system (Land $\rightarrow$ Build $\rightarrow$ Manage) combined with a fractional liquidity layer (Tokenization) requires bridging three distinct software disciplines: **traditional real estate ERP**, **IoT/operations management**, and **Web3 asset tokenization**.
-
-Here is the architectural decomposition, module breakdown, and technical realities needed to scope this project properly.
+It follows the classic Nigerian "food empowerment / agro-cooperative" referral model: deposit registration capital, bring 2 direct downlines (binary matrix split: left and right), cycle out to collect physical food packages (rice, oil, provisions, etc.), and optionally re-enter the pool.
 
 ---
 
-### 1. Functional System Breakdown
-
-To make this feasible, the platform separates into three primary operational pillars and an administrative orchestrator:
+### Core Mechanics & User Flow
 
 ```
-[ Investor / Buyer Portal ]       [ Contractor / Field Portal ]       [ Tenant / Facility Portal ]
-              \                                |                                /
-               └───► [ API Gateway / Microservices & Event Bus ] ◄─────────────┘
-                                       |
-                ┌──────────────────────┼──────────────────────┐
-                ▼                      ▼                      ▼
-        [ ERP Lifecycle ]      [ Tokenization Engine ] [ Core Database & Storage ]
-        - Land Acquisition      - Asset Securitization   - PostgreSQL (Relational)
-        - Construction ERP      - Smart Contracts        - S3/IPFS (Documents & Media)
-        - Facility Mgmt         - Secondary Trading      - Redis (Event Queues)
+[User Signs Up via Referral Link]
+             │
+             ▼
+[Deposit Stage: View Admin Bank Details]
+             │
+             ▼
+[Upload Proof of Payment / Automated Paystack/Moniepoint Virtual Account]
+             │
+             ▼
+[Admin Approves / Auto-Verify: Account Activated]
+             │
+             ▼
+[User Refers Person A + Person B (2 Downlines Complete Matrix)]
+             │
+             ▼
+[Eligibility Met: Foodstuff Incentive Dispatched / Claim Code Issued]
+             │
+             ▼
+[Re-entry Loop: Cycle Out or Pay to Rejoin]
 
 ```
 
 ---
 
-### 2. Core Modules & Engineering Scope
+### Functional Components Required
 
-#### A. Land Acquisition & Due Diligence (Phase 1)
+#### 1. Public & Onboarding Flow
 
-* **Title & Survey Registry:** Document repository with tamper-evident hashing (deed of assignment, governor’s consent, survey plans, C of O).
-* **Zoning & Feasibility Tracking:** Pipeline tracker for environmental impact assessments, soil test uploads, and municipal permit clearance.
-* **Escrow for Land Purchase:** Milestone-based milestone disbursement accounts between buyer and seller.
+* **Registration with Referral Binding:** User signs up (`Full Name`, `Phone`, `Email`, `Username`, `Password`). If arriving via a link like `[site.com/register?ref=username](https://site.com/register?ref=username)`, lock the upline username into the form.
+* **Referral Guardrails:** If no referral link is used, assign a default system admin upline to prevent orphan nodes in the tree.
 
-#### B. Construction Project Management (Phase 2)
+#### 2. Member Portal
 
-* **Milestone & Budget Ledger:** Bill of Quantities (BOQ) tracking against real disbursements.
-* **Vendor & Subcontractor Management:** RFQ submissions, bids, and purchase order tracking.
-* **Field Inspection & Proof of Work:** Field engineer mobile interface with geofenced photo/video uploads to trigger milestone approvals before funds release.
-
-#### C. Facility Management & Tenancy (Phase 3)
-
-* **Tenant Lifecycle:** Digital leasing, auto-debit rent collection, utility bill breakdown, and move-in/move-out inspections.
-* **Work Order & Maintenance Desk:** Ticketing engine for plumbing, electrical, HVAC, and civil repairs with vendor dispatch.
-* **IoT / Utility Integration:** Metering data capture for power/water automation and energy consumption reports.
-
-#### D. Real World Asset (RWA) Tokenization Layer
-
-* **Legal-to-Code Mapping (SPV Architecture):** Each physical property must map to an off-chain Special Purpose Vehicle (SPV) holding the legal title. The token represents fractional equity or debt/yield shares in that SPV.
-* **Smart Contract Standards:**
-* ERC-3643 (T-REX) or ERC-1400 (Security Token Standards) rather than standard ERC-20, because real estate securities require on-chain compliance (permissioned transfers, whitelisted wallets, jurisdiction blocks).
+* **Dashboard:** Shows activation status (*Inactive / Active / Cycled Out*), personal referral link, and direct downline count ($0/2$).
+* **Deposit / Payment Section:**
+* Displays the company bank details (Bank name, Account Number, Account Name).
+* Proof of Payment (POP) upload field (screenshot/transaction receipt) with transfer reference or automated virtual account payment.
 
 
-* **Identity & Compliance (KYC/AML):** Integrated identity layer (e.g., Sumsub, Persona) linked to wallet whitelists before any buy/transfer transactions execute.
-* **Rental Yield Distribution:** Automated smart contract distribution converting gross collected rent into net distribution (minus management fees, reserve fund, and taxes) credited directly to token holders' custodial or self-custody wallets.
+* **Binary Referral Tree / Matrix View:** Visual or list breakdown of their two assigned children (Downline 1 and Downline 2) and their payment statuses.
+* **Reward / Entitlement Status:** Shows milestone completion (e.g., *“Target Reached: Eligible for Foodstuff Package A”*), redemption status (*Pending Dispatch / Collected*), and a “Re-enter / Rejoin” button.
+
+#### 3. Admin Control Center
+
+* **Payment Verification Queue:** Table showing member name, amount, bank reference, uploaded receipt image, and action buttons (*Approve* / *Decline*).
+* **Referral Tree & Cycle Management:** Tracks users who have completed their $1 \rightarrow 2$ matrix requirements to trigger reward dispatches.
+* **Foodstuff Inventory & Fulfillment Desk:** Marks food packages as *Prepared*, *Shipped*, or *Redeemed via Pickup Center/Agent*.
+* **Re-entry Engine:** Clones/resets the user node to re-enter a new matrix upon new deposit confirmation.
 
 ---
 
-### 3. Recommended Architecture & Tech Stack
+### Key Operational Caveats to Clarify
 
-| Component | Technology | Rationale |
-| --- | --- | --- |
-| **Mobile Apps** | Flutter or React Native | Cross-platform parity across iOS/Android for investors, site managers, and tenants. |
-| **Backend Core** | NestJS (Node.js/TypeScript) or Go | Modular service architecture suited for complex relational business logic and event management. |
-| **Database** | PostgreSQL + TimescaleDB | ACID compliance for financial ledgers; time-series data for construction and facility IoT logs. |
-| **Blockchain / L2** | Polygon, Arbitrum, or Base | Low gas fees for micro-distributions of rent and fractional transfers; Ethereum ecosystem tooling. |
-| **Contract Framework** | Solidity + Foundry / Hardhat | Security token standards with role-based access control and upgradable proxy patterns (UUPS). |
-| **Storage** | AWS S3 + IPFS / Arweave | S3 for standard operational docs; IPFS/Arweave for permanent, decentralized custody of title deeds and audit certificates. |
+* **Payment Method:** Will this rely on **manual bank transfers with screenshot uploads** (labor-intensive for admin verification) or an **automated payment gateway** (e.g., Paystack/Moniepoint dedicated virtual accounts that activate accounts instantly)?
+* **Reward Fulfillment:** Do users pick up food items from physical distribution centres/state coordinators, or does the platform need delivery address and logistics tracking?
 
----
-
-### 4. Critical Blockers to Clarify with the Client Immediately
-
-1. **Regulatory Jurisdiction for Tokenization:**
-* In most jurisdictions (SEC in the US, SEC Nigeria, FCA in the UK), fractional real estate tokens are classified as **unregistered securities** unless issued under specific regulatory sandboxes, crowdfunding licenses, or accredited investor exemptions (e.g., Reg D/Reg S). The client cannot legally launch this without clear securities counsel.
-
-
-2. **Custody & Liquidity Model:**
-* Is this a **closed/custodial platform** (users pay via bank transfer/card, platform holds tokens on their behalf in an internal ledger) or **permissionless Web3** (users connect MetaMask/Phantom)? Custodial is recommended for 95% of real estate users.
-
-
-3. **Phasing Strategy:**
-* Building both an enterprise construction/facility ERP and a tokenized secondary market from scratch in a single release can easily take 12–18 months. Recommend launching either the **Investor Tokenization + Yield Portal** first (using completed properties) or the **Property Development/Facility ERP** first.
-
-
-
-Would you like to draft a phased scope proposal breaking this down into milestones, or do you want to define the smart contract specification and database schema first?
+How would you like to handle this—do you need a scope breakdown and quote to send to the client, or are you structuring the database schema and referral tree logic first?

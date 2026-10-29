@@ -1,66 +1,85 @@
-Yes, this is completely clear. Stripping away the conversational wording, this is a **2-Level Binary Matrix / Foodstuff Network Marketing (MLM) platform**.
+*A LITTLE HELP FOUNDATION*
 
-It follows the classic Nigerian "food empowerment / agro-cooperative" referral model: deposit registration capital, bring 2 direct downlines (binary matrix split: left and right), cycle out to collect physical food packages (rice, oil, provisions, etc.), and optionally re-enter the pool.
+*SORT A BILL* (Trademarked) — App Developer Brief
 
----
+Tagline: Small Bills. Big Relief.
 
-### Core Mechanics & User Flow
+1/. *Project Overview*
 
-```
-[User Signs Up via Referral Link]
-             │
-             ▼
-[Deposit Stage: View Admin Bank Details]
-             │
-             ▼
-[Upload Proof of Payment / Automated Paystack/Moniepoint Virtual Account]
-             │
-             ▼
-[Admin Approves / Auto-Verify: Account Activated]
-             │
-             ▼
-[User Refers Person A + Person B (2 Downlines Complete Matrix)]
-             │
-             ▼
-[Eligibility Met: Foodstuff Incentive Dispatched / Claim Code Issued]
-             │
-             ▼
-[Re-entry Loop: Cycle Out or Pay to Rejoin]
+Sort A Bill is a proposed digital bill-relief platform under A Little Help Foundation. The goal is to connect people who cannot afford eligible essential bills with donors, philanthropists, corporate organisations and other supporters willing to help settle those bills.
 
-```
+The platform should make requesting help simple, donating trustworthy, and every approved payment traceable.
 
----
+2/. *How the App Should Work*
 
-### Functional Components Required
+1. Submit a Bill
 
-#### 1. Public & Onboarding Flow
+Applicants create an account, upload their bill, provide the necessary details and explain their request.
 
-* **Registration with Referral Binding:** User signs up (`Full Name`, `Phone`, `Email`, `Username`, `Password`). If arriving via a link like `[site.com/register?ref=username](https://site.com/register?ref=username)`, lock the upline username into the form.
-* **Referral Guardrails:** If no referral link is used, assign a default system admin upline to prevent orphan nodes in the tree.
+2. Verify and Review
 
-#### 2. Member Portal
+The admin team verifies the bill, provider, amount and eligibility before approving or declining the request.
 
-* **Dashboard:** Shows activation status (*Inactive / Active / Cycled Out*), personal referral link, and direct downline count ($0/2$).
-* **Deposit / Payment Section:**
-* Displays the company bank details (Bank name, Account Number, Account Name).
-* Proof of Payment (POP) upload field (screenshot/transaction receipt) with transfer reference or automated virtual account payment.
+3. Match with Supporters
 
+Approved bills appear in a privacy-protected donor marketplace where individuals and organisations can choose which eligible bills to support.
 
-* **Binary Referral Tree / Matrix View:** Visual or list breakdown of their two assigned children (Downline 1 and Downline 2) and their payment statuses.
-* **Reward / Entitlement Status:** Shows milestone completion (e.g., *“Target Reached: Eligible for Foodstuff Package A”*), redemption status (*Pending Dispatch / Collected*), and a “Re-enter / Rejoin” button.
+4. Settle the Bill
 
-#### 3. Admin Control Center
+Payments should go directly to the verified service provider wherever feasible, with confirmation and transaction records.
 
-* **Payment Verification Queue:** Table showing member name, amount, bank reference, uploaded receipt image, and action buttons (*Approve* / *Decline*).
-* **Referral Tree & Cycle Management:** Tracks users who have completed their $1 \rightarrow 2$ matrix requirements to trigger reward dispatches.
-* **Foodstuff Inventory & Fulfillment Desk:** Marks food packages as *Prepared*, *Shipped*, or *Redeemed via Pickup Center/Agent*.
-* **Re-entry Engine:** Clones/resets the user node to re-enter a new matrix upon new deposit confirmation.
+5. Track the Impact
 
----
+Applicants can track their requests, donors can see the status of their contributions, and administrators can monitor settlements and generate reports.
 
-### Key Operational Caveats to Clarify
+3/. *Main Features Required*
 
-* **Payment Method:** Will this rely on **manual bank transfers with screenshot uploads** (labor-intensive for admin verification) or an **automated payment gateway** (e.g., Paystack/Moniepoint dedicated virtual accounts that activate accounts instantly)?
-* **Reward Fulfillment:** Do users pick up food items from physical distribution centres/state coordinators, or does the platform need delivery address and logistics tracking?
+* Applicant account: registration, profile, bill submission, document upload and request tracking.
 
-How would you like to handle this—do you need a scope breakdown and quote to send to the client, or are you structuring the database schema and referral tree logic first?
+* Bill categories: utilities, education, eligible healthcare expenses, internet/communication and other approved essential bills.
+
+* Donor account: browse approved bills, contribute to a selected bill or eligible funding pool, and view contribution history.
+
+* Admin dashboard: verify applications, approve or decline requests, manage users, flag duplicates, allocate available funding and track settlements.
+
+* Payment integration: secure payment processing, provider-payment workflow, transaction references, receipts and reconciliation.
+
+* Notifications: application updates, approval decisions, donation confirmations and settlement notifications.
+
+* Reporting: funds received, committed, paid, refunded and remaining; bills settled; and programme performance.
+
+* Security and privacy: role-based access, secure document storage, audit logs, data protection and restricted access to sensitive information.
+
+ 4\. *The Main User Interfaces*
+
+The first version should include:
+
+* Welcome page and onboarding.
+
+* Sign-up and login.
+
+* Applicant dashboard.
+
+* Submit-a-bill form.
+
+* Bill verification/status page.
+
+* Approved bills and donor discovery page.
+
+* Bill details and contribution page.
+
+* Donor dashboard and transaction history.
+
+* Notifications and support centre.
+
+* Administrative dashboard and reporting panel.
+
+ 5\. *Important Development Direction*
+
+I want the platform designed for future growth, but I do not want to spend heavily on unnecessary features before the core service is proven.
+
+The first release should focus on bill submission, verification, donor matching, secure payments, tracking and accountability. The architecture should allow additional bill categories, corporate sponsorship programmes, recurring donations, analytics and future integrations.
+
+The app must protect beneficiaries' dignity. Their full names, personal documents, account details and sensitive bills must never be exposed publicly by default. Bill verification and payment approval should include human oversight.
+
+ 

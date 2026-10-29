@@ -79,6 +79,69 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
+    name: "Sort A Bill - A Little Help Foundation (₦750k)",
+    title: "Sort A Bill — Digital Bill-Relief & Philanthropic Settlement Platform",
+    overview: "This technical proposal details the end-to-end design, custom engineering, and cloud deployment of 'Sort A Bill' (Small Bills. Big Relief.) for A Little Help Foundation. Built upon an enterprise NestJS (Node.js/TypeScript) modular architecture and PostgreSQL, the platform establishes a transparent, dignity-first bridge connecting financially constrained individuals with donors and corporate supporters. The system ensures requesting help is simple, donating is verifiable, and every approved payment settles directly to verified utility, education, and healthcare service providers with end-to-end auditability.",
+    modules: [
+      {
+        id: "1",
+        title: "Module 1: Enterprise NestJS Architecture, Security, RBAC & Applicant Onboarding",
+        timeline: "Week 1 (Days 1 - 7)",
+        cost: 180000,
+        description: "Robust enterprise NestJS backend foundation, relational database architecture, role-based access control (RBAC), and applicant bill-submission workflow.",
+        deliverables: [
+          "Modular NestJS Backend Framework: High-performance TypeScript API architecture with dependency injection, global validation pipes, exception filters, and JWT authentication guards",
+          "Role-Based Access Control (RBAC): Strict permission boundaries separating Applicants, Donors, Foundation Reviewers, and Super Administrators",
+          "Applicant Registration & Dignity-First Privacy Engine: Secure applicant profile management with automated personal data redaction (full names, addresses, and private contact info are sealed from public view)",
+          "Bill Submission & Document Vault: Multi-step bill upload workflow capturing bill category (Utilities, Education, Healthcare, Internet/Communication), amount, provider details, and support documentation (PDF/JPEG receipts)",
+          "Duplicate & Fraud Detection Guardrail: Automated database hashing checks on bill account numbers and provider references to prevent double-submission of identical bills"
+        ]
+      },
+      {
+        id: "2",
+        title: "Module 2: Administrative Bill Verification Desk, Provider Registry & Audit Trail",
+        timeline: "Week 2 (Sprint A: Days 8 - 14)",
+        cost: 185000,
+        description: "Comprehensive back-office verification console giving foundation caseworkers full oversight to audit bills, verify service providers, and approve requests with human oversight.",
+        deliverables: [
+          "Interactive Caseworker Review Queue: Administrative verification panel displaying submitted bills, supporting documentation, requested amounts, and applicant hardship statements",
+          "Verified Service Provider Registry: Central database of approved utility companies (DISCOs), water corporations, educational institutions, diagnostic centers, and telcos",
+          "Two-Step Decision Engine: Human-in-the-loop review workflow allowing caseworkers to Approve, Request Additional Proof, or Decline applications with structured audit notes",
+          "Eligible Allocation Matrix: Workflow categorizing approved requests for individual marketplace funding or general foundation pool settlement",
+          "Full Administrative Audit Logs: Immutable activity records logging caseworker actions, review timestamps, approval notes, and system state transitions"
+        ]
+      },
+      {
+        id: "3",
+        title: "Module 3: Privacy-Protected Donor Marketplace & Direct Provider Settlement Rails",
+        timeline: "Week 2 (Sprint B) - Week 3 (Sprint A)",
+        cost: 205000,
+        description: "High-trust donor discovery portal and direct settlement engine routing contributions straight to verified third-party billing providers.",
+        deliverables: [
+          "Privacy-Protected Donor Marketplace: Anonymized discovery catalog enabling individual donors and corporate sponsors to browse approved bills by category, urgency, and amount without compromising beneficiary dignity",
+          "Multi-Option Giving Desk: Support for full single-bill settlement, micro-contributions, and direct donations into the 'General Emergency Relief Pool'",
+          "Secure Payment Gateway Integration: Multi-channel checkout via Paystack / Flutterwave / Moniepoint supporting debit cards, bank transfers, and USSD",
+          "Direct Provider Settlement Workflow: Automated/semi-automated disbursement routing funds directly to verified service provider accounts (e.g., direct DISCO meter token generation, school bank accounts) rather than cash to applicants",
+          "Digital Tax Receipts & Contribution Certificates: Automated branded PDF donation receipts generated immediately upon payment confirmation"
+        ]
+      },
+      {
+        id: "4",
+        title: "Module 4: Impact Tracking, Real-Time Notifications, Reporting & Cloud Launch",
+        timeline: "Week 3 (Days 15 - 21)",
+        cost: 180000,
+        description: "Applicant progress tracking, donor impact analytics, automated transactional notifications, executive financial reporting, and live production deployment.",
+        deliverables: [
+          "Applicant Real-Time Request Tracker: Visual status timeline (Submitted ➔ Under Review ➔ Approved & Listed ➔ Settled & Paid) with direct proof-of-settlement receipt access",
+          "Donor Impact & Giving History Dashboard: Personalized donor profile tracking total lives impacted, categories supported, and live status of settled bills",
+          "Multi-Channel Notification Gateway: Automated transactional Email and SMS notifications for application updates, approval milestones, donor contribution alerts, and provider settlement notices",
+          "Executive Financial & Operational Reporting: Real-time foundation ledger tracking funds received, committed, disbursed, and remaining balances, with CSV/PDF reporting for board audit",
+          "Production Cloud Deployment & Hardening: Turnkey cloud deployment on Railway container infrastructure with automated health monitoring, SSL encryption, and PostgreSQL database backup routines"
+        ]
+      }
+    ]
+  },
+  {
     name: "2-Level Binary Matrix & Food MLM (₦300k)",
     title: "2-Level Binary Matrix Referral & Foodstuff Empowerment Cooperative Platform",
     overview: "This technical proposal details the end-to-end development and deployment of an automated 2-Level Binary Matrix referral and food empowerment platform. The system operates on a high-throughput referral logic model: members register through unique sponsor links, submit their activation deposits via bank transfer or automated virtual accounts, fill their 2-person binary tree (Left and Right downlines), trigger cycle-out qualifications to receive physical foodstuff incentive packages (rice, vegetable oil, provisions), and seamlessly re-enter new matrices upon completing reward cycles.",
@@ -471,73 +534,74 @@ function ProposalContent() {
 
   // Form State
   const [state, setState] = useState<ProposalState>({
-    proposalTitle: "2-Level Binary Matrix Referral & Foodstuff Empowerment Cooperative Platform",
+    proposalTitle: "Sort A Bill — Digital Bill-Relief & Philanthropic Settlement Platform",
     proposalId: "",
     proposalDate: "",
     
     ...DEFAULT_SENDER,
     
-    clientName: "Agro-Cooperative & Food Empowerment Leadership",
-    clientContact: "Project Director & Management Board",
-    clientAddress: "Nigeria",
+    clientName: "A Little Help Foundation",
+    clientContact: "Executive Leadership & Board of Trustees",
+    clientAddress: "Lagos, Nigeria",
     clientEmail: "",
     clientPhone: "",
     
-    projectOverview: "This technical proposal details the end-to-end development and deployment of an automated 2-Level Binary Matrix referral and food empowerment platform. The system operates on a high-throughput referral logic model: members register through unique sponsor links, submit their activation deposits via bank transfer or automated virtual accounts, fill their 2-person binary tree (Left and Right downlines), trigger cycle-out qualifications to receive physical foodstuff incentive packages (rice, vegetable oil, provisions), and seamlessly re-enter new matrices upon completing reward cycles.",
+    projectOverview: "This technical proposal details the end-to-end design, custom engineering, and cloud deployment of 'Sort A Bill' (Small Bills. Big Relief.) for A Little Help Foundation. Built upon an enterprise NestJS (Node.js/TypeScript) modular architecture and PostgreSQL, the platform establishes a transparent, dignity-first bridge connecting financially constrained individuals with donors and corporate supporters. The system ensures requesting help is simple, donating is verifiable, and every approved payment settles directly to verified utility, education, and healthcare service providers with end-to-end auditability.",
     modules: [
       {
         id: "1",
-        title: "Module 1: Member Onboarding, Referral Binding & Binary Matrix Tree Engine",
-        timeline: "5 - 7 Days",
-        cost: 85000,
-        description: "High-performance member registration and deterministic binary tree engine that binds sponsor referral relationships and prevents orphan accounts.",
+        title: "Module 1: Enterprise NestJS Architecture, Security, RBAC & Applicant Onboarding",
+        timeline: "Week 1 (Days 1 - 7)",
+        cost: 180000,
+        description: "Robust enterprise NestJS backend foundation, relational database architecture, role-based access control (RBAC), and applicant bill-submission workflow.",
         deliverables: [
-          "Referral URL Capture & Sponsor Binding: Query-string tracker (/register?ref=username) automatically locking and validating upline sponsors upon registration",
-          "Orphan Node Prevention Guardrails: Fallback routing assigning unreferred registrations to master system admin root nodes to maintain tree structural integrity",
-          "2-Child Binary Matrix Logic: Strict 1 → 2 parent-child relationship tree calculating left and right downline placement rules and active status validation",
-          "Account State Machine: Real-time user status workflow tracking states: INACTIVE_UNPAID ➔ ACTIVE_SEARCHING ➔ CYCLE_COMPLETED_ELIGIBLE ➔ REWARD_CLAIMED ➔ RE_ENTERED",
-          "Secure Member Authentication: Encrypted password hashing, mobile phone verification, and session token management"
+          "Modular NestJS Backend Framework: High-performance TypeScript API architecture with dependency injection, global validation pipes, exception filters, and JWT authentication guards",
+          "Role-Based Access Control (RBAC): Strict permission boundaries separating Applicants, Donors, Foundation Reviewers, and Super Administrators",
+          "Applicant Registration & Dignity-First Privacy Engine: Secure applicant profile management with automated personal data redaction (full names, addresses, and private contact info are sealed from public view)",
+          "Bill Submission & Document Vault: Multi-step bill upload workflow capturing bill category (Utilities, Education, Healthcare, Internet/Communication), amount, provider details, and support documentation (PDF/JPEG receipts)",
+          "Duplicate & Fraud Detection Guardrail: Automated database hashing checks on bill account numbers and provider references to prevent double-submission of identical bills"
         ]
       },
       {
         id: "2",
-        title: "Module 2: Deposit Gateway, Proof of Payment (POP) Upload & Virtual Accounts",
-        timeline: "4 - 5 Days",
-        cost: 70000,
-        description: "Flexible multi-channel payment gateway supporting both manual Nigerian bank transfers with receipt uploads and automated gateway webhooks.",
+        title: "Module 2: Administrative Bill Verification Desk, Provider Registry & Audit Trail",
+        timeline: "Week 2 (Sprint A: Days 8 - 14)",
+        cost: 185000,
+        description: "Comprehensive back-office verification console giving foundation caseworkers full oversight to audit bills, verify service providers, and approve requests with human oversight.",
         deliverables: [
-          "Manual Bank Transfer Desk: Dynamic member view displaying cooperative corporate bank account details (Bank Name, Account Number, Account Name)",
-          "Proof of Payment (POP) Upload Engine: Mobile-friendly image and PDF receipt uploader with client-side compression and bank transaction reference logging",
-          "Automated Payment Webhook Integration (Paystack/Moniepoint): Support for automated instant virtual account generation with instant callback account activation upon transfer",
-          "Payment Audit Ledger: Immutable transactional database recording payment timestamps, approval operators, deposit amounts, and reference codes"
+          "Interactive Caseworker Review Queue: Administrative verification panel displaying submitted bills, supporting documentation, requested amounts, and applicant hardship statements",
+          "Verified Service Provider Registry: Central database of approved utility companies (DISCOs), water corporations, educational institutions, diagnostic centers, and telcos",
+          "Two-Step Decision Engine: Human-in-the-loop review workflow allowing caseworkers to Approve, Request Additional Proof, or Decline applications with structured audit notes",
+          "Eligible Allocation Matrix: Workflow categorizing approved requests for individual marketplace funding or general foundation pool settlement",
+          "Full Administrative Audit Logs: Immutable activity records logging caseworker actions, review timestamps, approval notes, and system state transitions"
         ]
       },
       {
         id: "3",
-        title: "Module 3: Responsive Member Portal, Live Matrix Visualizer & Reward Desk",
-        timeline: "5 - 7 Days",
-        cost: 75000,
-        description: "Modern, mobile-first user dashboard giving members complete visibility over their referral growth, incentive qualification, and food pickup codes.",
+        title: "Module 3: Privacy-Protected Donor Marketplace & Direct Provider Settlement Rails",
+        timeline: "Week 2 (Sprint B) - Week 3 (Sprint A)",
+        cost: 205000,
+        description: "High-trust donor discovery portal and direct settlement engine routing contributions straight to verified third-party billing providers.",
         deliverables: [
-          "Executive Member Dashboard: Snapshot view showing personal activation status, direct downline progress counter (0/2 or 2/2), and copyable personal referral link",
-          "Interactive Binary Tree Visualizer: Graphical visual matrix displaying the user's root node and their two assigned child nodes with live payment/activation indicators",
-          "Foodstuff Incentive Claim Center: Automated reward qualification badge generating secure, tamper-evident 6-digit claim codes and QR verification passes once 2 downlines activate",
-          "Pick-Up Location Selector: State and Local Government pick-up center directory allowing members to choose their nearest partner food fulfillment hub",
-          "One-Click Re-Entry Action: Self-service re-entry trigger allowing cycled-out members to submit a new deposit and spawn a fresh binary matrix node"
+          "Privacy-Protected Donor Marketplace: Anonymized discovery catalog enabling individual donors and corporate sponsors to browse approved bills by category, urgency, and amount without compromising beneficiary dignity",
+          "Multi-Option Giving Desk: Support for full single-bill settlement, micro-contributions, and direct donations into the 'General Emergency Relief Pool'",
+          "Secure Payment Gateway Integration: Multi-channel checkout via Paystack / Flutterwave / Moniepoint supporting debit cards, bank transfers, and USSD",
+          "Direct Provider Settlement Workflow: Automated/semi-automated disbursement routing funds directly to verified service provider accounts (e.g., direct DISCO meter token generation, school bank accounts) rather than cash to applicants",
+          "Digital Tax Receipts & Contribution Certificates: Automated branded PDF donation receipts generated immediately upon payment confirmation"
         ]
       },
       {
         id: "4",
-        title: "Module 4: Super-Admin Control Center, Payment Approvals & Food Fulfillment Desk",
-        timeline: "4 - 6 Days",
-        cost: 70000,
-        description: "Comprehensive administrative command room for cooperative managers to verify bank payments, audit tree structures, and dispatch foodstuff inventory.",
+        title: "Module 4: Impact Tracking, Real-Time Notifications, Reporting & Cloud Launch",
+        timeline: "Week 3 (Days 15 - 21)",
+        cost: 180000,
+        description: "Applicant progress tracking, donor impact analytics, automated transactional notifications, executive financial reporting, and live production deployment.",
         deliverables: [
-          "POP Verification Queue: Interactive review panel displaying pending payment receipts, member details, transfer amounts, and one-click 'Approve & Activate' or 'Decline' actions",
-          "Referral Tree & Cycle Management Console: Master overview of all active binary matrices with search, filter, and manual node reassignment tools",
-          "Foodstuff Inventory & Dispatch Manager: Order fulfillment ledger tracking foodstuff package statuses (Pending Verification ➔ Packaged ➔ Shipped to Depot ➔ Collected)",
-          "Pick-Up Agent QR / Code Verifier: Lightweight validation tool for state coordinators to verify members' 6-digit claim codes upon physical food handover",
-          "Re-entry Ledger & Financial Reports: Exportable CSV reports tracking total revenue, active member cycles, food packages distributed, and cooperative growth metrics"
+          "Applicant Real-Time Request Tracker: Visual status timeline (Submitted ➔ Under Review ➔ Approved & Listed ➔ Settled & Paid) with direct proof-of-settlement receipt access",
+          "Donor Impact & Giving History Dashboard: Personalized donor profile tracking total lives impacted, categories supported, and live status of settled bills",
+          "Multi-Channel Notification Gateway: Automated transactional Email and SMS notifications for application updates, approval milestones, donor contribution alerts, and provider settlement notices",
+          "Executive Financial & Operational Reporting: Real-time foundation ledger tracking funds received, committed, disbursed, and remaining balances, with CSV/PDF reporting for board audit",
+          "Production Cloud Deployment & Hardening: Turnkey cloud deployment on Railway container infrastructure with automated health monitoring, SSL encryption, and PostgreSQL database backup routines"
         ]
       }
     ],
@@ -547,12 +611,12 @@ function ProposalContent() {
     includeTax: false,
     
     paymentMilestones: [
-      { label: "Milestone 1: Project Mobilization, Database & Binary Matrix Tree Engine (50%)", percentage: 50 },
-      { label: "Milestone 2: Member Portal, Deposit Gateway & Matrix Visualizer (30%)", percentage: 30 },
-      { label: "Milestone 3: Admin Console, Food Fulfillment Desk, QA Testing & Live Deployment (20%)", percentage: 20 },
+      { label: "Milestone 1: Project Mobilization, NestJS Architecture, RBAC & Applicant Onboarding (50%)", percentage: 50 },
+      { label: "Milestone 2: Admin Verification Engine, Provider Registry & Donor Marketplace (30%)", percentage: 30 },
+      { label: "Milestone 3: Payment Gateway, Direct Provider Settlement, Reporting & Live Cloud Launch (20%)", percentage: 20 },
     ],
     paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. Total Project Investment: ₦300,000 fixed price.\n2. Milestone Terms: 50% Kickoff Deposit (₦150,000), 30% Member Portal & Payment Milestone (₦90,000), 20% Admin Console, Testing & Production Cloud Handover (₦60,000).\n3. Cloud Infrastructure & Hosting: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway at roughly $5 to $10 monthly based on active database and compute usage).\n4. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n5. Delivery Timeline: 2 to 3 weeks total elapsed delivery schedule including testing and training.",
+    notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Payment Schedule: 50% Kickoff Deposit (₦375,000), 30% Verification Desk & Donor Marketplace Milestone (₦225,000), 20% Direct Settlement, Testing & Cloud Handover (₦150,000).\n3. Cloud Hosting & Infrastructure: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway with managed PostgreSQL at roughly $5 monthly, not included in the development fee).\n4. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n5. Delivery Timeline: Exactly 3 weeks total delivery time structured into 3 sequential sprint milestones, including human-in-the-loop verification testing and production cloud deployment.",
   });
 
   // Load state from URL parameters

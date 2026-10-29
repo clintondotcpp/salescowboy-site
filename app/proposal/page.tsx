@@ -429,12 +429,12 @@ function ProposalContent() {
     includeTax: false,
     
     paymentMilestones: [
-      { label: "Milestone 1: Project Mobilization, Database & Geospatial Architecture Setup (40%)", percentage: 40 },
-      { label: "Milestone 2: Mobile Apps Core, Dispatch Radar & Live Tracking Integration (40%)", percentage: 40 },
+      { label: "Milestone 1: Project Mobilization, Database & Geospatial Architecture Setup (50%)", percentage: 50 },
+      { label: "Milestone 2: Mobile Apps Core, Dispatch Radar & Live Tracking Integration (30%)", percentage: 30 },
       { label: "Milestone 3: Admin Console, Escrow Settlements, Field Testing & Live Deployment (20%)", percentage: 20 },
     ],
     paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Terms: 40% Kickoff Deposit (₦300,000), 40% Mobile Core & Tracking Milestone (₦300,000), 20% Final Testing & Cloud Production Deployment (₦150,000).\n3. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n4. Delivery Timeline: Exactly 4 weeks total elapsed sprint time (28 calendar days) structured into 4 sequential 1-week sprint phases, including end-to-end integration, real-world field GPS stress testing, and production cloud deployment.",
+    notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Terms: 50% Kickoff Deposit (₦375,000), 30% Mobile Core & Tracking Milestone (₦225,000), 20% Final Testing & Cloud Production Deployment (₦150,000).\n3. Cloud Infrastructure & Hosting: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway at roughly $5 to $10 monthly based on active database and compute usage).\n4. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n5. Delivery Timeline: Exactly 4 weeks total elapsed sprint time (28 calendar days) structured into 4 sequential 1-week sprint phases, including end-to-end integration, real-world field GPS stress testing, and production cloud deployment.",
   });
 
   // Load state from URL parameters
@@ -745,7 +745,7 @@ function ProposalContent() {
         { label: "Milestone 3: QA Approvals & Live Handover", percentage: 20 },
       ],
       paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-      notes: "1. Work begins immediately upon receipt of the Milestone 1 upfront deposit.\n2. Timelines listed above are contingent upon the timely feedback of technical inputs.\n3. Estimated proposal is valid for 30 days.",
+      notes: "1. Work begins immediately upon receipt of the Milestone 1 upfront deposit (50%).\n2. Infrastructure & Hosting: Client covers direct monthly cloud fees (Railway at roughly $5 to $10 monthly).\n3. Timelines listed above are contingent upon the timely feedback of technical inputs.\n4. Estimated proposal is valid for 30 days.",
     });
     router.replace("/proposal");
   };

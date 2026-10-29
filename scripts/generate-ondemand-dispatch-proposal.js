@@ -127,13 +127,13 @@ const proposalState = {
   includeTax: false,
   
   paymentMilestones: [
-    { label: "Milestone 1: Project Mobilization, Database & Geospatial Architecture Setup (40%)", percentage: 40 },
-    { label: "Milestone 2: Mobile Apps Core, Dispatch Radar & Live Tracking Integration (40%)", percentage: 40 },
+    { label: "Milestone 1: Project Mobilization, Database & Geospatial Architecture Setup (50%)", percentage: 50 },
+    { label: "Milestone 2: Mobile Apps Core, Dispatch Radar & Live Tracking Integration (30%)", percentage: 30 },
     { label: "Milestone 3: Admin Console, Escrow Settlements, Field Testing & Live Deployment (20%)", percentage: 20 }
   ],
   
   paymentInfo: PAYMENT_INFO,
-  notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Structure: 40% Kickoff Deposit (₦300,000), 40% Mobile Core & Tracking Milestone (₦300,000), 20% Final Testing & Cloud Production Deployment (₦150,000).\n3. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n4. Delivery Timeline: Exactly 4 weeks total elapsed sprint time (28 calendar days) structured into 4 sequential 1-week sprint phases, including end-to-end integration, real-world field GPS stress testing, and production cloud deployment."
+  notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Structure: 50% Kickoff Deposit (₦375,000), 30% Mobile Core & Tracking Milestone (₦225,000), 20% Final Testing & Cloud Production Deployment (₦150,000).\n3. Cloud Infrastructure & Hosting: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway at roughly $5 to $10 monthly based on active database and compute usage).\n4. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n5. Delivery Timeline: Exactly 4 weeks total elapsed sprint time (28 calendar days) structured into 4 sequential 1-week sprint phases, including end-to-end integration, real-world field GPS stress testing, and production cloud deployment."
 };
 
 const baseUrl = "https://salescowboy.com.ng";

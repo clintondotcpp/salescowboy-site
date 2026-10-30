@@ -79,6 +79,73 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
+    name: "Target Savings & Layaway Platform - Food Bank Special Services Ltd (₦350k)",
+    title: "Target Savings & Layaway E-Commerce Platform — Food Bank Special Services Ltd",
+    overview: "This technical proposal details the end-to-end design, custom software engineering, payment infrastructure, and cloud deployment of an Automated Target Savings & Layaway E-Commerce Portal for Food Bank Special Services Ltd. Built to digitize traditional Nigerian commodity thrift and installment purchase schemes, the platform allows customers to select curated foodstuff bundles (e.g., 50kg rice, cooking oil, tomatoes) and consumer electronics (e.g., deep freezers, smart TVs, washing machines, generators), lock in structured daily, weekly, or monthly contribution plans, track cumulative balances in real time, and trigger warehouse dispatch or depot pickup passes upon 100% target completion. The system incorporates automated multi-rail payment gateways (Paystack/Moniepoint), dedicated dynamic virtual bank accounts, manual bank receipt verification desks, administrative inventory controls, and automated transactional SMS and Email notifications.",
+    modules: [
+      {
+        id: "1",
+        title: "Module 1: Public Storefront, Commodity & Electronics Catalog & Installment Calculator",
+        timeline: "Week 1 (Days 1 - 6)",
+        cost: 80000,
+        description: "High-conversion, mobile-responsive storefront showcasing categorized foodstuff bundles and electronics packages with dynamic installment breakdown simulators.",
+        deliverables: [
+          "Responsive Public Storefront: Fast, modern user interface categorized by Foodstuff Packages (Rice, Cooking Oil, Tomato Paste, Flour combos) and Electronics Packages (Freezers, Washing Machines, Generators, Smart TVs)",
+          "Dynamic Package Details Showcase: Clean display of total package price, itemized bill of contents, brand specifications, high-resolution media, and savings duration plans",
+          "Interactive Installment Calculator: Visual calculator demonstrating flexible payment schedules across Daily (e.g., ₦2,000/day for 60 days), Weekly (e.g., ₦14,000/week for 9 weeks), or Monthly (e.g., ₦60,000/month for 2.5 months) frequencies",
+          "How It Works & Trust Center: Transparent operational guidelines explaining contribution cycles, default grace periods, collection terms, and physical redemption policies",
+          "Domain Integration & Cloud Edge Security: SSL padlock certificate, HTTP/2 optimizations, and transactional SMS/Email sender routing configuration"
+        ]
+      },
+      {
+        id: "2",
+        title: "Module 2: Customer Onboarding, Secure Portal & Real-Time Savings Progress Ledger",
+        timeline: "Week 2 (Days 7 - 13)",
+        cost: 95000,
+        description: "Dedicated member dashboard empowering customers to track their subscribed target packages, visual completion percentage, and running transaction statements.",
+        deliverables: [
+          "Instant Customer Registration & Authentication: Frictionless signup via Phone Number, Email, and Delivery Address with encrypted credentials and auto-generated customer wallet ID",
+          "Savings Overview Dashboard: High-visibility dashboard displaying subscribed active package, Total Target Cost, Total Contributed to Date, and Outstanding Balance Remaining",
+          "Dynamic Target Progress Bar: Visual percentage progress tracker (e.g., ₦85,000 / ₦150,000 - 56.7%) clearly showing milestones reached and installments remaining",
+          "Schedule Status & Due Date Monitor: Dynamic countdown indicators showing Next Payment Due Date and status tags (Due Today, Up to Date, Overdue)",
+          "Chronological Contribution Ledger: Comprehensive financial statement recording date, payment channel, gateway reference, credit amount, and running cumulative balance with downloadable PDF statements",
+          "Multi-Package Rollover Architecture: Capability for customers to subscribe to concurrent packages or rollover completed savings into new foodstuff/electronics items"
+        ]
+      },
+      {
+        id: "3",
+        title: "Module 3: Multi-Rail Payment Integration (Paystack/Moniepoint) & Manual POP Verification Desk",
+        timeline: "Week 2 - Week 3 (Days 14 - 20)",
+        cost: 95000,
+        description: "Automated multi-channel payment gateway combined with dedicated virtual bank accounts and an administrative proof-of-payment (POP) review queue.",
+        deliverables: [
+          "Online Payment Gateway Checkout: Paystack / Moniepoint checkout integration supporting all Nigerian debit cards (Mastercard, Visa, Verve) and instant USSD banking strings",
+          "Dedicated Dynamic Virtual Bank Accounts: Auto-generation of dedicated virtual account numbers for frictionless mobile bank app transfers with automated instant ledger credit",
+          "Manual Bank Transfer & POP Upload Engine: Mobile-friendly receipt upload tool for customers depositing cash at physical bank branches or transferring from non-integrated accounts",
+          "Administrative Payment Reconciliation Queue: Interactive back-office console allowing finance officers to inspect uploaded bank teller receipts and click 'Approve & Credit Ledger' or 'Decline with Note'",
+          "Anti-Duplicate Ledger Protection: Transaction hash hashing and unique reference locking preventing accidental or fraudulent double-crediting of identical payment receipts",
+          "Instant Automated Payment Receipts: Branded transaction confirmation receipts generated and delivered immediately upon payment verification"
+        ]
+      },
+      {
+        id: "4",
+        title: "Module 4: 100% Target Fulfillment Desk, Multi-Channel SMS/Email Notification Engine & Admin Command Center",
+        timeline: "Week 3 - Week 4 (Days 21 - 27)",
+        cost: 80000,
+        description: "Automated order fulfillment state machine upon 100% savings completion, multi-channel transactional SMS/Email notifications, and executive management console.",
+        deliverables: [
+          "100% Target Completion Trigger: Automated state machine transitioning accounts upon reaching 100% target to 'Target Completed ➔ Processing ➔ Ready for Pickup / Out for Delivery'",
+          "Tamper-Evident Redemption Claim Pass: Automated generation of unique 6-digit claim codes and QR verification passes for physical collection at Food Bank distribution hubs or home dispatch",
+          "Multi-Channel Notification Gateway (Strictly SMS & Email): Automated transactional SMS and Email notifications for account welcome, payment credits, installment schedule reminders, 100% target completion, and dispatch notices (no third-party chat dependency)",
+          "Package & Inventory Management Portal: Back-office CRUD suite allowing Food Bank managers to create, edit, price, and archive foodstuff bundles and electronics packages with photo uploads",
+          "Customer Ledger Audit & Fulfillment Dispatch Desk: Centralized management console tracking all registered contributors, total funds mobilized, pending dispatches, and fulfillment records",
+          "Default & Dormancy Sentinel: Automated detection engine flagging accounts defaulting on daily/weekly schedules, triggering gentle re-engagement SMS and Email reminders",
+          "Production Cloud Deployment on Railway: Containerized API deployment, managed PostgreSQL database provisioning, automated daily backup routines, and SSL encryption"
+        ]
+      }
+    ]
+  },
+  {
     name: "Sort A Bill - A Little Help Foundation (₦750k)",
     title: "Sort A Bill — Digital Bill-Relief & Philanthropic Settlement Platform",
     overview: "This technical proposal details the end-to-end design, custom engineering, and cloud deployment of 'Sort A Bill' (Small Bills. Big Relief.) for A Little Help Foundation. Built upon an enterprise NestJS (Node.js/TypeScript) modular architecture and PostgreSQL, the platform establishes a transparent, dignity-first bridge connecting financially constrained individuals with donors and corporate supporters. The system ensures requesting help is simple, donating is verifiable, and every approved payment settles directly to verified utility, education, and healthcare service providers with end-to-end auditability.",
@@ -534,74 +601,78 @@ function ProposalContent() {
 
   // Form State
   const [state, setState] = useState<ProposalState>({
-    proposalTitle: "Sort A Bill — Digital Bill-Relief & Philanthropic Settlement Platform",
+    proposalTitle: "Target Savings & Layaway E-Commerce Platform — Food Bank Special Services Ltd",
     proposalId: "",
     proposalDate: "",
     
     ...DEFAULT_SENDER,
     
-    clientName: "A Little Help Foundation",
-    clientContact: "Executive Leadership & Board of Trustees",
+    clientName: "Food Bank Special Services Ltd",
+    clientContact: "Executive Leadership & Management Board",
     clientAddress: "Lagos, Nigeria",
     clientEmail: "",
     clientPhone: "",
     
-    projectOverview: "This technical proposal details the end-to-end design, custom engineering, and cloud deployment of 'Sort A Bill' (Small Bills. Big Relief.) for A Little Help Foundation. Built upon an enterprise NestJS (Node.js/TypeScript) modular architecture and PostgreSQL, the platform establishes a transparent, dignity-first bridge connecting financially constrained individuals with donors and corporate supporters. The system ensures requesting help is simple, donating is verifiable, and every approved payment settles directly to verified utility, education, and healthcare service providers with end-to-end auditability.",
+    projectOverview: "This technical proposal details the end-to-end design, custom software engineering, payment infrastructure, and cloud deployment of an Automated Target Savings & Layaway E-Commerce Portal for Food Bank Special Services Ltd. Built to digitize traditional Nigerian commodity thrift and installment purchase schemes, the platform allows customers to select curated foodstuff bundles (e.g., 50kg rice, cooking oil, tomatoes) and consumer electronics (e.g., deep freezers, smart TVs, washing machines, generators), lock in structured daily, weekly, or monthly contribution plans, track cumulative balances in real time, and trigger warehouse dispatch or depot pickup passes upon 100% target completion. The system incorporates automated multi-rail payment gateways (Paystack/Moniepoint), dedicated dynamic virtual bank accounts, manual bank receipt verification desks, administrative inventory controls, and automated transactional SMS and Email notifications.",
     modules: [
       {
         id: "1",
-        title: "Module 1: Enterprise NestJS Architecture, Security, RBAC & Applicant Onboarding",
-        timeline: "Week 1 (Days 1 - 7)",
-        cost: 180000,
-        description: "Robust enterprise NestJS backend foundation, relational database architecture, role-based access control (RBAC), and applicant bill-submission workflow.",
+        title: "Module 1: Public Storefront, Commodity & Electronics Catalog & Installment Calculator",
+        timeline: "Week 1 (Days 1 - 6)",
+        cost: 80000,
+        description: "High-conversion, mobile-responsive storefront showcasing categorized foodstuff bundles and electronics packages with dynamic installment breakdown simulators.",
         deliverables: [
-          "Modular NestJS Backend Framework: High-performance TypeScript API architecture with dependency injection, global validation pipes, exception filters, and JWT authentication guards",
-          "Role-Based Access Control (RBAC): Strict permission boundaries separating Applicants, Donors, Foundation Reviewers, and Super Administrators",
-          "Applicant Registration & Dignity-First Privacy Engine: Secure applicant profile management with automated personal data redaction (full names, addresses, and private contact info are sealed from public view)",
-          "Bill Submission & Document Vault: Multi-step bill upload workflow capturing bill category (Utilities, Education, Healthcare, Internet/Communication), amount, provider details, and support documentation (PDF/JPEG receipts)",
-          "Duplicate & Fraud Detection Guardrail: Automated database hashing checks on bill account numbers and provider references to prevent double-submission of identical bills"
+          "Responsive Public Storefront: Fast, modern user interface categorized by Foodstuff Packages (Rice, Cooking Oil, Tomato Paste, Flour combos) and Electronics Packages (Freezers, Washing Machines, Generators, Smart TVs)",
+          "Dynamic Package Details Showcase: Clean display of total package price, itemized bill of contents, brand specifications, high-resolution media, and savings duration plans",
+          "Interactive Installment Calculator: Visual calculator demonstrating flexible payment schedules across Daily (e.g., ₦2,000/day for 60 days), Weekly (e.g., ₦14,000/week for 9 weeks), or Monthly (e.g., ₦60,000/month for 2.5 months) frequencies",
+          "How It Works & Trust Center: Transparent operational guidelines explaining contribution cycles, default grace periods, collection terms, and physical redemption policies",
+          "Domain Integration & Cloud Edge Security: SSL padlock certificate, HTTP/2 optimizations, and transactional SMS/Email sender routing configuration"
         ]
       },
       {
         id: "2",
-        title: "Module 2: Administrative Bill Verification Desk, Provider Registry & Audit Trail",
-        timeline: "Week 2 (Sprint A: Days 8 - 14)",
-        cost: 185000,
-        description: "Comprehensive back-office verification console giving foundation caseworkers full oversight to audit bills, verify service providers, and approve requests with human oversight.",
+        title: "Module 2: Customer Onboarding, Secure Portal & Real-Time Savings Progress Ledger",
+        timeline: "Week 2 (Days 7 - 13)",
+        cost: 95000,
+        description: "Dedicated member dashboard empowering customers to track their subscribed target packages, visual completion percentage, and running transaction statements.",
         deliverables: [
-          "Interactive Caseworker Review Queue: Administrative verification panel displaying submitted bills, supporting documentation, requested amounts, and applicant hardship statements",
-          "Verified Service Provider Registry: Central database of approved utility companies (DISCOs), water corporations, educational institutions, diagnostic centers, and telcos",
-          "Two-Step Decision Engine: Human-in-the-loop review workflow allowing caseworkers to Approve, Request Additional Proof, or Decline applications with structured audit notes",
-          "Eligible Allocation Matrix: Workflow categorizing approved requests for individual marketplace funding or general foundation pool settlement",
-          "Full Administrative Audit Logs: Immutable activity records logging caseworker actions, review timestamps, approval notes, and system state transitions"
+          "Instant Customer Registration & Authentication: Frictionless signup via Phone Number, Email, and Delivery Address with encrypted credentials and auto-generated customer wallet ID",
+          "Savings Overview Dashboard: High-visibility dashboard displaying subscribed active package, Total Target Cost, Total Contributed to Date, and Outstanding Balance Remaining",
+          "Dynamic Target Progress Bar: Visual percentage progress tracker (e.g., ₦85,000 / ₦150,000 - 56.7%) clearly showing milestones reached and installments remaining",
+          "Schedule Status & Due Date Monitor: Dynamic countdown indicators showing Next Payment Due Date and status tags (Due Today, Up to Date, Overdue)",
+          "Chronological Contribution Ledger: Comprehensive financial statement recording date, payment channel, gateway reference, credit amount, and running cumulative balance with downloadable PDF statements",
+          "Multi-Package Rollover Architecture: Capability for customers to subscribe to concurrent packages or rollover completed savings into new foodstuff/electronics items"
         ]
       },
       {
         id: "3",
-        title: "Module 3: Privacy-Protected Donor Marketplace & Direct Provider Settlement Rails",
-        timeline: "Week 2 (Sprint B) - Week 3 (Sprint A)",
-        cost: 205000,
-        description: "High-trust donor discovery portal and direct settlement engine routing contributions straight to verified third-party billing providers.",
+        title: "Module 3: Multi-Rail Payment Integration (Paystack/Moniepoint) & Manual POP Verification Desk",
+        timeline: "Week 2 - Week 3 (Days 14 - 20)",
+        cost: 95000,
+        description: "Automated multi-channel payment gateway combined with dedicated virtual bank accounts and an administrative proof-of-payment (POP) review queue.",
         deliverables: [
-          "Privacy-Protected Donor Marketplace: Anonymized discovery catalog enabling individual donors and corporate sponsors to browse approved bills by category, urgency, and amount without compromising beneficiary dignity",
-          "Multi-Option Giving Desk: Support for full single-bill settlement, micro-contributions, and direct donations into the 'General Emergency Relief Pool'",
-          "Secure Payment Gateway Integration: Multi-channel checkout via Paystack / Flutterwave / Moniepoint supporting debit cards, bank transfers, and USSD",
-          "Direct Provider Settlement Workflow: Automated/semi-automated disbursement routing funds directly to verified service provider accounts (e.g., direct DISCO meter token generation, school bank accounts) rather than cash to applicants",
-          "Digital Tax Receipts & Contribution Certificates: Automated branded PDF donation receipts generated immediately upon payment confirmation"
+          "Online Payment Gateway Checkout: Paystack / Moniepoint checkout integration supporting all Nigerian debit cards (Mastercard, Visa, Verve) and instant USSD banking strings",
+          "Dedicated Dynamic Virtual Bank Accounts: Auto-generation of dedicated virtual account numbers for frictionless mobile bank app transfers with automated instant ledger credit",
+          "Manual Bank Transfer & POP Upload Engine: Mobile-friendly receipt upload tool for customers depositing cash at physical bank branches or transferring from non-integrated accounts",
+          "Administrative Payment Reconciliation Queue: Interactive back-office console allowing finance officers to inspect uploaded bank teller receipts and click 'Approve & Credit Ledger' or 'Decline with Note'",
+          "Anti-Duplicate Ledger Protection: Transaction hash hashing and unique reference locking preventing accidental or fraudulent double-crediting of identical payment receipts",
+          "Instant Automated Payment Receipts: Branded transaction confirmation receipts generated and delivered immediately upon payment verification"
         ]
       },
       {
         id: "4",
-        title: "Module 4: Impact Tracking, Real-Time Notifications, Reporting & Cloud Launch",
-        timeline: "Week 3 (Days 15 - 21)",
-        cost: 180000,
-        description: "Applicant progress tracking, donor impact analytics, automated transactional notifications, executive financial reporting, and live production deployment.",
+        title: "Module 4: 100% Target Fulfillment Desk, Multi-Channel SMS/Email Notification Engine & Admin Command Center",
+        timeline: "Week 3 - Week 4 (Days 21 - 27)",
+        cost: 80000,
+        description: "Automated order fulfillment state machine upon 100% savings completion, multi-channel transactional SMS/Email notifications, and executive management console.",
         deliverables: [
-          "Applicant Real-Time Request Tracker: Visual status timeline (Submitted ➔ Under Review ➔ Approved & Listed ➔ Settled & Paid) with direct proof-of-settlement receipt access",
-          "Donor Impact & Giving History Dashboard: Personalized donor profile tracking total lives impacted, categories supported, and live status of settled bills",
-          "Multi-Channel Notification Gateway: Automated transactional Email and SMS notifications for application updates, approval milestones, donor contribution alerts, and provider settlement notices",
-          "Executive Financial & Operational Reporting: Real-time foundation ledger tracking funds received, committed, disbursed, and remaining balances, with CSV/PDF reporting for board audit",
-          "Production Cloud Deployment & Hardening: Turnkey cloud deployment on Railway container infrastructure with automated health monitoring, SSL encryption, and PostgreSQL database backup routines"
+          "100% Target Completion Trigger: Automated state machine transitioning accounts upon reaching 100% target to 'Target Completed ➔ Processing ➔ Ready for Pickup / Out for Delivery'",
+          "Tamper-Evident Redemption Claim Pass: Automated generation of unique 6-digit claim codes and QR verification passes for physical collection at Food Bank distribution hubs or home dispatch",
+          "Multi-Channel Notification Gateway (Strictly SMS & Email): Automated transactional SMS and Email notifications for account welcome, payment credits, installment schedule reminders, 100% target completion, and dispatch notices (no third-party chat dependency)",
+          "Package & Inventory Management Portal: Back-office CRUD suite allowing Food Bank managers to create, edit, price, and archive foodstuff bundles and electronics packages with photo uploads",
+          "Customer Ledger Audit & Fulfillment Dispatch Desk: Centralized management console tracking all registered contributors, total funds mobilized, pending dispatches, and fulfillment records",
+          "Default & Dormancy Sentinel: Automated detection engine flagging accounts defaulting on daily/weekly schedules, triggering gentle re-engagement SMS and Email reminders",
+          "Production Cloud Deployment on Railway: Containerized API deployment, managed PostgreSQL database provisioning, automated daily backup routines, and SSL encryption"
         ]
       }
     ],
@@ -611,12 +682,12 @@ function ProposalContent() {
     includeTax: false,
     
     paymentMilestones: [
-      { label: "Milestone 1: Project Mobilization, NestJS Architecture, RBAC & Applicant Onboarding (50%)", percentage: 50 },
-      { label: "Milestone 2: Admin Verification Engine, Provider Registry & Donor Marketplace (30%)", percentage: 30 },
-      { label: "Milestone 3: Payment Gateway, Direct Provider Settlement, Reporting & Live Cloud Launch (20%)", percentage: 20 },
+      { label: "Milestone 1: Project Mobilization, Storefront Catalog & Database Architecture (50%)", percentage: 50 },
+      { label: "Milestone 2: Customer Savings Dashboard, Progress Tracker & Paystack Virtual Accounts (30%)", percentage: 30 },
+      { label: "Milestone 3: Manual POP Queue, 100% Fulfillment Engine, SMS/Email Alerts & Live Launch (20%)", percentage: 20 },
     ],
     paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. Total Project Investment: ₦750,000 fixed price.\n2. Milestone Payment Schedule: 50% Kickoff Deposit (₦375,000), 30% Verification Desk & Donor Marketplace Milestone (₦225,000), 20% Direct Settlement, Testing & Cloud Handover (₦150,000).\n3. Cloud Hosting & Infrastructure: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway with managed PostgreSQL at roughly $5 monthly, not included in the development fee).\n4. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n5. Delivery Timeline: Exactly 3 weeks total delivery time structured into 3 sequential sprint milestones, including human-in-the-loop verification testing and production cloud deployment.",
+    notes: "1. Total Project Investment: ₦350,000 fixed price.\n2. Milestone Payment Schedule: 50% Upfront Kickoff Deposit (₦175,000), 30% Member Portal & Payment Rails Milestone (₦105,000), 20% Fulfillment, SMS/Email Alerts & Live Handover (₦70,000).\n3. Notifications Architecture: All transactional communication, payment credits, reminder schedules, and pickup claim passes are powered strictly via high-delivery SMS and Email gateways (no WhatsApp required).\n4. Cloud Infrastructure: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway with managed PostgreSQL at roughly $5 monthly, excluded from development fee).\n5. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n6. Delivery Timeline: Exactly 3 to 4 weeks total delivery structured into milestones.",
   });
 
   // Load state from URL parameters

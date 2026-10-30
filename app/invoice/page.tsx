@@ -72,6 +72,16 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
+    name: "Food Bank Special Services Ltd - 50% Deposit (₦175k)",
+    description: "50% Project Mobilization Deposit — Food Bank Target Savings & Layaway Platform (Public Storefront, Member Savings Progress Dashboard, Paystack Virtual Accounts, Manual POP Queue, 100% Fulfillment Claim Pass, and SMS/Email Notification Engine)",
+    rate: 175000,
+  },
+  {
+    name: "Food Bank Special Services Ltd - Full Project (₦350k)",
+    description: "Full Custom Development — Food Bank Target Savings & Layaway E-Commerce Platform (Public Foodstuff & Electronics Catalog, Member Progress Dashboard, Multi-Rail Payments, POP Audit Queue, SMS/Email Alerts & Railway Cloud Deployment)",
+    rate: 350000,
+  },
+  {
     name: "₦75k Website Bundle",
     description: "₦75k Website Bundle (Includes 1-Year .com.ng Domain Registration, 1-Year Cloud Hosting, SSL Certificate, Custom Brand Email, and Professional 5-Page Website Build)",
     rate: 75000,
@@ -150,27 +160,27 @@ function InvoiceGeneratorContent() {
     
     ...DEFAULT_SENDER,
     
-    clientName: "",
-    clientContact: "",
-    clientAddress: "",
+    clientName: "Food Bank Special Services Ltd",
+    clientContact: "Executive Leadership & Management Board",
+    clientAddress: "Lagos, Nigeria",
     clientEmail: "",
     clientPhone: "",
     
     items: [
       {
         id: "1",
-        description: "₦75k Website Bundle (Includes 1-Year .com.ng Domain, 1-Year Hosting, SSL, Brand Email, and Professional 5-Page Build)",
+        description: "50% Project Mobilization Deposit — Target Savings & Layaway E-Commerce Platform (Public Foodstuff/Electronics Storefront, Customer Progress Dashboard, Paystack/Virtual Accounts Integration, Manual POP Review Desk, 100% Target Fulfillment Pass, and Automated SMS/Email Notification Engine)",
         quantity: 1,
-        rate: 75000,
+        rate: 175000,
       }
     ],
     currency: "₦",
     taxRate: 7.5, // Standard Nigerian VAT
     discount: 0,
-    includeTax: true,
+    includeTax: false,
     
     paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. Payment Terms: 50% upfront deposit to begin development, 50% balance due upon project completion and staging delivery.\n2. Cloud & Server Infrastructure: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway at roughly $5 to $10 monthly) unless an inclusive package is selected.\n3. Invoice validity is 30 days from the invoice date.",
+    notes: "1. 50% Mobilization Deposit (₦175,000) to commence development for Food Bank Special Services Ltd. Remaining balance (₦175,000) is structured across progress milestones.\n2. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n3. Notifications: Transactional alerts configured strictly via SMS and Email channels.\n4. Cloud hosting is deployed on Railway at roughly $5 monthly (billed directly to cloud provider).",
   });
 
   // Load from URL query if present

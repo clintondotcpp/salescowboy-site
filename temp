@@ -1,85 +1,96 @@
-*A LITTLE HELP FOUNDATION*
+Yes, this is completely clear. Unlike the previous binary/referral matrix project, this is a **Target Savings / Installment Contribution (Hire Purchase / Layaway) E-commerce Portal**.
 
-*SORT A BILL* (Trademarked) — App Developer Brief
+The operational model is identical to traditional Nigerian thrift and commodity savings schemes: a customer picks a target package (e.g., *₦150k Foodstuff Bundle* or *₦350k Smart TV/Freezer*), chooses a payment schedule (daily, weekly, or monthly), contributes in installments, tracks their running balance, and receives their item once the target is reached.
 
-Tagline: Small Bills. Big Relief.
+---
 
-1/. *Project Overview*
+### Core Mechanics & Workflow
 
-Sort A Bill is a proposed digital bill-relief platform under A Little Help Foundation. The goal is to connect people who cannot afford eligible essential bills with donors, philanthropists, corporate organisations and other supporters willing to help settle those bills.
+```
+[Public Catalog of Packages] ──► (Foodstuff Bundles & Electronics)
+               │
+               ▼
+[Customer Account Registration] ──► (Auto-generates Customer Portal & Wallet ID)
+               │
+               ▼
+[Select Package & Savings Frequency] ──► (Daily / Weekly / Monthly plan locked)
+               │
+               ▼
+[Make Installment Payments] ──► (Card, Bank Transfer, or Virtual Dedicated Account)
+               │
+               ▼
+[Live Dashboard Ledger Update] ──► (Track Total Saved vs. Target Balance)
+               │
+               ▼
+[100% Target Met] ──► (Package Dispatched / Physical Center Pickup Claimed)
 
-The platform should make requesting help simple, donating trustworthy, and every approved payment traceable.
+```
 
-2/. *How the App Should Work*
+---
 
-1. Submit a Bill
+### Functional Components & Features
 
-Applicants create an account, upload their bill, provide the necessary details and explain their request.
+#### 1. Public Storefront & Marketing
 
-2. Verify and Review
+* **Package Showcase / Catalog:** Filterable catalog categorized by **Foodstuff Packages** (e.g., 50kg Rice, Cooking Oil, Tomato Paste combos) and **Electronics Packages** (e.g., Deep Freezers, Washing Machines, Generators, Smart TVs).
+* **Package Details Page:** Clear display of total package price, item list, and preset installment options (e.g., *₦2,000 daily for 60 days*, *₦14,000 weekly for 9 weeks*, or *₦60,000 monthly for 2 months*).
+* **How It Works & FAQ:** Explaining contribution cycles, missed payment policies, and redemption terms.
 
-The admin team verifies the bill, provider, amount and eligibility before approving or declining the request.
+#### 2. Customer Dashboard (Member Portal)
 
-3. Match with Supporters
+* **Savings Overview Cards:**
+* Active subscribed package details.
+* Total Target Cost vs. Total Paid to Date (e.g., *₦85,000 / ₦150,000* with a visual progress bar).
+* Outstanding balance remaining.
+* Next payment due date and status (*Due Today, Paid, Overdue*).
 
-Approved bills appear in a privacy-protected donor marketplace where individuals and organisations can choose which eligible bills to support.
 
-4. Settle the Bill
+* **Make Payment Module:**
+* Automated payment options via Paystack / Moniepoint (Card, USSD, or Dedicated Dynamic Virtual Bank Account for easy bank app transfers).
+* Optional manual Proof of Payment (POP) receipt upload for customers who pay cash or transfer at local bank branches.
 
-Payments should go directly to the verified service provider wherever feasible, with confirmation and transaction records.
 
-5. Track the Impact
+* **Contribution Ledger / Statement:** Full transaction history showing date, payment reference, method, amount credited, and running cumulative balance.
+* **Item Collection / Claim Status:** Shows fulfillment status once the target hits 100% (*Target Completed $\rightarrow$ Processing $\rightarrow$ Out for Delivery / Ready for Pickup*).
 
-Applicants can track their requests, donors can see the status of their contributions, and administrators can monitor settlements and generate reports.
+#### 3. Administrative Control Center
 
-3/. *Main Features Required*
+* **Inventory & Package Manager:** CRUD operations to add, edit, or archive foodstuff bundles and electronics (images, prices, item breakdown, savings durations).
+* **Customer Account Management:** Searchable list of all registered contributors, active packages, phone numbers, and delivery addresses.
+* **Payment Reconciliation Queue:**
+* Automated instant credit for online gateway transactions.
+* Manual approval desk for customers uploading bank teller / ATM receipts.
 
-* Applicant account: registration, profile, bill submission, document upload and request tracking.
 
-* Bill categories: utilities, education, eligible healthcare expenses, internet/communication and other approved essential bills.
+* **Fulfillment & Dispatch Desk:** Real-time filter showing all customers who have reached 100% contribution to trigger physical packaging and delivery.
+* **Default / Grace Period Monitor:** Flags accounts that have gone dormant or defaulted on their daily/weekly installments.
 
-* Donor account: browse approved bills, contribute to a selected bill or eligible funding pool, and view contribution history.
+---
 
-* Admin dashboard: verify applications, approve or decline requests, manage users, flag duplicates, allocate available funding and track settlements.
+### How to Reply to the Client (WhatsApp Ready)
 
-* Payment integration: secure payment processing, provider-payment workflow, transaction references, receipts and reconciliation.
+Here is a concise, professional response you can send directly to them:
 
-* Notifications: application updates, approval decisions, donation confirmations and settlement notifications.
+---
 
-* Reporting: funds received, committed, paid, refunded and remaining; bills settled; and programme performance.
+Good day, sir.
 
-* Security and privacy: role-based access, secure document storage, audit logs, data protection and restricted access to sensitive information.
+Yes, I understand your requirements completely.
 
- 4\. *The Main User Interfaces*
+What you need is an **Automated Installment Savings & E-Commerce Portal** for Food Bank Special Services Ltd. Here is how the system will work:
 
-The first version should include:
+1. **Public Package Catalog:** A modern storefront displaying all your available foodstuff packages and electronics, complete with package prices, installment breakdowns (daily, weekly, monthly options), and item pictures.
+2. **Instant Online Account Opening:** Customers sign up online with their phone number, email, and address, instantly getting access to their private dashboard.
+3. **Customer Savings Dashboard:** Once logged in, customers select their preferred package and make their contributions. Their dashboard will display:
+* Total Package Cost
+* Amount Contributed So Far (with a visual progress bar)
+* Remaining Balance
+* Full payment history ledger
 
-* Welcome page and onboarding.
 
-* Sign-up and login.
+4. **Flexible Payment Methods:** Customers can pay online using their debit cards, USSD, direct bank transfer to a dedicated account number, or upload bank receipts for admin approval.
+5. **Admin Management Portal:** A secure backend for your team to upload new products, monitor all customer balances, approve manual payments, and easily see which customers have completed their target for delivery/pickup.
 
-* Applicant dashboard.
+We can handle the full design, development, and deployment for Food Bank Special Services Ltd.
 
-* Submit-a-bill form.
-
-* Bill verification/status page.
-
-* Approved bills and donor discovery page.
-
-* Bill details and contribution page.
-
-* Donor dashboard and transaction history.
-
-* Notifications and support centre.
-
-* Administrative dashboard and reporting panel.
-
- 5\. *Important Development Direction*
-
-I want the platform designed for future growth, but I do not want to spend heavily on unnecessary features before the core service is proven.
-
-The first release should focus on bill submission, verification, donor matching, secure payments, tracking and accountability. The architecture should allow additional bill categories, corporate sponsorship programmes, recurring donations, analytics and future integrations.
-
-The app must protect beneficiaries' dignity. Their full names, personal documents, account details and sensitive bills must never be exposed publicly by default. Bill verification and payment approval should include human oversight.
-
- 
+Would you like us to prepare a formal project proposal and price quote for this?

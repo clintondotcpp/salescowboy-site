@@ -565,16 +565,20 @@
       </div>
     </div>
 
-    <!-- Client Banner -->
+    <!-- Client Banner (Blank Recipient by Default) -->
     <div class="client-banner">
-      <div>
-        <div class="client-title">Proposal Prepared Exclusively For:</div>
-        <div class="client-name">[CLIENT COMPANY LEGAL NAME]</div>
-        <div class="client-sub">Attn: Executive Board of Directors & Project Sponsors • Lagos / Abuja, Nigeria</div>
+      <div style="flex: 1;">
+        <div class="client-title">Proposal Prepared Exclusively For (Recipient):</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #475569; line-height: 1.8; margin-top: 4px;">
+          <div><strong>Client / Company Name:</strong> <span style="color: #94a3b8;">__________________________________________________</span></div>
+          <div><strong>Attention / Representation:</strong> <span style="color: #94a3b8;">__________________________________________________</span></div>
+          <div><strong>Corporate Address:</strong> <span style="color: #94a3b8;">__________________________________________________</span></div>
+        </div>
       </div>
       <div class="cost-badge">
         <div class="label">Total Project Investment</div>
         <div class="amount">₦3,500,000</div>
+        <div style="font-size: 9px; color: #16a34a; font-weight: 700;">All-Inclusive Fixed Cost</div>
       </div>
     </div>
 
@@ -850,16 +854,20 @@
     </div>
 
     <!-- Formal Signoff -->
-    <div class="signoff">
+    <div class="signoff" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
       <div class="sig-block">
         <div class="label">ISSUED FOR AND ON BEHALF OF:</div>
         <div class="company">SALES COWBOY MARKETING SOLUTIONS</div>
         <div>Clinton Chukwunyere • Sales Cowboy Marketing Solutions</div>
         <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: November 1, 2026</div>
       </div>
-      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted);">
-        <div>Master Architecture Proposal • Ref: PROP-2026-SCM-982</div>
-        <div>Certified Corporate Document • Page 1 of 3</div>
+      <div class="sig-block">
+        <div class="label">ACCEPTED AND CONFIRMED (CLIENT):</div>
+        <div class="company" style="color: #64748b;">____________________________________</div>
+        <div>Representative: __________________________________</div>
+        <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: ________________________</div>
       </div>
     </div>
 

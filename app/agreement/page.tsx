@@ -88,11 +88,11 @@ const DEFAULT_AGREEMENT_STATE: AgreementState = {
   developerSignatoryName: "Clinton Chukwunyere",
   developerSignatoryTitle: "Sales Cowboy Marketing Solutions",
   
-  clientCompanyName: "[CLIENT COMPANY LEGAL NAME]",
-  clientAddress: "[Client Principal Corporate Address, Nigeria]",
-  clientRegistrationNo: "RC-XXXXXX",
-  clientSignatoryName: "Authorized Signatory",
-  clientSignatoryTitle: "Chief Executive Officer / Director",
+  clientCompanyName: "",
+  clientAddress: "",
+  clientRegistrationNo: "",
+  clientSignatoryName: "",
+  clientSignatoryTitle: "",
   
   projectTitle: "Tri-Platform Real Estate Ecosystem: Mobile App (iOS/Android), High-SEO Public Web Marketplace (MLS), Multi-Role Portals & Polygon Blockchain Integration",
   totalCost: 3500000,
@@ -381,6 +381,7 @@ function AgreementContent() {
                           <input
                             type="text"
                             value={state.clientCompanyName}
+                            placeholder="Leave blank or enter client corporate legal name"
                             onChange={(e) => setState(prev => ({ ...prev, clientCompanyName: e.target.value }))}
                             className="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1 text-xs text-slate-100 font-semibold"
                           />
@@ -764,7 +765,7 @@ function AgreementContent() {
                 </p>
                 <div className="pl-4 space-y-2 border-l-2 border-amber-500/40">
                   <p>
-                    1. <strong>{state.clientCompanyName}</strong>, a company duly incorporated under the laws of the Federal Republic of Nigeria, with its principal office at <em>{state.clientAddress}</em> (hereinafter referred to as the <strong>&ldquo;Client&rdquo;</strong>, which expression shall where the context so admits include its successors-in-title and permitted assigns) of the first part;
+                    1. <strong>{state.clientCompanyName || "____________________________________"}</strong>, a company incorporated under the laws of the Federal Republic of Nigeria, with registered office at <em>{state.clientAddress || "____________________________________"}</em> (hereinafter referred to as the <strong>&ldquo;Client&rdquo;</strong>, which expression shall where the context so admits include its successors-in-title and permitted assigns) of the first part;
                   </p>
                   <p>
                     <strong>AND</strong>
@@ -913,18 +914,18 @@ function AgreementContent() {
                         SIGNED FOR AND ON BEHALF OF:
                       </span>
                       <p className="text-xs font-bold text-slate-900 mt-1 uppercase">
-                        {state.clientCompanyName}
+                        {state.clientCompanyName || "____________________________________"}
                       </p>
                     </div>
 
                     <div className="space-y-1 border-t border-slate-300 pt-3">
                       <div className="flex justify-between text-xs">
                         <span className="text-slate-500 font-medium">Name:</span>
-                        <span className="font-semibold text-slate-900">{state.clientSignatoryName}</span>
+                        <span className="font-semibold text-slate-900">{state.clientSignatoryName || "________________________"}</span>
                       </div>
                       <div className="flex justify-between text-xs">
                         <span className="text-slate-500 font-medium">Designation:</span>
-                        <span className="font-semibold text-slate-900">{state.clientSignatoryTitle}</span>
+                        <span className="font-semibold text-slate-900">{state.clientSignatoryTitle || "________________________"}</span>
                       </div>
                       <div className="flex justify-between text-xs pt-2">
                         <span className="text-slate-500 font-medium">Signature & Date:</span>

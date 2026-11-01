@@ -95,9 +95,9 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
   senderPhone: "+234 810 493 3232",
   senderWebsite: "salescowboy.com.ng",
   
-  clientName: "[CLIENT COMPANY LEGAL NAME]",
-  clientContact: "Executive Board of Directors & Project Sponsors",
-  clientAddress: "Lagos / Abuja, Nigeria",
+  clientName: "",
+  clientContact: "",
+  clientAddress: "",
   clientEmail: "",
   clientPhone: "",
   
@@ -497,6 +497,7 @@ function RealEstateProposalContent() {
                           <input
                             type="text"
                             value={state.clientName}
+                            placeholder="Leave blank or enter client corporate name"
                             onChange={(e) => setState(prev => ({ ...prev, clientName: e.target.value }))}
                             className="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1 text-xs text-slate-100"
                           />
@@ -808,23 +809,45 @@ function RealEstateProposalContent() {
                 </div>
               </div>
 
-              {/* Document Banner */}
-              <div className="border-b border-slate-200 pb-5 mb-6">
-                <span className="text-[10px] font-bold text-amber-700 uppercase tracking-widest block mb-1 font-mono">
-                  PREPARED FOR:
-                </span>
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
-                  <div>
-                    <h2 className="text-lg font-bold text-slate-950 uppercase">
-                      {state.clientName}
-                    </h2>
-                    <p className="text-xs text-slate-600 font-medium">
-                      Attn: {state.clientContact} • {state.clientAddress}
-                    </p>
+              {/* Document Banner / Prepared For (Blank by default or customized) */}
+              <div className="border border-slate-200 rounded-xl p-5 mb-6 bg-slate-50/70">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                  <div className="flex-1 w-full">
+                    <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-2 font-mono">
+                      PREPARED FOR / CLIENT RECIPIENT:
+                    </span>
+                    {state.clientName ? (
+                      <div>
+                        <h2 className="text-base font-bold text-slate-900 uppercase">
+                          {state.clientName}
+                        </h2>
+                        <p className="text-xs text-slate-600 font-medium mt-0.5">
+                          {state.clientContact && <span>Attn: {state.clientContact} • </span>}
+                          {state.clientAddress}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="space-y-1.5 text-xs font-mono text-slate-500">
+                        <div className="flex items-center gap-2">
+                          <span className="text-slate-400 font-semibold min-w-[120px]">Client / Company:</span>
+                          <span className="border-b border-slate-300 flex-1 pb-0.5 text-slate-400 italic">______________________________________________________</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-slate-400 font-semibold min-w-[120px]">Attention / Contact:</span>
+                          <span className="border-b border-slate-300 flex-1 pb-0.5 text-slate-400 italic">______________________________________________________</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-slate-400 font-semibold min-w-[120px]">Corporate Address:</span>
+                          <span className="border-b border-slate-300 flex-1 pb-0.5 text-slate-400 italic">______________________________________________________</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <div className="text-left sm:text-right font-mono text-xs">
-                    <span className="text-slate-500 block text-[10px] uppercase font-bold">Total Investment</span>
-                    <span className="text-slate-950 font-black text-base">{state.currency}{formatNumber(state.totalCost)}</span>
+
+                  <div className="text-left sm:text-right font-mono text-xs bg-white border border-slate-200 p-3 rounded-lg min-w-[190px]">
+                    <span className="text-slate-400 block text-[9px] uppercase font-bold tracking-wider">Total Development Value</span>
+                    <span className="text-slate-950 font-black text-lg block mt-0.5">{state.currency}{formatNumber(state.totalCost)}</span>
+                    <span className="text-[10px] text-emerald-600 font-semibold">Fixed All-Inclusive Investment</span>
                   </div>
                 </div>
               </div>
@@ -975,8 +998,8 @@ function RealEstateProposalContent() {
 
               </div>
 
-              {/* Execution Sign-off */}
-              <div className="mt-12 pt-6 border-t-2 border-slate-900 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+              {/* Bilateral Sign-Off */}
+              <div className="mt-12 pt-6 border-t-2 border-slate-900 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block font-mono">
                     ISSUED FOR AND ON BEHALF OF:
@@ -990,11 +1013,27 @@ function RealEstateProposalContent() {
                   <div className="pt-3 font-mono text-slate-400 text-xs">
                     Signature: ________________________
                   </div>
+                  <div className="font-mono text-slate-400 text-[11px] mt-1">
+                    Date: {new Date(state.proposalDate).toLocaleDateString("en-NG", { year: "numeric", month: "long", day: "numeric" })}
+                  </div>
                 </div>
 
-                <div className="text-left sm:text-right font-mono text-[10px] text-slate-400">
-                  <p>Master Architecture Proposal • Ref: {state.proposalId}</p>
-                  <p>Certified Corporate Document • Page 1 of 3</p>
+                <div>
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block font-mono">
+                    ACCEPTED AND CONFIRMED (CLIENT):
+                  </span>
+                  <p className="text-xs font-bold text-slate-900 mt-1 uppercase">
+                    {state.clientName || "____________________________________"}
+                  </p>
+                  <div className="space-y-1 pt-1 text-xs text-slate-600">
+                    <p>Name: {state.clientContact || "________________________"}</p>
+                    <div className="pt-2 font-mono text-slate-400 text-xs">
+                      Signature: ________________________
+                    </div>
+                    <div className="font-mono text-slate-400 text-[11px] mt-1">
+                      Date: ________________________
+                    </div>
+                  </div>
                 </div>
               </div>
 

@@ -705,15 +705,15 @@ function ProposalContent() {
 
   // Form State
   const [state, setState] = useState<ProposalState>({
-    proposalTitle: "Target Savings & Layaway E-Commerce Platform — Food Bank Special Services Ltd",
+    proposalTitle: "Technical & Commercial Software Proposal",
     proposalId: "",
     proposalDate: "",
     
     ...DEFAULT_SENDER,
     
-    clientName: "Food Bank Special Services Ltd",
-    clientContact: "Executive Leadership & Management Board",
-    clientAddress: "Lagos, Nigeria",
+    clientName: "",
+    clientContact: "",
+    clientAddress: "",
     clientEmail: "",
     clientPhone: "",
     

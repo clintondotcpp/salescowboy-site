@@ -109,7 +109,7 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     {
       id: "1",
       title: "Module 1: Property Detail Page, Title Showcase & Ownership History",
-      timeline: "Sprint 1 (Days 1 - 10)",
+      timeline: "Sprint 1 (Days 1 - 12)",
       cost: 450000,
       description: "Dedicated property pages featuring media galleries, map coordinates, structural specs, valuation badges, and transparent title document verification.",
       deliverables: [
@@ -121,7 +121,7 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     {
       id: "2",
       title: "Module 2: Public Web Marketplace (MLS), Moderation Desk & Offline Catchment",
-      timeline: "Sprint 2 (Days 11 - 18)",
+      timeline: "Sprint 2 (Days 13 - 24)",
       cost: 350000,
       description: "Zillow-style open public property marketplace engineered for Google SEO dominance, nationwide listing discovery, moderator verification, and offline sales catchment.",
       deliverables: [
@@ -135,7 +135,7 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     {
       id: "3",
       title: "Module 3: Accredited Estate Surveyor ('Source of Truth') Portal",
-      timeline: "Sprint 3 (Days 19 - 26)",
+      timeline: "Sprint 3 (Days 25 - 34)",
       cost: 400000,
       description: "Mandatory valuation workflow where licensed company estate surveyors inspect, value, and digitally stamp property prices prior to marketplace certification.",
       deliverables: [
@@ -147,7 +147,7 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     {
       id: "4",
       title: "Module 4: Automated Title Transfer, Digital Signing & Billing Engine",
-      timeline: "Sprint 4 (Days 27 - 36)",
+      timeline: "Sprint 4 (Days 35 - 46)",
       cost: 500000,
       description: "Dynamic generation of transfer instruments, auto-signature stamping with verified IDs, and automated invoicing.",
       deliverables: [
@@ -159,7 +159,7 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     {
       id: "5",
       title: "Module 5: Polygon Blockchain Tokenization, Fractional Sales & Secondary Liquidity Protocol",
-      timeline: "Sprint 5 (Days 37 - 48)",
+      timeline: "Sprint 5 (Days 47 - 60)",
       cost: 550000,
       description: "Polygon Mainnet smart contracts for digital deed tokenization, fractional co-ownership syndication, and structured secondary liquidity protocols.",
       deliverables: [
@@ -173,20 +173,22 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     },
     {
       id: "6",
-      title: "Module 6: Integrated Financial Accounting Module",
-      timeline: "Sprint 6 (Days 49 - 58)",
+      title: "Module 6: Enterprise Financial Accounting, Escrow & Statutory Tax Ledger",
+      timeline: "Sprint 6 (Days 61 - 72)",
       cost: 450000,
-      description: "Automated double-entry accounting ledger managing property acquisitions, escrow balances, broker commissions, and statutory tax deductions.",
+      description: "Specialized real estate multi-subledger double-entry accounting engine managing property acquisitions, isolated buyer earnest escrow, multi-tier commissions, and statutory tax deductions.",
       deliverables: [
-        "Double-Entry Accounting Ledger: Tracks every financial movement across the platform—property purchases, escrow holdings, commissions, contractor disbursements, facility management fees, VAT (7.5%), and Withholding Tax (10%)",
-        "Financial Reporting: Real-time revenue tracking, trial balances, reconciliation logs, and exportable financial statements for corporate auditors",
-        "Broker Commission Splits: Automated calculation and disbursement of agent commissions upon successful closing verification"
+        "Real Estate Multi-Subledger Double-Entry Bookkeeping: Dedicated chart of accounts tailored for Nigerian property development: Assets (Escrow, Client Funds, Fixed Assets), Liabilities (Pending Seller Payouts, Retainage, Security Deposits), Equity, Revenue (Commissions, Listing Fees, Legal Documentation Fees, Token Surcharges), and Operating Expenses with strict debit-credit balancing on every state change",
+        "Automated Escrow & Trust Fund Management: Isolated escrow sub-accounts for buyer earnest deposits during title verification and surveyor inspection, featuring conditional milestone releases with multi-signatory authorization (2-of-3 approval before contractor/seller payouts) and automated NIP virtual account bank reconciliation matching incoming payments to exact transaction IDs",
+        "Statutory Tax Engine & Automated Government Filings: Automated calculation and deduction of VAT (7.5%) on agency and legal documentation fees, and Withholding Tax (WHT at 5%–10%) on vendor, surveyor, and agent commissions, generating FIRS/NRS-compliant e-WHT deduction credit certificates and stamp duty registration schedules",
+        "Automated Multi-Tier Commission Splitting & Agent Remittance: Instant automated commission allocation across listing agents, selling realtors, lead generation partners, and platform royalties, with automated batch payout disbursement directly to Nigerian commercial bank accounts (NUBAN) via banking API integration with automated payment advice slips",
+        "Real Estate Financial Statements & Fractional Yield Distribution: Real-time generation of Balance Sheets, Profit & Loss (P&L) statements, Cash Flow projections, and Trial Balances. Includes rental dividend yield distribution calculators for fractional token holders and automated tenant service charge / facility billing ledgers, with one-click export to Excel, CSV, and PDF audit dossiers"
       ]
     },
     {
       id: "7",
       title: "Module 7: Immutable Audit Logging & External Government Compliance",
-      timeline: "Sprint 7 (Days 59 - 68)",
+      timeline: "Sprint 7 (Days 73 - 82)",
       cost: 400000,
       description: "Permanent audit logging of every system action and exportable compliance modules for statutory regulatory agencies.",
       deliverables: [
@@ -198,7 +200,7 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     {
       id: "8",
       title: "Module 8: End-to-End Asset Lifecycle (Acquisition, Construction & Facility Management)",
-      timeline: "Sprint 8 (Days 69 - 80)",
+      timeline: "Sprint 8 (Days 83 - 90)",
       cost: 400000,
       description: "Full ERP tracking covering land due diligence, construction bill-of-quantities milestones, and tenant facility operations.",
       deliverables: [
@@ -221,14 +223,14 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
   infrastructureNotes: "Total Estimated Monthly Running Cost: ~$20 – $60 / month. Note: Paid directly by the Client to infrastructure providers; no markup added by Developer. One-time/annual app store registration fees: Google Play Console ($25 one-time), Apple Developer Account ($99/year).",
   
   totalCost: 3500000,
-  timeline: "8 – 12 Weeks (Sprint-based deliveries across all 3 platforms)",
+  timeline: "3 Months (90 Days) — Sprint-based deliveries across all 3 platforms",
   paymentMilestones: [
-    { label: "Milestone 1: 50% Mobilization Deposit (System Architecture, UI/UX, DB Setup & Initial Sprints)", percentage: 50, amount: 1750000 },
-    { label: "Milestone 2: 30% Staging & UAT Milestone (Web Marketplace, Admin Portals, Mobile Beta & Testnet)", percentage: 30, amount: 1050000 },
-    { label: "Milestone 3: 20% Final Launch & Handover (Production Railway, Polygon Mainnet & App Stores)", percentage: 20, amount: 700000 }
+    { label: "Milestone 1: 50% Mobilization Deposit (System Architecture, UI/UX, DB Setup & Months 1–2 Development)", percentage: 50, amount: 1750000 },
+    { label: "Milestone 2: 30% Staging & UAT Milestone (Day 60: Web Marketplace, Admin Portals, Mobile Beta & Testnet for 30-Day Client UAT)", percentage: 30, amount: 1050000 },
+    { label: "Milestone 3: 20% Final Launch & Handover (Day 90: Production Railway, Polygon Mainnet & App Stores)", percentage: 20, amount: 700000 }
   ],
   bankInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
-  notes: "1. Total Project Investment: ₦3,500,000 all-inclusive custom development fee.\n2. Milestone Payments: 50% Mobilization (₦1,750,000) upon contract execution; 30% Staging & UAT (₦1,050,000); 20% Handover & Production Deployment (₦700,000).\n3. Bank Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n4. Warranty: Includes 45 days post-launch bug-fix warranty and handover documentation.\n5. IP Rights: 100% full code ownership and smart contract keys transferred upon final milestone settlement.\n6. Secondary Liquidity & Fractional Syndication: Real estate is an inherently illiquid physical asset. Rapid liquidation is strictly facilitated through (a) Secondary Marketplace with Limit Orders, (b) Treasury-Assisted Rapid Buyback at an automated 5%–10% liquidation spread (haircut) to protect platform cash reserves, or (c) Structured quarterly/bi-annual exit windows. Fractional property acquisitions are dependent upon sufficient pool aggregation (e.g., pooling ₦10,000 fractions to acquire a ₦350M asset)."
+  notes: "1. Total Project Investment: ₦3,500,000 all-inclusive custom development fee.\n2. Project Duration: 3 Months (90 calendar days) from contract execution.\n3. Milestone Payments: 50% Mobilization (₦1,750,000) upon contract execution; 30% Staging & UAT (₦1,050,000 at Day 60); 20% Handover & Production Deployment (₦700,000 at Day 90).\n4. Bank Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n5. Warranty: Includes 45 days post-launch bug-fix warranty and handover documentation.\n6. IP Rights: 100% full code ownership and smart contract keys transferred upon final milestone settlement.\n7. Secondary Liquidity & Fractional Syndication: Real estate is an inherently illiquid physical asset. Rapid liquidation is strictly facilitated through (a) Secondary Marketplace with Limit Orders, (b) Treasury-Assisted Rapid Buyback at an automated 5%–10% liquidation spread (haircut) to protect platform cash reserves, or (c) Structured quarterly/bi-annual exit windows. Fractional property acquisitions are dependent upon sufficient pool aggregation (e.g., pooling ₦10,000 fractions to acquire a ₦350M asset)."
 };
 
 // UTF-8 Base64 serialization

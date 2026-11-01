@@ -87,7 +87,7 @@ const PRESETS = [
       {
         id: "1",
         title: "Module 1: Property Detail Page, Title Showcase & Ownership History",
-        timeline: "Sprint 1 (Days 1 - 10)",
+        timeline: "Sprint 1 (Days 1 - 12)",
         cost: 450000,
         description: "Dedicated property pages featuring media galleries, map coordinates, structural specs, valuation badges, and transparent title document verification.",
         deliverables: [
@@ -99,7 +99,7 @@ const PRESETS = [
       {
         id: "2",
         title: "Module 2: Public Web Marketplace (MLS), Moderation Desk & Offline Catchment",
-        timeline: "Sprint 2 (Days 11 - 18)",
+        timeline: "Sprint 2 (Days 13 - 24)",
         cost: 350000,
         description: "Zillow-style open public property marketplace engineered for Google SEO dominance, nationwide listing discovery, moderator verification, and offline sales catchment.",
         deliverables: [
@@ -113,7 +113,7 @@ const PRESETS = [
       {
         id: "3",
         title: "Module 3: Accredited Estate Surveyor ('Source of Truth') Portal",
-        timeline: "Sprint 3 (Days 19 - 26)",
+        timeline: "Sprint 3 (Days 25 - 34)",
         cost: 400000,
         description: "Mandatory valuation workflow where licensed company estate surveyors inspect, value, and digitally stamp property prices prior to marketplace certification.",
         deliverables: [
@@ -125,7 +125,7 @@ const PRESETS = [
       {
         id: "4",
         title: "Module 4: Automated Title Transfer, Digital Signing & Billing Engine",
-        timeline: "Sprint 4 (Days 27 - 36)",
+        timeline: "Sprint 4 (Days 35 - 46)",
         cost: 500000,
         description: "Dynamic generation of transfer instruments, auto-signature stamping with verified IDs, and automated invoicing.",
         deliverables: [
@@ -137,7 +137,7 @@ const PRESETS = [
       {
         id: "5",
         title: "Module 5: Polygon Blockchain Tokenization, Fractional Sales & Secondary Liquidity Protocol",
-        timeline: "Sprint 5 (Days 37 - 48)",
+        timeline: "Sprint 5 (Days 47 - 60)",
         cost: 550000,
         description: "Polygon Mainnet smart contracts for digital deed tokenization, fractional co-ownership syndication, and structured secondary liquidity protocols.",
         deliverables: [
@@ -151,20 +151,22 @@ const PRESETS = [
       },
       {
         id: "6",
-        title: "Module 6: Integrated Financial Accounting Module",
-        timeline: "Sprint 6 (Days 49 - 58)",
+        title: "Module 6: Enterprise Financial Accounting, Escrow & Statutory Tax Ledger",
+        timeline: "Sprint 6 (Days 61 - 72)",
         cost: 450000,
-        description: "Automated double-entry accounting ledger managing property acquisitions, escrow balances, broker commissions, and statutory tax deductions.",
+        description: "Specialized real estate multi-subledger double-entry accounting engine managing property acquisitions, isolated buyer earnest escrow, multi-tier commissions, and statutory tax deductions.",
         deliverables: [
-          "Double-Entry Accounting Ledger: Tracks every financial movement across the platform—property purchases, escrow holdings, commissions, contractor disbursements, facility management fees, VAT (7.5%), and Withholding Tax (10%)",
-          "Financial Reporting: Real-time revenue tracking, trial balances, reconciliation logs, and exportable financial statements for corporate auditors",
-          "Broker Commission Splits: Automated calculation and disbursement of agent commissions upon successful closing verification"
+          "Real Estate Multi-Subledger Double-Entry Bookkeeping: Dedicated chart of accounts tailored for Nigerian property development: Assets (Escrow, Client Funds, Fixed Assets), Liabilities (Pending Seller Payouts, Retainage, Security Deposits), Equity, Revenue (Commissions, Listing Fees, Legal Documentation Fees, Token Surcharges), and Operating Expenses with strict debit-credit balancing on every state change",
+          "Automated Escrow & Trust Fund Management: Isolated escrow sub-accounts for buyer earnest deposits during title verification and surveyor inspection, featuring conditional milestone releases with multi-signatory authorization (2-of-3 approval before contractor/seller payouts) and automated NIP virtual account bank reconciliation matching incoming payments to exact transaction IDs",
+          "Statutory Tax Engine & Automated Government Filings: Automated calculation and deduction of VAT (7.5%) on agency and legal documentation fees, and Withholding Tax (WHT at 5%–10%) on vendor, surveyor, and agent commissions, generating FIRS/NRS-compliant e-WHT deduction credit certificates and stamp duty registration schedules",
+          "Automated Multi-Tier Commission Splitting & Agent Remittance: Instant automated commission allocation across listing agents, selling realtors, lead generation partners, and platform royalties, with automated batch payout disbursement directly to Nigerian commercial bank accounts (NUBAN) via banking API integration with automated payment advice slips",
+          "Real Estate Financial Statements & Fractional Yield Distribution: Real-time generation of Balance Sheets, Profit & Loss (P&L) statements, Cash Flow projections, and Trial Balances. Includes rental dividend yield distribution calculators for fractional token holders and automated tenant service charge / facility billing ledgers, with one-click export to Excel, CSV, and PDF audit dossiers"
         ]
       },
       {
         id: "7",
         title: "Module 7: Immutable Audit Logging & External Government Compliance",
-        timeline: "Sprint 7 (Days 59 - 68)",
+        timeline: "Sprint 7 (Days 73 - 82)",
         cost: 400000,
         description: "Permanent audit logging of every system action and exportable compliance modules for statutory regulatory agencies.",
         deliverables: [
@@ -176,7 +178,7 @@ const PRESETS = [
       {
         id: "8",
         title: "Module 8: End-to-End Asset Lifecycle (Acquisition, Construction & Facility Management)",
-        timeline: "Sprint 8 (Days 69 - 80)",
+        timeline: "Sprint 8 (Days 83 - 90)",
         cost: 400000,
         description: "Full ERP tracking covering land due diligence, construction bill-of-quantities milestones, and tenant facility operations.",
         deliverables: [

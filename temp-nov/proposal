@@ -55,9 +55,12 @@ Mobile apps sit behind App Store walls and cannot be indexed by Google Search. B
   3. **Structured Exit Windows:** Scheduled quarterly or bi-annual liquidity rounds where the platform treasury or institutional buyers redeem secondary units from verified holders.
 * **Embedded Non-Custodial Web3 Wallets:** Frictionless user onboarding via email or social login (Privy / Dynamic), automatically provisioning Polygon wallets without requiring manual seed phrases.
 
-### Module 6: Integrated Financial Accounting Module
-* **Double-Entry Accounting Ledger:** Tracks every financial movement across the platform—property purchases, escrow holdings, commissions, contractor disbursements, facility management fees, VAT (7.5%), and Withholding Tax (10%).
-* **Financial Reporting:** Real-time revenue tracking, trial balances, reconciliation logs, and exportable financial statements.
+### Module 6: Enterprise Financial Accounting, Escrow & Statutory Tax Ledger
+* **Real Estate Multi-Subledger Double-Entry Bookkeeping:** Chart of accounts purpose-built for property development and brokerage: Assets (Escrow, Client Funds, Fixed Assets), Liabilities (Pending Seller Payouts, Retainage, Security Deposits), Equity, Revenue (Commissions, Listing Fees, Legal Documentation Fees, Token Surcharges), and Operating Expenses. Every state change generates strict balanced debit-credit journal entries to prevent ledger discrepancies.
+* **Automated Escrow & Trust Fund Management:** Isolated escrow sub-accounts for buyer earnest deposits during title verification and surveyor inspection. Implements conditional milestone-based fund releases with multi-signatory authorization (2-of-3 approval before contractor or seller disbursement) and automated NIP virtual account bank reconciliation matching incoming payments to exact transaction IDs.
+* **Statutory Tax Engine & Automated Government Filings:** Automated calculation and deduction of Value Added Tax (VAT at 7.5%) on agency, brokerage, and legal documentation fees, and Withholding Tax (WHT at 5%–10%) on vendor, surveyor, and agent commissions. Generates FIRS/NRS-compliant e-WHT deduction credit certificates and stamp duty registration schedules.
+* **Automated Multi-Tier Commission Splitting & Agent Remittance:** Instant automated commission allocation across listing agents, selling realtors, lead generation partners, and platform royalties, with automated batch payout disbursement directly to Nigerian commercial bank accounts (NUBAN) via banking API integration with automated payment advice slips.
+* **Real Estate Financial Statements & Fractional Yield Distribution:** Real-time generation of Balance Sheets, Profit & Loss (P&L) statements, Cash Flow projections, and Trial Balances. Includes rental dividend yield distribution calculators for fractional token holders and automated tenant service charge / facility billing ledgers, with one-click export to Excel, CSV, and PDF audit dossiers.
 
 ### Module 7: Immutable Audit Logging & External Government Compliance
 * **100% Action & ID Logging:** Every single action, User ID, login, KYC verification, moderator approval, surveyor valuation, document signature, and accounting entry is permanently logged with Timestamp and IP Address.
@@ -90,12 +93,12 @@ Mobile apps sit behind App Store walls and cannot be indexed by Google Search. B
 Covering the full design, engineering, smart contract deployment, and launch of all three platforms (**iOS/Android Mobile App + Public SEO Web Marketplace + Multi-Role Admin/Surveyor/Accounting Web Portals**) and all eight core modules:
 
 * **Total All-Inclusive Development Investment:** **₦3,500,000**
-* **Estimated Delivery Timeline:** **8 – 12 Weeks**
+* **Estimated Delivery Timeline:** **3 Months (90 Days)**
 
 ### Milestone Payment Schedule:
-1. **50% Mobilization (₦1,750,000):** Due upon contract execution to commence system architecture, UI/UX, database setup, and development.
-2. **30% Staging & UAT Milestone (₦1,050,000):** Due upon deployment of the Web Marketplace, Admin/Surveyor/Accounting Portals, Mobile App beta, and Polygon Testnet integration for live review.
-3. **20% Final Launch & Handover (₦700,000):** Due upon production deployment to Railway, Polygon Mainnet launch, and App Store submission.
+1. **50% Mobilization (₦1,750,000):** Due upon contract execution to commence system architecture, UI/UX, database setup, and Months 1–2 development sprints.
+2. **30% Staging & UAT Milestone (₦1,050,000):** Due at Day 60 upon deployment of the Web Marketplace, Admin/Surveyor/Accounting Portals, Mobile App beta, and Polygon Testnet integration for live 30-day client testing and feedback.
+3. **20% Final Launch & Handover (₦700,000):** Due at Day 90 upon completion of UAT, production deployment to live Railway cloud server, Polygon Mainnet launch, App Store submission, and final master credentials handover.
 
 ---
 

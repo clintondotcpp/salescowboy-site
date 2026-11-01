@@ -72,6 +72,16 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
+    name: "Tri-Platform Real Estate Ecosystem - 50% Mobilization Deposit (₦1.75M)",
+    description: "Stage 1: 50% Project Mobilization Deposit — Tri-Platform Real Estate Ecosystem (iOS/Android Mobile App, High-SEO Public Web Marketplace [MLS], Multi-Role Admin/Surveyor/Accounting Portals, Automated Title Signing & Polygon Blockchain Integration)",
+    rate: 1750000,
+  },
+  {
+    name: "Tri-Platform Real Estate Ecosystem - Full Investment (₦3.5M)",
+    description: "Full Custom Development (3 Months / 90 Days) — Tri-Platform Real Estate Ecosystem (Native iOS/Android App, Public Web Marketplace [MLS], Multi-Role Portals, Enterprise Accounting & Escrow Subledger, Polygon Blockchain Tokenization & Secondary Liquidity Protocol)",
+    rate: 3500000,
+  },
+  {
     name: "Food Bank Special Services Ltd - 50% Deposit (₦175k)",
     description: "50% Project Mobilization Deposit — Food Bank Target Savings & Layaway Platform (Public Storefront, Member Savings Progress Dashboard, Paystack Virtual Accounts, Manual POP Queue, 100% Fulfillment Claim Pass, and SMS/Email Notification Engine)",
     rate: 175000,
@@ -160,18 +170,18 @@ function InvoiceGeneratorContent() {
     
     ...DEFAULT_SENDER,
     
-    clientName: "Food Bank Special Services Ltd",
-    clientContact: "Executive Leadership & Management Board",
-    clientAddress: "Lagos, Nigeria",
+    clientName: "",
+    clientContact: "",
+    clientAddress: "",
     clientEmail: "",
     clientPhone: "",
     
     items: [
       {
         id: "1",
-        description: "50% Project Mobilization Deposit — Target Savings & Layaway E-Commerce Platform (Public Foodstuff/Electronics Storefront, Customer Progress Dashboard, Paystack/Virtual Accounts Integration, Manual POP Review Desk, 100% Target Fulfillment Pass, and Automated SMS/Email Notification Engine)",
+        description: "Stage 1: 50% Project Mobilization Deposit — Tri-Platform Real Estate Digital Ecosystem: Native iOS & Android Mobile Application, High-SEO Public Web Marketplace (MLS), Multi-Role Portals (Moderator Desk, Accredited Estate Surveyor Portal, Corporate Accounting Ledger, Government Compliance Auditing), and Polygon Blockchain Integration",
         quantity: 1,
-        rate: 175000,
+        rate: 1750000,
       }
     ],
     currency: "₦",
@@ -180,7 +190,7 @@ function InvoiceGeneratorContent() {
     includeTax: false,
     
     paymentInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
-    notes: "1. 50% Mobilization Deposit (₦175,000) to commence development for Food Bank Special Services Ltd. Remaining balance (₦175,000) is structured across progress milestones.\n2. Payment Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n3. Notifications: Transactional alerts configured strictly via SMS and Email channels.\n4. Cloud hosting is deployed on Railway at roughly $5 monthly (billed directly to cloud provider).",
+    notes: "1. Total Project Investment: ₦3,500,000 all-inclusive custom development fee.\n2. Payment Schedule: 50% Mobilization Deposit (₦1,750,000) payable upon contract execution. Remaining balance is structured across progress milestones: 30% (₦1,050,000) at Day 60 Staging/UAT; 20% (₦700,000) at Day 90 Production Handover.\n3. Bank Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n4. Project Duration: 3 Months (90 calendar days) from contract execution.\n5. 12-Month Technical Support: Includes 12 months ongoing server monitoring, uptime surveillance, and bug-fix maintenance for existing features (excludes adding new features).\n6. IP Rights: 100% full source code ownership and smart contract keys transferred upon final milestone settlement.",
   });
 
   // Load from URL query if present

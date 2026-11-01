@@ -120,14 +120,16 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     },
     {
       id: "2",
-      title: "Module 2: Marketplace Moderation Desk & Offline Transaction Catchment",
+      title: "Module 2: Public Web Marketplace (MLS), Moderation Desk & Offline Catchment",
       timeline: "Sprint 2 (Days 11 - 18)",
       cost: 350000,
-      description: "Comprehensive moderation workspace for platform operators to review public submissions and log offline real estate sales into the Nigerian MLS feed.",
+      description: "Zillow-style open public property marketplace engineered for Google SEO dominance, nationwide listing discovery, moderator verification, and offline sales catchment.",
       deliverables: [
-        "Moderator Portal: Dedicated interface for platform moderators to review public submissions, verify offline real estate sales, inspect uploaded title documents, and approve listings before they appear on the public marketplace",
-        "Zillow-Style Nigerian MLS Feed: Dynamic status updates (Listed, Under Offer, Sold, Transferred) logging physical offline sales into the national public transaction registry",
-        "Duplicate & Fraud Filter: Algorithmic checks on survey plan coordinates and title document numbers to prevent fraudulent multi-listing of identical land parcels"
+        "Public Open-to-All Marketplace: Fast, responsive web storefront allowing developers, licensed realtors, and individual property owners to discover and browse nationwide verified properties",
+        "Programmatic Location & Property SEO Engine: Automated Google Search ranking landing pages with Schema.org RealEstate metadata targeting high-intent queries (e.g. 'Verified Land with C of O in Lekki', 'Properties for Sale in Abuja')",
+        "Zillow-Style 'Nigerian MLS' Live Transaction Feed: Real-time status updates (Listed, Under Offer, Sold, Transferred) capturing and indexing both digital platform sales and physical offline closings",
+        "Moderator Verification Console: Administrative gate where platform officers inspect submitted property listings, cross-check uploaded survey plan coordinates, and review title deeds before approving public visibility",
+        "Duplicate & Anti-Fraud Coordinate Filter: Algorithmic check on survey beacons, plot boundaries, and title document numbers preventing fraudulent multi-listing of identical land parcels"
       ]
     },
     {
@@ -156,14 +158,17 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     },
     {
       id: "5",
-      title: "Module 5: Polygon Blockchain Tokenization & Instant Liquidation",
+      title: "Module 5: Polygon Blockchain Tokenization, Fractional Sales & Secondary Liquidity Protocol",
       timeline: "Sprint 5 (Days 37 - 48)",
       cost: 550000,
-      description: "Smart contracts on Polygon Mainnet supporting 1-to-1 deed tokenization and fractional ownership with fiat and crypto liquidation.",
+      description: "Polygon Mainnet smart contracts for digital deed tokenization, fractional co-ownership syndication, and structured secondary liquidity protocols.",
       deliverables: [
-        "Built on Polygon Mainnet: Supports both 1-to-1 Tokenization (single digital title deed for whole properties) and Fractional Tokenization (shared ownership units) on the Polygon blockchain for near-zero gas fees and 2-second finality",
-        "Swift Crypto & Fiat Liquidation: Purchased properties appear immediately in the buyer's dashboard. Users can quickly sell, liquidate, and transfer properties on the blockchain using Fiat (NGN) or Crypto (USDT/USDC)",
-        "Embedded Web3 Wallets: Non-custodial or semi-custodial wallet onboarding via email or social login (Privy/Dynamic) without requiring users to handle seed phrases manually"
+        "Polygon Blockchain Tokenization: Digital title deed representations (ERC-721/ERC-1155) minted on Polygon Mainnet providing immutable on-chain proof of ownership with near-zero gas fees",
+        "Fractional Ownership Syndication: Enables fractional property purchases (e.g., ₦10,000 unit fractions), subject to crowd-pooling thresholds to fully fund high-value assets (e.g., pooling 35,000 contributors at ₦10,000 to acquire a ₦350,000,000 commercial property)",
+        "Secondary Marketplace with Limit Orders: Internal peer-to-peer bulletin board and order book where token holders can list their fractional shares or whole deeds for sale at their desired price to other willing platform buyers",
+        "Treasury-Assisted Rapid Buyback (Optional): Instant liquidation facility powered by a dedicated platform liquidity reserve, executed at an automated 5%–10% liquidation spread (haircut) to prevent treasury depletion and protect against bank runs",
+        "Structured Liquidity Exit Windows: Scheduled quarterly or bi-annual liquidity redemption rounds where the platform treasury or institutional partners redeem secondary units from verified holders at certified surveyor valuations",
+        "Embedded Non-Custodial Web3 Wallets: Frictionless user onboarding via email or social login (Privy / Dynamic), automatically provisioning Polygon wallets without requiring manual seed phrases"
       ]
     },
     {
@@ -223,7 +228,7 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     { label: "Milestone 3: 20% Final Launch & Handover (Production Railway, Polygon Mainnet & App Stores)", percentage: 20, amount: 700000 }
   ],
   bankInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
-  notes: "1. Total Project Investment: ₦3,500,000 all-inclusive custom development fee.\n2. Milestone Payments: 50% Mobilization (₦1,750,000) upon contract execution; 30% Staging & UAT (₦1,050,000); 20% Handover & Production Deployment (₦700,000).\n3. Bank Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n4. Warranty: Includes 45 days post-launch bug-fix warranty and handover documentation.\n5. IP Rights: 100% full code ownership and smart contract keys transferred upon final milestone settlement."
+  notes: "1. Total Project Investment: ₦3,500,000 all-inclusive custom development fee.\n2. Milestone Payments: 50% Mobilization (₦1,750,000) upon contract execution; 30% Staging & UAT (₦1,050,000); 20% Handover & Production Deployment (₦700,000).\n3. Bank Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n4. Warranty: Includes 45 days post-launch bug-fix warranty and handover documentation.\n5. IP Rights: 100% full code ownership and smart contract keys transferred upon final milestone settlement.\n6. Secondary Liquidity & Fractional Syndication: Real estate is an inherently illiquid physical asset. Rapid liquidation is strictly facilitated through (a) Secondary Marketplace with Limit Orders, (b) Treasury-Assisted Rapid Buyback at an automated 5%–10% liquidation spread (haircut) to protect platform cash reserves, or (c) Structured quarterly/bi-annual exit windows. Fractional property acquisitions are dependent upon sufficient pool aggregation (e.g., pooling ₦10,000 fractions to acquire a ₦350M asset)."
 };
 
 // UTF-8 Base64 serialization

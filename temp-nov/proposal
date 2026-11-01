@@ -32,8 +32,12 @@ Mobile apps sit behind App Store walls and cannot be indexed by Google Search. B
 * **Mandatory Title Document Showcase:** Every listed property displays verified badges and encrypted previews of the exact title documents it holds (*Certificate of Occupancy [C of O], Governor’s Consent, Registered Deed of Assignment, Gazette, or Survey Plan*).
 * **Complete Ownership History (Chain of Title):** Every property page displays a transparent chronological record of all past and present owners, transaction dates, verified valuations, and Polygon blockchain links.
 
-### Module 2: Marketplace Moderation Desk
-* **Moderator Portal:** Dedicated interface for platform moderators to review public submissions, verify offline real estate sales, inspect uploaded title documents, and approve listings before they appear on the public marketplace.
+### Module 2: Public Web Marketplace (MLS), Moderation Desk & Offline Catchment
+* **Public Open-to-All Marketplace:** Fast, responsive web storefront allowing developers, licensed realtors, and individual property owners to discover and browse nationwide verified properties.
+* **Programmatic Location & Property SEO Engine:** Automated Google Search ranking landing pages with Schema.org RealEstate metadata targeting high-intent queries (e.g., *"Verified Land with C of O in Lekki"*, *"Properties for Sale in Abuja"*).
+* **Zillow-Style "Nigerian MLS" Live Transaction Feed:** Real-time status updates (*Listed, Under Offer, Sold, Transferred*) capturing and indexing both digital platform sales and physical offline closings.
+* **Moderator Verification Console:** Dedicated interface for platform moderators to review public submissions, verify offline real estate sales, inspect uploaded title documents, and approve listings before they appear on the public marketplace.
+* **Duplicate & Anti-Fraud Coordinate Filter:** Algorithmic checks on survey plan coordinates and title document numbers preventing fraudulent multi-listing of identical land parcels.
 
 ### Module 3: Accredited Estate Surveyor ("Source of Truth") Portal
 * **Mandatory Valuation Gate:** The Company Estate Surveyor acts as the official source of truth for property values. Every property must be inspected, valued, and digitally stamped by the Estate Surveyor inside their dedicated portal before its value is certified on the platform.
@@ -42,9 +46,14 @@ Mobile apps sit behind App Store walls and cannot be indexed by Google Search. B
 * **Swift Title Transfer & Auto-Signature:** When a customer purchases a property or document, the system dynamically generates the transfer instrument, **automatically appends the Buyer’s legal name, verified ID, and digital signatures** onto the title documents, and immediately updates ownership across the platform and the buyer’s dashboard.
 * **Auto-Generated Invoices & Receipts:** Instant automated generation of branded PDF Invoices, Official Payment Receipts, Tax Withholding Slips, and Closing Statements for every transaction.
 
-### Module 5: Polygon Blockchain Tokenization & Instant Liquidation
+### Module 5: Polygon Blockchain Tokenization, Fractional Sales & Secondary Liquidity Protocol
 * **Built on Polygon Mainnet:** Supports both **1-to-1 Tokenization** (single digital title deed for whole properties) and **Fractional Tokenization** (shared ownership units) on the Polygon blockchain for near-zero gas fees and 2-second finality.
-* **Swift Crypto & Fiat Liquidation:** Purchased properties appear immediately in the buyer's dashboard. Users can quickly sell, liquidate, and transfer properties on the blockchain using **Fiat (NGN)** or **Crypto (USDT/USDC)**.
+* **Fractional Ownership Syndication:** Enables fractional property purchases (e.g., ₦10,000 unit fractions), subject to crowd-pooling thresholds to fully fund high-value assets (e.g., pooling 35,000 contributors at ₦10,000 to acquire a ₦350,000,000 commercial property).
+* **Secondary Liquidity Protocol (Real Estate is an Illiquid Asset):** Instant or rapid liquidation is strictly facilitator-dependent and only possible via:
+  1. **Secondary Marketplace with Limit Orders:** Token holders post their holdings for sale on the platform’s internal bulletin board or order book at their preferred price to willing buyers.
+  2. **Treasury-Assisted Rapid Buyback (Optional):** Instant buyback available exclusively through a Platform Liquidity Facility at an automated 5%–10% liquidation spread (haircut) to protect platform cash reserves from bank runs.
+  3. **Structured Exit Windows:** Scheduled quarterly or bi-annual liquidity rounds where the platform treasury or institutional buyers redeem secondary units from verified holders.
+* **Embedded Non-Custodial Web3 Wallets:** Frictionless user onboarding via email or social login (Privy / Dynamic), automatically provisioning Polygon wallets without requiring manual seed phrases.
 
 ### Module 6: Integrated Financial Accounting Module
 * **Double-Entry Accounting Ledger:** Tracks every financial movement across the platform—property purchases, escrow holdings, commissions, contractor disbursements, facility management fees, VAT (7.5%), and Withholding Tax (10%).

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Development Agreement (Service Marketplace Web App) — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #b45309;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #0b0f19;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: #0f172a;
+      color: #f8fafc;
+      border: 1px solid #475569;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #334155;
+      border-color: #64748b;
+    }
+
+    .btn-primary {
+      background: #d97706;
+      border-color: #b45309;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #b45309;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 24mm 22mm;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+      border-radius: 4px;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 700;
+      color: #d97706;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+    }
+
+    .brand-contact {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .doc-meta {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: right;
+    }
+
+    .doc-meta .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .doc-meta .val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .agreement-title {
+      text-align: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .agreement-badge {
+      display: inline-block;
+      background: #0f172a;
+      color: #f59e0b;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .agreement-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+
+    .agreement-title .sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .preamble {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      line-height: 1.65;
+      text-align: justify;
+      margin-bottom: 24px;
+    }
+
+    .parties-clause {
+      padding-left: 14px;
+      border-left: 3px solid #d97706;
+      margin: 10px 0;
+    }
+
+    .article {
+      margin-bottom: 22px;
+    }
+
+    .article-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .article-body {
+      font-size: 11.5px;
+      line-height: 1.65;
+      color: #334155;
+    }
+
+    .article-body p {
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+
+    .article-body ul {
+      margin: 6px 0 10px 20px;
+    }
+
+    .article-body li {
+      margin-bottom: 5px;
+    }
+
+    .highlight-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 10px 0;
+    }
+
+    .fee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 12px 0;
+    }
+
+    .fee-col {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .fee-col .pct {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #d97706;
+    }
+
+    .fee-col .amt {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 900;
+      color: #0f172a;
+      margin: 3px 0;
+    }
+
+    .fee-col .desc {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .bank-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 11.5px;
+      color: #92400e;
+      margin-top: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.6;
+    }
+
+    .signoff {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 2px solid #0f172a;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .sig-block .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .sig-block .company {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .sig-block .sig-line {
+      margin-top: 28px;
+      border-bottom: 1px dashed #94a3b8;
+      padding-bottom: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .page {
+        box-shadow: none !important;
+        padding: 18mm 16mm !important;
+        width: 100% !important;
+        min-height: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>📄</span>
+      <span>Software Development Agreement — Service Marketplace Web App</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">
+        <span>🖨️</span> Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- Header Letterhead -->
+    <div class="letterhead">
+      <div>
+        <div class="brand-title">SALES COWBOY</div>
+        <div class="brand-sub">Marketing Solutions • Enterprise Web Engineering</div>
+        <div class="brand-contact">
+          Lagos, Nigeria • salescowboyng@gmail.com • +234 912 309 6853 • www.salescowboy.com
+        </div>
+      </div>
+      <div class="doc-meta">
+        <span class="label">AGREEMENT REF</span>
+        <span class="val">SCM-AGR-2026-MKT450</span>
+        <span class="label">EFFECTIVE DATE</span>
+        <span class="val">November 1, 2026</span>
+        <span class="label">CONTRACT VALUE</span>
+        <span class="val" style="color: #d97706;">₦450,000 NGN</span>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="agreement-title">
+      <div class="agreement-badge">Bilateral Contractual Instrument</div>
+      <h2>Software Development Agreement</h2>
+      <div class="sub">Multi-Category Service Provider Classifieds & Lead-Generation Marketplace Web Platform ("Jiji for Services")</div>
+    </div>
+
+    <!-- Preamble -->
+    <div class="preamble">
+      <p>
+        <strong>THIS SOFTWARE DEVELOPMENT AGREEMENT</strong> is entered into as of <strong>November 1, 2026</strong>, by and between:
+      </p>
+      <div class="parties-clause">
+        <strong>1. DEVELOPER:</strong> <strong>SALES COWBOY MARKETING SOLUTIONS</strong>, represented by <strong>Clinton Chukwunyere</strong>, with official correspondence at salescowboyng@gmail.com and remittance account at Guaranty Trust Bank (Account No: 3006086291); and<br><br>
+        <strong>2. CLIENT:</strong> __________________________________________________ ("Client"), represented by __________________________________, Designation: ______________________, Email/Phone: __________________________________.
+      </div>
+      <p>
+        <strong>WHEREAS</strong>, the Developer is an enterprise software development studio specializing in high-traffic web applications, database architectures, and digital marketplaces; and the Client desires to retain the Developer to design, engineer, and deploy a responsive <strong>Web Application & Progressive Web App (PWA)</strong> for local service provider classifieds, lead generation, and ad-boost monetization, pursuant to the terms and specifications herein.
+      </p>
+    </div>
+
+    <!-- Article 1: Scope of Work -->
+    <div class="article">
+      <div class="article-title">1. Scope of Services & Deliverables (Web App Only)</div>
+      <div class="article-body">
+        <p>1.1 The Developer shall design, build, and deploy the Platform strictly as a responsive, high-SEO <strong>Web Application & Progressive Web App (PWA)</strong>, encompassing five core functional modules:</p>
+        <ul>
+          <li><strong>Module 1: High-SEO Public Marketplace & Granular Location Engine:</strong> Programmatic category and location routing covering all 36 States, FCT, and 774 Local Government Areas (LGAs) of Nigeria (e.g., <em>"Solar Installer in Owerri Municipal"</em>, <em>"AC Repair in Ikeja"</em>), smart search, filter bar by price, verification status, and rating.</li>
+          <li><strong>Module 2: Service Provider Profiles & Portfolio Showcase:</strong> Rich service listings with before-and-after photo galleries (Cloudflare R2), call-out/starting rates, operating hours, verified KYC badges, and two-way verified reviews.</li>
+          <li><strong>Module 3: Instant Lead Generation & Contact Suite:</strong> "Reveal Phone Number" with click-logging analytics counter, one-click pre-filled WhatsApp inquiry button, and real-time in-app quote request messaging.</li>
+          <li><strong>Module 4: Platform Monetization Engine (Ad Boosting & Subscriptions):</strong> Paid profile boosting packages (VIP Gold, Silver, Featured Carousel, Urgent Tag), recurring pro subscriptions, and automated checkout via Paystack (Cards, USSD, Bank Transfer).</li>
+          <li><strong>Module 5: Administrator & Moderation Desk:</strong> Admin dashboard to moderate incoming listings/photos, verify submitted KYC documents, manage category taxonomy, configure ad boost rates, and review lead analytics.</li>
+        </ul>
+        <p>
+          1.2 <strong>Exclusion of Native Mobile App Binaries:</strong> This Agreement is strictly for the <strong>Web Platform & Mobile-Ready PWA</strong>. Native mobile applications compiled for the Apple App Store and Google Play Store are expressly excluded from this scope and may be contracted under a separate mobile extension agreement.
+        </p>
+      </div>
+    </div>
+
+    <!-- Article 2: Commercial Investment & Justification -->
+    <div class="article">
+      <div class="article-title">2. Commercial Fees, Price Breakdown & Payment Milestones</div>
+      <div class="article-body">
+        <p>
+          2.1 <strong>Total Contract Price:</strong> The total professional fee for the complete development, staging, and launch of the Web Platform is <strong>₦450,000 (Four Hundred and Fifty Thousand Naira)</strong>.
+        </p>
+        <p>
+          2.2 <strong>Price Point Justification & Value Breakdown (₦450,000):</strong><br>
+          The agreed price reflects an optimized, high-velocity MVP web architecture designed for rapid go-to-market execution without sacrificing code quality, security, or organic search discovery:
+        </p>
+        <div class="highlight-card" style="font-size: 11px; line-height: 1.55;">
+          <ul style="margin: 0 0 0 16px; padding: 0;">
+            <li><strong>Component 1: System Architecture, DB Schemas & 774 LGA Location Engine (₦120,000):</strong> Relational PostgreSQL schemas, 36 States + FCT + 774 LGA database indexing, secure auth, and session management.</li>
+            <li><strong>Component 2: High-SEO Public Discovery, Category Routing & Search Engine (₦110,000):</strong> Next.js Server-Side Rendered (SSR) programmatic SEO pages for organic Google ranking, responsive mobile-first UI, and search algorithms.</li>
+            <li><strong>Component 3: Provider Profiles, Portfolio Showcase & Lead Tracking (₦90,000):</strong> Multi-image before/after media upload vault (Cloudflare R2), phone click logger and lead counter, click-to-WhatsApp deep-linking, and customer reviews.</li>
+            <li><strong>Component 4: Monetization Engine: Ad Boosting & Paystack Checkout (₦80,000):</strong> Paystack payment gateway integration for automated ad boost purchases, featured placement algorithms, duration expiry cron jobs, and billing records.</li>
+            <li><strong>Component 5: Admin Moderation Desk, Cloud Deployment & Warranty (₦50,000):** Admin moderation workflow, KYC verification desk, cloud deployment on Railway/DigitalOcean, DNS configuration, and 60-day post-launch warranty support.</li>
+          </ul>
+        </div>
+
+        <p>2.3 <strong>Milestone Payment Schedule:</strong></p>
+        <div class="fee-grid">
+          <div class="fee-col">
+            <div class="pct">MILESTONE 1 (50%)</div>
+            <div class="amt">₦225,000</div>
+            <div class="desc">Mobilization Deposit upon contract signing to commence UI/UX, database architecture & Sprint 1.</div>
+          </div>
+          <div class="fee-col">
+            <div class="pct">MILESTONE 2 (30%)</div>
+            <div class="amt">₦135,000</div>
+            <div class="desc">Staging & UAT Milestone upon deployment of functional platform to staging environment for review.</div>
+          </div>
+          <div class="fee-col">
+            <div class="pct">MILESTONE 3 (20%)</div>
+            <div class="amt">₦90,000</div>
+            <div class="desc">Final Launch & Handover upon live production deployment, domain connection & code handover.</div>
+          </div>
+        </div>
+
+        <div class="bank-box">
+          <strong>Official Remittance Bank Details:</strong><br>
+          Bank: GUARANTY TRUST BANK (GTBANK) • Account Name: SALES COWBOY MARKETING SOLUTIONS<br>
+          Account Number: <strong>3006086291</strong>
+        </div>
+
+        <p style="margin-top: 8px;">
+          2.4 <strong>Delivery Timeline:</strong> The estimated development timeline is <strong>3 to 4 Weeks (21 – 28 Calendar Days)</strong> from receipt of the Mobilization Deposit.
+        </p>
+      </div>
+    </div>
+
+    <!-- Article 3: Third Party Costs -->
+    <div class="article">
+      <div class="article-title">3. Third-Party Infrastructure & Running Costs</div>
+      <div class="article-body">
+        <p>
+          3.1 The Client shall be directly responsible for funding recurring third-party cloud infrastructure required to operate the web platform:
+        </p>
+        <ul>
+          <li><strong>Cloud Server & Database (Railway / DigitalOcean):</strong> ~$10 – $20 / month</li>
+          <li><strong>Media & Portfolio Storage (Cloudflare R2):</strong> $0 – $5 / month (Free tier up to 10GB)</li>
+          <li><strong>Custom Domain Name (.ng / .com.ng / .com):</strong> Annual registration fee (~₦6,000 – ₦18,000/year)</li>
+          <li><strong>Payment Processing (Paystack):</strong> 1.5% fee capped at ₦2,000 per successful ad boost payment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Article 4: Complete IP Ownership -->
+    <div class="article">
+      <div class="article-title">4. Complete Intellectual Property Ownership</div>
+      <div class="article-body">
+        <p>
+          4.1 The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of <strong>full and final contractual payment (₦450,000)</strong>, all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API integrations, UI designs, and documentation—shall vest completely and exclusively in the Client.
+        </p>
+        <p>
+          4.2 The Developer waives and transfers all claims and title therein to the Client. Upon final settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, and server deployment scripts directly to the Client, free of any ongoing licensing fees, royalties, or developer encumbrances.
+        </p>
+      </div>
+    </div>
+
+    <!-- Article 5: Acceptance & Warranty -->
+    <div class="article">
+      <div class="article-title">5. Acceptance Testing, Warranty & 60-Day Technical Support</div>
+      <div class="article-body">
+        <p>
+          5.1 <strong>User Acceptance Testing (UAT):</strong> Upon staging milestone delivery, the Client shall have five (5) business days to test all features against the specifications in Section 1 and submit any reproducible software bugs.
+        </p>
+        <p>
+          5.2 <strong>60-Day Bug-Fix Warranty & Maintenance:</strong> The Developer shall provide <strong>sixty (60) calendar days of post-launch technical support</strong> commencing from the live production launch date. This warranty is strictly confined to server monitoring, uptime surveillance, and diagnosing and resolving any existing bugs within the agreed scope. This warranty <strong>expressly excludes the creation or engineering of new features</strong>, which shall be governed by separate written Change Requests.
+        </p>
+      </div>
+    </div>
+
+    <!-- Article 6: Limitation of Liability & Law -->
+    <div class="article">
+      <div class="article-title">6. Limitation of Liability & Governing Law</div>
+      <div class="article-body">
+        <p>
+          6.1 The Developer’s maximum aggregate liability under this Agreement shall not exceed the total fees actually paid by the Client under this Agreement.
+        </p>
+        <p>
+          6.2 This Agreement shall be governed by and construed in accordance with the laws of the <strong>Federal Republic of Nigeria</strong>. Any dispute not resolved amicably within fourteen (14) days shall be referred to mediation or arbitration under the Arbitration and Mediation Act, 2023.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sign-off Block -->
+    <div class="signoff">
+      <div class="sig-block">
+        <div class="label">ISSUED FOR AND ON BEHALF OF DEVELOPER:</div>
+        <div class="company">SALES COWBOY MARKETING SOLUTIONS</div>
+        <div style="font-size: 11px; color: #475569;">Clinton Chukwunyere • Lead Technical Director</div>
+        <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: November 1, 2026</div>
+      </div>
+      <div class="sig-block">
+        <div class="label">ACCEPTED AND CONFIRMED (CLIENT):</div>
+        <div class="company" style="color: #64748b;">____________________________________</div>
+        <div style="font-size: 11px; color: #475569;">Representative: __________________________________</div>
+        <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: ________________________</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

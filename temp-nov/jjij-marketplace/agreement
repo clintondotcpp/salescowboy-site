@@ -1,0 +1,117 @@
+# SOFTWARE DEVELOPMENT AGREEMENT
+
+**THIS SOFTWARE DEVELOPMENT AGREEMENT** (the "Agreement") is entered into and made effective as of **November 1, 2026** (the "Effective Date"), by and between:
+
+### PARTIES:
+1. **SALES COWBOY MARKETING SOLUTIONS** ("Developer"), represented by **Clinton Chukwunyere**, with official correspondence at salescowboyng@gmail.com / +234 912 309 6853, and official remittance account at Guaranty Trust Bank (Account No: 3006086291); and
+2. **THE CLIENT** ("Client"):  
+   Company / Principal Name: __________________________________________________  
+   Authorized Representative: _________________________________________________  
+   Designation: _______________________________________________________________  
+   Official Email / Phone: ____________________________________________________  
+   Physical Address: __________________________________________________________  
+
+---
+
+### RECITALS:
+A. The Developer is an enterprise software engineering and digital product studio specializing in high-performance web applications, database architectures, and marketplace solutions.  
+B. The Client desires to retain the Developer to design, engineer, and deploy a **Multi-Category Service Provider Classifieds & Lead-Generation Marketplace Web Platform** ("The Platform" / "The Web App"), modeled after classified discovery mechanics tailored for Nigerian artisans, technicians, and skilled professionals, pursuant to the terms and specifications set forth herein.  
+
+NOW, THEREFORE, in consideration of the mutual covenants contained herein, the Parties agree as follows:
+
+---
+
+### 1. SCOPE OF SERVICES & DELIVERABLES (WEB APP ONLY)
+1.1 The Developer shall design, build, and deploy the Platform strictly as a responsive, high-SEO **Web Application & Progressive Web App (PWA)**, encompassing the following five core functional modules:
+* **Module 1: High-SEO Public Marketplace & Granular Location Engine:** Programmatic category and location routing covering all 36 States, FCT, and 774 Local Government Areas (LGAs) of Nigeria (e.g., "Solar Installer in Owerri Municipal", "AC Technician in Ikeja"), fast search, filtering by price, rating, and verification badges.
+* **Module 2: Service Provider Profiles & Portfolio Showcase:** Rich service pages featuring before-and-after photo galleries, call-out / starting rates, working hours, coverage radius, verified KYC badges, and customer review submission.
+* **Module 3: Instant Lead Generation & Contact Suite:** "Reveal Phone Number" with click-logging analytics (so providers can see leads received), one-click pre-filled WhatsApp inquiry button, and real-time quote request messaging.
+* **Module 4: Monetization Engine (Ad Boosting & Subscriptions):** Featured listing packages (VIP Gold, Silver, Urgent Tag, Homepage Carousel), recurring pro subscriptions, and automated checkout via Paystack (Cards, USSD, Bank Transfer).
+* **Module 5: Administrator & Moderation Desk:** Admin dashboard to moderate new service listings, verify submitted KYC documents, manage categories/ad boosting pricing, and inspect lead analytics.
+
+1.2 **Exclusion of Native App Store Binaries:** This Agreement is strictly for the **Web Platform & Progressive Web App (PWA)**. Native mobile applications compiled for the Apple App Store or Google Play Store are expressly excluded from this scope and may be contracted under a separate mobile extension agreement.
+
+---
+
+### 2. COMMERCIAL FEES, PRICE BREAKDOWN & PAYMENT MILESTONES
+2.1 **Total Contract Price:** The total professional fee for the complete development, staging, and launch of the Platform is **₦450,000 (Four Hundred and Fifty Thousand Naira)**.
+
+2.2 **Commercial Breakdown & Price Justification (₦450,000):**
+The agreed price represents an optimized, high-value MVP architecture designed for rapid go-to-market execution without compromising code quality, security, or SEO performance:
+* **Component 1: System Architecture, DB Schemas & 774 LGA Location Engine (₦120,000):** Relational PostgreSQL database modeling, Prisma schema design, location indexing across all 36 States + FCT + 774 LGAs, secure authentication, and session handling.
+* **Component 2: High-SEO Public Discovery, Category Routing & Search Engine (₦110,000):** Server-Side Rendered (SSR) programmatic SEO pages engineered for Google ranking, responsive mobile-first UI/UX, multi-tier category taxonomy, and filtering algorithms.
+* **Component 3: Provider Profiles, Portfolio Showcase & Lead Tracking (₦90,000):** Multi-image before/after media upload vault (Cloudflare R2), telephone click logger and analytics counter, click-to-WhatsApp deep-linking, and customer rating/review engine.
+* **Component 4: Monetization Engine: Ad Boosting & Paystack Checkout (₦80,000):** Paystack API integration for automated ad boost purchases, featured placement algorithms, duration expiry cron jobs, and billing records.
+* **Component 5: Admin Moderation Desk, Cloud Deployment & Warranty (₦50,000):** Administrative moderation workflow, KYC verification desk, cloud deployment on Railway/DigitalOcean, DNS configuration, and 60-day post-launch warranty support.
+
+2.3 **Milestone Payment Schedule:**
+Payments shall be disbursed in three (3) performance-based milestones:
+1. **50% Mobilization Deposit (₦225,000):** Due upon signing of this Agreement prior to commencement of UI/UX, database architecture, and Sprint 1 development.
+2. **30% Staging & UAT Milestone (₦135,000):** Due upon deployment of the functional web app on a staging environment (with search, profiles, ad boosting, and admin desk active) for client inspection.
+3. **20% Final Launch & Handover (₦90,000):** Due upon live production launch, primary custom domain binding, complete administrative credential handover, and full source code repository transfer.
+
+2.4 **Remittance Account Details:**
+* **Bank Name:** Guaranty Trust Bank (GTBank)
+* **Account Name:** Sales Cowboy Marketing Solutions
+* **Account Number:** 3006086291
+
+2.5 **Project Delivery Timeline:** The estimated development timeline is **3 to 4 Weeks (21 – 28 Calendar Days)** from receipt of the Mobilization Deposit.
+
+---
+
+### 3. THIRD-PARTY INFRASTRUCTURE & RUNNING COSTS
+3.1 The Client shall be directly responsible for funding external operational and cloud infrastructure costs required to keep the web application live, estimated at:
+* **Cloud Application & Database Hosting (Railway / DigitalOcean):** ~$10 – $20 / month
+* **Media & Portfolio Image Storage (Cloudflare R2):** $0 – $5 / month (Free tier covers up to 10GB)
+* **Custom Domain Name (.ng / .com.ng / .com):** Annual registration fee (~₦6,000 – ₦18,000/year)
+* **SMS Verification / OTP (Termii - Optional):** Pay-as-you-go (~₦5 per SMS)
+* **Payment Gateway (Paystack):** Standard transaction processing fee deducted per successful ad-boost transaction (1.5% capped at ₦2,000).
+
+---
+
+### 4. COMPLETE INTELLECTUAL PROPERTY (IP) OWNERSHIP
+4.1 **100% Client Ownership:** The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of **full and final contractual settlement (₦450,000)**, all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API integrations, UI designs, and documentation—shall vest completely and exclusively in the Client.
+4.2 **Full Handover & No Encumbrances:** The Developer waives and transfers all claims and title therein to the Client. Upon final settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, and server deployment scripts directly to the Client, free of any ongoing licensing fees, royalties, or developer encumbrances.
+
+---
+
+### 5. ACCEPTANCE TESTING, WARRANTY & 60-DAY TECHNICAL SUPPORT
+5.1 **User Acceptance Testing (UAT):** Upon staging milestone delivery, the Client shall have **five (5) business days** to test all features against the specifications in Section 1 and submit a consolidated punch-list of any reproducible defects.
+5.2 **60-Day Technical Support & Bug-Fix Warranty:** The Developer shall provide **sixty (60) calendar days of post-launch technical support and maintenance** commencing from the live production launch date. This warranty is strictly confined to server monitoring, uptime surveillance, and diagnosing and rectifying any existing software bugs within the agreed scope. This warranty **expressly excludes the creation or engineering of new features**, which shall require a separate written Change Request (CR).
+
+---
+
+### 6. CLIENT RESPONSIBILITIES & REGULATORY COMPLIANCE
+6.1 The Client is solely responsible for:
+* Providing company branding assets (logo, brand colors, contact details);
+* Formulating Platform Terms of Service, Privacy Policies, and Artisan Community Guidelines;
+* Operating legal marketplace compliance, business registration (CAC), and any statutory compliance under Nigerian law;
+* Moderating live user listings and handling direct commercial disputes between customers and independent service providers.
+
+---
+
+### 7. LIMITATION OF LIABILITY & GOVERNING LAW
+7.1 The Developer’s maximum aggregate liability under this Agreement, whether in contract, tort, or otherwise, shall not exceed the total fees actually paid by the Client under this Agreement.
+7.2 This Agreement shall be governed by and construed in accordance with the laws of the **Federal Republic of Nigeria**. Any dispute arising under or in connection with this Agreement not resolved amicably within fourteen (14) days shall be referred to mediation or arbitration in accordance with the Arbitration and Mediation Act, 2023.
+
+---
+
+### IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date written above.
+
+**SIGNED FOR AND ON BEHALF OF THE DEVELOPER:**  
+**SALES COWBOY MARKETING SOLUTIONS**
+
+Signature: ___________________________________________  
+Name: **Clinton Chukwunyere**  
+Designation: Lead Developer / Technical Director  
+Date: November 1, 2026  
+
+---
+
+**SIGNED FOR AND ON BEHALF OF THE CLIENT:**  
+
+Signature: ___________________________________________  
+Company / Entity Name: _______________________________  
+Name: _______________________________________________  
+Designation: ________________________________________  
+Date: _______________________________________________  

@@ -1,0 +1,75 @@
+# TECHNICAL & COMMERCIAL PROPOSAL
+**Project:** Multi-Category Service Provider Classifieds & Lead-Generation Marketplace ("Jiji for Services")  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Signatory:** Clinton Chukwunyere  
+**Date:** November 1, 2026  
+
+---
+
+## 1. EXECUTIVE SUMMARY
+This proposal outlines the design, engineering, and deployment of a high-traffic **Service Provider Classifieds & Directory Marketplace Web Platform** tailored for the Nigerian market. 
+
+Modeled after the intuitive discovery and monetization engine of Jiji—but purpose-built for artisans, skilled tradespeople, technicians, and professional service providers—the platform allows customers to discover verified local experts by State and LGA, inspect their past work portfolios, read verified reviews, and contact them immediately. For the platform owner, it incorporates a built-in **Ad Boosting, Subscription, and Verification Revenue Engine**.
+
+---
+
+## 2. CORE PLATFORM MODULES & FEATURES
+
+### Module 1: High-SEO Public Marketplace & Location Discovery Engine
+* **Granular Nigerian Location Filtering:** Customers can filter service providers across all 36 States, FCT, and 774 Local Government Areas (LGAs) (e.g., *"Solar Installer in Owerri Municipal"*, *"AC Repair in Ikeja"*).
+* **Multi-Level Service Categories:** Unlimited categories and subcategories (Home Maintenance, Construction & Masonry, Auto Mechanics, Beauty & Events, Logistics, IT & Digital Services, Legal/Consulting, etc.).
+* **Programmatic Google SEO Architecture:** Server-Side Rendered (SSR) category and location pages engineered to rank at the top of Google Search organically when Nigerians search for local services.
+* **Smart Search & Filter Bar:** Filter providers by price range (starting rate), verification status ("ID Verified"), rating score, and online availability.
+
+### Module 2: Service Provider Profiles & Portfolio Showcase
+* **Rich Service Listings:** Unlike physical product ads, service listings showcase **Before & After photo/video galleries**, service descriptions, call-out fees / starting rates, working hours, and coverage areas.
+* **Trust & KYC Verification Badges:** Providers can submit their NIN/BVN, CAC business registration, or trade certificates to earn a **"Verified Pro"** badge, significantly increasing customer trust.
+* **Verified Customer Reviews & Ratings:** Two-way rating and review system with photo proof of completed jobs to weed out sub-par artisans.
+
+### Module 3: Instant Lead Generation & Communication Suite
+* **"Reveal Phone Number" & Call Tracking:** Customers click to reveal the provider's phone number. The system logs every call click so providers can see exactly how many customer leads the platform generated for them.
+* **One-Click WhatsApp Integration:** Direct click-to-WhatsApp button with pre-filled inquiry messages (*"Hello, I saw your profile on [Platform Name] and need a quote..."*).
+* **Real-Time In-App Chat & Quote Requests:** Built-in messaging inbox where customers can send pictures of their faulty appliance/project and receive price estimates directly on the platform.
+
+### Module 4: Platform Monetization & Revenue Engine (How You Make Money)
+* **Paid Ad Boosting & Featured Packages (Jiji VIP Model):** Providers can pay to boost their profiles to the top of search results (*VIP Gold, Silver, Featured Homepage Carousel, Urgent Service Tag*).
+* **Recurring Pro Subscriptions:** Monthly/Quarterly subscription tiers giving providers unlimited service listings, priority placement, and "Verified Badge" maintenance.
+* **Automated Payment Gateway:** Seamless checkout via Paystack / Moniepoint (Cards, USSD, and Automated Virtual Bank Accounts for instant wallet funding).
+* **Direct Lead-Gen Focus:** Direct phone contact and instant WhatsApp communication eliminate intermediary escrow overhead in V1 while maximizing transaction velocity.
+
+### Module 5: Administrator & Moderation Control Center
+* **Ad Moderation Queue:** Admin dashboard to review, approve, or reject new service listings and portfolio photos to prevent spam or fraudulent ads.
+* **KYC Verification Desk:** Review submitted ID documents and toggle "Verified" badges.
+* **Category & Pricing Manager:** Create new service categories and customize the pricing/duration of Boosted Ad packages dynamically.
+* **Revenue & Lead Analytics:** Track daily subscription sales, active providers per state, and total customer leads generated.
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & INFRASTRUCTURE
+* **Web Platform & PWA (Mobile + Desktop):** Next.js (Server-Side Rendering for maximum Google SEO), TypeScript, TailwindCSS—installable on Android/iOS home screens as a Progressive Web App (PWA).
+* **Backend & Database:** Node.js + PostgreSQL + Prisma ORM + Redis (for fast search caching and session management).
+* **Media Optimization:** Automatic image compression and WebP conversion on Cloudflare R2 to ensure blazing fast loading on Nigerian mobile networks.
+
+### Estimated Monthly Running Costs (Paid Directly to Cloud Providers)
+* **Cloud Hosting & Database (Railway / DigitalOcean):** $10 – $20 / month
+* **Image & Portfolio Storage (Cloudflare R2):** $0 – $5 / month (Free tier up to 10GB)
+* **SMS / OTP Verification (Termii):** Pay-as-you-go (~₦5 per SMS, optional)
+
+---
+
+## 4. COMMERCIAL INVESTMENT & TIMELINE (WEB APP ONLY)
+
+* **Contract Value:** **₦450,000**
+* **Delivery Timeline:** **3 to 4 Weeks (21 – 28 Calendar Days)**
+
+### Payment Milestone Breakdown:
+1. **50% Mobilization (₦225,000):** Upon contract execution to commence UI/UX design, PostgreSQL database architecture, location/category taxonomy setup, and Sprint 1 development.
+2. **30% Staging & UAT Milestone (₦135,000):** Upon deployment of the functional web app, search filters, provider profiles, and ad boosting to the staging environment for client review and feedback.
+3. **20% Final Launch & Handover (₦90,000):** Upon live production deployment, custom domain connection, admin onboarding, complete source code handover, and commencement of the warranty support period.
+
+---
+
+### Official Remittance Bank Details:
+* **Bank Name:** Guaranty Trust Bank (GTBank)
+* **Account Name:** Sales Cowboy Marketing Solutions
+* **Account Number:** 3006086291

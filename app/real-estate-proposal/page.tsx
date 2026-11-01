@@ -24,7 +24,8 @@ import {
   Server, 
   Coins, 
   ShieldCheck, 
-  ArrowLeft 
+  ArrowLeft,
+  Download 
 } from "lucide-react";
 
 interface ScopeModule {
@@ -47,7 +48,7 @@ interface RealEstateProposalState {
   proposalId: string;
   proposalDate: string;
   
-  // Developer Details (Trade Infrastructure LTD)
+  // Developer Details (Sales Cowboy Marketing Solutions)
   senderName: string;
   senderDesignation: string;
   senderAddress: string;
@@ -84,15 +85,15 @@ interface RealEstateProposalState {
 
 const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
   proposalTitle: "Tri-Platform Real Estate Ecosystem: Mobile App, High-SEO Web Marketplace, ERP & Polygon Blockchain Platform",
-  proposalId: "PROP-2026-TIL-982",
+  proposalId: "PROP-2026-SCM-982",
   proposalDate: "2026-11-01",
   
-  senderName: "Trade Infrastructure LTD",
-  senderDesignation: "Enterprise Systems & Blockchain Engineering",
-  senderAddress: "Owerri, Imo State, Nigeria (Liaison: Red Brick House, Ogombo, Ajah, Lagos)",
-  senderEmail: "proposals@tradeinfra.ng",
+  senderName: "Sales Cowboy Marketing Solutions",
+  senderDesignation: "Enterprise Systems & Software Engineering",
+  senderAddress: "Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria",
+  senderEmail: "hello@salescowboy.com.ng",
   senderPhone: "+234 810 493 3232",
-  senderWebsite: "tradeinfra.ng",
+  senderWebsite: "salescowboy.com.ng",
   
   clientName: "[CLIENT COMPANY LEGAL NAME]",
   clientContact: "Executive Board of Directors & Project Sponsors",
@@ -221,8 +222,8 @@ const DEFAULT_REAL_ESTATE_PROPOSAL: RealEstateProposalState = {
     { label: "Milestone 2: 30% Staging & UAT Milestone (Web Marketplace, Admin Portals, Mobile Beta & Testnet)", percentage: 30, amount: 1050000 },
     { label: "Milestone 3: 20% Final Launch & Handover (Production Railway, Polygon Mainnet & App Stores)", percentage: 20, amount: 700000 }
   ],
-  bankInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387\nCorporate Entity: TRADE INFRASTRUCTURE LTD",
-  notes: "1. Total Project Investment: ₦3,500,000 all-inclusive custom development fee.\n2. Milestone Payments: 50% Mobilization (₦1,750,000) upon contract execution; 30% Staging & UAT (₦1,050,000); 20% Handover & Production Deployment (₦700,000).\n3. Warranty: Includes 45 days post-launch bug-fix warranty and handover documentation.\n4. IP Rights: 100% full code ownership and Polygon smart contract keys transferred upon final milestone settlement."
+  bankInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
+  notes: "1. Total Project Investment: ₦3,500,000 all-inclusive custom development fee.\n2. Milestone Payments: 50% Mobilization (₦1,750,000) upon contract execution; 30% Staging & UAT (₦1,050,000); 20% Handover & Production Deployment (₦700,000).\n3. Bank Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n4. Warranty: Includes 45 days post-launch bug-fix warranty and handover documentation.\n5. IP Rights: 100% full code ownership and smart contract keys transferred upon final milestone settlement."
 };
 
 // UTF-8 Base64 serialization
@@ -315,7 +316,7 @@ function RealEstateProposalContent() {
   };
 
   const resetToDefault = () => {
-    if (confirm("Reset proposal back to default Trade Infrastructure LTD template?")) {
+    if (confirm("Reset proposal back to default Sales Cowboy template?")) {
       setState(DEFAULT_REAL_ESTATE_PROPOSAL);
       router.push(window.location.pathname);
     }
@@ -358,7 +359,7 @@ function RealEstateProposalContent() {
         <div className="flex items-center gap-4">
           <Link href="/" className="hover:opacity-80 transition-opacity flex items-center gap-2">
             <span className="text-lg font-black tracking-wider uppercase text-amber-500 font-mono">
-              TRADE INFRASTRUCTURE
+              SALES COWBOY
             </span>
           </Link>
           <span className="h-5 w-px bg-slate-700 hidden sm:block"></span>
@@ -403,10 +404,11 @@ function RealEstateProposalContent() {
 
           <button
             onClick={handlePrint}
-            className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all"
+            title="Download this proposal as a clean A4 PDF file"
+            className="bg-amber-600 hover:bg-amber-700 text-white font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
           >
-            <Printer className="w-3.5 h-3.5" />
-            Print / PDF
+            <Download className="w-3.5 h-3.5" />
+            <span>Download / Print PDF</span>
           </button>
         </div>
       </header>
@@ -729,7 +731,7 @@ function RealEstateProposalContent() {
                     Official Technical & Commercial Proposal
                   </h4>
                   <p className="text-xs text-slate-500">
-                    Issued by Trade Infrastructure LTD • Tri-Platform Real Estate Ecosystem.
+                    Issued by Sales Cowboy Marketing Solutions • Tri-Platform Real Estate Ecosystem.
                   </p>
                 </div>
               </div>
@@ -762,27 +764,29 @@ function RealEstateProposalContent() {
               <div className="border-b-2 border-slate-900 pb-6 mb-8 flex flex-col sm:flex-row justify-between items-start gap-6">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-12 h-12 rounded-lg bg-slate-900 text-amber-500 flex items-center justify-center font-mono font-black text-xl border-2 border-amber-500/60 shadow-sm">
-                      TI
-                    </div>
+                    <img 
+                      src="/assets/salescowboy-logo.png" 
+                      alt="Sales Cowboy Logo" 
+                      className="h-14 w-auto object-contain block" 
+                    />
                     <div>
-                      <h1 className="text-xl sm:text-2xl font-black tracking-tight uppercase text-slate-900 leading-none">
-                        TRADE INFRASTRUCTURE LTD
+                      <h1 className="text-xl sm:text-2xl font-black tracking-tight uppercase text-slate-900 leading-none font-serif" style={{ fontFamily: "Rye, serif" }}>
+                        SALES COWBOY
                       </h1>
-                      <p className="text-[10px] font-bold text-amber-700 tracking-widest uppercase mt-1 font-mono">
-                        Enterprise Real Estate ERP & Blockchain Infrastructure • RC: 7284910
+                      <p className="text-[10px] font-bold text-[#cca066] tracking-widest uppercase mt-1 font-mono">
+                        Marketing Solutions & Enterprise Software Systems
                       </p>
                     </div>
                   </div>
 
                   <div className="text-[11px] text-slate-500 space-y-0.5 leading-relaxed font-sans">
                     <p className="font-semibold text-slate-700">{state.senderName}</p>
-                    <p className="text-slate-600">{state.senderDesignation}</p>
                     <p className="max-w-[320px]">{state.senderAddress}</p>
                     <p className="flex items-center gap-3 pt-0.5 font-mono text-[10px]">
                       <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-slate-400" /> {state.senderEmail}</span>
                       <span className="flex items-center gap-1"><Phone className="w-3 h-3 text-slate-400" /> {state.senderPhone}</span>
                     </p>
+                    <p className="text-[#7c4a1e] font-medium font-mono text-[10px]">{state.senderWebsite}</p>
                   </div>
                 </div>
 
@@ -978,10 +982,10 @@ function RealEstateProposalContent() {
                     ISSUED FOR AND ON BEHALF OF:
                   </span>
                   <p className="text-xs font-bold text-slate-900 mt-1 uppercase">
-                    TRADE INFRASTRUCTURE LTD
+                    SALES COWBOY MARKETING SOLUTIONS
                   </p>
                   <p className="text-xs text-slate-600">
-                    Clinton Nnamdi Chukwunyere • Managing Director
+                    Clinton Chukwunyere • Sales Cowboy Marketing Solutions
                   </p>
                   <div className="pt-3 font-mono text-slate-400 text-xs">
                     Signature: ________________________

@@ -22,14 +22,15 @@ import {
   Phone,
   MapPin,
   Globe,
-  Award
+  Award,
+  Download
 } from "lucide-react";
 
 interface AgreementState {
   agreementId: string;
   effectiveDate: string;
   
-  // Developer Details (Trade Infrastructure LTD)
+  // Developer Details (Sales Cowboy Marketing Solutions)
   developerName: string;
   developerLegalName: string;
   developerAddress: string;
@@ -75,17 +76,17 @@ interface AgreementState {
 }
 
 const DEFAULT_AGREEMENT_STATE: AgreementState = {
-  agreementId: "SDA-2026-TIL-774",
+  agreementId: "SDA-2026-SCM-774",
   effectiveDate: "2026-11-01",
   
-  developerName: "Trade Infrastructure LTD",
-  developerLegalName: "TRADE INFRASTRUCTURE LTD",
-  developerAddress: "Owerri, Imo State, Nigeria (Liaison: Red Brick House, Ogombo, Ajah, Lagos)",
-  developerEmail: "legal@tradeinfra.ng",
+  developerName: "Sales Cowboy Marketing Solutions",
+  developerLegalName: "SALES COWBOY MARKETING SOLUTIONS",
+  developerAddress: "Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria",
+  developerEmail: "hello@salescowboy.com.ng",
   developerPhone: "+234 810 493 3232",
-  developerWebsite: "tradeinfra.ng",
-  developerSignatoryName: "Clinton Nnamdi Chukwunyere",
-  developerSignatoryTitle: "Managing Director",
+  developerWebsite: "salescowboy.com.ng",
+  developerSignatoryName: "Clinton Chukwunyere",
+  developerSignatoryTitle: "Sales Cowboy Marketing Solutions",
   
   clientCompanyName: "[CLIENT COMPANY LEGAL NAME]",
   clientAddress: "[Client Principal Corporate Address, Nigeria]",
@@ -120,7 +121,7 @@ const DEFAULT_AGREEMENT_STATE: AgreementState = {
   
   governingLawClause: "The Developer's maximum aggregate liability under this Agreement shall not exceed the total fees actually paid by the Client under this Agreement. This Agreement shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria. Any dispute not resolved amicably within fourteen (14) days shall be referred to mediation or arbitration in accordance with the Arbitration and Mediation Act, 2023.",
   
-  bankInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387\nCorporate Entity: TRADE INFRASTRUCTURE LTD"
+  bankInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291"
 };
 
 // UTF-8 Base64 serialization
@@ -213,7 +214,7 @@ function AgreementContent() {
   };
 
   const resetToDefault = () => {
-    if (confirm("Reset agreement back to default Trade Infrastructure LTD template?")) {
+    if (confirm("Reset agreement back to default Sales Cowboy template?")) {
       setState(DEFAULT_AGREEMENT_STATE);
       router.push(window.location.pathname);
     }
@@ -256,7 +257,7 @@ function AgreementContent() {
         <div className="flex items-center gap-4">
           <Link href="/" className="hover:opacity-80 transition-opacity flex items-center gap-2">
             <span className="text-lg font-black tracking-wider uppercase text-amber-500 font-mono">
-              TRADE INFRASTRUCTURE
+              SALES COWBOY
             </span>
           </Link>
           <span className="h-5 w-px bg-slate-700 hidden sm:block"></span>
@@ -294,10 +295,11 @@ function AgreementContent() {
 
           <button
             onClick={handlePrint}
-            className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all"
+            title="Download this agreement as a clean A4 PDF file"
+            className="bg-amber-600 hover:bg-amber-700 text-white font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
           >
-            <Printer className="w-3.5 h-3.5" />
-            Print / PDF
+            <Download className="w-3.5 h-3.5" />
+            <span>Download / Print PDF</span>
           </button>
         </div>
       </header>
@@ -417,7 +419,7 @@ function AgreementContent() {
 
                     <div className="pt-2 border-t border-slate-800">
                       <span className="text-[10px] font-bold text-amber-500 uppercase block mb-1.5 font-mono">
-                        Developer Entity (Trade Infrastructure LTD)
+                        Developer Entity (Sales Cowboy Marketing Solutions)
                       </span>
                       <div className="space-y-2">
                         <div>
@@ -659,7 +661,7 @@ function AgreementContent() {
                     Official Legal Contract Review
                   </h4>
                   <p className="text-xs text-slate-500">
-                    Software Development Agreement executed by Trade Infrastructure LTD.
+                    Software Development Agreement executed by Sales Cowboy Marketing Solutions.
                   </p>
                 </div>
               </div>
@@ -692,16 +694,17 @@ function AgreementContent() {
               <div className="border-b-2 border-slate-900 pb-6 mb-8 flex flex-col sm:flex-row justify-between items-start gap-6">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
-                    {/* Trade Infrastructure Crest / Monogram */}
-                    <div className="w-12 h-12 rounded-lg bg-slate-900 text-amber-500 flex items-center justify-center font-mono font-black text-xl border-2 border-amber-500/60 shadow-sm">
-                      TI
-                    </div>
+                    <img 
+                      src="/assets/salescowboy-logo.png" 
+                      alt="Sales Cowboy Logo" 
+                      className="h-14 w-auto object-contain block" 
+                    />
                     <div>
-                      <h1 className="text-xl sm:text-2xl font-black tracking-tight uppercase text-slate-900 leading-none">
-                        TRADE INFRASTRUCTURE LTD
+                      <h1 className="text-xl sm:text-2xl font-black tracking-tight uppercase text-slate-900 leading-none font-serif" style={{ fontFamily: "Rye, serif" }}>
+                        SALES COWBOY
                       </h1>
-                      <p className="text-[10px] font-bold text-amber-700 tracking-widest uppercase mt-1 font-mono">
-                        Enterprise Engineering & Blockchain Solutions • RC: 7284910
+                      <p className="text-[10px] font-bold text-[#cca066] tracking-widest uppercase mt-1 font-mono">
+                        Marketing Solutions & Enterprise Software Systems
                       </p>
                     </div>
                   </div>
@@ -715,6 +718,7 @@ function AgreementContent() {
                       <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-slate-400" /> {state.developerEmail}</span>
                       <span className="flex items-center gap-1"><Phone className="w-3 h-3 text-slate-400" /> {state.developerPhone}</span>
                     </p>
+                    <p className="text-[#7c4a1e] font-medium font-mono text-[10px]">{state.developerWebsite}</p>
                   </div>
                 </div>
 

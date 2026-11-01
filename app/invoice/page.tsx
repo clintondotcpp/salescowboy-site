@@ -179,8 +179,8 @@ function InvoiceGeneratorContent() {
     discount: 0,
     includeTax: false,
     
-    paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. 50% Mobilization Deposit (₦175,000) to commence development for Food Bank Special Services Ltd. Remaining balance (₦175,000) is structured across progress milestones.\n2. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n3. Notifications: Transactional alerts configured strictly via SMS and Email channels.\n4. Cloud hosting is deployed on Railway at roughly $5 monthly (billed directly to cloud provider).",
+    paymentInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
+    notes: "1. 50% Mobilization Deposit (₦175,000) to commence development for Food Bank Special Services Ltd. Remaining balance (₦175,000) is structured across progress milestones.\n2. Payment Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n3. Notifications: Transactional alerts configured strictly via SMS and Email channels.\n4. Cloud hosting is deployed on Railway at roughly $5 monthly (billed directly to cloud provider).",
   });
 
   // Load from URL query if present
@@ -320,7 +320,7 @@ function InvoiceGeneratorContent() {
       taxRate: 7.5,
       discount: 0,
       includeTax: true,
-      paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
+      paymentInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
       notes: "1. Payment Terms: 50% upfront deposit to begin development, 50% balance due upon project completion and staging delivery.\n2. Cloud & Server Infrastructure: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway at roughly $5 to $10 monthly) unless an inclusive package is selected.\n3. Invoice validity is 30 days from the invoice date.",
     });
     

@@ -25,7 +25,8 @@ import {
   CheckCircle2,
   ListPlus,
   Send,
-  Cloud
+  Cloud,
+  Download
 } from "lucide-react";
 
 // Interfaces
@@ -79,9 +80,9 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
-    name: "Tri-Platform Real Estate Ecosystem - Trade Infrastructure LTD (₦3.5M)",
+    name: "Tri-Platform Real Estate Ecosystem - Sales Cowboy (₦3.5M)",
     title: "Tri-Platform Real Estate Ecosystem: Mobile App (iOS/Android), High-SEO Public Web Marketplace (MLS), ERP & Polygon Blockchain Platform",
-    overview: "To dominate the Nigerian real estate market and bring offline property transactions online, this project is engineered by Trade Infrastructure LTD as a comprehensive three-platform digital ecosystem: (1) An open Zillow-style Public Web Marketplace with Server-Side Rendering (SSR) for organic Google SEO dominance; (2) A native iOS & Android Mobile Application for property buyers, sellers, and investors; and (3) Multi-Role Web Control Portals for moderators, accredited estate surveyors, accountants, and external government audit compliance (SCUML/NFIU, NRS/FIRS, NDPC, SEC Nigeria). Powered by Polygon Mainnet blockchain tokenization (1-to-1 and fractional deeds) with instant fiat and crypto liquidation.",
+    overview: "To dominate the Nigerian real estate market and bring offline property transactions online, this project is engineered by Sales Cowboy Marketing Solutions as a comprehensive three-platform digital ecosystem: (1) An open Zillow-style Public Web Marketplace with Server-Side Rendering (SSR) for organic Google SEO dominance; (2) A native iOS & Android Mobile Application for property buyers, sellers, and investors; and (3) Multi-Role Web Control Portals for moderators, accredited estate surveyors, accountants, and external government audit compliance (SCUML/NFIU, NRS/FIRS, NDPC, SEC Nigeria). Powered by Polygon Mainnet blockchain tokenization (1-to-1 and fractional deeds) with instant fiat and crypto liquidation.",
     modules: [
       {
         id: "1",
@@ -789,8 +790,8 @@ function ProposalContent() {
       { label: "Milestone 2: Customer Savings Dashboard, Progress Tracker & Paystack Virtual Accounts (30%)", percentage: 30 },
       { label: "Milestone 3: Manual POP Queue, 100% Fulfillment Engine, SMS/Email Alerts & Live Launch (20%)", percentage: 20 },
     ],
-    paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
-    notes: "1. Total Project Investment: ₦350,000 fixed price.\n2. Milestone Payment Schedule: 50% Upfront Kickoff Deposit (₦175,000), 30% Member Portal & Payment Rails Milestone (₦105,000), 20% Fulfillment, SMS/Email Alerts & Live Handover (₦70,000).\n3. Notifications Architecture: All transactional communication, payment credits, reminder schedules, and pickup claim passes are powered strictly via high-delivery SMS and Email gateways (no WhatsApp required).\n4. Cloud Infrastructure: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway with managed PostgreSQL at roughly $5 monthly, excluded from development fee).\n5. Payment Details: Globus Bank, Account No: 9976907387, Clinton Nnamdi Chukwunyere.\n6. Delivery Timeline: Exactly 3 to 4 weeks total delivery structured into milestones.",
+    paymentInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
+    notes: "1. Total Project Investment: ₦350,000 fixed price.\n2. Milestone Payment Schedule: 50% Upfront Kickoff Deposit (₦175,000), 30% Member Portal & Payment Rails Milestone (₦105,000), 20% Fulfillment, SMS/Email Alerts & Live Handover (₦70,000).\n3. Notifications Architecture: All transactional communication, payment credits, reminder schedules, and pickup claim passes are powered strictly via high-delivery SMS and Email gateways (no WhatsApp required).\n4. Cloud Infrastructure: Client is responsible for their direct monthly cloud hosting fees (hosted on Railway with managed PostgreSQL at roughly $5 monthly, excluded from development fee).\n5. Payment Details: Guaranty Trust Bank, Account No: 3006086291, Sales Cowboy Marketing Solutions.\n6. Delivery Timeline: Exactly 3 to 4 weeks total delivery structured into milestones.",
   });
 
   // Load state from URL parameters
@@ -1102,7 +1103,7 @@ function ProposalContent() {
         { label: "Milestone 2: Database Setup & Staging Delivery", percentage: 30 },
         { label: "Milestone 3: QA Approvals & Live Handover", percentage: 20 },
       ],
-      paymentInfo: "Bank Name: GLOBUS BANK\nAccount Name: CLINTON NNAMDI CHUKWUNYERE\nAccount Number: 9976907387",
+      paymentInfo: "Bank Name: GUARANTY TRUST BANK\nAccount Name: SALES COWBOY MARKETING SOLUTIONS\nAccount Number: 3006086291",
       notes: "1. Work begins immediately upon receipt of the Milestone 1 upfront deposit (50%).\n2. Infrastructure & Hosting: Client covers direct monthly cloud fees (Railway at roughly $5 to $10 monthly).\n3. Timelines listed above are contingent upon the timely feedback of technical inputs.\n4. Estimated proposal is valid for 30 days.",
     });
     router.replace("/proposal");
@@ -1175,10 +1176,11 @@ function ProposalContent() {
 
           <button
             onClick={handlePrint}
-            className="bg-amber-600 hover:bg-amber-700 text-white font-bold px-4 py-2 rounded-md text-xs flex items-center gap-1.5 transition-all shadow-md"
+            title="Download this proposal as a clean A4 PDF file"
+            className="bg-amber-600 hover:bg-amber-700 text-white font-bold px-4 py-2 rounded-md text-xs flex items-center gap-1.5 transition-all shadow-md cursor-pointer"
           >
-            <Printer className="w-3.5 h-3.5" />
-            Print / PDF
+            <Download className="w-3.5 h-3.5" />
+            <span>Download / Print PDF</span>
           </button>
         </div>
       </header>

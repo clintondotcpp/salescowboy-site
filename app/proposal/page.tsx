@@ -79,6 +79,109 @@ const DEFAULT_SENDER = {
 
 const PRESETS = [
   {
+    name: "Tri-Platform Real Estate Ecosystem - Trade Infrastructure LTD (₦3.5M)",
+    title: "Tri-Platform Real Estate Ecosystem: Mobile App (iOS/Android), High-SEO Public Web Marketplace (MLS), ERP & Polygon Blockchain Platform",
+    overview: "To dominate the Nigerian real estate market and bring offline property transactions online, this project is engineered by Trade Infrastructure LTD as a comprehensive three-platform digital ecosystem: (1) An open Zillow-style Public Web Marketplace with Server-Side Rendering (SSR) for organic Google SEO dominance; (2) A native iOS & Android Mobile Application for property buyers, sellers, and investors; and (3) Multi-Role Web Control Portals for moderators, accredited estate surveyors, accountants, and external government audit compliance (SCUML/NFIU, NRS/FIRS, NDPC, SEC Nigeria). Powered by Polygon Mainnet blockchain tokenization (1-to-1 and fractional deeds) with instant fiat and crypto liquidation.",
+    modules: [
+      {
+        id: "1",
+        title: "Module 1: Property Detail Page, Title Showcase & Ownership History",
+        timeline: "Sprint 1 (Days 1 - 10)",
+        cost: 450000,
+        description: "Dedicated property pages featuring media galleries, map coordinates, structural specs, valuation badges, and transparent title document verification.",
+        deliverables: [
+          "Dedicated Property Detail Pages: Rich media galleries, map coordinates, structural specs, valuation badges, and direct purchase/offer triggers",
+          "Mandatory Title Document Showcase: Every listed property displays verified badges and encrypted previews of the exact title documents it holds (Certificate of Occupancy [C of O], Governor's Consent, Registered Deed of Assignment, Gazette, or Survey Plan)",
+          "Complete Ownership History (Chain of Title): Every property page displays a transparent chronological record of all past and present owners, transaction dates, verified valuations, and Polygon blockchain links"
+        ]
+      },
+      {
+        id: "2",
+        title: "Module 2: Marketplace Moderation Desk & Offline Transaction Catchment",
+        timeline: "Sprint 2 (Days 11 - 18)",
+        cost: 350000,
+        description: "Comprehensive moderation workspace for platform operators to review public submissions and log offline real estate sales into the Nigerian MLS feed.",
+        deliverables: [
+          "Moderator Portal: Dedicated interface for platform moderators to review public submissions, verify offline real estate sales, inspect uploaded title documents, and approve listings before they appear on the public marketplace",
+          "Zillow-Style Nigerian MLS Feed: Dynamic status updates (Listed, Under Offer, Sold, Transferred) logging physical offline sales into the national public transaction registry",
+          "Duplicate & Fraud Filter: Algorithmic checks on survey plan coordinates and title document numbers to prevent fraudulent multi-listing of identical land parcels"
+        ]
+      },
+      {
+        id: "3",
+        title: "Module 3: Accredited Estate Surveyor ('Source of Truth') Portal",
+        timeline: "Sprint 3 (Days 19 - 26)",
+        cost: 400000,
+        description: "Mandatory valuation workflow where licensed company estate surveyors inspect, value, and digitally stamp property prices prior to marketplace certification.",
+        deliverables: [
+          "Mandatory Valuation Gate: The Company Estate Surveyor acts as the official source of truth for property values. Every property must be inspected, valued, and digitally stamped by the Estate Surveyor inside their dedicated portal before its value is certified on the platform",
+          "Digital Valuation Stamping: Cryptographically signed valuation certificates attached to property records with surveyor license verification",
+          "Historical Valuation Logs: Tracking property appreciation over time to compute historical yield curves for investors"
+        ]
+      },
+      {
+        id: "4",
+        title: "Module 4: Automated Title Transfer, Digital Signing & Billing Engine",
+        timeline: "Sprint 4 (Days 27 - 36)",
+        cost: 500000,
+        description: "Dynamic generation of transfer instruments, auto-signature stamping with verified IDs, and automated invoicing.",
+        deliverables: [
+          "Swift Title Transfer & Auto-Signature: When a customer purchases a property or document, the system dynamically generates the transfer instrument, automatically appends the Buyer's legal name, verified ID, and digital signatures onto the title documents, and immediately updates ownership across the platform and the buyer's dashboard",
+          "Auto-Generated Invoices & Receipts: Instant automated generation of branded PDF Invoices, Official Payment Receipts, Tax Withholding Slips, and Closing Statements for every transaction",
+          "Multi-Rail Payment Rails: Integration with Paystack / Moniepoint for card checkout, bank transfers, and dedicated virtual bank accounts"
+        ]
+      },
+      {
+        id: "5",
+        title: "Module 5: Polygon Blockchain Tokenization & Instant Liquidation",
+        timeline: "Sprint 5 (Days 37 - 48)",
+        cost: 550000,
+        description: "Smart contracts on Polygon Mainnet supporting 1-to-1 deed tokenization and fractional ownership with fiat and crypto liquidation.",
+        deliverables: [
+          "Built on Polygon Mainnet: Supports both 1-to-1 Tokenization (single digital title deed for whole properties) and Fractional Tokenization (shared ownership units) on the Polygon blockchain for near-zero gas fees and 2-second finality",
+          "Swift Crypto & Fiat Liquidation: Purchased properties appear immediately in the buyer's dashboard. Users can quickly sell, liquidate, and transfer properties on the blockchain using Fiat (NGN) or Crypto (USDT/USDC)",
+          "Embedded Web3 Wallets: Non-custodial or semi-custodial wallet onboarding via email or social login (Privy/Dynamic) without requiring users to handle seed phrases manually"
+        ]
+      },
+      {
+        id: "6",
+        title: "Module 6: Integrated Financial Accounting Module",
+        timeline: "Sprint 6 (Days 49 - 58)",
+        cost: 450000,
+        description: "Automated double-entry accounting ledger managing property acquisitions, escrow balances, broker commissions, and statutory tax deductions.",
+        deliverables: [
+          "Double-Entry Accounting Ledger: Tracks every financial movement across the platform—property purchases, escrow holdings, commissions, contractor disbursements, facility management fees, VAT (7.5%), and Withholding Tax (10%)",
+          "Financial Reporting: Real-time revenue tracking, trial balances, reconciliation logs, and exportable financial statements for corporate auditors",
+          "Broker Commission Splits: Automated calculation and disbursement of agent commissions upon successful closing verification"
+        ]
+      },
+      {
+        id: "7",
+        title: "Module 7: Immutable Audit Logging & External Government Compliance",
+        timeline: "Sprint 7 (Days 59 - 68)",
+        cost: 400000,
+        description: "Permanent audit logging of every system action and exportable compliance modules for statutory regulatory agencies.",
+        deliverables: [
+          "100% Action & ID Logging: Every single action, User ID, login, KYC verification, moderator approval, surveyor valuation, document signature, and accounting entry is permanently logged with Timestamp and IP Address",
+          "Regulatory Compliance Readiness: Built-in audit trails and export engines engineered for seamless inspection by external government agencies, including SCUML/NFIU (AML/KYC logs), NRS/FIRS (Tax ledgers), NDPC (Data protection), and SEC Nigeria",
+          "Tamper-Evident SHA-256 Checksums: Cryptographic sealing of audit entries ensuring historical integrity cannot be retroactively altered"
+        ]
+      },
+      {
+        id: "8",
+        title: "Module 8: End-to-End Asset Lifecycle (Acquisition, Construction & Facility Management)",
+        timeline: "Sprint 8 (Days 69 - 80)",
+        cost: 400000,
+        description: "Full ERP tracking covering land due diligence, construction bill-of-quantities milestones, and tenant facility operations.",
+        deliverables: [
+          "Complete ERP Workflow: Tracks properties from initial Land Acquisition and due diligence through Construction milestone tracking to post-build Facility & Tenant Management",
+          "Construction Milestone Progress: Contractor work log uploader, inspection photos, and milestone disbursement release gates",
+          "Facility & Tenancy Desk: Service charge payment tracking, maintenance ticket logging, and automated rent renewal reminders"
+        ]
+      }
+    ]
+  },
+  {
     name: "Target Savings & Layaway Platform - Food Bank Special Services Ltd (₦350k)",
     title: "Target Savings & Layaway E-Commerce Platform — Food Bank Special Services Ltd",
     overview: "This technical proposal details the end-to-end design, custom software engineering, payment infrastructure, and cloud deployment of an Automated Target Savings & Layaway E-Commerce Portal for Food Bank Special Services Ltd. Built to digitize traditional Nigerian commodity thrift and installment purchase schemes, the platform allows customers to select curated foodstuff bundles (e.g., 50kg rice, cooking oil, tomatoes) and consumer electronics (e.g., deep freezers, smart TVs, washing machines, generators), lock in structured daily, weekly, or monthly contribution plans, track cumulative balances in real time, and trigger warehouse dispatch or depot pickup passes upon 100% target completion. The system incorporates automated multi-rail payment gateways (Paystack/Moniepoint), dedicated dynamic virtual bank accounts, manual bank receipt verification desks, administrative inventory controls, and automated transactional SMS and Email notifications.",

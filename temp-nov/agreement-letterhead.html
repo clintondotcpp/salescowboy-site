@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Development Agreement — Trade Infrastructure LTD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #b45309;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #0b0f19;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #d97706;
+      color: #ffffff;
+    }
+    .btn-primary:hover { background: #b45309; }
+
+    .btn-secondary {
+      background: #334155;
+      color: #f1f5f9;
+      border: 1px solid #475569;
+    }
+    .btn-secondary:hover { background: #475569; }
+
+    /* A4 Paper Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 52px 64px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* Corporate Letterhead */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+
+    .brand-left {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .crest {
+      width: 52px;
+      height: 52px;
+      background: var(--primary);
+      color: #f59e0b;
+      border: 2px solid #f59e0b;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .brand-info h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-info .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #b45309;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+    }
+
+    .brand-contact {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .doc-meta {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: right;
+    }
+
+    .doc-meta .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .doc-meta .val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    /* Document Title */
+    .agreement-title {
+      text-align: center;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .agreement-badge {
+      display: inline-block;
+      background: #0f172a;
+      color: #f59e0b;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .agreement-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+
+    .agreement-title .sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* Preamble Box */
+    .preamble {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 18px 22px;
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 28px;
+    }
+
+    .preamble p {
+      margin-bottom: 10px;
+    }
+
+    .preamble p:last-child {
+      margin-bottom: 0;
+    }
+
+    .parties-clause {
+      padding-left: 16px;
+      border-left: 3px solid #d97706;
+      margin: 12px 0;
+    }
+
+    /* Legal Articles */
+    .article {
+      margin-bottom: 22px;
+    }
+
+    .article-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .article-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #d97706;
+      border-radius: 50%;
+    }
+
+    .article-body {
+      font-size: 11.5px;
+      color: #334155;
+      line-height: 1.7;
+      text-align: justify;
+      padding-left: 14px;
+    }
+
+    .article-body p {
+      margin-bottom: 8px;
+    }
+
+    .article-body ul {
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    .article-body li {
+      margin-bottom: 4px;
+    }
+
+    /* Table */
+    .milestone-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin: 12px 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .milestone-table th {
+      background: #f1f5f9;
+      padding: 8px 12px;
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: #475569;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .milestone-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+    }
+
+    .milestone-table .tar {
+      text-align: right;
+    }
+
+    /* Execution & Signatures */
+    .execution {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 2px solid var(--primary);
+    }
+
+    .witness-stmt {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      color: #0f172a;
+      margin-bottom: 24px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .signatures-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .sig-box {
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 190px;
+    }
+
+    .sig-box .party-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .sig-box .party-name {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+
+    .sig-lines {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 12px;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .sig-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .sig-row .val {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .remittance-footer {
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #64748b;
+    }
+
+    /* Page Breaks */
+    .page-break {
+      page-break-before: always;
+      margin-top: 30px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 18mm 14mm 18mm 14mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>⚖️ <strong>Trade Infrastructure LTD</strong> — Official Software Development Agreement</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      <a href="/agreement" class="btn btn-secondary" target="_blank">Interactive Editor ↗</a>
+      <a href="/real-estate-proposal" class="btn btn-secondary" target="_blank">Schedule A Proposal ↗</a>
+    </div>
+  </div>
+
+  <!-- A4 Document Sheet -->
+  <div class="sheet">
+    
+    <!-- Letterhead -->
+    <div class="letterhead">
+      <div class="brand-left">
+        <div class="crest">TI</div>
+        <div class="brand-info">
+          <h1>Trade Infrastructure LTD</h1>
+          <div class="tagline">Enterprise Real Estate ERP & Blockchain Infrastructure • RC: 7284910</div>
+          <div class="brand-contact">
+            Principal Office: Owerri, Imo State, Nigeria (Liaison: Red Brick House, Ogombo, Ajah, Lagos)<br>
+            Legal & Contracts: legal@tradeinfra.ng • Tel: +234 810 493 3232 • Web: tradeinfra.ng
+          </div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <span class="label">Agreement Ref ID</span>
+        <div class="val">SDA-2026-TIL-774</div>
+        <span class="label">Execution Date</span>
+        <div class="val" style="margin-bottom: 0;">November 1, 2026</div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="agreement-title">
+      <span class="agreement-badge">Legally Binding Master Services Agreement</span>
+      <h2>SOFTWARE DEVELOPMENT AGREEMENT</h2>
+      <div class="sub">Tri-Platform Real Estate Ecosystem (iOS/Android App, Public Web Marketplace & Polygon Blockchain)</div>
+    </div>
+
+    <!-- Preamble & Recitals -->
+    <div class="preamble">
+      <p>
+        <strong>THIS SOFTWARE DEVELOPMENT AGREEMENT</strong> (the <em>"Agreement"</em>) is made and entered into on this <strong>1st day of November, 2026</strong> (the <em>"Effective Date"</em>),
+      </p>
+      <p><strong>BETWEEN:</strong></p>
+      <div class="parties-clause">
+        <p>
+          1. <strong>[CLIENT COMPANY LEGAL NAME]</strong>, a company incorporated under the laws of the Federal Republic of Nigeria, having its registered office at <em>[Client Address]</em> (hereinafter referred to as the <strong>"Client"</strong>, which expression shall where the context so admits include its successors-in-title and permitted assigns) of the first part;
+        </p>
+        <p><strong>AND</strong></p>
+        <p>
+          2. <strong>TRADE INFRASTRUCTURE LTD</strong>, a company incorporated under the laws of the Federal Republic of Nigeria, having its principal place of business at <em>Owerri, Imo State, Nigeria</em> (hereinafter referred to as the <strong>"Developer"</strong>, which expression shall where the context so admits include its successors-in-title and permitted assigns) of the second part.
+        </p>
+      </div>
+      <p>
+        <strong>WHEREAS:</strong> The Client desires to retain the Developer to design, engineer, and deploy a three-platform real estate ecosystem, and the Developer possesses the specialized technical expertise to perform such engineering services upon the terms set forth herein.
+      </p>
+    </div>
+
+    <!-- Articles -->
+    <div class="articles">
+      
+      <!-- Article 1 -->
+      <div class="article">
+        <div class="article-title">1. Scope of Work & Deliverables</div>
+        <div class="article-body">
+          <p>
+            1.1 The Client hereby engages the Developer to design, develop, test, and deploy the <strong>Three-Platform Real Estate Ecosystem</strong>—comprising the <strong>iOS/Android Mobile Application</strong>, the <strong>Public SEO Web Marketplace (MLS)</strong>, the <strong>Multi-Role Administrative/Surveyor/Accounting/Audit Web Portals</strong>, and <strong>Polygon Blockchain Integration</strong> (collectively, the <em>"Platform"</em>)—in accordance with <strong>Schedule A (Technical & Commercial Proposal)</strong> attached hereto.
+          </p>
+          <p>
+            1.2 Any major new feature requested after the execution of this Agreement that falls outside the scope of Schedule A shall be governed by a formal written <strong>Change Request (CR)</strong> with mutually agreed budget and schedule revisions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="article">
+        <div class="article-title">2. Total Development Investment & Payment Schedule</div>
+        <div class="article-body">
+          <p>
+            2.1 The total all-inclusive development fee for the Platform is <strong>Three Million, Five Hundred Thousand Naira Only (₦3,500,000)</strong>.
+          </p>
+          <p>2.2 The Client shall remit payment across three contractual milestone stages:</p>
+          
+          <table class="milestone-table">
+            <thead>
+              <tr>
+                <th>Milestone Stage</th>
+                <th>Deliverables Verification Trigger</th>
+                <th class="tar">Allocation</th>
+                <th class="tar">Amount (NGN)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Stage 1: Mobilization Deposit</strong></td>
+                <td>Due upon execution of this Agreement to commence system architecture, UI/UX, database setup, and sprint development.</td>
+                <td class="tar" style="color: #b45309; font-weight: 700;">50%</td>
+                <td class="tar" style="font-weight: 800;">₦1,750,000</td>
+              </tr>
+              <tr>
+                <td><strong>Stage 2: Staging & UAT Beta</strong></td>
+                <td>Due upon deployment of functional beta builds (Web Marketplace, Portals, Mobile beta, and Polygon Testnet) to staging for User Acceptance Testing.</td>
+                <td class="tar" style="color: #b45309; font-weight: 700;">30%</td>
+                <td class="tar" style="font-weight: 800;">₦1,050,000</td>
+              </tr>
+              <tr>
+                <td><strong>Stage 3: Production Handover</strong></td>
+                <td>Due upon completion of UAT, live Railway cloud deployment, and Polygon Mainnet launch, prior to the final transfer of master administrative credentials and source repositories.</td>
+                <td class="tar" style="color: #b45309; font-weight: 700;">20%</td>
+                <td class="tar" style="font-weight: 800;">₦700,000</td>
+              </tr>
+              <tr style="background: #f8fafc; font-weight: 800;">
+                <td colspan="3" style="text-align: right; text-transform: uppercase; font-size: 10px; color: #475569;">Total Contract Value:</td>
+                <td class="tar" style="font-size: 13px; color: #0f172a;">₦3,500,000</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            2.3 Project delivery timelines (8–12 weeks) are contingent upon timely client feedback and milestone settlements. Invoices unpaid seven (7) business days past their due date shall entitle the Developer to pause active development until settled.
+          </p>
+        </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- Article 3 -->
+      <div class="article">
+        <div class="article-title">3. App Running Fees & Third-Party Infrastructure</div>
+        <div class="article-body">
+          <p>
+            3.1 The Client is solely responsible for funding recurring third-party infrastructure and operational expenses as itemized in Schedule A, including Railway cloud hosting ($10–$20/mo), domain registration, Polygon Mainnet gas sponsorship wallets (POL tokens), KYC/identity verification API credits (Prembly/Smile ID), and Apple ($99/yr) / Google ($25) developer accounts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="article">
+        <div class="article-title">4. Intellectual Property Rights & Ownership Vesting</div>
+        <div class="article-body">
+          <p>
+            4.1 Upon receipt of <strong>full and final payment (₦3,500,000)</strong>, all right, title, and interest in the custom source code, Polygon smart contracts, UI/UX designs, and database schemas created specifically for the Client shall vest exclusively in the Client.
+          </p>
+          <p>
+            4.2 The Developer retains ownership of its pre-existing reusable libraries and internal architectural templates, granting the Client a perpetual, royalty-free, irrevocable license to use them within the Platform.
+          </p>
+        </div>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="article">
+        <div class="article-title">5. Regulatory, Accounting & Blockchain Disclaimers</div>
+        <div class="article-body">
+          <p>
+            5.1 <strong>Audit Logs & Statutory Licensing:</strong> The Developer shall engineer the Platform with double-entry financial accounting ledgers, automated invoice/receipt engines, and immutable system-wide audit logs (recording every action and User ID) to support inspections by external government agencies (SCUML/NFIU, NRS/FIRS, NDPC, and SEC Nigeria). However, <strong>the Client remains solely responsible for obtaining and maintaining all statutory corporate licenses, tax filings, and regulatory approvals.</strong>
+          </p>
+          <p>
+            5.2 <strong>Automated Title Signatures & Surveyor Valuations:</strong> The Platform automates digital signature placement on title document templates and records property valuations submitted by the Client's Estate Surveyors. The Client is solely responsible for the legal validity of underlying property titles, physical land registry filings, and the accuracy of surveyor valuations.
+          </p>
+          <p>
+            5.3 <strong>Search Engine Optimization (SEO):</strong> The Developer warrants that the Public Web Marketplace shall be engineered with technical SEO best practices (Server-Side Rendering, dynamic sitemaps, and Schema.org real estate metadata). Exact ranking positions on Google depend on ongoing content and market activity and are not guaranteed as fixed positions.
+          </p>
+          <p>
+            5.4 <strong>Polygon Blockchain Operations:</strong> Transactions confirmed on the Polygon Mainnet are irreversible. The Developer shall not be liable for losses resulting from compromised administrative private keys under the Client's custody.
+          </p>
+        </div>
+      </div>
+
+      <!-- Article 6 -->
+      <div class="article">
+        <div class="article-title">6. Acceptance Testing & 45-Day Bug-Fix Warranty</div>
+        <div class="article-body">
+          <p>
+            6.1 Upon milestone delivery, the Client shall have <strong>seven (7) business days</strong> to inspect the deliverables and report any reproducible software bugs deviating from Schedule A.
+          </p>
+          <p>
+            6.2 The Developer provides a <strong>Forty-Five (45) Day Bug-Fix Warranty</strong> following production launch to resolve any reproducible defects within the agreed scope at no additional cost.
+          </p>
+        </div>
+      </div>
+
+      <!-- Article 7 -->
+      <div class="article">
+        <div class="article-title">7. Limitation of Liability & Governing Law</div>
+        <div class="article-body">
+          <p>
+            7.1 The Developer’s maximum aggregate liability under this Agreement shall not exceed the total fees actually paid by the Client under this Agreement.
+          </p>
+          <p>
+            7.2 This Agreement shall be governed by and construed in accordance with the laws of the <strong>Federal Republic of Nigeria</strong>. Any dispute not resolved amicably within fourteen (14) days shall be referred to mediation or arbitration in accordance with the Arbitration and Mediation Act, 2023.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Execution Blocks -->
+    <div class="execution">
+      <div class="witness-stmt">
+        IN WITNESS WHEREOF, the Parties hereto have caused this Software Development Agreement to be executed by their duly authorized representatives on the Effective Date.
+      </div>
+
+      <div class="signatures-grid">
+        <!-- Client Box -->
+        <div class="sig-box">
+          <div>
+            <div class="party-label">SIGNED FOR AND ON BEHALF OF:</div>
+            <div class="party-name">[CLIENT COMPANY LEGAL NAME]</div>
+          </div>
+          <div class="sig-lines">
+            <div class="sig-row">
+              <span style="color: #64748b;">Name:</span>
+              <span class="val">Authorized Director / CEO</span>
+            </div>
+            <div class="sig-row">
+              <span style="color: #64748b;">Designation:</span>
+              <span class="val">Executive Director</span>
+            </div>
+            <div class="sig-row" style="margin-top: 8px;">
+              <span style="color: #64748b;">Signature & Date:</span>
+              <span style="font-family: 'JetBrains Mono', monospace; color: #94a3b8;">________________________</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer Box -->
+        <div class="sig-box">
+          <div>
+            <div class="party-label" style="color: #b45309;">SIGNED FOR AND ON BEHALF OF:</div>
+            <div class="party-name">TRADE INFRASTRUCTURE LTD</div>
+          </div>
+          <div class="sig-lines">
+            <div class="sig-row">
+              <span style="color: #64748b;">Name:</span>
+              <span class="val">Clinton Nnamdi Chukwunyere</span>
+            </div>
+            <div class="sig-row">
+              <span style="color: #64748b;">Designation:</span>
+              <span class="val">Managing Director</span>
+            </div>
+            <div class="sig-row" style="margin-top: 8px;">
+              <span style="color: #64748b;">Signature & Date:</span>
+              <span style="font-family: 'JetBrains Mono', monospace; color: #94a3b8;">________________________</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="remittance-footer">
+        <div>Remittance: Globus Bank • Account No: 9976907387 • Clinton Nnamdi Chukwunyere • Ref: SDA-TIL-774</div>
+        <div>Page 2 of 2 • Certified Legal Instrument</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

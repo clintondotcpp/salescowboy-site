@@ -1,0 +1,60 @@
+# SOFTWARE DEVELOPMENT AGREEMENT
+
+**THIS SOFTWARE DEVELOPMENT AGREEMENT** (the "Agreement") is made and entered into on this **1st day of November, 2026** ("Effective Date"),
+
+**BETWEEN:**
+
+1. **[CLIENT COMPANY LEGAL NAME]**, a company incorporated under the laws of the Federal Republic of Nigeria, having its registered office at [Client Address] (hereinafter referred to as the **"Client"**, which expression shall where the context so admits include its successors-in-title and assigns) of the first part;
+
+**AND**
+
+2. **TRADE INFRASTRUCTURE LTD**, a company incorporated under the laws of the Federal Republic of Nigeria, having its principal place of business at Owerri, Imo State, Nigeria (hereinafter referred to as the **"Developer"**, which expression shall where the context so admits include its successors-in-title and assigns) of the second part.
+
+---
+
+### 1. SCOPE OF WORK
+1.1 The Client hereby engages the Developer to design, develop, test, and deploy the **Three-Platform Real Estate Ecosystem**—comprising the **iOS/Android Mobile Application**, the **Public SEO Web Marketplace (MLS)**, the **Multi-Role Administrative/Surveyor/Accounting/Audit Web Portals**, and **Polygon Blockchain Integration** (collectively, the "Platform")—in accordance with **Schedule A (Technical & Commercial Proposal)** attached hereto.
+1.2 Any major new feature requested after the execution of this Agreement that falls outside the scope of Schedule A shall be governed by a formal written **Change Request (CR)**.
+
+### 2. TOTAL DEVELOPMENT INVESTMENT & PAYMENT SCHEDULE
+2.1 The total all-inclusive development fee for the Platform is **Three Million, Five Hundred Thousand Naira Only (₦3,500,000)**.
+2.2 The Client shall remit payment across three milestones:
+   * **Fifty Percent (50% / ₦1,750,000)** non-refundable mobilization fee upon execution of this Agreement;
+   * **Thirty Percent (30% / ₦1,050,000)** upon deployment of the functional beta builds (Web Marketplace, Web Portals, Mobile App beta, and Polygon Testnet Smart Contracts) to the staging server for User Acceptance Testing (UAT);
+   * **Twenty Percent (20% / ₦700,000)** upon completion of UAT, production deployment to the live Railway server and Polygon Mainnet, and prior to the transfer of master administrative credentials and source code repositories.
+2.3 Project delivery timelines (8–12 weeks) are contingent upon timely client feedback and milestone settlements. Invoices unpaid seven (7) business days past their due date shall entitle the Developer to pause active development until settled.
+
+### 3. APP RUNNING FEES & THIRD-PARTY INFRASTRUCTURE
+3.1 The Client is solely responsible for funding recurring third-party infrastructure and operational expenses as itemized in Schedule A, including Railway cloud hosting ($10–$20/mo), domain registration, Polygon Mainnet gas sponsorship wallets (POL tokens), KYC verification API credits, and Apple ($99/yr) / Google ($25) developer accounts.
+
+### 4. INTELLECTUAL PROPERTY RIGHTS
+4.1 Upon receipt of **full and final payment (₦3,500,000)**, all right, title, and interest in the custom source code, Polygon smart contracts, UI/UX designs, and database schemas created specifically for the Client shall vest exclusively in the Client.
+4.2 The Developer retains ownership of its pre-existing reusable libraries and internal architectural templates, granting the Client a perpetual, royalty-free, irrevocable license to use them within the Platform.
+
+### 5. REGULATORY, ACCOUNTING & BLOCKCHAIN DISCLAIMERS
+5.1 **Audit Logs & Statutory Licensing:** The Developer shall engineer the Platform with double-entry financial accounting ledgers, automated invoice/receipt engines, and immutable system-wide audit logs (recording every action and User ID) to support inspections by external government agencies (SCUML/NFIU, NRS/FIRS, NDPC, and SEC Nigeria). However, **the Client remains solely responsible for obtaining and maintaining all statutory corporate licenses, tax filings, and regulatory approvals.**
+5.2 **Automated Title Signatures & Surveyor Valuations:** The Platform automates digital signature placement on title document templates and records property valuations submitted by the Client's Estate Surveyors. The Client is solely responsible for the legal validity of underlying property titles, physical land registry filings, and the accuracy of surveyor valuations.
+5.3 **Search Engine Optimization (SEO):** The Developer warrants that the Public Web Marketplace shall be engineered with technical SEO best practices (Server-Side Rendering, dynamic sitemaps, and Schema.org real estate metadata). Exact ranking positions on Google depend on ongoing content and market activity and are not guaranteed as fixed positions.
+5.4 **Polygon Blockchain Operations:** Transactions confirmed on the Polygon Mainnet are irreversible. The Developer shall not be liable for losses resulting from compromised administrative private keys under the Client's custody.
+
+### 6. ACCEPTANCE TESTING & WARRANTY
+6.1 Upon milestone delivery, the Client shall have **seven (7) business days** to inspect the deliverables and report any reproducible software bugs deviating from Schedule A.
+6.2 The Developer provides a **Forty-Five (45) Day Bug-Fix Warranty** following production launch to resolve any reproducible defects within the agreed scope at no additional cost.
+
+### 7. LIMITATION OF LIABILITY & GOVERNING LAW
+7.1 The Developer’s maximum aggregate liability under this Agreement shall not exceed the total fees actually paid by the Client under this Agreement.
+7.2 This Agreement shall be governed by the laws of the **Federal Republic of Nigeria**. Any dispute not resolved amicably within fourteen (14) days shall be referred to mediation or arbitration in accordance with the Arbitration and Mediation Act, 2023.
+
+---
+
+**IN WITNESS WHEREOF**, the Parties have executed this Agreement on the Effective Date.
+
+**SIGNED FOR AND ON BEHALF OF THE CLIENT:**  
+Name: ____________________________________  
+Designation: _____________________________  
+Signature & Date: ________________________  
+
+**SIGNED FOR AND ON BEHALF OF TRADE INFRASTRUCTURE LTD:**  
+Name: Clinton Nnamdi Chukwunyere  
+Designation: Managing Director  
+Signature & Date: ________________________

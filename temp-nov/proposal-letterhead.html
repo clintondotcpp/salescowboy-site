@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical & Commercial Proposal — Trade Infrastructure LTD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #b45309;
+      --accent-light: #fef3c7;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0b0f19;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #d97706;
+      color: #ffffff;
+    }
+    .btn-primary:hover { background: #b45309; }
+
+    .btn-secondary {
+      background: #334155;
+      color: #f1f5f9;
+      border: 1px solid #475569;
+    }
+    .btn-secondary:hover { background: #475569; }
+
+    /* A4 Paper Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 48px 56px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* Corporate Letterhead */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+
+    .brand-left {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .crest {
+      width: 52px;
+      height: 52px;
+      background: var(--primary);
+      color: #f59e0b;
+      border: 2px solid #f59e0b;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .brand-info h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-info .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #b45309;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+    }
+
+    .brand-contact {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .doc-meta {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: right;
+    }
+
+    .doc-meta .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .doc-meta .val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    /* Client Banner */
+    .client-banner {
+      background: #fdf8f6;
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .client-title {
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .client-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .client-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .cost-badge {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cost-badge .label {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .cost-badge .amount {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .prose {
+      font-size: 11.5px;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.65;
+    }
+
+    .prose p {
+      margin-bottom: 8px;
+    }
+
+    .prose ul {
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    .prose li {
+      margin-bottom: 4px;
+    }
+
+    /* Modules List */
+    .module-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .module-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+    }
+
+    .module-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .module-badges {
+      display: flex;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .badge-timeline {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .badge-cost {
+      background: #f1f5f9;
+      color: #1e293b;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .module-desc {
+      font-size: 11.5px;
+      color: #475569;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .deliv-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .deliv-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      font-size: 11px;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .deliv-list li {
+      margin-bottom: 3px;
+    }
+
+    /* Tables */
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin: 12px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .cost-table th {
+      background: #f1f5f9;
+      padding: 10px 14px;
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      color: #475569;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cost-table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+    }
+
+    .cost-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cost-table .tar {
+      text-align: right;
+    }
+
+    .table-note {
+      font-size: 10.5px;
+      color: #92400e;
+      background: #fef3c7;
+      padding: 10px 14px;
+      border-radius: 6px;
+      line-height: 1.5;
+    }
+
+    /* Milestone Cards */
+    .milestones-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 12px 0;
+    }
+
+    .ms-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .ms-header {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .ms-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .ms-amount {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    /* Bank info box */
+    .bank-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #334155;
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+
+    /* Execution sign-off */
+    .signoff {
+      border-top: 2px solid var(--primary);
+      padding-top: 24px;
+      margin-top: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .sig-block {
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .sig-block .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .sig-block .company {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .sig-line {
+      margin-top: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #94a3b8;
+    }
+
+    /* Page Breaks */
+    .page-break {
+      page-break-before: always;
+      margin-top: 30px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 18mm 14mm 18mm 14mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>🏛️ <strong>Trade Infrastructure LTD</strong> — Official Corporate Proposal</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      <a href="/real-estate-proposal" class="btn btn-secondary" target="_blank">Interactive Editor ↗</a>
+      <a href="/agreement" class="btn btn-secondary" target="_blank">Legal Agreement ↗</a>
+    </div>
+  </div>
+
+  <!-- A4 Document Sheet -->
+  <div class="sheet">
+    
+    <!-- Letterhead -->
+    <div class="letterhead">
+      <div class="brand-left">
+        <div class="crest">TI</div>
+        <div class="brand-info">
+          <h1>Trade Infrastructure LTD</h1>
+          <div class="tagline">Enterprise Real Estate ERP & Blockchain Infrastructure • RC: 7284910</div>
+          <div class="brand-contact">
+            Owerri, Imo State, Nigeria (Liaison: Red Brick House, Ogombo, Ajah, Lagos)<br>
+            Email: legal@tradeinfra.ng • Tel: +234 810 493 3232 • Web: tradeinfra.ng
+          </div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <span class="label">Proposal Reference</span>
+        <div class="val">PROP-2026-TIL-982</div>
+        <span class="label">Date of Issuance</span>
+        <div class="val" style="margin-bottom: 0;">November 1, 2026</div>
+      </div>
+    </div>
+
+    <!-- Client Banner -->
+    <div class="client-banner">
+      <div>
+        <div class="client-title">Proposal Prepared Exclusively For:</div>
+        <div class="client-name">[CLIENT COMPANY LEGAL NAME]</div>
+        <div class="client-sub">Attn: Executive Board of Directors & Project Sponsors • Lagos / Abuja, Nigeria</div>
+      </div>
+      <div class="cost-badge">
+        <div class="label">Total Project Investment</div>
+        <div class="amount">₦3,500,000</div>
+      </div>
+    </div>
+
+    <!-- 1. Executive Summary -->
+    <div class="section">
+      <div class="section-title">1. Executive Summary & The 3-Platform Ecosystem</div>
+      <div class="prose">
+        <p>To dominate the Nigerian real estate market and bring offline property transactions online, this project is engineered as a comprehensive <strong>three-platform digital ecosystem</strong> rather than a standalone mobile app:</p>
+        <p><strong>1. The Public Web Marketplace & Google SEO Engine:</strong> A Zillow-style open property marketplace built with Server-Side Rendering (SSR) specifically to rank on Google Search, capture organic buyer traffic across Nigeria for free, and track real-time property transactions (MLS).</p>
+        <p><strong>2. The Native Mobile Application (iOS & Android):</strong> A dedicated transactional and portfolio management app for property buyers, investors, sellers, tenants, and field personnel.</p>
+        <p><strong>3. The Multi-Role Web Control Portals:</strong> Dedicated web dashboards for Marketplace Moderators, Accredited Estate Surveyors, Corporate Accountants, System Administrators, and External Government Auditors.</p>
+      </div>
+    </div>
+
+    <!-- 2. SEO Advantage -->
+    <div class="section">
+      <div class="section-title">2. The Web Marketplace & Organic SEO Advantage</div>
+      <div class="prose">
+        <p>Mobile apps sit behind App Store walls and cannot be indexed by Google Search. By building a dedicated <strong>Public Web Marketplace</strong>, the platform becomes an organic customer acquisition engine:</p>
+        <ul>
+          <li><strong>Open Free-to-List Marketplace:</strong> Any property owner, developer, or realtor in Nigeria can post properties for free, rapidly building a massive nationwide inventory.</li>
+          <li><strong>Programmatic Location & Property SEO:</strong> Every approved listing and neighborhood automatically generates Google-optimized web pages with Schema.org real estate metadata (e.g., <em>"Verified Land with C of O in Lekki"</em>, <em>"Properties for Sale in Abuja"</em>). This drives continuous, free search traffic without relying purely on paid advertising.</li>
+          <li><strong>Zillow-Style "Nigerian MLS" Live Transaction Feed:</strong> Captures both online and offline real estate closings. Moderators and realtors update transaction statuses in real time (<em>Listed, Under Offer, Sold, Transferred</em>), creating Nigeria's definitive source of truth for real estate activity.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 3. Comprehensive Module Breakdown -->
+    <div class="section">
+      <div class="section-title">3. Comprehensive Module Breakdown & Technical Deliverables</div>
+
+      <!-- Module 1 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 1: Property Detail Page, Title Showcase & Ownership History</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 1 (Days 1 - 10)</span>
+            <span class="badge-cost">₦450,000</span>
+          </div>
+        </div>
+        <div class="module-desc">Dedicated property pages featuring media galleries, map coordinates, structural specs, valuation badges, and transparent title document verification.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>Dedicated Property Detail Pages:</strong> Rich media galleries, map coordinates, structural specs, valuation badges, and direct purchase/offer triggers.</li>
+          <li><strong>Mandatory Title Document Showcase:</strong> Every listed property displays verified badges and encrypted previews of the exact title documents it holds (<em>Certificate of Occupancy [C of O], Governor’s Consent, Registered Deed of Assignment, Gazette, or Survey Plan</em>).</li>
+          <li><strong>Complete Ownership History (Chain of Title):</strong> Every property page displays a transparent chronological record of all past and present owners, transaction dates, verified valuations, and Polygon blockchain links.</li>
+        </ul>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 2: Marketplace Moderation Desk & Nigerian MLS Feed</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 2 (Days 11 - 18)</span>
+            <span class="badge-cost">₦350,000</span>
+          </div>
+        </div>
+        <div class="module-desc">Moderator interface to review public submissions, verify offline real estate sales, inspect uploaded title documents, and approve listings before they appear on the public marketplace.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>Moderator Verification Queue:</strong> Back-office console to approve or decline property submissions with audit notes and title verification checks.</li>
+          <li><strong>Zillow-Style MLS Logging:</strong> Enables operators to log physical offline land/home sales into the digital MLS transaction ledger.</li>
+          <li><strong>Anti-Fraud Verification:</strong> Survey plan coordinate matching to flag and reject duplicate plot listings.</li>
+        </ul>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 3: Accredited Estate Surveyor ("Source of Truth") Portal</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 3 (Days 19 - 26)</span>
+            <span class="badge-cost">₦400,000</span>
+          </div>
+        </div>
+        <div class="module-desc">The Company Estate Surveyor acts as the official source of truth for property values. Every property must be inspected, valued, and digitally stamped by the Estate Surveyor inside their dedicated portal before its value is certified on the platform.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>Mandatory Valuation Gate:</strong> Properties cannot be certified or tokenized without active surveyor sign-off.</li>
+          <li><strong>Digital Valuation Stamp:</strong> Cryptographically generated valuation certificates attached to public property dossiers.</li>
+        </ul>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 4: Automated Title Transfer, Digital Signing & Billing Engine</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 4 (Days 27 - 36)</span>
+            <span class="badge-cost">₦500,000</span>
+          </div>
+        </div>
+        <div class="module-desc">Automated legal document generation, digital signature stamping with verified IDs, and instant multi-channel payment reconciliation.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>Swift Title Transfer & Auto-Signature:</strong> System dynamically generates the transfer instrument, automatically appends the Buyer’s legal name, verified ID, and digital signatures onto the title documents, and immediately updates ownership across the platform and the buyer’s dashboard.</li>
+          <li><strong>Auto-Generated Invoices & Receipts:</strong> Instant automated generation of branded PDF Invoices, Official Payment Receipts, Tax Withholding Slips, and Closing Statements for every transaction.</li>
+        </ul>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 5: Polygon Blockchain Tokenization & Instant Liquidation</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 5 (Days 37 - 48)</span>
+            <span class="badge-cost">₦550,000</span>
+          </div>
+        </div>
+        <div class="module-desc">Smart contracts on Polygon Mainnet supporting 1-to-1 digital deeds and fractional real estate tokenization with fiat/crypto liquidation.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>Built on Polygon Mainnet:</strong> Supports both 1-to-1 Tokenization (single deed) and Fractional Tokenization (shared units) on Polygon for near-zero gas fees and 2-second finality.</li>
+          <li><strong>Swift Crypto & Fiat Liquidation:</strong> Users can quickly sell, liquidate, and transfer properties on the blockchain using Fiat (NGN) or Crypto (USDT/USDC).</li>
+          <li><strong>Embedded Web3 Wallets:</strong> Seamless non-custodial onboarding via Privy/Dynamic without seed phrase hurdles.</li>
+        </ul>
+      </div>
+
+      <!-- Module 6 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 6: Integrated Financial Accounting Module</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 6 (Days 49 - 58)</span>
+            <span class="badge-cost">₦450,000</span>
+          </div>
+        </div>
+        <div class="module-desc">Automated double-entry accounting ledger managing property acquisitions, escrow balances, broker commissions, and statutory tax deductions.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>Double-Entry Accounting Ledger:</strong> Tracks property purchases, escrow holdings, commissions, contractor disbursements, facility fees, VAT (7.5%), and WHT (10%).</li>
+          <li><strong>Financial Reporting:</strong> Real-time revenue tracking, trial balances, reconciliation logs, and exportable financial statements.</li>
+        </ul>
+      </div>
+
+      <!-- Module 7 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 7: Immutable Audit Logging & External Government Compliance</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 7 (Days 59 - 68)</span>
+            <span class="badge-cost">₦400,000</span>
+          </div>
+        </div>
+        <div class="module-desc">Permanent audit logging of every system action and exportable compliance modules for statutory regulatory agencies.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>100% Action & ID Logging:</strong> Every action, User ID, login, KYC verification, moderator approval, surveyor valuation, and document signature is permanently logged with Timestamp and IP.</li>
+          <li><strong>Regulatory Compliance Readiness:</strong> Built-in audit trails and export engines engineered for seamless inspection by external government agencies, including SCUML/NFIU, NRS/FIRS, NDPC, and SEC Nigeria.</li>
+        </ul>
+      </div>
+
+      <!-- Module 8 -->
+      <div class="module-card">
+        <div class="module-header">
+          <div class="module-name">Module 8: End-to-End Asset Lifecycle (Acquisition, Construction & Facility Management)</div>
+          <div class="module-badges">
+            <span class="badge-timeline">Sprint 8 (Days 69 - 80)</span>
+            <span class="badge-cost">₦400,000</span>
+          </div>
+        </div>
+        <div class="module-desc">Full ERP tracking covering land due diligence, construction bill-of-quantities milestones, and tenant facility operations.</div>
+        <span class="deliv-title">Core Deliverables:</span>
+        <ul class="deliv-list">
+          <li><strong>Complete ERP Workflow:</strong> Tracks properties from Land Acquisition and due diligence through Construction milestone tracking to post-build Facility & Tenant Management.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 4. Infrastructure Costs Table -->
+    <div class="section">
+      <div class="section-title">4. Estimated Monthly App Running & Infrastructure Costs</div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px; font-style: italic;">
+        (Note: Paid directly by the Client to infrastructure providers; no markup added by Developer)
+      </p>
+
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Infrastructure / Service Component</th>
+            <th>Service Provider</th>
+            <th class="tar">Estimated Monthly Running Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cloud Server, PostgreSQL DB & Redis</strong></td>
+            <td>Railway.app</td>
+            <td class="tar"><strong>$10 – $20 / month</strong> <span style="color:#64748b;">(Starts on $10/mo tier)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Title Document & Media Vault</strong></td>
+            <td>Cloudflare R2 + IPFS (Pinata)</td>
+            <td class="tar"><strong>$0 – $15 / month</strong> <span style="color:#64748b;">(Free tier up to 10GB)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Polygon Blockchain RPC Node</strong></td>
+            <td>Alchemy</td>
+            <td class="tar"><strong>$0 / month</strong> <span style="color:#64748b;">(Free Tier covers 300M compute units)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Polygon Gas Fees (Paymaster Wallet)</strong></td>
+            <td>Polygon Network (POL)</td>
+            <td class="tar"><strong>$10 – $25 / month</strong> <span style="color:#64748b;">(~$0.005 per transaction)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Embedded Web3 Wallets</strong></td>
+            <td>Privy / Dynamic</td>
+            <td class="tar"><strong>$0 / month</strong> <span style="color:#64748b;">(Free up to initial 1,000 active users)</span></td>
+          </tr>
+          <tr>
+            <td><strong>KYC / BVN / NIN Verification</strong></td>
+            <td>Prembly / Smile ID</td>
+            <td class="tar"><strong>Pay-as-you-go</strong> <span style="color:#64748b;">(~₦150 – ₦350 per check)</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="table-note">
+        <strong>Total Estimated Monthly Running Cost: ~$20 – $60 / month.</strong><br>
+        *One-Time / Annual App Store Registration Fees: Google Play Console ($25 one-time), Apple Developer Account ($99/year).
+      </div>
+    </div>
+
+    <!-- 5. Total Project Investment & Timeline -->
+    <div class="section">
+      <div class="section-title">5. Total Project Investment & Milestone Payment Schedule</div>
+      
+      <div class="prose" style="margin-bottom: 12px;">
+        <p>Covering the full design, engineering, smart contract deployment, and launch of all three platforms (<strong>iOS/Android Mobile App + Public SEO Web Marketplace + Multi-Role Admin/Surveyor/Accounting Web Portals</strong>) across all eight core modules:</p>
+      </div>
+
+      <div class="milestones-grid">
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 1</span>
+            <span>50%</span>
+          </div>
+          <div class="ms-title">Mobilization Deposit (Architecture, DB Setup & Initial Sprints)</div>
+          <div class="ms-amount">₦1,750,000</div>
+        </div>
+
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 2</span>
+            <span>30%</span>
+          </div>
+          <div class="ms-title">Staging & UAT (Web Marketplace, Admin Portals, Mobile Beta & Testnet)</div>
+          <div class="ms-amount">₦1,050,000</div>
+        </div>
+
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 3</span>
+            <span>20%</span>
+          </div>
+          <div class="ms-title">Final Launch & Handover (Railway Cloud, Polygon Mainnet & App Stores)</div>
+          <div class="ms-amount">₦700,000</div>
+        </div>
+      </div>
+
+      <div class="bank-box">
+        <strong>Official Remittance Bank Details:</strong><br>
+        Bank Name: GLOBUS BANK • Account Name: CLINTON NNAMDI CHUKWUNYERE<br>
+        Account Number: <strong>9976907387</strong> • Corporate Entity: TRADE INFRASTRUCTURE LTD
+      </div>
+    </div>
+
+    <!-- Formal Signoff -->
+    <div class="signoff">
+      <div class="sig-block">
+        <div class="label">ISSUED FOR AND ON BEHALF OF:</div>
+        <div class="company">TRADE INFRASTRUCTURE LTD</div>
+        <div>Clinton Nnamdi Chukwunyere • Managing Director</div>
+        <div class="sig-line">Signature: __________________________________</div>
+      </div>
+      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted);">
+        <div>Master Architecture Proposal • Ref: PROP-2026-TIL-982</div>
+        <div>Certified Corporate Document • Page 1 of 3</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

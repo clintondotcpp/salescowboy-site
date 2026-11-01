@@ -993,6 +993,20 @@ function RealEstateProposalContent() {
                     ))}
                   </div>
 
+                  <div className="border border-slate-200 bg-slate-50 p-4 rounded-lg space-y-2 text-xs">
+                    <span className="text-[10px] font-bold text-slate-900 uppercase font-mono tracking-wider block">
+                      Contractual Guarantees & Intellectual Property Terms
+                    </span>
+                    <ul className="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed text-[11px]">
+                      <li>
+                        <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦3,500,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, frontend/backend architectures, database schemas, and Polygon blockchain smart contracts vests exclusively in the Client, with full handover of master Git repositories and deployer private keys.
+                      </li>
+                      <li>
+                        <strong className="text-slate-900">12-Month Technical Support & Maintenance:</strong> Includes 12 months of post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
+                      </li>
+                    </ul>
+                  </div>
+
                   <div className="border border-slate-200 bg-slate-50 p-4 rounded-lg space-y-1 text-xs">
                     <span className="text-[10px] font-bold text-slate-500 uppercase font-mono block">
                       Remittance Information

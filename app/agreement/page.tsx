@@ -624,7 +624,7 @@ function AgreementContent() {
                       />
                     </div>
                     <div>
-                      <label className="text-[10px] font-semibold text-slate-400 block mb-0.5">Article 6: Testing & Bug-Fix Warranty</label>
+                      <label className="text-[10px] font-semibold text-slate-400 block mb-0.5">Article 6: Acceptance Testing, Warranty & 12-Month Support</label>
                       <textarea
                         rows={3}
                         value={state.warrantyClause}
@@ -879,7 +879,7 @@ function AgreementContent() {
                 <div className="space-y-1.5">
                   <h3 className="font-bold text-slate-950 uppercase tracking-wide text-xs flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
-                    6. Acceptance Testing & 45-Day Bug-Fix Warranty
+                    6. Acceptance Testing, Warranty & 12-Month Technical Support
                   </h3>
                   <div className="pl-3.5 space-y-1 text-slate-700 leading-relaxed text-justify whitespace-pre-line">
                     <p>{state.warrantyClause}</p>

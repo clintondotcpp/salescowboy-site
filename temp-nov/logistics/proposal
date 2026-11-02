@@ -1,106 +1,97 @@
 # TECHNICAL & COMMERCIAL PROPOSAL
-**Project:** Unified Logistics, Haulage Transaction Management & Fleet Equipment Ecosystem (Android, iOS & Web)  
+**Project:** Unified Logistics, Bank-Factored Haulage Transaction Engine, Consultant Licensing & Fleet Equipment Ecosystem  
 **Prepared By:** Sales Cowboy Marketing Solutions (Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos | hello@salescowboy.com.ng | +234 810 493 3232)  
-**Prepared For (Recipient):** ____________________________________________________  
-**Attention / Representation:** ____________________________________________________  
+**Prepared For (Client):** AMS Haulage and Logistics  
+**Attention / Representation:** Mr. Lawrence (CEO / Managing Director)  
 **Date:** November 2, 2026  
 
 ---
 
-## 1. EXECUTIVE SUMMARY & THE 4-TIER LOGISTICS ECOSYSTEM
-To modernize commercial haulage in Nigeria, eliminate cargo diversion risks, and unlock high-velocity freight commerce, this project is engineered as an interconnected **four-tier digital ecosystem** rather than a fragmented mobile app:
+## 1. EXECUTIVE SUMMARY & MULTI-TIER LOGISTICS ECOSYSTEM
+To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, and structure protected broker/consultant networks, this project is engineered as an enterprise-grade **multi-tier digital ecosystem** purpose-built for **AMS Haulage and Logistics**:
 
-1. **The Native Mobile Applications (iOS & Android):** Dedicated mobile apps published on the Google Play Store and Apple App Store for Truckers, Fleet Owners, and Field Drivers, featuring live GPS checkpoint logging, trip milestone updates, offline gate-pass scanning, and digital waybill capture.
-2. **The Contractor & Freight Broker Deal Desks (Web & Mobile):** Web and mobile portals empowering Cargo Owners (Contractors) to broadcast freight tenders, and Freight Brokers (Middlemen) to lock in protected brokerage commissions without the risk of direct client-trucker bypassing.
-3. **The Public Web Portal & Heavy Equipment Marketplace:** A high-traffic, SEO-optimized web storefront engineered to rank organically on Google Search for truck rentals, crane/excavator charters, genuine spare parts sales, and nationwide freight quotes.
-4. **The Master Operations, Escrow & Accounting Control Center:** An enterprise-grade administration hub providing real-time visibility over active highway corridors, automated 3-way split escrow payouts, demurrage claims, and statutory tax reporting.
-
----
-
-## 2. THE PUBLIC WEB MARKETPLACE & ORGANIC SEO ADVANTAGE
-While native mobile apps serve drivers on the highway, commercial cargo owners and heavy-equipment buyers discover services via web search. Building a dedicated **Public Web Marketplace** transforms the platform into an organic customer acquisition engine:
-
-* **Nationwide Haulage & Equipment Discovery:** Shippers, construction firms, and logistics coordinators across Nigeria can request freight quotes and browse verified equipment without needing an initial app install.
-* **Programmatic Route & Cargo SEO Engine:** Every freight corridor and equipment category automatically generates Google-optimized landing pages with Schema.org logistics metadata (e.g., *"40ft Flatbed Truck Haulage from Apapa Port to Kano"*, *"Caterpillar Excavator Lease in Port Harcourt"*, *"Heavy-Duty Truck Tyres in Lagos"*). This captures high-intent B2B search volume organically without continuous ad spend.
-* **Verified Freight Rate Directory & Capacity Feed:** A transparent freight index showing standard route rates across key Nigerian economic corridors (Lagos–Ibadan, Apapa–Onitsha, PH–Aba, Abuja–Kaduna), establishing the platform as the definitive authority in Nigerian commercial freight.
+1. **The Contractor & Freight Dispatch Hub (Web & Mobile):** Enables verified cargo owners (Contractors) to post structured freight manifests with live capacity countdown decrementing logic and automated 24-hour Expression of Interest (EOI) expiration timers.
+2. **The Transporter Fleet Vault & Gate-In Countdown Engine (Mobile & Web):** Comprehensive transporter vehicle profiling with mandatory truck video verification proofs, and a strict **48-Hour Depletion Clock** that revokes job allocations if trucks fail to gate-in at loading depots on time.
+3. **The Bank & Institutional Financing (Factoring) Desk:** A secure financial underwriting portal where accredited banks review verified loading and offloading waybills directly to disburse milestone freight financing and execute automated 3-way split deductions.
+4. **The Consultant Onboarding & Quota Desk:** A closed-loop referral and licensing engine where authorized freight consultants pay an onboarding fee, operate under dynamic client quota caps, and earn automated commission splits on every completed trip, equipment lease, and automobile sale.
+5. **The Heavy Equipment Leasing Engine:** A full 14-step industrial machinery charter workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection video archives, lease agreements, and caution deposit escrow.
+6. **The Automobile & Heavy-Duty Spare Parts Marketplace:** A dedicated B2B e-commerce catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement.
 
 ---
 
-## 3. COMPREHENSIVE MODULE BREAKDOWN
+## 2. DETAILED MODULE BREAKDOWN
 
-### Module 1: 3-Role Haulage Transaction, Dispatch & Bypassing-Protection Desk
-* **Contractor (Cargo Owner) Portal:** Post freight manifests specifying cargo type, container specs (e.g., 20ft/40ft Flatbed, Box Truck, Tipper, Tanker), tonnage, cargo valuation, loading bay coordinates, destination, and budget. Track load status in real-time from loading bay to delivery.
-* **Middleman (Freight Broker) Deal Desk:** Freight brokers accept contractor requests, assign verified truckers from their proprietary fleets, and automatically lock in their **Brokerage Markup / Commission**. The system enforces data isolation so that Contractors and Truckers cannot communicate offline or bypass the Broker's commission cut.
-* **Trucker & Fleet Owner Interface:** Drivers receive trip tenders matching their vehicle specs, review route manifests, upload mandatory transit compliance credentials (hackney permits, Goods-in-Transit [GIT] insurance, roadworthiness certificates), and trigger timestamped trip milestones (*At Loading Bay, Cargo Loaded, In Transit, Border Checkpoint, Arrived at Destination, Offloaded*).
+### Module 1: Consultant Onboarding & Quota Desk
+* **Paid Consultant Licensing:** Consultants pay a mandatory activation fee via Paystack/Moniepoint to unlock their profile, generate branded invitation assets, and access their real-time referral ledger.
+* **Closed-Loop Referral Engine:** Contractors and Transporters can register **only** via an authorized Consultant’s unique cryptographic invitation link or referral code.
+* **Account Cap Enforcement:** Dynamic admin-configured quotas limiting how many active Contractors and Transporters a single consultant can manage concurrently, preserving network quality.
+* **Automated Commission Engine:** Automatically routes the consultant’s contractual split on every completed trip, equipment lease, and automobile sale directly into their dedicated in-app wallet.
 
-### Module 2: Milestone Haulage Escrow, Mobilization Fuel Advance & 3-Way Split Wallet
-* **Milestone Trip Funding (Nigerian Haulage Standard):** Accommodates standard Nigerian haulage cashflow:
-  1. **60%–70% Mobilization / Diesel Advance:** Released automatically upon physical loading verification, truck weighbridge slip capture, and signed loading waybill upload.
-  2. **30%–40% Delivery Balance:** Locked in secure platform escrow and released upon verified offloading and signed electronic Proof of Delivery (e-POD).
-* **Automated 3-Way Split Settlement Engine:** Once the trip is certified complete, the platform settlement engine splits the escrow balance simultaneously between:
-  - The **Trucker’s Wallet** (net haulage fee);
-  - The **Middleman’s Commission Wallet** (brokerage margin); and
-  - The **Platform Service Fee** (royalty percentage).
-* **Instant Commercial Bank Disbursements:** Integrates automated NIP bank transfers via Paystack/Moniepoint, allowing drivers and fleet owners to withdraw funds directly into any Nigerian commercial bank account (NUBAN) 24/7.
+### Module 2: Contractor & Job Dispatch Hub
+* **Structured Haulage Manifests:** Post cargo briefs detailing consignment type, geofenced loading/offloading coordinates, vehicle configuration (20ft/40ft Flatbed, Box Truck, Tipper, Tanker), tonnage, trip rate, and mandatory Goods-in-Transit (GIT) insurance requirements.
+* **Capacity Decrementing Logic:** As transporters commit trucks to an open job, remaining capacity counts down in real time (e.g., *Job requires 20 flatbeds $\rightarrow$ Transporter A commits 5 $\rightarrow$ 15 remaining*).
+* **24-Hour EOI Timer:** Transporter expressions of interest (EOIs) automatically expire and release truck holds if not formally approved by the contractor within 24 hours.
 
-### Module 3: Digital Waybill & Electronic Proof of Delivery (e-POD)
-* **Mobile Waybill & Gate-Pass Capture:** Drivers photograph stamped paper waybills, tally sheets, and customs gate-passes directly within the mobile app.
-* **Tamper-Evident e-POD Verification:** Incorporates GPS geolocation tagging and upload timestamps on all delivery documents to eliminate forged waybill disputes.
-* **Consignee Digital Sign-Off:** Receiving warehouse managers can sign directly on the driver’s glass or confirm delivery via an automated one-time SMS/WhatsApp delivery authorization PIN.
+### Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock
+* **Fleet Asset Onboarding:** Comprehensive vehicle profile logging plate numbers, truck walk-around video proof uploads, driver commercial licenses, phone contacts, proofs of ownership, and verified bank accounts (NUBAN).
+* **The 48-Hour Depletion Clock:** Once a transporter’s offer is accepted, a 48-hour countdown triggers. If the truck fails to arrive and verify gate-in at the loading depot within 48 hours, the job allocation automatically revokes and reopens to the public network.
+* **Dual-Stage Waybill Verification:**
+  * *Stage 1 (Loading Waybill):* Transporter uploads stamped loading manifest and weighbridge receipt $\rightarrow$ triggers contractor/bank verification and immediate loading advance payout.
+  * *Stage 2 (Proof of Offloading / e-POD):* Transporter uploads stamped receiver waybill $\rightarrow$ triggers final settlement release to transporter, platform escrow, and consultant wallet.
 
-### Module 4: Logistics Equipment, Spare Parts & Heavy Vehicle Leasing Portal
-* **Commercial Spare Parts Storefront:** Categorized e-commerce storefront for selling verified heavy-duty truck components (tyres, batteries, brake shoes, diesel engine blocks, axles, hydraulic jacks, tarpaulins) with multi-vendor vendor merchant dashboards.
-* **Heavy Equipment Leasing Engine:** Booking and reservation portal for leasing trucks, low-beds, mobile cranes, forklifts, and earth-moving excavators on daily, weekly, or monthly charters. Includes automated lease agreement generation, caution deposit escrow, and maintenance schedules.
-* **Vendor & Dealer Management:** Verified spare-part distributors and fleet leasing operators manage stock levels, pricing, and orders from their dedicated vendor portal.
+### Module 4: Bank & Institutional Financing (Factoring) Desk
+* **Contractor-to-Bank Invitation:** Contractors invite accredited financial institutions to underwrite and finance their freight pipeline.
+* **5-Day Expiry State Machine:** Bank financing invitations auto-expire after 5 working days, with a system-enforced limit of one resend.
+* **Financier Credit & Disbursement Desk:** Accredited banks inspect verified loading and offload waybill documents directly to authorize milestone disbursements.
+* **Automated 3-Way Split Deductions:** On settlement, the financing disbursement dynamically calculates and splits into:
+  1. **Transporter Payment** (Loading Advance + Final Balance)
+  2. **Platform Service Charge** (Platform Escrow)
+  3. **Consultant Commission** (Consultant Wallet)
 
-### Module 5: GPS Checkpoint Tracking, Route Monitoring & Driver Verification
-* **Corridor Route Tracking:** Background GPS location telemetry pings active truck positions along highway corridors, rendering live interactive map tracking for Contractors and Middlemen.
-* **KYC & Driver Background Screening:** Comprehensive identity verification (NIN, BVN, FRSC Commercial Driver’s License) and vehicle chassis validation to safeguard cargo and prevent transit diversion.
-* **Automated Transit Notifications:** Automated SMS and WhatsApp status alerts triggered at major highway milestones and upon arrival at delivery gates.
+### Module 5: Heavy Equipment Leasing Engine
+* **Full Industrial Workflow Replication:** Full replication of the 14-step haulage workflow tailored for industrial machinery (cranes, excavators, forklifts, lowbeds, barges).
+* **Inspection Video Vault:** Transporters and fleet owners upload mandatory 360-degree equipment inspection videos verifying operational condition before charter commencement.
+* **Lease Agreements & Escrow:** Automated generation of legally binding equipment lease contracts, caution deposit escrow holding, and scheduled maintenance sign-offs.
 
-### Module 6: Enterprise Financial Accounting, Demurrage & Statutory Tax Ledger
-* **Haulage Double-Entry Accounting Ledger:** Specialized chart of accounts covering Escrow Liabilities, Fuel Advances, Retainage, Driver Payouts, Brokerage Margins, and Platform Royalty Revenues.
-* **Demurrage & Detention Calculation Engine:** Automated computation of demurrage fees for delayed loading or offloading beyond agreed free grace hours (e.g., port holding bay delays or warehouse offloading queues).
-* **Statutory Tax Compliance (VAT & WHT):** Automated calculation of 7.5% VAT on platform and brokerage fees, plus 5% Withholding Tax (WHT) deductions with exportable FIRS/NRS-compliant tax deduction credit schedules.
-* **Automated Invoicing & Audit Trails:** Dynamic generation of branded PDF freight contracts, waybill manifests, commercial spare parts invoices, equipment lease agreements, and payment advice slips.
-
-### Module 7: Master Operations Center & Dispute Resolution Desk
-* **Operations Command Dashboard:** High-level administrative bird’s-eye view monitoring all active transit corridors, pending escrow disbursements, verified driver queues, and equipment lease expiries.
-* **Dispute & Shortage Claims Desk:** Structured arbitration workflow for handling cargo transit damage, missing goods, or transit delays before releasing contested escrow funds.
-* **100% Immutable System Audit Logs:** Every system action, user login, waybill approval, fund release, and status alteration is permanently recorded with user ID, GPS coordinates, and timestamp.
+### Module 6: Automobile & Heavy-Duty E-Commerce Marketplace
+* **Classified Vehicle & Parts Catalog:** Dedicated marketplace catalog for prime movers, flatbeds, tippers, and genuine heavy-duty spare parts (engines, axles, tyres, hydraulics).
+* **Inspection-Based Escrow Settlement:** Platform holds buyer funds in escrow until physical delivery inspection is formally signed off, deducting the platform commission and consultant referral split before releasing merchant proceeds.
 
 ---
 
-## 4. ESTIMATED MONTHLY APP RUNNING & INFRASTRUCTURE COSTS
-*(Note: Paid directly by the Client to infrastructure providers; no markup added)*
+## 3. ESTIMATED MONTHLY RUNNING & INFRASTRUCTURE COSTS
+*(Paid directly by the Client to infrastructure providers; no agency markup added)*
 
 | Infrastructure / Service Component | Provider | Estimated Monthly Running Cost |
 | :--- | :--- | :--- |
-| **Cloud Server, API Engine & PostgreSQL DB** | Railway.app | **$5 – $10 / month** *(Starts on $5 Starter plan)* |
-| **Waybill, Document & Media Vault** | Railway Storage Bucket / Volume | **$0 / month** *(Included with Railway, no external cost)* |
-| **SMS / OTP & WhatsApp Alerts** | Termii | **Pay-as-you-go** *(~₦5 per SMS alert)* |
-| **Live Geolocation & Map Tiles** | Mapbox / OpenStreetMap | **$0 / month** *(Free tier covers up to 50,000 map loads)* |
-| **Driver Identity Verification (NIN/Driver's License)** | Prembly / Smile ID | **Pay-as-you-go** *(~₦150 – ₦300 per driver verification)* |
-| **Payment Gateway (Card / Virtual Accounts)** | Paystack / Moniepoint | **1.5% processing fee capped at ₦2,000 per transaction** |
-| **Total Estimated Monthly Running Cost** | | **~$5 – $10 / month** |
+| **Backend API, Background Workers & Redis Queues** | Railway.app | **$20 – $35 / month** *(Handles cron countdown timers & queues)* |
+| **High-Volume Video Proof & Document Storage** | Cloudflare R2 | **$5 – $20 / month** *(Zero egress fees for truck inspection videos)* |
+| **PostgreSQL Database** | Railway / Supabase | **$10 – $25 / month** *(High-concurrency transactional ledger)* |
+| **Automated SMS & OTP Dispatch** | Termii | **Pay-as-you-go** *(~₦5 per notification)* |
+| **Payment Gateway & Automated Split Disbursements** | Paystack / Moniepoint | **1.5% capped at ₦2,000 per transaction** |
+| **Total Estimated Monthly Infrastructure** | | **~$35 – $80 / month** |
 
 *One-Time / Annual App Store Registration Fees: Google Play Console ($25 one-time), Apple Developer Program ($99/year).*
 
 ---
 
-## 5. TOTAL PROJECT INVESTMENT & TIMELINE
+## 4. COMMERCIAL INVESTMENT & 8–10 WEEKS TIMELINE
 
-Covering the full design, engineering, mobile app compilation, and launch of all four platform tiers (**Android Mobile App + iOS Mobile App + Public SEO Web Portal & Equipment Marketplace + Master Admin Operations Center**) across all seven core modules:
+Due to the integration of the **Bank Factoring Portal**, **Consultant Licensing Network**, **Equipment Leasing Engine**, and **State-Machine Countdown Timers**, this platform delivers four distinct web portals and mobile operational interfaces:
 
-* **Total All-Inclusive Development Investment:** **₦2,000,000**
-* **Estimated Delivery Timeline:** **6 to 8 Weeks (45 – 60 Calendar Days)**
+* **Total All-Inclusive Development Investment:** **₦3,500,000 (Three Million, Five Hundred Thousand Naira)**
+* **Target Delivery Timeline:** **8 to 10 Weeks (56 – 70 Calendar Days)**
 
 ### Milestone Payment Schedule:
-1. **50% Mobilization Deposit (₦1,000,000):** Due upon contract execution to commence system architecture, UI/UX mobile and web interface design, database schema modeling, and core transaction API development.
-2. **30% Staging & UAT Milestone (₦600,000):** Due upon deployment of the Public Web Portal, Master Admin Desk, and functional Mobile App test builds (Android APK and iOS TestFlight) for live client testing, trip simulation, and punch-list feedback.
-3. **20% Final Launch & Handover (₦400,000):** Due upon live production server deployment, custom domain binding, Google Play Store and Apple App Store submissions, full administrative credential handover, and commencement of technical support.
-4. **12-Month Technical Support & Maintenance:** Includes twelve (12) months of ongoing post-launch technical support strictly confined to server monitoring, uptime surveillance, and bug fixes for existing features within the agreed scope (excludes adding new features).
-5. **100% IP & Source Code Ownership:** Full custom source code repositories, database schemas, mobile app keys, and administrative master credentials vest exclusively in the Client upon final settlement.
+1. **50% Mobilization Deposit (₦1,750,000):** Architecture, database schema design, consultant licensing engine, geofencing logic, and UI/UX design across all portals (Weeks 1 – 4).
+2. **30% Staging & UAT Milestone (₦1,050,000):** Deployment of the haulage dispatch flow, 48h/24h/5d state-machine timers, bank financing verification desk, equipment leasing engine, and staging tests for client review (Weeks 5 – 7).
+3. **20% Production Handover (₦700,000):** Live production deployment, domain routing, payment gateway activation, Google Play/App Store submissions, complete source code repository handover, and administrator onboarding (Weeks 8 – 10).
+
+---
+
+### Contractual Guarantees & Ownership Terms:
+* **100% Complete Client IP Ownership:** Upon receipt of final contractual settlement (₦3,500,000), 100% complete, unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials vests exclusively in **AMS Haulage and Logistics**, free of any developer retention or ongoing royalties.
+* **12-Month Technical Support & Maintenance:** Includes twelve (12) months of post-launch technical support strictly dedicated to server monitoring, uptime surveillance, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
 
 ---
 
@@ -113,14 +104,15 @@ Covering the full design, engineering, mobile app compilation, and launch of all
 
 **ISSUED FOR AND ON BEHALF OF SALES COWBOY MARKETING SOLUTIONS:**  
 **Clinton Chukwunyere**  
-Sales Cowboy Marketing Solutions  
+Lead Developer / Technical Director  
 Signature: ________________________  
 Date: November 2, 2026  
 
 ---
 
 **ACCEPTED AND CONFIRMED (CLIENT):**  
-Company Name: ____________________________________  
-Authorized Representative: _______________________  
+Company Name: **AMS Haulage and Logistics**  
+Authorized Representative: **Mr. Lawrence**  
+Designation: **CEO / Managing Director**  
 Signature: ________________________  
 Date: ________________________  

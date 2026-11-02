@@ -1,0 +1,107 @@
+# SOFTWARE DEVELOPMENT AGREEMENT
+
+**THIS SOFTWARE DEVELOPMENT AGREEMENT** (the "Agreement") is made and entered into on this **2nd day of November, 2026** ("Effective Date"),
+
+**BETWEEN:**
+
+1. **AMS HAULAGE AND LOGISTICS**, a corporate entity registered under the laws of the Federal Republic of Nigeria, represented herein by its Chief Executive Officer / Managing Director, **Mr. Lawrence** (hereinafter referred to as the **"Client"**, which expression shall where the context so admits include its successors-in-title, subsidiaries, and assigns) of the first part;
+
+**AND**
+
+2. **SALES COWBOY MARKETING SOLUTIONS**, having its principal office at Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria, represented herein by its Lead Technical Director, **Clinton Chukwunyere** (hereinafter referred to as the **"Developer"**, which expression shall where the context so admits include its successors-in-title and assigns) of the second part.
+
+---
+
+### RECITALS:
+A. The Developer is an enterprise digital engineering and software development firm specializing in high-concurrency transactional portals, logistics dispatch architectures, escrow financial ledgers, and automated state-machine countdown engines.  
+B. The Client desires to retain the Developer to design, engineer, test, and deploy an enterprise **Unified Logistics, Bank-Factored Haulage Transaction Engine, Consultant Licensing & Fleet Equipment Ecosystem** (the "Platform"), comprising specialized Contractor, Transporter, Consultant, Financier (Bank), and Master Administrative web and mobile interfaces, pursuant to the terms and specifications set forth herein and in Schedule A.
+
+NOW, THEREFORE, in consideration of the mutual covenants contained herein, the Parties agree as follows:
+
+---
+
+### 1. SCOPE OF WORK & SYSTEM MODULES
+1.1 The Client hereby engages the Developer to design, develop, test, and deploy the Platform across the following six (6) core functional modules as detailed in **Schedule A (Technical & Commercial Proposal)**:
+* **Module 1: Consultant Onboarding & Quota Desk:** Paid consultant licensing engine with Paystack/Moniepoint activation checkout, closed-loop referral system (contractors and transporters register exclusively via unique consultant invite links), dynamic admin-configured active client quota caps, and automated commission routing on trips, leases, and vehicle sales into consultant wallets.
+* **Module 2: Contractor & Job Dispatch Hub:** Structured haulage manifests with geofenced loading/offloading coordinates, vehicle specifications, tonnage, and GIT insurance verification; real-time capacity decrementing countdown logic as transporters commit trucks; and automated 24-hour Expression of Interest (EOI) expiration timers.
+* **Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock:** Transporter fleet asset onboarding with vehicle plate numbers, mandatory truck walk-around video proof uploads, driver commercial licenses, and bank accounts (NUBAN); automated **48-Hour Depletion Clock** revoking job allocations if trucks fail to arrive and verify gate-in at the loading depot; and dual-stage waybill verification (Stage 1 Loading Waybill advance release, Stage 2 Proof of Offloading / e-POD final 3-way split).
+* **Module 4: Bank & Institutional Financing (Factoring) Desk:** Contractor-to-Bank financing invitations governed by an automated 5-day expiry state machine (strictly capped at one resend); secure financier underwriting desk granting accredited banks direct audit access to verified loading and offload waybill documents to authorize milestone disbursements; and automated 3-way split deductions (Transporter Payout, Platform Service Fee, Consultant Commission).
+* **Module 5: Heavy Equipment Leasing Engine:** Full 14-step haulage workflow tailored for industrial machinery (cranes, excavators, forklifts, lowbeds, barges) incorporating mandatory 360-degree video inspection uploads, lease duration agreements, caution deposit escrow, and maintenance sign-offs.
+* **Module 6: Automobile & Heavy-Duty E-Commerce Marketplace:** B2B classified catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement that releases merchant funds only upon formal buyer physical delivery sign-off.
+
+1.2 Any major new feature requested after the execution of this Agreement that falls outside the scope of Schedule A shall be governed by a formal written **Change Request (CR)**.
+
+---
+
+### 2. TOTAL DEVELOPMENT INVESTMENT & PAYMENT SCHEDULE
+2.1 The total all-inclusive development fee for the complete design, engineering, testing, and deployment of the Platform is **Three Million, Five Hundred Thousand Naira Only (₦3,500,000)**.
+
+2.2 The Client shall remit payment across three (3) performance-based milestones:
+* **Fifty Percent (50% / ₦1,750,000)** mobilization deposit upon execution of this Agreement to commence system architecture, database schema design, consultant licensing engine, geofencing logic, and UI/UX designs across all portals (Weeks 1 – 4);
+* **Thirty Percent (30% / ₦1,050,000)** upon deployment of functional staging builds—including the haulage dispatch flow, 48h/24h/5d state-machine timers, bank financing verification desk, equipment leasing engine, and staging environments—for User Acceptance Testing (UAT) (Weeks 5 – 7);
+* **Twenty Percent (20% / ₦700,000)** upon completion of UAT, production deployment, primary domain routing, payment gateway activation, mobile app store submissions, and prior to the transfer of master administrative credentials and source code repositories (Weeks 8 – 10).
+
+2.3 **Project Delivery Timeline:** The total project delivery timeline is **eight (8) to ten (10) weeks (56 to 70 calendar days)** from the Effective Date, contingent upon timely client feedback, document approvals, and milestone settlements. Invoices unpaid seven (7) business days past their due date shall entitle the Developer to pause active development until settled.
+
+2.4 **Official Bank Remittance Details:**
+* **Bank Name:** Guaranty Trust Bank (GTBank)
+* **Account Name:** Sales Cowboy Marketing Solutions
+* **Account Number:** 3006086291
+
+---
+
+### 3. APP RUNNING FEES & THIRD-PARTY INFRASTRUCTURE
+3.1 The Client is solely responsible for funding recurring third-party cloud infrastructure and operational expenses required to operate the Platform, estimated at:
+* **Backend API, Background Workers & Redis Queues (Railway.app):** ~$20 – $35 / month *(handles cron countdown timers and queues)*;
+* **High-Volume Video Proof & Document Storage (Cloudflare R2):** ~$5 – $20 / month *(zero egress fees for truck inspection videos)*;
+* **PostgreSQL Database (Railway / Supabase):** ~$10 – $25 / month;
+* **Automated SMS & OTP Dispatch (Termii):** Pay-as-you-go *(~₦5 per notification)*;
+* **Payment Processing (Paystack / Moniepoint):** Standard 1.5% fee capped at ₦2,000 per transaction;
+* **App Store Registration:** Google Play Console ($25 one-time), Apple Developer Program ($99/year).
+
+---
+
+### 4. COMPLETE INTELLECTUAL PROPERTY OWNERSHIP
+4.1 The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of **full and final payment (₦3,500,000)**, all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API interfaces, state-machine timer algorithms, UI/UX designs, visual assets, documentation, and technical deliverables—shall vest completely and exclusively in **AMS Haulage and Logistics**.
+4.2 The Developer waives and transfers all claims, proprietary rights, and title therein to the Client. Upon final milestone settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, server deployment scripts, and database access keys directly to the Client, free of any ongoing licensing restrictions, royalties, or developer encumbrances.
+
+---
+
+### 5. OPERATIONAL, FACTORING & REGULATORY DISCLAIMERS
+5.1 **Bank Factoring & Credit Underwriting:** The Platform provides technical software infrastructure (invitation state machines, document viewer desks, and automated 3-way split payment calculations) to facilitate freight financing. The Developer is not a financial institution, credit broker, or insurer. All freight underwriting decisions, interest rates, factoring agreements, and credit recovery risks remain exclusively between the participating financial institutions and the Client/Contractors.
+5.2 **Transporter Verification & Roadworthiness:** The Platform enforces digital compliance requirements (upload of driver licenses, hackney permits, GIT insurance, and truck video proofs). The Client remains solely responsible for the physical inspection, mechanical roadworthiness, cargo security, and transit safety of contracted vehicles.
+5.3 **Statutory Tax & Financial Accounting:** The Platform automates calculation of Value Added Tax (VAT at 7.5%) and Withholding Tax (WHT at 5%) on brokerage and consultant fees. The Client remains solely responsible for obtaining and maintaining corporate haulage permits and timely filing of tax returns with government authorities (FIRS/NRS, SCUML).
+
+---
+
+### 6. ACCEPTANCE TESTING, WARRANTY & 12-MONTH TECHNICAL SUPPORT
+6.1 Upon staging milestone delivery, the Client shall have **seven (7) business days** to inspect the deliverables and report any reproducible software bugs deviating from Schedule A.
+6.2 **12-Month Technical Support & Bug-Fix Maintenance:** The Developer shall provide **twelve (12) months of post-launch technical support and maintenance** commencing from the live production launch date. This support is strictly confined to system monitoring, server uptime surveillance, database integrity checks, background worker queue health, and diagnosing and resolving any existing bugs or defects arising within the agreed Schedule A scope. This support **expressly excludes the design, engineering, or deployment of new features, architectural scope additions, or third-party add-ons**, which shall be treated as new feature requests governed by separate written Change Requests (CRs).
+
+---
+
+### 7. LIMITATION OF LIABILITY & GOVERNING LAW
+7.1 The Developer’s maximum aggregate liability under this Agreement, whether in contract, tort, or otherwise, shall not exceed the total fees actually paid by the Client under this Agreement.
+7.2 This Agreement shall be governed by and construed in accordance with the laws of the **Federal Republic of Nigeria**. Any dispute arising under or in connection with this Agreement not resolved amicably within fourteen (14) days shall be referred to mediation or arbitration in accordance with the Arbitration and Mediation Act, 2023.
+
+---
+
+### IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date written above.
+
+**SIGNED FOR AND ON BEHALF OF THE CLIENT:**  
+**AMS HAULAGE AND LOGISTICS**
+
+Signature: ___________________________________________  
+Name: **Mr. Lawrence**  
+Designation: **Chief Executive Officer / Managing Director**  
+Date: November 2, 2026  
+
+---
+
+**SIGNED FOR AND ON BEHALF OF THE DEVELOPER:**  
+**SALES COWBOY MARKETING SOLUTIONS**
+
+Signature: ___________________________________________  
+Name: **Clinton Chukwunyere**  
+Designation: **Lead Technical Director**  
+Date: November 2, 2026  

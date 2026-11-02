@@ -24,7 +24,8 @@ import {
   ShieldCheck, 
   ArrowLeft,
   Download,
-  DollarSign
+  DollarSign,
+  Scale
 } from "lucide-react";
 
 interface ScopeModule {
@@ -180,13 +181,11 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   currency: "₦",
   
   infrastructureCosts: [
-    { component: "Backend API, Background Workers & Redis Queues", provider: "Railway.app", estimatedCost: "$20 – $35 / month" },
-    { component: "High-Volume Video Proof & Document Storage", provider: "Cloudflare R2", estimatedCost: "$5 – $20 / month" },
-    { component: "PostgreSQL Database", provider: "Railway / Supabase", estimatedCost: "$10 – $25 / month" },
+    { component: "Railway Cloud (API, Redis Queues, PostgreSQL DB & Storage Bucket)", provider: "Railway.app", estimatedCost: "$10 – $20 / month" },
     { component: "Automated SMS & OTP Dispatch", provider: "Termii", estimatedCost: "Pay-as-you-go (~₦5/alert)" },
     { component: "Payment Gateway & Split Disbursements", provider: "Paystack / Moniepoint", estimatedCost: "1.5% capped at ₦2,000" }
   ],
-  infrastructureNotes: "Total estimated monthly cloud infrastructure cost: ~$35 – $80 / month. App Store Developer fees: Google Play ($25 one-time), Apple Developer ($99/year), paid directly to providers without agency markup.",
+  infrastructureNotes: "Total estimated monthly cloud infrastructure cost: ~$10 – $20 / month + pay-as-you-go usage. App Store Developer fees: Google Play ($25 one-time), Apple Developer ($99/year), paid directly to providers without agency markup.",
   
   totalCost: 3500000,
   timeline: "8 to 10 Weeks (56 – 70 Calendar Days)",
@@ -310,6 +309,15 @@ function LogisticsProposalContent() {
                 <span>Letterhead Preview</span>
               </button>
             </div>
+
+            <Link
+              href="/logistics-agreement"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold border border-slate-700 transition-colors"
+              title="View the formal Master Software Development Agreement for AMS Haulage"
+            >
+              <Scale className="w-3.5 h-3.5 text-amber-400" />
+              <span className="hidden sm:inline">View</span> Agreement
+            </Link>
 
             <button
               onClick={handleCopyLink}

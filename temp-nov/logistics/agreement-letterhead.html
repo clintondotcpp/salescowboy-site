@@ -488,11 +488,9 @@
           3.1 The Client is solely responsible for funding recurring third-party cloud infrastructure required to operate the Platform, estimated at:
         </p>
         <ul>
-          <li><strong>Backend API, Background Workers & Redis Queues (Railway.app):</strong> ~$20 – $35 / month (handles cron countdown timers and queues);</li>
-          <li><strong>High-Volume Video Proof & Document Storage (Cloudflare R2):</strong> ~$5 – $20 / month (zero egress fees for truck inspection videos);</li>
-          <li><strong>PostgreSQL Database (Railway / Supabase):</strong> ~$10 – $25 / month;</li>
-          <li><strong>Automated SMS & OTP Dispatch (Termii):</strong> Pay-as-you-go (~₦5 per notification);</li>
-          <li><strong>Payment Processing (Paystack / Moniepoint):</strong> Standard 1.5% fee capped at ₦2,000 per transaction;</li>
+          <li><strong>Railway Cloud (API, Redis Queues, PostgreSQL DB & Storage Bucket):</strong> ~$10 – $20 / month (handles backend API, workers, cron timers, managed DB, and high-volume video proof & document storage bucket);</li>
+          <li><strong>Automated SMS & OTP Dispatch (Termii):</strong> Pay-as-you-go (~₦5 per notification / alert);</li>
+          <li><strong>Payment Processing (Paystack / Moniepoint):</strong> Standard 1.5% fee capped at ₦2,000 per local transaction;</li>
           <li><strong>App Store Registration:</strong> Google Play Console ($25 one-time), Apple Developer Program ($99/year).</li>
         </ul>
       </div>

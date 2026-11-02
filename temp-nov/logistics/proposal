@@ -64,12 +64,10 @@ To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, 
 
 | Infrastructure / Service Component | Provider | Estimated Monthly Running Cost |
 | :--- | :--- | :--- |
-| **Backend API, Background Workers & Redis Queues** | Railway.app | **$20 – $35 / month** *(Handles cron countdown timers & queues)* |
-| **High-Volume Video Proof & Document Storage** | Cloudflare R2 | **$5 – $20 / month** *(Zero egress fees for truck inspection videos)* |
-| **PostgreSQL Database** | Railway / Supabase | **$10 – $25 / month** *(High-concurrency transactional ledger)* |
+| **Railway Cloud (API, Redis, PostgreSQL DB & Storage Bucket)** | Railway.app | **$10 – $20 / month** *(Handles API, workers, cron timers, managed DB & video proofs)* |
 | **Automated SMS & OTP Dispatch** | Termii | **Pay-as-you-go** *(~₦5 per notification)* |
-| **Payment Gateway & Automated Split Disbursements** | Paystack / Moniepoint | **1.5% capped at ₦2,000 per transaction** |
-| **Total Estimated Monthly Infrastructure** | | **~$35 – $80 / month** |
+| **Payment Gateway & Automated Split Disbursements** | Paystack / Moniepoint | **1.5% capped at ₦2,000 per local transaction** |
+| **Total Estimated Monthly Infrastructure** | | **~$10 – $20 / month + usage** |
 
 *One-Time / Annual App Store Registration Fees: Google Play Console ($25 one-time), Apple Developer Program ($99/year).*
 

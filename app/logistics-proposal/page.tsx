@@ -584,6 +584,67 @@ function LogisticsProposalContent() {
                   </div>
                 </div>
 
+                {/* 3. Security Guarantees & Statutory Financial Architecture (VAT & WHT) */}
+                <div className="space-y-3">
+                  <h3 className="font-bold text-slate-950 uppercase tracking-wider text-xs border-b border-slate-200 pb-1 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded bg-amber-600"></span>
+                    3. Architectural Security Guarantees & Statutory Tax Architecture (VAT & WHT)
+                  </h3>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {/* Security Guarantees */}
+                    <div className="border border-slate-200 bg-slate-50/70 p-4 rounded-lg space-y-2">
+                      <div className="text-[11px] font-bold text-slate-900 uppercase font-mono flex items-center gap-1.5">
+                        <span className="text-amber-600">🛡️</span> System Security & Data Integrity
+                      </div>
+                      <ul className="list-disc pl-4 space-y-1.5 text-[11px] text-slate-700 leading-relaxed">
+                        <li>
+                          <strong>Role-Based Access Control (RBAC):</strong> Strict firewalls isolate Contractors, Transporters, Consultants, Bank Factoring Officers, and Admins.
+                        </li>
+                        <li>
+                          <strong>Factoring Token Security:</strong> Single-use cryptographically hashed invite tokens with 5-day state machine auto-expiry (strictly max 1 resend) for bank underwriters.
+                        </li>
+                        <li>
+                          <strong>Mandatory 2FA OTP Guard:</strong> Payouts, bank changes, and gate-in verifications require 2FA OTP authentication via Termii SMS/Email.
+                        </li>
+                        <li>
+                          <strong>Private Media Vault:</strong> Truck video proofs and waybills are stored in private cloud buckets with time-limited presigned URLs (never indexed or scrapable).
+                        </li>
+                        <li>
+                          <strong>Immutable Audit Trail:</strong> Every action, timer expiry, and split records tamper-proof logs capturing User ID, IP, and timestamp for NDPC/SCUML compliance.
+                        </li>
+                        <li>
+                          <strong>Payment Webhook Hardening:</strong> Paystack/Moniepoint webhooks use HMAC SHA-512 signatures to prevent replay attacks and fraudulent credit notifications.
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Statutory Tax System Architecture */}
+                    <div className="border border-slate-200 bg-slate-50/70 p-4 rounded-lg space-y-2">
+                      <div className="text-[11px] font-bold text-slate-900 uppercase font-mono flex items-center gap-1.5">
+                        <span className="text-amber-600">⚖️</span> Statutory Financial System (VAT & WHT)
+                      </div>
+                      <ul className="list-disc pl-4 space-y-1.5 text-[11px] text-slate-700 leading-relaxed">
+                        <li>
+                          <strong>Automated WHT Deductions at Source:</strong> Per FIRS/NRS guidelines, <strong>5% WHT</strong> is deducted on haulage brokerage and transporter earnings, and <strong>10% WHT</strong> on equipment lease proceeds prior to wallet crediting.
+                        </li>
+                        <li>
+                          <strong>Statutory Holding Sub-Ledger:</strong> Withheld WHT automatically routes to a designated administrative tax holding ledger, issuing e-credit advice to beneficiaries.
+                        </li>
+                        <li>
+                          <strong>Value Added Tax (VAT - 7.5%):</strong> Standard 7.5% VAT is calculated on platform brokerage charges and technology facilitation fees, itemized on all generated invoices.
+                        </li>
+                        <li>
+                          <strong>Transparent Itemized Manifests:</strong> Invoices show Gross Freight &rarr; Transporter Net &rarr; Consultant Commission (Net of WHT) &rarr; Platform Fee &rarr; VAT &rarr; WHT.
+                        </li>
+                        <li>
+                          <strong>One-Click Tax Schedules:</strong> Accounting portal exports pre-formatted monthly CSV/Excel schedules ready for direct filing with the Federal Inland Revenue Service (FIRS) and State Revenue Services.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
                 {/* 4. Infrastructure Costs */}
                 <div className="space-y-2">
                   <h3 className="font-bold text-slate-950 uppercase tracking-wider text-xs border-b border-slate-200 pb-1 flex items-center gap-2">
@@ -627,7 +688,7 @@ function LogisticsProposalContent() {
                     5. Total Project Investment & Milestone Payment Schedule
                   </h3>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {state.paymentMilestones.map((ms, idx) => (
                       <div key={idx} className="border border-slate-200 bg-slate-50/60 p-3.5 rounded-lg space-y-1">
                         <div className="flex items-center justify-between text-[10px] font-mono font-bold text-amber-700 uppercase">

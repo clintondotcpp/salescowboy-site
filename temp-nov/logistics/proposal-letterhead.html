@@ -647,9 +647,45 @@
 
     </div>
 
-    <!-- 3. Infrastructure Costs -->
+    <!-- 3. Security Guarantees & Statutory Tax Architecture -->
     <div class="section">
-      <div class="section-title">3. Estimated Monthly Running & Infrastructure Costs</div>
+      <div class="section-title">3. Architectural Security Guarantees & Statutory Tax Architecture (VAT & WHT)</div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px;">
+        <!-- Left: Security -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+          <div style="font-weight: 800; font-size: 11px; text-transform: uppercase; color: #0f172a; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <span>🛡️</span> System Security & Data Integrity Guarantees
+          </div>
+          <ul style="margin: 0; padding-left: 16px; font-size: 10.5px; color: #334155; line-height: 1.55;">
+            <li style="margin-bottom: 6px;"><strong>Role-Based Access Control (RBAC):</strong> Strict firewall partitioning between Contractors, Transporters, Consultants, Bank Underwriters, and Super Admins. Zero cross-visibility into private margins or bids.</li>
+            <li style="margin-bottom: 6px;"><strong>Bank Factoring Token Security:</strong> Scoped single-use cryptographically hashed tokens with 5-day state machine expiration (max 1 resend) for bank underwriters to audit waybills without master DB access.</li>
+            <li style="margin-bottom: 6px;"><strong>Mandatory 2FA OTP Authentication:</strong> High-risk operations (payouts, bank details change, gate-in verification) require SMS/Email OTP (Termii engine).</li>
+            <li style="margin-bottom: 6px;"><strong>Private Media & Document Vault:</strong> Truck video proofs and waybills are stored in private cloud buckets with time-limited presigned URLs—never indexed on the open web.</li>
+            <li style="margin-bottom: 6px;"><strong>Immutable Compliance Audit Trail:</strong> Every action, countdown expiry, and status change records immutable logs with User ID, timestamp, and IP for NDPC/SCUML auditability.</li>
+            <li><strong>Payment Webhook Hardening:</strong> Paystack/Moniepoint webhooks use HMAC SHA-512 signatures to prevent replay attacks or fraudulent payment notifications.</li>
+          </ul>
+        </div>
+
+        <!-- Right: Tax Architecture -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+          <div style="font-weight: 800; font-size: 11px; text-transform: uppercase; color: #0f172a; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <span>⚖️</span> Statutory Financial System Architecture (VAT & WHT)
+          </div>
+          <ul style="margin: 0; padding-left: 16px; font-size: 10.5px; color: #334155; line-height: 1.55;">
+            <li style="margin-bottom: 6px;"><strong>Automated Withholding Tax (WHT) at Source:</strong> Per FIRS/NRS guidelines, WHT is automatically deducted at point of payout—<strong>5% WHT</strong> on haulage brokerage and transporter earnings, and <strong>10% WHT</strong> on equipment lease proceeds.</li>
+            <li style="margin-bottom: 6px;"><strong>Dedicated Statutory Holding Sub-Ledger:</strong> Deducted WHT accumulates in an administrative tax holding sub-ledger with auto-generated electronic credit advices for beneficiaries.</li>
+            <li style="margin-bottom: 6px;"><strong>Automated Value Added Tax (VAT - 7.5%):</strong> Standard 7.5% VAT is calculated on platform brokerage and tech facilitation fees, itemized clearly on all generated manifests, invoices, and receipts.</li>
+            <li style="margin-bottom: 6px;"><strong>Itemized Transparent Breakdowns:</strong> Invoices show Gross Freight &rarr; Transporter Net (Loading Advance + e-POD Balance) &rarr; Consultant Cut (Net of WHT) &rarr; Platform Fee &rarr; VAT &rarr; WHT.</li>
+            <li><strong>One-Click Statutory Tax Filing Reports:</strong> One-click export of monthly CSV/Excel schedules formatted for seamless submission to the Federal Inland Revenue Service (FIRS) and State Revenue Services.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Infrastructure Costs -->
+    <div class="section">
+      <div class="section-title">4. Estimated Monthly Running & Infrastructure Costs</div>
       <div class="prose">
         <p>*(Paid directly by the Client to infrastructure providers; no agency markup added)*</p>
       </div>
@@ -687,9 +723,9 @@
       </div>
     </div>
 
-    <!-- 4. Investment & 8-10 Weeks Timeline -->
+    <!-- 5. Investment & 8-10 Weeks Timeline -->
     <div class="section">
-      <div class="section-title">4. Total Project Investment & 8–10 Weeks Milestone Schedule</div>
+      <div class="section-title">5. Total Project Investment & 8–10 Weeks Milestone Schedule</div>
       
       <div class="prose" style="margin-bottom: 12px;">
         <p>Due to the integration of the <strong>Bank Factoring Portal</strong>, <strong>Consultant Licensing Network</strong>, <strong>Equipment Leasing Engine</strong>, and <strong>State-Machine Countdown Timers</strong>, this platform delivers four distinct web portals and mobile operational interfaces:</p>

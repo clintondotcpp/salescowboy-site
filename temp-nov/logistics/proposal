@@ -59,7 +59,41 @@ To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, 
 
 ---
 
-## 3. ESTIMATED MONTHLY RUNNING & INFRASTRUCTURE COSTS
+## 3. ARCHITECTURAL SECURITY GUARANTEES & STATUTORY FINANCIAL (VAT/WHT) ARCHITECTURE
+
+### A. System Security & Operational Integrity Guarantees
+1. **Role-Based Access Control (RBAC) & Sandboxed Portals:** Strict permission firewalls separate Contractors, Transporters, Consultants, Bank Factoring Officers, and Super Admins. No party can access or view financial spreads, bids, or private business logs outside their explicit authorization level.
+2. **Factoring Desk & Cryptographic Token Security:** Contractor invitations to financing banks are authenticated via cryptographically hashed single-use tokens governed by an automated 5-day state machine (enforcing a strict limit of one resend). Bank underwriters receive scoped, time-limited document viewer sessions to audit waybills without access to master platform databases.
+3. **Dual-Factor Authentication (2FA) & Session Guard:** Critical events—including wallet payouts, corporate bank account updates, haulage job awards, and depot gate-in confirmations—require mandatory 2FA OTP verification delivered via SMS/Email (Termii engine).
+4. **Immutable Transaction & Audit Ledger:** Every operational transaction, trip state modification, countdown expiration (24h EOI / 48h gate-in), and financial split is recorded with timestamped, immutable audit logs capturing User ID, IP address, and payload parameters for external compliance audits (NDPC, SCUML).
+5. **Private Media & Document Vault:** Transporter driver licenses, truck video proofs, vehicle inspection recordings, and stamped bills of lading are stored in private Railway storage buckets and served strictly via time-limited presigned URLs (no public bucket exposure, preventing unauthorized web scraping or data leaks).
+6. **Payment Gateway Hardening:** Integrates Paystack / Moniepoint with cryptographic HMAC SHA-512 webhook signature verification to eliminate replay attacks, spoofed payments, or double-crediting. Zero direct storage of client debit card PANs or banking PINs on application servers.
+7. **Infrastructure & Network Resilience:** End-to-end 256-bit SSL/TLS encryption, parameterized SQL queries eliminating SQL injection, containerized Railway backend architecture with DDoS mitigation, and automated daily database backups.
+
+### B. Statutory Financial System Architecture (VAT, WHT & Tax Accounting)
+1. **Automated Withholding Tax (WHT) Deductions at Source:**
+   * In compliance with Nigerian tax regulations (FIRS / NRS), the platform automates Withholding Tax deductions prior to final wallet disbursement:
+     * **5% WHT** automatically deducted on haulage brokerage commissions and transporter payouts.
+     * **10% WHT** automatically deducted on heavy equipment leasing and industrial machinery hire proceeds.
+   * Withheld funds are immediately segregated into a dedicated **Statutory Tax Holding Sub-Ledger** under AMS Haulage’s administrative oversight, and an electronic credit advice is issued to the beneficiary.
+2. **Value Added Tax (VAT - 7.5%) Automation:**
+   * The system automatically computes and applies standard 7.5% VAT on all platform brokerage commissions, technology facilitation fees, and marketplace listing charges.
+   * Every generated invoice, bill of lading receipt, and payment manifest clearly breaks down:
+     1. Gross Freight / Lease / Transaction Value;
+     2. Transporter Net Payment (Loading Advance + e-POD Final Release);
+     3. Consultant Referral Cut (Net of WHT);
+     4. Platform Service Charge;
+     5. Value Added Tax (7.5% itemized on platform fee);
+     6. Withheld Statutory Tax (WHT).
+3. **One-Click Tax Schedules & Statutory Compliance Reporting:**
+   * The Executive Accounting Portal provides real-time visibility into total VAT collected and total WHT accrued over any selected date range.
+   * Administrators can generate one-click exportable tax schedules (CSV / Excel format) formatted specifically for monthly returns filing with the Federal Inland Revenue Service (FIRS) and State Internal Revenue Services (SIRS), eliminating manual calculation errors.
+4. **Bank Factoring & Escrow Split Reconciliation:**
+   * When a bank underwrites an invoice, the system dynamically recalculates the 3-way split: deducting bank factoring interest/discount fees and statutory tax reserves first, then releasing the transporter's loading advance, ensuring AMS Haulage is never exposed to uncollected tax liabilities.
+
+---
+
+## 4. ESTIMATED MONTHLY RUNNING & INFRASTRUCTURE COSTS
 *(Paid directly by the Client to infrastructure providers; no agency markup added)*
 
 | Infrastructure / Service Component | Provider | Estimated Monthly Running Cost |
@@ -73,7 +107,7 @@ To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, 
 
 ---
 
-## 4. COMMERCIAL INVESTMENT & 8–10 WEEKS TIMELINE
+## 5. COMMERCIAL INVESTMENT & 8–10 WEEKS TIMELINE
 
 Due to the integration of the **Bank Factoring Portal**, **Consultant Licensing Network**, **Equipment Leasing Engine**, and **State-Machine Countdown Timers**, this platform delivers four distinct web portals and mobile operational interfaces:
 

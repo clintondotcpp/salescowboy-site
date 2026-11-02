@@ -650,7 +650,7 @@ function LogisticsProposalContent() {
                     </span>
                     <ul className="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed text-[11px]">
                       <li>
-                        <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦2,000,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in the Client.
+                        <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦1,500,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in AMS Haulage and Logistics.
                       </li>
                       <li>
                         <strong className="text-slate-900">12-Month Technical Support & Maintenance:</strong> Includes twelve (12) months of post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).

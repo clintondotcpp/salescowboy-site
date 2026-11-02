@@ -93,25 +93,25 @@ const DEFAULT_LOGISTICS_AGREEMENT_STATE: AgreementState = {
   clientSignatoryTitle: "CEO / Managing Director",
   
   projectTitle: "AMS Haulage & Heavy Logistics Multi-Portal Platform (Consultant Licensing, Dispatch Hub, Transporter Fleet Vault with 48h Gate-In, Bank Factoring Desk, Equipment Leasing Engine & Heavy-Duty Marketplace)",
-  totalCost: 3500000,
+  totalCost: 1500000,
   deliveryTimeline: "8 to 10 Weeks (56 – 70 Calendar Days)",
   warrantyPeriodDays: 365,
   currency: "₦",
   
   milestone1Label: "50% Mobilization Deposit (Architecture, Database Schema Design, Consultant Licensing Engine & Multi-Portal UI/UX Design)",
-  milestone1Amount: 1750000,
-  milestone2Label: "30% Staging & UAT Milestone (Haulage Dispatch Flow, 48h Gate-In / 24h EOI / 5d Factoring State Machines, Bank Financing Verification Desk, Equipment Leasing Engine & Staging Tests)",
-  milestone2Amount: 1050000,
-  milestone3Label: "20% Production Handover & Go-Live (Live Production Deployment, Domain Routing, Paystack/Moniepoint Activation, Google Play & iOS App Store Submissions, Complete Git Repository Handover & Admin Onboarding)",
-  milestone3Amount: 700000,
+  milestone1Amount: 750000,
+  milestone2Label: "50% Final Settlement (Paid after 2 months of verified functional operational use post App Store & Google Play upload)",
+  milestone2Amount: 750000,
+  milestone3Label: "",
+  milestone3Amount: 0,
   
   scopeClause: "The Client hereby engages the Developer to design, engineer, test, and deploy the AMS Haulage and Heavy Logistics Enterprise Platform—comprising Module 1: Consultant Onboarding & Quota Desk (Paid Licensing via Paystack/Moniepoint, Closed-Loop Referral Engine, Dynamic Quota Caps, Automated Commission Engine); Module 2: Contractor & Job Dispatch Hub (Structured Haulage Manifests, Geofenced Coordinates, Real-Time Capacity Decrementing Logic, 24-Hour EOI Timer); Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock (Fleet Asset Onboarding with Video Proofs, 48-Hour Gate-In Depletion Clock with Automatic Revocation, Dual-Stage Waybill Verification for Loading Advance and Proof of Offloading / e-POD); Module 4: Bank & Institutional Financing (Factoring) Desk (Contractor-to-Bank Invitation Flow, 5-Day Expiry State Machine with Max 1 Resend, Financier Waybill Audit Desk, Automated 3-Way Split Deductions); Module 5: Heavy Equipment Leasing Engine (Replication of 14-Step Workflow for Cranes, Excavators, Forklifts, Lowbeds, and Barges with 360° Inspection Videos, Digital Lease Contracts, and Escrow Caution Deposits); and Module 6: Automobile & Heavy-Duty E-Commerce Marketplace (Prime Movers, Flatbeds, Tippers, Genuine Spare Parts with Inspection-Based Escrow Release)—all as itemized in Schedule A. Any major scope expansion requested post-execution shall be governed by a formal written Change Request (CR).",
   
-  paymentClause: "The total all-inclusive contract fee for the engineering and deployment of the Platform is Three Million, Five Hundred Thousand Naira Only (₦3,500,000). The total project delivery timeline is eight (8) to ten (10) weeks (56 to 70 calendar days) from the Effective Date. The Client shall remit payment across three contractual milestones: 50% (₦1,750,000) mobilization fee upon contract execution; 30% (₦1,050,000) upon deployment of the functional beta build and state-machine timers to staging for User Acceptance Testing (UAT); and 20% (₦700,000) upon completion of UAT, live production deployment, domain routing, and payment gateway activation, prior to final transfer of master credentials and source code repositories. Invoices unpaid seven (7) business days past due date entitle Developer to pause active development.",
+  paymentClause: "The total all-inclusive contract fee for the engineering and deployment of the Platform is One Million, Five Hundred Thousand Naira Only (₦1,500,000). The total project delivery timeline is eight (8) to ten (10) weeks (56 to 70 calendar days) from the Effective Date. The Client shall remit payment across two (2) contractual milestones: 50% (₦750,000) initial mobilization fee upon contract execution; and 50% (₦750,000) final settlement payable after two (2) months of verified functional operational use following successful mobile app upload and live deployment on Google Play and Apple App Store (post-launch operational validation). Invoices unpaid seven (7) business days past due date entitle Developer to pause active development.",
   
   infrastructureClause: "The Client is solely responsible for funding recurring third-party cloud infrastructure and operational expenses required to operate the Platform, estimated at: Railway Cloud (API, Redis Queues, PostgreSQL DB & Storage Bucket) at ~$10 – $20 / month (handles backend API, workers, cron timers, managed DB, and high-volume video proof & document storage bucket); Automated SMS & OTP Dispatch (Termii) on pay-as-you-go basis (~₦5 per notification / alert); Payment Processing (Paystack / Moniepoint) at standard 1.5% fee capped at ₦2,000 per local transaction; and one-time/annual App Store registrations: Google Play Console ($25 one-time) and Apple Developer Program ($99/year).",
   
-  ipClause: "The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of full and final payment (₦3,500,000), all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API interfaces, state-machine countdown algorithms, UI/UX designs, visual assets, documentation, and technical deliverables—shall vest completely and exclusively in AMS Haulage and Logistics. The Developer waives and transfers all claims, proprietary rights, and title therein to the Client. Upon final milestone settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, server deployment scripts, and database access keys directly to the Client, free of any ongoing licensing restrictions, royalties, or developer encumbrances.",
+  ipClause: "The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of full and final payment (₦1,500,000), all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API interfaces, state-machine countdown algorithms, UI/UX designs, visual assets, documentation, and technical deliverables—shall vest completely and exclusively in AMS Haulage and Logistics. The Developer waives and transfers all claims, proprietary rights, and title therein to the Client. Upon final milestone settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, server deployment scripts, and database access keys directly to the Client, free of any ongoing licensing restrictions, royalties, or developer encumbrances.",
   
   disclaimersClause: "Bank Factoring, Credit Underwriting & Statutory Compliance: The Platform provides the technical infrastructure, invitation state machine, and document verification desk to connect Contractors with Banks and Institutional Financiers for invoice factoring and milestone disbursements. The Developer does not operate as a financial institution, credit bureau, or lending entity. Credit approval, factoring fee percentages, underwriting risk assessments, and financing disbursements are strictly governed by bilateral contractual agreements between accredited financing institutions and contractors. The Client remains solely responsible for obtaining and maintaining all necessary statutory logistics licenses, corporate filings, and commercial permits.\n\nVehicle Roadworthiness, Cargo Insurance & Operational Safety: The Platform provides digital verification workflows (including truck inspection video proof uploads, driver license logs, proof of ownership records, and Goods-in-Transit [GIT] insurance policy documentation). The Platform and Developer do not inspect physical vehicles and assume no legal or operational liability for vehicle mechanical failure, road accidents, highway transit delays, transit cargo loss/damage, or transporter non-performance. Physical operational safety, driver vetting, and insurance claims remain the direct responsibility of the respective transporters and contractor consignors.",
   
@@ -433,8 +433,8 @@ function LogisticsAgreementContent() {
                           ...state,
                           totalCost: val,
                           milestone1Amount: Math.round(val * 0.5),
-                          milestone2Amount: Math.round(val * 0.3),
-                          milestone3Amount: Math.round(val * 0.2)
+                          milestone2Amount: Math.round(val * 0.5),
+                          milestone3Amount: 0
                         });
                       }}
                       className="w-full bg-slate-950 border border-slate-800 rounded p-2 text-slate-200 focus:outline-none focus:border-amber-500 font-mono"
@@ -452,7 +452,7 @@ function LogisticsAgreementContent() {
                 </div>
 
                 <div className="pt-2 border-t border-slate-800 space-y-3">
-                  <h3 className="font-bold text-amber-500 uppercase text-[11px]">Milestones (50% / 30% / 20%)</h3>
+                  <h3 className="font-bold text-amber-500 uppercase text-[11px]">Milestones (50% / 50%)</h3>
                   <div className="space-y-1">
                     <label className="text-slate-400">Milestone 1 (50% Mobilization)</label>
                     <input
@@ -463,20 +463,11 @@ function LogisticsAgreementContent() {
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-slate-400">Milestone 2 (30% UAT)</label>
+                    <label className="text-slate-400">Milestone 2 (50% Post 2-Month Upload)</label>
                     <input
                       type="number"
                       value={state.milestone2Amount}
                       onChange={(e) => setState({ ...state, milestone2Amount: Number(e.target.value) })}
-                      className="w-full bg-slate-950 border border-slate-800 rounded p-2 text-slate-200 focus:outline-none focus:border-amber-500 font-mono"
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-slate-400">Milestone 3 (20% Handover)</label>
-                    <input
-                      type="number"
-                      value={state.milestone3Amount}
-                      onChange={(e) => setState({ ...state, milestone3Amount: Number(e.target.value) })}
                       className="w-full bg-slate-950 border border-slate-800 rounded p-2 text-slate-200 focus:outline-none focus:border-amber-500 font-mono"
                     />
                   </div>
@@ -630,23 +621,17 @@ function LogisticsAgreementContent() {
                 </h2>
                 <p className="mb-3">{state.paymentClause}</p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-3">
                   <div className="border border-slate-300 p-3 rounded bg-slate-50 text-center">
                     <div className="text-[10px] font-bold text-amber-800 uppercase font-mono">MILESTONE 1 (50%)</div>
                     <div className="text-base font-extrabold text-slate-900 font-mono mt-1">₦{formatNumber(state.milestone1Amount)}</div>
-                    <div className="text-[10.5px] text-slate-600 mt-1">Mobilization Deposit (Architecture, DB Schemas, Licensing Engine & UI/UX Designs)</div>
+                    <div className="text-[10.5px] text-slate-600 mt-1">Mobilization Deposit (Architecture, DB Schemas, Consultant Licensing & Multi-Portal UI/UX Layouts)</div>
                   </div>
 
                   <div className="border border-slate-300 p-3 rounded bg-slate-50 text-center">
-                    <div className="text-[10px] font-bold text-amber-800 uppercase font-mono">MILESTONE 2 (30%)</div>
+                    <div className="text-[10px] font-bold text-amber-800 uppercase font-mono">MILESTONE 2 (50%)</div>
                     <div className="text-base font-extrabold text-slate-900 font-mono mt-1">₦{formatNumber(state.milestone2Amount)}</div>
-                    <div className="text-[10.5px] text-slate-600 mt-1">Staging & UAT (Dispatch Flow, 48h/24h/5d Timers, Bank Desk & Staging Tests)</div>
-                  </div>
-
-                  <div className="border border-slate-300 p-3 rounded bg-slate-50 text-center">
-                    <div className="text-[10px] font-bold text-amber-800 uppercase font-mono">MILESTONE 3 (20%)</div>
-                    <div className="text-base font-extrabold text-slate-900 font-mono mt-1">₦{formatNumber(state.milestone3Amount)}</div>
-                    <div className="text-[10.5px] text-slate-600 mt-1">Production Handover & Go-Live (Live Launch, App Stores, Full Code & Credential Handover)</div>
+                    <div className="text-[10.5px] text-slate-600 mt-1">Final Settlement (Paid after 2 months of verified functional operational use post App Store & Google Play upload)</div>
                   </div>
                 </div>
 

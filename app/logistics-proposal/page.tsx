@@ -187,12 +187,11 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   ],
   infrastructureNotes: "Total estimated monthly cloud infrastructure cost: ~$10 – $20 / month + pay-as-you-go usage. App Store Developer fees: Google Play ($25 one-time), Apple Developer ($99/year), paid directly to providers without agency markup.",
   
-  totalCost: 3500000,
+  totalCost: 1500000,
   timeline: "8 to 10 Weeks (56 – 70 Calendar Days)",
   paymentMilestones: [
-    { label: "50% Mobilization Deposit (Architecture, DB Schemas, Consultant Licensing & UI/UX Designs)", percentage: 50, amount: 1750000 },
-    { label: "30% Staging & UAT (Haulage Dispatch Flow, 48h/24h/5d Timers, Bank Desk & Staging Tests)", percentage: 30, amount: 1050000 },
-    { label: "20% Production Handover (Live Deployment, Domain Routing, Gateway & Admin Onboarding)", percentage: 20, amount: 700000 }
+    { label: "50% Mobilization Deposit (Architecture, DB Schemas, Consultant Licensing & Multi-Portal UI/UX Layouts)", percentage: 50, amount: 750000 },
+    { label: "50% Final Settlement (Paid after 2 months of verified functional operational use post App Store & Google Play upload)", percentage: 50, amount: 750000 }
   ],
   bankInfo: "Bank Name: Guaranty Trust Bank (GTBank)\nAccount Name: Sales Cowboy Marketing Solutions\nAccount Number: 3006086291",
   notes: "Includes 12 Months of post-launch technical support (monitoring & existing bug fixes within agreed scope) and 100% complete Client Intellectual Property (IP) ownership with full repository and credentials handover upon final settlement."
@@ -274,11 +273,11 @@ function LogisticsProposalContent() {
                   SALES COWBOY
                 </span>
                 <span className="text-[10px] bg-amber-500/10 text-amber-400 font-mono px-2 py-0.5 rounded border border-amber-500/20 font-semibold uppercase">
-                  AMS Haulage & Factoring Ecosystem (₦3,500,000)
+                  AMS Haulage & Factoring Ecosystem (₦1,500,000)
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-mono">
-                {state.proposalId} • REF: AMS3.5M-ECOSYSTEM
+                {state.proposalId} • REF: AMS1.5M-ECOSYSTEM
               </p>
             </div>
           </div>

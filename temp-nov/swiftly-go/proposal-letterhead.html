@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical & Commercial Proposal — Swiftly Go Super App — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #b45309;
+      --accent-light: #fef3c7;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0b0f19;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: #0f172a;
+      color: #f8fafc;
+      border: 1px solid #475569;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #334155;
+      border-color: #64748b;
+    }
+
+    .btn-primary {
+      background: #d97706;
+      border-color: #b45309;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #b45309;
+    }
+
+    /* A4 Paper Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 48px 56px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* Corporate Letterhead */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+
+    .brand-left {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .crest {
+      width: 52px;
+      height: 52px;
+      background: var(--primary);
+      color: #f59e0b;
+      border: 2px solid #f59e0b;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .brand-info h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-info .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #b45309;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+    }
+
+    .brand-contact {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .doc-meta .ref {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    /* Proposal Title */
+    .title-block {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: #92400e;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .title-block h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .recipient-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 28px;
+      font-size: 12px;
+    }
+
+    .recipient-box .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .recipient-box .name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    /* Content Typography */
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--primary);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .prose {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    .prose p {
+      margin-bottom: 10px;
+    }
+
+    .prose ul {
+      margin: 8px 0 12px 18px;
+    }
+
+    .prose li {
+      margin-bottom: 6px;
+    }
+
+    /* Demand Table */
+    .demand-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin: 12px 0;
+    }
+
+    .demand-table th {
+      background: #f1f5f9;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .demand-table td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      color: #334155;
+    }
+
+    .demand-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    /* Module Card */
+    .module-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      background: #ffffff;
+    }
+
+    .module-card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .module-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .module-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      background: #f1f5f9;
+      color: #475569;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .module-desc {
+      font-size: 11.5px;
+      color: #475569;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .module-list {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 11px;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .module-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Cost Table */
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin: 12px 0;
+    }
+
+    .cost-table th {
+      background: #f1f5f9;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .cost-table td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      color: #334155;
+    }
+
+    .cost-table .tar {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cost-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .table-note {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* Milestone Cards */
+    .milestones-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .ms-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: #f8fafc;
+      text-align: center;
+    }
+
+    .ms-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .ms-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .ms-amount {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 800;
+      color: #b45309;
+    }
+
+    .bank-box {
+      background: var(--accent-light);
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #92400e;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    /* Sign-off */
+    .signoff {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 2px solid var(--primary);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .sig-block .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .sig-block .company {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .sig-block .sig-line {
+      margin-top: 28px;
+      border-bottom: 1px dashed #94a3b8;
+      padding-bottom: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        padding: 24px 32px !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>🚀</span>
+      <span>Technical & Commercial Proposal — Swiftly Go Super App</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">
+        <span>🖨️</span> Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="sheet">
+
+    <!-- Header Letterhead -->
+    <div class="letterhead">
+      <div class="brand-left">
+        <div class="crest">SC</div>
+        <div class="brand-info">
+          <h1>SALES COWBOY</h1>
+          <div class="tagline">Marketing Solutions • Enterprise Web & Mobile Engineering</div>
+          <div class="brand-contact">
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos<br>
+            hello@salescowboy.com.ng • +234 810 493 3232 / +234 912 309 6853
+          </div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <div class="ref">REF: SCM-PROP-2026-SWIFT2M</div>
+        <div>DATE: November 2, 2026</div>
+        <div>TOTAL: ₦2,000,000 NGN</div>
+      </div>
+    </div>
+
+    <!-- Title Block -->
+    <div class="title-block">
+      <span class="badge">Commercial & Technical Proposal</span>
+      <h2>Swiftly Go: Abia’s Everyday Mobility & Commerce Super App</h2>
+      <div style="font-size: 12px; color: var(--text-muted);">
+        Unified Keke Rides, Food Delivery & Intra-City Logistics Ecosystem across Aba & Umuahia
+      </div>
+    </div>
+
+    <!-- Recipient Info -->
+    <div class="recipient-grid">
+      <div class="recipient-box">
+        <div class="label">PREPARED BY (DEVELOPER)</div>
+        <div class="name">SALES COWBOY MARKETING SOLUTIONS</div>
+        <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">
+          Clinton Chukwunyere • Lead Developer / Technical Director<br>
+          GTBank Account: 3006086291
+        </div>
+      </div>
+      <div class="recipient-box">
+        <div class="label">PREPARED FOR (CLIENT)</div>
+        <div class="name">SWIFTLY TECHNOLOGIES</div>
+        <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">
+          Attention: Executive Leadership<br>
+          Target Markets: Aba & Umuahia, Abia State
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Executive Summary -->
+    <div class="section">
+      <div class="section-title">1. Executive Summary & The Unified Super App Vision</div>
+      <div class="prose">
+        <p>
+          <strong>Swiftly Go</strong> is engineered to become Abia State’s premier on-demand consumer platform. Rather than building fragmented applications for passenger transportation, restaurant ordering, and parcel deliveries, Swiftly Go consolidates these high-frequency utilities into a single, cohesive super app ecosystem.
+        </p>
+        <p>
+          By anchoring on a <strong>shared local mobility fleet</strong> (Keke Napep / Tricycles and Dispatch Motorcycles), the platform achieves dual operating leverage:
+        </p>
+        <ul>
+          <li><strong>High Daily Frequency & Habit Retention:</strong> Driving high app opens through staple daily habits (morning commuting, afternoon office lunch, and commercial market parcel transfers).</li>
+          <li><strong>Zero Driver Idle Time (Cross-Dispatch):</strong> The same driver fleet handling peak-hour morning commuter transport is cross-dispatched to service midday restaurant deliveries and afternoon B2B market waybills, maximizing daily driver yield and Gross Merchandise Value (GMV).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Shared Supply Engine -->
+    <div class="section">
+      <div class="section-title">2. The Shared-Supply Engine & Local Market Advantage</div>
+      <div class="prose">
+        <p>
+          Traditional standalone delivery apps struggle in non-metro areas due to supply fragmentation and driver idle time. Swiftly Go eliminates idle capacity through dynamic cross-dispatch synchronized with Abia State’s daily economic rhythm:
+        </p>
+      </div>
+
+      <table class="demand-table">
+        <thead>
+          <tr>
+            <th>Time Window</th>
+            <th>Primary Demand Source</th>
+            <th>Fleet Utilized</th>
+            <th>Operational Objective</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>07:00 – 10:00</strong></td>
+            <td>Commuter Peak (Faulks Rd, Brass, Osisioma, Tower Umuahia)</td>
+            <td>Keke Napep (Passenger)</td>
+            <td>High ride completion volume, minimal driver downtime</td>
+          </tr>
+          <tr>
+            <td><strong>11:30 – 14:30</strong></td>
+            <td>Lunch Hour & Corporate Orders (Aba & Umuahia eateries)</td>
+            <td>Motorcycles (Food) + Keke (Overflow)</td>
+            <td>High restaurant basket sizes, prompt hot meal delivery</td>
+          </tr>
+          <tr>
+            <td><strong>14:30 – 17:30</strong></td>
+            <td>B2B Waybills (Ariaria, Ekeoha, Cemetery to Motor Parks)</td>
+            <td>Motorcycles & Keke (Logistics)</td>
+            <td>Bulk parcel movement from markets before closing</td>
+          </tr>
+          <tr>
+            <td><strong>17:30 – 21:00</strong></td>
+            <td>Evening Commute & Dinner Orders</td>
+            <td>Keke (Rides) + Bikes (Food)</td>
+            <td>Second passenger wave + evening family meals</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 3. Core Deliverables -->
+    <div class="section">
+      <div class="section-title">3. Core Platform Deliverables (Phase 1 Ecosystem)</div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>1. Customer Super App (iOS & Android)</span>
+          <span class="module-tag">Consumer Tier</span>
+        </div>
+        <div class="module-desc">Single sign-on interface with seamless switching between three daily habit utilities.</div>
+        <ul class="module-list">
+          <li><strong>Swiftly Rides (Keke Hailing):</strong> Upfront transparent distance/zone fares, driver verification, union alignment ratings, and live vehicle approach tracking.</li>
+          <li><strong>Swiftly Food Ordering:</strong> Curated restaurant menus, custom food modifiers, live kitchen order status, and temperature-conscious dispatch.</li>
+          <li><strong>Swiftly Send (P2P & B2B Logistics):</strong> Intra-city parcel dispatch under 25kg, live route map tracking, digital Proof of Delivery (OTP + recipient photo).</li>
+          <li><strong>Unified In-App Wallet:</strong> Fast wallet funding via Paystack/Moniepoint (Cards, USSD, Virtual Accounts) and instant peer-to-peer transfers.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>2. Driver & Fleet Partner App (Android-First)</span>
+          <span class="module-tag">Fleet Tier</span>
+        </div>
+        <div class="module-desc">Built for Nigerian commercial drivers with acoustic alerts and seamless cross-dispatch.</div>
+        <ul class="module-list">
+          <li><strong>Shift Toggle & Demand Radar:</strong> Online/Offline availability toggle with audible acoustic trip broadcasts and demand corridor heatmaps.</li>
+          <li><strong>Dynamic Cross-Dispatch:</strong> Drivers switch effortlessly between passenger trips, restaurant pickups, and market parcels without app switching.</li>
+          <li><strong>Driver Daily Ledger:</strong> Transparent earnings tracker showing trip totals, commission debits, and 24/7 bank withdrawals.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>3. Merchant & Restaurant Partner Hub (Web & Tablet)</span>
+          <span class="module-tag">Merchant Tier</span>
+        </div>
+        <div class="module-desc">Empowers local food vendors and retail stores to manage orders and kitchen operations.</div>
+        <ul class="module-list">
+          <li><strong>Menu & Inventory Desk:</strong> Real-time pricing updates, photo uploads, item variation toggles, and stock-out alerts.</li>
+          <li><strong>Kitchen Order Display:</strong> Audible order chime, prep time countdown timers, and Bluetooth receipt printer integration.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>4. Master Operations, Dispatch & Admin Control Center (Web)</span>
+          <span class="module-tag">Admin Tier</span>
+        </div>
+        <div class="module-desc">Central command system for monitoring city mobility, dynamic surge pricing, and revenue splits.</div>
+        <ul class="module-list">
+          <li><strong>Live City Heatmap:</strong> Real-time spatial tracking of all active Keke tricycles and dispatch bikes across Aba and Umuahia.</li>
+          <li><strong>Geofencing & Corridor Pricing:</strong> Polygon mapping to configure operating corridors, base fares, night surge, and union levy fees.</li>
+          <li><strong>KYC Verification Gate:</strong> Identity review for drivers (NIN, Driver’s License, union badges) with one-click verification approval.</li>
+          <li><strong>Automated Split Revenue Ledger:</strong> Automated accounting tracking platform take-rates (12%–18% Rides, 15%–25% Food, 15%–20% Logistics).</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- 4. Infrastructure Costs -->
+    <div class="section">
+      <div class="section-title">4. Estimated Monthly App Running & Infrastructure Costs</div>
+      <div class="prose">
+        <p>*(Paid directly by the Client to infrastructure providers; no agency markup added)*</p>
+      </div>
+
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Infrastructure / Service Component</th>
+            <th>Provider</th>
+            <th class="tar">Estimated Monthly Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cloud Server, API Engine & PostgreSQL DB</strong></td>
+            <td>Railway.app</td>
+            <td class="tar"><strong>$5 – $10 / month</strong> <span style="color:#64748b;">(Starts on $5 Starter plan)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Media, Menu & Document Vault</strong></td>
+            <td>Railway Storage Bucket / Volume</td>
+            <td class="tar"><strong>$0 / month</strong> <span style="color:#64748b;">(Native container storage; no external cost)</span></td>
+          </tr>
+          <tr>
+            <td><strong>SMS / OTP & WhatsApp Alerts</strong></td>
+            <td>Termii</td>
+            <td class="tar"><strong>Pay-as-you-go</strong> <span style="color:#64748b;">(~₦5 per SMS verification)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Live Geolocation & Map Tiles</strong></td>
+            <td>Mapbox / OpenStreetMap</td>
+            <td class="tar"><strong>$0 / month</strong> <span style="color:#64748b;">(Free tier covers up to 50,000 loads)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Payment Gateway (Card / Virtual Accounts)</strong></td>
+            <td>Paystack / Moniepoint</td>
+            <td class="tar"><strong>1.5% capped at ₦2,000</strong> <span style="color:#64748b;">(Per transaction)</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="table-note">
+        <strong>Total Estimated Monthly Running Cost: ~$5 – $10 / month.</strong> (Vault uses native Railway storage at $0).<br>
+        *One-Time / Annual App Store Registration Fees: Google Play Console ($25 one-time), Apple Developer Account ($99/year).
+      </div>
+    </div>
+
+    <!-- 5. Investment & 8-Week Timeline -->
+    <div class="section">
+      <div class="section-title">5. Total Project Investment & 8-Week Milestone Schedule</div>
+      
+      <div class="prose" style="margin-bottom: 12px;">
+        <p>Covering the complete technical design, full-stack software engineering, mobile app compilation, and deployment across all four platform tiers (<strong>Customer Super App [iOS & Android] + Driver Fleet App [Android] + Merchant Hub [Web/Tablet] + Master Admin & Dispatch Center [Web]</strong>):</p>
+      </div>
+
+      <div class="milestones-grid">
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 1 (50%)</span>
+            <span>WEEKS 1 – 4</span>
+          </div>
+          <div class="ms-title">Mobilization Deposit (Super App Prototyping, Geofencing, DB Modeling & Core APIs)</div>
+          <div class="ms-amount">₦1,000,000</div>
+        </div>
+
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 2 (30%)</span>
+            <span>WEEKS 5 – 6</span>
+          </div>
+          <div class="ms-title">Staging & UAT (Super App & Driver App Beta Builds, Merchant Hub & Live Pilot Testing)</div>
+          <div class="ms-amount">₦600,000</div>
+        </div>
+
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 3 (20%)</span>
+            <span>WEEKS 7 – 8</span>
+          </div>
+          <div class="ms-title">Final Launch & Handover (Production Cloud Launch, Google Play & App Store Submissions)</div>
+          <div class="ms-amount">₦400,000</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px; padding: 12px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 11px; color: #334155; line-height: 1.55;">
+        <div style="font-weight: 700; color: #0f172a; margin-bottom: 6px; text-transform: uppercase; font-size: 10px; letter-spacing: 0.5px;">Contractual Guarantees & Ownership Terms</div>
+        <ul style="margin: 0; padding-left: 18px;">
+          <li><strong>100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦2,000,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in the Client.</li>
+          <li><strong>12-Month Technical Support & Maintenance:</strong> Includes twelve (12) months of post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).</li>
+        </ul>
+      </div>
+
+      <div class="bank-box">
+        <strong>Official Remittance Bank Details:</strong><br>
+        Bank Name: GUARANTY TRUST BANK (GTBANK) • Account Name: SALES COWBOY MARKETING SOLUTIONS<br>
+        Account Number: <strong>3006086291</strong>
+      </div>
+    </div>
+
+    <!-- Formal Signoff -->
+    <div class="signoff">
+      <div class="sig-block">
+        <div class="label">ISSUED FOR AND ON BEHALF OF:</div>
+        <div class="company">SALES COWBOY MARKETING SOLUTIONS</div>
+        <div style="font-size: 11px; color: #475569;">Clinton Chukwunyere • Lead Technical Director</div>
+        <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: November 2, 2026</div>
+      </div>
+      <div class="sig-block">
+        <div class="label">ACCEPTED AND CONFIRMED (CLIENT):</div>
+        <div class="company">SWIFTLY TECHNOLOGIES</div>
+        <div style="font-size: 11px; color: #475569;">Representative: __________________________________</div>
+        <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: ________________________</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

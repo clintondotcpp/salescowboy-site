@@ -1,0 +1,115 @@
+# TECHNICAL & COMMERCIAL PROPOSAL: SWIFTLY GO
+**Project:** Abia’s Everyday Super App — Multi-Service Mobility (Keke Hailing), On-Demand Food Delivery & Intra-City Logistics Ecosystem  
+**Target Corridors:** Aba (Commercial Hub) & Umuahia (Administrative Hub), Abia State  
+**Prepared By:** Sales Cowboy Marketing Solutions (Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos | hello@salescowboy.com.ng | +234 810 493 3232)  
+**Prepared For (Recipient):** Executive Leadership, Swiftly Technologies  
+**Date:** November 2, 2026  
+
+---
+
+## 1. EXECUTIVE SUMMARY & THE UNIFIED SUPER APP VISION
+**Swiftly Go** is engineered to become Abia State’s definitive on-demand consumer super app. Rather than deploying fragmented, single-utility applications for passenger transit, food delivery, and logistics, Swiftly Go consolidates these essential everyday habits into a unified digital ecosystem.
+
+By anchoring the platform on a **shared local mobility fleet** (**Keke Napep / Tricycles** and **Dispatch Motorcycles**), Swiftly Go unlocks a formidable operational moat:
+1. **High Daily Frequency & Habit Retention:** Driving continuous app opens and lifetime customer retention through staple daily needs (morning commuter transit, afternoon office lunch orders, and market parcel waybills).
+2. **Optimized Supply Utilization (Zero Driver Idle Time):** The exact same mobility assets servicing peak morning commuter crowds are dynamically cross-dispatched to deliver quick-service restaurant meals during midday lunch hours and bulk market parcels in the afternoon, maximizing daily driver yield and platform Gross Merchandise Value (GMV).
+
+---
+
+## 2. THE SHARED-SUPPLY ENGINE & LOCAL MARKET ADVANTAGE
+Traditional standalone delivery platforms fail in emerging commercial hubs due to supply fragmentation and prohibitive driver idle time. Swiftly Go solves this through an automated cross-dispatch algorithm synchronized with Abia State’s daily economic rhythm:
+
+| Time Window | Primary Demand Source | Fleet Utilized | Operational Objective |
+| :--- | :--- | :--- | :--- |
+| **07:00 – 10:00** | Commuter Peak (Offices, Markets, Schools across Faulks Rd, Brass, Tower Umuahia) | Keke Napep (Passenger) | Maximum ride completion velocity, high volume, minimal driver downtime |
+| **11:30 – 14:30** | Lunch Hour & Corporate Orders (Aba & Umuahia eateries) | Motorcycles (Food) + Keke (Overflow) | Fast restaurant turnaround, high average basket sizes |
+| **14:30 – 17:30** | B2B Waybills & Commercial Parcels (Ariaria, Ekeoha, Cemetery to Motor Parks) | Motorcycles & Keke (Logistics) | Bulk B2B trade parcel transit before market closing |
+| **17:30 – 21:00** | Evening Commuter Rush & Dinner Delivery | Keke (Passenger) + Bikes (Dinner) | Second high-margin passenger wave + evening family meals |
+
+---
+
+## 3. CORE PLATFORM MODULES & FOUR-TIER DELIVERABLES
+
+### 1. Customer Super App (iOS & Android)
+* **Single Sign-On Unified Interface:** Instant toggle between three core Phase 1 utilities: **Swiftly Rides** (Keke Hailing), **Swiftly Food** (Restaurant & Bakery Ordering), and **Swiftly Send** (Intra-City Parcel Dispatch).
+* **Swiftly Rides (Keke Napep Hailing):** Digital hailing with upfront zone and distance-based fare calculations, driver photo/plate verification, union-aligned security ratings, and live vehicle approach tracking.
+* **Swiftly Food Ordering Engine:** Rich digital storefronts for curated restaurants, live kitchen prep status, customizable food options, item variations, and temperature-conscious insulated box delivery routing.
+* **Swiftly Send (P2P & B2B Logistics):** Instant motorcycle/keke courier dispatch for items under 25kg, live route tracking, digital Proof of Delivery (OTP verification + recipient photo capture), and express multi-stop drops.
+* **Unified In-App Wallet:** In-app balance funding via Paystack/Moniepoint (Debit Cards, USSD, Automated Virtual Accounts), peer-to-peer wallet transfers, and automated promo credit vouchers.
+
+### 2. Driver & Fleet Partner App (Android-First)
+* **One-Tap Shift & Demand Radar:** Online/Offline toggle with audible acoustic trip broadcast chimes and heatmaps highlighting high-demand zones.
+* **Dynamic Cross-Dispatch Modes:** Drivers seamlessly transition between passenger hailing requests, restaurant pickup tickets, and market courier parcels without switching applications.
+* **Turn-by-Turn Navigation & Route Optimization:** Built-in lightweight corridor navigation avoiding congested choke points.
+* **Transparent Driver Wallet & Daily Cash Ledger:** Real-time visibility into daily trips, gross fare breakdowns, platform commission debits, cash collections, and instant 24/7 bank withdrawals.
+
+### 3. Merchant & Restaurant Partner Hub (Web & Tablet)
+* **Digital Menu & Inventory Manager:** Real-time item pricing, photo uploads, ingredient variations, stock-out toggles, and operating hours scheduling.
+* **Kitchen Order Display & Ticket Printing:** Automated audio alert for new incoming orders, estimated food prep timers, and Bluetooth receipt printer integration.
+* **Sales Analytics & Settlement Ledger:** Daily gross sales tracking, net platform payout reports, and customer review monitoring.
+
+### 4. Master Operations, Dispatch & Administration Dashboard (Web)
+* **Live City Command Heatmap:** Real-time spatial visualization of all active Keke tricycles and dispatch bikes across Aba and Umuahia corridors.
+* **Geofencing & Dynamic Zone Pricing Engine:** Granular polygon boundary controls to define operating corridors, base fares, per-kilometer rates, night surge multipliers, and union levy allocations.
+* **Driver Onboarding & KYC Verification Gate:** Comprehensive identity review (NIN, Driver’s License, vehicle chassis number, union membership ID) with one-click verification badge approvals.
+* **Financial Ledger & Automated Commission Splits:** Multi-tier accounting tracking platform take-rates (12%–18% on Rides, 15%–25% on Food, 15%–20% on Logistics) with automated NIP bank disbursement automation.
+
+---
+
+## 4. ESTIMATED MONTHLY APP RUNNING & INFRASTRUCTURE COSTS
+*(Note: Paid directly by the Client to infrastructure providers; no agency markup added)*
+
+| Infrastructure / Service Component | Provider | Estimated Monthly Running Cost |
+| :--- | :--- | :--- |
+| **Cloud Server, API Engine & PostgreSQL DB** | Railway.app | **$5 – $10 / month** *(Starts on $5 Starter plan)* |
+| **Document, Menu & Media Vault** | Railway Storage Bucket / Volume | **$0 / month** *(Native container storage; no external cost)* |
+| **SMS / OTP & WhatsApp Alerts** | Termii | **Pay-as-you-go** *(~₦5 per SMS verification)* |
+| **Live Geolocation & Map Tiles** | Mapbox / OpenStreetMap | **$0 / month** *(Free tier covers up to 50,000 loads)* |
+| **Payment Gateway (Card / Virtual Accounts)** | Paystack / Moniepoint | **1.5% capped at ₦2,000 per transaction** |
+| **Total Estimated Monthly Running Cost** | | **~$5 – $10 / month** |
+
+*One-Time / Annual App Store Registration Fees: Google Play Console ($25 one-time), Apple Developer Program ($99/year).*
+
+---
+
+## 5. TOTAL PROJECT INVESTMENT & 8-WEEK TIMELINE
+
+Covering the complete technical design, full-stack software engineering, mobile app compilation, and deployment across all four platform deliverables (**Customer Super App [iOS & Android] + Driver Fleet App [Android] + Merchant Hub [Web/Tablet] + Master Admin & Dispatch Center [Web]**):
+
+* **Total All-Inclusive Contract Investment:** **₦2,000,000 (Two Million Naira)**
+* **Delivery Timeline:** **8 Weeks (56 Calendar Days / 2 Months)**
+
+### Milestone Payment Schedule:
+1. **50% Mobilization Deposit (₦1,000,000):** Due upon contract execution to commence UI/UX super app prototyping, geofence mapping for Aba and Umuahia, PostgreSQL database schema modeling, and core dispatch/matching microservices (Weeks 1 – 4).
+2. **30% Staging & UAT Milestone (₦600,000):** Due upon deployment of functional staging builds—Customer Super App and Driver Fleet App test builds (Android APK and iOS TestFlight), Merchant Hub, and Master Dispatch Desk—for live pilot testing and ride simulations (Weeks 5 – 6).
+3. **20% Final Launch & Handover (₦400,000):** Due upon live production deployment to cloud servers, custom domain binding, Google Play Store and Apple App Store submissions, complete master administrative credentials handover, and technical support commencement (Weeks 7 – 8).
+
+---
+
+### Contractual Guarantees & Ownership Terms:
+* **100% Complete Client IP Ownership:** Upon receipt of final contractual settlement (₦2,000,000), 100% complete, unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials vests exclusively in the Client, free of any developer retention or ongoing royalties.
+* **12-Month Technical Support & Maintenance:** Includes twelve (12) months of post-launch technical support strictly dedicated to server monitoring, uptime surveillance, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
+
+---
+
+### Official Remittance Bank Details:
+* **Bank Name:** Guaranty Trust Bank (GTBank)
+* **Account Name:** Sales Cowboy Marketing Solutions
+* **Account Number:** 3006086291
+
+---
+
+**ISSUED FOR AND ON BEHALF OF SALES COWBOY MARKETING SOLUTIONS:**  
+**Clinton Chukwunyere**  
+Lead Developer / Technical Director  
+Signature: ________________________  
+Date: November 2, 2026  
+
+---
+
+**ACCEPTED AND CONFIRMED (CLIENT):**  
+Company Name: **Swiftly Technologies**  
+Authorized Representative: _______________________  
+Designation: ____________________________________  
+Signature: ________________________  
+Date: ________________________  

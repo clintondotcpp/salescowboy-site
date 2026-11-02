@@ -190,14 +190,14 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   currency: "₦",
   
   infrastructureCosts: [
-    { component: "Cloud Server, API Engine & PostgreSQL DB", provider: "Railway.app / DigitalOcean", estimatedCost: "$10 – $25 / month" },
-    { component: "Waybill, Document & Media Vault", provider: "Cloudflare R2", estimatedCost: "$0 – $10 / month" },
+    { component: "Cloud Server, API Engine & PostgreSQL DB", provider: "Railway.app", estimatedCost: "$5 – $10 / month" },
+    { component: "Waybill, Document & Media Vault", provider: "Railway Storage Bucket / Volume", estimatedCost: "$0 / month" },
     { component: "SMS / OTP & WhatsApp Alerts", provider: "Termii", estimatedCost: "Pay-as-you-go (~₦5/SMS)" },
     { component: "Live Geolocation & Map Tiles", provider: "Mapbox / OpenStreetMap", estimatedCost: "$0 / month (Free tier)" },
     { component: "Driver Identity Verification (NIN/License)", provider: "Prembly / Smile ID", estimatedCost: "Pay-as-you-go (~₦150–₦300)" },
     { component: "Payment Gateway (Card / Virtual Accounts)", provider: "Paystack / Moniepoint", estimatedCost: "1.5% capped at ₦2,000" }
   ],
-  infrastructureNotes: "Total estimated monthly cloud running cost: ~$15 – $40 / month. App Store Developer fees: Google Play ($25 one-time), Apple Developer ($99/year), paid directly to providers without agency markup.",
+  infrastructureNotes: "Total estimated monthly cloud running cost: ~$5 – $10 / month (Vault uses native Railway bucket storage at no additional cost). App Store Developer fees: Google Play ($25 one-time), Apple Developer ($99/year), paid directly to providers without agency markup.",
   
   totalCost: 2000000,
   timeline: "6 to 8 Weeks (45 – 60 Calendar Days)",

@@ -76,13 +76,13 @@ While native mobile apps serve drivers on the highway, commercial cargo owners a
 
 | Infrastructure / Service Component | Provider | Estimated Monthly Running Cost |
 | :--- | :--- | :--- |
-| **Cloud Server, API Engine & PostgreSQL DB** | Railway.app / DigitalOcean | **$10 – $25 / month** *(Starts on $10/mo tier)* |
-| **Waybill, Document & Media Vault** | Cloudflare R2 | **$0 – $10 / month** *(Free tier covers up to 10GB)* |
+| **Cloud Server, API Engine & PostgreSQL DB** | Railway.app | **$5 – $10 / month** *(Starts on $5 Starter plan)* |
+| **Waybill, Document & Media Vault** | Railway Storage Bucket / Volume | **$0 / month** *(Included with Railway, no external cost)* |
 | **SMS / OTP & WhatsApp Alerts** | Termii | **Pay-as-you-go** *(~₦5 per SMS alert)* |
 | **Live Geolocation & Map Tiles** | Mapbox / OpenStreetMap | **$0 / month** *(Free tier covers up to 50,000 map loads)* |
 | **Driver Identity Verification (NIN/Driver's License)** | Prembly / Smile ID | **Pay-as-you-go** *(~₦150 – ₦300 per driver verification)* |
 | **Payment Gateway (Card / Virtual Accounts)** | Paystack / Moniepoint | **1.5% processing fee capped at ₦2,000 per transaction** |
-| **Total Estimated Monthly Running Cost** | | **~$15 – $40 / month** |
+| **Total Estimated Monthly Running Cost** | | **~$5 – $10 / month** |
 
 *One-Time / Annual App Store Registration Fees: Google Play Console ($25 one-time), Apple Developer Program ($99/year).*
 

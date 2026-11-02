@@ -6,7 +6,7 @@
   <title>Software Development Agreement — AMS Haulage and Logistics — Sales Cowboy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0f172a;
@@ -351,8 +351,9 @@
     }
 
     @media print {
-      body {
-        background: transparent !important;
+      body, html {
+        background: #ffffff !important;
+        color: #000000 !important;
         padding: 0 !important;
       }
       .toolbar {
@@ -360,8 +361,17 @@
       }
       .sheet {
         box-shadow: none !important;
-        padding: 24px 32px !important;
+        border: none !important;
+        padding: 0 !important;
         max-width: 100% !important;
+      }
+      .article, .milestone-card, .table-wrap, .sig-grid, .parties-clause {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 12mm 14mm;
       }
     }
   </style>
@@ -385,12 +395,17 @@
     <!-- Header Letterhead -->
     <div class="letterhead">
       <div class="brand-left">
-        <div class="crest">SC</div>
+        <img 
+          src="../../public/assets/salescowboy-logo.png" 
+          onerror="this.src='/assets/salescowboy-logo.png'" 
+          alt="Sales Cowboy Logo" 
+          style="height: 54px; width: auto; object-fit: contain; display: block;" 
+        />
         <div class="brand-info">
-          <h1>SALES COWBOY</h1>
-          <div class="tagline">Marketing Solutions • Enterprise Web & Mobile Engineering</div>
+          <h1 style="font-family: 'Rye', serif; color: #7c4a1e; font-size: 21px; margin-bottom: 2px;">SALES COWBOY</h1>
+          <div class="tagline" style="color: #cca066; font-size: 10px; font-weight: 700; letter-spacing: 1px;">Marketing Solutions • Enterprise Web & Mobile Engineering</div>
           <div class="brand-contact">
-            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos<br>
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria<br>
             hello@salescowboy.com.ng • +234 810 493 3232 / +234 912 309 6853
           </div>
         </div>
@@ -401,7 +416,7 @@
         <span class="label">EFFECTIVE DATE</span>
         <span class="val">November 2, 2026</span>
         <span class="label">CONTRACT VALUE</span>
-        <span class="val" style="color: #d97706;">₦1,500,000 NGN</span>
+        <span class="val" style="color: #7c4a1e; font-weight: 800;">₦1,500,000 NGN</span>
       </div>
     </div>
 
@@ -434,7 +449,11 @@
         <ul>
           <li><strong>Module 1: Consultant Onboarding & Quota Desk:</strong> Paid consultant licensing with Paystack/Moniepoint activation checkout, closed-loop referral system (contractors and transporters register exclusively via unique consultant invite links), dynamic quota caps, and automated commission routing on trips, leases, and vehicle sales into consultant wallets.</li>
           <li><strong>Module 2: Contractor & Job Dispatch Hub:</strong> Structured haulage manifests with geofenced loading/offloading coordinates, vehicle specifications, tonnage, and GIT insurance verification; real-time capacity decrementing countdown logic as transporters commit trucks; and automated 24-hour Expression of Interest (EOI) expiration timers.</li>
-          <li><strong>Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock:</strong> Fleet asset onboarding with vehicle plate numbers, mandatory truck walk-around video proof uploads, driver licenses, and bank accounts (NUBAN); automated 48-Hour Depletion Clock revoking job allocations if trucks fail to arrive and verify gate-in at the loading depot; and dual-stage waybill verification (Stage 1 Loading Waybill advance release, Stage 2 Proof of Offloading / e-POD final 3-way split).</li>
+          <li><strong>Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock:</strong>
+            <br>• <em>Fleet Asset Onboarding:</em> Transporter profile logging plate numbers, mandatory 360-degree truck walk-around video proof uploads, driver licenses, proofs of ownership, and bank accounts (NUBAN).
+            <br>• <em>Automated 48-Hour Gate-In Depletion Clock:</em> Upon contractor acceptance of a truck commitment, an immutable 48-hour countdown state machine activates with real-time UI countdown badges and alerts (T-24h, T-12h, T-2h). If the allocated vehicle fails to arrive at the designated loading depot and verify gate-in (via 150m GPS geofencing, driver QR scan, or digital gate sign-in) before the 48-hour clock reaches 00:00:00, the allocation automatically revokes without penalty to the contractor, returning capacity back to the open dispatch marketplace, while applying a reliability strike to the defaulting transporter.
+            <br>• <em>Dual-Stage Waybill Verification:</em> Stage 1 (Loading Waybill) verification with weighbridge receipt triggering initial mobilization advance; Stage 2 (Proof of Offloading / e-POD) verified delivery sign-off triggering the automated 3-way balance settlement.
+          </li>
           <li><strong>Module 4: Bank & Institutional Financing (Factoring) Desk:</strong> Contractor-to-Bank financing invitations governed by an automated 5-day expiry state machine (strictly capped at one resend); secure financier underwriting desk granting accredited banks direct audit access to verified loading and offload waybill documents to authorize milestone disbursements; and automated 3-way split deductions (Transporter Payout, Platform Service Fee, Consultant Commission).</li>
           <li><strong>Module 5: Heavy Equipment Leasing Engine:</strong> Full 14-step haulage workflow tailored for industrial machinery (cranes, excavators, forklifts, lowbeds, barges) incorporating mandatory 360-degree video inspection uploads, lease duration agreements, caution deposit escrow, and maintenance sign-offs.</li>
           <li><strong>Module 6: Automobile & Heavy-Duty E-Commerce Marketplace:</strong> B2B classified catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement that releases merchant funds only upon formal buyer physical delivery sign-off.</li>

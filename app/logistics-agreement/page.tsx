@@ -243,9 +243,13 @@ function LogisticsAgreementContent() {
             page-break-before: always;
             margin-top: 15mm;
           }
+          .break-inside-avoid {
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
           @page {
             size: A4 portrait;
-            margin: 18mm 14mm 18mm 14mm;
+            margin: 12mm 14mm;
           }
         }
       `}} />
@@ -549,22 +553,29 @@ function LogisticsAgreementContent() {
             
             {/* Document Header & Crest */}
             <div className="border-b-2 border-slate-900 pb-6 mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-              <div>
-                <div className="text-xs font-black tracking-widest text-amber-700 uppercase font-mono mb-1">
-                  OFFICIAL SOFTWARE DEVELOPMENT CONTRACT
+              <div className="flex items-center gap-3 select-none">
+                <img 
+                  src="/assets/salescowboy-logo.png" 
+                  alt="Sales Cowboy Logo" 
+                  className="h-14 w-auto object-contain block" 
+                />
+                <div className="flex flex-col leading-none">
+                  <span className="text-xl font-bold tracking-wider uppercase font-serif text-[#7c4a1e]" style={{ fontFamily: "Rye, serif" }}>
+                    Sales Cowboy
+                  </span>
+                  <span className="text-[10px] tracking-widest text-[#cca066] uppercase font-bold mt-1">
+                    Marketing Solutions • Enterprise Web & Mobile Engineering
+                  </span>
+                  <p className="text-[10px] text-slate-500 leading-tight mt-1">
+                    Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria • +234 810 493 3232
+                  </p>
                 </div>
-                <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-                  MASTER SERVICES AGREEMENT
-                </h1>
-                <p className="text-xs text-slate-500 mt-1 font-mono">
-                  REF NO: {state.agreementId} | EFFECTIVE: {state.effectiveDate}
-                </p>
               </div>
 
               <div className="text-right text-xs text-slate-600 font-mono space-y-0.5">
-                <div className="font-bold text-slate-900 uppercase">SALES COWBOY MARKETING SOLUTIONS</div>
-                <div>Lagos, Nigeria</div>
-                <div>salescowboy.com.ng</div>
+                <div className="font-bold text-slate-900 uppercase">OFFICIAL BILATERAL CONTRACT</div>
+                <div className="text-amber-800 font-bold">REF: {state.agreementId}</div>
+                <div>DATE: {state.effectiveDate}</div>
               </div>
             </div>
 
@@ -607,7 +618,7 @@ function LogisticsAgreementContent() {
                 <div className="bg-slate-50 p-3 rounded border border-slate-200 space-y-1 text-[11.5px]">
                   <div><strong>• Module 1: Consultant Onboarding & Quota Desk</strong> — Paid Licensing via Paystack/Moniepoint, closed-loop invite referrals, admin account cap enforcement, automated wallet splits.</div>
                   <div><strong>• Module 2: Contractor & Job Dispatch Hub</strong> — Structured cargo briefs, geofenced loading/offload points, real-time capacity decrementing countdown, 24h EOI timer.</div>
-                  <div><strong>• Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock</strong> — Fleet asset profiles with truck video uploads, 48-hour gate-in countdown clock with automatic job revocation, dual-stage waybills (loading advance & e-POD offload payout).</div>
+                  <div><strong>• Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock</strong> — Fleet asset profiles with mandatory truck video uploads, automated 48-hour gate-in countdown state machine with real-time UI badges and alerts (T-24h/12h/2h), automated job revocation without contractor penalty if unverified at depot within 48h (instantly returning capacity to open pool), and dual-stage waybills (loading advance & e-POD offload payout).</div>
                   <div><strong>• Module 4: Bank Factoring Desk</strong> — Contractor-to-bank invite pipeline, 5-day state machine (max 1 resend), financier waybill audit desk, dynamic 3-way split settlement.</div>
                   <div><strong>• Module 5: Heavy Equipment Leasing Engine</strong> — 14-step machinery workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection videos and caution escrow.</div>
                   <div><strong>• Module 6: Automobile & Heavy-Duty Marketplace</strong> — Classified catalog for prime movers, flatbeds, tippers, genuine parts with inspection-based escrow release.</div>

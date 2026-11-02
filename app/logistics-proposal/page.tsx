@@ -136,11 +136,11 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
       title: "Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock",
       timeline: "Weeks 3 - 5",
       cost: 600000,
-      description: "Asset video verification and automated allocation revocation countdown.",
+      description: "Asset video verification and automated allocation revocation countdown engine.",
       deliverables: [
-        "Fleet Asset Onboarding: Vehicle profile logging plate numbers, truck video proof uploads, driver licenses, proofs of ownership, and bank details",
-        "The 48-Hour Depletion Clock: Acceptance triggers a 48-hour countdown. Failure to gate-in and verify at loading depot automatically revokes the allocation",
-        "Dual-Stage Waybill Verification: Stage 1 (Loading Waybill) triggers advance payout; Stage 2 (Proof of Offloading / e-POD) triggers final 3-way settlement"
+        "Fleet Asset Onboarding: Comprehensive vehicle profile logging plate numbers, mandatory 360-degree truck walk-around video proof uploads, driver commercial licenses, phone contacts, proofs of ownership, and verified bank accounts (NUBAN)",
+        "The 48-Hour Depletion Clock (Anti-Hoarding & Operational Assurance): Acceptance activates an automated 48-hour countdown state machine with real-time UI badges and alerts (T-24h, T-12h, T-2h). If the allocated vehicle fails to arrive at the designated depot and verify gate-in (via 150m GPS geofencing, driver QR scan, or digital gate sign-in) before the 48-hour clock reaches 00:00:00, the allocation automatically revokes without penalty to the contractor, returning capacity back to the open dispatch marketplace, while applying a reliability strike to the defaulting transporter",
+        "Dual-Stage Waybill Verification: Stage 1 (Loading Waybill) verification with weighbridge receipt triggers initial advance payout; Stage 2 (Proof of Offloading / e-POD) triggers final 3-way balance settlement"
       ]
     },
     {
@@ -254,6 +254,35 @@ function LogisticsProposalContent() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans print:bg-white print:text-black">
+      {/* CSS Print Styles */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media print {
+          body, html {
+            background-color: white !important;
+            color: black !important;
+          }
+          .no-print, header, .print\\:hidden {
+            display: none !important;
+          }
+          .print-full-width {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+            transform: none !important;
+          }
+          .break-inside-avoid {
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+          @page {
+            size: A4 portrait;
+            margin: 12mm 14mm;
+          }
+        }
+      `}} />
       
       {/* Top Application Bar - Hidden in Print */}
       <header className="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-4 py-3 print:hidden">
@@ -454,22 +483,24 @@ function LogisticsProposalContent() {
           <div className={`${activeTab === "edit" ? "lg:col-span-7" : "lg:col-span-12"} transition-all`}>
             
             {/* The A4 Letterhead Sheet */}
-            <div className="bg-white text-slate-900 rounded-lg shadow-2xl p-8 sm:p-12 border border-slate-200 max-w-[210mm] mx-auto print:shadow-none print:border-none print:p-0">
+            <div className="bg-white text-slate-900 rounded-lg shadow-2xl p-8 sm:p-12 border border-slate-200 max-w-[210mm] mx-auto print:shadow-none print:border-none print:p-0 print-full-width">
               
               {/* Header Letterhead */}
               <div className="border-b-2 border-slate-900 pb-5 mb-6 flex flex-wrap justify-between items-start gap-4">
-                <div className="flex gap-4 items-center">
-                  <div className="w-12 h-12 rounded-lg bg-slate-950 text-amber-500 flex items-center justify-center font-mono font-black text-xl border-2 border-amber-500 shadow-md">
-                    SC
-                  </div>
-                  <div>
-                    <h1 className="font-serif font-black text-xl tracking-tight text-slate-950 uppercase">
-                      SALES COWBOY
-                    </h1>
-                    <p className="text-[10px] font-mono font-bold text-amber-700 uppercase tracking-widest">
+                <div className="flex gap-3 items-center select-none">
+                  <img 
+                    src="/assets/salescowboy-logo.png" 
+                    alt="Sales Cowboy Logo" 
+                    className="h-14 w-auto object-contain block" 
+                  />
+                  <div className="flex flex-col leading-none">
+                    <span className="text-xl font-bold tracking-wider uppercase font-serif text-[#7c4a1e]" style={{ fontFamily: "Rye, serif" }}>
+                      Sales Cowboy
+                    </span>
+                    <span className="text-[10px] tracking-widest text-[#cca066] uppercase font-bold mt-1">
                       Marketing Solutions • Enterprise Web & Mobile Engineering
-                    </p>
-                    <p className="text-[10px] text-slate-500 leading-tight mt-0.5">
+                    </span>
+                    <p className="text-[10px] text-slate-500 leading-tight mt-1">
                       Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos • +234 810 493 3232 / +234 912 309 6853
                     </p>
                   </div>

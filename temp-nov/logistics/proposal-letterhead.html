@@ -6,7 +6,7 @@
   <title>Technical & Commercial Proposal — AMS Haulage and Logistics — Sales Cowboy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0f172a;
@@ -466,8 +466,9 @@
     }
 
     @media print {
-      body {
-        background: transparent !important;
+      body, html {
+        background: #ffffff !important;
+        color: #000000 !important;
         padding: 0 !important;
       }
       .toolbar {
@@ -475,8 +476,17 @@
       }
       .sheet {
         box-shadow: none !important;
-        padding: 24px 32px !important;
+        border: none !important;
+        padding: 0 !important;
         max-width: 100% !important;
+      }
+      .section, .module-card, .table-wrap, .signature-block, .recipient-grid {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 12mm 14mm;
       }
     }
   </style>
@@ -500,12 +510,17 @@
     <!-- Header Letterhead -->
     <div class="letterhead">
       <div class="brand-left">
-        <div class="crest">SC</div>
+        <img 
+          src="../../public/assets/salescowboy-logo.png" 
+          onerror="this.src='/assets/salescowboy-logo.png'" 
+          alt="Sales Cowboy Logo" 
+          style="height: 54px; width: auto; object-fit: contain; display: block;" 
+        />
         <div class="brand-info">
-          <h1>SALES COWBOY</h1>
-          <div class="tagline">Marketing Solutions • Enterprise Web & Mobile Engineering</div>
+          <h1 style="font-family: 'Rye', serif; color: #7c4a1e; font-size: 21px; margin-bottom: 2px;">SALES COWBOY</h1>
+          <div class="tagline" style="color: #cca066; font-size: 10px; font-weight: 700; letter-spacing: 1px;">Marketing Solutions • Enterprise Web & Mobile Engineering</div>
           <div class="brand-contact">
-            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos<br>
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria<br>
             hello@salescowboy.com.ng • +234 810 493 3232 / +234 912 309 6853
           </div>
         </div>
@@ -513,7 +528,7 @@
       <div class="doc-meta">
         <div class="ref">REF: SCM-PROP-2026-AMS-1.5M</div>
         <div>DATE: November 2, 2026</div>
-        <div>TOTAL: ₦1,500,000 NGN</div>
+        <div style="color: #7c4a1e; font-weight: 800;">TOTAL: ₦1,500,000 NGN</div>
       </div>
     </div>
 
@@ -598,13 +613,17 @@
       <div class="module-card">
         <div class="module-name">
           <span>Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock</span>
-          <span class="module-tag">Fleet Verification</span>
+          <span class="module-tag">Fleet Verification & Anti-Hoarding</span>
         </div>
-        <div class="module-desc">Asset video verification and automated allocation revocation countdown.</div>
+        <div class="module-desc">Asset video verification and automated allocation revocation countdown engine.</div>
         <ul class="module-list">
-          <li><strong>Fleet Asset Onboarding:</strong> Vehicle profile logging plate numbers, truck video proof uploads, driver licenses, proofs of ownership, and bank details.</li>
-          <li><strong>The 48-Hour Depletion Clock:</strong> Acceptance triggers a 48-hour countdown. Failure to gate-in and verify at loading depot automatically revokes the allocation.</li>
-          <li><strong>Dual-Stage Waybill Verification:</strong> Stage 1 (Loading Waybill) triggers advance payout; Stage 2 (Proof of Offloading / e-POD) triggers final 3-way settlement.</li>
+          <li><strong>Fleet Asset Onboarding:</strong> Vehicle profile logging plate numbers, mandatory 360-degree truck walk-around video proof uploads, driver licenses, proofs of ownership, and verified bank accounts (NUBAN).</li>
+          <li><strong>The 48-Hour Depletion Clock (Anti-Hoarding & Operational Assurance):</strong>
+            <br>• <em>Trigger & Visual Countdown:</em> Once a transporter's truck commitment is accepted, an automated 48-hour countdown state machine activates. Both parties see real-time UI countdown badges with proactive automated SMS/WhatsApp alerts delivered at T-24h, T-12h, and T-2h before expiry.
+            <br>• <em>Geofenced Depot Gate-In Verification:</em> To halt the clock and confirm arrival, the assigned truck and driver must physically arrive at the specified loading terminal/depot. Gate-in is validated via 150m GPS geofenced proximity pings, driver app QR depot scan, or depot security digital check-in.
+            <br>• <em>Automated Default & Instant Capacity Release:</em> If the timer reaches 00:00:00 without verified depot gate-in, the system automatically revokes the allocation without penalty to the contractor, immediately returns the vacated truck capacity to the open dispatch pool for waitlisted transporters to claim, and applies a reliability strike to the defaulting transporter's scorecard.
+          </li>
+          <li><strong>Dual-Stage Waybill Verification:</strong> Stage 1 (Loading Waybill) verification with weighbridge receipt triggers initial advance payout; Stage 2 (Proof of Offloading / e-POD) triggers final 3-way balance settlement.</li>
         </ul>
       </div>
 

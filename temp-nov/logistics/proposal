@@ -33,8 +33,11 @@ To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, 
 * **24-Hour EOI Timer:** Transporter expressions of interest (EOIs) automatically expire and release truck holds if not formally approved by the contractor within 24 hours.
 
 ### Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock
-* **Fleet Asset Onboarding:** Comprehensive vehicle profile logging plate numbers, truck walk-around video proof uploads, driver commercial licenses, phone contacts, proofs of ownership, and verified bank accounts (NUBAN).
-* **The 48-Hour Depletion Clock:** Once a transporter’s offer is accepted, a 48-hour countdown triggers. If the truck fails to arrive and verify gate-in at the loading depot within 48 hours, the job allocation automatically revokes and reopens to the public network.
+* **Fleet Asset Onboarding:** Comprehensive vehicle profile logging plate numbers, mandatory 360-degree truck walk-around video proof uploads, driver commercial licenses, phone contacts, proofs of ownership, and verified bank accounts (NUBAN).
+* **The 48-Hour Depletion Clock (Anti-Hoarding & Operational Assurance):**
+  * *Trigger & Visual Countdown:* Once a transporter's truck commitment is accepted by the contractor, an automated 48-hour countdown state machine activates. Both parties see real-time UI countdown badges with proactive automated SMS/WhatsApp alerts delivered at T-24h, T-12h, and T-2h before expiry.
+  * *Geofenced Depot Gate-In Verification:* To halt the clock and confirm arrival, the assigned truck and driver must physically arrive at the specified loading terminal/depot. Gate-in is validated via 150m GPS geofenced proximity pings, driver app QR depot scan, or depot security digital check-in.
+  * *Automated Default & Instant Capacity Release:* If the timer reaches 00:00:00 without verified depot gate-in, the system automatically revokes the allocation without penalty to the contractor, immediately returns the vacated truck capacity to the open dispatch pool for waitlisted transporters to claim, and applies a reliability strike to the defaulting transporter's scorecard.
 * **Dual-Stage Waybill Verification:**
   * *Stage 1 (Loading Waybill):* Transporter uploads stamped loading manifest and weighbridge receipt $\rightarrow$ triggers contractor/bank verification and immediate loading advance payout.
   * *Stage 2 (Proof of Offloading / e-POD):* Transporter uploads stamped receiver waybill $\rightarrow$ triggers final settlement release to transporter, platform escrow, and consultant wallet.

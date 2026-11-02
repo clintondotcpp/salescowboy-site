@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical & Commercial Proposal — Logistics & Haulage Ecosystem — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #b45309;
+      --accent-light: #fef3c7;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0b0f19;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: #0f172a;
+      color: #f8fafc;
+      border: 1px solid #475569;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #334155;
+      border-color: #64748b;
+    }
+
+    .btn-primary {
+      background: #d97706;
+      border-color: #b45309;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #b45309;
+    }
+
+    /* A4 Paper Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 48px 56px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* Corporate Letterhead */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+
+    .brand-left {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .crest {
+      width: 52px;
+      height: 52px;
+      background: var(--primary);
+      color: #f59e0b;
+      border: 2px solid #f59e0b;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .brand-info h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-info .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #b45309;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+    }
+
+    .brand-contact {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .doc-meta .ref {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    /* Proposal Title */
+    .title-block {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: #92400e;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .title-block h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .recipient-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 28px;
+      font-size: 12px;
+    }
+
+    .recipient-box .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .recipient-box .name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    /* Content Typography */
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--primary);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .prose {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    .prose p {
+      margin-bottom: 10px;
+    }
+
+    .prose ul {
+      margin: 8px 0 12px 18px;
+    }
+
+    .prose li {
+      margin-bottom: 6px;
+    }
+
+    /* Module Card */
+    .module-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      background: #ffffff;
+    }
+
+    .module-card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .module-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .module-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      background: #f1f5f9;
+      color: #475569;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .module-desc {
+      font-size: 11.5px;
+      color: #475569;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .module-list {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 11px;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .module-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Cost Table */
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin: 12px 0;
+    }
+
+    .cost-table th {
+      background: #f1f5f9;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .cost-table td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      color: #334155;
+    }
+
+    .cost-table .tar {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cost-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .table-note {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* Milestone Cards */
+    .milestones-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .ms-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: #f8fafc;
+      text-align: center;
+    }
+
+    .ms-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .ms-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .ms-amount {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 800;
+      color: #b45309;
+    }
+
+    .bank-box {
+      background: var(--accent-light);
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #92400e;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    /* Sign-off */
+    .signoff {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 2px solid var(--primary);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .sig-block .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .sig-block .company {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .sig-block .sig-line {
+      margin-top: 28px;
+      border-bottom: 1px dashed #94a3b8;
+      padding-bottom: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        padding: 24px 32px !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>📄</span>
+      <span>Technical & Commercial Proposal — Logistics Ecosystem</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">
+        <span>🖨️</span> Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="sheet">
+
+    <!-- Header Letterhead -->
+    <div class="letterhead">
+      <div class="brand-left">
+        <div class="crest">SC</div>
+        <div class="brand-info">
+          <h1>SALES COWBOY</h1>
+          <div class="tagline">Marketing Solutions • Enterprise Web & Mobile Engineering</div>
+          <div class="brand-contact">
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos<br>
+            hello@salescowboy.com.ng • +234 810 493 3232 / +234 912 309 6853
+          </div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <div class="ref">REF: SCM-PROP-2026-LOG2M</div>
+        <div>DATE: November 2, 2026</div>
+        <div>TOTAL: ₦2,000,000 NGN</div>
+      </div>
+    </div>
+
+    <!-- Title Block -->
+    <div class="title-block">
+      <span class="badge">Commercial & Technical Proposal</span>
+      <h2>Unified Logistics, Haulage Transaction Management & Fleet Equipment Ecosystem</h2>
+      <div style="font-size: 12px; color: var(--text-muted);">
+        Cross-Platform Android App, iOS App, Public Web Marketplace & Master Operations Hub
+      </div>
+    </div>
+
+    <!-- Recipient Info -->
+    <div class="recipient-grid">
+      <div class="recipient-box">
+        <div class="label">PREPARED BY (DEVELOPER)</div>
+        <div class="name">SALES COWBOY MARKETING SOLUTIONS</div>
+        <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">
+          Clinton Chukwunyere • Technical Director<br>
+          GTBank Account: 3006086291
+        </div>
+      </div>
+      <div class="recipient-box">
+        <div class="label">PREPARED FOR (CLIENT / RECIPIENT)</div>
+        <div class="name" style="color: #64748b;">____________________________________</div>
+        <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">
+          Attention / Rep: ____________________________________<br>
+          Address: ____________________________________
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Executive Summary -->
+    <div class="section">
+      <div class="section-title">1. Executive Summary & The 4-Tier Logistics Ecosystem</div>
+      <div class="prose">
+        <p>
+          To modernize commercial freight haulage across Nigeria, eliminate cargo diversion risks, and structure transparent commission settlements, this platform is engineered as an integrated <strong>four-tier digital ecosystem</strong> rather than a fragmented standalone mobile app:
+        </p>
+        <ul>
+          <li><strong>1. The Native Mobile Applications (iOS & Android):</strong> Dedicated mobile apps published on the Google Play Store and Apple App Store for Truckers, Fleet Owners, and Field Drivers, featuring live GPS checkpoint logging, trip milestone updates, offline gate-pass scanning, and digital waybill capture.</li>
+          <li><strong>2. The Contractor & Freight Broker Deal Desks (Web & Mobile):</strong> Web and mobile portals empowering Cargo Owners (Contractors) to broadcast freight tenders, and Freight Brokers (Middlemen) to lock in protected brokerage commissions without the risk of direct client-trucker bypassing.</li>
+          <li><strong>3. The Public Web Portal & Heavy Equipment Marketplace:</strong> A high-traffic, SEO-optimized web storefront engineered to rank organically on Google Search for truck rentals, crane/excavator charters, genuine spare parts sales, and nationwide freight quotes.</li>
+          <li><strong>4. The Master Operations, Escrow & Accounting Control Center:</strong> An enterprise-grade administration hub providing real-time visibility over active highway corridors, automated 3-way split escrow payouts, demurrage claims, and statutory tax reporting.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. The Web Marketplace & SEO -->
+    <div class="section">
+      <div class="section-title">2. The Public Web Marketplace & Organic SEO Advantage</div>
+      <div class="prose">
+        <p>
+          While native mobile apps serve drivers on the highway, corporate cargo owners and heavy-equipment buyers discover services via Google Search. Building a dedicated <strong>Public Web Marketplace</strong> transforms the platform into an organic customer acquisition engine:
+        </p>
+        <ul>
+          <li><strong>Nationwide Haulage & Equipment Discovery:</strong> Shippers, construction firms, and logistics coordinators across Nigeria can request freight quotes and browse verified equipment without needing an initial app install.</li>
+          <li><strong>Programmatic Route & Cargo SEO Engine:</strong> Every freight corridor and equipment category automatically generates Google-optimized landing pages with Schema.org logistics metadata (e.g., <em>"40ft Flatbed Truck Haulage from Apapa Port to Kano"</em>, <em>"Caterpillar Excavator Lease in Port Harcourt"</em>, <em>"Heavy-Duty Truck Tyres in Lagos"</em>). This captures high-intent B2B search volume organically without continuous ad spend.</li>
+          <li><strong>Verified Freight Rate Directory & Capacity Feed:</strong> A transparent freight index showing standard route rates across key Nigerian economic corridors (Lagos–Ibadan, Apapa–Onitsha, PH–Aba, Abuja–Kaduna), establishing the platform as the definitive authority in Nigerian commercial freight.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Comprehensive Modules -->
+    <div class="section">
+      <div class="section-title">3. Comprehensive Module Breakdown</div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>Module 1: 3-Role Haulage Transaction, Dispatch & Bypassing-Protection Desk</span>
+          <span class="module-tag">Core Engine</span>
+        </div>
+        <div class="module-desc">Facilitates seamless load posting, broker bidding, and driver dispatch while preventing disintermediation.</div>
+        <ul class="module-list">
+          <li><strong>Contractor Portal:</strong> Post haulage tenders (cargo specs, 20ft/40ft Flatbed, Box, Tipper, Tanker, tonnage, loading bay coordinates, destination, budget).</li>
+          <li><strong>Broker Deal Desk:</strong> Middlemen pick up jobs, assign verified truckers, and lock in protected brokerage markups. Data isolation prevents client-trucker bypassing.</li>
+          <li><strong>Trucker Interface:</strong> Drivers review manifests, upload compliance credentials (hackney permit, GIT insurance, roadworthiness), and log status milestones.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>Module 2: Milestone Haulage Escrow, Mobilization Fuel Advance & Split Wallet</span>
+          <span class="module-tag">Finance & Escrow</span>
+        </div>
+        <div class="module-desc">Accommodates Nigerian freight payment dynamics with automated multi-wallet settlements.</div>
+        <ul class="module-list">
+          <li><strong>Milestone Fuel Advance:</strong> 60%–70% advance released upon loading verification, weighbridge slip capture, and signed waybill upload; 30%–40% locked in escrow until offloaded.</li>
+          <li><strong>Automated 3-Way Split:</strong> Escrow splits payout simultaneously between Trucker Wallet, Middleman Commission Wallet, and Platform Royalty Fee upon verified delivery.</li>
+          <li><strong>Instant Commercial Bank Payouts:</strong> Automated NIP bank transfers via Paystack/Moniepoint directly to Nigerian commercial bank accounts (NUBAN) 24/7.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>Module 3: Digital Waybill & Electronic Proof of Delivery (e-POD)</span>
+          <span class="module-tag">Verification</span>
+        </div>
+        <div class="module-desc">Eliminates paper-waybill loss, delivery disputes, and delayed invoice reconciliations.</div>
+        <ul class="module-list">
+          <li><strong>Mobile Waybill Capture:</strong> Drivers photograph stamped waybills, tally sheets, and gate passes with GPS coordinates and timestamps embedded.</li>
+          <li><strong>Consignee Digital Sign-Off:</strong> Warehouse managers sign directly on-screen or authenticate receipt via automated SMS/WhatsApp delivery authorization PINs.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>Module 4: Logistics Equipment, Spare Parts & Heavy Vehicle Leasing Portal</span>
+          <span class="module-tag">E-Commerce & Leasing</span>
+        </div>
+        <div class="module-desc">A unified marketplace for buying truck parts and leasing industrial machinery.</div>
+        <ul class="module-list">
+          <li><strong>Spare Parts Storefront:</strong> Categorized catalog for tyres, batteries, engine blocks, axles, hydraulic jacks, and tarpaulins with multi-merchant vendor accounts.</li>
+          <li><strong>Equipment & Truck Leasing Engine:</strong> Book flatbeds, mobile cranes, forklifts, and excavators on daily, weekly, or monthly charters with caution deposit tracking.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>Module 5: GPS Checkpoint Tracking, Route Monitoring & Driver Verification</span>
+          <span class="module-tag">Safety & Fleet</span>
+        </div>
+        <div class="module-desc">Active highway corridor tracking and driver identity verification to prevent cargo loss.</div>
+        <ul class="module-list">
+          <li><strong>Corridor Route Telemetry:</strong> Background GPS pings active truck positions along transit corridors for live map tracking by Contractors and Middlemen.</li>
+          <li><strong>Driver Background Screening:</strong> Comprehensive identity verification (NIN, BVN, FRSC Commercial Driver’s License) and vehicle chassis validation.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>Module 6: Enterprise Financial Accounting, Demurrage & Statutory Tax Ledger</span>
+          <span class="module-tag">Compliance</span>
+        </div>
+        <div class="module-desc">Double-entry accounting and automated tax deductions for corporate transport compliance.</div>
+        <ul class="module-list">
+          <li><strong>Double-Entry Ledger:</strong> Chart of accounts covering Escrow Liabilities, Fuel Advances, Retainage, Driver Payouts, Brokerage Margins, and Royalties.</li>
+          <li><strong>Demurrage Engine:</strong> Automated demurrage computation for loading bay or offloading delays exceeding free grace periods.</li>
+          <li><strong>Statutory Tax (VAT & WHT):</strong> Automated 7.5% VAT calculation and 5% Withholding Tax deduction with exportable FIRS/NRS-compliant tax schedules.</li>
+        </ul>
+      </div>
+
+      <div class="module-card">
+        <div class="module-name">
+          <span>Module 7: Master Operations Center & Dispute Resolution Desk</span>
+          <span class="module-tag">Command Center</span>
+        </div>
+        <div class="module-desc">Complete administrative oversight, dispute resolution, and regulatory audit readiness.</div>
+        <ul class="module-list">
+          <li><strong>Operations Command Hub:</strong> Bird’s-eye monitoring of active trips, pending escrow releases, verified driver queues, and lease contracts.</li>
+          <li><strong>Dispute Resolution Desk:</strong> Structured arbitration workflow for transit cargo damages, missing goods, or delay claims before escrow disbursement.</li>
+          <li><strong>100% Immutable Audit Trails:</strong> Every system action, login, waybill sign-off, and payout is permanently logged with user ID, GPS, and timestamp.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- 4. Infrastructure Costs -->
+    <div class="section">
+      <div class="section-title">4. Estimated Monthly App Running & Infrastructure Costs</div>
+      <div class="prose">
+        <p>*(Paid directly by the Client to infrastructure providers; no agency markup added)*</p>
+      </div>
+
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Infrastructure / Service Component</th>
+            <th>Provider</th>
+            <th class="tar">Estimated Monthly Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cloud Server, API Engine & PostgreSQL DB</strong></td>
+            <td>Railway.app / DigitalOcean</td>
+            <td class="tar"><strong>$10 – $25 / month</strong> <span style="color:#64748b;">(Starts on $10/mo tier)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Waybill, Document & Media Vault</strong></td>
+            <td>Cloudflare R2</td>
+            <td class="tar"><strong>$0 – $10 / month</strong> <span style="color:#64748b;">(Free tier covers up to 10GB)</span></td>
+          </tr>
+          <tr>
+            <td><strong>SMS / OTP & WhatsApp Alerts</strong></td>
+            <td>Termii</td>
+            <td class="tar"><strong>Pay-as-you-go</strong> <span style="color:#64748b;">(~₦5 per SMS alert)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Live Geolocation & Map Tiles</strong></td>
+            <td>Mapbox / OpenStreetMap</td>
+            <td class="tar"><strong>$0 / month</strong> <span style="color:#64748b;">(Free tier covers up to 50,000 loads)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Driver Identity Verification (NIN/License)</strong></td>
+            <td>Prembly / Smile ID</td>
+            <td class="tar"><strong>Pay-as-you-go</strong> <span style="color:#64748b;">(~₦150 – ₦300 per check)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Payment Gateway (Card / Virtual Accounts)</strong></td>
+            <td>Paystack / Moniepoint</td>
+            <td class="tar"><strong>1.5% capped at ₦2,000</strong> <span style="color:#64748b;">(Per transaction)</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="table-note">
+        <strong>Total Estimated Monthly Running Cost: ~$15 – $40 / month.</strong><br>
+        *One-Time / Annual App Store Registration Fees: Google Play Console ($25 one-time), Apple Developer Account ($99/year).
+      </div>
+    </div>
+
+    <!-- 5. Investment & Timeline -->
+    <div class="section">
+      <div class="section-title">5. Total Project Investment & Milestone Payment Schedule</div>
+      
+      <div class="prose" style="margin-bottom: 12px;">
+        <p>Covering the full design, engineering, and deployment of all four platform tiers (<strong>Android Mobile App + iOS Mobile App + Public SEO Web Portal & Equipment Marketplace + Master Admin Operations Center</strong>) across all seven core modules:</p>
+      </div>
+
+      <div class="milestones-grid">
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 1</span>
+            <span>50%</span>
+          </div>
+          <div class="ms-title">Mobilization Deposit (Architecture, UI/UX Design, DB Schema & Core Transaction APIs)</div>
+          <div class="ms-amount">₦1,000,000</div>
+        </div>
+
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 2</span>
+            <span>30%</span>
+          </div>
+          <div class="ms-title">Staging & UAT (Web Portal, Admin Desk, and Android/iOS Test Builds for Client Review)</div>
+          <div class="ms-amount">₦600,000</div>
+        </div>
+
+        <div class="ms-card">
+          <div class="ms-header">
+            <span>MILESTONE 3</span>
+            <span>20%</span>
+          </div>
+          <div class="ms-title">Final Launch & Handover (Live Cloud Deployment, App Store Submissions & Full Code Transfer)</div>
+          <div class="ms-amount">₦400,000</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px; padding: 12px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 11px; color: #334155; line-height: 1.55;">
+        <div style="font-weight: 700; color: #0f172a; margin-bottom: 6px; text-transform: uppercase; font-size: 10px; letter-spacing: 0.5px;">Contractual Guarantees & Ownership Terms</div>
+        <ul style="margin: 0; padding-left: 18px;">
+          <li><strong>100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦2,000,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in the Client.</li>
+          <li><strong>12-Month Technical Support & Maintenance:</strong> Includes twelve (12) months of post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).</li>
+        </ul>
+      </div>
+
+      <div class="bank-box">
+        <strong>Official Remittance Bank Details:</strong><br>
+        Bank Name: GUARANTY TRUST BANK (GTBANK) • Account Name: SALES COWBOY MARKETING SOLUTIONS<br>
+        Account Number: <strong>3006086291</strong>
+      </div>
+    </div>
+
+    <!-- Formal Signoff -->
+    <div class="signoff">
+      <div class="sig-block">
+        <div class="label">ISSUED FOR AND ON BEHALF OF:</div>
+        <div class="company">SALES COWBOY MARKETING SOLUTIONS</div>
+        <div style="font-size: 11px; color: #475569;">Clinton Chukwunyere • Technical Director</div>
+        <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: November 2, 2026</div>
+      </div>
+      <div class="sig-block">
+        <div class="label">ACCEPTED AND CONFIRMED (CLIENT):</div>
+        <div class="company" style="color: #64748b;">____________________________________</div>
+        <div style="font-size: 11px; color: #475569;">Representative: __________________________________</div>
+        <div class="sig-line">Signature: __________________________________</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 4px;">Date: ________________________</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

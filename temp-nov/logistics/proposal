@@ -71,25 +71,43 @@ To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, 
 7. **Infrastructure & Network Resilience:** End-to-end 256-bit SSL/TLS encryption, parameterized SQL queries eliminating SQL injection, containerized Railway backend architecture with DDoS mitigation, and automated daily database backups.
 
 ### B. Statutory Financial System Architecture (VAT, WHT & Tax Accounting)
-1. **Automated Withholding Tax (WHT) Deductions at Source:**
-   * In compliance with Nigerian tax regulations (FIRS / NRS), the platform automates Withholding Tax deductions prior to final wallet disbursement:
-     * **5% WHT** automatically deducted on haulage brokerage commissions and transporter payouts.
-     * **10% WHT** automatically deducted on heavy equipment leasing and industrial machinery hire proceeds.
-   * Withheld funds are immediately segregated into a dedicated **Statutory Tax Holding Sub-Ledger** under AMS Haulage’s administrative oversight, and an electronic credit advice is issued to the beneficiary.
-2. **Value Added Tax (VAT - 7.5%) Automation:**
-   * The system automatically computes and applies standard 7.5% VAT on all platform brokerage commissions, technology facilitation fees, and marketplace listing charges.
-   * Every generated invoice, bill of lading receipt, and payment manifest clearly breaks down:
-     1. Gross Freight / Lease / Transaction Value;
-     2. Transporter Net Payment (Loading Advance + e-POD Final Release);
-     3. Consultant Referral Cut (Net of WHT);
-     4. Platform Service Charge;
-     5. Value Added Tax (7.5% itemized on platform fee);
-     6. Withheld Statutory Tax (WHT).
-3. **One-Click Tax Schedules & Statutory Compliance Reporting:**
-   * The Executive Accounting Portal provides real-time visibility into total VAT collected and total WHT accrued over any selected date range.
-   * Administrators can generate one-click exportable tax schedules (CSV / Excel format) formatted specifically for monthly returns filing with the Federal Inland Revenue Service (FIRS) and State Internal Revenue Services (SIRS), eliminating manual calculation errors.
-4. **Bank Factoring & Escrow Split Reconciliation:**
-   * When a bank underwrites an invoice, the system dynamically recalculates the 3-way split: deducting bank factoring interest/discount fees and statutory tax reserves first, then releasing the transporter's loading advance, ensuring AMS Haulage is never exposed to uncollected tax liabilities.
+
+#### 1. Transaction Tax Liability Breakdown (Who Pays What?):
+* **Value Added Tax (VAT — 7.5%):** Paid by **exactly ONE entity — The Contractor (the cargo owner/buyer)**. VAT is a consumption tax levied exclusively on the buyer of a taxable service. It applies to the Platform's technology facilitation / brokerage fee. Neither the transporter nor the consultant pays VAT.
+* **Withholding Tax (WHT — 5% or 10%):** Deducted at source from **TWO entities — The Transporter and The Consultant**. WHT is an advance deduction of income tax deducted from anyone earning an income on the platform:
+  * **The Transporter:** Suffers **5% WHT** on haulage trip earnings (or **10% WHT** on heavy equipment charter/hire). Net earnings are disbursed to their wallet along with an automated electronic credit advice, while the withheld tax is held for FIRS/SIRS remittance.
+  * **The Consultant:** Suffers **5% WHT** on their brokerage/referral commission before wallet disbursement.
+  * *Note: The Contractor does NOT suffer WHT because they are funding the contract, not earning income from it.*
+* **AMS Haulage Role:** Serves strictly as the designated digital withholding agent, segregating and accumulating both taxes into an administrative holding ledger for seamless monthly statutory remittance to FIRS and state tax internal revenue services.
+
+#### 2. Practical Transaction Model (Illustrative ₦1,000,000 Haulage Manifest):
+| Transaction Participant | Platform Role | VAT Liability (7.5%) | WHT Liability (5%) | Financial Settlement |
+| :--- | :--- | :--- | :--- | :--- |
+| **Contractor (Shipper)** | Service Consumer / Payor | **PAYS ₦3,750** *(7.5% on platform fee)* | Nil *(Payor, not payee)* | Billed ₦1,000,000 + ₦3,750 VAT |
+| **Transporter (Carrier)** | Freight Contractor (Gross ₦920k) | Nil *(Not a consumer)* | **SUFFERS ₦46,000** *(5% at source)* | Receives ₦874,000 net + tax credit advice |
+| **Consultant (Broker)** | Referral Partner (Gross ₦30k) | Nil *(Not a consumer)* | **SUFFERS ₦1,500** *(5% at source)* | Receives ₦28,500 net into wallet |
+| **AMS Haulage (Platform)** | Platform Facilitator (Fee ₦50k) | Collects ₦3,750 VAT for FIRS | Holds ₦47,500 WHT for FIRS | Retains ₦50k fee + remits ₦51,250 taxes |
+
+#### 3. Automated Withholding Tax (WHT) Deductions at Source:
+* **5% WHT** automatically calculated and deducted on haulage brokerage and transporter trip payouts.
+* **10% WHT** automatically calculated and deducted on industrial machinery leases and crane/equipment charter proceeds.
+* All withheld amounts immediately credit into a dedicated **Statutory Tax Holding Sub-Ledger** under AMS Haulage executive control.
+
+#### 4. Transparent Itemized Invoicing & Manifest Documentation:
+Every manifest, bill of lading, and settlement receipt auto-generates with a transparent six-line breakdown:
+1. Gross Consignment / Lease Value;
+2. Transporter Net Advance & Balance (Stage 1 Loading Advance + Stage 2 e-POD Release);
+3. Consultant Referral Cut (Net of 5% WHT);
+4. AMS Platform Brokerage Fee;
+5. Value Added Tax (7.5% itemized on platform fee);
+6. Withheld Statutory Tax (5% or 10% WHT).
+
+#### 5. One-Click Statutory Compliance Schedules (FIRS / SIRS):
+* Dedicated Executive Accounting Portal tracks total VAT collected and total WHT accrued over any selected date range.
+* One-click CSV/Excel schedule export formatted specifically for monthly tax return filing with the Federal Inland Revenue Service (FIRS) and State Internal Revenue Services (SIRS), eliminating manual accounting reconciliation.
+
+#### 6. Bank Factoring & Escrow Split Reconciliation:
+* When a financing institution underwrites an invoice, the platform’s 3-way split engine automatically deducts bank factoring fees and statutory tax reserves first, before releasing the transporter's loading advance, ensuring AMS Haulage is never exposed to uncollected tax liabilities.
 
 ---
 

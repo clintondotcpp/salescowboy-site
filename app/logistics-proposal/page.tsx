@@ -624,7 +624,16 @@ function LogisticsProposalContent() {
                       <div className="text-[11px] font-bold text-slate-900 uppercase font-mono flex items-center gap-1.5">
                         <span className="text-amber-600">⚖️</span> Statutory Financial System (VAT & WHT)
                       </div>
-                      <ul className="list-disc pl-4 space-y-1.5 text-[11px] text-slate-700 leading-relaxed">
+
+                      {/* Tax Liability Rules Callout */}
+                      <div className="bg-amber-500/10 border border-amber-500/20 rounded p-2.5 text-[10.5px] text-amber-900 leading-snug space-y-1">
+                        <div className="font-bold uppercase tracking-wider text-[10px] text-amber-950 font-mono">Tax Liability Breakdown (Per Transaction):</div>
+                        <div>• <strong className="text-amber-950">VAT (7.5%):</strong> Paid by <strong>1 entity (The Contractor)</strong> on the platform service fee.</div>
+                        <div>• <strong className="text-amber-950">WHT (5% or 10%):</strong> Deducted at source from <strong>2 entities (The Transporter & The Consultant)</strong>.</div>
+                        <div>• <strong className="text-amber-950">AMS Haulage:</strong> Withholding agent accumulating tax reserves for monthly FIRS / SIRS remittance.</div>
+                      </div>
+
+                      <ul className="list-disc pl-4 space-y-1 text-[11px] text-slate-700 leading-relaxed">
                         <li>
                           <strong>Automated WHT Deductions at Source:</strong> Per FIRS/NRS guidelines, <strong>5% WHT</strong> is deducted on haulage brokerage and transporter earnings, and <strong>10% WHT</strong> on equipment lease proceeds prior to wallet crediting.
                         </li>

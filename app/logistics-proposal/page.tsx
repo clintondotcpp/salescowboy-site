@@ -101,7 +101,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   clientEmail: "",
   clientPhone: "",
   
-  executiveSummary: "To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, and structure protected broker/consultant networks, this platform is engineered as an enterprise-grade multi-tier digital ecosystem purpose-built for AMS Haulage and Logistics:\n\n1. The Contractor & Freight Dispatch Hub: Enables verified cargo owners (Contractors) to post structured freight manifests with live capacity countdown decrementing logic and automated 24-hour Expression of Interest (EOI) expiration timers.\n2. The Transporter Fleet Vault & Gate-In Countdown Engine: Comprehensive vehicle profiling with mandatory truck video verification proofs, and a strict 48-Hour Depletion Clock that revokes job allocations if trucks fail to gate-in at loading depots on time.\n3. The Bank & Institutional Financing (Factoring) Desk: A secure financial underwriting portal where accredited banks review verified loading and offload waybills directly to disburse milestone freight financing and execute automated 3-way split deductions.\n4. The Consultant Onboarding & Quota Desk: A closed-loop referral and licensing engine where authorized freight consultants pay an onboarding fee, operate under dynamic client quota caps, and earn automated commission splits.\n5. The Heavy Equipment Leasing Engine: A full 14-step industrial machinery charter workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection video archives, lease agreements, and caution deposit escrow.\n6. The Automobile & Heavy-Duty Spare Parts Marketplace: A dedicated B2B e-commerce catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement.",
+  executiveSummary: "To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, integrate statutory risk mitigation, and structure protected broker/consultant networks, this platform is engineered as an enterprise-grade multi-tier digital ecosystem purpose-built for AMS Haulage and Logistics:\n\n1. The Contractor & Freight Dispatch Hub: Enables verified cargo owners (Contractors) to post structured freight manifests with live capacity countdown decrementing logic, automated 24-hour Expression of Interest (EOI) expiration timers, and integrated Goods-in-Transit (GIT) policy procurement.\n2. The Transporter Fleet Vault & Gate-In Countdown Engine: Comprehensive vehicle profiling with mandatory truck video verification proofs, and a strict 48-Hour Depletion Clock that revokes job allocations if trucks fail to gate-in at loading depots on time.\n3. The Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield): Real-time in-app communication between truckers and contractors for operational coordination (dock loading status, ETA, directions) fortified with an automated contact-redaction filter that blocks phone numbers, emails, bank accounts, and off-platform dealing to guarantee 100% platform retention.\n4. The Accredited GIT Insurance Underwriters Desk: Direct integration of licensed Goods-in-Transit (GIT) insurance companies into the freight lifecycle, enabling instant digital policy underwriting, automated per-trip premium deductions, and streamlined electronic claims verification.\n5. The Bank & Institutional Financing (Factoring) Desk: A secure financial underwriting portal where accredited banks review verified loading and offload waybills directly to disburse milestone freight financing and execute automated multi-way split deductions.\n6. The Consultant Onboarding & Quota Desk: A closed-loop referral and licensing engine where authorized freight consultants pay an onboarding fee, operate under dynamic client quota caps, and earn automated commission splits.\n7. The Heavy Equipment Leasing Engine: A full 14-step industrial machinery charter workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection video archives, lease agreements, and caution deposit escrow.\n8. The Automobile & Heavy-Duty Spare Parts Marketplace: A dedicated B2B e-commerce catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement.",
   
   seoAdvantageOverview: "While native mobile apps serve drivers on the highway, corporate cargo owners and heavy-equipment buyers discover services via Google Search. Building a dedicated Public Web Marketplace transforms the platform into an organic customer acquisition engine:\n\n• Nationwide Haulage & Equipment Discovery: Shippers, construction firms, and logistics coordinators across Nigeria can request freight quotes and browse verified equipment without needing an initial app install.\n• Programmatic Route & Cargo SEO Engine: Every freight corridor and equipment category automatically generates Google-optimized landing pages with Schema.org logistics metadata (e.g., '40ft Flatbed Truck Haulage from Apapa Port to Kano', 'Caterpillar Excavator Lease in Port Harcourt', 'Heavy-Duty Truck Tyres in Lagos'). This captures high-intent B2B search volume organically without continuous ad spend.\n• Verified Freight Rate Directory & Capacity Feed: A transparent freight index showing standard route rates across key Nigerian economic corridors (Lagos–Ibadan, Apapa–Onitsha, PH–Aba, Abuja–Kaduna), establishing the platform as the definitive authority in Nigerian commercial freight.",
   
@@ -140,25 +140,51 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
       deliverables: [
         "Fleet Asset Onboarding: Comprehensive vehicle profile logging plate numbers, mandatory 360-degree truck walk-around video proof uploads, driver commercial licenses, phone contacts, proofs of ownership, and verified bank accounts (NUBAN)",
         "The 48-Hour Depletion Clock (Anti-Hoarding & Operational Assurance): Acceptance activates an automated 48-hour countdown state machine with real-time UI badges and alerts (T-24h, T-12h, T-2h). If the allocated vehicle fails to arrive at the designated depot and verify gate-in (via 150m GPS geofencing, driver QR scan, or digital gate sign-in) before the 48-hour clock reaches 00:00:00, the allocation automatically revokes without penalty to the contractor, returning capacity back to the open dispatch marketplace, while applying a reliability strike to the defaulting transporter",
-        "Dual-Stage Waybill Verification: Stage 1 (Loading Waybill) verification with weighbridge receipt triggers initial advance payout; Stage 2 (Proof of Offloading / e-POD) triggers final 3-way balance settlement"
+        "Dual-Stage Waybill Verification: Stage 1 (Loading Waybill) verification with weighbridge receipt triggers initial advance payout; Stage 2 (Proof of Offloading / e-POD) triggers final multi-way balance settlement"
       ]
     },
     {
       id: "4",
-      title: "Module 4: Bank & Institutional Financing (Factoring) Desk",
-      timeline: "Weeks 4 - 7",
+      title: "Module 4: Secure In-App Chat & Anti-Circumvention Engine",
+      timeline: "Weeks 4 - 6",
+      cost: 450000,
+      description: "Encrypted in-app messaging between truckers and contractors with automated contact obfuscation.",
+      deliverables: [
+        "Transaction-Bound Messaging: Real-time in-app communication thread between contractor and assigned trucker scoped strictly to active job manifests for dock updates, ETA, and gate directions",
+        "Automated Contact Redaction (AI & Regex Filter): Automatically scrubs and blocks personal telephone numbers (Nigerian formats: 080, 081, 070, 090, 091, +234, spelled-out digits), personal emails, WhatsApp links, bank accounts (NUBAN), and external URLs",
+        "Disintermediation Protection: Prevents truckers and contractors from transacting off-platform; automatically flags circumvention attempts to the Master Admin dashboard",
+        "Masked Relay Audio Channels: Optional in-app VoIP or virtual masked call routing keeping personal contact numbers 100% confidential"
+      ]
+    },
+    {
+      id: "5",
+      title: "Module 5: Accredited GIT Insurance Underwriting & Claims Desk",
+      timeline: "Weeks 5 - 7",
+      cost: 550000,
+      description: "Integrated insurance company portal for instant digital policy issuance, premium splits, and claims.",
+      deliverables: [
+        "Institutional Insurer Onboarding: Dedicated portals for licensed insurance underwriters (Leadway, AIICO, Cornerstone, NEM) to audit cargo risk and manage policy issuance",
+        "Dynamic Risk Matrix & Instant Trip Binders: Automated policy generation linked to trip value and route hazards, issuing electronic certificates of insurance prior to depot departure",
+        "Automated Premium Deduction: Split settlement automatically carves out insurance premiums at source and remits directly into the underwriter's settlement ledger",
+        "Accelerated Claims Vault: Direct insurer audit access to immutable pre-trip 360-degree inspection videos, weighbridge slips, GPS gate-in logs, and electronic POD for tamper-proof claim resolution"
+      ]
+    },
+    {
+      id: "6",
+      title: "Module 6: Bank & Institutional Financing (Factoring) Desk",
+      timeline: "Weeks 5 - 8",
       cost: 700000,
       description: "Direct financial underwriting integration for freight liquidity and automated loan recovery.",
       deliverables: [
         "Contractor-to-Bank Invitation: Contractors invite accredited financial institutions to finance their freight pipeline with a 5-day expiry state machine",
         "Financier Disbursement Desk: Banks inspect approved loading and offload waybill documents directly to authorize milestone disbursements",
-        "Automated 3-Way Split Deductions: Dynamically splits financing into Transporter Payment, Platform Service Charge, and Consultant Commission"
+        "Automated Multi-Way Split Deductions: Dynamically splits financing into Transporter Payment, Platform Service Charge, GIT Insurance Premium, and Consultant Commission"
       ]
     },
     {
-      id: "5",
-      title: "Module 5: Heavy Equipment Leasing Engine",
-      timeline: "Weeks 5 - 8",
+      id: "7",
+      title: "Module 7: Heavy Equipment Leasing Engine",
+      timeline: "Weeks 6 - 9",
       cost: 500000,
       description: "Full 14-step workflow tailored for industrial plant, machinery, and maritime barges.",
       deliverables: [
@@ -167,9 +193,9 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
       ]
     },
     {
-      id: "6",
-      title: "Module 6: Automobile & Heavy-Duty E-Commerce Marketplace",
-      timeline: "Weeks 6 - 9",
+      id: "8",
+      title: "Module 8: Automobile & Heavy-Duty E-Commerce Marketplace",
+      timeline: "Weeks 7 - 10",
       cost: 400000,
       description: "B2B marketplace for prime movers, flatbeds, tippers, and genuine truck spare parts.",
       deliverables: [
@@ -194,7 +220,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     { label: "50% Final Settlement (Paid after 2 months of verified functional operational use post App Store & Google Play upload)", percentage: 50, amount: 750000 }
   ],
   bankInfo: "Bank Name: Guaranty Trust Bank (GTBank)\nAccount Name: Sales Cowboy Marketing Solutions\nAccount Number: 3006086291",
-  notes: "Includes 12 Months of post-launch technical support (monitoring & existing bug fixes within agreed scope) and 100% complete Client Intellectual Property (IP) ownership with full repository and credentials handover upon final settlement."
+  notes: "Includes 12 Months of complimentary post-launch technical support (monitoring & existing bug fixes within agreed scope) and 100% complete Client Intellectual Property (IP) ownership with full repository and credentials handover upon final settlement. Post-warranty technical support and maintenance is renewable at ₦800,000 / year."
 };
 
 function LogisticsProposalContent() {
@@ -754,7 +780,10 @@ function LogisticsProposalContent() {
                         <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦1,500,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in AMS Haulage and Logistics.
                       </li>
                       <li>
-                        <strong className="text-slate-900">12-Month Technical Support & Maintenance:</strong> Includes twelve (12) months of post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
+                        <strong className="text-slate-900">12-Month Complimentary Technical Support & Bug-Fix Maintenance:</strong> Includes twelve (12) months of complimentary post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, background worker queue health, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
+                      </li>
+                      <li>
+                        <strong className="text-slate-900">Post-Warranty Annual Support Retainer (Year 2+):</strong> Following the expiration of the initial twelve (12) months of complimentary support, ongoing enterprise technical support, system health surveillance, database optimization, and bug-fix warranty is provided at a fixed retainer fee of <strong>₦800,000 / year (Eight Hundred Thousand Naira per year)</strong>, payable annually in advance by the Client.
                       </li>
                     </ul>
                   </div>

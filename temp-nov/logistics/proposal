@@ -8,14 +8,16 @@
 ---
 
 ## 1. EXECUTIVE SUMMARY & MULTI-TIER LOGISTICS ECOSYSTEM
-To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, and structure protected broker/consultant networks, this project is engineered as an enterprise-grade **multi-tier digital ecosystem** purpose-built for **AMS Haulage and Logistics**:
+To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, integrate statutory risk mitigation, and structure protected broker/consultant networks, this project is engineered as an enterprise-grade **multi-tier digital ecosystem** purpose-built for **AMS Haulage and Logistics**:
 
-1. **The Contractor & Freight Dispatch Hub (Web & Mobile):** Enables verified cargo owners (Contractors) to post structured freight manifests with live capacity countdown decrementing logic and automated 24-hour Expression of Interest (EOI) expiration timers.
+1. **The Contractor & Freight Dispatch Hub (Web & Mobile):** Enables verified cargo owners (Contractors) to post structured freight manifests with live capacity countdown decrementing logic, automated 24-hour Expression of Interest (EOI) expiration timers, and integrated Goods-in-Transit (GIT) policy procurement.
 2. **The Transporter Fleet Vault & Gate-In Countdown Engine (Mobile & Web):** Comprehensive transporter vehicle profiling with mandatory truck video verification proofs, and a strict **48-Hour Depletion Clock** that revokes job allocations if trucks fail to gate-in at loading depots on time.
-3. **The Bank & Institutional Financing (Factoring) Desk:** A secure financial underwriting portal where accredited banks review verified loading and offloading waybills directly to disburse milestone freight financing and execute automated 3-way split deductions.
-4. **The Consultant Onboarding & Quota Desk:** A closed-loop referral and licensing engine where authorized freight consultants pay an onboarding fee, operate under dynamic client quota caps, and earn automated commission splits on every completed trip, equipment lease, and automobile sale.
-5. **The Heavy Equipment Leasing Engine:** A full 14-step industrial machinery charter workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection video archives, lease agreements, and caution deposit escrow.
-6. **The Automobile & Heavy-Duty Spare Parts Marketplace:** A dedicated B2B e-commerce catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement.
+3. **The Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield):** Real-time in-app communication between truckers and contractors for operational coordination (dock loading status, ETA, directions) fortified with an automated contact-redaction filter that blocks phone numbers, emails, bank accounts, and off-platform dealing to guarantee 100% platform retention.
+4. **The Accredited GIT Insurance Underwriters Desk:** Direct integration of licensed Goods-in-Transit (GIT) insurance companies into the freight lifecycle, enabling instant digital policy underwriting, automated per-trip premium deductions, and streamlined electronic claims verification.
+5. **The Bank & Institutional Financing (Factoring) Desk:** A secure financial underwriting portal where accredited banks review verified loading and offloading waybills directly to disburse milestone freight financing and execute automated 4-way split deductions.
+6. **The Consultant Onboarding & Quota Desk:** A closed-loop referral and licensing engine where authorized freight consultants pay an onboarding fee, operate under dynamic client quota caps, and earn automated commission splits on every completed trip, equipment lease, and automobile sale.
+7. **The Heavy Equipment Leasing Engine:** A full 14-step industrial machinery charter workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection video archives, lease agreements, and caution deposit escrow.
+8. **The Automobile & Heavy-Duty Spare Parts Marketplace:** A dedicated B2B e-commerce catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement.
 
 ---
 
@@ -40,23 +42,41 @@ To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, 
   * *Automated Default & Instant Capacity Release:* If the timer reaches 00:00:00 without verified depot gate-in, the system automatically revokes the allocation without penalty to the contractor, immediately returns the vacated truck capacity to the open dispatch pool for waitlisted transporters to claim, and applies a reliability strike to the defaulting transporter's scorecard.
 * **Dual-Stage Waybill Verification:**
   * *Stage 1 (Loading Waybill):* Transporter uploads stamped loading manifest and weighbridge receipt $\rightarrow$ triggers contractor/bank verification and immediate loading advance payout.
-  * *Stage 2 (Proof of Offloading / e-POD):* Transporter uploads stamped receiver waybill $\rightarrow$ triggers final settlement release to transporter, platform escrow, and consultant wallet.
+  * *Stage 2 (Proof of Offloading / e-POD):* Transporter uploads stamped receiver waybill $\rightarrow$ triggers final settlement release to transporter, platform escrow, insurer, and consultant wallet.
 
-### Module 4: Bank & Institutional Financing (Factoring) Desk
+### Module 4: Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield)
+* **In-App Transaction-Bound Messaging:** Dedicated, encrypted operational chat thread created automatically between the contractor and the committed transporter/trucker exclusively for the duration of an active manifest.
+* **Automated Contact Obfuscation & Keyword Scrubbing:**
+  * Real-time regex and pattern-matching filters automatically detect, redact, or block attempts to share direct phone numbers (all Nigerian telecommunications prefixes: 080, 081, 070, 090, 091, +234, including disguised, spaced, or spelled-out formats like "zero eight zero"), personal email addresses, WhatsApp links, bank account numbers (NUBAN), and external social handles.
+  * Replaces sensitive contact text with an in-app notice: `[Contact details hidden to protect platform escrow & insurance coverage]`.
+* **Disintermediation Flagging & Compliance Audit:**
+  * Flagged off-platform solicitation attempts trigger immediate warning popups to the user and log a compliance alert to the Master Admin dashboard. Repeated circumvention attempts automatically suspend the offending user's account and forfeiture of pending referral splits.
+* **Masked Relay Calling & Operational Push Channels:** Allows critical voice or push communication (e.g. gate security clearance, loading bay number, flat tyre delays) routed entirely through in-app VoIP or masked telecommunication relays, preventing truckers and contractors from ever exchanging raw telephone numbers.
+
+### Module 5: Accredited GIT Insurance Underwriting & Claims Desk
+* **Insurer Institutional Onboarding:** Accredited insurance underwriters (e.g. Leadway, AIICO, Cornerstone, NEM) onboard to the platform with dedicated institutional compliance dashboards.
+* **Dynamic Premium Matrix & Instant Digital Policy Issuance:**
+  * Insurers configure automated risk matrices based on cargo classification (General Dry Freight, FMCG, Petroleum, Fragile, Hazardous, High-Value Minerals), transit distance, and declared cargo value.
+  * Instant digital certificate of insurance / GIT policy binder generated automatically upon manifest execution, binding coverage before the truck leaves the loading bay.
+* **Automated Premium Deduction at Source:** The platform's automated split settlement automatically calculates and deducts the GIT insurance premium and remits it directly into the insurer's institutional settlement account upon manifest funding.
+* **Accelerated Digital Claims Workflow:** In the event of an in-transit accident, cargo spillage, fire, or theft, the insurer gets direct audit access to immutable pre-trip 360-degree truck inspection videos, weighbridge loading certificates, GPS gate-in logs, and police/inspection incident reports, eliminating paper delays and fraudulent claims.
+
+### Module 6: Bank & Institutional Financing (Factoring) Desk
 * **Contractor-to-Bank Invitation:** Contractors invite accredited financial institutions to underwrite and finance their freight pipeline.
 * **5-Day Expiry State Machine:** Bank financing invitations auto-expire after 5 working days, with a system-enforced limit of one resend.
 * **Financier Credit & Disbursement Desk:** Accredited banks inspect verified loading and offload waybill documents directly to authorize milestone disbursements.
-* **Automated 3-Way Split Deductions:** On settlement, the financing disbursement dynamically calculates and splits into:
+* **Automated Multi-Way Split Deductions:** On settlement, the financing disbursement dynamically calculates and splits into:
   1. **Transporter Payment** (Loading Advance + Final Balance)
-  2. **Platform Service Charge** (Platform Escrow)
-  3. **Consultant Commission** (Consultant Wallet)
+  2. **Platform Service Charge** (AMS Haulage Escrow)
+  3. **GIT Insurance Premium** (Accredited Insurer Account)
+  4. **Consultant Commission** (Consultant Wallet)
 
-### Module 5: Heavy Equipment Leasing Engine
+### Module 7: Heavy Equipment Leasing Engine
 * **Full Industrial Workflow Replication:** Full replication of the 14-step haulage workflow tailored for industrial machinery (cranes, excavators, forklifts, lowbeds, barges).
 * **Inspection Video Vault:** Transporters and fleet owners upload mandatory 360-degree equipment inspection videos verifying operational condition before charter commencement.
 * **Lease Agreements & Escrow:** Automated generation of legally binding equipment lease contracts, caution deposit escrow holding, and scheduled maintenance sign-offs.
 
-### Module 6: Automobile & Heavy-Duty E-Commerce Marketplace
+### Module 8: Automobile & Heavy-Duty E-Commerce Marketplace
 * **Classified Vehicle & Parts Catalog:** Dedicated marketplace catalog for prime movers, flatbeds, tippers, and genuine heavy-duty spare parts (engines, axles, tyres, hydraulics).
 * **Inspection-Based Escrow Settlement:** Platform holds buyer funds in escrow until physical delivery inspection is formally signed off, deducting the platform commission and consultant referral split before releasing merchant proceeds.
 
@@ -143,7 +163,8 @@ Due to the integration of the **Bank Factoring Portal**, **Consultant Licensing 
 
 ### Contractual Guarantees & Ownership Terms:
 * **100% Complete Client IP Ownership:** Upon receipt of final contractual settlement (₦1,500,000), 100% complete, unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials vests exclusively in **AMS Haulage and Logistics**, free of any developer retention or ongoing royalties.
-* **12-Month Technical Support & Maintenance:** Includes twelve (12) months of post-launch technical support strictly dedicated to server monitoring, uptime surveillance, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
+* **12-Month Complimentary Technical Support & Bug-Fix Maintenance:** Includes twelve (12) months of complimentary post-launch technical support strictly dedicated to server monitoring, uptime surveillance, background worker queue health, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
+* **Post-Warranty Annual Support Retainer (Year 2+):** Following the expiration of the initial twelve (12) months of complimentary support, the Developer provides ongoing annual enterprise technical support, system health surveillance, database optimization, and bug-fix warranty at a fixed retainer fee of **₦800,000 / year (Eight Hundred Thousand Naira per year)**, payable annually in advance by the Client.
 
 ---
 

@@ -445,18 +445,28 @@
     <div class="article">
       <div class="article-title">1. Scope of Work & System Modules</div>
       <div class="article-body">
-        <p>1.1 The Client hereby engages the Developer to design, develop, test, and deploy the Platform across six (6) core functional modules as detailed in Schedule A:</p>
+        <p>1.1 The Client hereby engages the Developer to design, develop, test, and deploy the Platform across eight (8) core functional modules as detailed in Schedule A:</p>
         <ul>
           <li><strong>Module 1: Consultant Onboarding & Quota Desk:</strong> Paid consultant licensing with Paystack/Moniepoint activation checkout, closed-loop referral system (contractors and transporters register exclusively via unique consultant invite links), dynamic quota caps, and automated commission routing on trips, leases, and vehicle sales into consultant wallets.</li>
           <li><strong>Module 2: Contractor & Job Dispatch Hub:</strong> Structured haulage manifests with geofenced loading/offloading coordinates, vehicle specifications, tonnage, and GIT insurance verification; real-time capacity decrementing countdown logic as transporters commit trucks; and automated 24-hour Expression of Interest (EOI) expiration timers.</li>
           <li><strong>Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock:</strong>
             <br>• <em>Fleet Asset Onboarding:</em> Transporter profile logging plate numbers, mandatory 360-degree truck walk-around video proof uploads, driver licenses, proofs of ownership, and bank accounts (NUBAN).
             <br>• <em>Automated 48-Hour Gate-In Depletion Clock:</em> Upon contractor acceptance of a truck commitment, an immutable 48-hour countdown state machine activates with real-time UI countdown badges and alerts (T-24h, T-12h, T-2h). If the allocated vehicle fails to arrive at the designated loading depot and verify gate-in (via 150m GPS geofencing, driver QR scan, or digital gate sign-in) before the 48-hour clock reaches 00:00:00, the allocation automatically revokes without penalty to the contractor, returning capacity back to the open dispatch marketplace, while applying a reliability strike to the defaulting transporter.
-            <br>• <em>Dual-Stage Waybill Verification:</em> Stage 1 (Loading Waybill) verification with weighbridge receipt triggering initial mobilization advance; Stage 2 (Proof of Offloading / e-POD) verified delivery sign-off triggering the automated 3-way balance settlement.
+            <br>• <em>Dual-Stage Waybill Verification:</em> Stage 1 (Loading Waybill) verification with weighbridge receipt triggering initial mobilization advance; Stage 2 (Proof of Offloading / e-POD) verified delivery sign-off triggering the automated multi-way balance settlement.
           </li>
-          <li><strong>Module 4: Bank & Institutional Financing (Factoring) Desk:</strong> Contractor-to-Bank financing invitations governed by an automated 5-day expiry state machine (strictly capped at one resend); secure financier underwriting desk granting accredited banks direct audit access to verified loading and offload waybill documents to authorize milestone disbursements; and automated 3-way split deductions (Transporter Payout, Platform Service Fee, Consultant Commission).</li>
-          <li><strong>Module 5: Heavy Equipment Leasing Engine:</strong> Full 14-step haulage workflow tailored for industrial machinery (cranes, excavators, forklifts, lowbeds, barges) incorporating mandatory 360-degree video inspection uploads, lease duration agreements, caution deposit escrow, and maintenance sign-offs.</li>
-          <li><strong>Module 6: Automobile & Heavy-Duty E-Commerce Marketplace:</strong> B2B classified catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement that releases merchant funds only upon formal buyer physical delivery sign-off.</li>
+          <li><strong>Module 4: Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield):</strong>
+            <br>• <em>Transaction-Bound Messaging:</em> Dedicated in-app operational messaging between contractors and assigned truckers/transporters for dock loading updates, ETA, and directions.
+            <br>• <em>Automated Contact Redaction (AI & Regex Filter):</em> Automated pattern-matching engine detecting, redacting, or blocking personal telephone numbers (Nigerian formats: 080, 081, 070, 090, 091, +234, spelled-out digits), personal emails, WhatsApp links, bank accounts (NUBAN), and external URLs.
+            <br>• <em>Disintermediation Protection:</em> Enforces 100% platform retention by stopping truckers and contractors from cutting out the platform and dealing directly, with real-time compliance alert logging on the Master Admin desk.
+          </li>
+          <li><strong>Module 5: Accredited GIT Insurance Underwriting & Claims Desk:</strong>
+            <br>• <em>Insurer Institutional Onboarding:</em> Dedicated institutional portals for accredited insurance underwriters (Leadway, AIICO, Cornerstone, NEM) to configure risk matrices and issue digital trip policies.
+            <br>• <em>Instant Digital Trip Binders:</em> Automated insurance certificates bound to each manifest before truck dispatch, with automated premium deduction at source via split settlement.
+            <br>• <em>Digital Incident Claims Vault:</em> Underwriters audit pre-trip 360-degree inspection videos, weighbridge receipts, and verified waybills for rapid, dispute-free claim reconciliation.
+          </li>
+          <li><strong>Module 6: Bank & Institutional Financing (Factoring) Desk:</strong> Contractor-to-Bank financing invitations governed by an automated 5-day expiry state machine (strictly capped at one resend); secure financier underwriting desk granting accredited banks direct audit access to verified loading and offload waybill documents to authorize milestone disbursements; and automated multi-way split deductions (Transporter Payout, Platform Service Fee, GIT Insurance Premium, Consultant Commission).</li>
+          <li><strong>Module 7: Heavy Equipment Leasing Engine:</strong> Full 14-step haulage workflow tailored for industrial machinery (cranes, excavators, forklifts, lowbeds, barges) incorporating mandatory 360-degree video inspection uploads, lease duration agreements, caution deposit escrow, and maintenance sign-offs.</li>
+          <li><strong>Module 8: Automobile & Heavy-Duty E-Commerce Marketplace:</strong> B2B classified catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement that releases merchant funds only upon formal buyer physical delivery sign-off.</li>
         </ul>
       </div>
     </div>
@@ -528,26 +538,35 @@
       <div class="article-title">5. Operational, Factoring & Regulatory Disclaimers</div>
       <div class="article-body">
         <p>
-          5.1 <strong>Bank Factoring & Credit Underwriting:</strong> The Platform provides technical software infrastructure (invitation state machines, document viewer desks, and automated 3-way split payment calculations) to facilitate freight financing. The Developer is not a financial institution, credit broker, or insurer. All freight underwriting decisions, interest rates, factoring agreements, and credit recovery risks remain exclusively between participating financial institutions and the Client/Contractors.
+          5.1 <strong>Bank Factoring & Credit Underwriting:</strong> The Platform provides technical software infrastructure (invitation state machines, document viewer desks, and automated multi-way split payment calculations) to facilitate freight financing. The Developer is not a financial institution, credit broker, or lending entity. All freight underwriting decisions, interest rates, factoring agreements, and credit recovery risks remain exclusively between participating financial institutions and the Client/Contractors.
         </p>
         <p>
-          5.2 <strong>Transporter Verification & Roadworthiness:</strong> The Platform enforces digital compliance requirements (upload of driver licenses, hackney permits, GIT insurance, and truck video proofs). The Client remains solely responsible for the physical inspection, mechanical roadworthiness, cargo security, and transit safety of contracted vehicles.
+          5.2 <strong>Goods-in-Transit (GIT) Insurance Underwriting:</strong> The Platform integrates digital APIs and split payment mechanisms for accredited third-party insurance underwriters to issue policies and audit claims. The Developer is not an insurance underwriter or broker. Policy terms, risk assessment, coverage scopes, and claim settlements remain exclusively between participating insurance underwriters and the insured parties.
         </p>
         <p>
-          5.3 <strong>Statutory Tax & Financial Accounting:</strong> The Platform automates calculation of Value Added Tax (VAT at 7.5%) and Withholding Tax (WHT at 5%) on brokerage and consultant fees. The Client remains solely responsible for obtaining and maintaining corporate haulage permits and timely filing of tax returns with government authorities (FIRS/NRS, SCUML).
+          5.3 <strong>Transporter Verification & Roadworthiness:</strong> The Platform enforces digital compliance requirements (upload of driver licenses, hackney permits, GIT insurance certificates, and truck video proofs). The Client remains solely responsible for the physical inspection, mechanical roadworthiness, cargo security, and transit safety of contracted vehicles.
+        </p>
+        <p>
+          5.4 <strong>In-App Messaging & Disintermediation Shield:</strong> The Platform provides automated algorithmic regex filters to redact contact information and prevent direct off-platform transactions between truckers and contractors. The Client remains solely responsible for enforcing platform terms of service and penalizing offending participants.
+        </p>
+        <p>
+          5.5 <strong>Statutory Tax & Financial Accounting:</strong> The Platform automates calculation of Value Added Tax (VAT at 7.5%) and Withholding Tax (WHT at 5%) on brokerage and consultant fees. The Client remains solely responsible for obtaining and maintaining corporate haulage permits and timely filing of tax returns with government authorities (FIRS/NRS, SCUML).
         </p>
       </div>
     </div>
 
     <!-- Article 6 -->
     <div class="article">
-      <div class="article-title">6. Acceptance Testing, Warranty & 12-Month Technical Support</div>
+      <div class="article-title">6. Acceptance Testing, Warranty & Technical Support</div>
       <div class="article-body">
         <p>
           6.1 Upon staging milestone delivery, the Client shall have <strong>seven (7) business days</strong> to inspect the deliverables and report any reproducible software bugs deviating from Schedule A.
         </p>
         <p>
-          6.2 <strong>12-Month Technical Support & Bug-Fix Maintenance:</strong> The Developer shall provide <strong>twelve (12) months of post-launch technical support and maintenance</strong> commencing from the live production launch date. This support is strictly confined to system monitoring, server uptime surveillance, database integrity checks, background worker queue health, and diagnosing and resolving any existing bugs or defects arising within the agreed Schedule A scope. This support <strong>expressly excludes the design, engineering, or deployment of new features, architectural scope additions, or third-party add-ons</strong>, which shall be treated as new feature requests governed by separate written Change Requests (CRs).
+          6.2 <strong>12-Month Complimentary Technical Support & Bug-Fix Maintenance:</strong> The Developer shall provide <strong>twelve (12) months of complimentary post-launch technical support and maintenance</strong> commencing from the live production launch date. This support is strictly confined to system monitoring, server uptime surveillance, database integrity checks, background worker queue health, and diagnosing and resolving any existing bugs or defects arising within the agreed Schedule A scope. This support <strong>expressly excludes the design, engineering, or deployment of new features, architectural scope additions, or third-party add-ons</strong>, which shall be treated as new feature requests governed by separate written Change Requests (CRs).
+        </p>
+        <p>
+          6.3 <strong>Post-Warranty Annual Support Retainer (₦800,000 / Year):</strong> Following the conclusion of the initial twelve (12) months of complimentary technical support, the Client may retain the Developer for ongoing annual enterprise technical support, system health surveillance, database optimization, and bug-fix warranty at an agreed retainer fee of <strong>Eight Hundred Thousand Naira Only (₦800,000 / year)</strong>, payable annually in advance by the Client.
         </p>
       </div>
     </div>

@@ -109,7 +109,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "1",
       title: "Module 1: Consultant Onboarding & Quota Desk",
-      timeline: "Weeks 1 - 3",
+      timeline: "Week 1",
       cost: 650000,
       description: "Monetizes consultant network access and enforces closed-loop broker referral chains.",
       deliverables: [
@@ -122,7 +122,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "2",
       title: "Module 2: Contractor & Job Dispatch Hub",
-      timeline: "Weeks 2 - 4",
+      timeline: "Week 1",
       cost: 650000,
       description: "Structured cargo posting with live capacity decrementing and expression-of-interest expiration.",
       deliverables: [
@@ -134,7 +134,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "3",
       title: "Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock",
-      timeline: "Weeks 3 - 5",
+      timeline: "Week 2",
       cost: 600000,
       description: "Asset video verification and automated allocation revocation countdown engine.",
       deliverables: [
@@ -146,7 +146,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "4",
       title: "Module 4: Secure In-App Chat & Anti-Circumvention Engine",
-      timeline: "Weeks 4 - 6",
+      timeline: "Week 2",
       cost: 450000,
       description: "Encrypted in-app messaging between truckers and contractors with automated contact obfuscation.",
       deliverables: [
@@ -159,7 +159,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "5",
       title: "Module 5: Accredited GIT Insurance Underwriting & Claims Desk",
-      timeline: "Weeks 5 - 7",
+      timeline: "Week 3",
       cost: 550000,
       description: "Integrated insurance company portal for instant digital policy issuance, premium splits, and claims.",
       deliverables: [
@@ -172,7 +172,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "6",
       title: "Module 6: Bank & Institutional Financing (Factoring) Desk",
-      timeline: "Weeks 5 - 8",
+      timeline: "Week 3",
       cost: 700000,
       description: "Direct financial underwriting integration for freight liquidity and automated loan recovery.",
       deliverables: [
@@ -184,7 +184,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "7",
       title: "Module 7: Heavy Equipment Leasing Engine",
-      timeline: "Weeks 6 - 9",
+      timeline: "Week 4",
       cost: 500000,
       description: "Full 14-step workflow tailored for industrial plant, machinery, and maritime barges.",
       deliverables: [
@@ -195,7 +195,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
     {
       id: "8",
       title: "Module 8: Automobile & Heavy-Duty E-Commerce Marketplace",
-      timeline: "Weeks 7 - 10",
+      timeline: "Week 4",
       cost: 400000,
       description: "B2B marketplace for prime movers, flatbeds, tippers, and genuine truck spare parts.",
       deliverables: [
@@ -214,7 +214,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   infrastructureNotes: "Total estimated monthly cloud infrastructure cost: ~$10 – $20 / month + pay-as-you-go usage. App Store Developer fees: Google Play ($25 one-time), Apple Developer ($99/year), paid directly to providers without agency markup.",
   
   totalCost: 1500000,
-  timeline: "8 to 10 Weeks (56 – 70 Calendar Days)",
+  timeline: "4 Weeks (28 Calendar Days)",
   paymentMilestones: [
     { label: "50% Mobilization Deposit (Architecture, DB Schemas, Consultant Licensing & Multi-Portal UI/UX Layouts)", percentage: 50, amount: 750000 },
     { label: "50% Final Settlement (Paid after 2 months of verified functional operational use post App Store & Google Play upload)", percentage: 50, amount: 750000 }

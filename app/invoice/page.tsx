@@ -82,6 +82,16 @@ const PRESETS = [
     rate: 3500000,
   },
   {
+    name: "AMS Haulage & Logistics - 50% Mobilization Deposit (₦750k)",
+    description: "Stage 1: 50% Project Mobilization Deposit — Unified Logistics, Bank Factoring, GIT Insurance Desk, In-App Anti-Circumvention Chat & Fleet Equipment Ecosystem (Systems Architecture, DB Schemas, Consultant Licensing Desk, Cargo Dispatch Hub, Transporter Vault & 48h Gate-In Depletion Clock)",
+    rate: 750000,
+  },
+  {
+    name: "AMS Haulage & Logistics - Full Investment (₦1.5M)",
+    description: "Full Custom Development (4 Weeks / 28 Days) — Unified Logistics, Bank Factoring, GIT Insurance Desk, In-App Anti-Circumvention Chat & Fleet Equipment Ecosystem (Transporter & Contractor Portals, Cargo Dispatch Hub, Transporter Vault, GIT Underwriting Desk, Geofenced QR Gate-In Depletion Clock & 12 Months Support)",
+    rate: 1500000,
+  },
+  {
     name: "Food Bank Special Services Ltd - 50% Deposit (₦175k)",
     description: "50% Project Mobilization Deposit — Food Bank Target Savings & Layaway Platform (Public Storefront, Member Savings Progress Dashboard, Paystack Virtual Accounts, Manual POP Queue, 100% Fulfillment Claim Pass, and SMS/Email Notification Engine)",
     rate: 175000,

@@ -97,7 +97,7 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   
   clientName: "AMS Haulage and Logistics",
   clientContact: "Mr. Lawrence (CEO / Managing Director)",
-  clientAddress: "Corporate Haulage, Factoring & Equipment Ecosystem",
+  clientAddress: "Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state",
   clientEmail: "",
   clientPhone: "",
   

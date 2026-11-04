@@ -87,7 +87,7 @@ const DEFAULT_LOGISTICS_AGREEMENT_STATE: AgreementState = {
   developerSignatoryTitle: "Lead Developer / Technical Director",
   
   clientCompanyName: "AMS Haulage and Logistics",
-  clientAddress: "Lagos, Nigeria",
+  clientAddress: "Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state",
   clientRegistrationNo: "RC Pending / Accredited",
   clientSignatoryName: "Mr. Lawrence",
   clientSignatoryTitle: "CEO / Managing Director",

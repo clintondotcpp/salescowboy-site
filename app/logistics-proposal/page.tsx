@@ -85,7 +85,7 @@ interface LogisticsProposalState {
 
 const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   proposalTitle: "Unified Logistics, Bank-Factored Haulage Transaction Engine, Consultant Licensing & Fleet Equipment Ecosystem",
-  proposalId: "PROP-2026-SCM-AMS3.5M",
+  proposalId: "PROP-2026-SCM-P54-1.5M",
   proposalDate: "2026-11-02",
   
   senderName: "Sales Cowboy Marketing Solutions",
@@ -95,13 +95,13 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   senderPhone: "+234 810 493 3232 / +234 912 309 6853",
   senderWebsite: "salescowboy.com.ng",
   
-  clientName: "AMS Haulage and Logistics",
-  clientContact: "Mr. Lawrence (CEO / Managing Director)",
-  clientAddress: "Owerri, Imo state",
+  clientName: "PROJECT54 ENTREPRENEURS",
+  clientContact: "Mr Lawson Israel (Lead Executive / Managing Director)",
+  clientAddress: "Lagos, Nigeria",
   clientEmail: "",
   clientPhone: "",
   
-  executiveSummary: "To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, integrate statutory risk mitigation, and structure protected broker/consultant networks, this platform is engineered as an enterprise-grade multi-tier digital ecosystem purpose-built for AMS Haulage and Logistics:\n\n1. The Contractor & Freight Dispatch Hub: Enables verified cargo owners (Contractors) to post structured freight manifests with live capacity countdown decrementing logic, automated 24-hour Expression of Interest (EOI) expiration timers, and integrated Goods-in-Transit (GIT) policy procurement.\n2. The Transporter Fleet Vault & Gate-In Countdown Engine: Comprehensive vehicle profiling with mandatory truck video verification proofs, and a strict 48-Hour Depletion Clock that revokes job allocations if trucks fail to gate-in at loading depots on time.\n3. The Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield): Real-time in-app communication between truckers and contractors for operational coordination (dock loading status, ETA, directions) fortified with an automated contact-redaction filter that blocks phone numbers, emails, bank accounts, and off-platform dealing to guarantee 100% platform retention.\n4. The Accredited GIT Insurance Underwriters Desk: Direct integration of licensed Goods-in-Transit (GIT) insurance companies into the freight lifecycle, enabling instant digital policy underwriting, automated per-trip premium deductions, and streamlined electronic claims verification.\n5. The Bank & Institutional Financing (Factoring) Desk: A secure financial underwriting portal where accredited banks review verified loading and offload waybills directly to disburse milestone freight financing and execute automated multi-way split deductions.\n6. The Consultant Onboarding & Quota Desk: A closed-loop referral and licensing engine where authorized freight consultants pay an onboarding fee, operate under dynamic client quota caps, and earn automated commission splits.\n7. The Heavy Equipment Leasing Engine: A full 14-step industrial machinery charter workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection video archives, lease agreements, and caution deposit escrow.\n8. The Automobile & Heavy-Duty Spare Parts Marketplace: A dedicated B2B e-commerce catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement.",
+  executiveSummary: "To modernize commercial haulage in Nigeria, eliminate freight capital gridlock, integrate statutory risk mitigation, and structure protected broker/consultant networks, this platform is engineered as an enterprise-grade multi-tier digital ecosystem purpose-built for PROJECT54 ENTREPRENEURS:\n\n1. The Contractor & Freight Dispatch Hub: Enables verified cargo owners (Contractors) to post structured freight manifests with live capacity countdown decrementing logic, automated 24-hour Expression of Interest (EOI) expiration timers, and integrated Goods-in-Transit (GIT) policy procurement.\n2. The Transporter Fleet Vault & Gate-In Countdown Engine: Comprehensive vehicle profiling with mandatory truck video verification proofs, and a strict 48-Hour Depletion Clock that revokes job allocations if trucks fail to gate-in at loading depots on time.\n3. The Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield): Real-time in-app communication between truckers and contractors for operational coordination (dock loading status, ETA, directions) fortified with an automated contact-redaction filter that blocks phone numbers, emails, bank accounts, and off-platform dealing to guarantee 100% platform retention.\n4. The Accredited GIT Insurance Underwriters Desk: Direct integration of licensed Goods-in-Transit (GIT) insurance companies into the freight lifecycle, enabling instant digital policy underwriting, automated per-trip premium deductions, and streamlined electronic claims verification.\n5. The Bank & Institutional Financing (Factoring) Desk: A secure financial underwriting portal where accredited banks review verified loading and offload waybills directly to disburse milestone freight financing and execute automated multi-way split deductions.\n6. The Consultant Onboarding & Quota Desk: A closed-loop referral and licensing engine where authorized freight consultants pay an onboarding fee, operate under dynamic client quota caps, and earn automated commission splits.\n7. The Heavy Equipment Leasing Engine: A full 14-step industrial machinery charter workflow (cranes, excavators, forklifts, lowbeds, barges) with inspection video archives, lease agreements, and caution deposit escrow.\n8. The Automobile & Heavy-Duty Spare Parts Marketplace: A dedicated B2B e-commerce catalog for prime movers, flatbeds, tippers, and genuine truck components backed by inspection-based escrow settlement.",
   
   seoAdvantageOverview: "While native mobile apps serve drivers on the highway, corporate cargo owners and heavy-equipment buyers discover services via Google Search. Building a dedicated Public Web Marketplace transforms the platform into an organic customer acquisition engine:\n\n• Nationwide Haulage & Equipment Discovery: Shippers, construction firms, and logistics coordinators across Nigeria can request freight quotes and browse verified equipment without needing an initial app install.\n• Programmatic Route & Cargo SEO Engine: Every freight corridor and equipment category automatically generates Google-optimized landing pages with Schema.org logistics metadata (e.g., '40ft Flatbed Truck Haulage from Apapa Port to Kano', 'Caterpillar Excavator Lease in Port Harcourt', 'Heavy-Duty Truck Tyres in Lagos'). This captures high-intent B2B search volume organically without continuous ad spend.\n• Verified Freight Rate Directory & Capacity Feed: A transparent freight index showing standard route rates across key Nigerian economic corridors (Lagos–Ibadan, Apapa–Onitsha, PH–Aba, Abuja–Kaduna), establishing the platform as the definitive authority in Nigerian commercial freight.",
   
@@ -328,11 +328,11 @@ function LogisticsProposalContent() {
                   SALES COWBOY
                 </span>
                 <span className="text-[10px] bg-amber-500/10 text-amber-400 font-mono px-2 py-0.5 rounded border border-amber-500/20 font-semibold uppercase">
-                  AMS Haulage & Factoring Ecosystem (₦1,500,000)
+                  PROJECT54 Logistics & Factoring Ecosystem (₦1,500,000)
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-mono">
-                {state.proposalId} • REF: AMS1.5M-ECOSYSTEM
+                {state.proposalId} • REF: P54-1.5M-ECOSYSTEM
               </p>
             </div>
           </div>
@@ -367,7 +367,7 @@ function LogisticsProposalContent() {
             <Link
               href="/logistics-agreement"
               className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold border border-slate-700 transition-colors"
-              title="View the formal Master Software Development Agreement for AMS Haulage"
+              title="View the formal Master Software Development Agreement for PROJECT54"
             >
               <Scale className="w-3.5 h-3.5 text-amber-400" />
               <span className="hidden sm:inline">View</span> Agreement
@@ -687,7 +687,7 @@ function LogisticsProposalContent() {
                         <div className="font-bold uppercase tracking-wider text-[10px] text-amber-950 font-mono">Tax Liability Breakdown (Per Transaction):</div>
                         <div>• <strong className="text-amber-950">VAT (7.5%):</strong> Paid by <strong>1 entity (The Contractor)</strong> on the platform service fee.</div>
                         <div>• <strong className="text-amber-950">WHT (5% or 10%):</strong> Deducted at source from <strong>2 entities (The Transporter & The Consultant)</strong>.</div>
-                        <div>• <strong className="text-amber-950">AMS Haulage:</strong> Withholding agent accumulating tax reserves for monthly FIRS / SIRS remittance.</div>
+                        <div>• <strong className="text-amber-950">PROJECT54:</strong> Withholding agent accumulating tax reserves for monthly FIRS / SIRS remittance.</div>
                       </div>
 
                       <ul className="list-disc pl-4 space-y-1 text-[11px] text-slate-700 leading-relaxed">
@@ -777,7 +777,7 @@ function LogisticsProposalContent() {
                     </span>
                     <ul className="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed text-[11px]">
                       <li>
-                        <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦1,500,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in AMS Haulage and Logistics.
+                        <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦1,500,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in PROJECT54 ENTREPRENEURS.
                       </li>
                       <li>
                         <strong className="text-slate-900">12-Month Complimentary Technical Support & Bug-Fix Maintenance:</strong> Includes twelve (12) months of complimentary post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, background worker queue health, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).

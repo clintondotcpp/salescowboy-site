@@ -74,7 +74,7 @@ interface AgreementState {
 }
 
 const DEFAULT_LOGISTICS_AGREEMENT_STATE: AgreementState = {
-  agreementId: "SDA-2026-AMS-882",
+  agreementId: "SDA-2026-P54-882",
   effectiveDate: "2026-11-02",
   
   developerName: "Sales Cowboy Marketing Solutions",
@@ -86,13 +86,13 @@ const DEFAULT_LOGISTICS_AGREEMENT_STATE: AgreementState = {
   developerSignatoryName: "Clinton Chukwunyere",
   developerSignatoryTitle: "Lead Developer / Technical Director",
   
-  clientCompanyName: "AMS Haulage and Logistics",
-  clientAddress: "Owerri, Imo state",
+  clientCompanyName: "PROJECT54 ENTREPRENEURS",
+  clientAddress: "Lagos, Nigeria",
   clientRegistrationNo: "RC Pending / Accredited",
-  clientSignatoryName: "Mr. Lawrence",
-  clientSignatoryTitle: "CEO / Managing Director",
+  clientSignatoryName: "Mr Lawson Israel",
+  clientSignatoryTitle: "Lead Executive / Managing Director",
   
-  projectTitle: "AMS Haulage & Heavy Logistics Multi-Portal Platform (Consultant Licensing, Dispatch Hub, Transporter Fleet Vault with 48h Gate-In, In-App Disintermediation Chat, Accredited GIT Insurance Desk, Bank Factoring Desk, Equipment Leasing Engine & Heavy-Duty Marketplace)",
+  projectTitle: "PROJECT54 Logistics & Heavy Fleet Ecosystem (Consultant Licensing, Dispatch Hub, Transporter Fleet Vault with 48h Gate-In, In-App Disintermediation Chat, Accredited GIT Insurance Desk, Bank Factoring Desk, Equipment Leasing Engine & Heavy-Duty Marketplace)",
   totalCost: 1500000,
   deliveryTimeline: "4 Weeks (28 Calendar Days)",
   warrantyPeriodDays: 365,
@@ -105,13 +105,13 @@ const DEFAULT_LOGISTICS_AGREEMENT_STATE: AgreementState = {
   milestone3Label: "",
   milestone3Amount: 0,
   
-  scopeClause: "The Client hereby engages the Developer to design, engineer, test, and deploy the AMS Haulage and Heavy Logistics Enterprise Platform across eight (8) core modules: Module 1: Consultant Onboarding & Quota Desk (Paid Licensing via Paystack/Moniepoint, Closed-Loop Referral Engine, Dynamic Quota Caps, Automated Commission Engine); Module 2: Contractor & Job Dispatch Hub (Structured Haulage Manifests, Geofenced Coordinates, Real-Time Capacity Decrementing Logic, 24-Hour EOI Timer); Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock (Fleet Asset Onboarding with Video Proofs, 48-Hour Gate-In Depletion Clock with Automatic Revocation, Dual-Stage Waybill Verification for Loading Advance and Proof of Offloading / e-POD); Module 4: Secure In-App Chat & Anti-Circumvention Engine (Encrypted in-app messaging between truckers and contractors with automated contact obfuscation and regex filtering of phone numbers, emails, bank accounts, and URLs to prevent platform disintermediation); Module 5: Accredited GIT Insurance Underwriting & Claims Desk (Institutional onboarding for licensed insurance underwriters, dynamic risk premium matrix, instant digital trip policy binders, automated premium deduction at source, and digital claims vault); Module 6: Bank & Institutional Financing (Factoring) Desk (Contractor-to-Bank Invitation Flow, 5-Day Expiry State Machine with Max 1 Resend, Financier Waybill Audit Desk, Automated Multi-Way Split Deductions); Module 7: Heavy Equipment Leasing Engine (Replication of 14-Step Workflow for Cranes, Excavators, Forklifts, Lowbeds, and Barges with 360° Inspection Videos, Digital Lease Contracts, and Escrow Caution Deposits); and Module 8: Automobile & Heavy-Duty E-Commerce Marketplace (Prime Movers, Flatbeds, Tippers, Genuine Spare Parts with Inspection-Based Escrow Release)—all as itemized in Schedule A. Any major scope expansion requested post-execution shall be governed by a formal written Change Request (CR).",
+  scopeClause: "The Client hereby engages the Developer to design, engineer, test, and deploy the PROJECT54 Logistics and Heavy Fleet Enterprise Platform across eight (8) core modules: Module 1: Consultant Onboarding & Quota Desk (Paid Licensing via Paystack/Moniepoint, Closed-Loop Referral Engine, Dynamic Quota Caps, Automated Commission Engine); Module 2: Contractor & Job Dispatch Hub (Structured Haulage Manifests, Geofenced Coordinates, Real-Time Capacity Decrementing Logic, 24-Hour EOI Timer); Module 3: Transporter Fleet Vault & 48-Hour Gate-In Clock (Fleet Asset Onboarding with Video Proofs, 48-Hour Gate-In Depletion Clock with Automatic Revocation, Dual-Stage Waybill Verification for Loading Advance and Proof of Offloading / e-POD); Module 4: Secure In-App Chat & Anti-Circumvention Engine (Encrypted in-app messaging between truckers and contractors with automated contact obfuscation and regex filtering of phone numbers, emails, bank accounts, and URLs to prevent platform disintermediation); Module 5: Accredited GIT Insurance Underwriting & Claims Desk (Institutional onboarding for licensed insurance underwriters, dynamic risk premium matrix, instant digital trip policy binders, automated premium deduction at source, and digital claims vault); Module 6: Bank & Institutional Financing (Factoring) Desk (Contractor-to-Bank Invitation Flow, 5-Day Expiry State Machine with Max 1 Resend, Financier Waybill Audit Desk, Automated Multi-Way Split Deductions); Module 7: Heavy Equipment Leasing Engine (Replication of 14-Step Workflow for Cranes, Excavators, Forklifts, Lowbeds, and Barges with 360° Inspection Videos, Digital Lease Contracts, and Escrow Caution Deposits); and Module 8: Automobile & Heavy-Duty E-Commerce Marketplace (Prime Movers, Flatbeds, Tippers, Genuine Spare Parts with Inspection-Based Escrow Release)—all as itemized in Schedule A. Any major scope expansion requested post-execution shall be governed by a formal written Change Request (CR).",
   
   paymentClause: "The total all-inclusive contract fee for the engineering and deployment of the Platform is One Million, Five Hundred Thousand Naira Only (₦1,500,000). The total project delivery timeline is four (4) weeks (twenty-eight [28] calendar days) from the Effective Date. The Client shall remit payment across two (2) contractual milestones: 50% (₦750,000) initial mobilization fee upon contract execution; and 50% (₦750,000) final settlement payable after two (2) months of verified functional operational use following successful mobile app upload and live deployment on Google Play and Apple App Store (post-launch operational validation). Invoices unpaid seven (7) business days past due date entitle Developer to pause active development.",
   
   infrastructureClause: "The Client is solely responsible for funding recurring third-party cloud infrastructure and operational expenses required to operate the Platform, estimated at: Railway Cloud (API, Redis Queues, PostgreSQL DB & Storage Bucket) at ~$10 – $20 / month (handles backend API, workers, cron timers, managed DB, and high-volume video proof & document storage bucket); Automated SMS & OTP Dispatch (Termii) on pay-as-you-go basis (~₦5 per notification / alert); Payment Processing (Paystack / Moniepoint) at standard 1.5% fee capped at ₦2,000 per local transaction; and one-time/annual App Store registrations: Google Play Console ($25 one-time) and Apple Developer Program ($99/year).",
   
-  ipClause: "The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of full and final payment (₦1,500,000), all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API interfaces, state-machine countdown algorithms, UI/UX designs, visual assets, documentation, and technical deliverables—shall vest completely and exclusively in AMS Haulage and Logistics. The Developer waives and transfers all claims, proprietary rights, and title therein to the Client. Upon final milestone settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, server deployment scripts, and database access keys directly to the Client, free of any ongoing licensing restrictions, royalties, or developer encumbrances.",
+  ipClause: "The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of full and final payment (₦1,500,000), all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API interfaces, state-machine countdown algorithms, UI/UX designs, visual assets, documentation, and technical deliverables—shall vest completely and exclusively in PROJECT54 ENTREPRENEURS. The Developer waives and transfers all claims, proprietary rights, and title therein to the Client. Upon final milestone settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, server deployment scripts, and database access keys directly to the Client, free of any ongoing licensing restrictions, royalties, or developer encumbrances.",
   
   disclaimersClause: "Bank Factoring, Credit Underwriting & Statutory Compliance: The Platform provides technical software infrastructure, invitation state machines, and document verification desks to connect Contractors with Banks and Institutional Financiers for invoice factoring and milestone disbursements. The Developer does not operate as a financial institution, credit bureau, or lending entity. Credit approval, factoring fee percentages, underwriting risk assessments, and financing disbursements are strictly governed by bilateral contractual agreements between accredited financing institutions and contractors.\n\nGoods-in-Transit (GIT) Insurance & Underwriting: The Platform integrates digital APIs and split payment mechanisms for accredited third-party insurance underwriters to issue policies and audit claims. The Developer is not an insurance underwriter or broker. Policy terms, risk assessment, coverage scopes, and claim settlements remain exclusively between participating insurance underwriters and the insured parties.\n\nVehicle Roadworthiness, Operational Safety & Inspection: The Platform provides digital compliance workflows (including truck inspection video proof uploads, driver license logs, proof of ownership records, and Goods-in-Transit [GIT] insurance policy documentation). The Platform and Developer do not inspect physical vehicles and assume no legal or operational liability for vehicle mechanical failure, road accidents, highway transit delays, transit cargo loss/damage, or transporter non-performance. Physical operational safety, driver vetting, and insurance claims remain the direct responsibility of the respective transporters and contractor consignors.\n\nIn-App Messaging & Disintermediation Shield: The Platform incorporates automated algorithmic keyword and regex filtering to obfuscate personal contact details and prevent disintermediation between truckers and contractors. While the Developer engineers robust anti-circumvention filters, the Client is responsible for enforcing platform terms of service, merchant compliance, and executing sanctions or account suspensions against offending participants.",
   
@@ -212,7 +212,7 @@ function LogisticsAgreementContent() {
   };
 
   const resetToDefault = () => {
-    if (confirm("Reset agreement back to default AMS Haulage template?")) {
+    if (confirm("Reset agreement back to default PROJECT54 template?")) {
       setState(DEFAULT_LOGISTICS_AGREEMENT_STATE);
       router.push(window.location.pathname);
     }
@@ -264,7 +264,7 @@ function LogisticsAgreementContent() {
           </Link>
           <span className="h-5 w-px bg-slate-700 hidden sm:block"></span>
           <span className="text-xs tracking-wider text-slate-300 uppercase hidden sm:block font-medium">
-            AMS Haulage & Logistics — Master Software Agreement
+            PROJECT54 ENTREPRENEURS — Master Software Agreement
           </span>
         </div>
 
@@ -742,7 +742,7 @@ function LogisticsAgreementContent() {
 
             {/* Document Footer */}
             <div className="mt-10 pt-4 border-t border-slate-200 text-center text-[10px] text-slate-500 font-mono flex justify-between">
-              <span>AMS HAULAGE & LOGISTICS — MASTER SERVICES AGREEMENT</span>
+              <span>PROJECT54 ENTREPRENEURS — MASTER SERVICES AGREEMENT</span>
               <span>CONFIDENTIAL & PROPRIETARY</span>
               <span>PAGE 1 OF 1</span>
             </div>

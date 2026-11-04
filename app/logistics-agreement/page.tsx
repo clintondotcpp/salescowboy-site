@@ -79,7 +79,7 @@ const DEFAULT_LOGISTICS_AGREEMENT_STATE: AgreementState = {
   
   developerName: "Sales Cowboy Marketing Solutions",
   developerLegalName: "SALES COWBOY MARKETING SOLUTIONS",
-  developerAddress: "Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria",
+  developerAddress: "Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state",
   developerEmail: "hello@salescowboy.com.ng",
   developerPhone: "+234 810 493 3232",
   developerWebsite: "salescowboy.com.ng",
@@ -87,7 +87,7 @@ const DEFAULT_LOGISTICS_AGREEMENT_STATE: AgreementState = {
   developerSignatoryTitle: "Lead Developer / Technical Director",
   
   clientCompanyName: "AMS Haulage and Logistics",
-  clientAddress: "Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state",
+  clientAddress: "Owerri, Imo state",
   clientRegistrationNo: "RC Pending / Accredited",
   clientSignatoryName: "Mr. Lawrence",
   clientSignatoryTitle: "CEO / Managing Director",
@@ -567,7 +567,7 @@ function LogisticsAgreementContent() {
                     Marketing Solutions • Enterprise Web & Mobile Engineering
                   </span>
                   <p className="text-[10px] text-slate-500 leading-tight mt-1">
-                    Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria • +234 810 493 3232
+                    Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state • +234 810 493 3232
                   </p>
                 </div>
               </div>

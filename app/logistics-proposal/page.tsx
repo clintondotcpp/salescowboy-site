@@ -90,14 +90,14 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   
   senderName: "Sales Cowboy Marketing Solutions",
   senderDesignation: "Enterprise Systems & Mobile Engineering",
-  senderAddress: "Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria",
+  senderAddress: "Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state",
   senderEmail: "hello@salescowboy.com.ng",
   senderPhone: "+234 810 493 3232 / +234 912 309 6853",
   senderWebsite: "salescowboy.com.ng",
   
   clientName: "AMS Haulage and Logistics",
   clientContact: "Mr. Lawrence (CEO / Managing Director)",
-  clientAddress: "Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state",
+  clientAddress: "Owerri, Imo state",
   clientEmail: "",
   clientPhone: "",
   
@@ -527,7 +527,7 @@ function LogisticsProposalContent() {
                       Marketing Solutions • Enterprise Web & Mobile Engineering
                     </span>
                     <p className="text-[10px] text-slate-500 leading-tight mt-1">
-                      Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos • +234 810 493 3232 / +234 912 309 6853
+                      Ama-wire Ishi-Uzo, Roadsafety Junction, Egbu Road, Owerri, Imo state • +234 810 493 3232 / +234 912 309 6853
                     </p>
                   </div>
                 </div>

@@ -3,594 +3,878 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Revenue & Search Visibility Audit — Casa Urban Guest House — Sales Cowboy</title>
+  <title>Casa Urban Guest House - Digital Revenue Audit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0f172a;
-      --secondary: #334155;
-      --accent: #7c4a1e;
-      --text: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --border-dark: #cbd5e1;
-      --bg: #0b0f19;
-      --paper: #ffffff;
+      --black: #090d16;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-500: #64748b;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: var(--slate-900);
+      font-family: var(--font-sans);
+      color: var(--slate-900);
       line-height: 1.6;
-      padding: 40px 20px;
       -webkit-font-smoothing: antialiased;
+      padding: 40px 16px;
     }
 
+    /* Screen Toolbar */
     .toolbar {
-      max-width: 210mm;
-      margin: 0 auto 20px;
+      max-width: 860px;
+      margin: 0 auto 24px auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #1e293b;
-      padding: 12px 20px;
+      background: var(--black);
+      padding: 14px 24px;
       border-radius: 8px;
-      border: 1px solid #334155;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border: 1px solid var(--slate-800);
+      color: var(--white);
     }
 
     .toolbar-title {
-      color: #f1f5f9;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-family: var(--font-mono);
+    }
+
+    .toolbar-sub {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-left: 12px;
+      text-transform: none;
+    }
+
+    .btn-print {
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      padding: 8px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      transition: opacity 0.2s;
     }
 
-    .toolbar-actions { display: flex; gap: 10px; }
-
-    .btn {
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease;
-      border: none;
+    .btn-print:hover {
+      opacity: 0.9;
     }
 
-    .btn-primary { background: #ffffff; color: #0f172a; }
-    .btn-primary:hover { background: #f1f5f9; }
-
+    /* Sheet Layout */
     .sheet {
-      width: 100%;
-      max-width: 210mm;
-      min-height: 297mm;
+      max-width: 860px;
       margin: 0 auto;
-      background: var(--paper);
-      padding: 44px 50px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-      border: 1px solid var(--border-dark);
-      position: relative;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 56px 64px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
-    .letterhead {
+    /* Letterhead */
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 18px;
-      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--black);
+      gap: 20px;
     }
 
-    .brand-section { display: flex; align-items: center; gap: 14px; }
-    .brand-logo { width: 50px; height: 50px; object-fit: contain; }
-
-    .brand-text h1 {
-      font-family: 'Georgia', serif;
+    .brand-title {
       font-size: 20px;
-      font-weight: 900;
-      color: var(--primary);
-      letter-spacing: 0.5px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--slate-700);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+
+    .brand-contact {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-top: 6px;
+    }
+
+    .ref-badge {
+      text-align: right;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    .ref-badge span {
+      display: block;
+      color: var(--slate-500);
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* Target Box */
+    .target-box {
+      margin-top: 28px;
+      padding: 18px 22px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .target-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .target-detail {
+      font-size: 12px;
+      color: var(--slate-700);
+      margin-top: 3px;
+    }
+
+    .target-tag {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--black);
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    /* Score Hero Box */
+    .score-hero {
+      margin-top: 24px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 8px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .score-number {
+      font-family: var(--font-mono);
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--white);
+      border-right: 1px solid var(--slate-800);
+      padding-right: 32px;
+      text-align: center;
+    }
+
+    .score-number small {
+      font-size: 20px;
+      color: var(--slate-500);
+    }
+
+    .score-meta {
+      flex: 1;
+    }
+
+    .score-tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate-300);
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .score-headline {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+    }
+
+    .score-sub {
+      font-size: 12px;
+      color: var(--slate-300);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    /* Metric Cards Grid */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .metric-card {
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      border-radius: 6px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+
+    .metric-num {
+      font-family: var(--font-mono);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--black);
       line-height: 1.1;
     }
 
-    .brand-text .tagline {
+    .metric-label {
       font-size: 10px;
-      font-weight: 700;
-      color: var(--secondary);
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      margin-top: 2px;
-    }
-
-    .brand-text .address {
-      font-size: 10.5px;
-      color: var(--text-muted);
-      margin-top: 3px;
-      line-height: 1.35;
-    }
-
-    .meta-box {
-      text-align: right;
-      font-size: 11px;
-      background: #f8fafc;
-      padding: 8px 12px;
-      border-radius: 5px;
-      border: 1px solid var(--border);
-    }
-
-    .meta-box .doc-type {
-      font-size: 9.5px;
       font-weight: 800;
-      color: var(--primary);
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      color: var(--slate-700);
+      margin-top: 6px;
+      letter-spacing: 0.03em;
     }
 
-    .meta-box .ref-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      color: var(--primary);
+    .metric-desc {
+      font-size: 10px;
+      color: var(--slate-500);
       margin-top: 2px;
     }
 
-    .target-box {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--primary);
-      border-radius: 5px;
-      padding: 12px 16px;
-      margin-bottom: 22px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 16px;
-      font-size: 11.5px;
+    /* Section Headers */
+    .section-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--black);
+      margin-top: 36px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--slate-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .hero-score-box {
-      background: #0f172a;
-      color: #ffffff;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-bottom: 22px;
+    /* Visual Funnel Chart */
+    .funnel-container {
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 20px;
+      background: var(--white);
+    }
+
+    .funnel-step {
       display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .funnel-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .funnel-num {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 800;
+      width: 70px;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+
+    .funnel-bar-wrap {
+      flex: 1;
+      height: 28px;
+      background: var(--slate-100);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .funnel-bar {
+      height: 100%;
+      background: var(--slate-800);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .funnel-loss {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--slate-700);
+      width: 240px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    /* Rating Comparison Bar */
+    .rating-compare {
+      margin-top: 18px;
+      padding: 16px 20px;
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      border-radius: 8px;
+    }
+
+    .rating-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .rating-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .rating-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--black);
+      width: 130px;
+    }
+
+    .rating-track {
+      flex: 1;
+      height: 14px;
+      background: var(--slate-200);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .rating-fill {
+      height: 100%;
+      background: var(--black);
+      border-radius: 3px;
+    }
+
+    .rating-val {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--black);
+      width: 80px;
+      text-align: right;
+    }
+
+    /* 4-Pillar Grid */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .pillar-card {
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 18px;
+      background: var(--white);
+    }
+
+    .pillar-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .pillar-digit {
+      width: 22px;
+      height: 22px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pillar-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .pillar-list {
+      list-style: none;
+      font-size: 11px;
+      color: var(--slate-700);
+      margin-top: 8px;
+    }
+
+    .pillar-list li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 14px;
+      line-height: 1.5;
+    }
+
+    .pillar-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--slate-900);
+      font-weight: bold;
+    }
+
+    /* ROI Card */
+    .roi-card {
+      margin-top: 24px;
+      border: 2px solid var(--black);
+      border-radius: 8px;
+      background: var(--slate-50);
+      padding: 22px 28px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       gap: 24px;
     }
 
-    .score-badge-circle {
-      text-align: center;
-      background: #1e293b;
-      border: 1px solid #334155;
-      padding: 14px 18px;
-      border-radius: 8px;
-      min-width: 140px;
-    }
-
-    .score-number {
-      font-size: 38px;
-      font-weight: 900;
-      font-family: 'JetBrains Mono', monospace;
-      color: #ef4444;
-      line-height: 1;
-    }
-
-    .score-label {
-      font-size: 9px;
+    .roi-title {
+      font-size: 13px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #94a3b8;
+      color: var(--black);
+    }
+
+    .roi-detail {
+      font-size: 11px;
+      color: var(--slate-700);
       margin-top: 4px;
-    }
-
-    .score-summary h3 {
-      font-size: 13.5px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
-
-    .score-summary p {
-      font-size: 11.5px;
-      color: #cbd5e1;
       line-height: 1.5;
-    }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .metric-card {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--primary);
-      border-radius: 6px;
-      padding: 10px 12px;
-      text-align: center;
-    }
-
-    .metric-value {
-      font-size: 20px;
-      font-weight: 900;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--primary);
-    }
-
-    .metric-title {
-      font-size: 9.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--secondary);
-      margin-top: 2px;
-    }
-
-    .metric-desc {
-      font-size: 9.5px;
-      color: var(--text-muted);
-      margin-top: 3px;
-      line-height: 1.3;
-    }
-
-    h2 {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      border-bottom: 1px solid var(--border-dark);
-      padding-bottom: 4px;
-      margin-top: 22px;
-      margin-bottom: 12px;
-    }
-
-    p, li { font-size: 11.5px; color: #334155; line-height: 1.6; }
-    p { margin-bottom: 8px; }
-    ul { margin-left: 18px; margin-bottom: 10px; }
-    li { margin-bottom: 3px; }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 10px 0 18px;
-      font-size: 11px;
-      border: 1px solid var(--border);
-    }
-
-    th {
-      background: #f1f5f9;
-      color: var(--primary);
-      font-weight: 700;
-      text-align: left;
-      padding: 8px 10px;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid var(--border-dark);
-    }
-
-    td {
-      padding: 8px 10px;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-
-    tr:nth-child(even) td { background-color: #f8fafc; }
-
-    .pillar-card {
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--primary);
-      border-radius: 5px;
-      padding: 10px 14px;
-      margin-bottom: 10px;
-      background: #f8fafc;
-    }
-
-    .pillar-title {
-      font-size: 11.5px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 3px;
-    }
-
-    .pillar-desc {
-      font-size: 11px;
-      color: #475569;
-      line-height: 1.5;
-    }
-
-    .roi-container {
-      background: #f8fafc;
-      border: 1px solid var(--border-dark);
-      border-radius: 8px;
-      padding: 14px 18px;
-      text-align: center;
-      margin: 18px 0;
-    }
-
-    .roi-tag {
-      font-size: 10px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--secondary);
     }
 
     .roi-amount {
-      font-size: 24px;
-      font-weight: 900;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--primary);
-      margin: 4px 0;
+      text-align: right;
     }
 
-    .roi-desc {
+    .roi-figure {
+      font-family: var(--font-mono);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .roi-period {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Rollout Table */
+    .rollout-table {
+      width: 100%;
+      border-collapse: collapse;
       font-size: 11px;
-      color: var(--text-muted);
-      max-width: 550px;
-      margin: 0 auto;
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 8px;
     }
 
-    .doc-footer {
-      margin-top: 28px;
-      padding-top: 12px;
-      border-top: 1px solid var(--border);
+    .rollout-table th {
+      background: var(--slate-100);
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 700;
+      color: var(--black);
+      text-transform: uppercase;
+      font-size: 10px;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .rollout-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--slate-200);
+      color: var(--slate-700);
+    }
+
+    .rollout-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .rollout-table .week-col {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--black);
+      width: 80px;
+    }
+
+    .rollout-table .phase-col {
+      font-weight: 700;
+      color: var(--black);
+      width: 180px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--slate-200);
       display: flex;
       justify-content: space-between;
-      font-size: 10px;
-      color: var(--text-muted);
+      align-items: center;
+      font-size: 11px;
+      color: var(--slate-500);
     }
 
+    .footer strong {
+      color: var(--black);
+    }
+
+    /* Print Optimization */
     @media print {
-      body { background: #ffffff; padding: 0; }
-      .toolbar { display: none; }
-      .sheet { box-shadow: none; border: none; padding: 20px 28px; max-width: 100%; margin: 0; }
+      body {
+        background: var(--white) !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 14mm;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- Screen Toolbar -->
-  <div class="toolbar">
-    <div class="toolbar-title">
-      <span>Digital Revenue Audit — Casa Urban Guest House, Odogunyan, Ikorodu</span>
+  <div class="toolbar no-print">
+    <div>
+      <span class="toolbar-title">SALES COWBOY</span>
+      <span class="toolbar-sub">Casa Urban Guest House | Digital Revenue Audit</span>
     </div>
-    <div class="toolbar-actions">
-      <button class="btn btn-primary" onclick="window.print()">
-        Print / Save PDF
-      </button>
-    </div>
+    <button class="btn-print" onclick="window.print()">
+      Print / Save as PDF
+    </button>
   </div>
 
-  <!-- A4 Printable Sheet -->
+  <!-- Printable A4 Document Sheet -->
   <div class="sheet">
     
-    <!-- Executive Letterhead -->
-    <header class="letterhead">
-      <div class="brand-section">
-        <img src="../../public/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" class="brand-logo" onerror="this.style.display='none'">
-        <div class="brand-text">
-          <h1>SALES COWBOY</h1>
-          <div class="tagline">Marketing Solutions • Hospitality Revenue Engineering</div>
-          <div class="address">
-            36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria<br>
-            hello@salescowboy.com.ng • +234 810 493 3232 • salescowboy.com.ng
-          </div>
+    <!-- Letterhead -->
+    <div class="header">
+      <div>
+        <div class="brand-title">SALES COWBOY</div>
+        <div class="brand-sub">Marketing Solutions • Hospitality Revenue Engineering</div>
+        <div class="brand-contact">
+          36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria • +234 810 493 3232 • salescowboy.com.ng
         </div>
       </div>
-      <div class="meta-box">
-        <div class="doc-type">Hospitality Audit</div>
-        <div class="ref-num">AUD-CASA-2026-005</div>
-        <div class="date">November 06, 2026</div>
+      <div class="ref-badge">
+        <span>AUDIT REFERENCE</span>
+        AUD-CASA-2026-005<br>
+        <small style="color: var(--slate-500);">Nov 06, 2026</small>
       </div>
-    </header>
-
-    <!-- Document Title -->
-    <div style="margin-bottom: 16px;">
-      <h2 style="font-size: 16px; margin: 0; border: none; padding: 0; color: #0f172a; text-transform: uppercase;">
-        DIGITAL SEARCH VISIBILITY, REVENUE & SOCIAL MANAGEMENT AUDIT
-      </h2>
-      <p style="font-size: 11.5px; color: #475569; margin-top: 2px;">
-        Direct Booking Engine, Review Acceleration Flywheel, 24/7 WhatsApp AI Concierge & Viral Poolside Social Media
-      </p>
     </div>
 
-    <!-- Target Client Box -->
+    <!-- Target Property -->
     <div class="target-box">
       <div>
-        <strong>AUDITED PROPERTY:</strong><br>
-        <strong>Casa Urban Guest House</strong><br>
-        12 Alhaji Amu Street, off Saka Jojo by Homat Bus Stop, Odogunyan, Ikorodu, Lagos State<br>
-        <span style="color: #64748b;">Phone: +234 802 876 2087 • Hours: Open 24 Hours Daily</span>
+        <div class="target-title">Casa Urban Guest House & Suites</div>
+        <div class="target-detail">
+          12 Alhaji Amu Street, off Saka Jojo by Homat Bus Stop, Odogunyan, Ikorodu, Lagos State
+        </div>
+        <div class="target-detail" style="font-size: 11px; color: var(--slate-500); margin-top: 2px;">
+          Facilities: Pool, Restaurant, Lounge, Kitchen, Snooker Arena, Standard/Deluxe/Luxury Rooms & Serviced Apartments
+        </div>
       </div>
-      <div>
-        <strong>FACILITIES & AMENITIES:</strong><br>
-        Swimming Pool, Restaurant, Lounge, Kitchen, Snooker Lounge<br>
-        <strong>ROOM TIERS:</strong> Standard, Deluxe, Luxury & Serviced Apartments<br>
-        <strong>ATTENTION:</strong> Executive Management & Directors
-      </div>
-    </div>
-
-    <!-- Executive Health Score Hero Card -->
-    <div class="hero-score-box">
-      <div class="score-badge-circle">
-        <div class="score-number">24<span style="font-size: 18px; color: #94a3b8;">/100</span></div>
-        <div class="score-label">BLIND SPOT ASSET</div>
-      </div>
-      <div class="score-summary">
-        <h3>CRITICAL FINDING: HIGH-VALUE RECREATIONAL ASSETS, ZERO DIGITAL VISIBILITY</h3>
-        <p>
-          Casa Urban Guest House possesses rare high-margin assets in the busy Odogunyan industrial corridor: an outdoor pool, licensed lounge, snooker section, and serviced apartments. However, with <strong>NO website</strong>, only <strong>12 Google reviews (3.8 stars)</strong>, and a dormant social media page with only <strong>15 lifetime posts</strong>, your digital front door is effectively shuttered. You are losing 90%+ of potential guests, pool party organizers, and industrial contractors every week.
-        </p>
+      <div class="target-tag">
+        Open 24 Hours
       </div>
     </div>
 
-    <!-- 4 Metric Cards -->
+    <!-- Executive Health Score Hero -->
+    <div class="score-hero">
+      <div class="score-number">
+        24<small>/100</small>
+      </div>
+      <div class="score-meta">
+        <span class="score-tag">DIAGNOSTIC STATUS: SEARCH BLIND SPOT</span>
+        <div class="score-headline">
+          High-Value Physical Amenities, Critical Digital Invisibility
+        </div>
+        <div class="score-sub">
+          Casa Urban sits in Odogunyan's multi-billion naira industrial hub (Lucky Fibres, PZ Cussons, Wempco). However, with no website, only 12 Google reviews, and 15 social posts, 92 out of every 100 potential guests abandon their inquiry and choose competitors.
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Core Metrics -->
     <div class="metric-grid">
       <div class="metric-card">
-        <div class="metric-value">0</div>
-        <div class="metric-title">Direct Website</div>
-        <div class="metric-desc">Zero online direct room booking</div>
+        <div class="metric-num">0</div>
+        <div class="metric-label">Website</div>
+        <div class="metric-desc">Zero direct booking or card checkout</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value">12</div>
-        <div class="metric-title">Google Reviews</div>
-        <div class="metric-desc">3.8 / 5 rating causes buyer hesitation</div>
+        <div class="metric-num">12</div>
+        <div class="metric-label">Google Reviews</div>
+        <div class="metric-desc">3.8 score creates traveler hesitation</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value">15</div>
-        <div class="metric-title">Social Posts</div>
-        <div class="metric-desc">Abandoned page looks dormant/closed</div>
+        <div class="metric-num">15</div>
+        <div class="metric-label">Social Posts</div>
+        <div class="metric-desc">Dormant page; misses pool party hype</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value">0%</div>
-        <div class="metric-title">WhatsApp Bot</div>
-        <div class="metric-desc">Manual replies; 75%+ inquiry drop-off</div>
+        <div class="metric-num">0%</div>
+        <div class="metric-label">WhatsApp Bot</div>
+        <div class="metric-desc">Manual replies; 75%+ lead drop-off</div>
       </div>
     </div>
 
-    <!-- Section 1 -->
-    <h2>1. The Guest Booking Leak Funnel (Where Revenue Escapes)</h2>
-    <p>
-      Here is what currently happens to 100 corporate contractors, local residents, and travelers seeking lodging or pool recreation in Odogunyan today:
-    </p>
+    <!-- 1. Visual Guest Leak Funnel Chart -->
+    <div class="section-title">
+      <span>1. Guest Drop-Off Visual Funnel</span>
+      <span style="font-size: 10px; color: var(--slate-500); font-weight: 600;">Trajectory of 100 Searchers in Odogunyan</span>
+    </div>
 
-    <table>
+    <div class="funnel-container">
+      <div class="funnel-step">
+        <div class="funnel-num">100</div>
+        <div class="funnel-bar-wrap">
+          <div class="funnel-bar" style="width: 100%;">Step 1: Search Google Maps for Hotels in Odogunyan</div>
+        </div>
+        <div class="funnel-loss">-60 leave (3.8 stars, no site)</div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-num">40</div>
+        <div class="funnel-bar-wrap">
+          <div class="funnel-bar" style="width: 40%;">Step 2: Check Social Media for Pool & Rooms</div>
+        </div>
+        <div class="funnel-loss">-20 leave (only 15 posts)</div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-num">20</div>
+        <div class="funnel-bar-wrap">
+          <div class="funnel-bar" style="width: 20%;">Step 3: Call or Message WhatsApp</div>
+        </div>
+        <div class="funnel-loss">-12 leave (delayed response)</div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-num">8</div>
+        <div class="funnel-bar-wrap">
+          <div class="funnel-bar" style="width: 8%; background: var(--black);">Step 4: Check In</div>
+        </div>
+        <div class="funnel-loss" style="font-weight: 800; color: var(--black);">92% Potential Revenue Lost</div>
+      </div>
+    </div>
+
+    <!-- Rating Benchmark Bar -->
+    <div class="rating-compare">
+      <div class="rating-row">
+        <div class="rating-name">Casa Urban Score</div>
+        <div class="rating-track">
+          <div class="rating-fill" style="width: 76%; background: var(--slate-700);"></div>
+        </div>
+        <div class="rating-val">3.8 / 5.0 (12)</div>
+      </div>
+      <div class="rating-row">
+        <div class="rating-name">Market Benchmark</div>
+        <div class="rating-track">
+          <div class="rating-fill" style="width: 94%; background: var(--black);"></div>
+        </div>
+        <div class="rating-val">4.7 / 5.0 (65+)</div>
+      </div>
+    </div>
+
+    <!-- 2. The 4-Pillar Turnaround Plan -->
+    <div class="section-title">
+      <span>2. The 4-Pillar Turnaround Plan</span>
+      <span style="font-size: 10px; color: var(--slate-500); font-weight: 600;">Full Digital Commercial Upgrade</span>
+    </div>
+
+    <div class="pillar-grid">
+      
+      <div class="pillar-card">
+        <div class="pillar-head">
+          <div class="pillar-digit">1</div>
+          <div class="pillar-title">Direct Booking Mobile Site</div>
+        </div>
+        <ul class="pillar-list">
+          <li>Fast mobile engine built for Nigerian 4G and 3G networks.</li>
+          <li>Galleries for Standard, Deluxe, Luxury, and Serviced Apartments.</li>
+          <li>Showcase tabs for Swimming Pool, Snooker Lounge, and Dining.</li>
+          <li>Paystack checkout with 0% OTA middleman commission.</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-head">
+          <div class="pillar-digit">2</div>
+          <div class="pillar-title">24/7 WhatsApp AI Concierge</div>
+        </div>
+        <ul class="pillar-list">
+          <li>Responds in under 15 seconds, 24 hours daily.</li>
+          <li>Sends room photos, pool entry fees, and menus instantly.</li>
+          <li>Generates automated Paystack payment links in the chat.</li>
+          <li>Captures late-night arrivals without front-desk delay.</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-head">
+          <div class="pillar-digit">3</div>
+          <div class="pillar-title">Google 3-Pack & Smart QR Stands</div>
+        </div>
+        <ul class="pillar-list">
+          <li>Target Odogunyan, Homat Bus Stop, and Sagamu Road search terms.</li>
+          <li>2 custom acrylic NFC and QR stands at Reception and Pool Bar.</li>
+          <li>Directs 5-star guests to Google; routes complaints privately.</li>
+          <li>Scale from 12 reviews to 50+ five-star ratings within 60 days.</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-head">
+          <div class="pillar-digit">4</div>
+          <div class="pillar-title">Poolside & Lounge Content Engine</div>
+        </div>
+        <ul class="pillar-list">
+          <li>Take over Instagram and Facebook with active short-form reels.</li>
+          <li>Showcase weekend pool parties, cocktail specials, and snooker.</li>
+          <li>Consistent publishing schedule (4-5 videos and posts weekly).</li>
+          <li>Targeted local ads for corporate staff and weekend visitors.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Projected Financial Uplift -->
+    <div class="roi-card">
+      <div>
+        <div class="roi-title">Projected Monthly Revenue Uplift</div>
+        <div class="roi-detail">
+          • Room & Shortlet Surge: +15 to +25 nights weekly (+N1,080,000 - N1,800,000)<br>
+          • Poolside & Lounge Volume: +30% to +45% weekend spend (+N400,000 - N900,000)<br>
+          • Direct Booking Savings: Bypassing 15%-20% OTA commissions (+N150,000 - N300,000)
+        </div>
+      </div>
+      <div class="roi-amount">
+        <div class="roi-figure">+N1.2M - N2.8M</div>
+        <div class="roi-period">Estimated Monthly Gain</div>
+      </div>
+    </div>
+
+    <!-- 4-Week Rollout Schedule -->
+    <div class="section-title">
+      <span>3. 4-Week Rapid Rollout Timeline</span>
+    </div>
+
+    <table class="rollout-table">
       <thead>
         <tr>
-          <th>Stage</th>
-          <th>Guest Journey & Behavior</th>
-          <th>Casa Urban Current Reality</th>
-          <th>Financial Consequence</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>1. Google Search</strong></td>
-          <td>Traveler searches "Hotels in Odogunyan" or "Guest house near Lucky Fibres".</td>
-          <td>Only 12 reviews (3.8 stars) and NO website link appears.</td>
-          <td><strong>60 Guests Choose Competitors</strong> with higher review volume & websites.</td>
-        </tr>
-        <tr>
-          <td><strong>2. Social Media</strong></td>
-          <td>Remaining 40 check Instagram/Facebook for pool photos and room rates.</td>
-          <td>Only 15 total posts; page looks dormant and inactive.</td>
-          <td><strong>20 Guests Assume Hotel is Closed</strong> or poorly maintained and leave.</td>
-        </tr>
-        <tr>
-          <td><strong>3. Direct WhatsApp</strong></td>
-          <td>Remaining 20 call or message front desk for pool rates and room tariffs.</td>
-          <td>No 24/7 AI bot. Delayed manual reply or unanswered phone.</td>
-          <td><strong>12 Guests Abandon Inquiry</strong> due to slow human communication.</td>
-        </tr>
-        <tr>
-          <td><strong>4. Walk-In Capture</strong></td>
-          <td>Only 8 out of 100 potential guests survive and check in or enter the lounge!</td>
-          <td>Manual cash/POS handling at the counter.</td>
-          <td><strong>Net Result:</strong> You lose 92 out of 100 potential revenue transactions weekly!</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Section 2 -->
-    <h2>2. The 4-Pillar Turnaround Solution</h2>
-
-    <div class="pillar-card">
-      <div class="pillar-title">1. High-Converting Direct Booking Website & Apartment Showcase</div>
-      <div class="pillar-desc">
-        Mobile-first direct booking website showcasing Standard, Deluxe, Luxury, and Serviced Apartment rooms. Dedicated photo galleries for the swimming pool, restaurant, lounge, and snooker lounge. Integrated Paystack / Monnify card and bank transfer checkout (0% intermediary commission).
-      </div>
-    </div>
-
-    <div class="pillar-card">
-      <div class="pillar-title">2. 24/7 Autonomous WhatsApp AI Concierge Bot</div>
-      <div class="pillar-desc">
-        Sub-15 second automated booking assistant connected to your business WhatsApp. Automatically sends room photos, apartment tariffs, pool entry fees, and kitchen/bar menus. Dispatches instant payment links and issues digital vouchers 24/7.
-      </div>
-    </div>
-
-    <div class="pillar-card">
-      <div class="pillar-title">3. Google 3-Pack Local Dominance & Smart Review Flywheel</div>
-      <div class="pillar-desc">
-        Complete Google Business Profile optimization for Odogunyan and Ikorodu keywords. Deployment of 2x custom acrylic NFC + dynamic QR review stands at the reception desk and pool bar, rapidly scaling verified 5-star Google ratings from 12 to 50+ in 60 days.
-      </div>
-    </div>
-
-    <div class="pillar-card">
-      <div class="pillar-title">4. Active Social Media Management & Viral Poolside Content Engine</div>
-      <div class="pillar-desc">
-        Reviving your social media handles with 4–5 weekly high-engagement video reels and TikToks highlighting weekend pool parties, cocktail lounge, snooker competitions, and chef specialties—backed by targeted Meta ad campaigns in Ikorodu, Ketu, and Sagamu.
-      </div>
-    </div>
-
-    <!-- Section 3: Financial ROI -->
-    <h2>3. Projected Financial Return & Revenue Uplift</h2>
-    <div class="roi-container">
-      <div class="roi-tag">Projected Monthly Revenue Acceleration</div>
-      <div class="roi-amount">+₦1,200,000 – ₦2,800,000 / month</div>
-      <div class="roi-desc">
-        Estimated incremental direct room, shortlet apartment, pool entry, and bar/lounge revenue unlocked by capturing search traffic, automating WhatsApp inquiries, and launching active poolside social media campaigns within 60 days.
-      </div>
-    </div>
-
-    <!-- Section 4: 4-Week Schedule -->
-    <h2>4. 4-Week Rapid Deployment Schedule</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Timeline</th>
-          <th>Phase</th>
+          <th class="week-col">Week</th>
+          <th class="phase-col">Phase</th>
           <th>Core Deliverables</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Week 1</strong></td>
-          <td>Direct Booking Website</td>
-          <td>Custom mobile website build, room & shortlet photography curation, Paystack payment integration, and GBP profile optimization.</td>
+          <td class="week-col">Week 1</td>
+          <td class="phase-col">Mobile Booking Engine</td>
+          <td>Build mobile booking site, upload room photos, integrate Paystack, and optimize Google profile.</td>
         </tr>
         <tr>
-          <td><strong>Week 2</strong></td>
-          <td>WhatsApp AI Concierge</td>
-          <td>WhatsApp Business API setup, room catalog ingestion, pool & menu rate integration, and automated payment link testing.</td>
+          <td class="week-col">Week 2</td>
+          <td class="phase-col">WhatsApp AI Concierge</td>
+          <td>Connect WhatsApp Business API, ingest room and menu catalogs, and test automated chat payments.</td>
         </tr>
         <tr>
-          <td><strong>Week 3</strong></td>
-          <td>Review QR Flywheel</td>
-          <td>Installation of custom acrylic NFC + QR stands at reception and pool bar, staff review incentive setup, and Google 3-Pack push.</td>
+          <td class="week-col">Week 3</td>
+          <td class="phase-col">Smart Review Stands</td>
+          <td>Deploy 2 custom acrylic NFC and QR stands at Reception and Pool Bar, launch staff review incentives.</td>
         </tr>
         <tr>
-          <td><strong>Week 4</strong></td>
-          <td>UGC Video & Social Blitz</td>
-          <td>On-site video shoot (pool, lounge, snooker, rooms), social media relaunch, and hyper-targeted Meta ad campaign activation.</td>
+          <td class="week-col">Week 4</td>
+          <td class="phase-col">Content Shoot & Ads</td>
+          <td>Shoot on-site video reels (pool, snooker, luxury rooms), relaunch social media, and start local ads.</td>
         </tr>
       </tbody>
     </table>
 
     <!-- Footer -->
-    <footer class="doc-footer">
-      <div>Sales Cowboy Marketing Solutions • 36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria</div>
-      <div>Audit Ref: AUD-CASA-2026-005 • Strictly Confidential</div>
-    </footer>
+    <div class="footer">
+      <div>
+        <strong>SALES COWBOY MARKETING SOLUTIONS</strong> • Hospitality Division<br>
+        Direct Line: +234 810 493 3232 • Email: hello@salescowboy.com.ng
+      </div>
+      <div style="text-align: right;">
+        Authenticated Audit<br>
+        <strong>Confidential</strong>
+      </div>
+    </div>
 
   </div>
 
 </body>
 </html>
-

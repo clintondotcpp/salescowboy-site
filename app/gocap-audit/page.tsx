@@ -17,7 +17,6 @@ import {
   MessageSquare, 
   Star, 
   Instagram, 
-  Sparkles,
   ShieldAlert,
   Hotel
 } from "lucide-react";
@@ -242,7 +241,7 @@ export default function GocapAuditPage() {
           {/* Section 3: The 5 Upgrades */}
           <div className="mb-6">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#7c4a1e] border-b border-slate-200 pb-1.5 mb-3 flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4" />
+              <CheckCircle2 className="w-4 h-4" />
               3. The 5-Point Turnkey Transformation Blueprint
             </h3>
 

@@ -9,6 +9,7 @@ const divisions = [
   { href: "/software-development", label: "Websites & Custom Software" },
   { href: "/ecommerce", label: "E-Commerce Online Stores" },
   { href: "/real-estate", label: "Real Estate Websites & Portals" },
+  { href: "/hotels", label: "Hotels & Shortlet Packages" },
   { href: "/seo", label: "SEO & Local Search Dominance" },
   { href: "/crm-ai-automation", label: "CRM & AI Workflow Automation" },
   { href: "/video-production", label: "Real Estate & Commercial Video" },

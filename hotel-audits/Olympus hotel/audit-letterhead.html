@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Revenue & Operations Audit — Olympus Hotel & Suites — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #7c4a1e;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --bg: #0b0f19;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: #0f172a;
+    }
+    .btn-primary:hover { background: #f1f5f9; }
+
+    /* A4 Document Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 44px 50px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-dark);
+      position: relative;
+    }
+
+    /* Executive Letterhead */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-family: 'Georgia', serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-text .tagline {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-top: 2px;
+    }
+
+    .brand-text .address {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    .meta-box {
+      text-align: right;
+      font-size: 11px;
+      background: #f8fafc;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+    }
+
+    .meta-box .doc-type {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .meta-box .ref-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .meta-box .date {
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Target Box */
+    .target-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 5px;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      font-size: 11.5px;
+    }
+
+    /* Score Hero Shape */
+    .hero-score-box {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .score-badge-circle {
+      text-align: center;
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 14px 18px;
+      border-radius: 8px;
+      min-width: 140px;
+    }
+
+    .score-number {
+      font-size: 38px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #f59e0b;
+      line-height: 1;
+    }
+
+    .score-label {
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .score-summary h3 {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .score-summary p {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    /* 4 Metric Badges */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .metric-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--primary);
+      border-radius: 6px;
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 20px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+    }
+
+    .metric-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-top: 2px;
+    }
+
+    .metric-desc {
+      font-size: 9.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      line-height: 1.3;
+    }
+
+    /* Sections */
+    h2 {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1px solid var(--border-dark);
+      padding-bottom: 4px;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+
+    p, li {
+      font-size: 11.5px;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    p { margin-bottom: 8px; }
+    ul { margin-left: 18px; margin-bottom: 10px; }
+    li { margin-bottom: 3px; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 18px;
+      font-size: 11px;
+      border: 1px solid var(--border);
+    }
+
+    th {
+      background: #f1f5f9;
+      color: var(--primary);
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background-color: #f8fafc; }
+
+    /* Pillar Cards */
+    .pillar-card {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 5px;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+      background: #f8fafc;
+    }
+
+    .pillar-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+
+    .pillar-desc {
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    /* ROI Box */
+    .roi-container {
+      background: #f8fafc;
+      border: 1px solid var(--border-dark);
+      border-radius: 8px;
+      padding: 14px 18px;
+      text-align: center;
+      margin: 18px 0;
+    }
+
+    .roi-tag {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--secondary);
+    }
+
+    .roi-amount {
+      font-size: 24px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      margin: 4px 0;
+    }
+
+    .roi-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    .doc-footer {
+      margin-top: 28px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .toolbar { display: none; }
+      .sheet { box-shadow: none; border: none; padding: 20px 28px; max-width: 100%; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>Digital Revenue Audit — Olympus Hotel & Suites, Ibadan</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">
+        Print / Save PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 Printable Sheet -->
+  <div class="sheet">
+    
+    <!-- Executive Letterhead -->
+    <header class="letterhead">
+      <div class="brand-section">
+        <img src="../../public/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" class="brand-logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <h1>SALES COWBOY</h1>
+          <div class="tagline">Marketing Solutions • Hospitality Revenue Engineering</div>
+          <div class="address">
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria<br>
+            hello@salescowboy.com.ng • +234 810 493 3232 • salescowboy.com.ng
+          </div>
+        </div>
+      </div>
+      <div class="meta-box">
+        <div class="doc-type">Hospitality Audit</div>
+        <div class="ref-num">AUD-OLY-2026-004</div>
+        <div class="date">November 06, 2026</div>
+      </div>
+    </header>
+
+    <!-- Document Title -->
+    <div style="margin-bottom: 16px;">
+      <h2 style="font-size: 16px; margin: 0; border: none; padding: 0; color: #0f172a;">
+        DIGITAL SEARCH VISIBILITY, REVENUE & OPERATIONS AUDIT
+      </h2>
+      <p style="font-size: 11.5px; color: #475569; margin-top: 2px;">
+        Monetizing 418 Google Reviews, Direct Booking Engine, 24/7 WhatsApp AI Concierge & Hotel Management Software
+      </p>
+    </div>
+
+    <!-- Target Client Box -->
+    <div class="target-box">
+      <div>
+        <strong>AUDITED PROPERTY:</strong><br>
+        <strong>Olympus Hotel & Suites</strong><br>
+        27 / 29 Ibadan-Abeokuta Road, Fatimah Bus Stop, by 110 Roundabout, Akinyemi Exit, Off Ring Road, Oluyole, Ibadan, Oyo State<br>
+        <span style="color: #64748b;">Phone: +234 913 905 2671 / +234 815 951 1334</span>
+      </div>
+      <div>
+        <strong>AUDIT FOCUS:</strong><br>
+        Direct Booking Capture & Nightlife Operations ERP<br>
+        <strong>FACILITIES:</strong> Rooms, Restaurant, Bar, Outdoor Pool, Club & Snooker Lounge<br>
+        <strong>ATTENTION:</strong> Executive Board & General Management
+      </div>
+    </div>
+
+    <!-- Executive Health Score Hero Card -->
+    <div class="hero-score-box">
+      <div class="score-badge-circle">
+        <div class="score-number">48<span style="font-size: 18px; color: #94a3b8;">/100</span></div>
+        <div class="score-label">UNMONETIZED ASSET</div>
+      </div>
+      <div class="score-summary">
+        <h3>CRITICAL DIAGNOSTIC: MASSIVE SEARCH FOOTPRINT, ZERO DIRECT CONVERSION</h3>
+        <p>
+          Olympus Hotel & Suites holds a massive competitive advantage in Ibadan: <strong>418 Google Business Profile reviews</strong> driving thousands of organic search views each month along the bustling Abeokuta-Ibadan corridor. Yet, with <strong>NO official website</strong> and <strong>NO automated WhatsApp booking bot</strong>, you are forfeiting 15%–20% in OTA commissions to Hotels.ng and losing over 70% of late-night and weekend nightlife inquiries.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4 Metric Cards -->
+    <div class="metric-grid">
+      <div class="metric-card">
+        <div class="metric-value">418</div>
+        <div class="metric-title">Google Reviews</div>
+        <div class="metric-desc">Top 5% search visibility in Ibadan</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">0</div>
+        <div class="metric-title">Direct Website</div>
+        <div class="metric-desc">Zero owned direct online capture</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">0%</div>
+        <div class="metric-title">WhatsApp Bot</div>
+        <div class="metric-desc">Manual replies; 70%+ inquiry drop</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">20%</div>
+        <div class="metric-title">OTA Commission</div>
+        <div class="metric-desc">Forfeited to third-party directories</div>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <h2>1. The Guest Booking Leak Funnel (Where Revenue Escapes)</h2>
+    <p>
+      Here is what currently happens to 100 travelers and guests discovering Olympus Hotel & Suites on Google today:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>Guest Journey & Behavior</th>
+          <th>Olympus Hotel Current Status</th>
+          <th>Financial Consequence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Google Search</strong></td>
+          <td>Traveler finds Olympus Hotel on Google Maps (attracted by 418 reviews).</td>
+          <td>No official website link exists on the Google profile.</td>
+          <td><strong>Search Bottleneck:</strong> Guest must look for alternative links or phone numbers.</td>
+        </tr>
+        <tr>
+          <td><strong>2. OTA Intermediary</strong></td>
+          <td>45 guests click Hotels.ng or Booking.com directory listings.</td>
+          <td>OTAs show competing Oluyole hotels right alongside Olympus.</td>
+          <td><strong>25 Guests Diverted</strong> to rivals; 20 book Olympus at 20% commission loss.</td>
+        </tr>
+        <tr>
+          <td><strong>3. Direct WhatsApp</strong></td>
+          <td>35 guests attempt to call or send a WhatsApp message for room rates or pool/club info.</td>
+          <td>No 24/7 AI bot. Front desk phone is busy or manual message is delayed by 40+ mins.</td>
+          <td><strong>22 Guests Abandon</strong> inquiry and reserve alternative lodging nearby.</td>
+        </tr>
+        <tr>
+          <td><strong>4. Direct Walk-In</strong></td>
+          <td>Only 20 guests successfully complete direct booking or physical walk-in.</td>
+          <td>Offline payment reconciliation between front desk, bar, and pool.</td>
+          <td><strong>Net Result:</strong> You lose 47 out of 100 guests and pay commissions on 20 others!</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 2 -->
+    <h2>2. The 4-Pillar Revenue Monetization Solution</h2>
+
+    <div class="pillar-card">
+      <div class="pillar-title">1. High-Converting Direct Booking Website</div>
+      <div class="pillar-desc">
+        Mobile-first direct booking website linked to your 418 Google reviews. High-resolution suite galleries, amenity showcases (outdoor pool, restaurant, club, snooker section), and integrated Paystack card & bank transfer checkout (0% intermediary commission).
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-title">2. 24/7 Autonomous WhatsApp AI Concierge</div>
+      <div class="pillar-desc">
+        Autonomous WhatsApp reservation bot responding in under 15 seconds. Ingests room catalogs, pool tariffs, and bar menus. Generates instant payment links, confirms reservations, and issues digital check-in receipts 24/7.
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-title">3. Custom Cloud Hotel Management Software (Cloud PMS & Multi-POS)</div>
+      <div class="pillar-desc">
+        Centralized property management system unifying the front-desk room rack, housekeeping status, multi-channel OTA calendar sync (Booking.com & Airbnb), and integrated POS billing for the poolside bar, restaurant, club, and snooker lounge.
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-title">4. Social Media Management & Viral UGC Video Engine</div>
+      <div class="pillar-desc">
+        Production of trendy, high-engagement User Generated Content (UGC) video reels and TikToks highlighting the outdoor pool vibe, club nightlife, snooker competitions, and dining delicacies—paired with targeted Meta ad campaigns.
+      </div>
+    </div>
+
+    <!-- Section 3: Financial ROI -->
+    <h2>3. Projected Financial Return & Direct Revenue Uplift</h2>
+    <div class="roi-container">
+      <div class="roi-tag">Projected Monthly Direct Revenue Acceleration</div>
+      <div class="roi-amount">+₦1,800,000 – ₦4,200,000 / month</div>
+      <div class="roi-desc">
+        Estimated incremental direct room, poolside, and nightlife cash flow captured by converting searchers directly into paying guests and eliminating 20% OTA intermediary commissions within 60 days of launch.
+      </div>
+    </div>
+
+    <!-- Section 4: 4-Week Schedule -->
+    <h2>4. 4-Week Rapid Deployment Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Timeline</th>
+          <th>Phase</th>
+          <th>Core Deliverables</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Week 1</strong></td>
+          <td>Direct Booking Website</td>
+          <td>Custom mobile website build, room photography curation, Paystack gateway integration, and linking to Google Business Profile.</td>
+        </tr>
+        <tr>
+          <td><strong>Week 2</strong></td>
+          <td>WhatsApp AI Concierge</td>
+          <td>WhatsApp Business API setup, room catalog ingestion, automated payment links, and front-desk testing.</td>
+        </tr>
+        <tr>
+          <td><strong>Week 3</strong></td>
+          <td>Cloud PMS & Multi-POS</td>
+          <td>Room rack calendar setup, front-desk check-in workflow, poolside bar/snooker POS integration, and OTA sync.</td>
+        </tr>
+        <tr>
+          <td><strong>Week 4</strong></td>
+          <td>UGC Video & Campaign</td>
+          <td>On-site video production (pool, club, snooker, rooms), social media rollout, and Meta ad campaign activation.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <div>Sales Cowboy Marketing Solutions • Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos</div>
+      <div>Audit Ref: AUD-OLY-2026-004 • Confidential Executive Document</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+

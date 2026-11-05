@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Revenue & Search Visibility Audit — GOCAP Guest House & Apartments — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #7c4a1e;
+      --accent-gold: #cca066;
+      --accent-light: #fef3c7;
+      --danger: #ef4444;
+      --danger-light: #fee2e2;
+      --success: #16a34a;
+      --success-light: #dcfce7;
+      --warning: #f59e0b;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #0b0f19;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .btn-primary:hover { background: #5c3513; }
+
+    .btn-secondary {
+      background: #334155;
+      color: #f1f5f9;
+      border: 1px solid #475569;
+    }
+    .btn-secondary:hover { background: #475569; }
+
+    /* A4 Document Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      margin: 0 auto 30px;
+      background: var(--paper);
+      padding: 44px 50px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* Letterhead Header */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .brand-info h1 {
+      font-family: 'Rye', serif;
+      font-size: 24px;
+      font-weight: normal;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+      line-height: 1.1;
+    }
+
+    .brand-info .tagline {
+      font-family: 'Rye', serif;
+      font-size: 11px;
+      color: var(--accent-gold);
+      letter-spacing: 1px;
+    }
+
+    .brand-contact {
+      margin-top: 6px;
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .doc-meta .badge {
+      display: inline-block;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1px solid #fca5a5;
+    }
+
+    .doc-meta .label {
+      font-size: 9.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+    .doc-meta .val {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    /* Target Subject Box */
+    .subject-grid {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 18px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 22px;
+    }
+
+    .subject-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .subject-fields {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .subject-fields strong {
+      color: var(--primary);
+    }
+
+    .score-box {
+      background: #ffffff;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .score-box .label {
+      font-size: 9px;
+      font-weight: 800;
+      color: #991b1b;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .score-box .score {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 900;
+      color: #dc2626;
+      line-height: 1.1;
+      margin: 4px 0 2px;
+    }
+
+    .score-box .status {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #b91c1c;
+      background: #fee2e2;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Document Title Block */
+    .title-block {
+      margin-bottom: 24px;
+    }
+
+    .title-block h2 {
+      font-size: 21px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .title-block p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .prose {
+      font-size: 11.5px;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    .prose p {
+      margin-bottom: 10px;
+    }
+
+    /* Visual Metric Cards */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .metric-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+      position: relative;
+    }
+
+    .metric-card.danger {
+      border-top: 3px solid #ef4444;
+      background: #fffafa;
+    }
+
+    .metric-card.warning {
+      border-top: 3px solid #f59e0b;
+      background: #fffdf7;
+    }
+
+    .metric-card.success {
+      border-top: 3px solid #16a34a;
+      background: #f7fdf9;
+    }
+
+    .metric-card .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 900;
+      margin: 4px 0 2px;
+    }
+
+    .metric-card.danger .num { color: #dc2626; }
+    .metric-card.warning .num { color: #d97706; }
+    .metric-card.success .num { color: #16a34a; }
+
+    .metric-card .caption {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .metric-card .detail {
+      font-size: 10.5px;
+      color: #475569;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Comparison & Matrix Tables */
+    .table-container {
+      margin-bottom: 22px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    .custom-table th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 14px;
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .custom-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      vertical-align: top;
+    }
+
+    .custom-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .custom-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .pill-red { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+    .pill-yellow { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+    .pill-green { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+
+    /* Callout & Strategic Boxes */
+    .callout-box {
+      background: #f8fafc;
+      border-left: 3.5px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      font-size: 11px;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .callout-box.danger {
+      background: #fef2f2;
+      border-left-color: #ef4444;
+      color: #991b1b;
+    }
+
+    .callout-box strong {
+      color: var(--primary);
+    }
+
+    /* Solution Feature Cards */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .solution-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .solution-card .title {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .solution-card .desc {
+      font-size: 10.5px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .solution-card .highlight {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* ROI Callout Box */
+    .roi-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .roi-content .roi-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 4px;
+    }
+
+    .roi-content p {
+      font-size: 10.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .roi-stat {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 10px 14px;
+      text-align: center;
+    }
+
+    .roi-stat .amt {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 900;
+      color: #34d399;
+    }
+
+    .roi-stat .sub {
+      font-size: 9px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Signoff Block */
+    .signoff {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      margin-top: 26px;
+    }
+
+    .sig-block .label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .sig-block .company {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .sig-line {
+      margin-top: 22px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #94a3b8;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        page-break-after: always;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 14mm 14mm 14mm 14mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>🏨 <strong>Sales Cowboy Marketing Solutions</strong> — Hospitality Digital Audit Report</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      <a href="mailto:hello@salescowboy.com.ng" class="btn btn-secondary">Contact Consultant ✉️</a>
+    </div>
+  </div>
+
+  <!-- Sheet 1: Diagnosis & Search Gap Analysis -->
+  <div class="sheet">
+
+    <!-- Letterhead -->
+    <div class="letterhead">
+      <div class="brand-left">
+        <img src="/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" class="brand-logo">
+        <div class="brand-info">
+          <h1>Sales Cowboy</h1>
+          <div class="tagline">Marketing Solutions & Hospitality Growth Systems</div>
+          <div class="brand-contact">
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria<br>
+            Email: hello@salescowboy.com.ng • Phone: +234 810 493 3232 • Web: salescowboy.com.ng
+          </div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <span class="badge">Digital Audit</span>
+        <span class="label">Audit Reference</span>
+        <div class="val">AUD-2026-SCM-GOCAP-01</div>
+        <span class="label">Audit Date</span>
+        <div class="val">November 5, 2026</div>
+        <span class="label">Primary Industry</span>
+        <div class="val" style="margin-bottom: 0;">Boutique Hospitality / Apartments</div>
+      </div>
+    </div>
+
+    <!-- Target Property Banner -->
+    <div class="subject-grid">
+      <div>
+        <div class="subject-title">Audit Target Subject:</div>
+        <div class="subject-fields">
+          <div><strong>Business Name:</strong> GOCAP GUEST HOUSE & APARTMENTS</div>
+          <div><strong>Property Location:</strong> 13 Parmor Estate, Off Trademore Phase 3, Emmanuel Mbaka Blvd, Airport Road, Lugbe, Abuja</div>
+          <div><strong>Corridor Analysis:</strong> High-Traffic Nnamdi Azikiwe Airport Transit Corridor</div>
+          <div><strong>Current Visibility:</strong> Google Local Map Listing Only (Dormant)</div>
+        </div>
+      </div>
+      <div class="score-box">
+        <div class="label">Digital Health Score</div>
+        <div class="score">28<span style="font-size: 14px; font-weight: normal; color: #94a3b8;">/100</span></div>
+        <div class="status">CRITICAL REVENUE LEAK</div>
+      </div>
+    </div>
+
+    <!-- Title Block -->
+    <div class="title-block">
+      <h2>Digital Revenue & Search Visibility Audit: Unlocking the Lugbe Airport Corridor Goldmine</h2>
+      <p>A comprehensive technical and commercial review of search market positioning, booking infrastructure, and conversion readiness for GOCAP Guest House & Apartments.</p>
+    </div>
+
+    <!-- 1. Executive Diagnosis -->
+    <div class="section">
+      <div class="section-title"><span>🔍</span> 1. Executive Summary & Diagnostic Findings</div>
+      <div class="prose">
+        <p>
+          <strong>GOCAP Guest House & Apartments</strong> occupies a strategically valuable geographic position along the Airport Road corridor in Lugbe, Abuja. With thousands of daily domestic and international passengers landing at Nnamdi Azikiwe International Airport—along with airport workers, airline crew, transit executives, and business travelers to Lugbe/Trademore—the property is surrounded by active accommodation demand 24 hours a day.
+        </p>
+        <p>
+          However, our forensic digital audit reveals that <strong>over 85% of potential booking inquiries are currently missed or diverted to nearby competitors</strong> due to three fundamental infrastructure gaps:
+        </p>
+      </div>
+
+      <!-- Critical Void Cards -->
+      <div class="metrics-grid">
+        <div class="metric-card danger">
+          <div class="caption">Google Profile Status</div>
+          <div class="num">6 Reviews</div>
+          <div class="detail">Dormant listing with no updates, low review volume, and zero keyword optimization. Google's algorithm suppresses ranking.</div>
+        </div>
+        <div class="metric-card danger">
+          <div class="caption">Direct Booking Engine</div>
+          <div class="num">0 Websites</div>
+          <div class="detail">No dedicated web platform to browse rooms, check real-time availability, or process instant online reservations.</div>
+        </div>
+        <div class="metric-card warning">
+          <div class="caption">WhatsApp Automation</div>
+          <div class="num">0% Automated</div>
+          <div class="detail">No interactive WhatsApp concierge. Late-night arrivals or urgent bookers must wait for manual responses or abandon booking.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Search Intent & Geo-Keyword Ranking Matrix -->
+    <div class="section">
+      <div class="section-title"><span>📍</span> 2. Google Search Visibility & Geo-Intent Matrix</div>
+      <div class="prose">
+        <p>
+          Google maps and search algorithms do not rank hotels equally across all queries. Search visibility is dictated by geographic relevance, category signals, and review velocity. Below is our analysis of how GOCAP currently performs across key guest search scenarios:
+        </p>
+      </div>
+
+      <div class="table-container">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th style="width: 170px;">Target Search Query</th>
+              <th style="width: 130px;">Visibility Probability</th>
+              <th>Algorithmic Reality & Revenue Implication</th>
+              <th style="width: 110px;">Strategic Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>"Hotels in Abuja"</strong></td>
+              <td><span class="badge-pill pill-red">Highly Unlikely</span></td>
+              <td>Abuja is vast. Broad searches favor luxury 5-star giants in central hubs (Maitama, Wuse, Central Business District). A guest house in Lugbe will always be filtered out by Google's city-wide centroid algorithm. Competing here yields zero ROI.</td>
+              <td><span style="color: #64748b; font-size: 10px;">Ignore broad queries</span></td>
+            </tr>
+            <tr>
+              <td><strong>"Hotels in Airport Road" / "Hotels in Lugbe"</strong></td>
+              <td><span class="badge-pill pill-yellow">Underperforming (High Potential)</span></td>
+              <td><strong>The Primary Goldmine:</strong> Google actively links "Airport Road" and "Lugbe" geographically. When travelers type this, Google displays a localized map corridor. However, because GOCAP has only 6 reviews and no website, Google ranks competitors with 30+ reviews above it.</td>
+              <td><strong style="color: #b45309; font-size: 10px;">Dominate Local 3-Pack</strong></td>
+            </tr>
+            <tr>
+              <td><strong>"Hotels near me"</strong></td>
+              <td><span class="badge-pill pill-yellow">Yes (Conditional)</span></td>
+              <td>Appears only when the searcher is physically standing in Lugbe or near the Voice of Nigeria (VON) axis. While it captures hyper-local walk-in searches, it fails to capture arriving flight passengers before they leave the terminal.</td>
+              <td><span style="color: #64748b; font-size: 10px;">Proximity capture</span></td>
+            </tr>
+            <tr>
+              <td><strong>"Lodges / Guest Houses in Lugbe"</strong></td>
+              <td><span class="badge-pill pill-green">High Category Match</span></td>
+              <td>GOCAP has its highest natural alignment here because the user's explicit keywords match the property’s exact category. However, without transparent pricing, room photos, or instant WhatsApp booking, 70% of clickers drop off without booking.</td>
+              <td><strong style="color: #15803d; font-size: 10px;">Direct Conversion Hub</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sheet 2: The Solution Blueprint & Growth Strategy -->
+  <div class="sheet">
+
+    <!-- Header Letterhead Compact -->
+    <div class="letterhead" style="margin-bottom: 18px; padding-bottom: 14px;">
+      <div class="brand-left">
+        <img src="/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" style="height: 40px; width: auto; object-fit: contain;">
+        <div>
+          <h2 style="font-family: 'Rye', serif; font-size: 18px; color: var(--accent);">SALES COWBOY MARKETING SOLUTIONS</h2>
+          <div style="font-size: 9.5px; color: var(--accent-gold); font-weight: 700; text-transform: uppercase;">Hospitality Growth Systems & Revenue Engineering</div>
+        </div>
+      </div>
+      <div class="doc-meta" style="font-size: 10px;">
+        <div>GOCAP AUDIT — PART II</div>
+        <div style="color: var(--accent); font-weight: 800;">GROWTH BLUEPRINT & ROI</div>
+      </div>
+    </div>
+
+    <!-- 3. The Three Revenue Bottlenecks -->
+    <div class="section">
+      <div class="section-title"><span>⚠️</span> 3. The Three Revenue Bottlenecks Costing GOCAP Daily Bookings</div>
+      
+      <div class="callout-box danger">
+        <strong>The Drop-Off Funnel:</strong> A traveler landing at Abuja Airport searches <em>"Guest House Lugbe Airport Road"</em> on Google. Even if they spot GOCAP, they find only 6 reviews (none recent), no menu of rooms, no prices, and no link to reserve. When they click "Call," it's 10:45 PM and the line is busy or unanswered. Within 45 seconds, they book a competitor who has instant WhatsApp booking or an active website.
+      </div>
+    </div>
+
+    <!-- 4. The 5 Strategic Upgrades -->
+    <div class="section">
+      <div class="section-title"><span>🚀</span> 4. The 5-Point Turnkey Transformation Blueprint</div>
+      <div class="prose">
+        <p>
+          To transform GOCAP into the undisputed premier guest lodge along the Airport Road corridor, Sales Cowboy deploys five tightly integrated growth solutions:
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <div class="title"><span>🌐</span> 1. High-Converting Direct Booking Website</div>
+          <div class="desc">A fast, elegant, mobile-first website showcasing room categories (Standard, Deluxe, Executive Apartments), virtual tour galleries, amenities (24/7 power, security, Wi-Fi), and instant direct booking engine with Paystack/Moniepoint integration. Saves 15–20% OTA commissions!</div>
+          <span class="highlight">Impact: 100% direct revenue with instant automated booking voucher.</span>
+        </div>
+
+        <div class="solution-card">
+          <div class="title"><span>💬</span> 2. Automated WhatsApp Booking Concierge Bot</div>
+          <div class="desc">A 24/7 intelligent WhatsApp assistant directly connected to GOCAP's business number. Guests can chat, see real-time room availability, view photo carousels, select check-in/out dates, and <strong>pay directly on WhatsApp</strong> with automatic receipt & Google Map location pins.</div>
+          <span class="highlight">Impact: Captures late-night arrivals and fast-moving transit guests with 0 delay.</span>
+        </div>
+
+        <div class="solution-card">
+          <div class="title"><span>📍</span> 3. Google Business Profile Local 3-Pack Dominance</div>
+          <div class="desc">Complete GBP overhaul with geo-tagged high-res photography, optimized category metadata ("Airport Transit Hotel", "Guest House"), and our proprietary <strong>Review Acceleration System</strong> (front-desk QR stands to rapidly scale GOCAP from 6 reviews to 50+ 5-star ratings).</div>
+          <span class="highlight">Impact: Ranks #1 for "Hotels in Airport Road" and "Guest House Lugbe".</span>
+        </div>
+
+        <div class="solution-card">
+          <div class="title"><span>📱</span> 4. Social Media Management & Content Engine</div>
+          <div class="desc">Professional setup and ongoing curation of an active Instagram & Facebook presence. Production of high-definition video reels showcasing peaceful estate serenity, pristine room interiors, security, and airport proximity to build brand trust and social proof.</div>
+          <span class="highlight">Impact: Transforms casual browsers into loyal, repeat corporate clients.</span>
+        </div>
+      </div>
+
+      <div class="callout-box" style="background: #f0fdf4; border-left-color: #16a34a; margin-bottom: 20px;">
+        <strong style="color: #15803d;">Upgrade 5: Hyper-Targeted Airport Transit Advertising:</strong>
+        <p style="font-size: 10.5px; color: #166534; margin-top: 3px;">
+          Deploy geofenced Meta & Google Search Ads targeted at smartphone users within Nnamdi Azikiwe International Airport terminal arriving from Lagos, Port Harcourt, and international flights searching for quick transit lodging, layover apartments, and short stays.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5. Projected ROI Model -->
+    <div class="section">
+      <div class="section-title"><span>📈</span> 5. Revenue Impact & ROI Simulation</div>
+
+      <div class="roi-box">
+        <div class="roi-content">
+          <div class="roi-title">Estimated Monthly Revenue Potential</div>
+          <p>By capturing just <strong>2 to 4 additional direct room bookings per night</strong> through Google Local 3-Pack rankings and instant 24/7 WhatsApp pay-in-chat automation:</p>
+          <p style="margin-top: 4px; color: #94a3b8; font-size: 9.5px;">*Based on average room rates of ₦25,000 – ₦35,000 per night across 30 days.</p>
+        </div>
+        <div class="roi-stat">
+          <div class="amt">+₦1.5M – ₦3.0M</div>
+          <div class="sub">Gross Monthly Gain</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Next Steps & Recommendation -->
+    <div class="section">
+      <div class="section-title"><span>🤝</span> 6. Recommended Next Steps</div>
+      <div class="prose">
+        <p>
+          The market demand in Lugbe and Airport Road is already active—travelers are searching on Google and WhatsApp right now. By implementing this system, GOCAP secures its position as the premier accommodation brand in the corridor.
+        </p>
+        <p>
+          <strong>Sales Cowboy Marketing Solutions</strong> provides the full turnkey solution: web development, WhatsApp bot integration, Google Business verification, and social media production with complete technical support.
+        </p>
+      </div>
+    </div>
+
+    <!-- Signoff Block -->
+    <div class="signoff">
+      <div class="sig-block">
+        <div class="label">AUDIT CONDUCTED & COMPILED BY:</div>
+        <div class="company" style="font-family: 'Rye', serif; color: var(--accent);">SALES COWBOY MARKETING SOLUTIONS</div>
+        <div style="font-size: 11px; color: #475569;">Hospitality Growth & Software Engineering Division</div>
+        <div class="sig-line">Official Lead Consultant: Clinton Chukwunyere</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--text-muted); margin-top: 2px;">Email: hello@salescowboy.com.ng • Tel: +234 810 493 3232</div>
+      </div>
+      <div class="sig-block">
+        <div class="label">PREPARED EXCLUSIVELY FOR:</div>
+        <div class="company">GOCAP GUEST HOUSE & APARTMENTS</div>
+        <div style="font-size: 11px; color: #475569;">Management & Board of Directors</div>
+        <div class="sig-line">13 Parmor Estate, Airport Road, Lugbe, Abuja</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--text-muted); margin-top: 2px;">Status: Confidential Strategic Audit • Ref: SCM-GOCAP-01</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

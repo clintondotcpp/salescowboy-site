@@ -27,7 +27,7 @@ const invoiceState = {
   dueDate: formatDueDate,
   
   senderName: "Clinton Chukwunyere (Sales Cowboy)",
-  senderAddress: "Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos",
+  senderAddress: "36, Arochukwu Street, Uratta East, Owerri North, Imo",
   senderEmail: "hello@salescowboy.com.ng",
   senderPhone: "+234 810 493 3232",
   senderWebsite: "salescowboy.com.ng",

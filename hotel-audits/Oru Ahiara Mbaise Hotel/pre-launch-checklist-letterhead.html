@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Hotel Pre-Launch Master Checklist — Oru, Ahiara Mbaise — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #7c4a1e;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --bg: #0b0f19;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions { display: flex; gap: 10px; }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary { background: #ffffff; color: #0f172a; }
+    .btn-primary:hover { background: #f1f5f9; }
+
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 44px 50px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-dark);
+      position: relative;
+    }
+
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .brand-section { display: flex; align-items: center; gap: 14px; }
+    .brand-logo { width: 50px; height: 50px; object-fit: contain; }
+
+    .brand-text h1 {
+      font-family: 'Georgia', serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-text .tagline {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-top: 2px;
+    }
+
+    .brand-text .address {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    .meta-box {
+      text-align: right;
+      font-size: 11px;
+      background: #f8fafc;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+    }
+
+    .meta-box .doc-type {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .meta-box .ref-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .target-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 5px;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      font-size: 11.5px;
+    }
+
+    .preamble-box {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+    }
+
+    .preamble-box h3 {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #f59e0b;
+      margin-bottom: 6px;
+    }
+
+    .preamble-box p {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .phase-card {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 5px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      background: #f8fafc;
+    }
+
+    .phase-header {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .phase-timeline {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: #e2e8f0;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .checklist-items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .checklist-items li {
+      font-size: 11.5px;
+      color: #334155;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.45;
+    }
+
+    .checkbox-square {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #64748b;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: inline-block;
+      background: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px;
+      font-size: 11px;
+      border: 1px solid var(--border);
+    }
+
+    th {
+      background: #f1f5f9;
+      color: var(--primary);
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background-color: #f8fafc; }
+
+    .doc-footer {
+      margin-top: 32px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .toolbar { display: none; }
+      .sheet { box-shadow: none; border: none; padding: 20px 28px; max-width: 100%; margin: 0; }
+      .page-break { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>New Hotel Pre-Launch Master Checklist — Oru, Ahiara Mbaise</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">
+        Print / Save PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 Printable Sheet -->
+  <div class="sheet">
+    
+    <!-- Header Letterhead -->
+    <header class="letterhead">
+      <div class="brand-section">
+        <img src="../../public/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" class="brand-logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <h1>SALES COWBOY</h1>
+          <div class="tagline">Marketing Solutions • Hospitality Revenue Engineering</div>
+          <div class="address">
+            36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria<br>
+            hello@salescowboy.com.ng • +234 810 493 3232 • salescowboy.com.ng
+          </div>
+        </div>
+      </div>
+      <div class="meta-box">
+        <div class="doc-type">Pre-Opening Checklist</div>
+        <div class="ref-num">CHK-MBAISE-2026-001</div>
+        <div class="date">November 06, 2026</div>
+      </div>
+    </header>
+
+    <!-- Document Title -->
+    <div style="margin-bottom: 16px;">
+      <h2 style="font-size: 16px; margin: 0; border: none; padding: 0; color: #0f172a; text-transform: uppercase; font-weight: 900;">
+        NEW HOTEL PRE-LAUNCH & DIGITAL REVENUE MASTER CHECKLIST
+      </h2>
+      <p style="font-size: 11.5px; color: #475569; margin-top: 2px;">
+        End-to-End Operational, Local Search Dominance & Revenue Architecture for a Clean-Slate Launch
+      </p>
+    </div>
+
+    <!-- Target Location Box -->
+    <div class="target-box">
+      <div>
+        <strong>TARGET PROPERTY:</strong><br>
+        <strong>New Hotel & Suites (Pre-Opening)</strong><br>
+        Oru, Ahiara Mbaise, Imo State, Nigeria<br>
+        <span style="color: #64748b;">Corridor: Owerri-Umuahia Expressway / Ahiara Junction Axis</span>
+      </div>
+      <div>
+        <strong>CONSULTING AGENCY:</strong><br>
+        Sales Cowboy Marketing Solutions (Owerri Office)<br>
+        36, Arochukwu Street, Uratta East, Owerri North, Imo<br>
+        <strong>FOCUS:</strong> Zero-OTA Commission Setup, 24/7 AI & Direct Booking
+      </div>
+    </div>
+
+    <!-- Clean Slate Strategic Box -->
+    <div class="preamble-box">
+      <h3>THE "CLEAN SLATE" ADVANTAGE IN MBAISE</h3>
+      <p>
+        Opening a brand-new hotel in Oru, Ahiara Mbaise means you have no broken digital reputation or bad legacy systems to fix. Mbaise is world-renowned for its high-density diaspora and intense festive seasons (Iri Ji Mbaise, traditional weddings, burials, Easter, and Christmas). During peak dates, hotel rooms book out at ₦25,000–₦60,000/night. Launching with this checklist ensures 100% direct bookings with <strong>zero 20% commission loss to OTAs</strong>, automated 24/7 WhatsApp room sales, and Day-1 5-star Google review authority.
+      </p>
+    </div>
+
+    <!-- Phase 1 -->
+    <div class="phase-card">
+      <div class="phase-header">
+        <span>Phase 1: Brand Identity, Naming & Statutory Foundation</span>
+        <span class="phase-timeline">T-minus 60 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>Brand Naming & Domain Check:</strong> Confirm clean, available name and register official <code>.com</code> or <code>.com.ng</code> domain.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>CAC Corporate Registration:</strong> Register Limited Liability Company / Business Name for corporate banking and tax compliance.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Corporate Visual Suite:</strong> High-res logo, brand typography, signboards, staff uniform badges, and linen embroidery templates.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Commercial Banking Setup:</strong> Dedicated corporate NUBAN account with merchant settlement sub-accounts.</div></li>
+      </ul>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase-card">
+      <div class="phase-header">
+        <span>Phase 2: Google Maps & Local Search Dominance</span>
+        <span class="phase-timeline">T-minus 45 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>Google Business Profile (GBP) Creation:</strong> Drop exact GPS coordinates in Oru, Ahiara Mbaise along the expressway feeder route.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>GBP Address Verification:</strong> Complete video or postcard verification before gates open to ensure Day-1 search ranking.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Core Amenities Tagging:</strong> Standby 24/7 Generator, Air-Conditioned Suites, Gated Security, Pool, Restaurant & Bar, Complimentary Breakfast.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Geo-Tagged Photography:</strong> Upload 25+ high-res architectural photos tagged to Ahiara Mbaise coordinates.</div></li>
+      </ul>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase-card">
+      <div class="phase-header">
+        <span>Phase 3: Direct Booking Website & 0% OTA Engine</span>
+        <span class="phase-timeline">T-minus 30 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>Mobile-First Booking Website:</strong> High-speed 5–8 page website showcasing room types, suite rates, and event halls.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Paystack / Monnify Checkout:</strong> Direct online payments (Debit Card, USSD, Bank Transfer) landing 100% of guest revenue in your account.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Eliminate 20% OTA Tax:</strong> Prevent ₦3,000–₦6,000 commission losses per room night to Hotels.ng and Booking.com.</div></li>
+      </ul>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="phase-card">
+      <div class="phase-header">
+        <span>Phase 4: 24/7 Autonomous WhatsApp AI Concierge Bot</span>
+        <span class="phase-timeline">T-minus 25 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>Official WhatsApp Business API:</strong> Connect dedicated business line with automated sub-15s response speed.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Autonomous Room Sales:</strong> Sends room photos, live tariffs, bar/kitchen menus, and check-in policies inside WhatsApp.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Instant Payment Links:</strong> Dispatches Paystack payment links in chat and issues instant booking vouchers.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Late-Night Arrival Alert:</strong> Automatically alerts front desk when midnight travelers are en route.</div></li>
+      </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Phase 5 -->
+    <div class="phase-card" style="margin-top: 14px;">
+      <div class="phase-header">
+        <span>Phase 5: Cloud Property Management System (PMS) & Multi-POS</span>
+        <span class="phase-timeline">T-minus 20 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>Visual Room Rack Calendar:</strong> Interactive cloud availability grid (Available, Occupied, Cleaning, Maintenance).</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Integrated Restaurant & Bar POS:</strong> Direct drink and meal billing to guest room folio, settled upon checkout.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Multi-Channel OTA Calendar Sync:</strong> 2-way sync with Booking.com and Airbnb to eliminate double-bookings forever.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Daily Cashier Night Audit:</strong> Automated revenue reports reconciling POS slips, cash, and transfers against physical occupancy.</div></li>
+      </ul>
+    </div>
+
+    <!-- Phase 6 -->
+    <div class="phase-card">
+      <div class="phase-header">
+        <span>Phase 6: Front-Desk Review Acceleration System</span>
+        <span class="phase-timeline">T-minus 15 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>Acrylic NFC + QR Stands:</strong> Heavy-duty branded review stands on reception desk, restaurant, and executive suites.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Smart 2-Way Review Gateway:</strong> Routes 5-star guests straight to Google Maps in 30 seconds; diverts complaints privately to management.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Automated Post-Checkout Follow-up:</strong> WhatsApp thank-you message delivered 2 hours after checkout with review link.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Front-Desk Incentive Matrix:</strong> ₦500 bonus for receptionists for every verified 5-star review mentioning their service.</div></li>
+      </ul>
+    </div>
+
+    <!-- Phase 7 -->
+    <div class="phase-card">
+      <div class="phase-header">
+        <span>Phase 7: Physical Wayfinding & Transit Signage</span>
+        <span class="phase-timeline">T-minus 15 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>Ahiara Junction Approach Billboard:</strong> Clear directional sign at the major junction indicating distance and turnoff.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Oru Feeder Road Directional Signage:</strong> Reflective directional markers along the access road to eliminate traveler confusion.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Perimeter Gate Illuminated Signage:</strong> Floodlit / backlit exterior corporate gate sign visible at night.</div></li>
+      </ul>
+    </div>
+
+    <!-- Phase 8 -->
+    <div class="phase-card">
+      <div class="phase-header">
+        <span>Phase 8: Launch Marketing & Diaspora/Wedding Campaign</span>
+        <span class="phase-timeline">T-minus 10 Days</span>
+      </div>
+      <ul class="checklist-items">
+        <li><span class="checkbox-square"></span> <div><strong>4K Facility Video Shoot:</strong> Professional video reels highlighting suites, bar ambiance, and chef delicacies.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Event Planner Database Outreach:</strong> Connect with wedding planners and church diocesan coordinators across Mbaise.</div></li>
+        <li><span class="checkbox-square"></span> <div><strong>Targeted Meta Ad Blitz:</strong> Run Facebook/Instagram ads targeting Mbaise indigenes in Lagos, Abuja, Port Harcourt, and diaspora.</div></li>
+      </ul>
+    </div>
+
+    <!-- Turnkey Summary Table -->
+    <div style="margin-top: 18px;">
+      <h3 style="font-size: 12px; font-weight: 800; text-transform: uppercase; color: #0f172a; margin-bottom: 6px;">
+        Sales Cowboy Turnkey Launch Packages
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Module Component</th>
+            <th>Deliverables</th>
+            <th>Timeline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Direct Booking Website</strong></td>
+            <td>5–8 Custom Pages, Room Catalog, Paystack/Monnify Checkout, Domain & 1 Yr Cloud Hosting</td>
+            <td>7 Days</td>
+          </tr>
+          <tr>
+            <td><strong>2. 24/7 WhatsApp AI Bot</strong></td>
+            <td>Official WhatsApp API, Automated Room Photos, Rates, Instant Payment Links & Vouchers</td>
+            <td>7 Days</td>
+          </tr>
+          <tr>
+            <td><strong>3. Google Business Profile</strong></td>
+            <td>Complete GBP Setup, Map Pin Drop, Verification & Geo-Tagged Photo Curation</td>
+            <td>5 Days</td>
+          </tr>
+          <tr>
+            <td><strong>4. Smart Review QR Stands</strong></td>
+            <td>2x Custom Acrylic Front-Desk Stands (NFC + Dynamic QR) & Negative Review Gatekeeper</td>
+            <td>5 Days</td>
+          </tr>
+          <tr>
+            <td><strong>5. Cloud Hotel PMS Software</strong></td>
+            <td>Room Rack Calendar, Front-Desk Check-In/Out, Bar/Restaurant POS & Multi-Channel Sync</td>
+            <td>14 Days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <div>Sales Cowboy Marketing Solutions • 36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria</div>
+      <div>Audit Ref: CHK-MBAISE-2026-001 • Strictly Confidential</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+

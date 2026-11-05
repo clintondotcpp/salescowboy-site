@@ -187,3 +187,4 @@ When GOCAP asks: *"How are you going to get us reviews? Do we just put a barcode
 > 2. We provide physical luxury acrylic stands for your reception desk that guests can tap with their phone in 10 seconds.  
 > 3. We automate a WhatsApp follow-up message sent 2 hours after checkout.  
 > 4. We train your front-desk staff with an incentive script so they proactively collect reviews on every single checkout. That is how we reliably take you from 6 reviews to over 50 verified 5-star reviews within 60 days."*
+

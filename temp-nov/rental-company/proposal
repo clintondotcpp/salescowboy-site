@@ -1,0 +1,208 @@
+# TECHNICAL & COMMERCIAL PROPOSAL
+**Project:** Centralized Operations, Fleet & Inventory ERP System  
+**Prepared By:** Sales Cowboy Marketing Solutions (Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria | hello@salescowboy.com.ng | +234 810 493 3232)  
+**Prepared For (Client):** The Party Rental Station (TPRS)  
+**Client Representation:** Managing Director & Executive Operations Directorate  
+**Date:** November 5, 2026  
+**Proposal Reference:** PROP-TPRS-2026-008  
+
+---
+
+## 1. PROJECT BACKGROUND & OPERATIONAL OBJECTIVE
+
+The Party Rental Station (TPRS) manages high-value commercial event infrastructure across Nigeria, including industrial cooling units, high-capacity mobile air conditioning systems, heavy-duty power generators, modular marquees, luxury seating, and event staging. 
+
+In high-velocity rental environments, manual coordination through paper logs, phone calls, and informal chat groups introduces catastrophic operational risks:
+1. **Asset Double-Booking & Conflict Chaos:** Heavy cooling units and ACs booked for overlapping dates or tight turnarounds without accounting for teardown, transit buffers, or mandatory maintenance checks.
+2. **Untracked Inventory Leakage & Missing Items:** Accessories, power cabling, distribution boards, ducting, and furniture disappearing between venue dispatches, loading bays, and post-event returns without clear staff accountability.
+3. **Fleet Downtime & Unmonitored Logistics Expenditure:** Delivery trucks operating with expired roadworthiness documents, unmonitored fuel consumption, falsified odometer logs, and uncoordinated repair approvals.
+4. **Gatehouse Security Gaps & Unauthorized Dispatch:** Assets leaving the primary depot without formal digital authorization, job cards, or pre-dispatch condition testing.
+5. **Slow Customer Handover & Disputed Damage Claims:** Clients contesting damages or missing accessories at event tear-down due to the absence of timestamped photographic evidence and on-site digital signatures.
+
+### The Objective
+Sales Cowboy Marketing Solutions is commissioned to design, engineer, and deploy a bespoke **Centralized Operations, Fleet & Inventory ERP System**. This platform digitizes and enforces TPRS's Standard Operating Procedures (SOP) across all departments—unifying Sales, Warehouse, Fleet Logistics, Field Technicians, Gatehouse Security, and Executive Management into a single, real-time source of truth.
+
+---
+
+## 2. COMPREHENSIVE MODULE ARCHITECTURE
+
+### Module 1: Time-Windowed Asset & Inventory Vault
+* **Conflict-Free Reservation Engine:**
+  * Algorithmic reservation engine that calculates real-time asset availability against event dates, setup windows, transit buffers, post-event return inspection periods, and mandatory maintenance cooling-off intervals.
+  * Real-time visual timeline and booking calendar preventing overlapping reservations, under-capacity commitments, or manual scheduling errors.
+* **Categorized Multi-Tier Asset Registry:**
+  * Dedicated asset profiles tracking serial numbers, purchase dates, manufacturer specs, maintenance history, and current operational states:
+    * `AVAILABLE` (Ready for dispatch in warehouse)
+    * `BOOKED` (Committed to an approved upcoming event)
+    * `IN_TRANSIT` (En route to or from event location)
+    * `ON_SITE` (Installed and active at client venue)
+    * `MAINTENANCE` (Under service or routine testing)
+    * `QUARANTINE` (Held pending damage inspection or customer dispute)
+  * Specialized handling for high-capacity cooling systems, 5-ton to 10-ton package ACs, misting fans, power distribution units (PDU), industrial cables, and modular event structures.
+* **Digital Warehouse Issue & Return Reconciliation:**
+  * Digital Warehouse Issue Notes (WIN) generated automatically from approved bookings.
+  * Barcode / QR-ready digital dispatch scanning verifying that every item leaving the loading bay matches the job manifest.
+  * Mandatory post-event return inspection checklists with automatic variance calculation (identifying missing accessories, damaged ducting, or burnt cables before equipment is returned to stock).
+
+---
+
+### Module 2: Fleet Management & Logistics Desk
+* **Vehicle Master Register & Compliance Guard:**
+  * Centralized digital registry for all company delivery trucks, flatbeds, and logistical vans.
+  * Automated compliance expiration alerts (Vehicle Inspection Service / Roadworthiness, Commercial Hackney Permit, Insurance, Heavy-Duty Permits) delivered to the Operations Director 30 days and 7 days prior to lapse.
+* **Trip Sheets & Dispatch Control:**
+  * Automated assignment of authorized drivers and field crews to approved delivery manifests.
+  * Mandatory pre-trip odometer and fuel-level logging.
+  * Real-time dispatch status tracking (`DISPATCHED`, `ARRIVED_AT_SITE`, `OFFLOADED`, `RETURN_TRANSIT`, `DEPOT_RETURNED`).
+* **Maintenance & Repair Authorization Workflow:**
+  * Structured driver/technician incident reporting for vehicle breakdowns, tyre wear, or mechanical issues.
+  * Digital vendor quote upload and multi-tiered management approval workflow prior to repair authorization, preventing unauthorized fleet expenditure.
+
+---
+
+### Module 3: Event Operations & Site Delivery Engine
+* **Digital Job Cards & Field Manifests:**
+  * Complete operational job cards accessible via mobile PWA for on-site field supervisors.
+  * Captures venue delivery access restrictions, generator power specifications, setup deadlines, client site contacts, and assigned technician rosters.
+* **Pre-Dispatch & Setup Functional Checklists:**
+  * Enforces mandatory pre-dispatch testing protocols—especially for high-capacity ACs and power generators (testing compressor drawdown, airflow temperature, oil levels, and voltage stabilization) before loading.
+  * On-site commissioning checklist verifying that equipment is fully installed, balanced, and operational before client event commencement.
+* **Mobile Customer Handover & On-Site Digital Signatures:**
+  * Field supervisor captures on-site digital signature directly on smartphone/tablet from the event organizer or venue manager upon successful delivery and setup.
+  * Instant generation and automated email/WhatsApp dispatch of the Delivery Handover Receipt, legally confirming equipment delivery in sound working condition.
+  * Symmetric post-event collection sign-off documenting return condition and recording any missing or damaged items.
+
+---
+
+### Module 4: Incident, Loss & Security Audit Vault
+* **Depot Gatehouse Security Control Desk:**
+  * Dedicated tablet-optimized portal for depot gate security officers.
+  * Digital Gate-Pass verification: Security cannot clear any truck or asset to exit the compound without a digitally verified Job Card and Dispatch Note generated by the warehouse.
+  * Inbound vehicle inspection logging verifying return manifests at the perimeter gate.
+* **Damage, Loss & Missing Items Registry:**
+  * Mandatory high-resolution photo evidence capture directly within the mobile app for damaged equipment, torn marquee panels, crushed ducting, or severed power cables.
+  * Immediate incident logging with automatic repair cost estimation and formal tagging of customer liability or internal technician responsibility.
+* **Multi-Level Segregated Authorization Matrix:**
+  * Granular approval thresholds for operational spend, emergency site expenses, equipment discounts, inventory write-offs, and maintenance disbursements:
+    * Level 1: Field Supervisor (≤ ₦20,000 emergency expense)
+    * Level 2: Operations / Warehouse Manager (≤ ₦100,000)
+    * Level 3: Managing Director / COO (> ₦100,000 & all asset write-offs)
+
+---
+
+### Module 5: COO Executive Intelligence & Real-Time KPI Desk
+* **Executive Operations Dashboard:**
+  * Live KPI rollups tracking core operational metrics:
+    * **Fleet Availability Rate** (Target: ≥ 95%)
+    * **Inventory Accuracy & Reconciliation Rate** (Target: ≥ 98%)
+    * **On-Time Site Setup Rate** (Target: ≥ 96%)
+    * **Asset Utilization Index** (Revenue generated per cooling unit / generator per month)
+* **Expenditure & Cost Center Tracking:**
+  * Real-time aggregation of fuel costs per trip, fleet maintenance spend, third-party sub-rentals, and repair overhead against monthly operating budgets.
+* **One-Click Audit & Export Engine:**
+  * One-click PDF and Excel reporting for executive board meetings, monthly inventory valuation, and departmental accountability audits.
+
+---
+
+## 3. PROPOSED TECH STACK & SYSTEM ARCHITECTURE
+
+| Component | Technology | Enterprise Rationale |
+| :--- | :--- | :--- |
+| **Frontend Application** | Next.js 15 (React 19, Tailwind CSS, TypeScript) | Blazing-fast progressive web application (PWA) optimized for mobile smartphones used by drivers, field crew, and warehouse staff. |
+| **Backend API & Workflows** | Node.js (NestJS / Modular Architecture) | Enterprise-grade backend with strict transaction isolation, state machine controls, and cryptographically verified role permissions. |
+| **Database** | PostgreSQL (Relational Integrity) | Strict relational ACID transactions ensuring zero asset double-bookings and immutable inventory audit ledgers. |
+| **Media & Photo Evidence Vault** | Cloudflare R2 Object Storage | Zero-egress fee private cloud storage for high-resolution damage photos, driver compliance documents, and vehicle inspection records. |
+| **SMS & OTP Notifications** | Termii API Gateway | Instant transactional SMS and OTP delivery to Nigerian telecom networks (MTN, Airtel, Glo, 9mobile). |
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY INFRASTRUCTURE COSTS
+*(Paid directly by the Client to third-party infrastructure providers; zero agency markup added)*
+
+| Infrastructure / Service Component | Provider | Billing Model | Estimated Monthly Running Cost | Technical Role & Coverage |
+| :--- | :--- | :--- | :--- | :--- |
+| **Railway Cloud Application & Database Server** | Railway.app | Monthly Subscription | **$10 / month** | Hosts the containerized Next.js/Node.js application, managed PostgreSQL database, Redis session cache, and background cron workers. Highly scalable with 99.9% uptime SLA. |
+| **Cloudflare R2 Object Storage** | Cloudflare | Zero-Egress Storage | **$0 – $5 / month** | High-security storage for all field photo proofs, gatehouse inspection pictures, damage records, and digital signed handover PDFs. (10GB free storage included monthly). |
+| **Automated SMS & OTP Dispatch** | Termii | Pay-As-You-Go | **Pay-As-You-Go** *(~₦5 per notification)* | Delivers automated SMS alerts for job assignments, gate-pass security verification OTPs, vehicle compliance alerts, and client booking receipts. |
+| **Payment Gateway Integration** *(Optional)* | Paystack / Moniepoint | Per Transaction | **1.5% capped at ₦2,000 per local transaction** | Direct client reservation deposits, security caution deposits, and online invoice settlement. |
+| **Total Estimated Monthly Infrastructure** | | | **~$10 / month + pay-as-you-go SMS** | **Ultra-lean, high-efficiency cloud footprint.** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & TIMELINE OPTIONS
+
+To provide TPRS with strategic flexibility, Sales Cowboy Marketing Solutions offers two distinct deployment models:
+
+### Option A: Complete SOP Enterprise Suite (Comprehensive Automation)
+* **Scope:** Full turnkey implementation of all five (5) modules:
+  * Module 1: Time-Windowed Asset & Inventory Vault (Conflict-Free Booking Engine & Asset Registry)
+  * Module 2: Fleet Management & Logistics Desk (Vehicle Registers, Trip Sheets & Maintenance Approvals)
+  * Module 3: Event Operations & Site Delivery Engine (Digital Job Cards & Mobile Handover Signatures)
+  * Module 4: Incident, Loss & Security Audit Vault (Gatehouse Security Desk & Photo Damage Logs)
+  * Module 5: COO Executive Intelligence & KPI Reporting (Real-time analytics, cost tracking & exports)
+* **Total Fixed Investment:** **₦3,200,000 (Three Million, Two Hundred Thousand Naira)**
+* **Delivery Timeline:** **7 Weeks (Rapid 49 Calendar Days)**
+
+---
+
+### Option B: Core Operations & Inventory ERP (Phased Deployment)
+* **Scope:** Rapid deployment of foundational operations and asset control:
+  * Module 1: Time-Windowed Asset & Inventory Vault (Asset catalog, reservation engine, warehouse issue/returns)
+  * Module 2: Fleet Management Core (Vehicle profiles, basic driver trip sheets, fuel logs)
+  * Module 4 (Partial): Incident & Damage Reporting (Basic photo damage logs and incident tracking)
+  * Standard Executive Summary Dashboard
+  *(Excludes mobile digital client signatures, gatehouse tablet portal, and multi-tier approval thresholds)*
+* **Total Fixed Investment:** **₦2,000,000 (Two Million Naira)**
+* **Delivery Timeline:** **4 Weeks (28 Calendar Days)**
+
+---
+
+### Standard Milestone Payment Schedule
+
+| Milestone Stage | Percentage | Option A Amount | Option B Amount | Deliverable / Trigger |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Mobilization Deposit** | **50%** | **₦1,600,000** | **₦1,000,000** | Paid upon contract signing to commence systems architecture, database schema design, UX wireframes, and server environment provisioning. |
+| **2. Beta Staging Milestone** | **30%** | **₦960,000** | **₦600,000** | Paid upon deployment to private staging server for departmental testing by TPRS operations, warehouse, and logistics heads. |
+| **3. Final Handover & Training** | **20%** | **₦640,000** | **₦400,000** | Paid upon production deployment, mobile PWA installation, staff onboarding/training, and delivery of system documentation. |
+| **Total Contract Value** | **100%** | **₦3,200,000** | **₦2,000,000** | |
+
+---
+
+## 6. CONTRACTUAL GUARANTEES, IP OWNERSHIP & SUPPORT
+
+1. **100% Complete Client Intellectual Property Ownership:**
+   Upon settlement of the final contractual payment, 100% complete and unencumbered Intellectual Property (IP) ownership of all custom source code, application codebases, database schemas, system architecture, and administrator credentials vests exclusively in **The Party Rental Station (TPRS)**. Zero ongoing vendor lock-in or developer usage royalties.
+2. **12 Months Complimentary Technical Support & Bug-Fix Warranty:**
+   Includes twelve (12) consecutive months of complimentary post-launch technical support strictly dedicated to server uptime surveillance, Railway infrastructure monitoring, database performance optimization, and bug-fix maintenance for all agreed system features (excludes requests for new module additions).
+3. **Optional Post-Warranty Annual Maintenance Retainer (Year 2+):**
+   Following the complimentary 12-month warranty, TPRS may opt for ongoing enterprise support, server health surveillance, security patching, and bug-fix SLA coverage at a fixed fee of **₦600,000 / year**, payable annually in advance.
+
+---
+
+## 7. OFFICIAL BANK REMITTANCE DETAILS
+
+* **Bank Name:** Guaranty Trust Bank (GTBank)
+* **Account Name:** Sales Cowboy Marketing Solutions
+* **Account Number:** 3006086291
+
+---
+
+## 8. AUTHORIZATION & ACCEPTANCE SIGNATURES
+
+**ISSUED FOR AND ON BEHALF OF SALES COWBOY MARKETING SOLUTIONS:**  
+
+**Clinton Chukwunyere**  
+Lead Developer / Technical Director  
+Signature: _________________________________________  
+Date: November 5, 2026  
+
+---
+
+**ACCEPTED AND CONFIRMED (CLIENT):**  
+
+Company Name: **The Party Rental Station (TPRS)**  
+Selected Option: [ ] **Option A (₦3,200,000 / 7 Weeks)** &nbsp;&nbsp;&nbsp;&nbsp; [ ] **Option B (₦2,000,000 / 4 Weeks)**  
+Authorized Representative: _________________________________________  
+Designation: _________________________________________  
+Signature: _________________________________________  
+Date: _________________________________________  

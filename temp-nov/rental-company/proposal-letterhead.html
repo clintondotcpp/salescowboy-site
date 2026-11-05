@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical & Commercial Proposal — The Party Rental Station (TPRS) — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #b45309;
+      --accent-light: #fef3c7;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0b0f19;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: #0f172a;
+      color: #f8fafc;
+      border: 1px solid #475569;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #334155;
+      border-color: #64748b;
+    }
+
+    .btn-primary {
+      background: #d97706;
+      border-color: #b45309;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #b45309;
+    }
+
+    /* A4 Paper Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 48px 56px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* Corporate Letterhead */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-family: 'Rye', serif;
+      font-size: 24px;
+      color: #7c4a1e;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-text .tagline {
+      font-size: 11px;
+      font-weight: 700;
+      color: #cca066;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 3px;
+    }
+
+    .brand-text .address {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .meta-box {
+      text-align: right;
+      font-size: 12px;
+      background: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .meta-box .doc-type {
+      font-size: 10px;
+      font-weight: 800;
+      color: #7c4a1e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .meta-box .ref-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .meta-box .date {
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Proposal Header */
+    .proposal-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: -0.2px;
+    }
+
+    .proposal-subtitle {
+      font-size: 13.5px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .client-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      font-size: 12.5px;
+    }
+
+    .client-card strong {
+      color: var(--primary);
+    }
+
+    /* Typography & Sections */
+    h2 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-top: 28px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 14px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p, li {
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 12px;
+    }
+
+    th {
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 700;
+      text-align: left;
+      padding: 9px 12px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    /* Highlight Badges & Boxes */
+    .highlight-box {
+      background: #fefce8;
+      border: 1px solid #fef08a;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 12px;
+    }
+
+    .highlight-box strong {
+      color: #854d0e;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .badge-amber {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .badge-green {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    .pricing-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      background: #ffffff;
+    }
+
+    .pricing-card.primary {
+      border: 2px solid var(--accent);
+      background: #fffbeb;
+    }
+
+    .pricing-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .pricing-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .pricing-amount {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .pricing-timeline {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Bank Account Box */
+    .bank-box {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: 12.5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bank-box strong {
+      color: var(--primary);
+    }
+
+    .signatures {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .signature-block {
+      font-size: 12px;
+    }
+
+    .signature-line {
+      border-bottom: 1px solid #94a3b8;
+      margin: 36px 0 8px;
+      width: 85%;
+    }
+
+    .doc-footer {
+      margin-top: 40px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      color: var(--text-muted);
+    }
+
+    /* Print Optimizations */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .toolbar {
+        display: none;
+      }
+      .sheet {
+        box-shadow: none;
+        border: none;
+        padding: 28px 36px;
+        max-width: 100%;
+        margin: 0;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <span>Commercial & Technical Proposal — The Party Rental Station (TPRS)</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Print / Save PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 Printable Sheet -->
+  <div class="sheet">
+    
+    <!-- Header Letterhead -->
+    <header class="letterhead">
+      <div class="brand-section">
+        <img src="../../public/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" class="brand-logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <h1>SALES COWBOY</h1>
+          <div class="tagline">Marketing Solutions & Software Engineering</div>
+          <div class="address">
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria<br>
+            hello@salescowboy.com.ng • +234 810 493 3232 • salescowboy.com.ng
+          </div>
+        </div>
+      </div>
+      <div class="meta-box">
+        <div class="doc-type">Commercial Proposal</div>
+        <div class="ref-num">PROP-TPRS-2026-008</div>
+        <div class="date">November 5, 2026</div>
+      </div>
+    </header>
+
+    <!-- Document Title -->
+    <div class="proposal-title">CENTRALIZED OPERATIONS, FLEET & INVENTORY ERP SYSTEM</div>
+    <div class="proposal-subtitle">Standard Operating Procedure (SOP) Digitization, Time-Windowed Equipment Vault, Gatehouse Loss Shield & Executive Intelligence</div>
+
+    <!-- Client Card -->
+    <div class="client-card">
+      <div>
+        <strong>CLIENT ORGANIZATION:</strong><br>
+        The Party Rental Station (TPRS)<br>
+        Commercial Event Infrastructure & High-Capacity Cooling Rentals<br>
+        Nigeria
+      </div>
+      <div>
+        <strong>EXECUTIVE REPRESENTATION:</strong><br>
+        Executive Operations Directorate & Board of Directors<br>
+        <strong>DEVELOPER:</strong> Sales Cowboy Marketing Solutions<br>
+        <strong>REF CODE:</strong> ERP-TPRS-SOP-2026
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <h2>1. Executive Summary & Problem Diagnosis</h2>
+    <p>
+      The Party Rental Station (TPRS) operates high-value event assets across Nigeria—including 5-ton to 10-ton industrial mobile air conditioning units, heavy generators, marquee structures, chillers, and luxury banqueting equipment. In rapid, event-driven environments, manual spreadsheets, WhatsApp messaging, and fragmented paper slips result in severe operational leaks:
+    </p>
+    <ul>
+      <li><strong>Double-Bookings & Scheduling Clashes:</strong> High-demand AC units booked for conflicting weekend dates without transit or teardown buffers.</li>
+      <li><strong>Missing Accessories & Cable Theft:</strong> Industrial 3-phase cabling, ducting, and power distribution units (PDU) lost at venues with zero staff accountability.</li>
+      <li><strong>Fleet Logistics Blind Spots:</strong> Unmonitored truck fuel costs, expired roadworthiness documentation, and delayed site setups.</li>
+      <li><strong>Gatehouse Security Gaps:</strong> Equipment leaving central depots without cryptographically verified job manifests.</li>
+      <li><strong>Disputed Customer Damage Claims:</strong> Clients refusing damage liability due to lack of timestamped photos and digital handover signatures.</li>
+    </ul>
+    <p>
+      <strong>The Solution:</strong> Sales Cowboy will engineer a centralized <strong>Operations, Fleet & Inventory ERP</strong> that enforces TPRS’s Standard Operating Procedures (SOP) across all departments, establishing complete operational transparency and real-time asset control.
+    </p>
+
+    <!-- Section 2 -->
+    <h2>2. Core Functional Modules</h2>
+
+    <h3>Module 1: Time-Windowed Asset & Inventory Vault</h3>
+    <ul>
+      <li><strong>Conflict-Free Reservation Engine:</strong> Automatically calculates real-time asset availability factoring in setup windows, transit buffers, and maintenance intervals, completely eliminating double-bookings.</li>
+      <li><strong>Categorized Asset Registry:</strong> Digital profiles tracking equipment across live condition states (<code>AVAILABLE</code>, <code>BOOKED</code>, <code>IN_TRANSIT</code>, <code>ON_SITE</code>, <code>MAINTENANCE</code>, <code>QUARANTINE</code>) with dedicated tracking for cooling systems and generators.</li>
+      <li><strong>Warehouse Issue & Return Notes:</strong> Barcode/QR-ready digital dispatch scanning with mandatory post-event return inspection checklists and automated variance reconciliation.</li>
+    </ul>
+
+    <h3>Module 2: Fleet Management & Logistics Desk</h3>
+    <ul>
+      <li><strong>Vehicle Master Register:</strong> Centralized compliance vault tracking roadworthiness, hackney permits, and insurance with automated 30-day and 7-day expiration alerts.</li>
+      <li><strong>Trip Sheets & Dispatch Control:</strong> Driver assignments, pre-trip odometer and fuel-level logging, and live status tracking from depot to venue.</li>
+      <li><strong>Maintenance Workflow:</strong> Structured driver incident reporting, digital vendor quote uploads, and multi-tier management sign-offs.</li>
+    </ul>
+
+    <h3>Module 3: Event Operations & Site Delivery Engine</h3>
+    <ul>
+      <li><strong>Digital Job Cards:</strong> Mobile-friendly manifests linking venue constraints, power requirements, and assigned technician crews to every booking.</li>
+      <li><strong>Pre-Dispatch & Setup Checklists:</strong> Mandatory pre-loading testing protocols for high-capacity ACs (compressor drawdown, airflow temperature, oil levels).</li>
+      <li><strong>Mobile Customer Handover & Digital Signatures:</strong> On-site digital signature capture from event organizers upon delivery and collection, generating instant legal handover receipts.</li>
+    </ul>
+
+    <h3>Module 4: Incident, Loss & Security Audit Vault</h3>
+    <ul>
+      <li><strong>Gatehouse Control Desk:</strong> Tablet portal for perimeter security; no truck or equipment exits without a verified digital Job Card.</li>
+      <li><strong>Damage & Missing Items Registry:</strong> Mandatory high-res photo capture for damaged equipment with automatic repair cost estimates and liability tagging.</li>
+      <li><strong>Segregated Approval Matrix:</strong> Granular approval thresholds for field supervisors (≤₦20k), operations managers (≤₦100k), and executive directors (>₦100k).</li>
+    </ul>
+
+    <h3>Module 5: COO Executive Intelligence & KPI Reporting</h3>
+    <ul>
+      <li><strong>Real-Time Operations Dashboard:</strong> Tracks Fleet Availability (≥95%), Inventory Accuracy (≥98%), and On-Time Setup Rates.</li>
+      <li><strong>Cost-Center Analytics:</strong> Aggregates fuel spend, maintenance overhead, and asset utilization rates per cooling unit against monthly budgets.</li>
+      <li><strong>One-Click Reporting:</strong> Instant export of PDF and Excel operational audit reports for executive board meetings.</li>
+    </ul>
+
+    <!-- Section 3 -->
+    <h2>3. System Tech Stack & Enterprise Architecture</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Layer</th>
+          <th>Technology</th>
+          <th>Enterprise Function & Rationale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Frontend App</strong></td>
+          <td>Next.js 15 (React 19, Tailwind CSS)</td>
+          <td>Progressive Web App (PWA) optimized for mobile smartphones used by drivers, warehouse, and field supervisors.</td>
+        </tr>
+        <tr>
+          <td><strong>Backend API</strong></td>
+          <td>Node.js (NestJS Architecture)</td>
+          <td>Modular enterprise backend with strict transaction isolation and structured audit logging.</td>
+        </tr>
+        <tr>
+          <td><strong>Database</strong></td>
+          <td>PostgreSQL (ACID Compliant)</td>
+          <td>Relational database ensuring zero double-bookings and immutable inventory transaction ledgers.</td>
+        </tr>
+        <tr>
+          <td><strong>Storage Vault</strong></td>
+          <td>Cloudflare R2 Object Storage</td>
+          <td>Zero-egress cloud storage for damage photos, gatehouse proofs, and signed delivery PDFs.</td>
+        </tr>
+        <tr>
+          <td><strong>SMS / OTP Engine</strong></td>
+          <td>Termii API Gateway</td>
+          <td>High-delivery transactional SMS for dispatch alerts, gatehouse OTPs, and client receipts.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 4 -->
+    <h2>4. Estimated Third-Party Cloud Infrastructure Costs</h2>
+    <p><em>(Paid directly by TPRS to infrastructure providers; zero agency markup added)</em></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Service / Infrastructure</th>
+          <th>Provider</th>
+          <th>Billing Model</th>
+          <th>Estimated Cost</th>
+          <th>Role / Coverage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Railway Cloud App & Database Server</strong></td>
+          <td>Railway.app</td>
+          <td>Monthly Plan</td>
+          <td><strong>$10 / month</strong></td>
+          <td>Hosts containerized Next.js/Node.js app, managed PostgreSQL database, Redis cache, and background cron workers.</td>
+        </tr>
+        <tr>
+          <td><strong>Cloudflare R2 Media Vault</strong></td>
+          <td>Cloudflare</td>
+          <td>Zero-Egress</td>
+          <td><strong>$0 – $5 / month</strong></td>
+          <td>Zero-egress secure photo storage for vehicle checks, gatehouse proofs, and damage logs (10GB free monthly).</td>
+        </tr>
+        <tr>
+          <td><strong>Automated SMS & OTP Dispatch</strong></td>
+          <td>Termii</td>
+          <td>Pay-As-You-Go</td>
+          <td><strong>Pay-As-You-Go</strong><br>(~₦5 / SMS)</td>
+          <td>Transactional SMS alerts for job dispatch, gatehouse security OTPs, and compliance expiry notices.</td>
+        </tr>
+        <tr>
+          <td><strong>Payment Gateway (Optional)</strong></td>
+          <td>Paystack / Moniepoint</td>
+          <td>Per Transaction</td>
+          <td>1.5% (max ₦2k)</td>
+          <td>Online client booking deposits, caution fees, and invoice settlements.</td>
+        </tr>
+        <tr style="background: #f1f5f9; font-weight: bold;">
+          <td colspan="3"><strong>Total Estimated Monthly Third-Party Cloud Infrastructure</strong></td>
+          <td colspan="2"><strong>~$10 / month + pay-as-you-go SMS</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 5 -->
+    <h2>5. Commercial Investment & Deployment Options</h2>
+
+    <div class="pricing-card primary">
+      <div class="pricing-header">
+        <div>
+          <div class="pricing-title">OPTION A: Complete SOP Enterprise Suite (Comprehensive Automation)</div>
+          <div class="pricing-timeline">Timeline: 7 Weeks (49 Calendar Days) • Full SOP Automation</div>
+        </div>
+        <div class="pricing-amount">₦3,200,000</div>
+      </div>
+      <p style="font-size: 12px; margin-bottom: 0;">
+        Full implementation of Modules 1 through 5: Time-Windowed Equipment Vault, Fleet Management Desk, Event Operations Engine, Mobile Digital Signatures, Gatehouse Tablet Security Desk, Incident Damage Photo Vault, and COO Executive KPI Analytics.
+      </p>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <div>
+          <div class="pricing-title">OPTION B: Core Operations & Inventory ERP (Phased Deployment)</div>
+          <div class="pricing-timeline">Timeline: 4 Weeks (28 Calendar Days) • Rapid Deployment</div>
+        </div>
+        <div class="pricing-amount">₦2,000,000</div>
+      </div>
+      <p style="font-size: 12px; margin-bottom: 0;">
+        Deployment of core asset reservation engine, booking calendar, warehouse issue/returns, basic fleet logging, and damage incident reporting. (Excludes on-site digital signatures, gatehouse tablet portal, and multi-tier approval thresholds).
+      </p>
+    </div>
+
+    <h3>Standard Milestone Payment Schedule</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Split</th>
+          <th>Option A</th>
+          <th>Option B</th>
+          <th>Deliverable / Verification Trigger</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Mobilization Deposit</strong></td>
+          <td><strong>50%</strong></td>
+          <td><strong>₦1,600,000</strong></td>
+          <td><strong>₦1,000,000</strong></td>
+          <td>Contract signing, database architecture, schema setup, UX wireframes & server provisioning.</td>
+        </tr>
+        <tr>
+          <td><strong>2. Beta Staging Milestone</strong></td>
+          <td><strong>30%</strong></td>
+          <td><strong>₦960,000</strong></td>
+          <td><strong>₦600,000</strong></td>
+          <td>Deployment to private staging server for departmental testing by operations, warehouse, and logistics heads.</td>
+        </tr>
+        <tr>
+          <td><strong>3. Final Handover & Training</strong></td>
+          <td><strong>20%</strong></td>
+          <td><strong>₦640,000</strong></td>
+          <td><strong>₦400,000</strong></td>
+          <td>Production deployment, mobile PWA rollout, staff onboarding training, and handover of documentation.</td>
+        </tr>
+        <tr style="background: #0f172a; color: #fff; font-weight: bold;">
+          <td>Total Contract Value</td>
+          <td>100%</td>
+          <td>₦3,200,000</td>
+          <td>₦2,000,000</td>
+          <td>Fixed price development guarantee. Zero hidden fees.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 6 -->
+    <h2>6. Contractual Guarantees & Support Terms</h2>
+    <ul>
+      <li><strong>100% Client Intellectual Property Ownership:</strong> Upon settlement of the final contract milestone, complete and unencumbered IP ownership of all source code, databases, and system credentials vests exclusively in <strong>The Party Rental Station (TPRS)</strong>.</li>
+      <li><strong>12 Months Complimentary Technical Support:</strong> Includes 12 consecutive months of complimentary post-launch support covering Railway server monitoring, database health surveillance, and bug fixes for all scoped features.</li>
+      <li><strong>Post-Warranty Maintenance Retainer (Year 2+):</strong> Optional ongoing annual technical support, system health surveillance, and security patching at a fixed fee of <strong>₦600,000 / year</strong>.</li>
+    </ul>
+
+    <!-- Bank Details -->
+    <h2>7. Official Remittance Bank Details</h2>
+    <div class="bank-box">
+      <div>
+        <strong>Bank Name:</strong> Guaranty Trust Bank (GTBank)<br>
+        <strong>Account Name:</strong> Sales Cowboy Marketing Solutions
+      </div>
+      <div>
+        <strong>Account Number (NUBAN):</strong><br>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; color: #7c4a1e;">3006086291</span>
+      </div>
+    </div>
+
+    <!-- Signatures -->
+    <div class="signatures">
+      <div class="signature-block">
+        <strong>ISSUED FOR AND ON BEHALF OF:</strong><br>
+        <strong>SALES COWBOY MARKETING SOLUTIONS</strong><br>
+        <div class="signature-line"></div>
+        <strong>Clinton Chukwunyere</strong><br>
+        Lead Developer / Technical Director<br>
+        Date: November 5, 2026
+      </div>
+
+      <div class="signature-block">
+        <strong>ACCEPTED AND CONFIRMED:</strong><br>
+        <strong>THE PARTY RENTAL STATION (TPRS)</strong><br>
+        Selected Option: [ ] Option A &nbsp;&nbsp;&nbsp; [ ] Option B<br>
+        <div class="signature-line"></div>
+        Name: ___________________________________<br>
+        Designation: ____________________________<br>
+        Date: ___________________________________
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <div>Sales Cowboy Marketing Solutions • Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos</div>
+      <div>Doc Ref: PROP-TPRS-2026-008 • Page 1 of 1</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+

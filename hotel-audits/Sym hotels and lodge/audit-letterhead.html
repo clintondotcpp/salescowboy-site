@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Visibility & Revenue Audit — Sym Hotels and Lodge — Sales Cowboy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #7c4a1e;
+      --accent-gold: #cca066;
+      --accent-light: #fef3c7;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --success: #16a34a;
+      --success-bg: #f0fdf4;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #0b0f19;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .btn-primary:hover { background: #5c3513; }
+
+    .btn-secondary {
+      background: #334155;
+      color: #f1f5f9;
+      border: 1px solid #475569;
+    }
+    .btn-secondary:hover { background: #475569; }
+
+    /* A4 Document Sheet */
+    .sheet {
+      width: 100%;
+      max-width: 210mm;
+      margin: 0 auto 30px;
+      background: var(--paper);
+      padding: 44px 50px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* Letterhead Header */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2.5px solid var(--accent);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .brand-info h1 {
+      font-family: 'Rye', serif;
+      font-size: 26px;
+      font-weight: normal;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+      line-height: 1.1;
+    }
+
+    .brand-info .tagline {
+      font-family: 'Rye', serif;
+      font-size: 11px;
+      color: var(--accent-gold);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .brand-contact {
+      margin-top: 6px;
+      font-size: 10.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .doc-meta .badge {
+      display: inline-block;
+      background: var(--danger-bg);
+      color: var(--danger);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1.5px solid var(--danger-border);
+    }
+
+    .doc-meta .label {
+      font-size: 9.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+    .doc-meta .val {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    /* Hero Big Shape: Diagnostic Card */
+    .hero-shape {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr 210px;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    }
+
+    .hero-info h2 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      color: #f8fafc;
+    }
+
+    .hero-info .prop-badge {
+      display: inline-block;
+      background: #b45309;
+      color: #fef3c7;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .hero-info p {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .hero-score-badge {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 10px;
+      padding: 16px 14px;
+      text-align: center;
+      border: 2px solid #ef4444;
+      box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+    }
+
+    .hero-score-badge .score-label {
+      font-size: 9.5px;
+      font-weight: 900;
+      color: var(--danger);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .hero-score-badge .score-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--danger);
+      line-height: 1;
+      margin: 4px 0 2px;
+    }
+
+    .hero-score-badge .score-status {
+      font-size: 9.5px;
+      font-weight: 800;
+      background: var(--danger-bg);
+      color: var(--danger);
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    /* Big Callout Stats Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      background: #f8fafc;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+
+    .stat-card.danger {
+      border-color: #fca5a5;
+      background: #fff5f5;
+    }
+
+    .stat-card .stat-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .stat-card.danger .stat-val { color: var(--danger); }
+    .stat-card .stat-val.gold { color: #b45309; }
+
+    .stat-card .stat-title {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .stat-card .stat-sub {
+      font-size: 10px;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .prose {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    .prose p {
+      margin-bottom: 10px;
+    }
+
+    /* Visual Funnel / Flow Diagram Shape */
+    .funnel-diagram {
+      background: #f8fafc;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .funnel-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--primary);
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .diagram-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      position: relative;
+    }
+
+    .diagram-step {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 12px;
+      text-align: center;
+      position: relative;
+    }
+
+    .diagram-step.leak {
+      border-color: #f87171;
+      background: #fef2f2;
+    }
+
+    .diagram-step.success {
+      border-color: #86efac;
+      background: #f0fdf4;
+    }
+
+    .step-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #0f172a;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .diagram-step.leak .step-badge { background: #dc2626; }
+    .diagram-step.success .step-badge { background: #16a34a; }
+
+    .step-name {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .step-detail {
+      font-size: 9.5px;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+    /* Comparison Table with Big Headers */
+    .table-container {
+      margin-bottom: 22px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1.5px solid var(--border);
+    }
+
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+    }
+
+    .custom-table th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 14px;
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .custom-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      vertical-align: top;
+    }
+
+    .custom-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .custom-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .pill-red { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+    .pill-yellow { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+    .pill-green { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+
+    /* Solutions Shape Grid */
+    .solutions-shape-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .solution-box {
+      background: #ffffff;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+      border-top: 3.5px solid var(--accent);
+    }
+
+    .solution-box .sol-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .solution-box .sol-desc {
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .solution-box .sol-impact {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #b45309;
+      margin-top: 8px;
+      display: block;
+      background: #fef3c7;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    /* Big ROI Banner Shape */
+    .roi-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .roi-banner .roi-head {
+      font-size: 14px;
+      font-weight: 900;
+      color: #fbbf24;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .roi-banner p {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .roi-gain-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid #34d399;
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .roi-gain-box .amt {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 900;
+      color: #34d399;
+    }
+
+    .roi-gain-box .sub {
+      font-size: 9.5px;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    /* Signoff Block */
+    .signoff {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      border-top: 2px solid var(--border);
+      padding-top: 18px;
+      margin-top: 24px;
+    }
+
+    .sig-block .label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .sig-block .company {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .sig-line {
+      margin-top: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #94a3b8;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        page-break-after: always;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 14mm 14mm 14mm 14mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>🏨 <strong>Sales Cowboy Marketing Solutions</strong> — Hospitality Digital Audit Report</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      <a href="mailto:hello@salescowboy.com.ng" class="btn btn-secondary">Contact Consultant ✉️</a>
+    </div>
+  </div>
+
+  <!-- Sheet 1: The Diagnosis, Blindspot & The Funnel Leak -->
+  <div class="sheet">
+
+    <!-- Header Letterhead -->
+    <div class="letterhead">
+      <div class="brand-left">
+        <img src="/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" class="brand-logo">
+        <div class="brand-info">
+          <h1>Sales Cowboy</h1>
+          <div class="tagline">Marketing Solutions • Hospitality Growth Systems</div>
+          <div class="brand-contact">
+            Red Brick House, Peace Land Estate, Ogombo, Ajah, Lagos, Nigeria<br>
+            Email: hello@salescowboy.com.ng • Phone: +234 810 493 3232 • Web: salescowboy.com.ng
+          </div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <span class="badge">Commercial Audit</span>
+        <span class="label">Audit Reference</span>
+        <div class="val">AUD-2026-SCM-SYM-01</div>
+        <span class="label">Date of Issuance</span>
+        <div class="val">November 5, 2026</div>
+        <span class="label">Location Jurisdiction</span>
+        <div class="val" style="margin-bottom: 0;">Gboko, Benue State</div>
+      </div>
+    </div>
+
+    <!-- Big Hero Shape: The Problem Overview -->
+    <div class="hero-shape">
+      <div class="hero-info">
+        <div class="prop-badge">Target Property Profile</div>
+        <h2>SYM HOTELS AND LODGE</h2>
+        <p>
+          <strong>Location:</strong> Princess Adeja Road, Akaajime, Gboko, Benue State<br>
+          <strong>Market Context:</strong> Heart of Gboko commercial belt, close to major educational institutions, cultural centers, agro-business corridors, and transport terminals.
+        </p>
+      </div>
+      <div class="hero-score-badge">
+        <div class="score-label">Google Health Score</div>
+        <div class="score-number">12<span style="font-size: 16px; font-weight: normal; color: #94a3b8;">/100</span></div>
+        <div class="score-status">Virtually Invisible</div>
+      </div>
+    </div>
+
+    <!-- Four Big Stat Shape Badges -->
+    <div class="stats-grid">
+      <div class="stat-card danger">
+        <div class="stat-val">0</div>
+        <div class="stat-title">Google Profile</div>
+        <div class="stat-sub">Zero Google Business listing. Invisible on Google Search & Maps.</div>
+      </div>
+
+      <div class="stat-card danger">
+        <div class="stat-val">0</div>
+        <div class="stat-title">Direct Website</div>
+        <div class="stat-sub">No website to show room photos, prices, or take online payments.</div>
+      </div>
+
+      <div class="stat-card danger">
+        <div class="stat-val">0%</div>
+        <div class="stat-title">WhatsApp Bot</div>
+        <div class="stat-sub">No instant automated booking bot. Late night travelers are lost.</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-val gold">-20%</div>
+        <div class="stat-title">OTA Commission</div>
+        <div class="stat-sub">Giving away 15%–20% on every booking via third-party directories.</div>
+      </div>
+    </div>
+
+    <!-- 1. Executive Summary -->
+    <div class="section">
+      <div class="section-title"><span>🔍</span> 1. Executive Diagnosis: The Gboko Market Blindspot</div>
+      <div class="prose">
+        <p>
+          <strong>Gboko is the ancestral and commercial capital of the Tiv nation</strong>, drawing heavy influxes of visitors year-round: civil servants, agro-allied traders (yam, citrus, grains), wedding and funeral guests, political delegations, and travelers along the Makurdi–Gboko–Katsina-Ala transit route. Situated strategically along <strong>Princess Adeja Road</strong>, Sym Hotels and Lodge should naturally be the first choice for travelers seeking comfortable, secure accommodation in Akaajime.
+        </p>
+        <p>
+          <strong>The Shocking Reality:</strong> When a business executive, visitor, or tourist searches Google for <em>"Hotels in Gboko"</em> or <em>"Lodges along Princess Adeja Road"</em>, <strong>Sym Hotels and Lodge does not exist.</strong> The property has <strong>ZERO Google Business Profile</strong>. The only trace of the hotel online is an outdated Facebook page and a third-party listing on Hotels.ng.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. Visual Diagram: The Current Booking Failure Funnel -->
+    <div class="funnel-diagram">
+      <div class="funnel-title">⚠️ Visual Breakdown: The Current Guest Leak Funnel</div>
+      <div class="diagram-steps">
+        <div class="diagram-step">
+          <div class="step-badge">1</div>
+          <div class="step-name">Guest Searches Google</div>
+          <div class="step-detail">Visitor arriving from Makurdi or Abuja searches <em>"Hotels in Gboko"</em> on their smartphone.</div>
+        </div>
+
+        <div class="diagram-step leak">
+          <div class="step-badge">2</div>
+          <div class="step-name">Google Blindspot</div>
+          <div class="step-detail">Sym Hotels has no Google Map profile. The hotel is 100% invisible. Competitors capture the call!</div>
+        </div>
+
+        <div class="diagram-step leak">
+          <div class="step-badge">3</div>
+          <div class="step-name">The Hotels.ng Trap</div>
+          <div class="step-detail">If they find the Hotels.ng link, Sym Hotels forfeits 15%–20% commission and has no direct relationship.</div>
+        </div>
+
+        <div class="diagram-step leak">
+          <div class="step-badge">4</div>
+          <div class="step-name">Late-Night Drop-Off</div>
+          <div class="step-detail">Guest lands late, checks WhatsApp—zero automated response. They drive to a competing lodge.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Search Keyword Reality Matrix -->
+    <div class="section">
+      <div class="section-title"><span>📍</span> 2. Google Search Visibility & Keyword Gap Matrix</div>
+      
+      <div class="table-container">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th style="width: 170px;">Target Search Query</th>
+              <th style="width: 140px;">Current Visibility</th>
+              <th>Algorithmic Reality & Revenue Implication</th>
+              <th style="width: 120px;">Immediate Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>"Hotels in Gboko"</strong></td>
+              <td><span class="badge-pill pill-red">100% Invisible (0/10)</span></td>
+              <td><strong>Primary Local Keyword:</strong> When visitors search this, Google displays the Local 3-Pack Map. Competitors like Royal Choice, Princess Adeja Suites, and local lodges win 100% of direct phone calls because Sym Hotels has no Google profile.</td>
+              <td><strong style="color: #dc2626;">Claim & Verify GBP</strong></td>
+            </tr>
+            <tr>
+              <td><strong>"Hotels near Princess Adeja Road Gboko"</strong></td>
+              <td><span class="badge-pill pill-red">Zero Presence (0/10)</span></td>
+              <td>This is the hyper-local neighborhood search. Users searching this are literally on the same street or visiting Princess Adeja College. Sym Hotels completely misses them.</td>
+              <td><strong style="color: #dc2626;">Local SEO & Map Pin</strong></td>
+            </tr>
+            <tr>
+              <td><strong>"Guest Houses / Lodges in Gboko"</strong></td>
+              <td><span class="badge-pill pill-red">Missing (0/10)</span></td>
+              <td>Direct category match. Travelers looking for budget-friendly or boutique lodging cannot find room photos, phone numbers, or opening hours.</td>
+              <td><strong style="color: #b45309;">Category Setup</strong></td>
+            </tr>
+            <tr>
+              <td><strong>"Hotels.ng / Facebook Only"</strong></td>
+              <td><span class="badge-pill pill-yellow">High Cost (2/10)</span></td>
+              <td>Third-party platforms charge up to 20% on every booking and control the guest's data. Facebook requires manual replies that take hours, causing 80% customer drop-off.</td>
+              <td><strong style="color: #15803d;">Direct Web & WhatsApp</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sheet 2: The Solution Blueprint & ROI Engine -->
+  <div class="sheet">
+
+    <!-- Header Letterhead Compact -->
+    <div class="letterhead" style="margin-bottom: 20px; padding-bottom: 14px;">
+      <div class="brand-left">
+        <img src="/assets/salescowboy-logo.png" alt="Sales Cowboy Logo" style="height: 42px; width: auto; object-fit: contain;">
+        <div>
+          <h2 style="font-family: 'Rye', serif; font-size: 20px; color: var(--accent);">SALES COWBOY MARKETING SOLUTIONS</h2>
+          <div style="font-size: 10px; color: var(--accent-gold); font-weight: 700; text-transform: uppercase;">Hospitality Growth & Revenue Engineering Systems</div>
+        </div>
+      </div>
+      <div class="doc-meta" style="font-size: 10px;">
+        <div>SYM HOTELS AUDIT — PART II</div>
+        <div style="color: var(--accent); font-weight: 800;">TRANSFORMATION BLUEPRINT</div>
+      </div>
+    </div>
+
+    <!-- 4. Visual Diagram: The Turnkey Growth Flywheel -->
+    <div class="funnel-diagram" style="background: #f0fdf4; border-color: #86efac; margin-bottom: 24px;">
+      <div class="funnel-title" style="color: #15803d;">🚀 The Sales Cowboy Turnkey Growth Flywheel (Optimized State)</div>
+      <div class="diagram-steps">
+        <div class="diagram-step success">
+          <div class="step-badge">1</div>
+          <div class="step-name">Google Local 3-Pack</div>
+          <div class="step-detail">Sym Hotels ranks #1 on Google Maps for <em>"Hotels in Gboko"</em> with 50+ glowing 5-star reviews.</div>
+        </div>
+
+        <div class="diagram-step success">
+          <div class="step-badge">2</div>
+          <div class="step-name">Direct Booking Web</div>
+          <div class="step-detail">Guest clicks direct website link, inspects clean rooms, and books with zero OTA commissions.</div>
+        </div>
+
+        <div class="diagram-step success">
+          <div class="step-badge">3</div>
+          <div class="step-name">24/7 WhatsApp AI Bot</div>
+          <div class="step-detail">Late-night travelers chat, pick room dates, and pay instantly via Paystack inside WhatsApp.</div>
+        </div>
+
+        <div class="diagram-step success">
+          <div class="step-badge">4</div>
+          <div class="step-name">Automated Reviews</div>
+          <div class="step-detail">Guest checks out, taps acrylic front-desk stand, posting real 5-star reviews on autopilot.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. The 5 Strategic Growth Upgrades -->
+    <div class="section">
+      <div class="section-title"><span>🛠️</span> 3. The 5 Turnkey Upgrades Sym Hotels Needs Immediately</div>
+
+      <div class="solutions-shape-grid">
+        <div class="solution-box">
+          <div class="sol-title"><span>📍</span> 1. Google Business Profile & Local 3-Pack Dominance</div>
+          <div class="sol-desc">
+            Official creation, address verification, and local optimization of Sym Hotels on Google Maps. Includes high-resolution photography of rooms, bar, and premises, plus our <strong>Review Acceleration Stand</strong> (acrylic front-desk NFC/QR stands) to rapidly build 50+ 5-star reviews.
+          </div>
+          <span class="sol-impact">Result: Unstoppable #1 ranking when travelers search "Hotels in Gboko".</span>
+        </div>
+
+        <div class="solution-box">
+          <div class="sol-title"><span>🌐</span> 2. Mobile-First Direct Booking Website</div>
+          <div class="sol-desc">
+            A fast, luxury-themed website showcasing room categories (Executive, Standard, Deluxe, Lodge Suites), clear pricing, generator/electricity reliability, security details, and instant booking with Paystack/Moniepoint integration.
+          </div>
+          <span class="sol-impact">Result: Keep 100% of guest revenue. Eliminate 20% Hotels.ng fees!</span>
+        </div>
+
+        <div class="solution-box">
+          <div class="sol-title"><span>💬</span> 3. Automated 24/7 WhatsApp AI Concierge Bot</div>
+          <div class="sol-desc">
+            Directly connected to Sym Hotels' WhatsApp Business number. Travelers can chat: <em>"Do you have an executive room tonight?"</em>, view photo carousels, select dates, and <strong>pay directly on WhatsApp</strong> with automated digital receipts and location pins.
+          </div>
+          <span class="sol-impact">Result: 24/7 zero-delay booking capture, especially for late-night arrivals.</span>
+        </div>
+
+        <div class="solution-box">
+          <div class="sol-title"><span>📱</span> 4. Professional Social Media Content & Video Curation</div>
+          <div class="sol-desc">
+            Revamp of Facebook and creation of an active Instagram presence with high-definition video reels highlighting peaceful lodging, secure parking, power reliability, and warm Benue hospitality for event planners and visitors.
+          </div>
+          <span class="sol-impact">Result: Builds massive brand trust for weddings, festivals, and business guests.</span>
+        </div>
+      </div>
+
+      <div class="solution-box" style="border-top-color: #16a34a; background: #f0fdf4; margin-bottom: 22px;">
+        <div class="sol-title" style="color: #15803d;"><span>🎯</span> 5. Geo-Targeted Transit & Event Ads (Gboko & Makurdi Corridor)</div>
+        <div class="sol-desc" style="color: #166534;">
+          Launch precision Meta & Google Search campaigns targeting business travelers and wedding visitors entering Gboko from Makurdi, Abuja, and surrounding towns to fill unoccupied mid-week and weekend rooms consistently.
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Big ROI Banner Shape -->
+    <div class="roi-banner">
+      <div>
+        <div class="roi-head">Projected Monthly Revenue Gain</div>
+        <p>
+          In a growing hub like Gboko, capturing just <strong>2 to 4 additional direct room bookings per day</strong> through Google Local search and instant WhatsApp automation yields substantial monthly cash flow:
+        </p>
+        <p style="margin-top: 4px; font-size: 10px; color: #94a3b8;">*Calculated at standard average room rates of ₦15,000 – ₦25,000 / night over 30 days.</p>
+      </div>
+      <div class="roi-gain-box">
+        <div class="amt">+₦1.2M – ₦3.0M</div>
+        <div class="sub">Gross Monthly Expansion</div>
+      </div>
+    </div>
+
+    <!-- 7. Signoff & Endorsement Block -->
+    <div class="signoff">
+      <div class="sig-block">
+        <div class="label">AUDIT CONDUCTED & COMPILED BY:</div>
+        <div class="company" style="font-family: 'Rye', serif; color: var(--accent);">SALES COWBOY MARKETING SOLUTIONS</div>
+        <div style="font-size: 11px; color: #475569;">Hospitality Growth & Software Engineering Division</div>
+        <div class="sig-line">Lead Consultant: Clinton Chukwunyere</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--text-muted); margin-top: 3px;">hello@salescowboy.com.ng • +234 810 493 3232</div>
+      </div>
+
+      <div class="sig-block">
+        <div class="label">PREPARED EXCLUSIVELY FOR:</div>
+        <div class="company">SYM HOTELS AND LODGE</div>
+        <div style="font-size: 11px; color: #475569;">Management & Proprietors</div>
+        <div class="sig-line">Princess Adeja Road, Akaajime, Gboko, Benue State</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--text-muted); margin-top: 3px;">Confidential Strategic Report • Ref: SCM-SYM-01</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

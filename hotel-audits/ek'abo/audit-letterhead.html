@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ek'abo Inn Nigeria Limited - Executive Digital Revenue Audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #090d16;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --danger: #991b1b;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --success: #065f46;
+      --success-bg: #ecfdf5;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--slate-900);
+      font-family: var(--font-sans);
+      color: var(--black);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 36px 16px;
+    }
+
+    /* Screen Toolbar */
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto 24px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--black);
+      padding: 14px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--slate-800);
+      color: var(--white);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .toolbar-brand {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .toolbar-divider {
+      width: 1px;
+      height: 16px;
+      background: var(--slate-700);
+    }
+
+    .toolbar-doc {
+      font-size: 12px;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .btn-print {
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      padding: 9px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: var(--slate-100);
+    }
+
+    /* Main Executive Dossier Sheet */
+    .sheet {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 56px 64px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Letterhead Header */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      border-bottom: 3px solid var(--black);
+      gap: 24px;
+    }
+
+    .agency-name {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .agency-div {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+      margin-top: 2px;
+    }
+
+    .agency-address {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .ref-box {
+      text-align: right;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    .ref-tag {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .ref-num {
+      color: var(--slate-600);
+      font-size: 11px;
+    }
+
+    /* Client Banner */
+    .client-banner {
+      margin-top: 28px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--slate-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .client-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--black);
+      line-height: 1.15;
+    }
+
+    .client-desc {
+      font-size: 13px;
+      color: var(--slate-600);
+      margin-top: 4px;
+    }
+
+    .badge-pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 4px;
+      background: var(--slate-100);
+      border: 1px solid var(--slate-200);
+      color: var(--black);
+      text-transform: uppercase;
+    }
+
+    /* Scorecard Block */
+    .scorecard-box {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .gauge-side {
+      background: #05080f;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--slate-800);
+      text-align: center;
+    }
+
+    .gauge-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate-400);
+      margin-top: 14px;
+    }
+
+    .gauge-status {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      color: #fca5a5;
+      background: rgba(153, 27, 27, 0.4);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-top: 6px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .metrics-side {
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .metrics-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .metrics-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--slate-300);
+    }
+
+    .metrics-leakage {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: #fca5a5;
+    }
+
+    .metric-bar-group {
+      display: grid;
+      grid-template-columns: 180px 1fr 65px;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .metric-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--slate-300);
+    }
+
+    .metric-track {
+      background: var(--slate-800);
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .metric-fill {
+      background: var(--white);
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--white);
+      text-align: right;
+    }
+
+    /* KPI Callout Cards */
+    .kpis-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .kpi-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 18px 16px;
+      text-align: left;
+    }
+
+    .kpi-num {
+      font-family: var(--font-mono);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--black);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .kpi-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      margin-top: 8px;
+    }
+
+    .kpi-desc {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+
+    /* Strengths vs Operational Mistakes */
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .split-box {
+      border-radius: 8px;
+      padding: 22px 24px;
+      border: 1px solid var(--slate-200);
+    }
+
+    .split-box.strengths {
+      background: var(--slate-50);
+    }
+
+    .split-box.mistakes {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+    }
+
+    .split-header {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .split-box.strengths .split-header {
+      color: var(--black);
+    }
+
+    .split-box.mistakes .split-header {
+      color: var(--danger);
+    }
+
+    .split-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .split-list li {
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--slate-700);
+    }
+
+    .split-list li strong {
+      color: var(--black);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .split-box.mistakes .split-list li {
+      color: var(--danger);
+    }
+
+    .split-box.mistakes .split-list li strong {
+      color: #7f1d1d;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--black);
+      margin-bottom: 18px;
+      margin-top: 24px;
+    }
+
+    /* Search Mockup */
+    .search-mockup {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--slate-300);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .search-input-pill {
+      color: var(--black);
+      background: var(--slate-100);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .search-res-item {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+
+    .search-res-item.client-lost {
+      border: 2px dashed var(--danger);
+      background: #fffafa;
+    }
+
+    .search-res-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .search-res-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .badge-competitor {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+    }
+
+    .badge-ghost {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--danger);
+      color: var(--white);
+    }
+
+    .search-res-url {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--slate-500);
+      margin-bottom: 6px;
+    }
+
+    .search-res-snippet {
+      font-size: 11px;
+      color: var(--slate-600);
+      line-height: 1.4;
+    }
+
+    /* Funnel Diagram */
+    .funnel-container {
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 24px;
+      background: var(--white);
+      margin-bottom: 28px;
+    }
+
+    .funnel-step {
+      margin-bottom: 16px;
+    }
+
+    .funnel-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .funnel-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .funnel-bar {
+      height: 28px;
+      background: var(--slate-100);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .funnel-bar-fill {
+      background: var(--black);
+      height: 100%;
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      padding-left: 14px;
+    }
+
+    .funnel-bar-fill.danger {
+      background: var(--danger);
+    }
+
+    /* Comparison Table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 28px;
+      font-size: 12px;
+    }
+
+    .compare-table th {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .compare-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+
+    .compare-table tr:nth-child(even) td {
+      background: var(--slate-50);
+    }
+
+    .td-broken {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .td-standard {
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    /* Turnaround Architecture 3-Pillar Grid */
+    .turnaround-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .pillar-box {
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      border-radius: 8px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pillar-box.featured {
+      border: 2px solid var(--black);
+      background: var(--white);
+    }
+
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 900;
+      background: var(--black);
+      color: var(--white);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .pillar-name {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--black);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .pillar-desc {
+      font-size: 11.5px;
+      color: var(--slate-600);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .pillar-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-top: 10px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .pillar-bullets li {
+      font-size: 11px;
+      color: var(--slate-700);
+      position: relative;
+      padding-left: 14px;
+      line-height: 1.35;
+    }
+
+    .pillar-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--black);
+      font-weight: 900;
+    }
+
+    /* Projected Revenue Recovery Banner */
+    .recovery-banner {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 8px;
+      padding: 22px 28px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .recovery-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate-400);
+    }
+
+    .recovery-val {
+      font-family: var(--font-mono);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--white);
+      margin-top: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .recovery-sub {
+      font-size: 12px;
+      color: var(--slate-300);
+      margin-top: 4px;
+    }
+
+    /* 4-Week Roadmap */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .roadmap-col {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 14px 12px;
+    }
+
+    .roadmap-week {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--slate-500);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .roadmap-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .roadmap-desc {
+      font-size: 11px;
+      color: var(--slate-600);
+      line-height: 1.35;
+    }
+
+    /* Sign-off Block */
+    .signoff-box {
+      border-top: 2px solid var(--black);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .signoff-details {
+      font-size: 11px;
+      color: var(--slate-500);
+      line-height: 1.4;
+    }
+
+    .signoff-sign {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-align: right;
+      color: var(--slate-500);
+    }
+
+    .signoff-name {
+      font-weight: 900;
+      font-size: 13px;
+      color: var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Print Styles */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm 10mm;
+      }
+      body {
+        background-color: var(--white);
+        padding: 0 !important;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .page-break {
+        page-break-before: always;
+        break-before: page;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .agency-name {
+        font-size: 16px !important;
+      }
+      .agency-div {
+        margin-top: 1px !important;
+      }
+      .agency-address {
+        margin-top: 3px !important;
+        font-size: 9.5px !important;
+      }
+      .letterhead {
+        padding-bottom: 6px !important;
+      }
+      .client-banner {
+        margin-top: 5px !important;
+        margin-bottom: 6px !important;
+        padding-bottom: 4px !important;
+      }
+      .client-banner h2 {
+        font-size: 18px !important;
+      }
+      .client-desc {
+        font-size: 10px !important;
+        margin-top: 1px !important;
+      }
+      .scorecard-box {
+        margin-bottom: 6px !important;
+      }
+      .gauge-side {
+        padding: 6px !important;
+      }
+      .gauge-side svg {
+        width: 70px !important;
+        height: 70px !important;
+      }
+      .metrics-side {
+        padding: 6px 12px !important;
+      }
+      .metric-bar-group {
+        margin-bottom: 3px !important;
+      }
+      .kpis-grid {
+        margin-bottom: 6px !important;
+        gap: 6px !important;
+      }
+      .kpi-card {
+        padding: 6px 8px !important;
+      }
+      .kpi-num {
+        font-size: 17px !important;
+      }
+      .kpi-title {
+        margin-top: 2px !important;
+        font-size: 9.5px !important;
+      }
+      .kpi-desc {
+        margin-top: 1px !important;
+        font-size: 9px !important;
+      }
+      .split-grid {
+        gap: 6px !important;
+      }
+      .split-box {
+        padding: 6px 10px !important;
+      }
+      .split-header {
+        margin-bottom: 6px !important;
+        font-size: 10px !important;
+      }
+      .split-list {
+        gap: 2px !important;
+      }
+      .split-list li {
+        font-size: 9.5px !important;
+        line-height: 1.25 !important;
+      }
+      .search-res-item {
+        padding: 10px 14px !important;
+        margin-bottom: 8px !important;
+      }
+      .funnel-step {
+        margin-bottom: 10px !important;
+      }
+      .compare-table th, .compare-table td {
+        padding: 8px 10px !important;
+        font-size: 11px !important;
+      }
+      .pillar-box {
+        padding: 14px 16px !important;
+      }
+      .pillar-bullets li {
+        font-size: 11px !important;
+      }
+      .recovery-banner {
+        padding: 14px 20px !important;
+        margin-top: 14px !important;
+      }
+      .roadmap-grid {
+        gap: 8px !important;
+        margin-top: 12px !important;
+      }
+      .roadmap-col {
+        padding: 10px 12px !important;
+      }
+      .signoff-box {
+        margin-top: 14px !important;
+        padding-top: 12px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <span class="toolbar-brand">Sales Cowboy</span>
+      <div class="toolbar-divider"></div>
+      <span class="toolbar-doc">Executive Digital Revenue Audit • Ek'abo Inn Nigeria Limited</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="sheet">
+
+    <!-- Block 1: Letterhead Header -->
+    <div class="letterhead">
+      <div>
+        <div class="agency-name">Sales Cowboy</div>
+        <div class="agency-div">Marketing Solutions • Hospitality Revenue Engineering</div>
+        <div class="agency-address">
+          36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria<br>
+          +234 810 493 3232 • salescowboy.com.ng • hello@salescowboy.com.ng
+        </div>
+      </div>
+      <div class="ref-box">
+        <span class="ref-tag">Executive Brief</span><br>
+        <strong style="color: var(--black);">REF: AUD-EKB-2026-009</strong><br>
+        <span class="ref-num">DATE: November 06, 2026</span>
+      </div>
+    </div>
+
+    <!-- Block 2: Client Title -->
+    <div class="client-banner">
+      <div>
+        <span class="kicker">Prepared For Management &amp; Ownership</span>
+        <h2 class="client-title">Ek'abo Inn Nigeria Limited</h2>
+        <div class="client-desc">
+          10, Hassan Street, Olusosun, Kudirat Abiola Way, Oregun, Ikeja, Lagos • Phone: +234 906 451 0867
+        </div>
+      </div>
+      <div>
+        <span class="badge-pill">Oregun, Ikeja Hub</span>
+      </div>
+    </div>
+
+    <!-- Block 3: Scorecard Box -->
+    <div class="scorecard-box">
+      <!-- Radial Gauge -->
+      <div class="gauge-side">
+        <svg viewBox="0 0 120 120" style="width: 100px; height: 100px;">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#1e293b" stroke-width="10"/>
+          <!-- 14 / 100 = 86% offset -> 314 * 0.86 = 270 -->
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#ef4444" stroke-width="10"
+                  stroke-dasharray="314" stroke-dashoffset="270" stroke-linecap="round"
+                  transform="rotate(-90 60 60)"/>
+          <text x="60" y="58" text-anchor="middle" fill="#ffffff" font-family="var(--font-mono)" font-size="28" font-weight="900">14</text>
+          <text x="60" y="74" text-anchor="middle" fill="#94a3b8" font-family="var(--font-mono)" font-size="10" font-weight="700">/ 100 SCORE</text>
+        </svg>
+        <span class="gauge-label">Hospitality Health</span>
+        <span class="gauge-status">Critical Blind Spot</span>
+      </div>
+
+      <!-- 5-Axis Diagnostic -->
+      <div class="metrics-side">
+        <div class="metrics-header">
+          <span class="metrics-title">5-Pillar Digital Infrastructure Scorecard</span>
+          <span class="metrics-leakage">Est. Uncaptured: ₦2,200,000 - ₦4,500,000 / mo</span>
+        </div>
+
+        <div>
+          <div class="metric-bar-group">
+            <span class="metric-name">1. Direct Booking Website</span>
+            <div class="metric-track"><div class="metric-fill" style="width: 2%;"></div></div>
+            <span class="metric-val">0 / 100</span>
+          </div>
+
+          <div class="metric-bar-group">
+            <span class="metric-name">2. Google Business Profile</span>
+            <div class="metric-track"><div class="metric-fill" style="width: 2%;"></div></div>
+            <span class="metric-val">0 / 100</span>
+          </div>
+
+          <div class="metric-bar-group">
+            <span class="metric-name">3. OTA Dependency Tax</span>
+            <div class="metric-track"><div class="metric-fill" style="width: 20%;"></div></div>
+            <span class="metric-val">20 / 100</span>
+          </div>
+
+          <div class="metric-bar-group">
+            <span class="metric-name">4. Local Search (Ikeja/Oregun)</span>
+            <div class="metric-track"><div class="metric-fill" style="width: 15%;"></div></div>
+            <span class="metric-val">15 / 100</span>
+          </div>
+
+          <div class="metric-bar-group">
+            <span class="metric-name">5. Post-Stay Review System</span>
+            <div class="metric-track"><div class="metric-fill" style="width: 2%;"></div></div>
+            <span class="metric-val">0 / 100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3b: Key Metric Callouts -->
+    <div class="kpis-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">0 Sites</div>
+        <div class="kpi-title">Direct Web</div>
+        <div class="kpi-desc">No owned website; 100% reliant on OTA aggregators.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">0 Reviews</div>
+        <div class="kpi-title">Google Maps</div>
+        <div class="kpi-desc">No GBP profile; totally invisible on local map pack.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">25% Tax</div>
+        <div class="kpi-title">OTA Comm.</div>
+        <div class="kpi-desc">Bleeding heavy commissions on Hotels.ng &amp; Trip.com.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">94% Loss</div>
+        <div class="kpi-title">Inquiry Drop</div>
+        <div class="kpi-desc">Lost to zero search presence and phone verification friction.</div>
+      </div>
+    </div>
+
+    <!-- Block 3c: Strengths vs Operational Mistakes -->
+    <div class="split-grid">
+      <!-- Strengths -->
+      <div class="split-box strengths">
+        <div class="split-header">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Your Genuine Strengths
+        </div>
+        <ul class="split-list">
+          <li>
+            <strong>Strategic Ikeja/Oregun Location:</strong>
+            Minutes from Kudirat Abiola Way, Daystar Christian Centre, Ikeja Mall, and Alausa Secretariat.
+          </li>
+          <li>
+            <strong>Full 3-Star Hospitality Amenities:</strong>
+            AC rooms, en-suite baths, sofa, on-site restaurant &amp; bar, and 24h front desk.
+          </li>
+          <li>
+            <strong>Proven Aggregator Demand:</strong>
+            Active listings on Hotels.ng and Trip.com prove travelers actively seek your rooms.
+          </li>
+          <li>
+            <strong>Registered Corporate Identity:</strong>
+            Ek'abo Inn Nigeria Limited has a verified physical facility and recognized local goodwill.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mistakes -->
+      <div class="split-box mistakes">
+        <div class="split-header">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          What You Are Doing Wrong
+        </div>
+        <ul class="split-list">
+          <li>
+            <strong>Zero Owned Direct Website:</strong>
+            No website exists. Guests cannot inspect categories, check live rates, or pay direct.
+          </li>
+          <li>
+            <strong>Invisible on Google Maps (No GBP):</strong>
+            No Google profile. Searchers for Oregun hotels find competitors instead of you.
+          </li>
+          <li>
+            <strong>25% Commission Bleed to Middlemen:</strong>
+            Forfeiting heavy margins on every booking to OTAs instead of capturing direct bank deposits.
+          </li>
+          <li>
+            <strong>Zero Automated Post-Stay Review Reminders:</strong>
+            Staff never trigger automated review requests, keeping social proof at zero.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Page Break for clean multi-page print -->
+    <div class="page-break"></div>
+
+    <!-- Block 4: Google Search Simulation -->
+    <div class="section-title">3. Live Search Simulation (What Guests See Today)</div>
+    <div class="search-mockup">
+      <div class="search-bar">
+        <span>GOOGLE:</span>
+        <div class="search-input-pill">"Hotels in Oregun Ikeja" OR "Budget Hotel near Ikeja Mall"</div>
+      </div>
+      <div class="search-results-list">
+        <!-- Result 1 -->
+        <div class="search-res-item">
+          <div class="search-res-header">
+            <span class="search-res-title">Top Rated Oregun Commercial Hotel • Google 3-Pack Pin #1</span>
+            <span class="badge-competitor">3-Pack Dominator</span>
+          </div>
+          <div class="search-res-url">https://maps.google.com/local-pack/oregun-hotel-1</div>
+          <div class="search-res-snippet">
+            ★★★★☆ 4.4 Rating (64 Reviews) • Direct call and website booking links. Captures over 50% of corporate, shopping, and church guest inquiries in Oregun.
+          </div>
+        </div>
+
+        <!-- Result 2 -->
+        <div class="search-res-item">
+          <div class="search-res-header">
+            <span class="search-res-title">Kudirat Abiola Way Boutique Suites • Google 3-Pack Pin #2</span>
+            <span class="badge-competitor">Local Pack Competitor</span>
+          </div>
+          <div class="search-res-url">https://maps.google.com/local-pack/kudirat-abiola-suites</div>
+          <div class="search-res-snippet">
+            ★★★★☆ 4.2 Rating (38 Reviews) • Live rates and photo gallery displayed. Steals visitors attending programs at Daystar and business meetings in Alausa.
+          </div>
+        </div>
+
+        <!-- Result 3: Client -->
+        <div class="search-res-item client-lost">
+          <div class="search-res-header">
+            <span class="search-res-title" style="color: var(--danger);">Ek'abo Inn Nigeria Limited</span>
+            <span class="badge-ghost">100% Invisible</span>
+          </div>
+          <div class="search-res-url">https://maps.google.com/search/ekabo-inn-oregun</div>
+          <div class="search-res-snippet" style="color: var(--danger);">
+            <strong>NO LISTING FOUND ON GOOGLE MAPS.</strong> Zero Google reviews, zero geo-tagged photos, and zero map pins. High-intent travelers assume the hotel does not exist or has permanently closed.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 5: The Ek'abo Guest Drop-off Funnel -->
+    <div class="section-title">4. The Ek'abo Guest Drop-off Funnel</div>
+    <div class="funnel-container">
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 1: Google Search &amp; Maps ("Hotels in Oregun Ikeja")</span>
+          <span style="font-family: var(--font-mono); color: var(--danger);">100 High-Intent Searchers</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill" style="width: 100%;">100 Searchers</div>
+        </div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 2: Aggregator Discovery (Hotels.ng / Trip.com)</span>
+          <span style="font-family: var(--font-mono); color: var(--danger);">-62 Lost to Rival 3-Pack Pins</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill" style="width: 38%;">38 OTA Visitors</div>
+        </div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 3: Phone Inquiries (+234 906 451 0867)</span>
+          <span style="font-family: var(--font-mono); color: var(--danger);">-22 Lost to OTA Banners &amp; Friction</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill" style="width: 16%;">16 Callers</div>
+        </div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 4: Confirmed Check-Ins at Ek'abo Inn</span>
+          <span style="font-family: var(--font-mono); font-weight: 800; color: var(--black);">Net Conversion Rate: 6%</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill danger" style="width: 6%;">6 Bookings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Break for clean multi-page print -->
+    <div class="page-break"></div>
+
+    <!-- Block 6: Comparison Diagnostic Table -->
+    <div class="section-title">5. Current Friction vs. Sales Cowboy Infrastructure</div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width: 24%;">Channel</th>
+          <th style="width: 38%;">Current State at Ek'abo Inn</th>
+          <th style="width: 38%;">Sales Cowboy Proprietary System</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Website &amp; Checkout</strong></td>
+          <td class="td-broken">Non-Existent. No website or online checkout exists.</td>
+          <td class="td-standard">Dedicated Mobile Booking Site with instant Paystack card &amp; transfer checkout at 0% commission.</td>
+        </tr>
+        <tr>
+          <td><strong>Google Maps Presence</strong></td>
+          <td class="td-broken">Non-Existent. 0 Google reviews; invisible in local map searches.</td>
+          <td class="td-standard">Verified Google 3-Pack Dominance with geo-tagged room imagery and weekly search updates.</td>
+        </tr>
+        <tr>
+          <td><strong>Room Availability</strong></td>
+          <td class="td-broken">Blind calendar. Guests cannot verify open rooms without calling.</td>
+          <td class="td-standard">Dynamic Real-Time Room Availability Calendar Sync. 100% self-serve booking.</td>
+        </tr>
+        <tr>
+          <td><strong>Review Generation</strong></td>
+          <td class="td-broken">Completely manual. No post-stay follow-up triggers after check-out.</td>
+          <td class="td-standard">Automated WhatsApp Review Bot: Fires 2 hours post-checkout with 1-click Google review link.</td>
+        </tr>
+        <tr>
+          <td><strong>Booking Inquiries</strong></td>
+          <td class="td-broken">Manual phone calls only. Late-night calls go completely unanswered.</td>
+          <td class="td-standard">24/7 WhatsApp AI Reservation Desk: Answers inquiries and delivers payment links in 3 seconds.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Page Break for clean multi-page print -->
+    <div class="page-break"></div>
+
+    <!-- Block 7: Proprietary Turnaround Plan -->
+    <div class="section-title">6. Proprietary Sales Cowboy Turnaround Architecture</div>
+    <div class="turnaround-grid">
+      <!-- Pillar 1 -->
+      <div class="pillar-box featured">
+        <div>
+          <span class="pillar-num">PILLAR 01</span>
+          <h3 class="pillar-name">Direct Booking Website + Live Availability Engine</h3>
+          <p class="pillar-desc">Launch ekaboinn.com.ng to capture direct guest payments at 0% OTA commission.</p>
+          <ul class="pillar-bullets">
+            <li>Dynamic real-time room availability calendar</li>
+            <li>Instant Paystack card &amp; transfer checkout</li>
+            <li>0% OTA middleman commission direct to bank</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar-box featured">
+        <div>
+          <span class="pillar-num">PILLAR 02</span>
+          <h3 class="pillar-name">Google Business Profile (GBP) Creation &amp; 3-Pack Push</h3>
+          <p class="pillar-desc">Build, verify, and propel Ek'abo Inn to the top of Google Maps for Oregun &amp; Ikeja.</p>
+          <ul class="pillar-bullets">
+            <li>Official GBP verification on Hassan Street</li>
+            <li>Geo-tagged room &amp; amenity photo optimization</li>
+            <li>Target high-intent Daystar &amp; Alausa search terms</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillar-box featured">
+        <div>
+          <span class="pillar-num">PILLAR 03</span>
+          <h3 class="pillar-name">24/7 WhatsApp AI Concierge + Automated Review Bot</h3>
+          <p class="pillar-desc">Connected directly to +234 906 451 0867 to answer guests 24/7 and collect 5-star reviews.</p>
+          <ul class="pillar-bullets">
+            <li>Automated WhatsApp review prompt 2h post-checkout</li>
+            <li>Replies to guest DMs in 3 seconds flat 24/7</li>
+            <li>Sends direct booking links and answers FAQs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projected Revenue Recovery Banner -->
+    <div class="recovery-banner">
+      <div>
+        <div class="recovery-title">Projected Monthly Revenue Uplift</div>
+        <div class="recovery-val">+₦2,200,000 - ₦4,500,000</div>
+        <div class="recovery-sub">Captured through direct website bookings, 0% OTA commission, and Google 3-Pack rank.</div>
+      </div>
+      <div style="text-align: right; font-family: var(--font-mono); font-size: 11px;">
+        <span style="color: var(--slate-400);">TIMELINE TO DOMINANCE</span><br>
+        <span style="font-size: 18px; font-weight: 900; color: var(--white);">4 WEEKS</span>
+      </div>
+    </div>
+
+    <!-- 4-Week Roadmap -->
+    <div class="roadmap-grid">
+      <div class="roadmap-col">
+        <span class="roadmap-week">WEEK 01</span>
+        <div class="roadmap-title">Google Profile Setup</div>
+        <div class="roadmap-desc">Create &amp; verify GBP on Hassan Street; upload geo-tagged room imagery.</div>
+      </div>
+      <div class="roadmap-col">
+        <span class="roadmap-week">WEEK 02</span>
+        <div class="roadmap-title">Direct Booking Site</div>
+        <div class="roadmap-desc">Launch ekaboinn.com.ng with live availability engine &amp; Paystack.</div>
+      </div>
+      <div class="roadmap-col">
+        <span class="roadmap-week">WEEK 03</span>
+        <div class="roadmap-title">WhatsApp AI Concierge</div>
+        <div class="roadmap-desc">Connect 24/7 bot on +234 906 451 0867 with automated review triggers.</div>
+      </div>
+      <div class="roadmap-col">
+        <div class="roadmap-week">WEEK 04</div>
+        <div class="roadmap-title">Local 3-Pack Dominance</div>
+        <div class="roadmap-desc">Deploy front-desk smart review QR stands and push into the Google 3-pack.</div>
+      </div>
+    </div>
+
+    <!-- Sign-off Block -->
+    <div class="signoff-box">
+      <div class="signoff-details">
+        <strong>Prepared exclusively for Ek'abo Inn Nigeria Limited Management</strong><br>
+        Sales Cowboy Marketing Solutions • Hospitality Infrastructure Division<br>
+        Confidential Document • All Rights Reserved 2026
+      </div>
+      <div class="signoff-sign">
+        <div class="signoff-name">Clinton Chukwunyere</div>
+        Lead Systems Architect &amp; Revenue Engineer
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

@@ -21,7 +21,8 @@ import {
   Clock,
   ShieldCheck,
   TrendingUp,
-  LayoutDashboard,
+  Server,
+  Zap,
 } from "lucide-react";
 import {
   Accordion,
@@ -32,7 +33,7 @@ import {
 
 type AudienceMode = "hotels" | "shortlets";
 
-const WHATSAPP_NUMBER = "2348082697841";
+const WHATSAPP_NUMBER = "2348104933232";
 const waUrl = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
@@ -46,20 +47,20 @@ export default function HospitalityPackagesPage() {
       a: "Yes. All our booking websites and WhatsApp AI bots are integrated directly with Paystack and Flutterwave. 100% of guest payments deposit straight into your corporate bank account with 0% OTA middleman commission.",
     },
     {
-      q: "Are there any monthly software subscription fees for the one-time setups?",
-      a: "No. The Direct Booking Foundation (₦200k), AI Concierge Suite (₦420k), and Autonomous Hospitality OS (₦800k) are one-time software license investments. You own your system outright without recurring monthly software subscriptions.",
+      q: "What are the running costs for websites with 24/7 WhatsApp AI bots?",
+      a: "The booking software and code are one-time license fees (no software subscription). The continuous AI and cloud runtime costs approximately $10/month (~₦15,000/mo): $5/month for Railway 24/7 server hosting, and ~$5/month for WhatsApp Cloud API & OpenAI GPT tokens on pay-as-you-go. Alternatively, this is fully managed under our Website & System Care plan.",
     },
     {
       q: "How does the 24/7 WhatsApp AI Booking Concierge work?",
       a: "The AI agent is connected directly to your official WhatsApp phone number. It replies to guest inquiries in 3 seconds around the clock, checks live room availability, calculates totals, shares room photos, and sends Paystack payment links right inside WhatsApp.",
     },
     {
-      q: "How fast is each package delivered?",
-      a: "Standard booking websites and WhatsApp AI setups are deployed in 7 to 10 days once we receive your room prices and photos. Complete Hotel Management Systems (HMS) are configured within 14 days.",
+      q: "Can I manage multi-unit apartments or shortlets with the AI Concierge Suite?",
+      a: "Yes! The 24/7 AI Concierge Suite (₦420,000) handles single and multi-unit shortlet portfolios seamlessly. It includes automated caution-fee prompts, guest ID collection, live calendar synchronization, and direct payment checkout.",
     },
     {
-      q: "Can I manage multi-unit apartments or shortlet portfolios?",
-      a: "Yes. Toggle the switcher above to 'For Shortlets & Airbnbs'. Our systems feature automated caution-fee prompts, guest ID collection, and automated check-in guides (Wi-Fi codes & gate passes) delivered instantly upon payment.",
+      q: "How fast is each package delivered?",
+      a: "Standard booking websites and WhatsApp AI setups are deployed in 7 to 10 days once we receive your room prices and photos. Complete Hotel Management Systems (HMS) are configured within 14 days.",
     },
   ];
 
@@ -106,7 +107,7 @@ export default function HospitalityPackagesPage() {
           <div className="pt-4 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-xs sm:text-sm font-semibold text-muted-foreground">
             <span className="inline-flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-accent" />
-              One-Time Ownership (No Monthly SaaS Tax)
+              One-Time License Ownership (No Monthly Software Tax)
             </span>
             <span className="inline-flex items-center gap-2">
               <Clock className="w-4 h-4 text-accent" />
@@ -269,10 +270,10 @@ export default function HospitalityPackagesPage() {
               </div>
             </div>
 
-            {/* Card 2: 24/7 AI Concierge Suite (FEATURED / MOST POPULAR) */}
+            {/* Card 2: 24/7 AI Concierge Suite (FEATURED / MOST POPULAR - REPLACES SEPARATE SHORTLET ENGINE) */}
             <div className="rounded-3xl border-2 border-accent bg-card p-8 sm:p-10 flex flex-col justify-between shadow-lg relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-accent text-white font-mono text-xs font-bold uppercase tracking-wider shadow-sm">
-                Most Popular • High ROI
+                Most Popular • Hotels &amp; Shortlets
               </div>
 
               <div>
@@ -285,7 +286,7 @@ export default function HospitalityPackagesPage() {
                 </h3>
 
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  Best For: Busy 10-30 room hotels and multi-unit Airbnb hosts tired of replying to guest DMs day and night.
+                  Best For: Busy 10-30 room hotels and multi-unit Airbnb hosts (1-15+ units) wanting automated direct bookings without manual DM exhaustion.
                 </p>
 
                 <div className="mt-8 flex items-baseline gap-2">
@@ -298,7 +299,7 @@ export default function HospitalityPackagesPage() {
                 </div>
 
                 <div className="mt-3 text-xs font-medium text-accent">
-                  Zero monthly software subscription fee
+                  Zero monthly software license fee
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-border">
@@ -311,7 +312,7 @@ export default function HospitalityPackagesPage() {
                         <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
                       </div>
                       <span>
-                        <strong>Complete Direct Booking Website:</strong> Room/apartment showcase, live availability calendar, and instant payment integration.
+                        <strong>Complete Direct Booking Website:</strong> Multi-room/apartment catalog, live availability calendar, and instant Paystack / Flutterwave card &amp; transfer checkout.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -319,7 +320,7 @@ export default function HospitalityPackagesPage() {
                         <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
                       </div>
                       <span>
-                        <strong>24/7 WhatsApp AI Booking Agent:</strong> Replies to guest messages in 3 seconds, checks dates, answers FAQs, and dispatches instant payment links.
+                        <strong>24/7 WhatsApp AI Booking Agent:</strong> Replies to guest messages in 3 seconds flat, answers FAQs, shares room photos, and sends payment links directly in chat.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -336,11 +337,19 @@ export default function HospitalityPackagesPage() {
                       </div>
                       <span>
                         {audience === "shortlets"
-                          ? "Automated Caution-Fee collection, guest ID verification, and instant Wi-Fi/gate pass delivery upon payment."
-                          : "Automated room-tier upsells, breakfast/pool policy answers, and instant digital booking confirmation sent to guest & front desk."}
+                          ? "Shortlet Automation: Automated Caution-Fee prompts and guest ID upload collection."
+                          : "Hotel Front-Desk Sync: Automated room-tier upsells, breakfast/pool policy answers, and instant digital booking confirmation sent to guest & front desk."}
                       </span>
                     </li>
                   </ul>
+
+                  {/* Cloud Runtime Transparency Note */}
+                  <div className="mt-6 p-3.5 rounded-xl bg-secondary/60 border border-border flex items-start gap-2.5 text-xs text-muted-foreground leading-relaxed">
+                    <Server className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                    <span>
+                      <strong>Cloud &amp; AI Runtime:</strong> Railway cloud hosting is $5/mo and WhatsApp/GPT API tokens are ~$5/mo pay-as-you-go (~$10/mo total), or fully covered under our Website &amp; System Care plan.
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -382,7 +391,7 @@ export default function HospitalityPackagesPage() {
                 </h3>
 
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  Best For: Established Hotels (20-100+ Rooms) &amp; Multi-Property Shortlet Operators needing full operational control and zero staff cash leakage.
+                  Best For: Established Hotels (20-100+ Rooms) &amp; Multi-Property Shortlet Portfolios needing full operational control and zero staff cash leakage.
                 </p>
 
                 <div className="mt-8 flex items-baseline gap-2">
@@ -473,51 +482,24 @@ export default function HospitalityPackagesPage() {
                 SPECIALIZED STANDALONE SYSTEMS
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground mt-1">
-                Already Have a Website, or Running a Multi-Unit Portfolio?
+                Already Have a Website You Love?
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Shortlet Portfolio Engine */}
-              <div className="space-y-3">
-                <h4 className="text-xl font-bold text-foreground">
-                  Shortlet &amp; Airbnb Portfolio Engine
-                </h4>
-                <div className="font-mono text-2xl font-black text-foreground">
-                  ₦350,000{" "}
-                  <span className="text-xs font-normal text-muted-foreground uppercase">
-                    / One-Time
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  For hosts with 3 to 15+ units: Multi-apartment booking site + WhatsApp Caution-Fee &amp; ID Bot + Smart Check-In Guide (Wi-Fi codes &amp; gate pass delivery).
-                </p>
-                <a
-                  href={waUrl(
-                    "Hello Sales Cowboy! I want to order the ₦350,000 Shortlet Portfolio Engine."
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-accent hover:underline pt-2"
-                >
-                  <span>Order Portfolio Engine</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Standalone HMS */}
-              <div className="space-y-3">
+              <div className="rounded-2xl border border-border bg-card p-7 space-y-3">
                 <h4 className="text-xl font-bold text-foreground">
-                  Standalone Property Management (HMS)
+                  Standalone Property Management Software (HMS)
                 </h4>
-                <div className="font-mono text-2xl font-black text-foreground">
+                <div className="font-mono text-3xl font-black text-foreground">
                   ₦500,000{" "}
                   <span className="text-xs font-normal text-muted-foreground uppercase">
                     / One-Time
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Already have a website you love? We custom-deploy our full HMS Web App on your server and integrate it with your front desk, inventory, and revenue tracking.
+                  Already have a website you love? We custom-deploy our full HMS Web App on your server and integrate it with your front desk, room inventory, and owner financial revenue tracking.
                 </p>
                 <a
                   href={waUrl(
@@ -533,18 +515,18 @@ export default function HospitalityPackagesPage() {
               </div>
 
               {/* Basic 3-Page Site */}
-              <div className="space-y-3">
+              <div className="rounded-2xl border border-border bg-card p-7 space-y-3">
                 <h4 className="text-xl font-bold text-foreground">
-                  Basic 3-Page Corporate Site
+                  Basic 3-Page Corporate Presence Website
                 </h4>
-                <div className="font-mono text-2xl font-black text-foreground">
+                <div className="font-mono text-3xl font-black text-foreground">
                   ₦85,000{" "}
                   <span className="text-xs font-normal text-muted-foreground uppercase">
                     / One-Time
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Need a simple corporate presence first? Clean, fast 3-page informational hotel or apartment showcase website with direct WhatsApp enquiry routing.
+                  Need a simple corporate presence first? Clean, fast 3-page informational hotel or apartment showcase website with room galleries, Google Maps pin, and direct WhatsApp enquiry routing.
                 </p>
                 <a
                   href={waUrl(
@@ -719,78 +701,81 @@ export default function HospitalityPackagesPage() {
               </a>
             </div>
 
-            {/* Retainer 4: Best Seller */}
+            {/* Retainer 4: Viral UGC Videos (UPDATED: 4 UGC VIDEOS ONLY) */}
             <div className="rounded-3xl border-2 border-accent bg-card p-7 flex flex-col justify-between shadow-md relative">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-accent text-white font-mono text-[10px] font-bold uppercase tracking-wider">
-                Best Seller
+                Video Production
               </div>
 
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-accent block mb-2">
-                  Tier 4: Viral Video
+                  Tier 4: Creator Video
                 </span>
                 <h3 className="text-xl font-bold text-foreground">
-                  Viral UGC + Social Suite
+                  Viral UGC Video Suite
                 </h3>
                 <div className="mt-4 font-mono text-4xl font-extrabold text-foreground">
                   ₦270,000{" "}
                   <span className="text-xs font-semibold text-muted-foreground">/ mo</span>
                 </div>
                 <p className="mt-2 text-xs text-muted-foreground">
-                  Creator-led video walkthroughs that turn scrollers into paying guests.
+                  4 authentic creator video walkthroughs engineered to convert scrollers into paying guests.
                 </p>
                 <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                     <span>
-                      <strong>Everything in Social Engine (₦150k)</strong>
+                      <strong>4 Custom Creator UGC Videos / Month:</strong> High-converting walkthroughs of your rooms, pool, bar, or apartment vibe
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                    <span>
-                      <strong>4 Custom UGC Videos / Month:</strong> Creator walkthroughs of rooms, pool, bar &amp; vibe
-                    </span>
+                    <span>Professional script &amp; hook concepts engineered for organic viral reach</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                    <span>Engineered for organic viral reach &amp; ads</span>
+                    <span>Delivered edited, color-graded &amp; ready-to-run for high-ROAS Paid Ads &amp; Reels</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                    <span>Includes sound design, on-screen text hooks &amp; caption copy</span>
                   </li>
                 </ul>
               </div>
               <a
                 href={waUrl(
-                  "Hello Sales Cowboy! I want to launch the ₦270,000/mo Viral UGC + Social Suite for my property."
+                  "Hello Sales Cowboy! I want to launch the ₦270,000/mo Viral UGC Video Suite for my property."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 w-full py-3 px-4 rounded-xl bg-accent text-white font-bold text-xs sm:text-sm text-center hover:bg-accent/90 transition-all"
               >
-                Launch UGC + Social
+                Launch UGC Videos
               </a>
             </div>
           </div>
 
-          {/* HIGH-TICKET BUNDLES ROW */}
+          {/* HIGH-TICKET BUNDLES ROW (UPDATED: BUNDLE REMOVED WEBSITE CARE, PAID ADS AT 100K/CAMPAIGN) */}
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* The Full Occupancy Bundle */}
             <div className="rounded-3xl border border-border bg-card p-8 flex flex-col justify-between">
               <div>
                 <span className="text-xs font-bold uppercase text-accent tracking-wider block">
-                  ALL-IN-ONE GROWTH DEPARTMENT (SAVE ₦40,000/MO)
+                  ALL-IN-ONE MONTHLY DEPARTMENT (SAVE ₦20,000/MO)
                 </span>
                 <h4 className="text-2xl font-black text-foreground mt-2">
                   The &ldquo;Full Occupancy&rdquo; Monthly Bundle
                 </h4>
                 <div className="font-mono text-3xl font-black text-foreground mt-3">
-                  ₦380,000 <span className="text-sm font-normal text-muted-foreground">/ month</span>
+                  ₦350,000 <span className="text-sm font-normal text-muted-foreground">/ month</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                  Combines <strong>Viral UGC &amp; Social Suite (₦270k)</strong> + <strong>Google Maps Dominance (₦100k)</strong> + <strong>Website &amp; System Care (₦50k)</strong> into one unified monthly growth team.
+                  Combines <strong>Viral UGC Video Suite (₦270k)</strong> + <strong>Google Maps Dominance (₦100k)</strong> into one high-power monthly growth engine that keeps your property visible and viral.
                 </p>
               </div>
               <a
                 href={waUrl(
-                  "Hello Sales Cowboy! I want to order the ₦380,000/mo 'Full Occupancy' All-In-One Monthly Bundle."
+                  "Hello Sales Cowboy! I want to order the ₦350,000/mo 'Full Occupancy' Monthly Bundle (Viral UGC + Google Maps Dominance)."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -801,33 +786,37 @@ export default function HospitalityPackagesPage() {
               </a>
             </div>
 
+            {/* Paid Ads Campaign Setup */}
             <div className="rounded-3xl border border-border bg-card p-8 flex flex-col justify-between">
               <div>
                 <span className="text-xs font-bold uppercase text-accent tracking-wider block">
-                  FILL ROOMS THIS FRIDAY
+                  FILL ROOMS THIS WEEKEND
                 </span>
                 <h4 className="text-2xl font-black text-foreground mt-2">
-                  Weekend Occupancy &amp; Paid Ads Accelerator
+                  Paid Ads Campaign Setup
                 </h4>
                 <div className="font-mono text-3xl font-black text-foreground mt-3">
-                  ₦200,000{" "}
+                  ₦100,000{" "}
                   <span className="text-sm font-normal text-muted-foreground">
-                    / month (+ Ad Spend)
+                    / campaign setup
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                  We build, run, and optimize targeted <strong>Meta Ads</strong> (Instagram/WhatsApp direct booking) + <strong>Google Search Ads</strong> (<em>&ldquo;Shortlet / Hotel in [City]&rdquo;</em>) + Retargeting to drive weekend bookings.
+                  Full ad campaign setup + ad creative creation recommendation and copy guide. Direct Meta Ads (Instagram/WhatsApp booking) or Google Search Ads (<em>&ldquo;Shortlet / Hotel in [City]&rdquo;</em>).
                 </p>
+                <div className="mt-3 text-xs font-medium text-accent">
+                  * Client funds their ad spend directly (Daily budget × number of days).
+                </div>
               </div>
               <a
                 href={waUrl(
-                  "Hello Sales Cowboy! I want the ₦200,000/mo Weekend Occupancy & Paid Ads Accelerator."
+                  "Hello Sales Cowboy! I want to book a ₦100,000 Paid Ads Campaign Setup for my hotel / shortlet."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-secondary text-foreground border border-border font-bold text-sm hover:bg-secondary/80 transition-all"
               >
-                <span>Launch Paid Ads Accelerator</span>
+                <span>Book Paid Ads Campaign (₦100k)</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -1074,7 +1063,7 @@ export default function HospitalityPackagesPage() {
                 className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-accent text-white font-extrabold text-sm sm:text-base inline-flex items-center justify-center gap-2 hover:bg-accent/90 transition-all shadow-md"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Chat on WhatsApp (+234 808 269 7841)</span>
+                <span>Chat on WhatsApp (+234 810 493 3232)</span>
               </a>
 
               <a

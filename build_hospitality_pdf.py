@@ -100,7 +100,7 @@ def build_pdf():
     # Insert Page 1 Typography
     p1.insert_text((M, 42), "SALES COWBOY", fontname="hebo", fontsize=19, color=BROWN)
     p1.insert_text((M, 55), "HOSPITALITY TECHNOLOGY & OCCUPANCY SYSTEMS", fontname="hebo", fontsize=7.5, color=TEXT_MUTED)
-    p1.insert_text((M, 66), "36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria  |  WhatsApp: +234 808 269 7841", fontname="helv", fontsize=7.5, color=TEXT_MUTED)
+    p1.insert_text((M, 66), "36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria  |  WhatsApp: +234 810 493 3232", fontname="helv", fontsize=7.5, color=TEXT_MUTED)
 
     p1.insert_text((W - M - 135, 41), "OFFICIAL RATE CARD", fontname="cour", fontsize=7, color=TEXT_MUTED)
     p1.insert_text((W - M - 135, 55), "HOTELS & SHORTLETS", fontname="hebo", fontsize=9.5, color=BROWN)
@@ -158,7 +158,7 @@ def build_pdf():
                 "24/7 WhatsApp AI Booking Agent: Replies in 3 seconds flat",
                 "Checks live dates, answers FAQs & sends instant payment links",
                 "Real-time calendar sync (Zero double-bookings across channels)",
-                "Shortlet Mode: Auto Caution-Fee, ID collection & Wi-Fi/gate code"
+                "Shortlet Mode: Caution-Fee & Guest ID verification via WhatsApp"
             ],
             "footer": "INCLUDES: Full ownership license + 1 Year Cloud Hosting & SSL."
         },
@@ -197,7 +197,7 @@ def build_pdf():
         p1.insert_textbox(fitz.Rect(x0 + 15, y_pkg + pkg_h - 48, x0 + col_w3 - 14, y_pkg + pkg_h - 12), p["footer"], fontname="hebo", fontsize=7, color=TEXT_MAIN)
 
     standalones = [
-        ("Shortlet Portfolio Engine", "N350,000 (One-Time)", "For 3-15+ units: Multi-apartment booking site + WhatsApp Caution-Fee & ID Bot + Smart Check-In Guide."),
+        ("Cloud & AI Running Cost", "$10/mo (~N15,000)", "Railway server container ($5/mo) + Meta WhatsApp Cloud & GPT-4o-mini tokens ($5/mo). Pay-as-you-go or managed."),
         ("Standalone HMS / PMS App", "N500,000 (One-Time)", "Already have a website? Custom Front-Desk OS, Room Inventory & Owner Revenue Dashboard integrated into your site."),
         ("Basic 3-Page Corporate Site", "N85,000 (One-Time)", "Clean, fast 3-page informational hotel or apartment showcase website with direct WhatsApp enquiry routing.")
     ]
@@ -324,15 +324,15 @@ def build_pdf():
         },
         {
             "tier": "TIER 04 - BEST SELLER",
-            "name": "Viral UGC + Social Suite",
+            "name": "Viral UGC Video Suite",
             "price": "N270,000",
             "best": True,
             "desc": "Creator-led video walkthroughs that turn scrollers into paying guests.",
             "bullets": [
-                "Everything in Social Engine (N150k)",
-                "4 Custom Creator UGC Videos / Mo",
-                "Showcases rooms, pool, bar & vibe",
-                "Built for viral organic reach",
+                "4 Custom Creator UGC Videos / Month",
+                "Scripted, shot & edited to sell rooms & vibe",
+                "Hook testing for high TikTok & IG virality",
+                "Showcases rooms, pool, bar & facilities",
                 "Ready-to-run Paid Ad video creatives"
             ]
         }
@@ -353,22 +353,22 @@ def build_pdf():
             by += 26
 
     # Left Bundle Text
-    p2.insert_text((M + 16, y_bun + 18), "ALL-IN-ONE MONTHLY DEPARTMENT (SAVE N40,000/MO)", fontname="cour", fontsize=7, color=ACCENT)
+    p2.insert_text((M + 16, y_bun + 18), "HIGH-IMPACT OCCUPANCY BUNDLE (SAVE N20,000/MO)", fontname="cour", fontsize=7, color=ACCENT)
     p2.insert_text((M + 16, y_bun + 34), "The 'Full Occupancy' Retainer Bundle", fontname="hebo", fontsize=11, color=TEXT_MAIN)
-    p2.insert_text((M + 16, y_bun + 54), "N380,000 / month", fontname="cour", fontsize=14, color=BROWN)
+    p2.insert_text((M + 16, y_bun + 54), "N350,000 / month", fontname="cour", fontsize=14, color=BROWN)
     p2.insert_textbox(
         fitz.Rect(M + 16, y_bun + 60, mid_x - 12, y_bun + 92),
-        "Combines Viral UGC & Social Suite (N270k) + Google Maps Dominance (N100k) + Website & System Care (N50k).",
+        "Combines Viral UGC Video Suite (N270k) + Google Maps Dominance (N100k). High-reach organic creator videos plus local search rankings.",
         fontname="helv", fontsize=7.6, color=TEXT_MUTED
     )
 
     # Right Bundle Text
-    p2.insert_text((mid_x + 16, y_bun + 18), "IMMEDIATE FRIDAY & WEEKEND BOOKINGS", fontname="cour", fontsize=7, color=ACCENT)
-    p2.insert_text((mid_x + 16, y_bun + 34), "Weekend Occupancy & Paid Ads Engine", fontname="hebo", fontsize=11, color=TEXT_MAIN)
-    p2.insert_text((mid_x + 16, y_bun + 54), "N200,000 / month (+ Ad Spend)", fontname="cour", fontsize=13, color=BROWN)
+    p2.insert_text((mid_x + 16, y_bun + 18), "WEEKEND ADVERTISING & LEAD ENGINE", fontname="cour", fontsize=7, color=ACCENT)
+    p2.insert_text((mid_x + 16, y_bun + 34), "Paid Ads Campaign Setup", fontname="hebo", fontsize=11, color=TEXT_MAIN)
+    p2.insert_text((mid_x + 16, y_bun + 54), "N100,000 / campaign setup", fontname="cour", fontsize=13, color=BROWN)
     p2.insert_textbox(
         fitz.Rect(mid_x + 16, y_bun + 60, W - M - 12, y_bun + 92),
-        "Meta Ads (IG/WhatsApp direct-to-booking) + Google Search Ads ('Shortlet/Hotel in City') + Retargeting + Weekly ROAS report.",
+        "Full Meta Ads & Google Ads setup + ad creative creation guide & targeting. Client funds daily ad budget x days directly.",
         fontname="helv", fontsize=7.6, color=TEXT_MUTED
     )
 
@@ -401,7 +401,7 @@ def build_pdf():
 
     # Bottom CTA Text
     p2.insert_text((M + 16, y_cta + 22), "READY TO LOCK IN YOUR BUILD SLOT OR TEST OUR LIVE AI BOT DEMO?", fontname="hebo", fontsize=10.5, color=BROWN)
-    p2.insert_text((M + 16, y_cta + 38), "1. Web: salescowboy.com.ng/hospitality   |   2. WhatsApp: +234 808 269 7841   |   3. Email: hello@salescowboy.com.ng", fontname="cour", fontsize=7.4, color=TEXT_MAIN)
+    p2.insert_text((M + 16, y_cta + 38), "1. Web: salescowboy.com.ng/hospitality   |   2. WhatsApp: +234 810 493 3232   |   3. Email: hello@salescowboy.com.ng", fontname="cour", fontsize=7.4, color=TEXT_MAIN)
     p2.insert_text((M + 16, y_cta + 53), "Office: 36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria", fontname="helv", fontsize=7.5, color=TEXT_MUTED)
 
     p2.insert_text((M, H - 18), "SALES COWBOY HOSPITALITY RATE CARD  |  PAGE 2 OF 2", fontname="cour", fontsize=7.5, color=TEXT_MUTED)

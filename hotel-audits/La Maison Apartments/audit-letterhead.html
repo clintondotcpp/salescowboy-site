@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Maison Apartments Maitama - Executive Digital Revenue Audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #090d16;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --danger: #991b1b;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --success: #065f46;
+      --success-bg: #ecfdf5;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--slate-900);
+      font-family: var(--font-sans);
+      color: var(--black);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 36px 16px;
+    }
+
+    /* Floating Screen Toolbar */
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto 24px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--black);
+      padding: 14px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--slate-800);
+      color: var(--white);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .toolbar-brand {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .toolbar-divider {
+      width: 1px;
+      height: 16px;
+      background: var(--slate-700);
+    }
+
+    .toolbar-doc {
+      font-size: 12px;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .btn-print {
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      padding: 9px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: var(--slate-100);
+    }
+
+    /* Main Executive Dossier Sheet */
+    .sheet {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 56px 64px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Letterhead Header */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      border-bottom: 3px solid var(--black);
+      gap: 24px;
+    }
+
+    .agency-name {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .agency-div {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-600);
+      margin-top: 3px;
+    }
+
+    .agency-loc {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-top: 6px;
+    }
+
+    .audit-meta {
+      text-align: right;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+    }
+
+    .audit-meta-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+      display: block;
+    }
+
+    .audit-meta-ref {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 2px;
+    }
+
+    .audit-meta-date {
+      font-size: 10px;
+      color: var(--slate-500);
+      margin-top: 2px;
+    }
+
+    /* Client Brief Banner */
+    .client-banner {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--slate-200);
+      gap: 24px;
+    }
+
+    .client-kicker {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--slate-500);
+    }
+
+    .client-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-top: 4px;
+      line-height: 1.15;
+    }
+
+    .client-sub {
+      font-size: 13px;
+      color: var(--slate-600);
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    .client-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 4px;
+      background: var(--slate-100);
+      border: 1px solid var(--slate-200);
+      color: var(--black);
+      white-space: nowrap;
+    }
+
+    /* Section 1: Score Gauge + 5-Axis Diagnostic Matrix */
+    .diagnostic-hero {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .gauge-box {
+      padding: 28px 24px;
+      border-right: 1px solid var(--slate-800);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #05080f;
+    }
+
+    .gauge-svg {
+      width: 120px;
+      height: 120px;
+    }
+
+    .gauge-status {
+      margin-top: 12px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+    }
+
+    .matrix-box {
+      padding: 26px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .matrix-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .matrix-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--white);
+    }
+
+    .matrix-leak {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate-300);
+    }
+
+    .axis-row {
+      display: grid;
+      grid-template-columns: 170px 1fr 70px;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .axis-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .axis-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--slate-300);
+    }
+
+    .axis-track {
+      height: 10px;
+      background: var(--slate-800);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .axis-fill {
+      height: 100%;
+      background: var(--white);
+      border-radius: 3px;
+    }
+
+    .axis-val {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--white);
+      text-align: right;
+    }
+
+    /* 4 Big KPI Callout Cards */
+    .kpi-grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .kpi-card {
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      border-radius: 8px;
+      padding: 18px 16px;
+    }
+
+    .kpi-num {
+      font-family: var(--font-mono);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .kpi-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      margin-top: 8px;
+    }
+
+    .kpi-sub {
+      font-size: 11px;
+      color: var(--slate-600);
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    /* Section Headings */
+    .sec-head {
+      margin-top: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--black);
+    }
+
+    .sec-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+      display: block;
+    }
+
+    .sec-title {
+      font-size: 17px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-top: 2px;
+    }
+
+    .sec-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    /* Visual 2: Google Search Brand Hijacking Simulation */
+    .serp-box {
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      background: var(--slate-50);
+      padding: 20px;
+    }
+
+    .serp-searchbar {
+      background: var(--white);
+      border: 1px solid var(--slate-300);
+      border-radius: 6px;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .serp-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .serp-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .serp-card.dead-card {
+      border: 2px solid var(--black);
+      background: var(--slate-100);
+    }
+
+    .serp-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .serp-meta {
+      font-size: 12px;
+      color: var(--slate-600);
+      margin-top: 2px;
+    }
+
+    .serp-warn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--danger);
+      margin-top: 4px;
+    }
+
+    .serp-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border: 1px solid var(--slate-300);
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .serp-badge.danger {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    /* Visual 3: Guest Drop-Off Funnel Chart */
+    .funnel-box {
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .funnel-row {
+      display: grid;
+      grid-template-columns: 95px 1fr 220px;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .funnel-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .funnel-count {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .funnel-count small {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    .funnel-track {
+      height: 36px;
+      background: var(--slate-100);
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .funnel-bar {
+      height: 100%;
+      background: var(--slate-800);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .funnel-drop {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--slate-700);
+      text-align: right;
+    }
+
+    /* Visual 4: Before vs After Architecture */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .arch-card {
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 20px;
+      background: var(--slate-50);
+    }
+
+    .arch-card.upgraded {
+      border: 2px solid var(--black);
+      background: var(--white);
+    }
+
+    .arch-kicker {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+    }
+
+    .arch-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 2px;
+      margin-bottom: 14px;
+    }
+
+    .flow-step {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 5px;
+      padding: 9px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .arch-card.upgraded .flow-step {
+      background: var(--slate-50);
+      border-color: var(--slate-300);
+      color: var(--black);
+    }
+
+    .flow-result {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 5px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-align: center;
+      background: var(--slate-200);
+      color: var(--black);
+    }
+
+    .arch-card.upgraded .flow-result {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* Visual 5: 4-Pillar Grid */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .pillar-box {
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 20px;
+      background: var(--white);
+    }
+
+    .pillar-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 800;
+      width: 26px;
+      height: 26px;
+      border-radius: 5px;
+      background: var(--black);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .pillar-name {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .pillar-bullets {
+      list-style: none;
+      font-size: 12px;
+      color: var(--slate-700);
+    }
+
+    .pillar-bullets li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+
+    .pillar-bullets li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: var(--black);
+    }
+
+    /* Visual 6: Revenue Recovery & ROI Box */
+    .roi-container {
+      margin-top: 24px;
+      border: 2px solid var(--black);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .roi-top {
+      background: var(--black);
+      color: var(--white);
+      padding: 22px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .roi-top-left h4 {
+      font-size: 16px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .roi-top-left p {
+      font-size: 12px;
+      color: var(--slate-400);
+      margin-top: 2px;
+    }
+
+    .roi-top-right {
+      text-align: right;
+    }
+
+    .roi-big {
+      font-family: var(--font-mono);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .roi-sub {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--slate-400);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .roi-bars {
+      padding: 20px 28px;
+      background: var(--slate-50);
+    }
+
+    .rev-bar-group {
+      margin-bottom: 14px;
+    }
+
+    .rev-bar-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .rev-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .rev-bar-track {
+      height: 16px;
+      background: var(--slate-200);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .rev-bar-fill {
+      height: 100%;
+      background: var(--black);
+      border-radius: 4px;
+    }
+
+    /* 4-Week Stepper */
+    .stepper-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .step-card {
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      border-radius: 6px;
+      padding: 14px;
+    }
+
+    .step-wk {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--slate-500);
+    }
+
+    .step-name {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--black);
+      margin: 4px 0 6px 0;
+    }
+
+    .step-desc {
+      font-size: 11px;
+      color: var(--slate-600);
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--slate-600);
+    }
+
+    .footer strong {
+      color: var(--black);
+    }
+
+    @media print {
+      body {
+        background: var(--white) !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 12mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Toolbar -->
+  <div class="toolbar no-print">
+    <div class="toolbar-left">
+      <span class="toolbar-brand">SALES COWBOY</span>
+      <span class="toolbar-divider"></span>
+      <span class="toolbar-doc">La Maison Apartments, Maitama Abuja : Executive Audit</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Main Printable Sheet -->
+  <div class="sheet">
+
+    <!-- Letterhead -->
+    <div class="letterhead">
+      <div>
+        <div class="agency-name">SALES COWBOY</div>
+        <div class="agency-div">Marketing Solutions • Hospitality Revenue Engineering</div>
+        <div class="agency-loc">
+          36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria • +234 810 493 3232 • salescowboy.com.ng
+        </div>
+      </div>
+      <div class="audit-meta">
+        <span class="audit-meta-label">EXECUTIVE DIAGNOSTIC</span>
+        <div class="audit-meta-ref">REF: AUD-LMA-2026-006</div>
+        <div class="audit-meta-date">November 06, 2026</div>
+      </div>
+    </div>
+
+    <!-- Client Banner -->
+    <div class="client-banner">
+      <div>
+        <span class="client-kicker">PREPARED FOR MANAGEMENT & OWNERSHIP</span>
+        <h1 class="client-title">La Maison Apartments</h1>
+        <p class="client-sub">Tennessee Crescent, Maitama, Abuja • Direct Line: 0814 199 6466</p>
+      </div>
+      <div class="client-pills">
+        <span class="pill">Maitama Luxury Tier</span>
+        <span class="pill">Short-Let & Executive Suites</span>
+      </div>
+    </div>
+
+    <!-- 1. Score Gauge + 5-Axis Diagnostic Matrix -->
+    <div class="diagnostic-hero">
+      <div class="gauge-box">
+        <svg class="gauge-svg" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#1e293b" stroke-width="10" />
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#ffffff" stroke-width="10"
+            stroke-dasharray="314" stroke-dashoffset="257" stroke-linecap="round"
+            transform="rotate(-90 60 60)" />
+          <text x="60" y="58" text-anchor="middle" fill="#ffffff" font-family="JetBrains Mono" font-size="30" font-weight="800">18</text>
+          <text x="60" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11" font-weight="600">/ 100 SCORE</text>
+        </svg>
+        <span class="gauge-status">CRITICAL BLIND SPOT</span>
+      </div>
+
+      <div class="matrix-box">
+        <div class="matrix-header">
+          <span class="matrix-title">5-Pillar Digital Infrastructure Scorecard</span>
+          <span class="matrix-leak">Est. Monthly Leakage: N2.4M - N4.8M</span>
+        </div>
+
+        <div>
+          <div class="axis-row">
+            <span class="axis-label">1. Direct Website</span>
+            <div class="axis-track"><div class="axis-fill" style="width: 2%;"></div></div>
+            <span class="axis-val">0 / 100</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">2. Google Maps (GBP)</span>
+            <div class="axis-track"><div class="axis-fill" style="width: 10%;"></div></div>
+            <span class="axis-val">10 / 100</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">3. OTA Syndication</span>
+            <div class="axis-track"><div class="axis-fill" style="width: 15%;"></div></div>
+            <span class="axis-val">15 / 100</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">4. Brand Protection</span>
+            <div class="axis-track"><div class="axis-fill" style="width: 20%;"></div></div>
+            <span class="axis-val">20 / 100</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">5. Booking Automation</span>
+            <div class="axis-track"><div class="axis-fill" style="width: 25%;"></div></div>
+            <span class="axis-val">25 / 100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Big KPI Callout Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">0</div>
+        <div class="kpi-title">Owned Website</div>
+        <div class="kpi-sub">No domain or automated direct booking checkout</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">0</div>
+        <div class="kpi-title">Google Reviews</div>
+        <div class="kpi-sub">Ghost Maps listing; invisible in Google 3-Pack</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">2</div>
+        <div class="kpi-title">Name Hijackers</div>
+        <div class="kpi-sub">EEVA Maison & de Jay capture your brand searches</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">92%</div>
+        <div class="kpi-title">Inquiry Drop-Off</div>
+        <div class="kpi-sub">Lost to dead OTA links and slow manual IG DMs</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Google Search Brand Hijacking Simulation -->
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">VISUAL DIAGNOSTIC 01</span>
+        <h2 class="sec-title">Live Google Search Hijacking Simulation</h2>
+      </div>
+      <span class="sec-tag">What diplomats & executives see today</span>
+    </div>
+
+    <div class="serp-box">
+      <div class="serp-searchbar">
+        <span>Google Search: "La Maison Apartments Maitama Abuja"</span>
+        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--slate-500);">Abuja, FCT</span>
+      </div>
+
+      <div class="serp-card">
+        <div>
+          <div class="serp-name">1. EEVA Maison Apartments (28 Tennessee Crescent, Maitama)</div>
+          <div class="serp-meta">4.7 ★ Verified Rating • Active Photo Gallery • Instant Online Booking</div>
+        </div>
+        <span class="serp-badge">Stealing Your Traffic</span>
+      </div>
+
+      <div class="serp-card">
+        <div>
+          <div class="serp-name">2. La Maison de Jay (Katampe, Abuja)</div>
+          <div class="serp-meta">4.5 ★ Verified Rating • Direct Booking Links • Active Reviews</div>
+        </div>
+        <span class="serp-badge">Hijacking Your Name</span>
+      </div>
+
+      <div class="serp-card dead-card">
+        <div>
+          <div class="serp-name">3. La Maison Apartments (Your Property - Maitama)</div>
+          <div class="serp-meta">0.0 ★ (0 Google Reviews) • No Website Link • Unverified Profile</div>
+          <div class="serp-warn">OTA Warning on Getaroom / Hotel.com.au: "Property may have changed names or is no longer bookable"</div>
+        </div>
+        <span class="serp-badge danger">Looks Shut Down</span>
+      </div>
+    </div>
+
+    <!-- Section 2: Visual Guest Drop-Off Funnel -->
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">VISUAL DIAGNOSTIC 02</span>
+        <h2 class="sec-title">Where 92 Out of 100 Maitama Guests Drop Off</h2>
+      </div>
+      <span class="sec-tag">Trajectory of 100 High-Intent Searchers</span>
+    </div>
+
+    <div class="funnel-box">
+      <div class="funnel-row">
+        <div class="funnel-count">100<small>Searchers</small></div>
+        <div class="funnel-track">
+          <div class="funnel-bar" style="width: 100%;">Stage 1: Search Google for "La Maison" or "Shortlet Maitama"</div>
+        </div>
+        <div class="funnel-drop">-55 lost to EEVA Maison & rivals</div>
+      </div>
+
+      <div class="funnel-row">
+        <div class="funnel-count">45<small>Remaining</small></div>
+        <div class="funnel-track">
+          <div class="funnel-bar" style="width: 45%;">Stage 2: Check OTA Aggregators</div>
+        </div>
+        <div class="funnel-drop">-20 lost ("No longer bookable" tag)</div>
+      </div>
+
+      <div class="funnel-row">
+        <div class="funnel-count">25<small>Remaining</small></div>
+        <div class="funnel-track">
+          <div class="funnel-bar" style="width: 25%;">Stage 3: Instagram DM / WhatsApp</div>
+        </div>
+        <div class="funnel-drop">-17 lost (Manual reply friction)</div>
+      </div>
+
+      <div class="funnel-row">
+        <div class="funnel-count">8<small>Check-Ins</small></div>
+        <div class="funnel-track">
+          <div class="funnel-bar" style="width: 8%; background: var(--black);">8%</div>
+        </div>
+        <div class="funnel-drop" style="color: var(--black); font-weight: 800;">92% Potential Revenue Lost</div>
+      </div>
+    </div>
+
+    <!-- Section 3: Before vs After Ecosystem Comparison -->
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">VISUAL DIAGNOSTIC 03</span>
+        <h2 class="sec-title">Current Broken Patch vs. Automated Direct System</h2>
+      </div>
+      <span class="sec-tag">Structural Comparison</span>
+    </div>
+
+    <div class="arch-grid">
+      <div class="arch-card">
+        <span class="arch-kicker">CURRENT STATE</span>
+        <div class="arch-title">Manual Instagram & Ghost Profile</div>
+        <div class="flow-step"><span>Google Maps Profile</span><span>0 Reviews / No Site</span></div>
+        <div class="flow-step"><span>Third-Party OTAs</span><span>"No Longer Bookable"</span></div>
+        <div class="flow-step"><span>Instagram Bio Link</span><span>Manual Phone / DM</span></div>
+        <div class="flow-step"><span>Staff Availability Check</span><span>Slow Manual Back-and-Forth</span></div>
+        <div class="flow-result">RESULT: 92% Guest Abandonment</div>
+      </div>
+
+      <div class="arch-card upgraded">
+        <span class="arch-kicker">SALES COWBOY UPGRADE</span>
+        <div class="arch-title">Automated Direct Booking Ecosystem</div>
+        <div class="flow-step"><span>Google 3-Pack Dominance</span><span>45+ 5-Star Reviews</span></div>
+        <div class="flow-step"><span>Dedicated Luxury Website</span><span>Live Calendar + Paystack</span></div>
+        <div class="flow-step"><span>24/7 WhatsApp & IG AI Bot</span><span>Replies in 10 Seconds</span></div>
+        <div class="flow-step"><span>Synced Tier-1 OTAs</span><span>Airbnb & Booking.com Live</span></div>
+        <div class="flow-result">RESULT: 3x Direct Occupancy at 0% Commission</div>
+      </div>
+    </div>
+
+    <!-- Section 4: The 4-Pillar Turnaround Plan -->
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">THE SOLUTION</span>
+        <h2 class="sec-title">4-Pillar Commercial Turnaround Architecture</h2>
+      </div>
+      <span class="sec-tag">Turnkey Implementation</span>
+    </div>
+
+    <div class="pillar-grid">
+      <div class="pillar-box">
+        <div class="pillar-top">
+          <span class="pillar-num">01</span>
+          <span class="pillar-name">Direct Luxury Booking Website</span>
+        </div>
+        <ul class="pillar-bullets">
+          <li>Launch dedicated domain (<strong>lamaisonapartments.com</strong>) tailored for diplomats and executives.</li>
+          <li>Interactive apartment galleries, amenities showcase, and live availability calendar.</li>
+          <li>Integrated <strong>Paystack checkout</strong> for instant card and bank transfer bookings at 0% commission.</li>
+        </ul>
+      </div>
+
+      <div class="pillar-box">
+        <div class="pillar-top">
+          <span class="pillar-num">02</span>
+          <span class="pillar-name">Google 3-Pack & Brand Defense</span>
+        </div>
+        <ul class="pillar-bullets">
+          <li>Verify and optimize your Google Business Profile to rank #1 for <em>"shortlet Maitama Abuja"</em>.</li>
+          <li>Eliminate traffic hijacking by <strong>EEVA Maison</strong> and <strong>La Maison de Jay</strong>.</li>
+          <li>Deploy in-suite <strong>Smart Review NFC/QR stands</strong> to scale from 0 to 45+ five-star reviews in 60 days.</li>
+        </ul>
+      </div>
+
+      <div class="pillar-box">
+        <div class="pillar-top">
+          <span class="pillar-num">03</span>
+          <span class="pillar-name">24/7 WhatsApp & IG AI Concierge</span>
+        </div>
+        <ul class="pillar-bullets">
+          <li>Connect an autonomous AI Reservation Desk to <strong>0814 199 6466</strong> and your Instagram DMs.</li>
+          <li>Replies in under 10 seconds 24/7: sends video tours, checks dates, and issues payment links.</li>
+          <li>Eliminates late-night inquiry drop-offs and manual front-desk bottlenecks.</li>
+        </ul>
+      </div>
+
+      <div class="pillar-box">
+        <div class="pillar-top">
+          <span class="pillar-num">04</span>
+          <span class="pillar-name">OTA Clean-Up & Channel Sync</span>
+        </div>
+        <ul class="pillar-bullets">
+          <li>Remove dead aggregator warnings (<em>"no longer bookable"</em>) on Hotel.com.au and Getaroom.</li>
+          <li>Build verified, high-ranking profiles on <strong>Airbnb</strong> and <strong>Booking.com</strong>.</li>
+          <li>Sync all calendars centrally so direct web bookings and OTAs never double-book.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section 5: Revenue Recovery Visual Projection -->
+    <div class="roi-container">
+      <div class="roi-top">
+        <div class="roi-top-left">
+          <h4>Projected Monthly Revenue Recovery</h4>
+          <p>Based on recovering just 20 to 35 lost executive apartment nights per month in Maitama</p>
+        </div>
+        <div class="roi-top-right">
+          <div class="roi-big">+N2.4M - N4.8M</div>
+          <span class="roi-sub">Estimated Monthly Revenue Uplift</span>
+        </div>
+      </div>
+
+      <div class="roi-bars">
+        <div class="rev-bar-group">
+          <div class="rev-bar-label">
+            <span>Current Digital Capture (Instagram DM Only)</span>
+            <span style="font-family: var(--font-mono);">~25% Digital Potential</span>
+          </div>
+          <div class="rev-bar-track">
+            <div class="rev-bar-fill" style="width: 25%; background: var(--slate-500);"></div>
+          </div>
+        </div>
+
+        <div class="rev-bar-group">
+          <div class="rev-bar-label">
+            <span>Post-Upgrade Capture (Direct Website + Google 3-Pack + 24/7 AI Bot + Synced OTAs)</span>
+            <span style="font-family: var(--font-mono);">85%+ Digital Potential</span>
+          </div>
+          <div class="rev-bar-track">
+            <div class="rev-bar-fill" style="width: 85%; background: var(--black);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6: 4-Week Rollout Roadmap -->
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">IMPLEMENTATION</span>
+        <h2 class="sec-title">4-Week Turnkey Execution Roadmap</h2>
+      </div>
+      <span class="sec-tag">Rapid Deployment</span>
+    </div>
+
+    <div class="stepper-grid">
+      <div class="step-card">
+        <span class="step-wk">WEEK 01</span>
+        <div class="step-name">Brand Defense & GBP</div>
+        <p class="step-desc">Verify Google listing, inject Maitama SEO schema, upload suite photos, reclaim brand traffic.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-wk">WEEK 02</span>
+        <div class="step-name">Direct Booking Site</div>
+        <p class="step-desc">Launch luxury web portal with live inventory calendar and Paystack checkout integration.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-wk">WEEK 03</span>
+        <div class="step-name">WhatsApp & IG AI Bot</div>
+        <p class="step-desc">Deploy 24/7 automated reservation concierge on 0814 199 6466 and Instagram DMs.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-wk">WEEK 04</span>
+        <div class="step-name">OTA Sync & QR Stands</div>
+        <p class="step-desc">Purge broken OTA warnings, sync Airbnb/Booking.com, install in-suite review QR stands.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div>
+        <strong>SALES COWBOY MARKETING SOLUTIONS</strong> • Hospitality Revenue Engineering Division<br>
+        36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria • +234 810 493 3232 • hello@salescowboy.com.ng
+      </div>
+      <div style="text-align: right; font-family: var(--font-mono);">
+        <strong>STATUS:</strong> EXECUTIVE BRIEF<br>
+        salescowboy.com.ng
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

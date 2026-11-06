@@ -1,77 +1,80 @@
-# SALES COWBOY AUDIT DESIGN SYSTEM & WRITING STANDARD
+# SALES COWBOY MASTER AUDIT DESIGN SYSTEM & TEMPLATE
 
-Permanent reference standard for all client audits, digital revenue assessments, and diagnostic reports.
+This is the permanent visual and editorial standard for all Sales Cowboy hospitality and commercial audits. Every audit must sell our authority immediately through visual proof, sharp financial contrast, and zero filler.
 
 ---
 
-## 1. CORE WRITING RULES
+## 1. EDITORIAL & COPYWRITING RULES
 
 1. **Zero Em Dashes:**
-   - Never use em dashes (`—` or `–`).
-   - Use simple hyphens (`-`), colons (`:`), periods, or commas instead.
+   - Never use em dashes (`—` or `–`) anywhere in headings, body copy, tables, or code.
+   - Use colons (`:`), bullets (`•`), periods, or simple hyphens (`-`).
 
-2. **60% Less Text (Punchy & Direct):**
-   - Eliminate verbose paragraphs, repetitive corporate padding, and AI fluff.
-   - Every point must get straight to the dollar amount, the metric, or the operational bottleneck.
-   - Use short, high-contrast sentences with bold lead-ins.
+2. **60% Less Wordiness (Executive Density):**
+   - Replace long paragraphs with visual diagrams, metric cards, and 1-line bullet points.
+   - Every sentence must state a concrete number, a named local competitor, a broken link, or a direct naira impact.
 
-3. **Human Tone (Zero AI Fingerprint):**
-   - No glowing rainbow gradients, no pastel badge spam, no decorative emoji sparkles.
-   - Executive consulting presentation: clean, decisive, objective, and authoritative.
-
----
-
-## 2. VISUAL & COLOR SYSTEM
-
-1. **Strict Minimalist Palette (Max 2 Tones):**
-   - **Primary:** Deep Black / Slate 950 (`#090d16` / `#0f172a`)
-   - **Secondary:** Neutral Slate Grays (`#334155`, `#64748b`, `#cbd5e1`, `#f1f5f9`)
-   - **Background:** Crisp White (`#ffffff`) or Paper Off-White (`#fcfcfc`)
-   - **Single Accent (Used Sparingly):** Understated Slate 900 or Subtle Crimson / Forest for negative/positive deltas only. No multicolor rainbows.
-
-2. **Large Typography & High Contrast:**
-   - Big metric numbers (32px to 48px font-mono) so executives can grasp the score in 2 seconds.
-   - Section headers: Bold uppercase with generous tracking (`tracking-wider`).
-   - Generous line spacing (`leading-relaxed` / 1.6x - 1.8x) and wide margins.
-
-3. **Visual Data Over Dense Text:**
-   - Visual progress bars for conversion drop-off.
-   - Clean horizontal funnel charts showing where guests leak out.
-   - Comparison grids with generous padding (never cramped).
-   - High-contrast metric cards with large bold numerals.
+3. **Sober Consulting Aesthetic (Zero AI Look):**
+   - **Palette:** Obsidian Black (`#090d16`), Slate Grays (`#334155`, `#64748b`, `#f1f5f9`, `#f8fafc`), and Pure White (`#ffffff`).
+   - **Accent:** Only use deep crimson (`#991b1b`) for live error warnings (e.g., *"No longer bookable"*) and solid black/white contrast for primary callouts.
+   - No rainbow badges, no neon gradients, no emoji spam, and no sparkle icons.
 
 ---
 
-## 3. AUDIT STRUCTURE BLUEPRINT
+## 2. MANDATORY 7-PART VISUAL ARCHITECTURE
 
-Every audit must follow this 6-step layout:
+Every audit (Web Route, Printable HTML Letterhead, Markdown, and Word `.docx`) must include these 7 visual blocks in order:
 
-1. **Official Letterhead:**
-   - Agency Name: SALES COWBOY MARKETING SOLUTIONS
-   - Address: 36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria
-   - Phone: +234 810 493 3232 | Web: salescowboy.com.ng
-   - Target property details and reference number.
+### Block 1: Executive Letterhead & Client Brief Banner
+- **Agency Header:** SALES COWBOY Marketing Solutions • Hospitality Revenue Engineering (`36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria`).
+- **Audit Reference Box:** Monospace reference ID, date, and status.
+- **Client Banner:** Large bold property name (`28px–32px`), location, direct phone line, and market tier pills.
 
-2. **Executive Scorecard (Big Numbers):**
-   - Health score out of 100 in massive type.
-   - One-sentence diagnosis.
-   - 4 primary metric boxes with bold numbers.
+### Block 2: Radial Score Gauge + 5-Axis Infrastructure Matrix
+- **Left Panel:** Dark obsidian box with an SVG circular progress gauge (`XX / 100`) and status badge (`CRITICAL BLIND SPOT`).
+- **Right Panel:** 5 horizontal progress bars scoring the property out of 100 across:
+  1. Direct Booking Website
+  2. Google Maps (GBP)
+  3. OTA Syndication Health
+  4. Brand Protection / Search Share
+  5. Booking Automation Speed
+- **Top-Right Callout:** Estimated Monthly Revenue Leakage in Naira.
 
-3. **Visual Guest Leak Funnel (Visual Chart):**
-   - Step-by-step visual chart showing the drop from 100 searchers to actual buyers.
-   - Direct financial cost at each step.
+### Block 3: 4 Oversized KPI Callout Cards
+- 4-column grid with huge monospace numerals (`32px+`):
+  - Card 1: `0` Owned Website
+  - Card 2: `X` Google Reviews
+  - Card 3: `X` Named Competitors Hijacking Traffic
+  - Card 4: `XX%` Inquiry Drop-Off Rate
 
-4. **The 4-Pillar Turnaround Plan (Clean Grid):**
-   - 1. Direct Booking Website
-   - 2. 24/7 WhatsApp AI Concierge
-   - 3. Google 3-Pack & Smart Review Flywheel
-   - 4. Social Media Management & Content Engine
+### Block 4: Visual Diagnostic 01 - Live Google Search Hijacking Simulation
+- A realistic visual mockup of what a guest sees on Google when searching for the client's name or neighborhood keyword:
+  - **Result #1 & #2 (Named Local Competitors):** Show their star rating, verified status, and `[Stealing Your Traffic]` / `[Hijacking Your Name]` badges.
+  - **Result #3 (The Client's Property):** Highlighted border showing `0 Reviews`, `No Website`, or third-party aggregator warnings (e.g., *"No longer bookable"*), paired with a `[Looks Shut Down]` badge.
 
-5. **Projected Financial ROI:**
-   - Large bold monthly revenue uplift range (e.g., +N1.2M - N2.8M / month).
-   - Simple 3-line bullet calculation.
+### Block 5: Visual Diagnostic 02 - Guest Drop-Off Funnel Chart
+- Horizontal proportional bar chart tracking **100 High-Intent Searchers** down to actual check-ins:
+  - Stage 1: `100 Searchers` -> Google Search & Maps (`-XX lost to rivals`)
+  - Stage 2: `XX Remaining` -> Third-Party OTA / Social Check (`-XX lost to broken links / dead page`)
+  - Stage 3: `XX Remaining` -> Manual WhatsApp / DM Inquiry (`-XX lost to slow manual reply`)
+  - Stage 4: `X Check-Ins` -> Net Loss summary (`90%+ Potential Revenue Lost`)
 
-6. **4-Week Timeline & Sign-off:**
-   - Clear, clean table showing rollout week by week.
-   - Official sign-off block.
+### Block 6: Visual Diagnostic 03 - Current Broken Patch vs. Automated Direct System
+- Side-by-side 2-column structural comparison diagram:
+  - **Left Column (Current State):** Shows the broken manual workflow resulting in high abandonment.
+  - **Right Column (Sales Cowboy Upgrade):** Bold black-bordered card showing the automated direct booking ecosystem resulting in `3x Direct Occupancy at 0% Commission`.
 
+### Block 7: 4-Pillar Turnaround Plan + Revenue Recovery Bar Chart + 4-Week Stepper
+- **4-Pillar Grid (2x2):** Numbered `01` to `04` covering Direct Website, Google 3-Pack & Review QR Stands, 24/7 WhatsApp/IG AI Concierge, and OTA/Content Engine.
+- **Projected Monthly Revenue Recovery Box:** Dark header with oversized Naira uplift (`+N2.4M - N4.8M`) + 2 horizontal comparison bars (`Current Capture ~25%` vs `Post-Upgrade Capture 85%+`).
+- **4-Week Turnkey Execution Roadmap:** 4-column horizontal stepper (`WEEK 01` to `WEEK 04`).
+
+---
+
+## 3. REFERENCE IMPLEMENTATION FILES
+
+Use the **La Maison Apartments (Maitama, Abuja)** audit as the canonical master template for all future audits:
+- **Next.js Web Route Template:** `app/la-maison-audit/page.tsx`
+- **Printable HTML Master Template:** `hotel-audits/La Maison Apartments/audit-letterhead.html`
+- **Word (.docx) Generator Template:** `hotel-audits/La Maison Apartments/build_lamaison_docs.py`
+- **Markdown Diagnostic Template:** `hotel-audits/La Maison Apartments/audit-report.md`

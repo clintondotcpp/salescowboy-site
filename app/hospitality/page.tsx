@@ -376,7 +376,7 @@ export default function HospitalityPackagesPage() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-border space-y-3">
+              <div className="mt-8 pt-6 border-t border-border">
                 <a
                   href={waUrl(
                     "Hello Sales Cowboy! I want to order the ₦420,000 '24/7 AI Concierge Suite' (Website + WhatsApp AI Booking Agent)."
@@ -387,17 +387,6 @@ export default function HospitalityPackagesPage() {
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Order AI Concierge Suite (₦420k)</span>
-                </a>
-                <a
-                  href={waUrl(
-                    "Hello Sales Cowboy! Please send me the 60-second video demo of the WhatsApp AI Booking Bot in action."
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold text-accent hover:underline transition-colors"
-                >
-                  <span>Watch 60s Live Bot Demo on WhatsApp</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>

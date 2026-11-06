@@ -400,7 +400,7 @@ def build_pdf():
         p2.insert_textbox(fitz.Rect(x0, y_port + 45, x0 + 165, y_port + 88), pd, fontname="helv", fontsize=7.4, color=TEXT_MUTED)
 
     # Bottom CTA Text
-    p2.insert_text((M + 16, y_cta + 22), "READY TO LOCK IN YOUR BUILD SLOT OR TEST OUR LIVE AI BOT DEMO?", fontname="hebo", fontsize=10.5, color=BROWN)
+    p2.insert_text((M + 16, y_cta + 22), "READY TO LOCK IN YOUR BUILD SLOT OR GET STARTED?", fontname="hebo", fontsize=10.5, color=BROWN)
     p2.insert_text((M + 16, y_cta + 38), "1. Web: salescowboy.com.ng/hospitality   |   2. WhatsApp: +234 810 493 3232   |   3. Email: hello@salescowboy.com.ng", fontname="cour", fontsize=7.4, color=TEXT_MAIN)
     p2.insert_text((M + 16, y_cta + 53), "Office: 36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria", fontname="helv", fontsize=7.5, color=TEXT_MUTED)
 

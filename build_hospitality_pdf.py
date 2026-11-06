@@ -135,7 +135,7 @@ def build_pdf():
             "name": "1. Direct Booking Foundation",
             "price": "N200,000",
             "sub": "ONE-TIME SETUP",
-            "best": "Best For: Single Shortlets, Guest Houses & Boutique Hotels",
+            "who": "WHO NEEDS THIS: Properties relying 100% on OTAs (15-20% fee) or taking messy DM bookings with no verified website or payment checkout.",
             "featured": False,
             "bullets": [
                 "Custom Direct Booking Website (Live room/unit calendar & galleries)",
@@ -151,7 +151,7 @@ def build_pdf():
             "name": "2. 24/7 AI Concierge Suite",
             "price": "N420,000",
             "sub": "ONE-TIME LICENSE - NO SUBSCRIPTION",
-            "best": "Best For: Busy 10-30 Room Hotels & Multi-Unit Airbnb Hosts",
+            "who": "WHO NEEDS THIS: Hotels & shortlets losing night/weekend bookings to slow WhatsApp replies, or bogged down repeating FAQs & manual dates.",
             "featured": True,
             "bullets": [
                 "Complete Direct Booking Website + Instant Payment Checkout",
@@ -167,7 +167,7 @@ def build_pdf():
             "name": "3. Autonomous Hospitality OS",
             "price": "N800,000",
             "sub": "ONE-TIME LICENSE - NO SUBSCRIPTION",
-            "best": "Best For: Established Hotels (20-100+ Rooms) & Portfolios",
+            "who": "WHO NEEDS THIS: Established hotels (20-100+ rooms) suffering front-desk cash leaks, fake transfer receipts, and unrecorded room stays.",
             "featured": False,
             "bullets": [
                 "Custom Direct Booking Website with integrated payment gateway",
@@ -186,7 +186,7 @@ def build_pdf():
         p1.insert_text((x0 + 10, y_pkg + 42), p["name"], fontname="hebo", fontsize=9.8, color=TEXT_MAIN)
         p1.insert_text((x0 + 10, y_pkg + 66), p["price"], fontname="cour", fontsize=18, color=BROWN)
         p1.insert_text((x0 + 10, y_pkg + 78), p["sub"], fontname="cour", fontsize=6.5, color=TEXT_MUTED)
-        p1.insert_textbox(fitz.Rect(x0 + 10, y_pkg + 84, x0 + col_w3 - 10, y_pkg + 112), p["best"], fontname="hebo", fontsize=7.5, color=TEXT_MUTED)
+        p1.insert_textbox(fitz.Rect(x0 + 10, y_pkg + 84, x0 + col_w3 - 10, y_pkg + 112), p["who"], fontname="hebo", fontsize=7.2, color=TEXT_MUTED)
 
         by = y_pkg + 122
         for b in p["bullets"]:
@@ -197,9 +197,9 @@ def build_pdf():
         p1.insert_textbox(fitz.Rect(x0 + 15, y_pkg + pkg_h - 48, x0 + col_w3 - 14, y_pkg + pkg_h - 12), p["footer"], fontname="hebo", fontsize=7, color=TEXT_MAIN)
 
     standalones = [
-        ("Cloud & AI Running Cost", "$10/mo (~N15,000)", "Railway server container ($5/mo) + Meta WhatsApp Cloud & GPT-4o-mini tokens ($5/mo). Pay-as-you-go or managed."),
-        ("Standalone HMS / PMS App", "N500,000 (One-Time)", "Already have a website? Custom Front-Desk OS, Room Inventory & Owner Revenue Dashboard integrated into your site."),
-        ("Basic 3-Page Corporate Site", "N85,000 (One-Time)", "Clean, fast 3-page informational hotel or apartment showcase website with direct WhatsApp enquiry routing.")
+        ("Cloud & AI Running Cost", "$10/mo (~N15,000)", "Railway server ($5/mo) + Meta WhatsApp Cloud & GPT-4o-mini tokens ($5/mo). Pay-as-you-go or managed."),
+        ("Standalone HMS / PMS App", "N500,000 (One-Time)", "WHO: Hotels with a website but paper/Excel front desk, risking cash theft. Custom Front-Desk OS & Owner Dashboard."),
+        ("Basic 3-Page Corporate Site", "N85,000 (One-Time)", "WHO: New budget hotels/shortlets needing a verified Google Maps pin & clean showcase site before full booking engines.")
     ]
     for i, (st_name, st_price, st_desc) in enumerate(standalones):
         x0 = M + i * (col_w3 + 8)
@@ -285,7 +285,7 @@ def build_pdf():
             "name": "Website & System Care",
             "price": "N50,000",
             "best": False,
-            "desc": "Keep your booking site, AI bot & HMS fast, secure, and updated.",
+            "desc": "WHO: Owners wanting zero tech downtime, with instant rate changes & banner updates.",
             "bullets": [
                 "Unlimited room rate & text updates",
                 "Seasonal promo banner swaps",
@@ -299,7 +299,7 @@ def build_pdf():
             "name": "Google Maps Dominance",
             "price": "N100,000",
             "best": False,
-            "desc": "Own the Top 3 spots when guests search Google Maps in your city.",
+            "desc": "WHO: Hotels invisible on Google Maps, losing travelers searching 'near me' to rivals.",
             "bullets": [
                 "Weekly GBP posts & special offers",
                 "Geo-tagged room & facility photos",
@@ -313,7 +313,7 @@ def build_pdf():
             "name": "Hospitality Social Engine",
             "price": "N150,000",
             "best": False,
-            "desc": "Look like the most prestigious property in town on IG, FB & TikTok.",
+            "desc": "WHO: Hotels with inactive social pages needing an elite, prestigious brand presence.",
             "bullets": [
                 "Full IG, FB & TikTok Management",
                 "Monthly calendar & graphic design",
@@ -327,7 +327,7 @@ def build_pdf():
             "name": "Viral UGC Video Suite",
             "price": "N270,000",
             "best": True,
-            "desc": "Creator-led video walkthroughs that turn scrollers into paying guests.",
+            "desc": "WHO: Properties with empty mid-week rooms needing viral video booking demand.",
             "bullets": [
                 "4 Custom Creator UGC Videos / Month",
                 "Scripted, shot & edited to sell rooms & vibe",
@@ -358,8 +358,8 @@ def build_pdf():
     p2.insert_text((M + 16, y_bun + 54), "N350,000 / month", fontname="cour", fontsize=14, color=BROWN)
     p2.insert_textbox(
         fitz.Rect(M + 16, y_bun + 60, mid_x - 12, y_bun + 92),
-        "Combines Viral UGC Video Suite (N270k) + Google Maps Dominance (N100k). High-reach organic creator videos plus local search rankings.",
-        fontname="helv", fontsize=7.6, color=TEXT_MUTED
+        "WHO: Ambitious properties wanting an outsourced growth department. Combines Viral UGC Videos (N270k) + Google Maps (N100k) to fill rooms all month.",
+        fontname="helv", fontsize=7.4, color=TEXT_MUTED
     )
 
     # Right Bundle Text
@@ -368,8 +368,8 @@ def build_pdf():
     p2.insert_text((mid_x + 16, y_bun + 54), "N100,000 / campaign setup", fontname="cour", fontsize=13, color=BROWN)
     p2.insert_textbox(
         fitz.Rect(mid_x + 16, y_bun + 60, W - M - 12, y_bun + 92),
-        "Full Meta Ads & Google Ads setup + ad creative creation guide & targeting. Client funds daily ad budget x days directly.",
-        fontname="helv", fontsize=7.6, color=TEXT_MUTED
+        "WHO: Properties with empty rooms this weekend. Meta & Google Ads setup + creative guide. Client funds daily ad budget x days directly.",
+        fontname="helv", fontsize=7.4, color=TEXT_MUTED
     )
 
     # Step 3 Text
@@ -377,9 +377,9 @@ def build_pdf():
     p2.insert_text((M, y_add + 14), "High-Impact One-Off Revenue & Operations Add-Ons", fontname="hebo", fontsize=13, color=TEXT_MAIN)
 
     addons = [
-        ("+ N75,000 ONE-TIME", "5-Star Review & Rebate Bot", "2 hours after checkout in your HMS, our WhatsApp bot thanks the guest, requests a 5-star Google review, and issues a 10% repeat-stay code."),
-        ("+ N150,000 ONE-TIME", "Bar & Room QR Menu + POS", "Guests scan a bedside, poolside, or bar QR code to order food & drinks on their phone. Orders print at the bar and log into the HMS ledger."),
-        ("+ N120,000 ONE-OFF", "On-Site Content Shoot Day", "We send a cameraman/creator to your hotel or shortlets to shoot 30+ raw vertical clips and crisp room photos for the quarter.")
+        ("+ N75,000 ONE-TIME", "5-Star Review & Rebate Bot", "WHO: Hotels with <50 reviews. 2h post-checkout, bot requests a 5-star Google review & gives 10% repeat-stay code."),
+        ("+ N150,000 ONE-TIME", "Bar & Room QR Menu + POS", "WHO: Hotels with bar/dining losing cash or slow service. Guests order via bedside QR; orders print at bar & HMS."),
+        ("+ N120,000 ONE-OFF", "On-Site Content Shoot Day", "WHO: Properties needing fresh visual assets. Cameraman shoots 30+ vertical clips & crisp room photos for the quarter.")
     ]
     for i, (ap, at, ad) in enumerate(addons):
         x0 = M + i * (col_w3 + 8)

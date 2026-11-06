@@ -23,6 +23,7 @@ import {
   TrendingUp,
   Server,
   Zap,
+  Target,
 } from "lucide-react";
 import {
   Accordion,
@@ -183,7 +184,18 @@ export default function HospitalityPackagesPage() {
                   Best For: Single Shortlets, Guest Houses &amp; Boutique Hotels wanting automated direct reservations.
                 </p>
 
-                <div className="mt-8 flex items-baseline gap-2">
+                {/* Who Needs This Block */}
+                <div className="mt-4 p-3.5 rounded-2xl bg-secondary/80 border border-border">
+                  <div className="text-[11px] font-extrabold uppercase tracking-wider text-accent mb-1.5 flex items-center gap-1.5">
+                    <Target className="w-3.5 h-3.5" />
+                    <span>Who Needs This Package:</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-foreground leading-relaxed">
+                    Hotels, guest houses, and shortlet hosts currently relying 100% on OTAs (Booking.com, Airbnb) paying 15–20% commissions, or taking bookings through informal DMs with no verified website or payment checkout.
+                  </p>
+                </div>
+
+                <div className="mt-6 flex items-baseline gap-2">
                   <span className="text-5xl sm:text-6xl font-black text-foreground tracking-tight font-mono">
                     {launchAndRank ? "₦250,000" : "₦200,000"}
                   </span>
@@ -289,7 +301,18 @@ export default function HospitalityPackagesPage() {
                   Best For: Busy 10-30 room hotels and multi-unit Airbnb hosts (1-15+ units) wanting automated direct bookings without manual DM exhaustion.
                 </p>
 
-                <div className="mt-8 flex items-baseline gap-2">
+                {/* Who Needs This Block */}
+                <div className="mt-4 p-3.5 rounded-2xl bg-secondary/80 border border-border">
+                  <div className="text-[11px] font-extrabold uppercase tracking-wider text-accent mb-1.5 flex items-center gap-1.5">
+                    <Target className="w-3.5 h-3.5" />
+                    <span>Who Needs This Package:</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-foreground leading-relaxed">
+                    Properties losing bookings after hours (8:00 PM – 8:00 AM) due to delayed WhatsApp replies, or whose staff waste hours answering repetitive FAQs, checking room dates manually, and sending bank details by hand.
+                  </p>
+                </div>
+
+                <div className="mt-6 flex items-baseline gap-2">
                   <span className="text-5xl sm:text-6xl font-black text-foreground tracking-tight font-mono">
                     ₦420,000
                   </span>
@@ -394,7 +417,18 @@ export default function HospitalityPackagesPage() {
                   Best For: Established Hotels (20-100+ Rooms) &amp; Multi-Property Shortlet Portfolios needing full operational control and zero staff cash leakage.
                 </p>
 
-                <div className="mt-8 flex items-baseline gap-2">
+                {/* Who Needs This Block */}
+                <div className="mt-4 p-3.5 rounded-2xl bg-secondary/80 border border-border">
+                  <div className="text-[11px] font-extrabold uppercase tracking-wider text-accent mb-1.5 flex items-center gap-1.5">
+                    <Target className="w-3.5 h-3.5" />
+                    <span>Who Needs This Package:</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-foreground leading-relaxed">
+                    Established hotels and property owners suffering from front-desk cash leakage, fake bank transfer receipts, unrecorded room stays, and owners who need a real-time revenue dashboard on their phone from anywhere.
+                  </p>
+                </div>
+
+                <div className="mt-6 flex items-baseline gap-2">
                   <span className="text-5xl sm:text-6xl font-black text-foreground tracking-tight font-mono">
                     ₦800,000
                   </span>
@@ -501,6 +535,12 @@ export default function HospitalityPackagesPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Already have a website you love? We custom-deploy our full HMS Web App on your server and integrate it with your front desk, room inventory, and owner financial revenue tracking.
                 </p>
+                <div className="p-3 rounded-xl bg-secondary/80 border border-border text-xs leading-relaxed text-foreground">
+                  <strong className="text-accent uppercase text-[10px] tracking-wider block mb-1">
+                    Who Needs This:
+                  </strong>
+                  Hotels that already have an attractive website but run front-desk operations on paper notebooks or Excel, risking double-bookings, unrecorded stays, and staff pocketing cash.
+                </div>
                 <a
                   href={waUrl(
                     "Hello Sales Cowboy! I already have a website and want to deploy the ₦500,000 Standalone HMS software."
@@ -528,6 +568,12 @@ export default function HospitalityPackagesPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Need a simple corporate presence first? Clean, fast 3-page informational hotel or apartment showcase website with room galleries, Google Maps pin, and direct WhatsApp enquiry routing.
                 </p>
+                <div className="p-3 rounded-xl bg-secondary/80 border border-border text-xs leading-relaxed text-foreground">
+                  <strong className="text-accent uppercase text-[10px] tracking-wider block mb-1">
+                    Who Needs This:
+                  </strong>
+                  Newly launched guest houses, shortlets, or budget hotels needing an immediate, credible web presence and Google Maps listing on a tight budget before upgrading to full booking engines.
+                </div>
                 <a
                   href={waUrl(
                     "Hello Sales Cowboy! I want to order the ₦85,000 Basic 3-Page Corporate Website."
@@ -576,6 +622,15 @@ export default function HospitalityPackagesPage() {
                 <p className="mt-2 text-xs text-muted-foreground">
                   Keep your booking site, AI bot, and HMS fast, secure, and updated.
                 </p>
+
+                <div className="mt-3.5 p-2.5 rounded-xl bg-secondary/80 border border-border">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-accent block mb-1">
+                    Who Needs This:
+                  </span>
+                  <p className="text-[11px] text-foreground leading-snug">
+                    Owners wanting zero tech headaches—guaranteeing their booking site, AI bot, and hosting never break, with instant updates to room rates and promos.
+                  </p>
+                </div>
                 <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -623,6 +678,15 @@ export default function HospitalityPackagesPage() {
                 <p className="mt-2 text-xs text-muted-foreground">
                   Own the Top 3 spots when travelers search Google Maps in your city.
                 </p>
+
+                <div className="mt-3.5 p-2.5 rounded-xl bg-secondary/80 border border-border">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-accent block mb-1">
+                    Who Needs This:
+                  </span>
+                  <p className="text-[11px] text-foreground leading-snug">
+                    Hotels stuck on page 2 or below the Top 3 map pack when travelers search &ldquo;Hotels near me&rdquo;, losing high-paying corporate &amp; diaspora guests to rivals.
+                  </p>
+                </div>
                 <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -670,6 +734,15 @@ export default function HospitalityPackagesPage() {
                 <p className="mt-2 text-xs text-muted-foreground">
                   Look like the most prestigious property in town on IG, FB &amp; TikTok.
                 </p>
+
+                <div className="mt-3.5 p-2.5 rounded-xl bg-secondary/80 border border-border">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-accent block mb-1">
+                    Who Needs This:
+                  </span>
+                  <p className="text-[11px] text-foreground leading-snug">
+                    Properties with inactive, inconsistent, or low-quality social media pages, looking to build an elite, trustworthy brand that attracts guests and event bookings.
+                  </p>
+                </div>
                 <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -721,6 +794,15 @@ export default function HospitalityPackagesPage() {
                 <p className="mt-2 text-xs text-muted-foreground">
                   4 authentic creator video walkthroughs engineered to convert scrollers into paying guests.
                 </p>
+
+                <div className="mt-3.5 p-2.5 rounded-xl bg-secondary/80 border border-border">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-accent block mb-1">
+                    Who Needs This:
+                  </span>
+                  <p className="text-[11px] text-foreground leading-snug">
+                    Properties with great aesthetics, pools, or luxury suites that struggle with empty mid-week rooms and need viral video reach to trigger bookings.
+                  </p>
+                </div>
                 <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -772,6 +854,12 @@ export default function HospitalityPackagesPage() {
                 <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
                   Combines <strong>Viral UGC Video Suite (₦270k)</strong> + <strong>Google Maps Dominance (₦100k)</strong> into one high-power monthly growth engine that keeps your property visible and viral.
                 </p>
+                <div className="mt-3.5 p-3 rounded-xl bg-secondary/80 border border-border text-xs leading-relaxed text-foreground">
+                  <strong className="text-accent uppercase text-[10px] tracking-wider block mb-1">
+                    Who Needs This:
+                  </strong>
+                  Ambitious property operators who want a full outsourced marketing team—combining viral creator video reach with local Google search dominance to consistently keep rooms occupied all month long.
+                </div>
               </div>
               <a
                 href={waUrl(
@@ -804,6 +892,12 @@ export default function HospitalityPackagesPage() {
                 <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
                   Full ad campaign setup + ad creative creation recommendation and copy guide. Direct Meta Ads (Instagram/WhatsApp booking) or Google Search Ads (<em>&ldquo;Shortlet / Hotel in [City]&rdquo;</em>).
                 </p>
+                <div className="mt-3.5 p-3 rounded-xl bg-secondary/80 border border-border text-xs leading-relaxed text-foreground">
+                  <strong className="text-accent uppercase text-[10px] tracking-wider block mb-1">
+                    Who Needs This:
+                  </strong>
+                  Hotels or shortlets with empty rooms this coming weekend or festive season needing immediate, high-intent guest booking inquiries fast.
+                </div>
                 <div className="mt-3 text-xs font-medium text-accent">
                   * Client funds their ad spend directly (Daily budget × number of days).
                 </div>
@@ -854,6 +948,12 @@ export default function HospitalityPackagesPage() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 2 hours after checkout in your HMS, our WhatsApp bot thanks the guest, requests a Google Review, and issues a 10% repeat-booking discount code.
               </p>
+              <div className="p-2.5 rounded-xl bg-secondary/80 border border-border text-xs leading-relaxed text-foreground">
+                <strong className="text-accent uppercase text-[10px] tracking-wider block mb-0.5">
+                  Who Needs This:
+                </strong>
+                Properties with under 50 Google reviews or low repeat guest retention.
+              </div>
               <a
                 href={waUrl(
                   "Hello Sales Cowboy! I want to include the +₦75,000 Automated 5-Star Review & Repeat-Guest Bot."
@@ -883,6 +983,12 @@ export default function HospitalityPackagesPage() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Guests scan a table, poolside, or bedside QR code to order food and drinks from their phone. Orders print at the bar/kitchen and log into the HMS ledger.
               </p>
+              <div className="p-2.5 rounded-xl bg-secondary/80 border border-border text-xs leading-relaxed text-foreground">
+                <strong className="text-accent uppercase text-[10px] tracking-wider block mb-0.5">
+                  Who Needs This:
+                </strong>
+                Properties with dining, bar, or room-service losing sales to slow service or staff order leakage.
+              </div>
               <a
                 href={waUrl(
                   "Hello Sales Cowboy! I want to include the +₦150,000 Bar, Lounge & Room QR Menu + POS."
@@ -912,6 +1018,12 @@ export default function HospitalityPackagesPage() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 We send a cameraman to your hotel or shortlets to film 30+ raw vertical clips and crisp room photos for the quarter so you don&apos;t lift a finger.
               </p>
+              <div className="p-2.5 rounded-xl bg-secondary/80 border border-border text-xs leading-relaxed text-foreground">
+                <strong className="text-accent uppercase text-[10px] tracking-wider block mb-0.5">
+                  Who Needs This:
+                </strong>
+                Properties with newly renovated suites or poor-quality photos needing crisp visual content fast.
+              </div>
               <a
                 href={waUrl(
                   "Hello Sales Cowboy! I want to book the ₦120,000 On-Site Property Content Shoot Day."

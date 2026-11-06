@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Cowboy - Hospitality & Shortlet Packages Brochure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #090d16;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--white);
+      font-family: var(--font-sans);
+      color: var(--black);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 48px;
+      background: var(--white);
+    }
+
+    /* Screen Toolbar */
+    .toolbar {
+      max-width: 920px;
+      margin: 20px auto 0 auto;
+      background: var(--black);
+      color: var(--white);
+      padding: 14px 24px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toolbar-brand {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .btn-print {
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* Letterhead */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 20px;
+      border-bottom: 3px solid var(--black);
+      gap: 20px;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-600);
+      margin-top: 3px;
+    }
+
+    .brand-contact {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-top: 5px;
+    }
+
+    .doc-badge {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-align: right;
+      font-family: var(--font-mono);
+    }
+
+    .doc-badge span {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .doc-badge strong {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      margin-top: 24px;
+      background: var(--black);
+      color: var(--white);
+      padding: 32px 36px;
+      border-radius: 10px;
+    }
+
+    .hero-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate-400);
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-top: 8px;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--slate-300);
+      margin-top: 10px;
+      line-height: 1.55;
+      max-width: 760px;
+    }
+
+    .hero-pills {
+      display: flex;
+      gap: 16px;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--slate-800);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--white);
+      flex-wrap: wrap;
+    }
+
+    /* The 3 Leaks */
+    .leaks-grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .leak-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .leak-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--slate-500);
+    }
+
+    .leak-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 4px;
+    }
+
+    .leak-desc {
+      font-size: 12px;
+      color: var(--slate-600);
+      margin-top: 6px;
+      line-height: 1.45;
+    }
+
+    /* Section Headers */
+    .sec-head {
+      margin-top: 32px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .sec-step {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+      display: block;
+    }
+
+    .sec-title {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-top: 2px;
+    }
+
+    .sec-note {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    /* 3 Main One-Time Package Cards */
+    .pkg-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .pkg-card {
+      border: 1px solid var(--slate-300);
+      border-radius: 10px;
+      padding: 22px 20px;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pkg-card.featured {
+      border: 2.5px solid var(--black);
+      background: var(--slate-50);
+    }
+
+    .pkg-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: var(--slate-200);
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .pkg-card.featured .pkg-badge {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .pkg-name {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--black);
+      line-height: 1.25;
+    }
+
+    .pkg-price {
+      font-family: var(--font-mono);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 10px;
+      line-height: 1;
+    }
+
+    .pkg-price small {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--slate-500);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .pkg-best {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--slate-600);
+      margin-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .pkg-list {
+      list-style: none;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--slate-800);
+    }
+
+    .pkg-list li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 7px;
+      line-height: 1.4;
+    }
+
+    .pkg-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+      color: var(--black);
+    }
+
+    .pkg-upgrade {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 6px;
+      background: var(--slate-100);
+      border: 1px dashed var(--slate-400);
+      font-size: 11px;
+      color: var(--black);
+    }
+
+    /* Standalone Row */
+    .standalone-grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .standalone-box {
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .standalone-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .standalone-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .standalone-price {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--black);
+      white-space: nowrap;
+    }
+
+    .standalone-desc {
+      font-size: 11px;
+      color: var(--slate-600);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    /* Page Break for Print */
+    .page-break {
+      page-break-before: always;
+      padding-top: 20px;
+    }
+
+    /* Step 2: 4 Monthly Retainers */
+    .retainer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .ret-card {
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      padding: 16px 14px;
+      background: var(--white);
+    }
+
+    .ret-card.best {
+      border: 2px solid var(--black);
+      background: var(--slate-50);
+    }
+
+    .ret-tier {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--slate-500);
+    }
+
+    .ret-name {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--black);
+      margin-top: 3px;
+      line-height: 1.25;
+    }
+
+    .ret-price {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 8px;
+    }
+
+    .ret-price span {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    .ret-tagline {
+      font-size: 11px;
+      color: var(--slate-600);
+      margin-top: 6px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--slate-200);
+      line-height: 1.35;
+    }
+
+    .ret-list {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--slate-800);
+    }
+
+    .ret-list li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .ret-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+      color: var(--black);
+    }
+
+    /* Full Occupancy Bundle Banner */
+    .bundle-banner {
+      margin-top: 16px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 20px 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .bundle-col h4 {
+      font-size: 15px;
+      font-weight: 900;
+      color: var(--white);
+    }
+
+    .bundle-price {
+      font-family: var(--font-mono);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 4px;
+    }
+
+    .bundle-price small {
+      font-size: 11px;
+      color: var(--slate-400);
+      font-weight: 600;
+    }
+
+    .bundle-desc {
+      font-size: 12px;
+      color: var(--slate-300);
+      margin-top: 6px;
+      line-height: 1.45;
+    }
+
+    /* Power-Ups Grid */
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .addon-box {
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .addon-price {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+      background: var(--white);
+      border: 1px solid var(--slate-300);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .addon-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 8px;
+    }
+
+    .addon-desc {
+      font-size: 11px;
+      color: var(--slate-600);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Client Portal Block */
+    .portal-box {
+      margin-top: 24px;
+      border: 2px solid var(--black);
+      border-radius: 10px;
+      padding: 20px 24px;
+      background: var(--white);
+    }
+
+    .portal-head {
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .portal-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .portal-item strong {
+      font-size: 12px;
+      font-weight: 800;
+      display: block;
+      color: var(--black);
+    }
+
+    .portal-item p {
+      font-size: 11px;
+      color: var(--slate-600);
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    /* Footer CTA */
+    .footer-cta {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 2px solid var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      .page {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 12mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar no-print">
+    <span class="toolbar-brand">SALES COWBOY • HOSPITALITY PACKAGES BROCHURE</span>
+    <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <div class="page">
+
+    <!-- Letterhead -->
+    <div class="letterhead">
+      <div>
+        <div class="brand-name">SALES COWBOY</div>
+        <div class="brand-sub">Hospitality Technology &amp; Occupancy Growth Division</div>
+        <div class="brand-contact">
+          36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria • WhatsApp: +234 808 269 7841 • salescowboy.com.ng/hospitality
+        </div>
+      </div>
+      <div class="doc-badge">
+        <span>OFFICIAL RATE CARD</span>
+        <strong>HOTELS &amp; SHORTLETS</strong>
+      </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-kicker">FOR HOTELS, SERVICED APARTMENTS &amp; MULTI-UNIT AIRBNB HOSTS</div>
+      <h1 class="hero-title">
+        Direct Booking, AI Automation &amp; Occupancy Growth Systems.
+      </h1>
+      <p class="hero-sub">
+        Stop losing guests to slow WhatsApp replies, empty mid-week rooms, and front-desk cash leaks. Choose your one-time software infrastructure or monthly occupancy growth engine below.
+      </p>
+      <div class="hero-pills">
+        <span>✓ One-Time Software Ownership</span>
+        <span>✓ Paystack / Flutterwave Direct to Your Bank (0% Commission)</span>
+        <span>✓ 7 to 14 Day Turnaround</span>
+      </div>
+    </div>
+
+    <!-- The 3 Leaks -->
+    <div class="leaks-grid">
+      <div class="leak-card">
+        <span class="leak-num">LEAK 01</span>
+        <div class="leak-title">The 9:00 PM WhatsApp Ghost</div>
+        <p class="leak-desc">A guest messages at 9:30 PM to book for the weekend. Your staff replies hours later. By then, the guest has paid the hotel down the street.</p>
+      </div>
+      <div class="leak-card">
+        <span class="leak-num">LEAK 02</span>
+        <div class="leak-title">Invisible on Google Maps</div>
+        <p class="leak-desc">Corporate travelers and diaspora guests search "Best hotel or shortlet in [City]" on Google. If you aren't in the Top 3, you don't exist to them.</p>
+      </div>
+      <div class="leak-card">
+        <span class="leak-num">LEAK 03</span>
+        <div class="leak-title">Manual Front-Desk Leaks</div>
+        <p class="leak-desc">Paper notebooks, Excel sheets, and manual transfer screenshots cause double-bookings, unrecorded stays, and staff pocketing cash.</p>
+      </div>
+    </div>
+
+    <!-- STEP 1: ONE-TIME INFRASTRUCTURE -->
+    <div class="sec-head">
+      <div>
+        <span class="sec-step">STEP 1: ONE-TIME INFRASTRUCTURE SETUPS</span>
+        <h2 class="sec-title">Own Your Booking &amp; Management System Outright</h2>
+      </div>
+      <span class="sec-note">Pay Once • Zero Monthly Software Subscription</span>
+    </div>
+
+    <div class="pkg-grid-3">
+      <!-- Package 1 -->
+      <div class="pkg-card">
+        <div>
+          <span class="pkg-badge">STARTER INFRASTRUCTURE</span>
+          <div class="pkg-name">1. The Direct Booking Foundation</div>
+          <div class="pkg-price">
+            ₦200,000
+            <small>One-Time Setup Investment</small>
+          </div>
+          <div class="pkg-best">Best For: Single Shortlets, Guest Houses &amp; Boutique Hotels</div>
+          <ul class="pkg-list">
+            <li><strong>Custom Direct Booking Website:</strong> Live room/unit calendar, photo galleries &amp; instant Paystack/Flutterwave checkout.</li>
+            <li><strong>Google Business Profile (GBP):</strong> Full verification &amp; setup so guests find you on Google Maps.</li>
+            <li><strong>Local SEO Configuration:</strong> Search setup targeting travelers searching in your city.</li>
+            <li><strong>1 Year Cloud Hosting &amp; Domain Included.</strong></li>
+          </ul>
+        </div>
+        <div class="pkg-upgrade">
+          <strong>Upgrade to "Launch &amp; Rank" (₦250,000):</strong> Adds 1 Full Month of active Google Maps &amp; Local SEO ranking push.
+        </div>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="pkg-card featured">
+        <div>
+          <span class="pkg-badge">MOST POPULAR • HOTELS &amp; SHORTLETS</span>
+          <div class="pkg-name">2. The 24/7 AI Concierge Suite</div>
+          <div class="pkg-price">
+            ₦420,000
+            <small>One-Time License • No Subscription</small>
+          </div>
+          <div class="pkg-best">Best For: Busy 10-30 Room Hotels &amp; Multi-Unit Airbnb Hosts</div>
+          <ul class="pkg-list">
+            <li><strong>Complete Direct Booking Website</strong> with instant card &amp; transfer payment checkout.</li>
+            <li><strong>24/7 WhatsApp AI Booking Agent:</strong> Replies in 3 seconds flat, checks live room/date availability, answers FAQs &amp; sends payment links.</li>
+            <li><strong>Live Calendar Sync:</strong> Updates your availability in real time with zero double-bookings.</li>
+            <li><strong>Shortlet Mode:</strong> Automated Caution-Fee prompts, ID collection &amp; Wi-Fi/gate-pass delivery upon payment.</li>
+          </ul>
+        </div>
+        <div class="pkg-upgrade" style="border-style: solid; background: var(--white);">
+          <strong>Includes:</strong> Full ownership license + 1 Year Hosting &amp; SSL.
+        </div>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="pkg-card">
+        <div>
+          <span class="pkg-badge">ENTERPRISE FULL STACK</span>
+          <div class="pkg-name">3. The Autonomous Hospitality OS</div>
+          <div class="pkg-price">
+            ₦800,000
+            <small>One-Time License • No Subscription</small>
+          </div>
+          <div class="pkg-best">Best For: Established Hotels (20-100+ Rooms) &amp; Shortlet Portfolios</div>
+          <ul class="pkg-list">
+            <li><strong>Custom Direct Booking Website</strong> with integrated payment gateway.</li>
+            <li><strong>Full Hotel / Property Management Software (HMS):</strong> Front-desk check-in/out, room &amp; housekeeping tracker, staff access controls &amp; live Owner Revenue Dashboard on your phone.</li>
+            <li><strong>Integrated 24/7 WhatsApp AI Chatbot:</strong> Wired directly into your HMS reservation ledger.</li>
+            <li><strong>100% License Ownership:</strong> Zero per-room or monthly SaaS fees.</li>
+          </ul>
+        </div>
+        <div class="pkg-upgrade">
+          <strong>Anti-Theft Ledger:</strong> Every booking logs directly to the owner's phone.
+        </div>
+      </div>
+    </div>
+
+    <!-- Standalone Software Row -->
+    <div class="standalone-grid">
+      <div class="standalone-box">
+        <div class="standalone-top">
+          <span class="standalone-name">Shortlet Portfolio Engine</span>
+          <span class="standalone-price">₦350,000</span>
+        </div>
+        <p class="standalone-desc">For 3-15+ units: Multi-apartment booking site + WhatsApp Caution-Fee &amp; ID Bot + Smart Check-In Guide.</p>
+      </div>
+
+      <div class="standalone-box">
+        <div class="standalone-top">
+          <span class="standalone-name">Standalone HMS / PMS App</span>
+          <span class="standalone-price">₦500,000</span>
+        </div>
+        <p class="standalone-desc">Already have a website? Custom-deployed Front-Desk OS, Inventory &amp; Owner Revenue Dashboard integrated into your site.</p>
+      </div>
+
+      <div class="standalone-box">
+        <div class="standalone-top">
+          <span class="standalone-name">Basic 3-Page Corporate Site</span>
+          <span class="standalone-price">₦85,000</span>
+        </div>
+        <p class="standalone-desc">Clean, fast 3-page informational hotel or apartment showcase website with direct WhatsApp enquiry routing.</p>
+      </div>
+    </div>
+
+    <!-- PAGE 2: MONTHLY GROWTH & ADD-ONS -->
+    <div class="page-break">
+      <div class="sec-head" style="margin-top: 0;">
+        <div>
+          <span class="sec-step">STEP 2: MONTHLY OCCUPANCY &amp; GROWTH RETAINERS</span>
+          <h2 class="sec-title">Fill Your Rooms &amp; Apartments Every Weekend</h2>
+        </div>
+        <span class="sec-note">Consistent Traffic, Viral Video &amp; Technical Care</span>
+      </div>
+
+      <div class="retainer-grid">
+        <!-- Tier 1 -->
+        <div class="ret-card">
+          <span class="ret-tier">TIER 01</span>
+          <div class="ret-name">Website &amp; System Care</div>
+          <div class="ret-price">₦50,000 <span>/ mo</span></div>
+          <p class="ret-tagline">Keep your booking site, AI bot &amp; HMS fast, secure, and updated.</p>
+          <ul class="ret-list">
+            <li>Unlimited room rate &amp; text updates</li>
+            <li>Seasonal promo banner swaps</li>
+            <li>Cloud server hosting, SSL &amp; daily database backups</li>
+            <li>WhatsApp &amp; AI API health monitoring</li>
+            <li>Priority technical support via Client Portal</li>
+          </ul>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="ret-card">
+          <span class="ret-tier">TIER 02</span>
+          <div class="ret-name">Google Maps Dominance</div>
+          <div class="ret-price">₦100,000 <span>/ mo</span></div>
+          <p class="ret-tagline">Own the Top 3 spots when guests search Google Maps in your city.</p>
+          <ul class="ret-list">
+            <li>Weekly Google Business Profile posts &amp; offers</li>
+            <li>Geo-tagged room &amp; facility photo optimization</li>
+            <li>Automated 5-star guest review generation</li>
+            <li>Monthly local citation &amp; Map Pack ranking push</li>
+            <li>Monthly call &amp; direction request analytics</li>
+          </ul>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="ret-card">
+          <span class="ret-tier">TIER 03</span>
+          <div class="ret-name">Hospitality Social Engine</div>
+          <div class="ret-price">₦150,000 <span>/ mo</span></div>
+          <p class="ret-tagline">Look like the most prestigious property in town on IG, FB &amp; TikTok.</p>
+          <ul class="ret-list">
+            <li>Full Social Media Management (IG, FB, TikTok)</li>
+            <li>Monthly content calendar &amp; high-end graphics</li>
+            <li>Pro editing of your raw property clips into Reels</li>
+            <li>Daily caption writing &amp; DM comment routing</li>
+            <li>1-Click approval inside your Client Portal</li>
+          </ul>
+        </div>
+
+        <!-- Tier 4 -->
+        <div class="ret-card best">
+          <span class="ret-tier">TIER 04 • BEST SELLER</span>
+          <div class="ret-name">Viral UGC + Social Suite</div>
+          <div class="ret-price">₦270,000 <span>/ mo</span></div>
+          <p class="ret-tagline">Creator-led video walkthroughs that turn scrollers into paying guests.</p>
+          <ul class="ret-list">
+            <li><strong>Everything in Hospitality Social Engine (₦150k value)</strong></li>
+            <li><strong>4 Custom UGC Videos / Month:</strong> Creator lifestyle videos showcasing rooms, pool, bar, or apartment vibe</li>
+            <li>Engineered for viral reach and high-ROAS paid ads</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- High-Ticket Bundles Banner -->
+      <div class="bundle-banner">
+        <div class="bundle-col" style="border-right: 1px solid var(--slate-800); padding-right: 20px;">
+          <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--slate-400);">ALL-IN-ONE MONTHLY DEPARTMENT (SAVE ₦40,000/MO)</span>
+          <h4>The "Full Occupancy" Retainer Bundle</h4>
+          <div class="bundle-price">₦380,000 <small>/ month</small></div>
+          <p class="bundle-desc">Combines <strong>Viral UGC &amp; Social Suite (₦270k)</strong> + <strong>Google Maps Dominance (₦100k)</strong> + <strong>Website &amp; System Care (₦50k)</strong>.</p>
+        </div>
+
+        <div class="bundle-col">
+          <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--slate-400);">IMMEDIATE WEEKEND BOOKINGS</span>
+          <h4>Weekend Occupancy &amp; Paid Ads Accelerator</h4>
+          <div class="bundle-price">₦200,000 <small>/ month (+ Ad Spend)</small></div>
+          <p class="bundle-desc">Meta Ads (IG/WhatsApp direct-to-booking) + Google Search Ads (<em>"Shortlet/Hotel in [City]"</em>) + Retargeting pixel + Weekly ROAS report.</p>
+        </div>
+      </div>
+
+      <!-- Optional Power-Ups -->
+      <div class="sec-head">
+        <div>
+          <span class="sec-step">STEP 3: OPTIONAL PROPERTY POWER-UPS</span>
+          <h2 class="sec-title">High-Impact Add-Ons (Add to Any Package)</h2>
+        </div>
+        <span class="sec-note">One-Off Upgrades</span>
+      </div>
+
+      <div class="addons-grid">
+        <div class="addon-box">
+          <span class="addon-price">+ ₦75,000 One-Time</span>
+          <div class="addon-title">Automated 5-Star Review &amp; Repeat-Guest Bot</div>
+          <p class="addon-desc">2 hours after checkout in your HMS, our WhatsApp bot thanks the guest, requests a 5-star Google review, and sends a 10% repeat-stay discount code.</p>
+        </div>
+
+        <div class="addon-box">
+          <span class="addon-price">+ ₦150,000 One-Time</span>
+          <div class="addon-title">Bar, Lounge &amp; Room-Service QR Menu + POS Sync</div>
+          <p class="addon-desc">Guests scan a table, poolside, or bedside QR code to order food and drinks from their phone. Orders print at the bar/kitchen and log into the HMS ledger.</p>
+        </div>
+
+        <div class="addon-box">
+          <span class="addon-price">+ ₦120,000 One-Off</span>
+          <div class="addon-title">On-Site Property Content Shoot Day</div>
+          <p class="addon-desc">We send a cameraman to your hotel or shortlets to film 30+ raw vertical clips and crisp room photos for the quarter so you never lift a finger.</p>
+        </div>
+      </div>
+
+      <!-- Client Portal Differentiator -->
+      <div class="portal-box">
+        <div class="portal-head">Zero Micromanagement: Dedicated Sales Cowboy Client Portal Included</div>
+        <div class="portal-grid">
+          <div class="portal-item">
+            <strong>1. 10-Minute Guided Setup Manual</strong>
+            <p>Upload your room rates, photos, and logos in one organized dashboard with zero messy group chats.</p>
+          </div>
+          <div class="portal-item">
+            <strong>2. Live Build Progress Tracker</strong>
+            <p>Watch your booking website, WhatsApp AI bot, and HMS deployment progress step-by-step in real time.</p>
+          </div>
+          <div class="portal-item">
+            <strong>3. 1-Click Rate &amp; Content Approval</strong>
+            <p>Need to change December room rates or approve next week's Reels? Log in, click submit, and it is done.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="footer-cta">
+        <div>
+          <strong>READY TO UPGRADE YOUR PROPERTY?</strong><br>
+          Visit <strong>salescowboy.com.ng/hospitality</strong> or message <strong>+234 808 269 7841</strong> on WhatsApp to test our live AI Booking Bot &amp; HMS Demo.
+        </div>
+        <div style="text-align: right; font-family: var(--font-mono);">
+          <strong>SALES COWBOY</strong><br>
+          hello@salescowboy.com.ng
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

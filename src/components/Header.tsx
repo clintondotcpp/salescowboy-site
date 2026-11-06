@@ -34,6 +34,12 @@ const Header = () => {
             Divisions
           </Link>
           <Link
+            href="/hospitality"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Hospitality
+          </Link>
+          <Link
             href="/#case-studies"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >

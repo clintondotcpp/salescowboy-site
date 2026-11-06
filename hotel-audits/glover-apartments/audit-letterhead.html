@@ -894,20 +894,136 @@
 
     /* Print Styles */
     @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm 10mm;
+      }
       body {
         background-color: var(--white);
-        padding: 0;
+        padding: 0 !important;
       }
       .toolbar {
         display: none !important;
       }
       .sheet {
-        box-shadow: none;
-        padding: 0;
-        max-width: 100%;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
       }
       .page-break {
         page-break-before: always;
+        break-before: page;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .agency-name {
+        font-size: 16px !important;
+      }
+      .agency-div {
+        margin-top: 1px !important;
+      }
+      .agency-address {
+        margin-top: 3px !important;
+        font-size: 9.5px !important;
+      }
+      .letterhead {
+        padding-bottom: 6px !important;
+      }
+      .client-banner {
+        margin-top: 5px !important;
+        margin-bottom: 6px !important;
+        padding-bottom: 4px !important;
+      }
+      .client-banner h2 {
+        font-size: 18px !important;
+      }
+      .client-desc {
+        font-size: 10px !important;
+        margin-top: 1px !important;
+      }
+      .scorecard-box {
+        margin-bottom: 6px !important;
+      }
+      .gauge-side {
+        padding: 6px !important;
+      }
+      .gauge-side svg {
+        width: 70px !important;
+        height: 70px !important;
+      }
+      .metrics-side {
+        padding: 6px 12px !important;
+      }
+      .metric-bar-group {
+        margin-bottom: 3px !important;
+      }
+      .kpis-grid {
+        margin-bottom: 6px !important;
+        gap: 6px !important;
+      }
+      .kpi-card {
+        padding: 6px 8px !important;
+      }
+      .kpi-num {
+        font-size: 17px !important;
+      }
+      .kpi-title {
+        margin-top: 2px !important;
+        font-size: 9.5px !important;
+      }
+      .kpi-desc {
+        margin-top: 1px !important;
+        font-size: 9px !important;
+      }
+      .split-grid {
+        gap: 6px !important;
+      }
+      .split-box {
+        padding: 6px 10px !important;
+      }
+      .split-header {
+        margin-bottom: 6px !important;
+        font-size: 10px !important;
+      }
+      .split-list {
+        gap: 2px !important;
+      }
+      .split-list li {
+        font-size: 9.5px !important;
+        line-height: 1.25 !important;
+      }
+      .search-res-item {
+        padding: 10px 14px !important;
+        margin-bottom: 8px !important;
+      }
+      .funnel-step {
+        margin-bottom: 10px !important;
+      }
+      .compare-table th, .compare-table td {
+        padding: 8px 10px !important;
+        font-size: 11px !important;
+      }
+      .pillar-box {
+        padding: 14px 16px !important;
+      }
+      .pillar-bullets li {
+        font-size: 11px !important;
+      }
+      .recovery-banner {
+        padding: 14px 20px !important;
+        margin-top: 14px !important;
+      }
+      .roadmap-grid {
+        gap: 8px !important;
+        margin-top: 12px !important;
+      }
+      .roadmap-col {
+        padding: 10px 12px !important;
+      }
+      .signoff-box {
+        margin-top: 14px !important;
+        padding-top: 12px !important;
       }
     }
   </style>
@@ -1110,7 +1226,7 @@
     </div>
 
     <!-- Page Break for clean multi-page print -->
-    <div class="page-break" style="height: 32px;"></div>
+    <div class="page-break"></div>
 
     <!-- Block 4: Google Search Simulation -->
     <div class="section-title">3. Live Search Simulation (What Guests See Today)</div>
@@ -1202,6 +1318,9 @@
       </div>
     </div>
 
+    <!-- Page Break for clean multi-page print -->
+    <div class="page-break"></div>
+
     <!-- Block 6: Comparison Diagnostic Table -->
     <div class="section-title">5. Current Friction vs. Sales Cowboy Infrastructure</div>
     <table class="compare-table">
@@ -1240,6 +1359,9 @@
         </tr>
       </tbody>
     </table>
+
+    <!-- Page Break for clean multi-page print -->
+    <div class="page-break"></div>
 
     <!-- Block 7: Proprietary Turnaround Plan -->
     <div class="section-title">6. Proprietary Sales Cowboy Turnaround Architecture</div>

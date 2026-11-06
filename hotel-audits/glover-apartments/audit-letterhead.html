@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glover Apartments Ogudu - Executive Digital Revenue Audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #090d16;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --danger: #991b1b;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --success: #065f46;
+      --success-bg: #ecfdf5;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--slate-900);
+      font-family: var(--font-sans);
+      color: var(--black);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 36px 16px;
+    }
+
+    /* Floating Screen Toolbar */
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto 24px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--black);
+      padding: 14px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--slate-800);
+      color: var(--white);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .toolbar-brand {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .toolbar-divider {
+      width: 1px;
+      height: 16px;
+      background: var(--slate-700);
+    }
+
+    .toolbar-doc {
+      font-size: 12px;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .btn-print {
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      padding: 9px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: var(--slate-100);
+    }
+
+    /* Main Executive Dossier Sheet */
+    .sheet {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 56px 64px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Letterhead Header */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      border-bottom: 3px solid var(--black);
+      gap: 24px;
+    }
+
+    .agency-name {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .agency-div {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+      margin-top: 2px;
+    }
+
+    .agency-address {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .ref-box {
+      text-align: right;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    .ref-tag {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      padding: 4px 10px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+    .ref-meta {
+      color: var(--slate-500);
+      line-height: 1.6;
+    }
+
+    /* Property Brief Banner */
+    .client-banner {
+      margin-top: 32px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 24px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .client-pre {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .client-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--black);
+      margin-top: 2px;
+    }
+
+    .client-sub {
+      font-size: 13px;
+      color: var(--slate-600);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .client-badge-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-end;
+    }
+
+    .pill-status {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--danger-bg);
+      color: var(--danger);
+      border: 1px solid var(--danger-border);
+    }
+
+    .pill-market {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--white);
+      color: var(--slate-700);
+      border: 1px solid var(--slate-300);
+    }
+
+    /* Section Styling */
+    .section-title {
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--black);
+      margin-top: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: var(--black);
+      border-radius: 2px;
+    }
+
+    /* Radial Score Gauge + Infrastructure Matrix */
+    .audit-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 20px;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .score-dial-box {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 6px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .gauge-svg {
+      width: 110px;
+      height: 110px;
+    }
+
+    .gauge-bg {
+      fill: none;
+      stroke: var(--slate-800);
+      stroke-width: 10;
+    }
+
+    .gauge-fill {
+      fill: none;
+      stroke: var(--white);
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-dasharray: 283;
+      stroke-dashoffset: 203; /* 28% */
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+    .gauge-number {
+      font-family: var(--font-mono);
+      font-size: 32px;
+      font-weight: 900;
+      fill: var(--white);
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+
+    .score-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--slate-400);
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .score-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      background: #7f1d1d;
+      color: #fecaca;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-top: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .matrix-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .matrix-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .matrix-heading {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--slate-600);
+    }
+
+    .matrix-leakage {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--danger);
+    }
+
+    .matrix-bar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .matrix-bar-head {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--slate-700);
+    }
+
+    .matrix-bar-track {
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--slate-200);
+    }
+
+    .matrix-bar-fill {
+      height: 100%;
+      background: var(--black);
+    }
+
+    /* 4 KPI Big Cards */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .kpi-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 18px 16px;
+    }
+
+    .kpi-num {
+      font-family: var(--font-mono);
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--black);
+    }
+
+    .kpi-num.danger {
+      color: var(--danger);
+    }
+
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--slate-600);
+      margin-top: 6px;
+    }
+
+    .kpi-desc {
+      font-size: 11px;
+      color: var(--slate-500);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Strengths vs Doing Wrong Visual Split */
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .split-box {
+      border-radius: 8px;
+      padding: 22px 24px;
+      border: 1px solid var(--slate-200);
+    }
+
+    .split-box.strengths {
+      background: var(--slate-50);
+    }
+
+    .split-box.mistakes {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+    }
+
+    .split-header {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .split-box.strengths .split-header {
+      color: var(--black);
+    }
+
+    .split-box.mistakes .split-header {
+      color: var(--danger);
+    }
+
+    .split-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .split-list li {
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--slate-700);
+    }
+
+    .split-list li strong {
+      color: var(--black);
+      display: block;
+      font-size: 12.5px;
+    }
+
+    .split-box.mistakes .split-list li {
+      color: #7f1d1d;
+    }
+
+    .split-box.mistakes .split-list li strong {
+      color: var(--danger);
+    }
+
+    /* Google Search Simulation Box */
+    .search-mockup {
+      background: var(--white);
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 16px;
+    }
+
+    .search-bar {
+      background: var(--slate-100);
+      border-bottom: 1px solid var(--slate-200);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--slate-600);
+    }
+
+    .search-input-pill {
+      background: var(--white);
+      border: 1px solid var(--slate-300);
+      padding: 5px 12px;
+      border-radius: 20px;
+      flex: 1;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .search-results-list {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-res-item {
+      padding: 12px 14px;
+      border-radius: 6px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+    }
+
+    .search-res-item.intercepted {
+      background: var(--white);
+      border: 1px dashed var(--slate-400);
+    }
+
+    .search-res-item.client-lost {
+      background: var(--danger-bg);
+      border: 2px solid var(--danger-border);
+    }
+
+    .search-res-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .search-res-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1a0dab;
+      text-decoration: underline;
+    }
+
+    .badge-traffic {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      background: #7f1d1d;
+      color: #fee2e2;
+    }
+
+    .badge-competitor {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      background: var(--slate-200);
+      color: var(--slate-700);
+    }
+
+    .search-res-url {
+      font-size: 10px;
+      color: #006621;
+      margin-top: 2px;
+      font-family: var(--font-mono);
+    }
+
+    .search-res-snippet {
+      font-size: 11px;
+      color: var(--slate-600);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Guest Drop-Off Funnel Horizontal Diagram */
+    .funnel-container {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+
+    .funnel-step {
+      margin-bottom: 14px;
+    }
+
+    .funnel-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .funnel-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--slate-700);
+      margin-bottom: 4px;
+    }
+
+    .funnel-loss {
+      color: var(--danger);
+      font-family: var(--font-mono);
+      font-weight: 800;
+    }
+
+    .funnel-bar {
+      height: 24px;
+      background: var(--slate-100);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      border: 1px solid var(--slate-200);
+    }
+
+    .funnel-bar-fill {
+      background: var(--black);
+      height: 100%;
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+
+    .funnel-bar-fill.danger {
+      background: var(--danger);
+    }
+
+    /* Side-by-Side Comparison Matrix */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 12px;
+    }
+
+    .compare-table th {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    .compare-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--slate-200);
+      line-height: 1.4;
+      vertical-align: top;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .td-broken {
+      background: var(--danger-bg);
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .td-standard {
+      background: var(--slate-50);
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* Turnaround Plan Grid */
+    .turnaround-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .pillar-box {
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 20px 18px;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pillar-box.featured {
+      border: 2px solid var(--black);
+      background: var(--slate-50);
+    }
+
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--slate-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .pillar-name {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--black);
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    .pillar-desc {
+      font-size: 11px;
+      color: var(--slate-600);
+      margin-top: 8px;
+      line-height: 1.45;
+    }
+
+    .pillar-bullets {
+      list-style: none;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--slate-700);
+    }
+
+    .pillar-bullets li {
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .pillar-bullets li::before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    /* Revenue Recovery & Stepper Box */
+    .recovery-banner {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .recovery-title {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--slate-400);
+      letter-spacing: 0.08em;
+    }
+
+    .recovery-val {
+      font-family: var(--font-mono);
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-top: 2px;
+      color: var(--white);
+    }
+
+    .recovery-sub {
+      font-size: 12px;
+      color: var(--slate-300);
+      margin-top: 4px;
+    }
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .roadmap-col {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 14px 14px;
+    }
+
+    .roadmap-week {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .roadmap-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    .roadmap-desc {
+      font-size: 10.5px;
+      color: var(--slate-600);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Letterhead Sign-Off */
+    .signoff-box {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid var(--slate-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .signoff-details {
+      font-size: 11px;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .signoff-sign {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-align: right;
+      color: var(--slate-500);
+    }
+
+    .signoff-name {
+      font-weight: 900;
+      font-size: 13px;
+      color: var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background-color: var(--white);
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <span class="toolbar-brand">Sales Cowboy</span>
+      <div class="toolbar-divider"></div>
+      <span class="toolbar-doc">Executive Digital Revenue Audit • Glover Apartments Ogudu</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="sheet">
+
+    <!-- Block 1: Letterhead Header -->
+    <div class="letterhead">
+      <div>
+        <div class="agency-name">Sales Cowboy</div>
+        <div class="agency-div">Hospitality Revenue Engineering &amp; Automation Systems</div>
+        <div class="agency-address">
+          36, Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria<br>
+          Direct Line: +234 810 493 3232 • Web: salescowboy.com.ng/hospitality
+        </div>
+      </div>
+      <div class="ref-box">
+        <span class="ref-tag">CONFIDENTIAL AUDIT</span>
+        <div class="ref-meta">
+          REF: AUD-GLV-2026-008<br>
+          DATE: November 06, 2026<br>
+          TARGET: Glover Apartments
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Brief Banner -->
+    <div class="client-banner">
+      <div>
+        <div class="client-pre">Subject Property Diagnostic</div>
+        <h1 class="client-title">Glover Apartments</h1>
+        <div class="client-sub">Ogudu, Lagos Mainland, Nigeria • Premium Serviced Apartments</div>
+      </div>
+      <div class="client-badge-group">
+        <span class="pill-status">Severe Funnel Friction</span>
+        <span class="pill-market">Lagos Mainland Shortlet Market</span>
+      </div>
+    </div>
+
+    <!-- Block 2: Radial Score Gauge + Infrastructure Matrix -->
+    <div class="section-title">1. Executive Diagnostic Scorecard</div>
+    <div class="audit-grid">
+      <div class="score-dial-box">
+        <svg class="gauge-svg" viewBox="0 0 100 100">
+          <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+          <circle class="gauge-fill" cx="50" cy="50" r="45"></circle>
+          <text class="gauge-number" x="50" y="52">28</text>
+        </svg>
+        <div class="score-label">Digital Health Score</div>
+        <div class="score-tag">Severe Leakage</div>
+      </div>
+
+      <div class="matrix-box">
+        <div class="matrix-top">
+          <span class="matrix-heading">Infrastructure Health Benchmark</span>
+          <span class="matrix-leakage">Est. Loss: ₦1,800,000 - ₦3,600,000 / mo</span>
+        </div>
+
+        <div class="matrix-bar-item">
+          <div class="matrix-bar-head">
+            <span>Direct Booking Website Flow</span>
+            <span style="font-family: var(--font-mono);">25 / 100 (Exhausting Form Steps)</span>
+          </div>
+          <div class="matrix-bar-track">
+            <div class="matrix-bar-fill" style="width: 25%;"></div>
+          </div>
+        </div>
+
+        <div class="matrix-bar-item">
+          <div class="matrix-bar-head">
+            <span>Live Room Availability Tracker</span>
+            <span style="font-family: var(--font-mono); color: var(--danger);">0 / 100 (Blind Calendar)</span>
+          </div>
+          <div class="matrix-bar-track">
+            <div class="matrix-bar-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="matrix-bar-item">
+          <div class="matrix-bar-head">
+            <span>Google Business Profile (GBP)</span>
+            <span style="font-family: var(--font-mono);">15 / 100 (1 Single Review)</span>
+          </div>
+          <div class="matrix-bar-track">
+            <div class="matrix-bar-fill" style="width: 15%;"></div>
+          </div>
+        </div>
+
+        <div class="matrix-bar-item">
+          <div class="matrix-bar-head">
+            <span>Local Pack SEO (Ogudu vs. Ikoyi)</span>
+            <span style="font-family: var(--font-mono);">20 / 100 (Name Cannibalized)</span>
+          </div>
+          <div class="matrix-bar-track">
+            <div class="matrix-bar-fill" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        <div class="matrix-bar-item">
+          <div class="matrix-bar-head">
+            <span>Post-Stay Review Follow-Up System</span>
+            <span style="font-family: var(--font-mono); color: var(--danger);">0 / 100 (Zero Automation)</span>
+          </div>
+          <div class="matrix-bar-track">
+            <div class="matrix-bar-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3: 4 KPI Cards -->
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-num danger">70%+</div>
+        <div class="kpi-label">Form Abandonment</div>
+        <div class="kpi-desc">Too many booking steps tire mobile guests out before paying.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num danger">0</div>
+        <div class="kpi-label">Live Calendar Sync</div>
+        <div class="kpi-desc">Visitors cannot see open dates; forced to call or WhatsApp.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num danger">1</div>
+        <div class="kpi-label">Google Review</div>
+        <div class="kpi-desc">Single 5.0 rating looks like a self-review; zero trust velocity.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num danger">100%</div>
+        <div class="kpi-label">Ikoyi Name Bleed</div>
+        <div class="kpi-desc">Google shows Glover Rd, Ikoyi results instead of your Ogudu units.</div>
+      </div>
+    </div>
+
+    <!-- Strengths vs Critical Mistakes Split -->
+    <div class="section-title">2. Strengths vs. What You Are Doing Wrong</div>
+    <div class="split-grid">
+      <div class="split-box strengths">
+        <div class="split-header">Your Genuine Assets &amp; Strengths</div>
+        <ul class="split-list">
+          <li>
+            <strong>High-Quality Professional Photography:</strong>
+            Crisp, well-lit interior and exterior shots already produced. The property visually looks premium.
+          </li>
+          <li>
+            <strong>Strategic Mainland Location:</strong>
+            Situated in Ogudu with rapid access to Ikeja, Maryland, and Third Mainland Bridge.
+          </li>
+          <li>
+            <strong>OTA Presence Established:</strong>
+            Already indexed on Agoda, Skyscanner, and Trip.com with consistent property metadata.
+          </li>
+          <li>
+            <strong>Existing Domain &amp; Brand Equity:</strong>
+            You already possess an owned domain, saving upfront technical turnaround time.
+          </li>
+        </ul>
+      </div>
+
+      <div class="split-box mistakes">
+        <div class="split-header">Critical Mistakes Costing You Bookings</div>
+        <ul class="split-list">
+          <li>
+            <strong>Exhausting Multi-Step Website Booking:</strong>
+            Visitors are subjected to multiple input forms and screens. High friction leads to 70%+ mid-checkout abandonment.
+          </li>
+          <li>
+            <strong>No Real-Time Room Availability Calendar:</strong>
+            Guests cannot see open vs. booked dates. They must guess or leave the site to call your staff.
+          </li>
+          <li>
+            <strong>The 1-Review "Ghost" Trap on Google Maps:</strong>
+            1 single review looks fake to corporate travelers. Without 15+ reviews, Google Maps buries you below rivals.
+          </li>
+          <li>
+            <strong>Keyword Cannibalisation by Glover Road, Ikoyi:</strong>
+            Searching "Glover Apartments" displays Island luxury flats. You lack the local Ogudu schema to win mainland searches.
+          </li>
+          <li>
+            <strong>Zero Automated Post-Stay Review System:</strong>
+            Staff never trigger automated review reminders after check-out, permanently stunting your social proof.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Page Break for clean multi-page print -->
+    <div class="page-break" style="height: 32px;"></div>
+
+    <!-- Block 4: Google Search Simulation -->
+    <div class="section-title">3. Live Search Simulation (What Guests See Today)</div>
+    <div class="search-mockup">
+      <div class="search-bar">
+        <span>GOOGLE:</span>
+        <div class="search-input-pill">"Glover Apartments" OR "Shortlets in Ogudu Lagos"</div>
+      </div>
+      <div class="search-results-list">
+        <!-- Result 1 -->
+        <div class="search-res-item">
+          <div class="search-res-header">
+            <span class="search-res-title">Glover Road Luxury Serviced Apartments • Ikoyi, Lagos</span>
+            <span class="badge-competitor">Wrong Island Location</span>
+          </div>
+          <div class="search-res-url">https://ikoyiluxury.com.ng/glover-road</div>
+          <div class="search-res-snippet">
+            ★★★★★ 4.8 Rating (86 Reviews) • High domain authority intercepts your brand searches. Guests looking for mainland Ogudu get confused and assume you are an Island-priced luxury development.
+          </div>
+        </div>
+
+        <!-- Result 2 -->
+        <div class="search-res-item">
+          <div class="search-res-header">
+            <span class="search-res-title">Top Rated Ogudu &amp; Maryland Serviced Apartments • Google 3-Pack</span>
+            <span class="badge-competitor">Local Pack Competitor</span>
+          </div>
+          <div class="search-res-url">https://google.com/maps/search/shortlets+ogudu</div>
+          <div class="search-res-snippet">
+            ★★★★☆ 4.6 Rating (42 Reviews) • Active room photos and instant booking links. Reclaims 60%+ of mainland corporate travelers while Glover Apartments is pushed down.
+          </div>
+        </div>
+
+        <!-- Result 3: Client -->
+        <div class="search-res-item client-lost">
+          <div class="search-res-header">
+            <span class="search-res-title" style="color: var(--danger);">Glover Apartments (Your Current Listing - Ogudu)</span>
+            <span class="badge-traffic">Buried &amp; Suspect</span>
+          </div>
+          <div class="search-res-url">https://gloverapartments.com.ng</div>
+          <div class="search-res-snippet" style="color: #7f1d1d;">
+            <strong>★☆☆☆☆ Only 1 Review • Weak Local Schema:</strong> Google algorithm penalizes dormant review profiles. Travelers assume the property is dormant or unreliable and choose competitor #2.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 5: Guest Drop-Off Funnel -->
+    <div class="section-title">4. The Glover Guest Drop-Off Funnel</div>
+    <div class="funnel-container">
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 1: 100 High-Intent Searchers ("Shortlets in Ogudu" / "Glover Apartments")</span>
+          <span class="funnel-loss">-52 Lost to Ikoyi Bleed &amp; 1-Review Trap</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill" style="width: 100%;">100 Searchers</div>
+        </div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 2: 48 Reach Your Website Booking Form</span>
+          <span class="funnel-loss">-26 Abandon Due to Multi-Step Friction &amp; Blind Availability</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill" style="width: 48%;">48 Visitors</div>
+        </div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 3: 22 Attempt Manual WhatsApp / Phone Inquiries</span>
+          <span class="funnel-loss">-14 Lost to Delayed Responses &amp; Friction</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill" style="width: 22%;">22 Inquiries</div>
+        </div>
+      </div>
+
+      <div class="funnel-step">
+        <div class="funnel-meta">
+          <span>Stage 4: Confirmed Check-Ins at Glover Apartments</span>
+          <span style="font-family: var(--font-mono); font-weight: 800; color: var(--black);">Net Conversion Rate: 8%</span>
+        </div>
+        <div class="funnel-bar">
+          <div class="funnel-bar-fill danger" style="width: 8%;">8 Bookings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 6: Comparison Diagnostic Table -->
+    <div class="section-title">5. Current Friction vs. Sales Cowboy Infrastructure</div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width: 24%;">Channel</th>
+          <th style="width: 38%;">Current State at Glover Apartments</th>
+          <th style="width: 38%;">Sales Cowboy Proprietary System</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Website Booking Flow</strong></td>
+          <td class="td-broken">Exhausting multi-step form with tedious input fields that tires visitors out.</td>
+          <td class="td-standard">2-Step Frictionless Mobile Checkout with instant Paystack/Flutterwave settlement.</td>
+        </tr>
+        <tr>
+          <td><strong>Room Availability</strong></td>
+          <td class="td-broken">Blind calendar. Guests cannot verify open dates without manual staff calls.</td>
+          <td class="td-standard">Dynamic Real-Time Room Availability Calendar Sync. 100% self-serve booking.</td>
+        </tr>
+        <tr>
+          <td><strong>Google Maps Profile</strong></td>
+          <td class="td-broken">1 review (5.0 stars). Zero review velocity kills local search rank.</td>
+          <td class="td-standard">Google 3-Pack Dominance with weekly geo-tagged photos and active review velocity.</td>
+        </tr>
+        <tr>
+          <td><strong>Review Generation</strong></td>
+          <td class="td-broken">Completely manual. No post-stay follow-up triggers after check-out.</td>
+          <td class="td-standard">Automated WhatsApp Review Bot: Fires 2 hours post-checkout with 1-click Google review link.</td>
+        </tr>
+        <tr>
+          <td><strong>Local Search Signals</strong></td>
+          <td class="td-broken">Cannibalized by Glover Road, Ikoyi. Ineligible for Ogudu/Maryland map packs.</td>
+          <td class="td-standard">Mainland Schema &amp; Local Citation Push: Ranks #1 for Ogudu shortlet searches.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Block 7: Proprietary Turnaround Plan -->
+    <div class="section-title">6. Proprietary Sales Cowboy Turnaround Architecture</div>
+    <div class="turnaround-grid">
+      <!-- Pillar 1 -->
+      <div class="pillar-box featured">
+        <div>
+          <span class="pillar-num">PILLAR 01</span>
+          <h3 class="pillar-name">Streamlined Booking Site + Live Availability Engine</h3>
+          <p class="pillar-desc">Replaces your exhausting multi-page forms with a high-converting, 2-step booking engine.</p>
+          <ul class="pillar-bullets">
+            <li>Dynamic real-time room availability calendar</li>
+            <li>Instant Paystack card &amp; transfer checkout</li>
+            <li>0% OTA middleman commission direct to bank</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar-box featured">
+        <div>
+          <span class="pillar-num">PILLAR 02</span>
+          <h3 class="pillar-name">24/7 WhatsApp AI Chatbot + Automated Review Reminders</h3>
+          <p class="pillar-desc">Custom-wired directly to your reservation desk to drive 5-star Google social proof.</p>
+          <ul class="pillar-bullets">
+            <li>Automated WhatsApp review prompt 2h post-checkout</li>
+            <li>Replies to guest DMs in 3 seconds flat 24/7</li>
+            <li>Sends direct booking links and answers FAQs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillar-box featured">
+        <div>
+          <span class="pillar-num">PILLAR 03</span>
+          <h3 class="pillar-name">Google Business Profile (GBP) Management</h3>
+          <p class="pillar-desc">Own the Top 3 Google Maps pack for Ogudu and end the Ikoyi search cannibalization.</p>
+          <ul class="pillar-bullets">
+            <li>Weekly GBP posts &amp; geo-tagged room photos</li>
+            <li>Local Ogudu and Maryland citation network push</li>
+            <li>Keyword-rich Google review responses for SEO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projected Revenue Recovery Banner -->
+    <div class="recovery-banner">
+      <div>
+        <div class="recovery-title">Projected Monthly Revenue Uplift</div>
+        <div class="recovery-val">+₦1,800,000 - ₦3,600,000</div>
+        <div class="recovery-sub">Captured through friction-free direct bookings, live calendars, and Google 3-Pack rank.</div>
+      </div>
+      <div style="text-align: right; font-family: var(--font-mono); font-size: 11px;">
+        <span style="color: var(--slate-400);">TIMELINE TO DOMINANCE</span><br>
+        <span style="font-size: 18px; font-weight: 900; color: var(--white);">4 WEEKS</span>
+      </div>
+    </div>
+
+    <!-- 4-Week Roadmap -->
+    <div class="roadmap-grid">
+      <div class="roadmap-col">
+        <span class="roadmap-week">WEEK 01</span>
+        <div class="roadmap-title">Booking Engine Build</div>
+        <div class="roadmap-desc">Deploy 2-step mobile checkout with real-time room availability calendar.</div>
+      </div>
+      <div class="roadmap-col">
+        <span class="roadmap-week">WEEK 02</span>
+        <div class="roadmap-title">WhatsApp Bot Integration</div>
+        <div class="roadmap-desc">Wire 24/7 AI concierge and automated post-stay review reminders.</div>
+      </div>
+      <div class="roadmap-col">
+        <span class="roadmap-week">WEEK 03</span>
+        <div class="roadmap-title">Google Maps &amp; SEO Push</div>
+        <div class="roadmap-desc">Geo-tag imagery, build local Ogudu citations, and stop Ikoyi name bleed.</div>
+      </div>
+      <div class="roadmap-col">
+        <div class="roadmap-week">WEEK 04</div>
+        <div class="roadmap-title">Review Velocity Engine</div>
+        <div class="roadmap-desc">Launch automated review system, room QR kits, and weekly GBP management.</div>
+      </div>
+    </div>
+
+    <!-- Sign-off Block -->
+    <div class="signoff-box">
+      <div class="signoff-details">
+        <strong>Prepared exclusively for Glover Apartments Management</strong><br>
+        Sales Cowboy Marketing Solutions • Hospitality Infrastructure Division<br>
+        Confidential Document • All Rights Reserved 2026
+      </div>
+      <div class="signoff-sign">
+        <div class="signoff-name">Clinton Chukwunyere</div>
+        Lead Systems Architect &amp; Revenue Engineer
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

@@ -687,7 +687,7 @@ export default function HospitalityPackagesPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                    <span>Automated 5-star review generation</span>
+                    <span>Website SEO &amp; local search optimization</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -941,7 +941,7 @@ export default function HospitalityPackagesPage() {
                 <strong className="text-accent uppercase text-[10px] tracking-wider block mb-0.5">
                   Who Needs This:
                 </strong>
-                Properties with under 50 Google reviews or low repeat guest retention.
+                Properties with under 50 reviews or low repeat stays wanting hands-free WhatsApp review triggers (Requires Website + AI Bot or HMS).
               </div>
               <a
                 href={waUrl(

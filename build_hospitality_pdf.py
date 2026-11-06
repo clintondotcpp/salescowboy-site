@@ -303,7 +303,7 @@ def build_pdf():
             "bullets": [
                 "Weekly GBP posts & special offers",
                 "Geo-tagged room & facility photos",
-                "Automated 5-star review generation",
+                "Website SEO & Local Search optimization",
                 "Monthly local citation & Map push",
                 "Call & direction request analytics"
             ]

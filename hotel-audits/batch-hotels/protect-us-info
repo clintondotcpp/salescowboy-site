@@ -1,0 +1,19 @@
+
+Gemini, read this
+
+1. The "What, Not How" Rule (Gatekeep the Technical Details)
+
+In your final report, identify the structural problem and its business impact, but never reveal the technical solution or the exact steps to fix it.
+• What to write: "Critical Security Risk: The website backend is exposing raw database logs and customer check-in histories publicly on the frontend code of the booking page, making the hotel vulnerable to severe privacy litigation and regulatory fines."
+• What to withhold: Do not tell them which PHP script is leaking, do not give them the patch code, and do not tell them how to fix the server configuration. To fix it, they must hire you to dig into the backend.
+
+2. Present It as a Continuous System, Not a One-Time Fix
+
+Hospitality brands often think SEO and digital presence are things you set up once and forget. You must frame the solutions as continuous operations that require specialized agency management.
+• Frame Google Business Profile setup not just as "pinning a location," but as an active Review Velocity and Local Map Pack Algorithm Management Strategy that requires weekly optimizations, photo updates, and review responses to beat competitors on George Akume Way or Wuse Zone 6.
+
+3. Deliver a "Problem Summary" First, Hold the Full Audit for Retainer
+
+Do not hand over a beautiful, comprehensive 30-page PDF report upfront if they have only paid a small deposit or if it’s a free pitch audit.
+• Present the high-level findings (e.g., “We discovered 3 critical security risks, 2 brand cannibalization points, and an unoptimized map pipeline causing a 40% leakage in booking revenue”).
+• State clearly that the Full Technical Remediation Blueprint is bundled into the implementation/retainer kickoff.

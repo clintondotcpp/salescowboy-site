@@ -1,0 +1,31 @@
+
+Digital Presence Audit: Top7 Orlando
+
+• Target Domain: top7orlandoapartment.com
+• Physical Location: 7 Massenya Street, Wuse Zone 6, Abuja (FCT)
+• Primary Offerings: Luxury Hotel Rooms, Apartments, Restaurant, Bar, and Live Band Entertainment
+• Price Points: ₦100,000 to ₦170,000 / night (excluding 7.5% VAT)
+• Overall Digital Footprint Score: 2.5 out of 5 stars (Under-Optimized & Risk-Exposed)
+
+1. Google Business Profile (GBP) & Map Audit
+
+• GBP Listing Status: Critical Disconnect / Non-Existent.
+• The Search Failure: A broad search for "Top7 Orlando Abuja" or "Top7 Orlando Apartment" fails to trigger a verified, dedicated Google Knowledge Panel or active map listing. Instead, the algorithm routes users to local Wuse Zone 6 competitors or general apartment aggregates in Abuja.
+• Review Volume: 0 Google Reviews. Because there is no active, optimized GBP tied to their exact Massenya Street location, they have zero indexable social proof or guest sentiment data on Google Maps.
+
+2. Website & Technical SEO Audit
+
+• The Security Flaw (Critical Audit Finding): The website's booking backend has a severe data exposure vulnerability. The website publicly prints and exposes internal guest booking history logs directly in the frontend room selection source code (revealing precise check-in/check-out timestamps ranging across past dates up to recent bookings). This is a massive privacy risk for a luxury hotel in Abuja.
+• SEO & Metadata Architecture: Poor. The title tag and layout headers are basic portfolio structures rather than optimized target terms. They completely miss out on local high-intent keyword optimization such as "Boutique hotels in Wuse Zone 6" or "Luxury hotel with 24/7 power in Abuja".
+• User Experience (UX): The website features an interactive room reservation drawer that breaks down base prices and applies the 7.5% Nigerian VAT directly (e.g., ₦100,000 room becomes ₦107,500 grand total). However, the contact forms route to generic email addresses (kcbillion@gmail.com) rather than a secure, automated property management system.
+
+3. Local SEO & Brand Visibility
+
+• High-Intent Location Advantage: Wuse Zone 6 is a highly coveted commercial and hospitality hub in Abuja. Being located right on Massenya Street means they have premium physical positioning, but their digital footprint does not mirror this prominence.
+• Feature Execution: They possess strong marketable assets—including a dedicated restaurant, a standard cocktail bar, guaranteed 24/7 electricity, and a popular Live Band night every Thursday. None of these premium features are indexed or searchable on search engine map packs due to the missing GBP asset.
+
+Strategic Recommendations for the Report
+
+1. Immediate Database Scrubbing (Urgent): The web developer must immediately rewrite the booking system scripts to block internal database transaction arrays (the raw check-in/out stamps) from exposing themselves on the public-facing HTML page.
+2. Launch a Geo-Targeted GBP: Deploy a highly targeted Google Business Profile named "Top7 Orlando Hotel & Apartment Wuse" to lock down the Massenya Street map coordinate.
+3. Transition to Corporate Channels: Replace raw personal Gmail addresses (kcbillion@gmail.com) within the site footers with the professional domain alias (reservations@top7orlandoapartment.com) to instantly uplift brand authority.

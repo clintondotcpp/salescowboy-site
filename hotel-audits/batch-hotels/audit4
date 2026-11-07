@@ -1,0 +1,41 @@
+
+Digital Presence Audit: Immaculate Service Apartments
+
+• Target Domain: immaculateserviceapts.com
+• Physical Location Base: 42 Ajibulu St, Oshodi-Isolo, Mafoluku 234011, Lagos
+• Target Hub: Ikeja/Airport Area, Lagos
+• Primary Offerings: 1-Bedroom & 2-Bedroom Luxury Serviced Apartments
+• Price Points: ₦80,000 to ₦125,000 / night
+• Overall Digital Footprint Score: 3.0 out of 5 stars (Moderate / Disconnected)
+Unlike the previous businesses audited, this property does have an operational web platform and third-party syndication. However, severe naming confusion and disconnected data points drag down their performance.
+
+1. Google Business Profile (GBP) & Map Audit
+
+• GBP Listing Status: Fragmented and Weakly Optimized.
+• The Search Conflict: There is a severe "Brand Identity" conflict on Google. Searching for "Immaculate Service Apartments" heavily pulls up the massive, hyper-authoritative Immaculate Diamond Hotels and Apartments (1,200+ reviews) or Immaculate Platinum in Abuja. The Lagos property gets entirely buried by its northern namesakes.
+• Review Count: Extremely low to non-existent on their specific domain-linked profile.
+• The Map Disconnect: Their physical headquarters is listed as Mafoluku/Oshodi, but their inventory is promoted as "Ikeja". Because their GBP pin sits outside core Ikeja boundaries, they completely miss out on local map-pack queries for "Shortlets in Ikeja" or "Serviced apartments near Ikeja City Mall".
+
+2. Website & Technical SEO Audit
+
+• Domain Authority: Low. The site functions as a basic portfolio rather than an organic traffic magnet.
+• UX & Conversion Funnel: The site successfully lists real-time rates (e.g., 2-Bedroom Angel at ₦125,000/night), which builds user trust. However, it relies on static pages rather than an automated direct-booking ledger.
+• The "Template Leak" Issue: A major technical flaw in their SEO setup is poor content hygiene. The website contains unindexed and unedited filler template elements (such as category links mapping to generic hotel archives referencing "Surfing camps in the Seychelles"). This tells search crawlers the site is partially unmaintained, severely lowering its domain health score.
+• On-Page Keyword Optimization: Poor. The site fails to aggressively target high-intent long-tail keywords in its header tags (H1/H2), such as "Luxury shortlets near MMA2 Lagos Airport" or "Serviced apartments with 24/7 power in Mafoluku".
+
+3. OTA & Third-Party Distribution
+
+• Syndication Status: Strong. This is their most effective digital layer.
+• Channels Found: They are successfully indexed on Booking.com (Immaculate Service Apartment, Ikeja), Bookright, and localized hotel finders.
+• Booking Visibility: Google Travel successfully scrapes their data from third-party sites, classifying them as a 4-star comfortable accommodation option featuring modern amenities, smart TVs, and airport proximity.
+
+4. Social Media Footprint
+
+• Channel Presence: Active profiles on Facebook (@immaculateshortlet) and local listing aggregates.
+• Copywriting & Transparency: High. Unlike many competitors who hide pricing behind "send a DM," their social strategy openly communicates rates (Single Room at ₦80k, Studio at ₦100k, 2-Bed at ₦125k) alongside concrete features (24/7 electricity, Wi-Fi, equipped kitchens). This boosts direct social conversion via their contact line (+234 814 155 8153).
+
+Strategic Recommendations for the Report
+
+1. Resolve the SEO Brand Cannibalization: They must change their display titles across the web from generic "Immaculate Apartments" to a highly localized variant like "Immaculate Airport Serviced Apartments Ikeja" to break away from the shadow of the Abuja hotel group.
+2. Clean Web Bloat: The developer must scrub the backend of the WordPress/CMS platform to eliminate the default "Seychelles/Surfing" template pages that are poisoning their technical SEO profile.
+3. Deploy a Review Ingestion Pipeline: Because they are live on Booking.com, they should explicitly use a bridge tool to embed their positive OTA reviews directly onto the homepage of immaculateserviceapts.com to display social proof immediately to web visitors.

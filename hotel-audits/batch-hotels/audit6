@@ -1,0 +1,42 @@
+
+Digital Presence Audit: Sulerious Lakeside Hotel
+
+• Core Brand Website: suleriouslakesidehotel.com
+• Branch 1 (HQ): 28 Close 5, New Road, Igbetu, Awoyaya, Ibeju-Lekki, Lagos
+• Branch 2: Alof Street, by Adeniji, Lagos Island, Lagos
+• Overall Digital Footprint Score: 2.0 out of 5 stars (Reputation Emergency)
+While the business successfully owns a direct web domain and is aggregated on global booking engines, it is facing a critical Review Emergency at its primary branch, while its secondary branch is completely invisible online.
+
+1. Branch-by-Branch Google Business Profile (GBP) Audit
+
+
+📍 Branch 1: Awoyaya (HQ)
+
+• GBP Listing Status: Active and Verified.
+• Google Rating: 3.3 out of 5 stars (19 Total Reviews).
+• The Reputation Emergency (Critical Audit Finding): This branch is experiencing a severe review crisis. Recent public reviews on Google are overwhelmingly toxic, with customers warning travelers about "zero service, no light, no water, and blackouts from the middle of the night till daybreak".
+• The Revenue Impact: A 3.3-star rating on Google Maps actively suppresses the business from appearing in local hospitality packs. Google's algorithm filters out hotels below a 4.0 threshold when users search for the "best hotels near me" or "luxury rooms in Awoyaya."
+
+📍 Branch 2: Lagos Island (Alof Street, by Adeniji)
+
+• GBP Listing Status: Non-Existent / Unclaimed.
+• The Search Failure: A search for a Sulerious branch on Lagos Island yields zero map listings. Because it lacks a pinned address on Alof Street, this branch is completely cut off from corporate travelers or traders looking for overnight stays near Adeniji or the bustling Lagos Island business districts.
+• The Disconnect: The business is failing to treat its locations as a multi-unit entity, completely burying the revenue potential of its second branch.
+
+2. Website & Technical SEO Audit
+
+• Domain Health & Pricing Desynchronization: There is a massive technical desynchronization between their direct website and Online Travel Agencies (OTAs). The native website quotes standard room pricing around ₦18,000 to ₦25,000 / night. However, because the site lacks a secure, integrated channel manager, global aggregators like Hotels.com and Vio are scraping incorrect configurations and publicizing automated placeholder rates as high as ₦237,000+ / night. This massive inflation alienates potential digital bookers immediately.
+• Local SEO Inaccuracy: The website copies boilerplate descriptions stating the hotel is "2.4 km from Lekki Toll Gate". In reality, Awoyaya is over 25 km away from the Admiralty Circle Toll Gate. This geographic inaccuracy flags distrust with both human users and Google's local indexing crawlers.
+• Zero Branch Architecture: The website operates entirely as if only the Awoyaya property exists. There is no landing page, contact layout, or sub-domain structure dedicated to the Alof Street, Lagos Island branch, rendering it invisible to search engine web spiders.
+
+3. OTA Distribution & Positioning
+
+• Syndication Footprint: Moderate. They are actively indexed across major global platforms including Agoda, Traveloka, and Hotels.com.
+• The Aggregator Trap: Because their direct website has poor on-page SEO, the OTAs completely dominate their brand name search queries. When a customer types "Sulerious Lakeside Hotel," third-party sites capture the traffic and siphon away a 15–20% booking commission—made worse by the platform price-gouging bugs mentioned above.
+
+Strategic Recommendations for Your Audit Report
+
+(To lock them in without giving away the exact technical steps, present the solutions like this):
+1. Implement an Active Review-Velocity Overhaul: They require a managed customer satisfaction filter to intercept guests at checkout, safely routing satisfied clients to Google to dilute the toxic 3.3-star rating, while flagging negative feedback internally before it goes public.
+2. Deploy Multi-Unit Map Structuring: The Lagos Island branch requires immediate, verified geolocation pinning on Alof Street, configured within a single corporate Google Brand Account to pass domain authority from the main branch down to the second location.
+3. API Global Price Synchronization: The backend web infrastructure must be patched with a unified room management ledger to override the inflated placeholder rates (₦237,000+) across external aggregators, pulling them back down to their competitive local rates.

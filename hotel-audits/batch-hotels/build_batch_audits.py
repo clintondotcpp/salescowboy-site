@@ -380,6 +380,73 @@ HOTELS = [
                 "desc": "Ongoing search engine management ensuring Top7 Orlando dominates searches for boutique hotels, dining, and live entertainment in central Abuja."
             }
         ]
+    },
+    {
+        "id": "sulerious-lakeside",
+        "name": "Sulerious Lakeside Hotel",
+        "short_name": "Sulerious Lakeside",
+        "tagline": "Multi-Branch Hospitality & Lakeside Lodging",
+        "address": "HQ: 28 Close 5, New Road, Igbetu, Awoyaya, Ibeju-Lekki, Lagos | Branch 2: Alof Street, by Adeniji, Lagos Island",
+        "phone": "Direct Hotel Operations",
+        "website": "suleriouslakesidehotel.com",
+        "ref": "SC-AUD-2026-LOS-07",
+        "date": "November 2026",
+        "health_score": 18,
+        "leakage_monthly": "N2.2M - N4.8M",
+        "leakage_annual": "N26.4M - N57.6M",
+        "risk_level": "REPUTATION CRISIS & MAP INVISIBILITY",
+        "kpis": [
+            {"val": "3.3", "label": "Google Rating", "sub": "Below 4.0 Filter Cutoff", "danger": True},
+            {"val": "0", "label": "Lagos Island Map Pin", "sub": "Branch 2 Invisible", "danger": True},
+            {"val": "N237k", "label": "Glitch OTA Pricing", "sub": "Scraped Placeholder Rate", "danger": True},
+            {"val": "N3.5M", "label": "Avg Monthly Bleed", "sub": "Lost to Rivals & OTAs", "danger": True},
+        ],
+        "strengths": [
+            "Multi-Unit Regional Footprint: Established operations across two high-demand Lagos commercial corridors (rapidly expanding Ibeju-Lekki axis and central Lagos Island business district).",
+            "Competitive Native Room Rates: Highly affordable baseline pricing (N18,000 to N25,000 per night) that appeals strongly to business travelers, commercial traders, and extended-stay guests.",
+            "Established Third-Party Syndication: Active indexing across global distribution platforms including Agoda, Traveloka, and Hotels.com."
+        ],
+        "leaks": [
+            {
+                "title": "Severe 3.3-Star Google Reputation Crisis at Awoyaya HQ",
+                "impact": "Google Maps automatically filters out properties rated below 4.0 stars when travelers search for recommended hotels in Ibeju-Lekki. Toxic public reviews detailing power and water cuts actively scare away high-paying corporate guests.",
+                "type": "REPUTATION EMERGENCY"
+            },
+            {
+                "title": "Total Map Invisibility of Lagos Island Branch",
+                "impact": "The Alof Street branch has zero Google Business Profile and zero map pin. Commercial traders and corporate visitors around Adeniji and Lagos Island trade districts cannot discover or navigate to this location.",
+                "type": "REVENUE BLIND SPOT"
+            },
+            {
+                "title": "Catastrophic OTA Pricing Desynchronization",
+                "impact": "Due to broken backend channel management, external travel platforms are scraping false placeholder rates as high as N237,000+ per night instead of your actual N18,000 - N25,000 rate. This absurd rate shock scares bookers away instantly.",
+                "type": "PRICE CONFUSION"
+            },
+            {
+                "title": "Misleading Geographic Claims Damaging Search Trust",
+                "impact": "The website claims the property is '2.4 km from Lekki Toll Gate' when Awoyaya is over 25 km away. This geographical mismatch creates immediate guest disputes, negative reviews, and search indexing penalties.",
+                "type": "TRUST PENALTY"
+            },
+            {
+                "title": "Absence of Dedicated Multi-Branch Web Architecture",
+                "impact": "The website operates as if only Awoyaya exists. Out-of-town guests searching for lodging near Adeniji or Idumota never discover that Sulerious has rooms available on Lagos Island.",
+                "type": "CROSS-SELL LOSS"
+            }
+        ],
+        "continuous_system": [
+            {
+                "title": "Review Velocity & Local Map Pack Algorithm Management",
+                "desc": "An ongoing review protection system that intercepts guests at checkout, resolves grievances privately, and systematically routes verified happy guests to Google to dilute the toxic 3.3 score and restore 4.0+ visibility."
+            },
+            {
+                "title": "Multi-Unit Google Brand Architecture & Island Geocoding",
+                "desc": "Continuous setup and maintenance of verified Google listings for both Awoyaya and Lagos Island under a single corporate umbrella, channeling high-intent corporate and trader searches directly to your rooms."
+            },
+            {
+                "title": "24/7 AI WhatsApp Concierge & Channel Price Synchronization",
+                "desc": "An automated booking desk that instantly confirms direct reservations at your true rates (N18,000 - N25,000), while ongoing channel management overrides distorted N237k aggregator glitches."
+            }
+        ]
     }
 ]
 

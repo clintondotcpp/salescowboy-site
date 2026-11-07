@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sulerious Lakeside Hotel - Digital Revenue Audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+:root {
+  --black: #090d16;
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50: #f8fafc;
+  --white: #ffffff;
+  --danger: #991b1b;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --success: #065f46;
+  --success-bg: #ecfdf5;
+  --success-border: #a7f3d0;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--slate-900);
+  font-family: var(--font-sans);
+  color: var(--black);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  padding: 36px 16px;
+  font-size: 16px; /* Increased font size */
+}
+
+/* Toolbar */
+.toolbar {
+  max-width: 900px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black);
+  padding: 14px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--slate-800);
+  color: var(--white);
+}
+
+.toolbar-brand {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.toolbar-doc {
+  font-size: 13px;
+  color: var(--slate-400);
+  font-weight: 500;
+}
+
+.btn-print {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.btn-print:hover {
+  background: var(--slate-100);
+}
+
+/* Main Sheet */
+.sheet {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 56px 64px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Letterhead Header */
+.letterhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 3px solid var(--black);
+  gap: 24px;
+}
+
+.agency-name {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.agency-div {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--slate-500);
+  margin-top: 2px;
+}
+
+.agency-address {
+  font-size: 13px;
+  color: var(--slate-500);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.ref-box {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.ref-tag {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  padding: 5px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.ref-meta {
+  color: var(--slate-500);
+  line-height: 1.6;
+}
+
+/* Client Banner */
+.client-banner {
+  margin-top: 32px;
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: 8px;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.client-pre {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--slate-500);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.client-title {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin-top: 2px;
+  line-height: 1.2;
+}
+
+.client-sub {
+  font-size: 15px;
+  color: var(--slate-600);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.client-badge-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  min-width: 220px;
+}
+
+.pill-status {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 4px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.pill-market {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--slate-700);
+  border: 1px solid var(--slate-300);
+  text-align: right;
+}
+
+/* Section Headings */
+.section-title {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--black);
+  margin-top: 38px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--black);
+  border-radius: 2px;
+}
+
+/* Score Dial Grid */
+.audit-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.score-dial-box {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.score-number {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--white);
+}
+
+.score-out-of {
+  font-size: 16px;
+  color: var(--slate-400);
+  font-weight: 600;
+}
+
+.score-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--slate-400);
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.score-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  background: #7f1d1d;
+  color: #fecaca;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.matrix-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+.matrix-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.matrix-heading {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--slate-600);
+}
+
+.matrix-leakage {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--danger);
+}
+
+.matrix-summary-text {
+  font-size: 15px;
+  color: var(--slate-700);
+  line-height: 1.6;
+}
+
+/* 4 KPI Cards */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.kpi-card {
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: 6px;
+  padding: 18px 16px;
+}
+
+.kpi-num {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+.kpi-num.danger {
+  color: var(--danger);
+}
+
+.kpi-label {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--slate-600);
+  margin-top: 8px;
+}
+
+.kpi-desc {
+  font-size: 13px;
+  color: var(--slate-500);
+  margin-top: 4px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Strengths Box */
+.strengths-card {
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  border-radius: 8px;
+  padding: 22px 24px;
+}
+
+.strengths-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.strength-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--slate-800);
+  line-height: 1.6;
+}
+
+.strength-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: var(--success);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Leaks Grid */
+.leaks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.leak-item {
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-left: 5px solid var(--danger);
+  border-radius: 6px;
+  padding: 18px 22px;
+}
+
+.leak-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.leak-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--black);
+}
+
+.leak-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--danger);
+  background: var(--danger-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.leak-impact {
+  font-size: 15px;
+  color: var(--slate-700);
+  line-height: 1.6;
+}
+
+/* Continuous Growth Section */
+.growth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.growth-card {
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: 6px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.growth-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--slate-500);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.growth-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.35;
+}
+
+.growth-desc {
+  font-size: 14px;
+  color: var(--slate-600);
+  line-height: 1.55;
+}
+
+/* Protection Box */
+.protect-notice {
+  margin-top: 36px;
+  background: var(--slate-900);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 24px 28px;
+  border-left: 6px solid #eab308;
+}
+
+.protect-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.protect-body {
+  font-size: 15px;
+  color: var(--slate-300);
+  line-height: 1.65;
+}
+
+/* Footer Action */
+.action-banner {
+  margin-top: 36px;
+  border-top: 2px solid var(--slate-200);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.action-text {
+  font-size: 15px;
+  color: var(--slate-700);
+  line-height: 1.5;
+}
+
+.action-contact {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* Print CSS */
+@media print {
+  body {
+    background: none;
+    padding: 0;
+    color: #000;
+  }
+  .toolbar {
+    display: none !important;
+  }
+  .sheet {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .client-banner {
+    margin-top: 18px;
+    padding: 16px 20px;
+  }
+  .section-title {
+    margin-top: 22px;
+    margin-bottom: 10px;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .audit-grid {
+    padding: 16px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .kpi-row {
+    margin-top: 12px;
+    gap: 10px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .kpi-card {
+    padding: 12px 14px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .strengths-card {
+    padding: 16px 20px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .strengths-list {
+    gap: 8px;
+  }
+  .leaks-grid {
+    gap: 10px;
+  }
+  .leak-item {
+    padding: 12px 16px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .growth-grid {
+    gap: 12px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .growth-card {
+    padding: 14px 14px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .protect-notice {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: #0f172a !important;
+    color: #fff !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .score-dial-box {
+    background: #090d16 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .action-banner {
+    margin-top: 20px;
+    padding-top: 14px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span class="toolbar-brand">SALES COWBOY</span>
+      <span style="color: #475569;">|</span>
+      <span class="toolbar-doc">Sulerious Lakeside Hotel - Executive Revenue Audit</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
+        <path d="M6 14h12v8H6z"/>
+      </svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Document Sheet -->
+  <main class="sheet">
+
+    <!-- Agency Letterhead -->
+    <header class="letterhead">
+      <div>
+        <div class="agency-name">SALES COWBOY</div>
+        <div class="agency-div">Hospitality Revenue Engineering & Growth Systems</div>
+        <div class="agency-address">
+          36 Arochukwu Street, Uratta East, Owerri North, Imo, Nigeria<br>
+          +234 810 493 3232 &bull; salescowboy.com.ng &bull; hello@salescowboy.com.ng
+        </div>
+      </div>
+      <div class="ref-box">
+        <div class="ref-tag">CONFIDENTIAL AUDIT</div>
+        <div class="ref-meta">
+          REF: SC-AUD-2026-LOS-07<br>
+          DATE: November 2026<br>
+          STATUS: EXECUTIVE BRIEF
+        </div>
+      </div>
+    </header>
+
+    <!-- Property Banner -->
+    <section class="client-banner">
+      <div>
+        <div class="client-pre">HOSPITALITY REVENUE DIAGNOSTIC</div>
+        <h1 class="client-title">Sulerious Lakeside Hotel</h1>
+        <div class="client-sub">
+          <strong>Location:</strong> HQ: 28 Close 5, New Road, Igbetu, Awoyaya, Ibeju-Lekki, Lagos | Branch 2: Alof Street, by Adeniji, Lagos Island<br>
+          <strong>Contact:</strong> Direct Hotel Operations &bull; <strong>Web Asset:</strong> suleriouslakesidehotel.com
+        </div>
+      </div>
+      <div class="client-badge-group">
+        <div class="pill-status">REPUTATION CRISIS & MAP INVISIBILITY</div>
+        <div class="pill-market">EST. LOSS: N2.2M - N4.8M/MO</div>
+      </div>
+    </section>
+
+    <!-- Executive Scorecard -->
+    <section>
+      <div class="section-title">Digital Revenue Health Scorecard</div>
+      <div class="audit-grid">
+        <div class="score-dial-box">
+          <div class="score-number">18</div>
+          <div class="score-out-of">OUT OF 100</div>
+          <div class="score-label">HEALTH SCORE</div>
+          <div class="score-tag">REPUTATION CRISIS & MAP INVISIBILITY</div>
+        </div>
+        <div class="matrix-box">
+          <div class="matrix-top">
+            <span class="matrix-heading">Commercial Revenue Assessment</span>
+            <span class="matrix-leakage">N2.2M - N4.8M / mo</span>
+          </div>
+          <p class="matrix-summary-text">
+            Based on competitive search volume, local booking intent, and active guest inquiries in your immediate market, your property currently surrenders an estimated <strong>N2.2M - N4.8M every month</strong> (N26.4M - N57.6M annually) to local competitors and third-party booking channels.
+          </p>
+          <div class="matrix-summary-text">
+            <strong>Key Vulnerability:</strong> Guest discovery and booking conversion pipelines are severely unoptimized, preventing high-paying travelers from finding, trusting, and directly booking your property.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Big Metric Cards -->
+      <div class="kpi-row">
+        
+        <div class="kpi-card">
+          <div class="kpi-num danger">3.3</div>
+          <div class="kpi-label">Google Rating</div>
+          <div class="kpi-desc">Below 4.0 Filter Cutoff</div>
+        </div>
+        
+        <div class="kpi-card">
+          <div class="kpi-num danger">0</div>
+          <div class="kpi-label">Lagos Island Map Pin</div>
+          <div class="kpi-desc">Branch 2 Invisible</div>
+        </div>
+        
+        <div class="kpi-card">
+          <div class="kpi-num danger">N237k</div>
+          <div class="kpi-label">Glitch OTA Pricing</div>
+          <div class="kpi-desc">Scraped Placeholder Rate</div>
+        </div>
+        
+        <div class="kpi-card">
+          <div class="kpi-num danger">N3.5M</div>
+          <div class="kpi-label">Avg Monthly Bleed</div>
+          <div class="kpi-desc">Lost to Rivals & OTAs</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Strengths -->
+    <section>
+      <div class="section-title">Operational Strengths (Assets to Protect)</div>
+      <div class="strengths-card">
+        <ul class="strengths-list">
+          
+        <li class="strength-item">
+          <span class="strength-icon">&#10003;</span>
+          <span>Multi-Unit Regional Footprint: Established operations across two high-demand Lagos commercial corridors (rapidly expanding Ibeju-Lekki axis and central Lagos Island business district).</span>
+        </li>
+        
+        <li class="strength-item">
+          <span class="strength-icon">&#10003;</span>
+          <span>Competitive Native Room Rates: Highly affordable baseline pricing (N18,000 to N25,000 per night) that appeals strongly to business travelers, commercial traders, and extended-stay guests.</span>
+        </li>
+        
+        <li class="strength-item">
+          <span class="strength-icon">&#10003;</span>
+          <span>Established Third-Party Syndication: Active indexing across global distribution platforms including Agoda, Traveloka, and Hotels.com.</span>
+        </li>
+        
+        </ul>
+      </div>
+    </section>
+
+    <!-- Revenue Leaks -->
+    <section>
+      <div class="section-title">Identified Revenue Leaks & Commercial Gaps</div>
+      <div class="leaks-grid">
+        
+        <div class="leak-item">
+          <div class="leak-header">
+            <span class="leak-title">Severe 3.3-Star Google Reputation Crisis at Awoyaya HQ</span>
+            <span class="leak-badge">REPUTATION EMERGENCY</span>
+          </div>
+          <div class="leak-impact">Google Maps automatically filters out properties rated below 4.0 stars when travelers search for recommended hotels in Ibeju-Lekki. Toxic public reviews detailing power and water cuts actively scare away high-paying corporate guests.</div>
+        </div>
+        
+        <div class="leak-item">
+          <div class="leak-header">
+            <span class="leak-title">Total Map Invisibility of Lagos Island Branch</span>
+            <span class="leak-badge">REVENUE BLIND SPOT</span>
+          </div>
+          <div class="leak-impact">The Alof Street branch has zero Google Business Profile and zero map pin. Commercial traders and corporate visitors around Adeniji and Lagos Island trade districts cannot discover or navigate to this location.</div>
+        </div>
+        
+        <div class="leak-item">
+          <div class="leak-header">
+            <span class="leak-title">Catastrophic OTA Pricing Desynchronization</span>
+            <span class="leak-badge">PRICE CONFUSION</span>
+          </div>
+          <div class="leak-impact">Due to broken backend channel management, external travel platforms are scraping false placeholder rates as high as N237,000+ per night instead of your actual N18,000 - N25,000 rate. This absurd rate shock scares bookers away instantly.</div>
+        </div>
+        
+        <div class="leak-item">
+          <div class="leak-header">
+            <span class="leak-title">Misleading Geographic Claims Damaging Search Trust</span>
+            <span class="leak-badge">TRUST PENALTY</span>
+          </div>
+          <div class="leak-impact">The website claims the property is '2.4 km from Lekki Toll Gate' when Awoyaya is over 25 km away. This geographical mismatch creates immediate guest disputes, negative reviews, and search indexing penalties.</div>
+        </div>
+        
+        <div class="leak-item">
+          <div class="leak-header">
+            <span class="leak-title">Absence of Dedicated Multi-Branch Web Architecture</span>
+            <span class="leak-badge">CROSS-SELL LOSS</span>
+          </div>
+          <div class="leak-impact">The website operates as if only Awoyaya exists. Out-of-town guests searching for lodging near Adeniji or Idumota never discover that Sulerious has rooms available on Lagos Island.</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Continuous Growth Engine -->
+    <section>
+      <div class="section-title">The Solution: Continuous Revenue Engine</div>
+      <p style="font-size: 15px; color: var(--slate-700); margin-bottom: 14px;">
+        Digital hospitality revenue is not a one-time setup. Beating local competitors requires ongoing operational management across search algorithms, review velocity, and real-time inquiry response desks.
+      </p>
+      <div class="growth-grid">
+        
+        <div class="growth-card">
+          <div class="growth-num">PILLAR 01</div>
+          <div class="growth-title">Review Velocity & Local Map Pack Algorithm Management</div>
+          <div class="growth-desc">An ongoing review protection system that intercepts guests at checkout, resolves grievances privately, and systematically routes verified happy guests to Google to dilute the toxic 3.3 score and restore 4.0+ visibility.</div>
+        </div>
+        
+        <div class="growth-card">
+          <div class="growth-num">PILLAR 02</div>
+          <div class="growth-title">Multi-Unit Google Brand Architecture & Island Geocoding</div>
+          <div class="growth-desc">Continuous setup and maintenance of verified Google listings for both Awoyaya and Lagos Island under a single corporate umbrella, channeling high-intent corporate and trader searches directly to your rooms.</div>
+        </div>
+        
+        <div class="growth-card">
+          <div class="growth-num">PILLAR 03</div>
+          <div class="growth-title">24/7 AI WhatsApp Concierge & Channel Price Synchronization</div>
+          <div class="growth-desc">An automated booking desk that instantly confirms direct reservations at your true rates (N18,000 - N25,000), while ongoing channel management overrides distorted N237k aggregator glitches.</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Protect-Us Notice -->
+    <section class="protect-notice">
+      <div class="protect-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2.5">
+          <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+        Commercial Notice: Diagnostic Summary vs Full Implementation
+      </div>
+      <div class="protect-body">
+        This executive brief highlights structural commercial leaks and high-impact revenue gaps discovered during our audit. To protect our proprietary methodologies, technical solution code, backend patch scripts, and exact configuration recipes are withheld from this preview. 
+        <br><br>
+        <strong>The complete Technical Remediation Blueprint, code patches, and step-by-step systems implementation are delivered exclusively during the Sales Cowboy implementation kickoff.</strong>
+      </div>
+    </section>
+
+    <!-- Action Sign-off -->
+    <footer class="action-banner">
+      <div class="action-text">
+        <strong>Prepared by:</strong> Sales Cowboy Hospitality Revenue Engineering Team<br>
+        Ready to plug these revenue leaks and activate your direct booking pipeline?
+      </div>
+      <div class="action-contact">
+        SCHEDULE EXECUTIVE BRIEFING<br>
+        +234 810 493 3232 &bull; salescowboy.com.ng
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect, useMemo, Suspense } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import React, { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
   Printer,
@@ -12,17 +12,22 @@ import {
   MessageSquare,
   CheckCircle2,
   AlertTriangle,
-  Copy,
   Check,
   Eye,
   Edit3,
   RefreshCw,
-  Download,
   Share2,
   Layers,
   FileText,
   RotateCcw,
   Sparkles,
+  Plus,
+  Trash2,
+  Sliders,
+  DollarSign,
+  TrendingDown,
+  Calendar,
+  Save,
 } from "lucide-react";
 
 // Interface for Audit State
@@ -66,19 +71,16 @@ export interface AuditData {
   competitor1: {
     title: string;
     badge: string;
-    url: string;
     snippet: string;
   };
   competitor2: {
     title: string;
     badge: string;
-    url: string;
     snippet: string;
   };
   clientSearchResult: {
     title: string;
     badge: string;
-    url: string;
     snippet: string;
   };
 
@@ -195,19 +197,16 @@ const PRESET_EKABO: AuditData = {
   competitor1: {
     title: "Top Rated Oregun Commercial Hotel • Google 3-Pack Pin #1",
     badge: "3-Pack Dominator",
-    url: "https://maps.google.com/local-pack/oregun-hotel-1",
     snippet: "★★★★☆ 4.4 Rating (64 Reviews) • Direct call and website booking links. Captures over 50% of corporate, shopping, and church guest inquiries in Oregun.",
   },
   competitor2: {
     title: "Kudirat Abiola Way Boutique Suites • Google 3-Pack Pin #2",
-    badge: "Local Pack Competitor",
-    url: "https://maps.google.com/local-pack/kudirat-abiola-suites",
+    badge: "Local Competitor",
     snippet: "★★★★☆ 4.2 Rating (38 Reviews) • Live rates and photo gallery displayed. Steals visitors attending programs at Daystar and business meetings in Alausa.",
   },
   clientSearchResult: {
     title: "Ek'abo Inn Nigeria Limited",
     badge: "100% Invisible",
-    url: "https://maps.google.com/search/ekabo-inn-oregun",
     snippet: "NO LISTING FOUND ON GOOGLE MAPS. Zero reviews, zero photos, zero map pins. High-intent travelers assume the hotel does not exist or has permanently shut down.",
   },
   funnel: [
@@ -305,19 +304,16 @@ const PRESET_GLOVER: AuditData = {
   competitor1: {
     title: "Glover Road Luxury Serviced Apartments • Ikoyi, Lagos",
     badge: "Cannibalizing Traffic",
-    url: "https://ikoyiluxury.com.ng/glover-road",
     snippet: "4.8 ★ Rating (86 Reviews) • High domain authority intercepts your brand searches. Guests get confused and assume you are an Island development.",
   },
   competitor2: {
     title: "Top Rated Ogudu & Maryland Serviced Apartments • Google 3-Pack",
     badge: "Local Competitor",
-    url: "https://maps.google.com/local-pack/ogudu-serviced",
     snippet: "4.6 ★ Rating (48 Reviews) • Active room photos and instant booking links. Reclaims 60%+ of mainland corporate travelers.",
   },
   clientSearchResult: {
     title: "Glover Apartments (Your Listing - Ogudu)",
     badge: "Buried Under Rivals",
-    url: "https://maps.google.com/search/glover-apartments-ogudu",
     snippet: "1 Review Only • No Local Mainland Schema • Corporate travelers skip past 1-review listings to book verified alternatives.",
   },
   funnel: [
@@ -373,6 +369,111 @@ const PRESET_GLOVER: AuditData = {
   ],
 };
 
+// Preset 3: Blank Template
+const PRESET_BLANK: AuditData = {
+  refNumber: `AUD-NEW-${new Date().getFullYear()}-001`,
+  date: "November 07, 2026",
+  hotelName: "New Hotel / Apartment Name",
+  legalEntity: "New Hotel Company Limited",
+  address: "Street Address, Area, City, State, Nigeria",
+  cityArea: "Area, City",
+  phone: "+234 810 493 3232",
+  tier: "Boutique Hotel / Serviced Suites",
+  healthScore: 20,
+  scoreStatus: "SEVERE REVENUE LEAKAGE",
+  scoreWebsite: 10,
+  scoreGbp: 10,
+  scoreOta: 25,
+  scoreLocalSearch: 15,
+  scoreReviewSystem: 0,
+  monthlyLeakageMin: "₦2,000,000",
+  monthlyLeakageMax: "₦4,000,000",
+  kpis: [
+    { num: "0 Sites", title: "Direct Web", desc: "No direct online checkout system" },
+    { num: "0 Reviews", title: "Google Maps", desc: "Missing or unranked in local search" },
+    { num: "25% Tax", title: "OTA Comm.", desc: "Surrendering high margin to aggregators" },
+    { num: "90% Loss", title: "Inquiry Drop", desc: "Lost to friction and response delays" },
+  ],
+  strengths: [
+    { id: "s1", title: "Prime Commercial Location", desc: "Walking distance to business hubs and major transport routes." },
+    { id: "s2", title: "Quality Hospitality Facility", desc: "Clean, air-conditioned rooms with modern amenities and 24h reception." },
+    { id: "s3", title: "Existing Guest Goodwill", desc: "Repeat offline guests and verified corporate client interest." },
+  ],
+  mistakes: [
+    { id: "m1", title: "No Direct Booking Website", desc: "Forcing travelers to search OTAs or call manually to confirm availability." },
+    { id: "m2", title: "Unverified Google Maps Profile", desc: "Zero review collection strategy, leaving searchers to book rivals." },
+    { id: "m3", title: "Slow Response Friction", desc: "Delayed replies to phone and social inquiries cause immediate drop-off." },
+  ],
+  searchQuery: "Hotels in Area OR Shortlets nearby",
+  searchLocation: "City, State",
+  competitor1: {
+    title: "Competing Commercial Hotel • Google 3-Pack Pin #1",
+    badge: "3-Pack Dominator",
+    snippet: "4.5 ★ Rating (52 Reviews) • Direct call and website links capture local search volume.",
+  },
+  competitor2: {
+    title: "Rival Serviced Suites • Google 3-Pack Pin #2",
+    badge: "Local Competitor",
+    snippet: "4.3 ★ Rating (34 Reviews) • Active room galleries and instant booking buttons.",
+  },
+  clientSearchResult: {
+    title: "New Hotel Listing",
+    badge: "Invisible to Guests",
+    snippet: "NO VERIFIED LISTING FOUND. Travelers assume the property is closed or unverified.",
+  },
+  funnel: [
+    { count: "100", unit: "Searchers", label: "Stage 1: Google Search & Maps", drop: "-60 lost to rival 3-pack pins", pct: 100 },
+    { count: "40", unit: "Visitors", label: "Stage 2: Aggregator / Social Check", drop: "-25 lost to competing discount banners", pct: 40 },
+    { count: "15", unit: "Inquiries", label: "Stage 3: Phone / DM Inquiries", drop: "-9 lost to manual verification delays", pct: 15 },
+    { count: "6", unit: "Confirmed", label: "Stage 4: Confirmed Stays", drop: "94% Potential Revenue Lost", pct: 6, isDark: true },
+  ],
+  comparisonRows: [
+    { channel: "Website & Direct Booking", current: "Non-Existent or exhausting form without direct checkout.", upgraded: "2-Step Frictionless Mobile Checkout with instant Paystack/Flutterwave settlement." },
+    { channel: "Room Availability Tracking", current: "Blind calendar. Requires manual front-desk verification.", upgraded: "Real-Time Room Availability Calendar Sync. 100% self-serve booking." },
+    { channel: "Google Maps Presence", current: "Unverified or 0 reviews; invisible in local map pack.", upgraded: "Google 3-Pack Dominance with geo-tagged room imagery and weekly updates." },
+    { channel: "Review Collection", current: "Completely manual. No post-stay follow-up triggers.", upgraded: "Automated WhatsApp Review Bot: Fires 2 hours post-checkout with 1-click link." },
+    { channel: "Response Speed", current: "Manual phone calls. After-hours inquiries go unanswered.", upgraded: "24/7 WhatsApp AI Reservation Desk: Answers inquiries in 3 seconds." },
+  ],
+  pillars: [
+    {
+      num: "01",
+      title: "Direct Booking Website + Live Availability Engine",
+      desc: "Captures 100% direct guest payments at 0% OTA commission.",
+      bullets: [
+        "Real-time room availability calendar engine",
+        "Mobile-first 2-step checkout flow",
+        "Direct Paystack card & transfer settlement straight to hotel account",
+      ],
+    },
+    {
+      num: "02",
+      title: "Google Business Profile Creation & Local 3-Pack Push",
+      desc: "Propel the property to the top of Google Maps for high-intent area searches.",
+      bullets: [
+        "Official GBP registration, pin verification, and category optimization",
+        "Geo-tagged photography and local area schema citations",
+        "Weekly promotional updates targeting corporate and leisure travelers",
+      ],
+    },
+    {
+      num: "03",
+      title: "24/7 WhatsApp AI Concierge + Automated Review Reminders",
+      desc: "Autonomous booking desk and post-checkout 5-star review collection engine.",
+      bullets: [
+        "Automated WhatsApp review trigger sent 2 hours post-checkout",
+        "10% repeat-stay incentive code driving verified 5-star Google reviews",
+        "Replies to guest DMs in 3 seconds flat 24/7 with rates and booking links",
+      ],
+    },
+  ],
+  roadmap: [
+    { week: "WEEK 01", title: "Google Profile & SEO", desc: "Create & verify Google profile; upload geo-tagged room photos and area schema." },
+    { week: "WEEK 02", title: "Direct Booking Site", desc: "Deploy luxury direct booking site with live inventory calendar and Paystack." },
+    { week: "WEEK 03", title: "WhatsApp AI Concierge", desc: "Connect 24/7 AI reservation bot with automated post-stay review triggers." },
+    { week: "WEEK 04", title: "Local 3-Pack Dominance", desc: "Deploy front-desk smart review QR collateral and push into the Google 3-pack." },
+  ],
+};
+
 // Helper to safely serialize audit state to URL base64
 const serializeAudit = (data: AuditData): string => {
   try {
@@ -406,57 +507,95 @@ const deserializeAudit = (b64: string): AuditData | null => {
 };
 
 function AuditGeneratorContent() {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   // Mode: "editor" or "preview"
   const [activeTab, setActiveTab] = useState<"editor" | "preview">("editor");
+  const [isClientMode, setIsClientMode] = useState(false);
   const [audit, setAudit] = useState<AuditData>(PRESET_EKABO);
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedPitch, setCopiedPitch] = useState(false);
+  const [savedSuccess, setSavedSuccess] = useState(false);
 
-  // Load from URL query if present
+  // Load from URL query if present, else check localStorage
   useEffect(() => {
     const dataParam = searchParams.get("data");
     const viewParam = searchParams.get("view");
+
+    if (viewParam === "client") {
+      setIsClientMode(true);
+      setActiveTab("preview");
+    }
 
     if (dataParam) {
       const parsed = deserializeAudit(dataParam);
       if (parsed) {
         setAudit(parsed);
       }
-    }
-    if (viewParam === "client" || viewParam === "preview") {
-      setActiveTab("preview");
+    } else {
+      // Check localStorage for saved draft
+      try {
+        const saved = localStorage.getItem("salescowboy_active_audit");
+        if (saved) {
+          const parsedSaved = JSON.parse(saved);
+          if (parsedSaved && parsedSaved.hotelName) {
+            setAudit(parsedSaved);
+          }
+        }
+      } catch (err) {
+        console.error("LocalStorage load error", err);
+      }
     }
   }, [searchParams]);
 
   // Handle Input Changes with auto-clean for zero em dashes
   const updateField = (field: keyof AuditData, value: any) => {
-    setAudit((prev) => ({
-      ...prev,
-      [field]: typeof value === "string" ? cleanText(value) : value,
-    }));
+    setAudit((prev) => {
+      const updated = {
+        ...prev,
+        [field]: typeof value === "string" ? cleanText(value) : value,
+      };
+      // Autosave to localStorage
+      try {
+        localStorage.setItem("salescowboy_active_audit", JSON.stringify(updated));
+      } catch (e) {}
+      return updated;
+    });
   };
 
   // Recalculate Health Score
   const calculateScore = () => {
     const total =
-      (audit.scoreWebsite * 0.25) +
-      (audit.scoreGbp * 0.25) +
-      (audit.scoreOta * 0.15) +
-      (audit.scoreLocalSearch * 0.2) +
-      (audit.scoreReviewSystem * 0.15);
+      audit.scoreWebsite * 0.25 +
+      audit.scoreGbp * 0.25 +
+      audit.scoreOta * 0.15 +
+      audit.scoreLocalSearch * 0.2 +
+      audit.scoreReviewSystem * 0.15;
     const rounded = Math.round(total);
     let status = "CRITICAL BLIND SPOT";
     if (rounded >= 60) status = "MODERATE HEALTH";
     else if (rounded >= 30) status = "SEVERE REVENUE LEAKAGE";
 
-    setAudit((prev) => ({
-      ...prev,
-      healthScore: rounded,
-      scoreStatus: status,
-    }));
+    setAudit((prev) => {
+      const updated = {
+        ...prev,
+        healthScore: rounded,
+        scoreStatus: status,
+      };
+      try {
+        localStorage.setItem("salescowboy_active_audit", JSON.stringify(updated));
+      } catch (e) {}
+      return updated;
+    });
+  };
+
+  // Save explicitly
+  const handleSaveDraft = () => {
+    try {
+      localStorage.setItem("salescowboy_active_audit", JSON.stringify(audit));
+      setSavedSuccess(true);
+      setTimeout(() => setSavedSuccess(false), 2000);
+    } catch (e) {}
   };
 
   // Print Action
@@ -498,43 +637,9 @@ Sales Cowboy Marketing Solutions
     setTimeout(() => setCopiedPitch(false), 2500);
   };
 
-  // Download Standalone HTML Action
-  const handleDownloadHtml = () => {
-    const htmlContent = `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>${audit.hotelName} - Executive Revenue Audit</title>
-<style>
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #090d16; line-height: 1.5; padding: 24px; }
-.card { border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; max-width: 860px; margin: 0 auto; }
-h1, h2, h3 { text-transform: uppercase; }
-.badge { background: #090d16; color: white; padding: 4px 8px; font-size: 11px; border-radius: 4px; }
-</style>
-</head>
-<body>
-<div class="card">
-  <h2>SALES COWBOY MARKETING SOLUTIONS</h2>
-  <p><strong>PROPERTY:</strong> ${audit.hotelName} (${audit.cityArea})</p>
-  <p><strong>HEALTH SCORE:</strong> ${audit.healthScore} / 100 - ${audit.scoreStatus}</p>
-  <p><strong>UNCAPTURED REVENUE:</strong> ${audit.monthlyLeakageMin} - ${audit.monthlyLeakageMax} / month</p>
-  <hr/>
-  <p>Please open the live interactive report on salescowboy.com.ng to view interactive charts and full turnaround schedule.</p>
-</div>
-</body>
-</html>`;
-    const blob = new Blob([htmlContent], { type: "text/html" });
-    const u = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = u;
-    a.download = `${audit.hotelName.toLowerCase().replace(/[^a-z0-9]/g, "-")}-audit.html`;
-    a.click();
-    URL.revokeObjectURL(u);
-  };
-
   return (
     <div className="min-h-screen bg-slate-900 font-sans text-slate-950 flex flex-col antialiased">
-      {/* CSS Print Styles for Exact 4-Page Output */}
+      {/* Comprehensive Print Styles for Exact 4-Page Output */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -582,78 +687,113 @@ h1, h2, h3 { text-transform: uppercase; }
           <span className="h-4 w-px bg-slate-700 hidden sm:block"></span>
           <span className="text-xs text-slate-300 font-bold uppercase tracking-wider font-mono flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            Hotel Audit Engine
+            {isClientMode ? "Executive Audit Brief" : "Hotel Audit Engine"}
           </span>
         </div>
 
         {/* Action Controls */}
         <div className="flex items-center flex-wrap gap-2">
-          {/* Preset Buttons */}
-          <div className="hidden lg:flex items-center gap-1.5 mr-2 bg-slate-900 p-1 rounded-md border border-slate-800">
-            <span className="text-[10px] uppercase font-mono text-slate-400 px-2 font-bold">Presets:</span>
-            <button
-              onClick={() => {
-                setAudit(PRESET_EKABO);
-              }}
-              className="text-[11px] font-bold px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white transition-colors"
-            >
-              Ek&apos;abo Inn
-            </button>
-            <button
-              onClick={() => {
-                setAudit(PRESET_GLOVER);
-              }}
-              className="text-[11px] font-bold px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white transition-colors"
-            >
-              Glover Apts
-            </button>
-          </div>
+          {/* Preset Buttons (Hidden in Client View) */}
+          {!isClientMode && (
+            <div className="hidden lg:flex items-center gap-1.5 mr-2 bg-slate-900 p-1 rounded-md border border-slate-800">
+              <span className="text-[10px] uppercase font-mono text-slate-400 px-2 font-bold">Presets:</span>
+              <button
+                onClick={() => setAudit(PRESET_EKABO)}
+                className="text-[11px] font-bold px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white transition-colors"
+              >
+                Ek&apos;abo Inn
+              </button>
+              <button
+                onClick={() => setAudit(PRESET_GLOVER)}
+                className="text-[11px] font-bold px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white transition-colors"
+              >
+                Glover Apts
+              </button>
+              <button
+                onClick={() => setAudit(PRESET_BLANK)}
+                className="text-[11px] font-bold px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-amber-300 transition-colors"
+              >
+                + New Blank
+              </button>
+            </div>
+          )}
 
-          {/* Tab Switcher */}
-          <div className="flex items-center bg-slate-900 p-1 rounded-md border border-slate-800">
+          {/* Tab Switcher (Hidden in Client View) */}
+          {!isClientMode && (
+            <div className="flex items-center bg-slate-900 p-1 rounded-md border border-slate-800">
+              <button
+                onClick={() => setActiveTab("editor")}
+                className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 transition-all ${
+                  activeTab === "editor"
+                    ? "bg-white text-slate-950 shadow-sm"
+                    : "text-slate-400 hover:text-white"
+                }`}
+              >
+                <Edit3 className="w-3.5 h-3.5" />
+                <span>Editor</span>
+              </button>
+              <button
+                onClick={() => setActiveTab("preview")}
+                className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 transition-all ${
+                  activeTab === "preview"
+                    ? "bg-white text-slate-950 shadow-sm"
+                    : "text-slate-400 hover:text-white"
+                }`}
+              >
+                <Eye className="w-3.5 h-3.5" />
+                <span>Preview</span>
+              </button>
+            </div>
+          )}
+
+          {/* Save Draft Button (Internal Mode Only) */}
+          {!isClientMode && (
             <button
-              onClick={() => setActiveTab("editor")}
-              className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 transition-all ${
-                activeTab === "editor"
-                  ? "bg-white text-slate-950 shadow-sm"
-                  : "text-slate-400 hover:text-white"
-              }`}
+              onClick={handleSaveDraft}
+              className="bg-slate-800 hover:bg-slate-700 text-white px-2.5 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition-all border border-slate-700"
+              title="Save draft to browser storage"
             >
-              <Edit3 className="w-3.5 h-3.5" />
-              <span>Editor</span>
+              <Save className="w-3.5 h-3.5 text-blue-400" />
+              <span className="hidden sm:inline">{savedSuccess ? "Saved!" : "Save"}</span>
             </button>
-            <button
-              onClick={() => setActiveTab("preview")}
-              className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 transition-all ${
-                activeTab === "preview"
-                  ? "bg-white text-slate-950 shadow-sm"
-                  : "text-slate-400 hover:text-white"
-              }`}
-            >
-              <Eye className="w-3.5 h-3.5" />
-              <span>Preview</span>
-            </button>
-          </div>
+          )}
 
           {/* Copy Link Button */}
-          <button
-            onClick={handleCopyLink}
-            className="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition-all border border-slate-700"
-            title="Copy shareable link with audit data encoded"
-          >
-            {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5" />}
-            <span>{copiedLink ? "Link Copied!" : "Share Link"}</span>
-          </button>
+          {!isClientMode && (
+            <button
+              onClick={handleCopyLink}
+              className="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition-all border border-slate-700"
+              title="Copy shareable link for client"
+            >
+              {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5" />}
+              <span>{copiedLink ? "Link Copied!" : "Share Link"}</span>
+            </button>
+          )}
 
           {/* Copy WhatsApp Pitch Button */}
-          <button
-            onClick={handleCopyPitch}
-            className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition-all shadow-sm"
-            title="Copy quick WhatsApp pitch to send to hotel owner"
-          >
-            {copiedPitch ? <Check className="w-3.5 h-3.5" /> : <MessageSquare className="w-3.5 h-3.5" />}
-            <span className="hidden sm:inline">{copiedPitch ? "Pitch Copied!" : "WhatsApp Pitch"}</span>
-          </button>
+          {!isClientMode && (
+            <button
+              onClick={handleCopyPitch}
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition-all shadow-sm"
+              title="Copy WhatsApp pitch message"
+            >
+              {copiedPitch ? <Check className="w-3.5 h-3.5" /> : <MessageSquare className="w-3.5 h-3.5" />}
+              <span className="hidden sm:inline">{copiedPitch ? "Pitch Copied!" : "WhatsApp Pitch"}</span>
+            </button>
+          )}
+
+          {/* Client WhatsApp Button (in client view) */}
+          {isClientMode && (
+            <a
+              href={`https://wa.me/2348104933232?text=Hello%20Sales%20Cowboy,%20we%20reviewed%20the%20${encodeURIComponent(audit.hotelName)}%20audit%20and%20want%20to%20discuss%20the%20turnaround%20plan.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-1.5 rounded-md text-xs font-bold flex items-center gap-2 transition-all shadow-sm"
+            >
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>Discuss on WhatsApp</span>
+            </a>
+          )}
 
           {/* Print / Save PDF */}
           <button
@@ -669,8 +809,8 @@ h1, h2, h3 { text-transform: uppercase; }
       {/* Main Content Area */}
       <div className="flex-1 flex justify-center py-8 px-4 sm:px-6">
         {/* ======================= TAB 1: FORM EDITOR ======================= */}
-        {activeTab === "editor" && (
-          <div className="w-full max-w-[1000px] bg-slate-950 border border-slate-800 rounded-xl p-6 sm:p-8 text-white shadow-2xl no-print">
+        {!isClientMode && activeTab === "editor" && (
+          <div className="w-full max-w-[1020px] bg-slate-950 border border-slate-800 rounded-xl p-6 sm:p-8 text-white shadow-2xl no-print">
             
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-slate-800 gap-4">
               <div>
@@ -681,7 +821,7 @@ h1, h2, h3 { text-transform: uppercase; }
                   Hotel Revenue Audit Generator
                 </h2>
                 <p className="text-xs text-slate-400 mt-1">
-                  Fill in the hotel details below. All scores, leakage projections, and diagrams calculate automatically.
+                  Fill in the hotel details below. Everything is customizable: scores, strengths, mistakes, search results, and roadmap.
                 </p>
               </div>
 
@@ -690,7 +830,7 @@ h1, h2, h3 { text-transform: uppercase; }
                   onClick={calculateScore}
                   className="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 text-xs font-bold px-3 py-2 rounded-md flex items-center gap-1.5 transition-colors"
                 >
-                  <RefreshCw className="w-3.5 h-3.5" />
+                  <RefreshCw className="w-3.5 h-3.5 text-amber-400" />
                   <span>Recalculate Score</span>
                 </button>
                 <button
@@ -698,7 +838,7 @@ h1, h2, h3 { text-transform: uppercase; }
                   className="bg-white text-slate-950 hover:bg-slate-100 text-xs font-extrabold px-4 py-2 rounded-md flex items-center gap-1.5 shadow-sm transition-all"
                 >
                   <Eye className="w-3.5 h-3.5" />
-                  <span>View Audit Dossier</span>
+                  <span>View Final Audit</span>
                 </button>
               </div>
             </div>
@@ -768,14 +908,36 @@ h1, h2, h3 { text-transform: uppercase; }
                       placeholder="e.g. +234 810 493 3232"
                     />
                   </div>
+
+                  <div>
+                    <label className="block text-slate-400 font-semibold mb-1">Reference Number</label>
+                    <input
+                      type="text"
+                      value={audit.refNumber}
+                      onChange={(e) => updateField("refNumber", e.target.value)}
+                      className="w-full bg-slate-900 border border-slate-700 rounded-md p-2.5 text-white font-mono focus:border-white focus:outline-none"
+                      placeholder="AUD-XYZ-2026-001"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-400 font-semibold mb-1">Audit Date</label>
+                    <input
+                      type="text"
+                      value={audit.date}
+                      onChange={(e) => updateField("date", e.target.value)}
+                      className="w-full bg-slate-900 border border-slate-700 rounded-md p-2.5 text-white focus:border-white focus:outline-none"
+                      placeholder="e.g. November 07, 2026"
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Section 2: Digital Health Scores & Projected Revenue Leakage */}
+              {/* Section 2: 5-Pillar Scores & Revenue Leakage */}
               <div>
                 <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-slate-300 pb-2 border-b border-slate-800 mb-4 flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-amber-400" />
-                  2. Digital Health Scores &amp; Leakage Projections
+                  <Sliders className="w-4 h-4 text-amber-400" />
+                  2. 5-Pillar Scores &amp; Revenue Leakage
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 text-xs">
@@ -948,11 +1110,139 @@ h1, h2, h3 { text-transform: uppercase; }
                 </div>
               </div>
 
-              {/* Section 4: Live Google Search Simulation */}
+              {/* Section 4: Strengths & Mistakes Editor */}
+              <div>
+                <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-slate-300 pb-2 border-b border-slate-800 mb-4 flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  4. Genuine Strengths vs. What They Are Doing Wrong
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                  {/* Strengths */}
+                  <div className="bg-slate-900 border border-slate-800 p-4 rounded-lg space-y-3">
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="font-bold text-emerald-400 uppercase tracking-wider text-[11px]">
+                        GENUINE STRENGTHS
+                      </span>
+                      <button
+                        onClick={() => {
+                          const newStrengths = [
+                            ...audit.strengths,
+                            { id: `s_${Date.now()}`, title: "New Hotel Strength", desc: "Description of the asset or location." },
+                          ];
+                          updateField("strengths", newStrengths);
+                        }}
+                        className="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-white px-2 py-1 rounded flex items-center gap-1"
+                      >
+                        <Plus className="w-3 h-3" /> Add Strength
+                      </button>
+                    </div>
+
+                    {audit.strengths.map((str, idx) => (
+                      <div key={str.id || idx} className="bg-slate-950 p-2.5 rounded border border-slate-800 space-y-1.5">
+                        <div className="flex justify-between items-center">
+                          <input
+                            type="text"
+                            value={str.title}
+                            onChange={(e) => {
+                              const list = [...audit.strengths];
+                              list[idx].title = cleanText(e.target.value);
+                              updateField("strengths", list);
+                            }}
+                            className="w-5/6 bg-transparent font-bold text-white text-xs border-b border-slate-700 focus:outline-none"
+                            placeholder="Strength Title"
+                          />
+                          <button
+                            onClick={() => {
+                              const list = audit.strengths.filter((_, i) => i !== idx);
+                              updateField("strengths", list);
+                            }}
+                            className="text-red-400 hover:text-red-300 p-1"
+                          >
+                            <Trash2 className="w-3 h-3" />
+                          </button>
+                        </div>
+                        <textarea
+                          value={str.desc}
+                          rows={2}
+                          onChange={(e) => {
+                            const list = [...audit.strengths];
+                            list[idx].desc = cleanText(e.target.value);
+                            updateField("strengths", list);
+                          }}
+                          className="w-full bg-transparent text-slate-300 text-[11px] focus:outline-none"
+                          placeholder="Strength details"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Mistakes */}
+                  <div className="bg-slate-900 border border-slate-800 p-4 rounded-lg space-y-3">
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="font-bold text-red-400 uppercase tracking-wider text-[11px]">
+                        WHAT THEY ARE DOING WRONG
+                      </span>
+                      <button
+                        onClick={() => {
+                          const newMistakes = [
+                            ...audit.mistakes,
+                            { id: `m_${Date.now()}`, title: "New Critical Mistake", desc: "Description of the operational bottleneck." },
+                          ];
+                          updateField("mistakes", newMistakes);
+                        }}
+                        className="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-white px-2 py-1 rounded flex items-center gap-1"
+                      >
+                        <Plus className="w-3 h-3" /> Add Mistake
+                      </button>
+                    </div>
+
+                    {audit.mistakes.map((mis, idx) => (
+                      <div key={mis.id || idx} className="bg-slate-950 p-2.5 rounded border border-slate-800 space-y-1.5">
+                        <div className="flex justify-between items-center">
+                          <input
+                            type="text"
+                            value={mis.title}
+                            onChange={(e) => {
+                              const list = [...audit.mistakes];
+                              list[idx].title = cleanText(e.target.value);
+                              updateField("mistakes", list);
+                            }}
+                            className="w-5/6 bg-transparent font-bold text-red-300 text-xs border-b border-slate-700 focus:outline-none"
+                            placeholder="Mistake Title"
+                          />
+                          <button
+                            onClick={() => {
+                              const list = audit.mistakes.filter((_, i) => i !== idx);
+                              updateField("mistakes", list);
+                            }}
+                            className="text-red-400 hover:text-red-300 p-1"
+                          >
+                            <Trash2 className="w-3 h-3" />
+                          </button>
+                        </div>
+                        <textarea
+                          value={mis.desc}
+                          rows={2}
+                          onChange={(e) => {
+                            const list = [...audit.mistakes];
+                            list[idx].desc = cleanText(e.target.value);
+                            updateField("mistakes", list);
+                          }}
+                          className="w-full bg-transparent text-slate-300 text-[11px] focus:outline-none"
+                          placeholder="Mistake details"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 5: Live Google Search Simulation */}
               <div>
                 <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-slate-300 pb-2 border-b border-slate-800 mb-4 flex items-center gap-2">
                   <Search className="w-4 h-4 text-cyan-400" />
-                  4. Google Search Simulation
+                  5. Google Search Simulation
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs mb-4">
@@ -978,43 +1268,152 @@ h1, h2, h3 { text-transform: uppercase; }
                   </div>
                 </div>
 
-                <div className="bg-slate-900 border border-slate-800 p-4 rounded-lg space-y-4 text-xs">
-                  <div>
-                    <span className="font-mono text-[10px] text-red-400 font-bold block mb-1">
-                      CLIENT RESULT STATUS (WHAT TRAVELERS SEE FOR THIS HOTEL)
-                    </span>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                  {/* Competitor 1 */}
+                  <div className="bg-slate-900 border border-slate-800 p-3.5 rounded-lg space-y-2">
+                    <span className="font-mono text-[10px] text-slate-400 font-bold block">COMPETITOR #1</span>
+                    <input
+                      type="text"
+                      value={audit.competitor1.title}
+                      onChange={(e) =>
+                        updateField("competitor1", { ...audit.competitor1, title: cleanText(e.target.value) })
+                      }
+                      className="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-white font-bold"
+                      placeholder="Competitor Title"
+                    />
+                    <textarea
+                      value={audit.competitor1.snippet}
+                      rows={3}
+                      onChange={(e) =>
+                        updateField("competitor1", { ...audit.competitor1, snippet: cleanText(e.target.value) })
+                      }
+                      className="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-slate-300 text-[11px]"
+                      placeholder="Rating and snippet"
+                    />
+                  </div>
+
+                  {/* Competitor 2 */}
+                  <div className="bg-slate-900 border border-slate-800 p-3.5 rounded-lg space-y-2">
+                    <span className="font-mono text-[10px] text-slate-400 font-bold block">COMPETITOR #2</span>
+                    <input
+                      type="text"
+                      value={audit.competitor2.title}
+                      onChange={(e) =>
+                        updateField("competitor2", { ...audit.competitor2, title: cleanText(e.target.value) })
+                      }
+                      className="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-white font-bold"
+                      placeholder="Competitor Title"
+                    />
+                    <textarea
+                      value={audit.competitor2.snippet}
+                      rows={3}
+                      onChange={(e) =>
+                        updateField("competitor2", { ...audit.competitor2, snippet: cleanText(e.target.value) })
+                      }
+                      className="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-slate-300 text-[11px]"
+                      placeholder="Rating and snippet"
+                    />
+                  </div>
+
+                  {/* Client Result */}
+                  <div className="bg-slate-900 border border-red-900/60 p-3.5 rounded-lg space-y-2">
+                    <span className="font-mono text-[10px] text-red-400 font-bold block">CLIENT RESULT (BROKEN/GHOST)</span>
                     <input
                       type="text"
                       value={audit.clientSearchResult.title}
                       onChange={(e) =>
-                        updateField("clientSearchResult", {
-                          ...audit.clientSearchResult,
-                          title: cleanText(e.target.value),
-                        })
+                        updateField("clientSearchResult", { ...audit.clientSearchResult, title: cleanText(e.target.value) })
                       }
-                      className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-white font-bold mb-2"
-                      placeholder="Client property title"
+                      className="w-full bg-slate-950 border border-red-800 rounded p-1.5 text-red-300 font-bold"
+                      placeholder="Client Title"
                     />
                     <textarea
                       value={audit.clientSearchResult.snippet}
-                      rows={2}
+                      rows={3}
                       onChange={(e) =>
-                        updateField("clientSearchResult", {
-                          ...audit.clientSearchResult,
-                          snippet: cleanText(e.target.value),
-                        })
+                        updateField("clientSearchResult", { ...audit.clientSearchResult, snippet: cleanText(e.target.value) })
                       }
-                      className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-slate-300 text-xs"
-                      placeholder="Explain why travelers cannot find or book them"
+                      className="w-full bg-slate-950 border border-red-800 rounded p-1.5 text-slate-300 text-[11px]"
+                      placeholder="Why searchers skip or fail to find client"
                     />
                   </div>
+                </div>
+              </div>
+
+              {/* Section 6: Funnel Stages */}
+              <div>
+                <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-slate-300 pb-2 border-b border-slate-800 mb-4 flex items-center gap-2">
+                  <TrendingDown className="w-4 h-4 text-red-400" />
+                  6. Guest Drop-off Funnel Stages
+                </h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                  {audit.funnel.map((fn, idx) => (
+                    <div key={idx} className="bg-slate-900 border border-slate-800 p-3.5 rounded-lg space-y-2">
+                      <span className="font-mono text-[10px] text-slate-500 block">STAGE {idx + 1}</span>
+                      <div className="flex gap-2">
+                        <input
+                          type="text"
+                          value={fn.count}
+                          onChange={(e) => {
+                            const list = [...audit.funnel];
+                            list[idx].count = cleanText(e.target.value);
+                            updateField("funnel", list);
+                          }}
+                          className="w-1/2 bg-slate-950 border border-slate-700 rounded p-1.5 text-white font-mono font-bold"
+                          placeholder="Count"
+                        />
+                        <input
+                          type="number"
+                          value={fn.pct}
+                          onChange={(e) => {
+                            const list = [...audit.funnel];
+                            list[idx].pct = Number(e.target.value);
+                            updateField("funnel", list);
+                          }}
+                          className="w-1/2 bg-slate-950 border border-slate-700 rounded p-1.5 text-white font-mono"
+                          placeholder="Width %"
+                        />
+                      </div>
+                      <input
+                        type="text"
+                        value={fn.label}
+                        onChange={(e) => {
+                          const list = [...audit.funnel];
+                          list[idx].label = cleanText(e.target.value);
+                          updateField("funnel", list);
+                        }}
+                        className="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-white font-bold"
+                        placeholder="Stage Label"
+                      />
+                      <input
+                        type="text"
+                        value={fn.drop}
+                        onChange={(e) => {
+                          const list = [...audit.funnel];
+                          list[idx].drop = cleanText(e.target.value);
+                          updateField("funnel", list);
+                        }}
+                        className="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-slate-300 text-[11px]"
+                        placeholder="Drop-off reason"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
 
             </div>
 
             {/* Bottom Actions */}
-            <div className="mt-10 pt-6 border-t border-slate-800 flex justify-end gap-3">
+            <div className="mt-10 pt-6 border-t border-slate-800 flex justify-between items-center">
+              <button
+                onClick={handleSaveDraft}
+                className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2.5 rounded-lg text-xs font-bold flex items-center gap-2 border border-slate-700 transition-all"
+              >
+                <Save className="w-4 h-4 text-blue-400" />
+                <span>{savedSuccess ? "Draft Saved to Storage!" : "Save Draft"}</span>
+              </button>
+
               <button
                 onClick={() => setActiveTab("preview")}
                 className="bg-white hover:bg-slate-100 text-slate-950 px-6 py-3 rounded-lg text-xs font-black uppercase tracking-wider flex items-center gap-2 shadow-lg transition-all"
@@ -1028,7 +1427,7 @@ h1, h2, h3 { text-transform: uppercase; }
         )}
 
         {/* ======================= TAB 2: LIVE PREVIEW (EXECUTIVE LETTERHEAD) ======================= */}
-        {activeTab === "preview" && (
+        {(isClientMode || activeTab === "preview") && (
           <div className="w-full max-w-[900px] bg-white text-slate-950 rounded-lg shadow-2xl border border-slate-200 overflow-hidden print-sheet p-8 sm:p-14">
             
             {/* Letterhead Header */}
@@ -1514,7 +1913,7 @@ h1, h2, h3 { text-transform: uppercase; }
                 {audit.roadmap.map((s, i) => (
                   <div key={i} className="border border-slate-200 bg-slate-50 rounded-md p-3.5">
                     <span className="font-mono text-[10px] font-extrabold text-slate-500 block">
-                      {s.wk || s.week}
+                      {s.week}
                     </span>
                     <h5 className="text-xs font-extrabold text-slate-950 mt-1 mb-1.5">
                       {s.title}
@@ -1591,4 +1990,3 @@ export default function AuditGeneratorPage() {
     </Suspense>
   );
 }
-

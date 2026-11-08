@@ -1,0 +1,117 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** Driver Dedicated Virtual Account & Wallet Mobile App (React Native iOS/Android & Web Settlement Console)  
+**Target Platforms:** Native Mobile App (React Native / Expo for Android & iOS) + Central Web Settlement Desk  
+**Prepared By:** Sales Cowboy Marketing Solutions (Enterprise Engineering Division)  
+**Date:** November 8, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE & OVERVIEW
+
+The objective of this engagement is to design, develop, deploy, and scale a specialized mobile fintech wallet application purpose-built for commercial transport drivers (cabs, interstate buses, tricycles, dispatch riders, and haulage truckers).
+
+In the Nigerian cash-to-digital mobility landscape, commercial drivers face major operational friction with bank transfers:
+* Traditional personal bank accounts fail to deliver immediate alerts while driving.
+* Drivers waste time waiting for bank SMS alerts or asking passengers to show debit screens, leading to arguments, traffic blockages, and vulnerability to fake transfer receipts.
+* Mixing personal finances with daily operating cash creates accounting chaos for fleet managers and transport unions.
+
+This platform solves these challenges by automatically provisioning every driver with a unique, dedicated Nigerian bank account number (dynamic NUBAN via Paystack Dedicated Virtual Accounts, Monnify, or Moniepoint Microfinance Bank) registered in their name.
+
+When a passenger sends money via instant bank transfer, the driver's in-app wallet is credited in real time via sub-second cloud webhooks, triggering an immediate loud audio chime and spoken voice credit alert so the driver confirms payment safely while operating the vehicle.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: Driver Mobile Application (React Native / Expo: Android & iOS)
+* **Driver Onboarding & Identity Verification (KYC):**
+  * Fast mobile onboarding using telephone number authentication (SMS OTP via Termii).
+  * Automated identity and BVN/NIN verification required by Central Bank of Nigeria (CBN) regulations to automatically issue dedicated virtual NUBAN accounts.
+* **Dedicated Virtual Bank Account Desk:**
+  * Prominent display of the driver's dedicated bank account number (e.g., Wema Bank, Sterling Bank, or Moniepoint MFB) and account name.
+  * One-tap copy button for fast sharing via SMS or WhatsApp.
+  * **Printable / Displayable QR Code:** Generates a high-contrast QR code matching the driver's payment credentials that can be laminated and displayed on the vehicle dashboard, sun visor, or headrest for passengers to scan.
+* **Instant Wallet & Audible Credit Alerts:**
+  * Real-time wallet balance that updates sub-second upon receipt of an incoming bank transfer webhook.
+  * **Audible Voice / Loud Chime Credit Alert:** Plays a high-volume confirmation chime and spoken notification (e.g., *"Payment received: Two Thousand Naira"*) allowing drivers to verify fare settlement without taking their eyes off the road.
+  * Push notifications displaying passenger name, amount transferred, and transaction reference.
+* **Instant Payout & Bank Withdrawal:**
+  * Link verified personal settlement bank account (NUBAN check with instant account name confirmation).
+  * One-tap instant withdrawal from the driver wallet to their personal bank account with transparent fee breakdowns.
+  * Automated scheduled settlement option (e.g., daily midnight sweep to personal bank account).
+* **Double-Entry Transaction Ledger:**
+  * Complete, chronological transaction history filtering incoming passenger transfers, platform service deductions, and bank withdrawals.
+  * Downloadable daily and weekly earnings statements.
+
+---
+
+### Module 2: Central Administrative & Settlement Dashboard (Next.js Web Portal)
+* **Driver Account Ledger & KYC Auditing:**
+  * Master administrative registry of all registered drivers, verified identity credentials, active virtual account mappings, and current wallet balances.
+* **Live Inflow & Webhook Settlement Monitor:**
+  * Real-time ledger recording every incoming passenger bank transfer, matched webhook transaction reference, and outbound withdrawal request.
+  * Instant search and filter by driver name, vehicle plate number, or bank transaction ID.
+* **Automated Commission & Platform Fee Engine:**
+  * Configurable monetization engine allowing the fleet operator to deduct a platform fee per incoming transfer (e.g., flat ₦50 or percentage split such as 2% to 5%) prior to crediting the driver's spendable wallet balance.
+  * Automated platform revenue tracking and commission accumulation reports.
+* **User Controls, Risk Mitigation & Dispute Desk:**
+  * One-click wallet freeze/unfreeze controls for fraud prevention or compliance issues.
+  * Investigation console for disputed transfers, uncredited webhooks, and manual bank reconciliation tools.
+  * One-click CSV export of transaction ledgers for accounting and external tax audits.
+
+---
+
+## 3. PROPOSED TECHNICAL ARCHITECTURE
+
+The platform is engineered on an enterprise, bank-grade architecture maintaining strict double-entry ledger integrity:
+
+* **Mobile Application (Driver Client):** Built using **React Native (Expo)** with TypeScript. Compiles to native binary packages for **Google Android** (`.apk`/`.aab`) and **Apple iOS** (`.ipa`), featuring native audio playback engines, background push notification listeners, and offline credential caching.
+* **Web Admin Console:** Built with **Next.js 15 (React)** styled with Tailwind CSS, delivering a responsive desktop and tablet portal for settlement officers.
+* **Backend API & Webhook Dispatcher:** Engineered in **Node.js (NestJS)** deployed on high-availability cloud infrastructure with idempotent webhook handlers to guarantee zero duplicate credits.
+* **Database & Ledger:** **PostgreSQL** relational database with strict ACID transaction boundaries and double-entry bookkeeping ledgers to eliminate phantom balances or reconciliation discrepancies.
+* **Banking Partner Infrastructure:** Direct API integration with **Paystack Dedicated Virtual Accounts (DVA)** or **Monnify Reserve Account APIs** for automated, compliant NUBAN provisioning.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
+
+*(Third-party infrastructure and banking fees are paid directly by the client to service providers at transparent cost)*
+
+| Infrastructure / Service Component | Operational Purpose | Estimated Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server & DB (Railway.app)** | Runs API backend, webhook listeners, and PostgreSQL ledger | **$5.00 to $10.00 / month** |
+| **Virtual Account Inflow Fee** | Bank transfer processing fee charged by fintech provider | **~1.0% to 1.5% capped (Standard fintech rate)** |
+| **SMS OTP Verification (Termii)** | Driver telephone authentication and security PINs | **Pay-as-you-go (~₦5.00 per SMS)** |
+| **Custom Domain & SSL Protection** | Brand domain name (.com or .ng) with Cloudflare SSL | **~$15.00 to $25.00 / year** |
+| **Google Play Developer Account (Android)** | One-time Android publishing registration fee to Google | **$25.00 (One-time fee to Google)** |
+| **Apple Developer Program (iOS App Store)** | Annual iOS publishing registration fee to Apple | **$99.00 / year (Paid directly to Apple)** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Project Development Investment:** **₦650,000** (Six Hundred and Fifty Thousand Naira Only)
+* **Project Delivery Timeline:** **3 to 4 Weeks** from the Effective Date of agreement.
+
+### Structured Milestone Payment Schedule
+
+The development investment is divided across three verified delivery milestones:
+
+1. **Milestone 1: 50% Mobilization Deposit (₦325,000)**  
+   * *Settlement Timing:* Paid upon signing of development contract.  
+   * *Deliverables:* Technical system architecture, database schema design, React Native mobile project setup, and complete UI/UX responsive screen designs for the driver app.
+2. **Milestone 2: 30% Integration & Staging Milestone (₦195,000)**  
+   * *Settlement Timing:* Paid upon successful integration of the banking API, virtual account generation, webhook credit listener, and withdrawal testing.  
+   * *Deliverables:* Working virtual account provisioning, webhook receiver, loud audio credit notifications, and staging withdrawal execution.
+3. **Milestone 3: 20% Production Handover & Store Build (₦130,000)**  
+   * *Settlement Timing:* Paid upon final production build export, Web Admin Dashboard live deployment, staff training, and handover of documentation.  
+   * *Deliverables:* Production Android APK/AAB and iOS build packages, live cloud deployment, administrative credentials, and commencement of the post-launch warranty period.
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+
+Following production handover, Sales Cowboy provides **thirty (30) days of complimentary technical warranty support**, covering:
+* Rapid bug fixes and system stability adjustments for all features defined in this proposal.
+* Server uptime monitoring, webhook reliability surveillance, and database indexing.
+* Administrative onboarding support for fleet settlement personnel.

@@ -1,0 +1,127 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** On-Demand Home Healthcare & Doctor Dispatch Platform  
+**Target Delivery:** Patient Web/PWA App + Healthcare Provider Portal + Central Admin Dashboard  
+**Prepared By:** Sales Cowboy Marketing Solutions (Enterprise Engineering Division)  
+**Date:** November 8, 2026  
+
+---
+
+## 1. PROJECT OVERVIEW & EXECUTIVE SUMMARY
+
+The objective of this engagement is to engineer and deploy a specialized on-demand home healthcare and medical practitioner dispatch platform.
+
+In urban centers across Nigeria, traditional hospital outpatient consultations are hampered by severe traffic gridlock, long hospital waiting times, and overcrowded clinical waiting rooms. For working professionals, elderly parents, chronic illness patients, and mothers with young children, visiting a hospital for routine checkups, nursing care, lab sample collection, or physiotherapy is exhausting and stressful.
+
+This platform bridges that gap by enabling patients and families to easily browse, book, schedule, and pay for accredited medical personnel (general practitioners, registered nurses, certified physiotherapists, and phlebotomists / lab technicians) to deliver healthcare directly in their homes.
+
+The ecosystem provides an intuitive, friction-free booking flow for patients while offering medical professionals clear visit itineraries, automated fee collection, and giving the business owner comprehensive clinical oversight and commission tracking.
+
+---
+
+## 2. CORE PLATFORM MODULES
+
+### Module 1: Patient Application (Mobile-Responsive Web / PWA)
+* **Medical Service Catalog:**
+  * Browse categorized home healthcare services:
+    * *Doctor Consultation at Home:* General health assessments, basic diagnosis, prescriptions, and referral letters.
+    * *Nursing Care:* Wound dressing, injections, post-operative care, IV fluids, catheterization, and vital signs monitoring.
+    * *Home Lab Sampling & Diagnostics:* Phlebotomist visits for blood, urine, or swab sample collection with digital lab results delivery.
+    * *Physical Therapy & Rehabilitation:* Stroke recovery, orthopedic physiotherapy, and mobility assistance.
+    * *Elderly & Chronic Care:* Scheduled recurring nursing visits for hypertensive, diabetic, or geriatric patients.
+* **Streamlined Home Visit Booking Engine:**
+  * Select medical specialist category and specific clinical service.
+  * Enter home address, landmark, and patient contact phone number with geolocation pinning.
+  * Flexible Scheduling: Choose instant emergency dispatch or schedule a specific date and time slot.
+  * Patient Clinical Notes: Input primary symptoms, known allergies, current medications, and patient age for the attending practitioner.
+* **Upfront Digital Payments & Wallet:**
+  * Secure in-app payment integration via Paystack and Moniepoint (Card, Bank Transfer, USSD) to confirm and lock in appointments.
+  * Transparent pricing with breakdown of base consultation fee, travel/transport allowance, and consumables.
+* **Live Visit Status & Clinical Records:**
+  * Real-time tracking of request status (`Pending Assignment`, `Practitioner Assigned`, `Practitioner En Route`, `Visit in Progress`, `Completed`).
+  * Access to past visit summaries, prescribed medications, and digital medical invoices.
+
+---
+
+### Module 2: Medical Practitioner Portal (Web / Mobile Interface)
+* **Practitioner Vetting & Credential Onboarding:**
+  * Comprehensive registration desk collecting medical license numbers, educational credentials (MBBS, Nursing Council of Nigeria certificates, Medical Rehabilitation Therapists Board certs), government ID, and bank account details (NUBAN) for automated payouts.
+* **Duty Toggle & Dispatch Desk:**
+  * Easy availability toggle (`Online` / `Offline`).
+  * Real-time audio and visual notifications for new home service requests within their geographical coverage radius.
+  * Full visit preview: patient location/neighborhood, service required, patient symptoms, and payout amount.
+  * Accept or decline requests with a single tap.
+* **Visit Execution & Clinical Notes:**
+  * Navigation integration passing patient location to Google Maps or Waze.
+  * Mark appointment checkpoints: `En Route` -> `Arrived at Patient Home` -> `Visit in Progress` -> `Completed`.
+  * Secure clinical summary form: record vitals (BP, pulse, temperature), clinical observations, administered treatments, and follow-up recommendations.
+* **Earnings Wallet & Payout Ledger:**
+  * Overview of completed home visits, daily/weekly accumulated earnings, and automated payout requests to their registered Nigerian bank account.
+
+---
+
+### Module 3: Central Operations & Master Admin Dashboard
+* **Medical Staff Credential Verification Desk:**
+  * Administrative review console to audit, verify, approve, or reject healthcare provider registrations and license validity before authorizing home visits.
+* **Central Dispatch & Booking Calendar:**
+  * Master control desk displaying all scheduled, active, and completed home visits across operational coverage zones.
+  * Manual override dispatch: ability for operations staff to reassign visits if a practitioner is delayed or unavailable.
+* **Financial Ledger, Commissions & Tariff Control:**
+  * Set service pricing, base consultation tariffs, and platform service commission rates (e.g., 15% to 25% per completed visit).
+  * Automated calculation of practitioner payout splits and platform revenue tracking.
+* **Customer Support & Medical Records Log:**
+  * Manage patient inquiries, handle rescheduled bookings, issue refunds, and inspect clinical summary records for quality assurance.
+
+---
+
+## 3. PROPOSED TECHNICAL ARCHITECTURE
+
+To ensure high performance, top-tier security for sensitive medical data, and instant accessibility without app store download barriers:
+
+* **Frontend Apps (Patient & Practitioner):** Built with **Next.js (React)** styled with Tailwind CSS, delivered as an installable **Progressive Web App (PWA)**. Works smoothly across iOS and Android smartphones without requiring immediate App Store submissions or large downloads.
+* **Backend API & Workflows:** **Node.js (NestJS)** deployed on high-availability cloud infrastructure to manage secure role-based access control, appointment status state machines, and real-time alerts.
+* **Database & Encrypted Storage:** **PostgreSQL** relational database for patient accounts, practitioner registries, and visit ledgers, with encrypted clinical notes and file storage.
+* **Communications & Alerts:** Automated SMS and WhatsApp notifications (via Termii API) keeping patients and practitioners updated at every milestone.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY COSTS
+
+*(These infrastructure and third-party fees are paid directly by the client to service providers at transparent cost)*
+
+| Infrastructure / Service Component | Operational Purpose | Estimated Initial Operational Cost |
+| :--- | :--- | :--- |
+| **Cloud Hosting & Backend API (Railway.app)** | Runs core application server, dispatch workflows, and database | **$5.00 to $10.00 / month** *(Scales dynamically with volume)* |
+| **Database Cluster (PostgreSQL)** | Secure, encrypted relational storage for patient records and logs | **Included in baseline cloud tier** *(~$5.00 / month)* |
+| **Domain Name & Edge SSL (.ng / .com via Cloudflare)** | Custom domain with Cloudflare SSL certificate and DDoS protection | **~$12.00 to $20.00 / year** |
+| **SMS OTP & Visit Alerts (Termii)** | Appointment confirmations and practitioner en-route alerts | **Pay-as-you-go** *(~₦5.00 per SMS)* |
+| **Payment Gateway Integration (Paystack / Moniepoint)** | In-app patient fee collection and practitioner payouts | **1.5% per successful local transaction** *(Standard gateway fee)* |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & TIMELINE
+
+* **Total Project Development Investment:** **₦650,000** (Six Hundred and Fifty Thousand Naira Only)
+* **Project Delivery Timeline:** **3 to 4 Weeks** from the Effective Date of agreement.
+
+### Structured Milestone Payment Schedule
+
+The development investment is divided across three verified delivery milestones:
+
+1. **Milestone 1: 50% Mobilization Deposit (₦325,000)**  
+   * *Settlement Timing:* Payable upon signing of the development agreement.  
+   * *Deliverables:* Database schema design, systems architecture setup, medical service catalog modeling, and complete UI/UX responsive interface design for the Patient Web/PWA App.
+2. **Milestone 2: 30% Functional Staging Milestone (₦195,000)**  
+   * *Settlement Timing:* Payable upon deployment of the core backend, practitioner onboarding desk, dispatch workflow, and payment gateway integration on the staging environment.  
+   * *Deliverables:* Functional patient booking flow, online/offline practitioner toggle, Paystack payment processing, and visit status tracking.
+3. **Milestone 3: 20% Handover & Production Go-Live (₦130,000)**  
+   * *Settlement Timing:* Payable upon production deployment, custom domain linkage, live payment testing, and administrative staff handover.  
+   * *Deliverables:* Live deployment on production cloud infrastructure, Master Admin dashboard delivery, administrative training, and source code handover.
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+
+Following production go-live, the development team provides **thirty (30) days of complimentary technical warranty support**, covering:
+* Rapid bug fixes and system stability adjustments for all features defined in this proposal.
+* Server uptime monitoring, database indexing, and API security surveillance.
+* Administrative onboarding support for healthcare operations personnel.

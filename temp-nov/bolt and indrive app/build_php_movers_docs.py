@@ -452,21 +452,21 @@ html_content = f"""<!DOCTYPE html>
     <!-- Title Block -->
     <div class="title-block">
       <span class="badge">Commercial & Technical Proposal</span>
-      <h2>On-Demand Moving, Relocation & Truck Haulage Platform</h2>
-      <div class="subtext">Bolt & inDrive Hybrid Fare Negotiation & Instant Dispatch Architecture</div>
+      <h2>On-Demand Ride-Hailing & Fare Negotiation Platform</h2>
+      <div class="subtext">Bolt & inDrive Hybrid Fare Negotiation & Instant Dispatch Mobility Ecosystem</div>
     </div>
 
     <!-- Recipient Info Grid -->
     <div class="recipient-grid">
       <div class="recipient-box">
         <div class="label">Prepared Exclusively For (Client)</div>
-        <div class="name">PHP Movers (PHP Movers & Logistics Limited)</div>
+        <div class="name">PHP Movers (PHP Movers Limited)</div>
         <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">Attn: Executive Management & Operations Directorate</div>
       </div>
       <div class="recipient-box">
         <div class="label">Project Scope & Target Platforms</div>
-        <div class="name">Tri-Tier Mobility & Moving Ecosystem</div>
-        <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">Customer Web/PWA App + Driver Partner App + Master Admin Desk</div>
+        <div class="name">Tri-Tier Ride-Hailing Ecosystem</div>
+        <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">Passenger Web/PWA App + Driver Partner App + Master Admin Desk</div>
       </div>
     </div>
 
@@ -474,25 +474,25 @@ html_content = f"""<!DOCTYPE html>
     <div class="section">
       <div class="section-title">1. Executive Summary & Hybrid Architecture</div>
       <p>
-        The objective of this engagement is to deploy a dedicated on-demand moving, relocation, and freight negotiation platform custom-engineered for <strong>PHP Movers</strong>. Traditional ride-hailing and parcel applications fail in commercial moving because haulage jobs are fundamentally heterogeneous: transporting a single washing machine requires a different operational flow than a complete 3-bedroom apartment relocation or commercial pallet freight.
-      </p>
-      <p>
-        To solve this, the PHP Movers ecosystem unifies the two most proven transport models into a single operational interface:
+        The objective of this engagement is to engineer, deploy, and scale a proprietary on-demand passenger mobility and ride-hailing platform custom-built for <strong>PHP Movers</strong>. The system is engineered specifically for the Nigerian urban transport ecosystem, merging the operational speed of <strong>Bolt</strong> (quick matching, live trip tracking, digital receipts) with the commercial flexibility of <strong>inDrive</strong> (fair fare bidding and passenger-driver price negotiation):
       </p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0 16px;">
         <div style="background: #f8fafc; border: 1px solid var(--border); border-top: 3px solid #0f172a; padding: 12px; border-radius: 6px;">
           <div style="font-weight: 800; font-size: 12px; color: var(--primary); margin-bottom: 4px;">The Bolt Model (Instant Dispatch)</div>
           <p style="font-size: 11.5px; margin-bottom: 0; color: #475569;">
-            Engineered for standardized, rapid dispatches (cargo vans, pickup trucks, single-item moves) with upfront automated pricing calculated by distance and vehicle category.
+            Engineered for commuters seeking an immediate ride. Automated distance-and-time pricing dispatches the nearest active driver instantly with zero price negotiation.
           </p>
         </div>
         <div style="background: #f8fafc; border: 1px solid var(--border); border-top: 3px solid #b45309; padding: 12px; border-radius: 6px;">
           <div style="font-weight: 800; font-size: 12px; color: var(--accent); margin-bottom: 4px;">The inDrive Model (Fare Bidding)</div>
           <p style="font-size: 11.5px; margin-bottom: 0; color: #475569;">
-            Purpose-built for residential relocations and bulky freight. Customers describe items, floor level, and propose a budget. Verified movers bid and counter-offer in real time.
+            Passengers propose their starting fare budget. Nearby active drivers receive the ride request and can accept, counter-bid, or decline in real time.
           </p>
         </div>
       </div>
+      <p>
+        The platform connects everyday passengers with verified independent drivers while giving PHP Movers automated fee collection, commission management, and real-time operational oversight.
+      </p>
     </div>
 
     <!-- Section 2: Core Platform Modules (Module 1 & 2) -->
@@ -502,30 +502,32 @@ html_content = f"""<!DOCTYPE html>
       <!-- Module 1 -->
       <div class="module-card">
         <div class="module-header">
-          <div class="module-title">Module 1: Customer Moving & Freight Application (Web / Mobile PWA)</div>
-          <span class="module-badge">Customer Facing</span>
+          <div class="module-title">Module 1: Passenger Application (Web / Mobile PWA)</div>
+          <span class="module-badge">Passenger Facing</span>
         </div>
         <ul class="feature-list">
-          <li><strong>Moving Classification:</strong> Express Parcel/Light Haulage (Vans/Pickups), Residential Relocation (1.5-Ton to 3-Ton Trucks), and Heavy Industrial Haulage (5-Ton to 10-Ton Flatbeds).</li>
-          <li><strong>Cargo Manifest Builder:</strong> Itemized checklist (Furniture, Appliances, Boxes, Fragile Goods), floor levels, elevator availability, and photo uploads for accurate driver appraisal.</li>
-          <li><strong>Dual Booking Options:</strong> Instant automated pricing (Bolt style) or real-time fare bidding with nearby truckers (inDrive style).</li>
-          <li><strong>Real-Time GPS Tracking:</strong> Live vehicle map updates, ETA countdown, driver contact details, vehicle plate number, and mover verification badges.</li>
-          <li><strong>Delivery Security OTP:</strong> 4-digit completion code provided to customer, required by driver upon cargo offload to confirm completion and release funds.</li>
+          <li><strong>Trip Booking & Route Selection:</strong> Interactive map interface powered by OpenStreetMap and Leaflet to select pickup and drop-off points with automatic route and distance computation.</li>
+          <li><strong>Dual Booking Modes (Bolt + inDrive Mechanics):</strong>
+            <br>• <em>Standard Match (Bolt Model):</em> Instant automated dispatch based on distance-and-time pricing.
+            <br>• <em>Fare Bidding (inDrive Model):</em> Passenger proposes a fare offer; nearby drivers can accept, counter-offer, or decline in real time.
+          </li>
+          <li><strong>Driver Tracking & Safety:</strong> Real-time vehicle location tracking as the driver approaches, with estimated time of arrival (ETA), vehicle details (make, model, color, plate number), and driver rating.</li>
+          <li><strong>Direct Communication & Trip Completion:</strong> In-app calling and messaging button connecting rider and driver, and automatic digital trip receipts upon completion.</li>
+          <li><strong>Start-of-Trip OTP Verification:</strong> 4-digit security PIN provided to the passenger, required by the driver before initiating the trip.</li>
         </ul>
       </div>
 
       <!-- Module 2 -->
       <div class="module-card">
         <div class="module-header">
-          <div class="module-title">Module 2: Driver, Trucker & Mover Partner Application (Web / Mobile PWA)</div>
-          <span class="module-badge">Partner Facing</span>
+          <div class="module-title">Module 2: Driver Partner Application (Web / Mobile PWA)</div>
+          <span class="module-badge">Driver Facing</span>
         </div>
         <ul class="feature-list">
-          <li><strong>Driver & Truck Onboarding:</strong> Digital verification portal for driver license, vehicle particulars, roadworthiness certs, truck tonnage, and NUBAN bank accounts.</li>
-          <li><strong>Real-Time Job Radar & Bidding Desk:</strong> Audio/visual alerts for moving manifests in radius with full cargo preview and one-tap counter-bidding (+₦3,000, +₦5,000, +₦10,000).</li>
-          <li><strong>Navigation Bridge:</strong> One-touch handover of route coordinates to Google Maps or Waze for turn-by-turn truck navigation.</li>
-          <li><strong>Move Condition Verification:</strong> Drivers capture photo proofs of pre-existing cargo condition before loading to protect against false damage claims.</li>
-          <li><strong>Earnings & Commission Wallet:</strong> Live tracking of gross move revenues, automated commission deductions for PHP Movers, and instant NUBAN payouts.</li>
+          <li><strong>Driver Onboarding & Verification:</strong> Digital registration portal collecting commercial driver license, vehicle particulars, roadworthiness documents, and bank account details (NUBAN) for payouts.</li>
+          <li><strong>Trip Dispatch & Bidding Terminal:</strong> Toggle online/offline status, audio and visual alerts for incoming passenger requests in radius, and one-tap bidding to accept the proposed fare or counter with a customized price.</li>
+          <li><strong>Turn-by-Turn Navigation Bridge:</strong> One-touch handover to Google Maps or Waze on the driver's phone for turn-by-turn route navigation.</li>
+          <li><strong>Earnings & Commission Wallet:</strong> Daily and weekly earnings summary, trip logs, and tracking of platform commission deductions.</li>
         </ul>
       </div>
     </div>
@@ -541,11 +543,10 @@ html_content = f"""<!DOCTYPE html>
           <span class="module-badge">Command & Control</span>
         </div>
         <ul class="feature-list">
-          <li><strong>Partner Verification Desk:</strong> Administrative verification, approval, or rejection of driver documents and vehicle inspections before granting live access.</li>
-          <li><strong>Fleet Dispatch Monitor:</strong> Live geographical control map tracking all online vehicles, active moves, loading jobs, and in-transit trucks across Nigeria.</li>
-          <li><strong>Dynamic Commission & Tariff Engine:</strong> Set base dispatch rates, per-kilometer charges, helper crew surcharges, and PHP Movers commission rates (10% to 15%).</li>
-          <li><strong>Financial Ledger & Split Settlements:</strong> Centralized accounting tracking total Gross Merchandise Value (GMV), net commission earnings, and gateway settlements.</li>
-          <li><strong>Dispute & Claims Resolution:</strong> Incident logging for transit delays, damage claims, SOS alerts, and user ratings oversight.</li>
+          <li><strong>Driver & Vehicle Approval Desk:</strong> Verify, approve, or reject new driver registrations and inspect vehicle document uploads before granting platform access.</li>
+          <li><strong>Live Fleet & Dispatch Monitor:</strong> Live administrative map view displaying all active trips, online drivers, and completed journeys.</li>
+          <li><strong>Commission Engine:</strong> Set dynamic platform service commission rates (e.g., 10% to 15% per completed trip) with cash-trip commission deduction from driver balances.</li>
+          <li><strong>User Management & Dispute Resolution:</strong> Track user ratings, handle trip disputes, manage SOS/emergency incident logs, and deactivate non-compliant accounts.</li>
         </ul>
       </div>
     </div>
@@ -554,13 +555,13 @@ html_content = f"""<!DOCTYPE html>
     <div class="section">
       <div class="section-title">3. Recommended Technical Architecture</div>
       <p>
-        The platform is built on an enterprise, cost-controlled stack that eliminates expensive proprietary map licensing and delivers high sub-second bidding performance:
+        To deliver high performance within a cost-effective budget, the platform avoids high-cost proprietary mapping licenses and builds on a lightweight, battery-efficient stack:
       </p>
       <ul class="feature-list">
-        <li><strong>Frontend PWA & Mobile APK:</strong> Next.js (React) + Tailwind CSS, compiled as installable Progressive Web Apps (PWAs) with zero download friction and lightweight footprint.</li>
-        <li><strong>Real-Time Bidding API:</strong> Node.js (NestJS) with high-concurrency WebSockets for instant counter-offer delivery and sub-second room synchronizations.</li>
-        <li><strong>Database & Caching:</strong> PostgreSQL for relational financial ledgers and trip archives; Redis for lightning-fast live GPS coordinates and active matching rooms.</li>
-        <li><strong>Cost-Controlled Maps:</strong> Leaflet / OpenStreetMap / MapLibre routing to avoid prohibitive recurring Google Maps API bills.</li>
+        <li><strong>Frontend Apps (Passenger & Driver):</strong> Developed in <strong>Next.js (React)</strong> styled with Tailwind CSS, packaged as installable <strong>Progressive Web Apps (PWAs)</strong> or lightweight Android APKs. This ensures zero download friction, small storage footprints on budget Android smartphones, and instant updates without app store review delays.</li>
+        <li><strong>Backend API & Real-Time Sockets:</strong> <strong>Node.js (NestJS) with WebSockets</strong> hosted on dedicated cloud worker dynos, handling sub-second bid updates, ride dispatch alerts, and location pings.</li>
+        <li><strong>Database & Caching:</strong> <strong>PostgreSQL</strong> for immutable trip ledgers and user records, paired with <strong>Redis</strong> for active driver coordinates and live room matching.</li>
+        <li><strong>Cost-Controlled Geospatial Mapping:</strong> Open-source tile routing (Leaflet / OpenStreetMap / MapLibre) to ensure map views do not generate heavy recurring Google Maps API bills.</li>
       </ul>
     </div>
 
@@ -578,39 +579,39 @@ html_content = f"""<!DOCTYPE html>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Cloud Server (API & WebSockets)</strong></td>
-            <td>Dedicated backend and bidding logic on Railway.app</td>
+            <td><strong>Cloud Server (Backend API)</strong></td>
+            <td>Runs core backend and dispatch logic on Railway.app</td>
             <td class="highlight-cell">$5.00 - $10.00 / month</td>
           </tr>
           <tr>
             <td><strong>Database & Cache (PostgreSQL + Redis)</strong></td>
-            <td>Secure trip ledgers, user accounts, and live coordinates</td>
-            <td class="highlight-cell">Included in cloud tier (~$5/mo)</td>
+            <td>Stores user accounts, trip ledgers, and live sessions</td>
+            <td class="highlight-cell">Included in cloud tier (~$5 - $10/mo total)</td>
           </tr>
           <tr>
-            <td><strong>Custom Domain & SSL Security</strong></td>
-            <td>phpmovers.ng / phpmovers.com with Cloudflare CDN & SSL</td>
+            <td><strong>Domain Name & Edge Security</strong></td>
+            <td>Custom domain (e.g., .ng or .com) + Cloudflare SSL</td>
             <td class="highlight-cell">~$12.00 - $20.00 / year</td>
           </tr>
           <tr>
-            <td><strong>SMS OTP Verification (Termii)</strong></td>
-            <td>Phone number verification and transit security alerts</td>
-            <td class="highlight-cell">Pay-as-you-go (~₦5.00 / SMS)</td>
+            <td><strong>SMS OTP / Phone Verification</strong></td>
+            <td>User phone number verification via Termii</td>
+            <td class="highlight-cell">Pay-as-you-go (~₦5.00 per SMS)</td>
           </tr>
           <tr>
-            <td><strong>Geospatial Routing (OSM / Leaflet)</strong></td>
-            <td>Map rendering, route paths, and distance computation</td>
+            <td><strong>Map Routing & Tile Requests</strong></td>
+            <td>Open-source map tiles (Leaflet / OSM)</td>
             <td class="highlight-cell">$0.00 (Free baseline tier)</td>
           </tr>
           <tr>
-            <td><strong>Payment Gateway (Paystack)</strong></td>
-            <td>In-app customer payments and wallet top-ups</td>
+            <td><strong>Payment Gateway Integration</strong></td>
+            <td>Paystack / Moniepoint for in-app wallet top-ups</td>
             <td class="highlight-cell">1.5% per local transaction</td>
           </tr>
           <tr>
             <td><strong>Google Play Developer Account</strong></td>
-            <td>One-off registration fee for Android APK publishing</td>
-            <td class="highlight-cell">$25.00 (One-time to Google)</td>
+            <td>One-time account fee if deploying to Google Play Store</td>
+            <td class="highlight-cell">$25.00 (One-off payment to Google)</td>
           </tr>
         </tbody>
       </table>
@@ -642,17 +643,17 @@ html_content = f"""<!DOCTYPE html>
         <tbody>
           <tr>
             <td><strong>1. Mobilization Deposit</strong></td>
-            <td>System architecture, database schema, vehicle categorization, and complete UI/UX responsive designs for Customer & Driver Apps.</td>
+            <td>Paid upon signing of development agreement. Covers system architecture, database schema, and complete UI/UX interface design.</td>
             <td class="highlight-cell">50% (₦600,000)</td>
           </tr>
           <tr>
-            <td><strong>2. Functional Staging</strong></td>
-            <td>Working WebSocket bidding engine (inDrive model), automated dispatch (Bolt model), driver onboarding portal, and interactive mapping.</td>
+            <td><strong>2. Functional Staging Milestone</strong></td>
+            <td>Paid upon deployment of the core backend, driver bidding logic, and real-time mapping dispatch to the staging environment.</td>
             <td class="highlight-cell">30% (₦360,000)</td>
           </tr>
           <tr>
-            <td><strong>3. Production Handover</strong></td>
-            <td>Live cloud production deployment, custom domain linkage, Paystack integration, Master Admin desk delivery, and 30-day warranty.</td>
+            <td><strong>3. Production Handover & Go-Live</strong></td>
+            <td>Paid upon live cloud deployment, domain linking, payment gateway verification, administrative training, and source code delivery.</td>
             <td class="highlight-cell">20% (₦240,000)</td>
           </tr>
         </tbody>
@@ -677,7 +678,7 @@ html_content = f"""<!DOCTYPE html>
           <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 24px;">For: PHP Movers (Client)</div>
           <div style="border-bottom: 1px solid #475569; width: 80%; margin-bottom: 6px;"></div>
           <div style="font-size: 11px; font-weight: 700; color: var(--primary);">Authorized Executive Representative</div>
-          <div style="font-size: 10px; color: var(--text-muted);">PHP Movers & Logistics Limited</div>
+          <div style="font-size: 10px; color: var(--text-muted);">PHP Movers Limited</div>
         </div>
       </div>
     </div>

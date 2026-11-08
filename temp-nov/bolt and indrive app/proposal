@@ -1,7 +1,7 @@
 # PRODUCT DEVELOPMENT PROPOSAL
-**Project:** On-Demand Moving, Relocation & Truck Haulage Platform (Bolt & inDrive Hybrid Architecture)  
-**Client / Recipient:** PHP Movers (PHP Movers & Logistics Limited)  
-**Target Delivery:** Customer Moving App (Web / Mobile PWA) + Driver & Mover Partner App + Central Admin Control Desk  
+**Project:** On-Demand Ride-Hailing & Fare Negotiation Platform (Bolt & inDrive Hybrid)  
+**Client / Recipient:** PHP Movers (PHP Movers Limited)  
+**Target Delivery:** Passenger Web/Mobile App + Driver Partner App + Central Admin Control Desk  
 **Prepared By:** Trade Infrastructure LTD (in partnership with Sales Cowboy Digital Engineering)  
 **Date:** November 8, 2026  
 
@@ -9,104 +9,95 @@
 
 ## 1. PROJECT OVERVIEW & EXECUTIVE SUMMARY
 
-The objective of this engagement is to engineer and deploy a specialized, high-efficiency on-demand logistics, moving, and freight negotiation platform custom-built for **PHP Movers**. 
+The objective of this engagement is to engineer, deploy, and scale a proprietary on-demand passenger mobility and ride-hailing platform custom-built for **PHP Movers**.
 
-In the Nigerian moving and haulage landscape, traditional logistics applications fail because moving jobs are inherently non-standard: moving a single refrigerator across town requires a vastly different operational model than relocating a fully furnished three-bedroom duplex or hauling industrial equipment. Rigid fixed pricing leads to lost customers or underpaid drivers, while informal manual phone negotiations cause operational bottlenecks and lost commissions.
+The platform is engineered specifically for the Nigerian urban transport landscape, combining the speed and operational efficiency of **Bolt** with the commercial flexibility and user empowerment of **inDrive**:
 
-To solve this, the **PHP Movers Platform** merges the world's two most successful mobility paradigms into a unified hybrid system:
-1. **The Bolt Model (Instant Fixed Dispatch):** Engineered for standardized, rapid-turnaround requests (mini-vans, pickup trucks, dispatch vans, single-item moves) where upfront distance-and-time pricing allows instant booking with zero negotiation friction.
-2. **The inDrive Model (Bidding & Fare Negotiation):** Purpose-built for residential relocations, office moves, bulky cargo, and inter-state haulage. Customers detail their inventory, floor levels, loading helper requirements, and propose a starting price offer. Verified truck drivers and moving crews in the vicinity receive the manifest in real time and can accept the price or submit competitive counter-offers.
+1. **The Bolt Engine (Instant Automated Dispatch):** For everyday commuters who need a quick ride immediately. Upfront automated pricing calculated dynamically by trip distance and estimated time, instantly matching riders with the closest available driver with zero negotiation.
+2. **The inDrive Engine (Real-Time Fare Bidding & Negotiation):** For passengers and drivers who want full pricing transparency and choice. Passengers enter their destination and suggest a fare budget. Nearby active drivers receive the ride request and can accept the price or submit competitive counter-offers in real time.
 
-This dual-engine architecture positions **PHP Movers** as a technology-first logistics leader, providing automated commission settlement, live GPS tracking, verified driver onboarding, and complete administrative transparency.
+This hybrid ecosystem connects everyday passengers with verified independent drivers while providing **PHP Movers** with automated commission deductions, real-time fleet surveillance, digital receipting, and total operational control.
 
 ---
 
 ## 2. CORE PLATFORM MODULES
 
-### Module 1: Customer Moving & Freight Application (Web / Mobile PWA)
-* **Vehicle & Moving Category Selector:**
-  * *Light Haulage & Express Delivery:* Dispatch cargo vans, mini-buses, and pickup trucks for quick parcel and appliance transport.
-  * *Residential Relocation:* 1.5-Ton and 3-Ton box trucks for 1-bedroom to 3-bedroom apartment moves.
-  * *Heavy Haulage & Industrial Relocation:* 5-Ton to 10-Ton covered and flatbed trucks for full corporate offices, commercial freight, and warehouse distribution.
-* **Interactive Cargo & Move Manifest Builder:**
-  * Point-to-point route selection powered by interactive Leaflet/OpenStreetMap mapping with automated distance calculation.
-  * Move details checklist: itemized furniture list, fragile item declarations, floor level (ground, 1st, 2nd+), and elevator availability.
-  * Optional Helper Crew Toggle: Request dedicated loading and offloading porters/helpers alongside the vehicle.
-  * Photo Attachment: Customers can upload photos of bulky or delicate goods for accurate driver evaluation.
+### Module 1: Passenger Application (Web / Mobile PWA)
+* **Ride Booking & Route Selection:**
+  * Clean, interactive map interface powered by Leaflet and OpenStreetMap.
+  * Instant search and auto-complete for pickup and drop-off destinations with live distance and route calculation.
+  * Ride Category Selection: Standard Ride (Economy Sedan), Comfort (Air Conditioned), and XL (6-Seater).
 * **Dual Booking Modes (Bolt + inDrive Mechanics):**
-  * *Standard Express Match (Bolt Model):* Instant automated fare calculation based on truck category, base flag-fall fee, and distance. The system broadcasts to the nearest available driver for immediate pickup.
-  * *Fare Bidding & Negotiation (inDrive Model):* Customer submits their cargo manifest with their proposed budget. Drivers receive real-time audio/visual alerts, review the cargo photos, and either accept the offer or submit a counter-bid. The customer chooses their preferred mover based on price, truck photos, arrival ETA, and driver rating.
-* **Live GPS Tracking & Safety:**
-  * Real-time vehicle location tracking as the truck approaches the pickup point and en route to the destination.
-  * Full driver identification: driver full name, phone number, vehicle plate number, truck color, and verified mover badge.
-* **Secure Delivery & In-App Communication:**
-  * Masked in-app calling and messaging button connecting customer and driver without revealing personal phone numbers if desired.
-  * **Delivery Confirmation OTP:** A 4-digit security code generated for the customer that must be entered by the driver upon successful cargo offloading to formally mark the job complete and release payouts.
+  * *Standard Match (Bolt Model):* One-tap instant dispatch based on automated distance-and-time pricing algorithm. System automatically dispatches the closest active driver.
+  * *Fare Bidding (inDrive Model):* Passenger proposes their starting fare. Nearby drivers review the route and passenger rating, then accept, counter-offer with customized bids (+₦200, +₦500, +₦1,000), or decline. The passenger reviews driver ratings, vehicle model, and ETA before selecting their preferred driver.
+* **Driver Tracking & Trip Safety:**
+  * Live GPS vehicle tracking showing the driver approaching the pickup location in real time.
+  * Complete driver profile displayed: driver full name, verified badge, rating, vehicle make/model/color, and license plate number.
+  * Live ETA countdown clock.
+* **Direct Communication & Trip Security:**
+  * In-app call and direct messaging button connecting passenger and driver without exposing personal phone numbers.
+  * **Start-of-Trip OTP Verification:** A secure 4-digit PIN generated for the rider that the driver must confirm before the trip starts, guaranteeing rider safety.
+  * Automatic digital trip receipt generated upon trip completion.
 
 ---
 
-### Module 2: Driver, Trucker & Mover Partner Application (Web / Mobile PWA)
-* **Driver Onboarding & Fleet Verification Portal:**
-  * Self-service registration interface collecting driver license, vehicle particulars, roadworthiness documentation, truck interior/exterior photos, and bank account details (NUBAN) for automated payouts.
-  * Specification of vehicle capacity (tonnage, dimensions, open bed vs enclosed box) and availability of onboard moving labor/helpers.
-* **Real-Time Job Radar & Bidding Terminal:**
-  * One-tap Online / Offline duty status toggle.
-  * High-priority visual and audio radar alerts when a moving or haulage job is broadcast within the driver's operating radius.
-  * Full job preview: pickup and drop-off addresses, distance, cargo description, photos, helper requirements, and customer's proposed fare.
-  * Interactive Bidding Interface: Drivers can tap to accept the proposed fare instantly or select one-touch counter-offers (+₦3,000, +₦5,000, +₦10,000, or a custom price).
-* **Navigation Handover & Job Workflow:**
-  * One-touch bridge passing pickup and destination GPS coordinates directly into Google Maps or Waze on the driver's phone for turn-by-turn truck routing.
-  * Move progress checkpoints: "Arrived at Pickup" -> "Loading Complete / In Transit" -> "Arrived at Destination" -> "Offloading Finished".
-  * Pre-move condition verification: ability for drivers to snap photos of pre-existing cargo damage prior to loading to eliminate false claims.
-* **Earnings Wallet & Commission Engine:**
-  * Comprehensive dashboard displaying daily, weekly, and monthly gross earnings, completed trip tallies, and customer ratings.
-  * In-app wallet tracking cash-collected commissions owed to PHP Movers and digital wallet balances available for payout.
+### Module 2: Driver Partner Application (Web / Mobile PWA)
+* **Driver Onboarding & Verification:**
+  * Digital registration portal for self-onboarding.
+  * Document upload desk: commercial driver license, vehicle particulars, roadworthiness certificate, vehicle exterior/interior photos, and bank account details (NUBAN) for automated payouts.
+* **Trip Dispatch & Bidding Terminal:**
+  * Online / Offline availability toggle switch.
+  * High-priority visual and audio alerts for incoming ride requests within the driver's operating radius.
+  * Full ride preview: pickup address, drop-off location, trip distance, and proposed passenger fare.
+  * One-tap bidding buttons to accept the passenger's proposed fare or quickly counter with a higher price.
+* **Turn-by-Turn Navigation Bridge:**
+  * One-touch handover passing the pickup and destination coordinates directly into Google Maps or Waze on the driver's phone for seamless turn-by-turn navigation.
+* **Earnings & Commission Wallet:**
+  * Comprehensive daily and weekly earnings summaries, completed trip logs, and passenger rating feedback.
+  * In-app wallet tracking cash-collected commissions owed to PHP Movers and digital wallet balances available for instant NUBAN bank withdrawal.
 
 ---
 
 ### Module 3: Central Operations & Master Admin Dashboard (PHP Movers HQ)
-* **Fleet & Partner Verification Desk:**
-  * Administrative review console to inspect uploaded driver credentials, vehicle papers, and truck photos before activating driver accounts.
-  * Ability to suspend, flag, or permanently deactivate non-compliant drivers or vehicles failing road safety standards.
-* **Live Operations Control Tower & Dispatch Monitor:**
-  * Live administrative map displaying all online vehicles, active loading jobs, in-transit trucks, and completed moves across target operating regions.
-  * Real-time search and filter by vehicle classification (Vans, 1.5-Ton, 3-Ton, 5-Ton, 10-Ton).
+* **Driver & Vehicle Approval Desk:**
+  * Review, verify, approve, or reject new driver registrations and vehicle documents before granting access to the live dispatch network.
+  * Instant driver suspension or deactivation for policy violations or low passenger ratings.
+* **Live Fleet & Dispatch Monitor:**
+  * Real-time administrative map view tracking all online drivers, active trips in progress, idle vehicles, and completed journeys across operational cities.
 * **Dynamic Commission & Tariff Management Engine:**
-  * Configure baseline tariff formulas for instant Bolt-style dispatches (base charge + per-kilometer rate + waiting time rate).
-  * Configure PHP Movers platform service commission percentages (e.g., 10% to 15% per completed move) with automated commission deduction from driver digital wallets.
-  * Define surcharge rules for specialized labor (e.g., helper porter fees, heavy appliance carrying fees).
+  * Configure base fare rates, per-kilometer charges, and minimum fares for automated Bolt-style dispatches.
+  * Set dynamic PHP Movers platform service commission rates (e.g., 10% to 15% per completed trip) with automated deduction from driver digital wallets.
+* **User Management & Dispute Resolution:**
+  * Handle passenger and driver complaints, fare adjustment requests, lost item reports, and emergency SOS incident logs.
 * **Financial Ledger & Settlement Records:**
-  * Master ledger recording total platform gross merchandise value (GMV), net PHP Movers commission revenues, driver payout obligations, and payment gateway settlement records.
-* **Dispute Resolution, Insurance Claims & Support Hub:**
-  * Complete audit trail for every completed, cancelled, or contested move including chat logs, timestamps, cargo photos, and customer ratings.
-  * Emergency SOS and support ticket management desk.
+  * Centralized accounting tracking total Gross Merchandise Value (GMV), net PHP Movers commission revenues, driver payout records, and payment gateway settlements.
 
 ---
 
 ## 3. RECOMMENDED TECHNICAL ARCHITECTURE
 
-To ensure high reliability, fast sub-second responsiveness during live bidding, and zero exposure to crippling recurring third-party licensing fees, the platform is engineered on a modern, cost-efficient cloud stack:
+To ensure high performance, sub-second bidding speed, and zero exposure to expensive recurring third-party map bills, the platform is built on an enterprise, cost-controlled stack:
 
-* **Customer & Driver Frontend Applications:** Built using **Next.js (React)** styled with Tailwind CSS, packaged as installable **Progressive Web Apps (PWAs)** with optional lightweight Android APK wrappers. PWAs guarantee immediate access via web link without requiring users to download heavy 80MB files from app stores, consume minimal phone storage, and update instantly without waiting for app store review cycles.
-* **Backend API & Real-Time Bidding Sockets:** Engineered with **Node.js (NestJS)** incorporating high-concurrency **WebSockets**. This handles sub-second price counter-offers, live room matching, and vehicle location pings with minimal server resource consumption.
-* **Database & High-Speed Cache:** **PostgreSQL** provides ACID-compliant relational data storage for immutable move ledgers, invoices, and user records. **Redis** provides lightning-fast in-memory caching for live driver coordinates, active bidding rooms, and session states.
-* **Geospatial & Map Routing Engine:** Utilizes open-source geospatial infrastructure (**Leaflet / OpenStreetMap / MapLibre**) with smart tile caching. This eliminates the heavy monthly billing associated with commercial Google Maps API calls while maintaining accurate routing, distance calculation, and interactive mapping.
+* **Frontend Apps (Passenger & Driver):** Developed in **Next.js (React)** styled with Tailwind CSS, packaged as installable **Progressive Web Apps (PWAs)** with optional lightweight Android APK wrappers. PWAs guarantee immediate access via web link without requiring users to download heavy 80MB files from app stores, consume minimal phone storage, and update instantly without app store review delays.
+* **Backend API & Real-Time Sockets:** Built with **Node.js (NestJS)** incorporating high-concurrency **WebSockets**. This handles sub-second fare bidding updates, ride dispatch alerts, and live vehicle location pings with minimal server load.
+* **Database & Caching:** **PostgreSQL** provides relational data storage for immutable trip ledgers, receipts, and user records. **Redis** provides lightning-fast in-memory caching for active driver coordinates, live bidding rooms, and session states.
+* **Cost-Controlled Geospatial Mapping:** Open-source tile routing (**Leaflet / OpenStreetMap / MapLibre**) ensures map views, distance calculations, and tracking do not generate heavy recurring Google Maps API bills.
 
 ---
 
 ## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
 
-All third-party operational and infrastructure fees are paid directly by PHP Movers to the respective service providers at cost, ensuring complete financial sovereignty and zero vendor lock-in:
+*(These infrastructure and third-party fees are paid directly by PHP Movers to service providers at transparent cost)*
 
-| Infrastructure / Service Component | Purpose & Description | Estimated Initial Operational Cost |
+| Infrastructure / Service Component | Operational Purpose | Estimated Initial Operational Cost |
 | :--- | :--- | :--- |
-| **Cloud Application Server (Backend API)** | Runs the core backend, WebSocket bidding server, and dispatch logic on dedicated cloud containers (e.g., Railway.app). | **$5.00 to $10.00 / month** *(Scales dynamically with transaction volume)* |
-| **Database & Cache Cluster (PostgreSQL + Redis)** | Manages user profiles, historical move manifests, financial ledgers, and live driver coordinate caching. | **Included in baseline cloud tier** *(~$5.00 to $10.00 / month total)* |
-| **Custom Domain & Cloudflare Edge Security** | Custom domain (e.g., phpmovers.ng / phpmovers.com) with Cloudflare SSL certificate, DDoS protection, and global CDN. | **~$12.00 to $20.00 / year** |
-| **SMS OTP Phone Verification** | User and driver telephone verification and transit alerts via localized SMS gateway (Termii). | **Pay-as-you-go** *(~₦5.00 per SMS verification)* |
-| **Map Tiles & Geocoding Routing** | Open-source map tile delivery and route distance calculations (Leaflet / OSM). | **$0.00 (Free baseline tier)** |
-| **Payment Gateway Integration** | Paystack / Moniepoint integration for customer card payments and driver in-app wallet top-ups. | **1.5% per successful local transaction** *(Standard local gateway fee)* |
-| **Google Play Developer Account (Optional)** | One-time Google Play Console account registration fee if releasing a dedicated Android APK on the Play Store. | **$25.00 (One-time payment directly to Google)** |
+| **Cloud Application Server (Backend API)** | Runs the core backend, WebSocket bidding server, and dispatch logic on Railway.app. | **$5.00 to $10.00 / month** *(Scales dynamically with trip volume)* |
+| **Database & Cache (PostgreSQL + Redis)** | Stores user accounts, trip ledgers, driver documents, and live coordinates. | **Included in basic cloud tier** *(~$5.00 to $10.00 / month total)* |
+| **Custom Domain & Edge Security** | Custom domain (e.g., phpmovers.ng / phpmovers.com) + Cloudflare SSL certificate & DDoS shield. | **~$12.00 to $20.00 / year** |
+| **SMS OTP / Phone Verification** | User and driver phone number verification via Termii. | **Pay-as-you-go** *(~₦5.00 per SMS)* |
+| **Map Routing & Tile Requests** | Open-source map tiles and distance routing (Leaflet / OSM). | **$0.00 (Free baseline tier)** |
+| **Payment Gateway Integration** | Paystack / Moniepoint for in-app wallet top-ups and card payments. | **1.5% per successful local transaction** *(Standard gateway fee)* |
+| **Google Play Developer Account (Optional)** | One-time registration fee if deploying dedicated Android APKs on the Play Store. | **$25.00 (One-off payment to Google)** |
 
 ---
 
@@ -121,9 +112,9 @@ The project fee is structured across three verified delivery milestones tied dir
 
 1. **Milestone 1: 50% Mobilization Deposit (₦600,000)**  
    * *Settlement Timing:* Payable upon execution of the development agreement.  
-   * *Deliverables:* System architecture design, database schema modeling (PostgreSQL + Redis), vehicle categorization engine, and complete UI/UX responsive interface design for both the Customer App and Driver Partner App.
+   * *Deliverables:* System architecture design, database schema modeling (PostgreSQL + Redis), ride categorization engine, and complete UI/UX responsive interface design for both the Passenger App and Driver Partner App.
 2. **Milestone 2: 30% Functional Staging Milestone (₦360,000)**  
-   * *Settlement Timing:* Payable upon deployment of the core backend, bidding engine, and mapping dispatch to a private staging environment.  
+   * *Settlement Timing:* Payable upon deployment of the core backend, real-time bidding logic, and mapping dispatch to a private staging environment.  
    * *Deliverables:* Working WebSocket real-time fare bidding engine (inDrive mechanics), automated distance-based dispatch (Bolt mechanics), driver onboarding portal, and interactive map tracking.
 3. **Milestone 3: 20% Production Handover & Go-Live (₦240,000)**  
    * *Settlement Timing:* Payable upon live cloud production deployment, domain linkage, payment gateway activation, administrative staff training, and complete source code repository handover.  

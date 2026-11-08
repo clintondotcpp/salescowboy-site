@@ -333,7 +333,7 @@ def generate_agreement_docx():
         doc_badge="Bilateral Contractual Instrument",
         ref_num="SCM-AGR-2026-P54-1.5M",
         doc_date="November 2, 2026",
-        contract_total="₦1,500,000 NGN"
+        contract_total="₦2,000,000 NGN"
     )
     
     # Title
@@ -406,9 +406,9 @@ def generate_agreement_docx():
         (
             "ARTICLE 2: TOTAL DEVELOPMENT INVESTMENT & PAYMENT SCHEDULE",
             [
-                ("2.1 Total Investment:", "The total all-inclusive development fee for the complete design, engineering, testing, and deployment of the Platform is One Million, Five Hundred Thousand Naira Only (₦1,500,000)."),
-                ("2.2 Milestone Schedule:", "The Client shall remit payment across two (2) contractual milestones:\n• Fifty Percent (50% / ₦750,000) initial mobilization deposit upon execution of this Agreement to commence systems architecture, database schema design, consultant licensing engine, geofencing logic, and UI/UX designs across all portals (Weeks 1 – 2);\n• Fifty Percent (50% / ₦750,000) final settlement payable after two (2) months of verified functional operational use following successful mobile app upload and live deployment on Google Play and Apple App Store (post-launch operational validation)."),
-                ("2.3 Rapid 4-Week Delivery Roadmap:", "The total project delivery timeline is four (4) weeks (twenty-eight [28] calendar days) from the Effective Date, contingent upon timely client feedback, document approvals, and milestone settlements. Invoices unpaid seven (7) business days past their due date shall entitle the Developer to pause active development until settled."),
+                ("2.1 Total Investment:", "The total all-inclusive development fee for the complete design, engineering, testing, and deployment of the Platform is Two Million Naira Only (₦2,000,000)."),
+                ("2.2 Milestone Schedule:", "The Client shall remit payment across three (3) contractual milestones:\n• Initial Mobilization Deposit (37.5% / ₦750,000) upon execution of this Agreement to commence systems architecture, database schema design, consultant licensing engine, geofencing logic, and UI/UX designs across all portals (Weeks 1 – 2);\n• Live App Stores Deployment Milestone (25% / ₦500,000) payable upon successful mobile app build upload and live deployment on Google Play and Apple App Store (Weeks 3 – 4);\n• Post-Launch Operational Validation Milestone (37.5% / ₦750,000) payable after three (3) months of verified functional operational use following successful mobile app upload and live deployment on Google Play and Apple App Store (post-launch operational validation)."),
+                ("2.3 Rapid 4-Week Delivery Roadmap:", "The total project delivery timeline is four (4) weeks (twenty-eight [28] calendar days) from the Effective Date, contingent upon timely client feedback, document approvals, and milestone settlements."),
                 ("2.4 Bank Remittance Details:", "Guaranty Trust Bank (GTBank) • Account Name: Sales Cowboy Marketing Solutions • Account Number: 3006086291")
             ]
         ),
@@ -425,7 +425,7 @@ def generate_agreement_docx():
         (
             "ARTICLE 4: COMPLETE INTELLECTUAL PROPERTY OWNERSHIP",
             [
-                ("4.1 100% Client Ownership:", "The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of full and final payment (₦1,500,000), all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API interfaces, state-machine timer algorithms, UI/UX designs, visual assets, documentation, and technical deliverables—shall vest completely and exclusively in PROJECT54 ENTREPRENEURS."),
+                ("4.1 100% Client Ownership:", "The Client shall own 100% complete, exclusive, and unencumbered Intellectual Property (IP) rights in the Platform. Upon receipt of full and final payment (₦2,000,000), all right, title, and interest in and to the Platform—including all custom source code, frontend and backend architectures, database schemas, API interfaces, state-machine timer algorithms, UI/UX designs, visual assets, documentation, and technical deliverables—shall vest completely and exclusively in PROJECT54 ENTREPRENEURS."),
                 ("4.2 Absolute Transfer & Waiver:", "The Developer waives and transfers all claims, proprietary rights, and title therein to the Client. Upon final milestone settlement, the Developer shall execute complete handover of all Git source code repositories, master administrative credentials, server deployment scripts, and database access keys directly to the Client, free of any ongoing licensing restrictions, royalties, or developer encumbrances.")
             ]
         ),
@@ -443,8 +443,8 @@ def generate_agreement_docx():
             "ARTICLE 6: ACCEPTANCE TESTING, WARRANTY & TECHNICAL SUPPORT",
             [
                 ("6.1 Inspection Window:", "Upon staging milestone delivery, the Client shall have seven (7) business days to inspect deliverables and report any reproducible software bugs deviating from Schedule A."),
-                ("6.2 12-Month Complimentary Support & Bug-Fix Maintenance:", "The Developer shall provide twelve (12) months of complimentary post-launch technical support and maintenance commencing from live production launch. This support is strictly confined to system monitoring, server uptime surveillance, database integrity checks, background worker queue health, and resolving existing bugs within Schedule A. It expressly excludes the design or deployment of new features, which shall be governed by separate written Change Requests (CRs)."),
-                ("6.3 Post-Warranty Annual Support Retainer (₦800,000 / Year):", "Following the expiration of the initial twelve (12) months of complimentary support, the Client may retain the Developer for ongoing annual enterprise technical support, system surveillance, background job queue monitoring, database maintenance, and bug-fix warranty at an agreed retainer fee of Eight Hundred Thousand Naira Only (₦800,000 / year), payable annually in advance by the Client.")
+                ("6.2 12-Month Complimentary Support & Bug-Fix Maintenance:", "The Developer shall provide twelve (12) months of complimentary post-launch technical support and maintenance commencing from live production launch. This support is strictly confined to system monitoring, server uptime surveillance, database integrity checks, background worker queue health, resolving existing bugs within Schedule A, and necessary code adjustments or operational refactoring where an existing feature or workflow is not functioning effectively, is sub-optimal, or requires adjustment for higher operational efficiency (e.g., refining operational logic or substituting inefficient implementations with superior alternatives). It expressly excludes the design or deployment of entirely new standalone features or architectural scope additions, which shall be governed by separate written Change Requests (CRs)."),
+                ("6.3 Post-Warranty Annual Support Retainer (₦800,000 / Year):", "Following the expiration of the initial twelve (12) months of complimentary support, the Client may retain the Developer for ongoing annual enterprise technical support, system surveillance, background job queue monitoring, database maintenance, and bug-fix warranty at an agreed retainer fee of Eight Hundred Thousand Naira Only (₦800,000 / year), payable in two equal installments: fifty percent (50% / ₦400,000) at the beginning of the year and fifty percent (50% / ₦400,000) at the end of the year.")
             ]
         ),
         (
@@ -516,7 +516,7 @@ def generate_proposal_docx():
         doc_badge="Commercial & Technical Proposal",
         ref_num="SCM-PROP-2026-P54-1.5M",
         doc_date="November 2, 2026",
-        contract_total="₦1,500,000 NGN"
+        contract_total="₦2,000,000 NGN"
     )
     
     # Title
@@ -786,13 +786,14 @@ def generate_proposal_docx():
     r_s5.font.color.rgb = RGBColor(124, 74, 30)
     
     comm_terms = [
-        "Total All-Inclusive Contract Fee: One Million, Five Hundred Thousand Naira Only (₦1,500,000).",
-        "Stage 1: 50% Mobilization Deposit (₦750,000): Paid upon contract execution to initiate systems engineering, PostgreSQL schemas, consultant licensing desk, geofenced dispatch hub, and UI/UX builds across all portals (Weeks 1 – 2).",
-        "Stage 2: 50% Final Settlement (₦750,000): Paid strictly after two (2) months of verified functional operational use following successful mobile app upload and deployment on Google Play and Apple App Store (post-launch operational validation).",
+        "Total All-Inclusive Contract Fee: Two Million Naira Only (₦2,000,000).",
+        "Stage 1: Initial Mobilization Deposit (37.5% / ₦750,000): Paid upon contract execution to initiate systems engineering, PostgreSQL schemas, consultant licensing desk, geofenced dispatch hub, and UI/UX builds across all portals (Weeks 1 – 2).",
+        "Stage 2: Live App Stores Deployment Milestone (25% / ₦500,000): Paid upon successful mobile app build upload and live deployment on Google Play and Apple App Store (Weeks 3 – 4).",
+        "Stage 3: Post-Launch Operational Validation Milestone (37.5% / ₦750,000): Paid strictly after three (3) months of verified functional operational use following successful mobile app upload and deployment on Google Play and Apple App Store (post-launch operational validation).",
         "Rapid 4-Week Delivery Roadmap: 4 weeks (28 calendar days) structured across Core Architecture (Week 1), Booking, Chat & GIT Engine (Week 2), 48h Gate-In Depletion Clock & Factoring (Week 3), and QA, Stress Testing & App Store Submissions (Week 4).",
-        "100% Client Intellectual Property (IP) Ownership: Upon final contractual settlement (₦1,500,000), 100% complete, unencumbered ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials vests exclusively in PROJECT54 ENTREPRENEURS.",
-        "12-Month Complimentary Technical Support: 12 months ongoing technical support strictly dedicated to server uptime surveillance, background worker queues, database maintenance, and bug-fix warranty within agreed scope.",
-        "Post-Warranty Annual Support Retainer (Year 2+): Renewable at an agreed retainer fee of ₦800,000 / year (Eight Hundred Thousand Naira per year), payable annually in advance by the Client."
+        "100% Client Intellectual Property (IP) Ownership: Upon final contractual settlement (₦2,000,000), 100% complete, unencumbered ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials vests exclusively in PROJECT54 ENTREPRENEURS.",
+        "12-Month Complimentary Technical Support: 12 months ongoing technical support dedicated to server uptime surveillance, background worker queues, database maintenance, bug resolution, and necessary code adjustments where an existing feature requires optimization for operational efficiency.",
+        "Post-Warranty Annual Support Retainer (Year 2+): Renewable at an agreed retainer fee of ₦800,000 / year (Eight Hundred Thousand Naira per year), payable in two equal installments: fifty percent (50% / ₦400,000) at the beginning of the year and fifty percent (50% / ₦400,000) at the end of the year."
     ]
     add_callout_box(doc, "COMMERCIAL & CONTRACTUAL TERMS SUMMARY", comm_terms, bg_color="F8FAFC", border_color="7C4A1E")
     
@@ -846,9 +847,9 @@ def generate_invoice_docx():
     add_header_letterhead(
         doc,
         doc_badge="Commercial Invoice",
-        ref_num="INV-2026-SCM-P54-1.5M",
+        ref_num="INV-2026-SCM-P54-2M",
         doc_date="November 4, 2026",
-        contract_total="₦1,500,000 NGN"
+        contract_total="₦2,000,000 NGN"
     )
     
     # Title
@@ -884,10 +885,10 @@ def generate_invoice_docx():
     # Project Strip Callout
     proj_info = [
         "Project Scope: Unified Logistics, Bank Factoring, GIT Insurance Desk, In-App Anti-Circumvention Chat & Fleet Equipment Ecosystem",
-        "Proposal Ref: SCM-PROP-2026-P54-1.5M | Agreement Ref: SCM-AGR-2026-P54-1.5M",
-        "Total Contract Value: ₦1,500,000 (One Million, Five Hundred Thousand Naira Only)",
+        "Proposal Ref: SCM-PROP-2026-P54-2M | Agreement Ref: SCM-AGR-2026-P54-2M",
+        "Total Contract Value: ₦2,000,000 (Two Million Naira Only)",
         "Delivery Timeline: Accelerated 4 Weeks (28 Calendar Days) from contract execution",
-        "Warranty & Support: 12 Months complimentary post-launch support included (renewable at ₦800,000/year thereafter)"
+        "Warranty & Support: 12 Months complimentary post-launch support included (renewable at ₦800,000/year thereafter, payable in two equal 50% installments)"
     ]
     add_callout_box(doc, "PROJECT ENGAGEMENT SUMMARY", proj_info, bg_color="F8FAFC", border_color="7C4A1E")
     
@@ -901,7 +902,7 @@ def generate_invoice_docx():
     r_th.font.bold = True
     r_th.font.color.rgb = RGBColor(124, 74, 30)
     
-    table = doc.add_table(rows=3, cols=6)
+    table = doc.add_table(rows=4, cols=6)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
     
@@ -924,16 +925,24 @@ def generate_invoice_docx():
     rows_data = [
         (
             "01",
-            "Stage 1: 50% Project Mobilization Deposit\n• Core Architecture & PostgreSQL Schemas\n• Module 1: Consultant Licensing Desk\n• Module 2: Cargo Dispatch & Haulage Hub\n• Module 3: Transporter Vault & 48h Gate-In Depletion Clock\n• Module 4: In-App Chat Anti-Circumvention Engine\n• Module 5: Accredited GIT Insurance Underwriting Desk\n(Execution of Agreement through Sprint 2 / Days 1–14)",
-            "50%",
+            "Stage 1: Initial Mobilization Deposit\n• Core Architecture & PostgreSQL Schemas\n• Module 1: Consultant Licensing Desk\n• Module 2: Cargo Dispatch & Haulage Hub\n• Module 3: Transporter Vault & 48h Gate-In Depletion Clock\n• Module 4: In-App Chat Anti-Circumvention Engine\n• Module 5: Accredited GIT Insurance Underwriting Desk\n(Execution of Agreement through Sprint 2 / Days 1–14)",
+            "37.5%",
             "₦750,000",
             "DUE NOW",
             "₦750,000"
         ),
         (
             "02",
-            "Stage 2: 50% Final Settlement (Post-Deployment Operational Verification)\n• Google Play Store & Apple App Store deployment\n• Bank Factoring Liquidity Integration & waybill audit\n• Heavy Equipment Leasing & Automobile Marketplace\n• Handover of Master Production Admin Credentials & Source Code\n(Payable strictly after 2 months of verified functional operational use post-upload)",
-            "50%",
+            "Stage 2: Live App Stores Deployment Milestone\n• Module 6: Bank & Institutional Financing (Factoring)\n• Module 7: Heavy Equipment Leasing Engine\n• Module 8: Automobile & Heavy-Duty Parts Marketplace\n• Production Google Play Store & Apple App Store deployment\n(Payable upon successful mobile app build upload & live deployment / Weeks 3–4)",
+            "25.0%",
+            "₦500,000",
+            "PENDING",
+            "₦0.00"
+        ),
+        (
+            "03",
+            "Stage 3: Post-Launch Operational Validation Milestone\n• Verified functional operational use across live freight, leasing & factoring flows\n• Complete End-to-End Field Verification & Live Fleet Dispatches\n• Handover of Master Production Admin Credentials & Source Code\n(Payable strictly after 3 months of verified functional operational use post-upload)",
+            "37.5%",
             "₦750,000",
             "PENDING",
             "₦0.00"
@@ -955,7 +964,7 @@ def generate_invoice_docx():
             if c_idx == 4 and val == "DUE NOW":
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(185, 28, 28)
-            elif c_idx == 5 and val == "₦750,000":
+            elif c_idx == 5 and val == "₦750,000" and r_idx == 1:
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(15, 23, 42)
             else:
@@ -963,8 +972,8 @@ def generate_invoice_docx():
                 
     # Financial Summary
     fin_lines = [
-        "Total Project Contract Value: ₦1,500,000",
-        "Subsequent Milestones (Pending 2-Month Post-Upload Validation): -₦750,000",
+        "Total Project Contract Value: ₦2,000,000",
+        "Subsequent Milestones (Stages 2 & 3 Pending Deployment & 3-Mo Validation): -₦1,250,000",
         "TOTAL AMOUNT DUE NOW (STAGE 1 MOBILIZATION): ₦750,000 (Seven Hundred and Fifty Thousand Naira Only)"
     ]
     add_callout_box(doc, "PAYMENT RECONCILIATION SUMMARY", fin_lines, bg_color="FEF3C7", border_color="B45309")
@@ -981,7 +990,7 @@ def generate_invoice_docx():
         "Bank Name: GUARANTY TRUST BANK (GTBank)\n"
         "Account Name: SALES COWBOY MARKETING SOLUTIONS\n"
         "Account Number: 3006086291\n"
-        "Payment Reference: INV-2026-SCM-P54-1.5M / PROJECT54"
+        "Payment Reference: INV-2026-SCM-P54-2M / PROJECT54"
     )
     r_bk2.font.name = "Calibri"
     r_bk2.font.size = Pt(9.5)

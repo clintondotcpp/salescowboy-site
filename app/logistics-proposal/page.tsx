@@ -213,14 +213,15 @@ const DEFAULT_LOGISTICS_PROPOSAL: LogisticsProposalState = {
   ],
   infrastructureNotes: "Total estimated monthly cloud infrastructure cost: ~$10 – $20 / month + pay-as-you-go usage. App Store Developer fees: Google Play ($25 one-time), Apple Developer ($99/year), paid directly to providers without agency markup.",
   
-  totalCost: 1500000,
+  totalCost: 2000000,
   timeline: "4 Weeks (28 Calendar Days)",
   paymentMilestones: [
-    { label: "50% Mobilization Deposit (Architecture, DB Schemas, Consultant Licensing & Multi-Portal UI/UX Layouts)", percentage: 50, amount: 750000 },
-    { label: "50% Final Settlement (Paid after 2 months of verified functional operational use post App Store & Google Play upload)", percentage: 50, amount: 750000 }
+    { label: "37.5% Mobilization Deposit (Architecture, DB Schemas, Consultant Licensing & Multi-Portal UI/UX Layouts)", percentage: 37.5, amount: 750000 },
+    { label: "25% Live App Stores Deployment Milestone (Paid upon successful mobile app build upload & live deployment on Google Play & App Store)", percentage: 25, amount: 500000 },
+    { label: "37.5% Post-Launch Operational Validation Milestone (Paid after 3 months of verified functional operational use post live deployment)", percentage: 37.5, amount: 750000 }
   ],
   bankInfo: "Bank Name: Guaranty Trust Bank (GTBank)\nAccount Name: Sales Cowboy Marketing Solutions\nAccount Number: 3006086291",
-  notes: "Includes 12 Months of complimentary post-launch technical support (monitoring & existing bug fixes within agreed scope) and 100% complete Client Intellectual Property (IP) ownership with full repository and credentials handover upon final settlement. Post-warranty technical support and maintenance is renewable at ₦800,000 / year."
+  notes: "Includes 12 Months of complimentary post-launch technical support (monitoring, existing bug fixes, and operational code adjustments where a feature requires optimization) and 100% complete Client Intellectual Property (IP) ownership with full repository and credentials handover upon final settlement. Post-warranty technical support and maintenance is renewable at ₦800,000 / year (payable in two 50% installments at the beginning and end of the year)."
 };
 
 function LogisticsProposalContent() {
@@ -328,7 +329,7 @@ function LogisticsProposalContent() {
                   SALES COWBOY
                 </span>
                 <span className="text-[10px] bg-amber-500/10 text-amber-400 font-mono px-2 py-0.5 rounded border border-amber-500/20 font-semibold uppercase">
-                  PROJECT54 Logistics & Factoring Ecosystem (₦1,500,000)
+                  PROJECT54 Logistics & Factoring Ecosystem (₦2,000,000)
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-mono">
@@ -777,13 +778,13 @@ function LogisticsProposalContent() {
                     </span>
                     <ul className="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed text-[11px]">
                       <li>
-                        <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦1,500,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in PROJECT54 ENTREPRENEURS.
+                        <strong className="text-slate-900">100% Complete Client IP Ownership:</strong> Upon final milestone settlement (₦2,000,000), 100% complete, exclusive, and unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and admin keys vests exclusively in PROJECT54 ENTREPRENEURS.
                       </li>
                       <li>
-                        <strong className="text-slate-900">12-Month Complimentary Technical Support & Bug-Fix Maintenance:</strong> Includes twelve (12) months of complimentary post-launch technical support strictly dedicated to server uptime surveillance, performance monitoring, background worker queue health, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
+                        <strong className="text-slate-900">12-Month Complimentary Technical Support & Bug-Fix Maintenance:</strong> Includes twelve (12) months of complimentary post-launch technical support dedicated to server uptime surveillance, performance monitoring, background worker queue health, bug resolution, and necessary code adjustments or operational refactoring where an existing feature or workflow is not functioning effectively, is sub-optimal, or requires adjustment for higher operational efficiency (e.g., refining operational logic or substituting inefficient implementations with superior alternatives). It strictly excludes adding entirely new standalone features, which shall be governed by separate written Change Requests (CRs).
                       </li>
                       <li>
-                        <strong className="text-slate-900">Post-Warranty Annual Support Retainer (Year 2+):</strong> Following the expiration of the initial twelve (12) months of complimentary support, ongoing enterprise technical support, system health surveillance, database optimization, and bug-fix warranty is provided at a fixed retainer fee of <strong>₦800,000 / year (Eight Hundred Thousand Naira per year)</strong>, payable annually in advance by the Client.
+                        <strong className="text-slate-900">Post-Warranty Annual Support Retainer (Year 2+):</strong> Following the expiration of the initial twelve (12) months of complimentary support, ongoing enterprise technical support, system health surveillance, database optimization, and bug-fix warranty is provided at a fixed retainer fee of <strong>₦800,000 / year (Eight Hundred Thousand Naira per year)</strong>, payable in two equal installments: fifty percent (50% / ₦400,000) at the beginning of the year and fifty percent (50% / ₦400,000) at the end of the year.
                       </li>
                     </ul>
                   </div>

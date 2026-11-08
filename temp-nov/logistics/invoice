@@ -1,9 +1,9 @@
 # COMMERCIAL INVOICE
 
-**Invoice Number:** INV-2026-SCM-P54-1.5M  
+**Invoice Number:** INV-2026-SCM-P54-2M  
 **Date of Issuance:** November 4, 2026  
 **Payment Due Date:** November 11, 2026 (Due upon contract execution)  
-**Project Reference:** Unified Logistics, Bank-Factored Haulage Transaction Engine, Accredited GIT Insurance Desk, In-App Disintermediation Chat & Fleet Equipment Ecosystem (Proposal Ref: SCM-PROP-2026-P54-1.5M)  
+**Project Reference:** Unified Logistics, Bank-Factored Haulage Transaction Engine, Accredited GIT Insurance Desk, In-App Disintermediation Chat & Fleet Equipment Ecosystem (Proposal Ref: SCM-PROP-2026-P54-2M)  
 
 ---
 
@@ -32,7 +32,7 @@ Design, custom engineering, testing, staging, and production launch of the enter
 7. **The Heavy Equipment Leasing Engine:** 14-step workflow replication for cranes, excavators, forklifts, lowbeds, and barges with 360° video archives and caution deposit escrow.
 8. **The Automobile & Heavy-Duty Spare Parts Marketplace:** Curated B2B classified catalog for prime movers, flatbeds, tippers, and genuine components backed by inspection-based escrow.
 
-**Total Contract Value:** ₦1,500,000 (One Million, Five Hundred Thousand Naira Only)  
+**Total Contract Value:** ₦2,000,000 (Two Million Naira Only)  
 **Total Project Delivery Timeline:** 4 Weeks (28 Calendar Days)  
 
 ---
@@ -41,14 +41,15 @@ Design, custom engineering, testing, staging, and production launch of the enter
 
 | Item # | Description & Milestone Deliverables | Project Allocation | Contract Amount | Billing Status | Amount Due Now |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| **01** | **Stage 1: 50% Project Mobilization Deposit**<br>• Core Systems Architecture, PostgreSQL DB Schemas & UX/UI Wireframes<br>• Module 1: Consultant Onboarding & Quota Desk (Paid Licensing via Paystack/Moniepoint)<br>• Module 2: Contractor & Job Dispatch Hub (Structured Manifests & Geofenced Points)<br>• Module 3: Transporter Fleet Vault & 48-Hour Gate-In Countdown Clock<br>• Module 4: Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield)<br>*(Execution of Agreement through Sprint 2 / Weeks 1–2)* | **50%** | ₦750,000 | **DUE NOW** | **₦750,000** |
-| **02** | **Stage 2: 50% Final Settlement & Operational Handover**<br>• Module 5: Accredited GIT Insurance Underwriting & Claims Desk<br>• Module 6: Bank & Institutional Financing (Factoring) Multi-Way Split Engine<br>• Module 7: Heavy Equipment Leasing Engine (Cranes, Excavators, Barges)<br>• Module 8: Automobile & Heavy-Duty Parts Marketplace with Escrow Release<br>• Production Railway deployment, Google Play & Apple App Store submissions<br>• 100% Master credentials & source code handover<br>*(Paid after 2 months of verified functional operational use post-upload)* | **50%** | ₦750,000 | Pending (Post-Upload Validation) | ₦0.00 |
+| **01** | **Stage 1: Initial Mobilization Deposit**<br>• Core Systems Architecture, PostgreSQL DB Schemas & UX/UI Wireframes<br>• Module 1: Consultant Onboarding & Quota Desk (Paid Licensing via Paystack/Moniepoint)<br>• Module 2: Contractor & Job Dispatch Hub (Structured Manifests & Geofenced Points)<br>• Module 3: Transporter Fleet Vault & 48-Hour Gate-In Countdown Clock<br>• Module 4: Secure In-App Chat & Anti-Circumvention Engine (Disintermediation Shield)<br>*(Execution of Agreement through Sprint 2 / Weeks 1–2)* | **37.5%** | ₦750,000 | **DUE NOW** | **₦750,000** |
+| **02** | **Stage 2: App Stores Live Deployment Milestone**<br>• Module 5: Accredited GIT Insurance Underwriting & Claims Desk<br>• Module 6: Bank & Institutional Financing (Factoring) Multi-Way Split Engine<br>• Module 7: Heavy Equipment Leasing Engine (Cranes, Excavators, Barges)<br>• Module 8: Automobile & Heavy-Duty Parts Marketplace with Escrow Release<br>• Production Railway deployment, Google Play & Apple App Store live build submissions<br>*(Paid upon successful store approval & live deployment / Weeks 3–4)* | **25.0%** | ₦500,000 | Pending (App Store Upload) | ₦0.00 |
+| **03** | **Stage 3: Post-Launch Operational Validation Milestone**<br>• Verified functional operational use across live freight, leasing & factoring flows<br>• System surveillance, performance tuning, and 100% Master credentials & source code handover<br>*(Paid after 3 months of verified functional operational use post-upload)* | **37.5%** | ₦750,000 | Pending (3-Month Validation) | ₦0.00 |
 
 ---
 
 ### FINANCIAL SUMMARY:
-* **Total Project Contract Value:** **₦1,500,000**
-* **Milestones Pending Future Delivery:** **₦750,000**
+* **Total Project Contract Value:** **₦2,000,000**
+* **Milestones Pending Future Delivery:** **₦1,250,000**
 * **TOTAL AMOUNT DUE NOW (STAGE 1 MOBILIZATION):** **₦750,000**
 
 *(Seven Hundred and Fifty Thousand Naira Only)*
@@ -61,17 +62,17 @@ Please remit payment exclusively to our designated corporate banking account:
 * **Bank Name:** Guaranty Trust Bank (GTBank)
 * **Account Name:** Sales Cowboy Marketing Solutions
 * **Account Number:** **3006086291**
-* **Payment Reference:** INV-2026-SCM-P54-1.5M / PROJECT54
+* **Payment Reference:** INV-2026-SCM-P54-2M / PROJECT54
 
 ---
 
 ### TERMS & CONDITIONS:
-1. **Mobilization Settlement:** Payment of the 50% mobilization fee (₦750,000) formally executes the Software Development Agreement and initiates active engineering sprints (Weeks 1 – 2).
+1. **Mobilization Settlement:** Payment of the mobilization deposit (₦750,000) formally executes the Software Development Agreement and initiates active engineering sprints (Weeks 1 – 2).
 2. **Project Duration:** The total project delivery duration is **four (4) weeks (twenty-eight [28] calendar days)** from contract execution date.
 3. **Third-Party Infrastructure Fees:** Recurring operational hosting and API costs (Railway cloud server ~$10–$20/mo, SMS/OTP Termii credits, payment processor fees, and mobile app store developer fees) are funded directly by the Client at actual cost with zero agency markup.
-4. **12-Month Complimentary Technical Support:** The Developer provides twelve (12) months of complimentary post-launch technical support strictly dedicated to server uptime surveillance, background worker queues, database maintenance, and bug-fix warranty within agreed scope.
-5. **Post-Warranty Annual Support Retainer (Year 2+):** Following the expiration of the initial 12-month period, continuous enterprise technical support and maintenance is renewable at an agreed retainer of **₦800,000 / year**, payable annually in advance by the Client.
-6. **100% Client Intellectual Property Ownership:** Upon receipt of final contractual settlement (₦1,500,000), 100% complete, unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials shall vest exclusively in **PROJECT54 ENTREPRENEURS**.
+4. **12-Month Complimentary Technical Support:** The Developer provides twelve (12) months of complimentary post-launch technical support dedicated to server uptime surveillance, background worker queues, database maintenance, bug resolution, and necessary code adjustments or operational refactoring where an existing feature or workflow is not functioning effectively, is sub-optimal, or requires adjustment for higher operational efficiency.
+5. **Post-Warranty Annual Support Retainer (Year 2+):** Following the expiration of the initial 12-month period, continuous enterprise technical support and maintenance is renewable at an agreed retainer of **₦800,000 / year**, payable in two equal installments: fifty percent (50% / ₦400,000) at the beginning of the year and fifty percent (50% / ₦400,000) at the end of the year.
+6. **100% Client Intellectual Property Ownership:** Upon receipt of final contractual settlement (₦2,000,000), 100% complete, unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials shall vest exclusively in **PROJECT54 ENTREPRENEURS**.
 
 ---
 

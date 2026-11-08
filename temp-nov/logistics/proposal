@@ -153,19 +153,20 @@ Every manifest, bill of lading, and settlement receipt auto-generates with a tra
 
 Due to the integration of the **Bank Factoring Portal**, **Consultant Licensing Network**, **Equipment Leasing Engine**, **Accredited GIT Insurance Underwriting Desk**, and **State-Machine Countdown Timers**, this platform delivers four distinct web portals and mobile operational interfaces:
 
-* **Total All-Inclusive Development Investment:** **₦1,500,000 (One Million, Five Hundred Thousand Naira)**
+* **Total All-Inclusive Development Investment:** **₦2,000,000 (Two Million Naira Only)**
 * **Accelerated Delivery Timeline:** **4 Weeks (28 Calendar Days)**
 
 ### Milestone Payment Schedule:
-1. **50% Mobilization Deposit (₦750,000):** Paid upon contract execution to commence systems architecture, database schema design, consultant licensing engine, geofencing dispatch hub, transporter vault, and multi-portal UI/UX layouts (Weeks 1 – 2).
-2. **50% Final Settlement (₦750,000):** Paid after two (2) months of verified functional operational use following successful mobile app upload and deployment on Google Play and Apple App Store (post-launch operational validation).
+1. **Initial Mobilization Deposit (37.5% / ₦750,000):** Paid upon contract execution to commence systems architecture, database schema design, consultant licensing engine, geofencing dispatch hub, transporter vault, and multi-portal UI/UX layouts (Weeks 1 – 2).
+2. **Live App Stores Deployment Milestone (25% / ₦500,000):** Paid upon successful mobile app build upload and live deployment on Google Play and Apple App Store (Weeks 3 – 4).
+3. **Post-Launch Operational Validation Milestone (37.5% / ₦750,000):** Paid after **three (3) months** of verified functional operational use following successful mobile app upload and live deployment on Google Play and Apple App Store (post-launch operational validation).
 
 ---
 
 ### Contractual Guarantees & Ownership Terms:
-* **100% Complete Client IP Ownership:** Upon receipt of final contractual settlement (₦1,500,000), 100% complete, unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials vests exclusively in **PROJECT54 ENTREPRENEURS**, free of any developer retention or ongoing royalties.
-* **12-Month Complimentary Technical Support & Bug-Fix Maintenance:** Includes twelve (12) months of complimentary post-launch technical support strictly dedicated to server monitoring, uptime surveillance, background worker queue health, and bug-fix maintenance for existing features within the agreed scope (excludes adding new features).
-* **Post-Warranty Annual Support Retainer (Year 2+):** Following the expiration of the initial twelve (12) months of complimentary support, the Developer provides ongoing annual enterprise technical support, system health surveillance, database optimization, and bug-fix warranty at a fixed retainer fee of **₦800,000 / year (Eight Hundred Thousand Naira per year)**, payable annually in advance by the Client.
+* **100% Complete Client IP Ownership:** Upon receipt of final contractual settlement (₦2,000,000), 100% complete, unencumbered Intellectual Property ownership of all custom source code, mobile app codebases, backend APIs, database schemas, and master credentials vests exclusively in **PROJECT54 ENTREPRENEURS**, free of any developer retention or ongoing royalties.
+* **12-Month Complimentary Technical Support & Bug-Fix Maintenance:** Includes twelve (12) months of complimentary post-launch technical support dedicated to server monitoring, uptime surveillance, database integrity checks, background worker queue health, bug resolution, and **necessary code adjustments or operational refactoring where an existing feature or workflow is not functioning effectively, is sub-optimal, or requires adjustment for higher operational efficiency (e.g., refining operational logic or substituting inefficient implementations with superior alternatives)**. It strictly excludes adding entirely new standalone features, which shall be governed by separate written Change Requests (CRs).
+* **Post-Warranty Annual Support Retainer (Year 2+):** Following the expiration of the initial twelve (12) months of complimentary support, the Developer provides ongoing annual enterprise technical support, system health surveillance, database optimization, and bug-fix warranty at a fixed retainer fee of **₦800,000 / year (Eight Hundred Thousand Naira per year)**, payable in two equal installments: fifty percent (50% / ₦400,000) at the beginning of the year and fifty percent (50% / ₦400,000) at the end of the year.
 
 ---
 

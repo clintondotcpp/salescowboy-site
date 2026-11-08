@@ -1,0 +1,132 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** Custom Ride-Hailing Platform (Native React Native Mobile Apps & Web Admin Suite)  
+**Target Delivery:** Passenger Mobile App (iOS & Android) + Driver Partner Mobile App (iOS & Android) + Central Web Operations Dashboard  
+**Prepared By:** Sales Cowboy Marketing Solutions (Enterprise Engineering Division)  
+**Date:** November 8, 2026  
+
+---
+
+## 1. PROJECT OVERVIEW & EXECUTIVE SUMMARY
+
+The objective of this engagement is to design, develop, deploy, and launch a complete enterprise on-demand ride-hailing and mobility ecosystem engineered for rapid dispatch, real-time driver tracking, and commercial fleet management.
+
+The ecosystem is engineered across three native and web pillars:
+1. **Passenger Mobile Application:** Built using **React Native** for native deployment on both **Apple iOS (App Store)** and **Google Android (Google Play Store)**, delivering high-speed booking, accurate fare calculation, and live GPS tracking.
+2. **Driver Partner Mobile Application:** Built using **React Native** for **Apple iOS** and **Google Android**, providing drivers with instant ride requests, automated fare acceptance, turn-by-turn navigation, and in-app earnings wallets.
+3. **Central Operations & Master Admin Web Dashboard:** A secure, high-performance web-based control tower built with **Next.js (React)** for fleet managers and business owners to monitor live dispatches on a map, configure dynamic tariffs, enforce KYC compliance, and audit revenue splits.
+
+---
+
+## 2. SYSTEM MODULES & DELIVERABLES
+
+### Module 1: Passenger Application (Native React Native: iOS & Android)
+* **Onboarding & User Authentication:**
+  * Fast mobile onboarding with SMS OTP phone verification (Termii integration).
+  * Rider profile management and saved frequent address shortcuts (Home, Office, Airport, Favorites).
+* **Ride Booking & Dynamic Fare Engine:**
+  * Intuitive pickup and destination search powered by interactive map integration.
+  * Real-time automated fare calculation based on baseline flag-fall, trip distance, and estimated travel duration.
+  * Multi-tier ride selection: Standard (Sedan), Comfort (Air Conditioned), and Executive / XL.
+* **Live Driver Matching & Geospatial Tracking:**
+  * Proximity-based ride dispatch matching the passenger with the closest active online driver.
+  * Real-time smooth vehicle icon movement on the interactive map with live Estimated Time of Arrival (ETA) countdown.
+  * Complete driver and vehicle transparency: driver verified photo, full legal name, telephone contact button, vehicle make, model, color, and license plate number.
+* **Safety & Trip Completion:**
+  * **Start-of-Trip OTP Verification:** A secure 4-digit code generated for the rider that the driver must enter before the trip begins to ensure verified passenger pickup.
+  * In-app call and direct messaging button connecting rider and driver without exposing personal phone numbers.
+  * Real-time trip status progression (`Driver En Route`, `Driver Arrived`, `Trip in Progress`, `Arrived at Destination`).
+  * Two-way rating and feedback system upon trip completion.
+  * Automated digital trip receipts sent via email and in-app notification.
+
+---
+
+### Module 2: Driver Partner Application (Native React Native: iOS & Android)
+* **Driver Onboarding & KYC Compliance:**
+  * Digital compliance onboarding portal: upload commercial driver license, vehicle registration particulars, roadworthiness certificates, and vehicle exterior/interior photos.
+  * Verified bank account details (NUBAN) integration for direct weekly and instant automated payouts.
+* **Dispatch & Trip Acceptance Terminal:**
+  * One-tap `Online` / `Offline` duty status toggle.
+  * High-priority visual and audio alerts for incoming ride requests within the driver's operating radius.
+  * Full trip preview: pickup distance, destination neighborhood preview, and estimated gross fare.
+  * Trip acceptance and rejection workflow with interactive countdown timers.
+* **Turn-by-Turn Navigation & Trip Progression:**
+  * In-app trip progression controls (`Arrived at Pickup` -> `Start Trip` -> `End Trip`).
+  * One-touch bridge passing pickup and drop-off coordinates directly into Google Maps or Waze on the driver's phone for turn-by-turn routing.
+* **Driver Wallet & Financial Ledger:**
+  * Daily and weekly earnings summary, completed trip counts, and hours online.
+  * Real-time platform commission deduction tracking (for both cash and digital card trips).
+  * Direct payout request interface linked to verified Nigerian bank accounts.
+
+---
+
+### Module 3: Central Operations & Master Admin Web Dashboard (Next.js Web Portal)
+* **Driver Vetting & Approval Desk:**
+  * Administrative review console to audit, verify, approve, or reject new driver registrations and inspect vehicle document uploads before granting platform dispatch access.
+  * Ability to suspend, flag, or permanently deactivate non-compliant drivers or vehicles failing road safety standards.
+* **Live Fleet & Dispatch Monitor:**
+  * Interactive administrative map view displaying all active trips in progress, en-route drivers, and online vehicle density across operational zones.
+  * Search and filter drivers by active status, city, vehicle tier, and rating.
+* **Fare Matrix & Dynamic Tariff Control:**
+  * Configure base fares, per-kilometer rates, per-minute wait time fees, night-time surcharges, and surge pricing multipliers.
+  * Set platform service commission percentages (e.g., 10% to 15% per completed trip) with automated deduction from driver digital wallets.
+* **Finance, Disputes & Incident Logs:**
+  * Master financial ledgers recording gross platform volume (GMV), net commission revenues, driver payout records, and payment gateway settlements.
+  * Trip dispute resolution desk, user deactivation controls, and safety/SOS emergency incident logs.
+
+---
+
+## 3. PROPOSED TECHNICAL ARCHITECTURE
+
+To deliver native mobile fluidity on iOS and Android while keeping backend infrastructure low-latency and cost-controlled:
+
+* **Mobile Applications (Passenger & Driver):** Developed natively in **React Native** (TypeScript). This allows a single robust codebase to compile into native binary packages for **Apple iOS (App Store)** and **Google Android (Google Play Store)**, taking full advantage of native GPS sensors, hardware-accelerated map rendering, background push notifications, and biometric authentication.
+* **Web Admin Dashboard:** Built using **Next.js (React)** styled with Tailwind CSS, delivering a responsive desktop and tablet control console for headquarters operations staff.
+* **Backend API & Real-Time Engine:** **Node.js (NestJS)** utilizing high-throughput **WebSockets**. This handles sub-second driver coordinate broadcasting, ride dispatch matching, and immediate state synchronization across thousands of concurrent connections.
+* **Database & Caching Tier:** **PostgreSQL** provides relational data storage for immutable financial ledgers, user credentials, and trip histories. **Redis** provides lightning-fast sub-second in-memory driver location caching and active booking sessions.
+* **Cost-Controlled Geospatial Mapping:** Open-source tile rendering and routing engines (OpenStreetMap / Leaflet / Mapbox SDK bridges) combined with native mobile map rendering to prevent crippling third-party map API bills as trip volume scales.
+
+---
+
+## 4. ESTIMATED RUNNING & OPERATIONAL COSTS
+
+*(Third-party infrastructure and account fees are paid directly by the client to service providers at transparent cost)*
+
+| Infrastructure / Service Component | Operational Purpose | Estimated Initial Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server (Backend API)** | Runs core backend logic and WebSockets on Railway.app | **$10.00 to $20.00 / month** *(Scales dynamically with fleet load)* |
+| **Database & Cache (PostgreSQL + Redis)** | Stores user accounts, trip ledgers, and live sessions | **Included in cloud tier / ~$10.00 / month** |
+| **Custom Domain & SSL Protection** | Brand domain name (.com or .ng) with Cloudflare CDN & SSL | **~$15.00 to $25.00 / year** |
+| **SMS OTP Phone Verification (Termii)** | User and driver account verification via SMS gateway | **Pay-as-you-go** *(~₦5.00 per SMS)* |
+| **Payment Gateway Integration** | Paystack or Moniepoint for in-app wallet top-ups | **1.5% per successful local transaction** |
+| **Apple Developer Program (iOS App Store)** | Annual Apple Developer Account fee to publish on iOS | **$99.00 / year (Paid directly to Apple)** |
+| **Google Play Console Account (Android)** | One-time registration fee to publish on Google Play Store | **$25.00 (One-off fee paid directly to Google)** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Project Development Investment:** **₦2,000,000** (Two Million Naira Only)
+* **Project Delivery Timeline:** **6 Weeks** from the Effective Date of agreement.
+
+### Structured Milestone Payment Schedule
+
+The development investment is divided across three verified delivery milestones:
+
+1. **Milestone 1: 40% Mobilization Deposit (₦800,000)**  
+   * *Settlement Timing:* Paid upon signing of development contract.  
+   * *Deliverables:* System architecture design, database schema modeling (PostgreSQL + Redis), native mapping setup, and complete UI/UX responsive interface design for both the Passenger and Driver React Native apps.
+2. **Milestone 2: 40% Functional Staging Milestone (₦800,000)**  
+   * *Settlement Timing:* Paid upon delivery of working React Native iOS/Android builds on staging, including live socket dispatching, map tracking, and driver acceptance workflows.  
+   * *Deliverables:* Core backend deployment, real-time WebSocket ride matching, driver onboarding portal, and interactive map tracking tested on staging devices.
+3. **Milestone 3: 20% Production Handover & Go-Live (₦400,000)**  
+   * *Settlement Timing:* Paid upon final production deployment to live cloud infrastructure, domain routing, payment gateway verification, administrative training, App Store / Play Store binary submission handover, and delivery of documentation.  
+   * *Deliverables:* Production deployment, Web Admin Dashboard delivery, Paystack integration, App Store / Play Store release builds, and commencement of the post-launch warranty period.
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+
+Following production handover, the development team provides **thirty (30) days of complimentary technical warranty support**, covering:
+* Rapid bug fixes and system stability adjustments for all features defined in this proposal.
+* Server uptime monitoring, database indexing, and WebSocket connection surveillance.
+* Administrative onboarding support for operations personnel.

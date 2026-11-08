@@ -95,3 +95,4 @@ for html_name, pdf_name in docs:
     print(f"[OK] Copied {pdf_name} to public and out")
 
 print("All done!")
+

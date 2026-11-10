@@ -1309,8 +1309,8 @@ for p in proposals_data:
       <div class="brand-left">
         <img class="brand-logo" src="data:image/png;base64,{b64_logo}" alt="Sales Cowboy Logo">
         <div class="brand-info">
-          <h1>Trade Infrastructure LTD</h1>
-          <p>Sales Cowboy | Enterprise Digital & Payment Solutions</p>
+          <h1>Sales Cowboy Marketing Solutions</h1>
+          <p>Enterprise Digital & Software Development</p>
         </div>
       </div>
       <div class="meta-right">
@@ -1342,7 +1342,7 @@ for p in proposals_data:
           <div style="font-size: 9.5px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px;">For: Sales Cowboy (Developer)</div>
           <div style="border-bottom: 1px solid #475569; width: 80%; margin-bottom: 5px;"></div>
           <div style="font-size: 10px; font-weight: 700; color: var(--primary);">Lead Systems Architect</div>
-          <div style="font-size: 9px; color: var(--text-muted);">Sales Cowboy / Trade Infrastructure LTD</div>
+          <div style="font-size: 9px; color: var(--text-muted);">Sales Cowboy Marketing Solutions</div>
         </div>
         <div>
           <div style="font-size: 9.5px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px;">For: {p['client_for']}</div>

@@ -1,0 +1,124 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** On-Demand Out-of-Home (OOH) & Digital Signage AdTech Marketplace  
+**Target Delivery:** Advertiser Portal + Outpost Host Portal + Transit Syndicate Desk + Master Operations Console (Web & Mobile PWA)  
+**Prepared By:** Trade Infrastructure LTD (Sales Cowboy)  
+**Date:** November 10, 2026  
+
+---
+
+## 1. PROJECT OVERVIEW
+The platform is an on-demand ad space marketplace bridging two primary market participants:
+1. **Advertisers & Vendors:** Businesses seeking to place promotional campaigns across physical locations (hotel lobbies, shopping malls, corporate offices, restaurants) and mobile transit corridors (commercial vehicles, taxis, buses).
+2. **Outpost Hosts:** Property managers, business owners, and commercial vehicle operators looking to monetize their existing TV screens, LED boards, and vehicle exterior surfaces.
+
+The system provides an automated booking engine, built-in AI creative design tools, and a multi-stage proof-of-placement verification workflow to protect campaign investments.
+
+---
+
+## 2. FUNCTIONAL SYSTEM SPECIFICATIONS
+
+### Module 1: Advertiser / Vendor Portal (Web & Mobile)
+* **Outpost Marketplace & Discovery:**
+  * Search and filter ad spaces by city, corridor, venue type (Hotels, Malls, Banks, Gyms, Airports), and vehicle transit routes.
+  * View outpost profile metrics: estimated daily foot traffic, screen dimensions, operating hours, and daily/weekly/monthly pricing.
+* **In-App AI Creative Generation Studio:**
+  * **AI Flyer Creator:** Input business details, offer text, and theme prompts to automatically generate professional display flyers.
+  * **Media Uploader:** Upload custom existing flyers, images, or short MP4 video jingles.
+* **Campaign Booking & Escrow Checkout:**
+  * Select campaign duration (e.g., 7 days, 30 days) or vehicle wrap slot.
+  * Secure in-app payment via Paystack/Moniepoint, held in platform escrow until placement is verified.
+* **Proof-of-Placement Feed:** Real-time dashboard showing photo/video proof submitted by outpost owners confirming the ad is live.
+
+### Module 2: Outpost Host Portal (Screens & Vehicles)
+* **Outpost Space Listing:**
+  * Register screen displays (Smart TV, LED billboard, reception display) or vehicle assets (saloon car, minibus, commercial taxi).
+  * Define location, pricing schedule, and upload photos of the screen or vehicle.
+* **Campaign Acceptance & Media Delivery:**
+  * Receive booking alerts with approved media files (images or video clips).
+  * Download approved media for Smart TV playback or load via the platform web-player link.
+* **Proof-of-Play Submission Gate:**
+  * Mandatory upload of photo/video evidence showing the ad active on the screen or the installed vehicle wrap to release milestone payments.
+* **Earnings & Payout Wallet:** Real-time visibility into active campaign earnings, completed campaigns, and automated withdrawals to local bank accounts.
+
+### Module 3: Transit Wrap & Field Operations Workflow
+* **Branding Syndicate Desk:** Automated dispatch desk for professional vinyl installation agents to coordinate vehicle drop-off, material pickup, and application.
+* **Installation Sign-Off:** Field technician and driver dual sign-off with multi-angle vehicle inspection photos before campaign activation.
+
+### Module 4: Master Admin Operations & Marketplace Desk
+* **Listing Verification:** Review and approve or reject new screens, venues, and vehicle submissions before public listing.
+* **Ad Content Moderation:** Automated and manual review queue to filter out prohibited materials (nudity, fraudulent schemes, unauthorized promotions) before media reaches host screens.
+* **Commission & Financial Settlement Engine:** Configure platform service commission splits (e.g., 15% to 25% retained by the platform per booking), manage automated payout batches, and handle refund disputes.
+* **Campaign Performance Ledger:** Comprehensive tracking of live, upcoming, and expired campaigns across all registered cities.
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & STACK
+* **Web & Client Application:** **Next.js 15 (React)** with Tailwind CSS, delivered as a responsive Progressive Web App (PWA) installable on mobile phones and desktop computers.
+* **Backend API & Workflows:** **Node.js (NestJS)** hosted on **Railway**, handling booking state machines, proof verification queues, and role-based permissions.
+* **Database & File Storage:** **PostgreSQL** on Railway for transactional ledgers, combined with **Cloudflare R2** for zero-egress video and high-resolution graphic storage.
+* **AI Integration:** Secure backend interface to generative AI image and text models for the in-app flyer creator module.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
+*(Third-party infrastructure and maintenance costs paid directly by the client)*
+
+| Infrastructure / Service | Purpose | Estimated Initial Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server & DB (Railway)** | Runs core marketplace API, database, and background tasks | **$10.00 - $20.00 / month** |
+| **Media & Video Asset Storage (Cloudflare R2)** | High-resolution image/video ad storage with zero bandwidth fees | **Free tier / ~$5.00 / month** |
+| **AI Creative API (OpenAI / Image Gen Engine)** | Powers the in-app AI flyer/copy generator | **Pay-as-you-go (~$10.00 - $25.00 / month)** |
+| **SMS OTP & Transaction Alerts (Termii)** | User verification and campaign alerts | **Pay-as-you-go (~₦5.00 per SMS)** |
+| **Custom Domain & SSL Protection** | Brand domain name (.com or .ng) with Cloudflare CDN | **~$15.00 - $25.00 / year** |
+| **Payment Gateway Processing** | Escrow payment collection via Paystack/Moniepoint | **1.5% capped local processing fee** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Development Investment:** **₦1,250,000 (One Million Two Hundred and Fifty Thousand Naira)**
+* **Project Delivery Timeline:** **5 Weeks**
+
+### Milestone Payment Schedule
+* **40% Mobilization Deposit (₦500,000):** Paid upon agreement signing. Covers system architecture, database schema, marketplace UX/UI layouts, and AI generator integration setup.
+* **40% Functional Staging Milestone (₦500,000):** Paid upon delivery of working marketplace search, outpost onboarding, AI flyer generation, booking checkout, and proof-of-placement upload workflows on staging.
+* **20% Production Handover & Go-Live (₦250,000):** Paid upon final live deployment, payment gateway verification, administrative onboarding, and delivery of documentation.
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+Sales Cowboy provides **30 days of complimentary technical warranty support** following live deployment, covering bug resolution, escrow dispute workflow adjustments, and administrative staff onboarding.
+
+---
+
+## 7. PROJECT ACCEPTANCE & AUTHORIZATION
+
+**Prepared By:**  
+Sales Cowboy / Trade Infrastructure LTD  
+Lead Systems Architect  
+Date: November 10, 2026  
+
+**Approved and Accepted By:**  
+AdTech Marketplace Enterprise  
+Authorized Representative  
+Date: ________________________  
+
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+Sales Cowboy provides **30 days of complimentary technical warranty support** following live deployment, covering bug resolution, escrow dispute workflow adjustments, and administrative staff onboarding.
+
+---
+
+## 7. PROJECT ACCEPTANCE & AUTHORIZATION
+
+**Prepared By:**  
+Sales Cowboy / Trade Infrastructure LTD  
+Lead Systems Architect  
+Date: November 10, 2026  
+
+**Approved and Accepted By:**  
+AdTech Marketplace Enterprise  
+Authorized Representative  
+Date: ________________________  

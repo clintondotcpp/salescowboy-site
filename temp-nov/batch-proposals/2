@@ -1,0 +1,94 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** Fleet Tracking & Dispatch Management Platform  
+**Target Delivery:** Driver & Rider Mobile Tracking App (Android & iOS via React Native / Expo) + Master Web Control Dashboard (Next.js)  
+**Prepared By:** Trade Infrastructure LTD (Sales Cowboy)  
+**Date:** November 10, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To develop a streamlined, lightweight logistics tracking and dispatch system for a transport and courier company. 
+
+The system turns the rider or driver's smartphone into a live GPS tracker via a dedicated mobile app, streaming location updates in the background. The business owner and dispatch managers retain full visibility and control via a central web dashboard, allowing them to monitor active routes, assign delivery jobs, and manage driver operational status in real time.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: Driver & Rider Mobile Tracking App (React Native / Expo - Android & iOS)
+* **Driver Authentication & Shift Toggle:**
+  * Simple phone/email login with SMS OTP verification.
+  * One-tap `Start Shift (Online)` and `End Shift (Offline)` toggle.
+* **Background GPS Location Streaming:**
+  * Transmits real-time GPS coordinates (latitude, longitude, speed, heading) while the rider is online.
+  * Battery-optimized location pings designed for low data consumption on Nigerian mobile networks.
+* **Assigned Delivery Tasks:**
+  * Clean task list displaying pending deliveries, pickup addresses, recipient phone contacts, and delivery destinations.
+  * One-tap customer call button.
+  * Task progression buttons: `Accept Task` -> `Arrived at Pickup` -> `En Route` -> `Delivered`.
+* **Turn-by-Turn Route Handoff:** One-touch button opening external navigation (Google Maps / Apple Maps) directly to the delivery drop-off point.
+
+### Module 2: Central Fleet Control Web Dashboard (Next.js)
+* **Live Fleet Tracking Map:**
+  * Interactive map (Leaflet / OpenStreetMap) showing all active riders, live vehicle locations, and current availability status (Available, Busy on Delivery, Offline).
+  * Click on any vehicle marker to view driver identity, current speed, battery level, and assigned order reference.
+* **Dispatch & Task Assignment Desk:**
+  * Create delivery orders: pickup location, delivery address, package description, customer name, and contact details.
+  * Assign orders manually to the closest available rider or broadcast for pickup.
+* **Driver & Vehicle Master Directory:**
+  * Register and manage rider profiles (full name, phone number, vehicle type, license plate number).
+  * Activate, reassign, or suspend driver access in one click.
+* **Trip History & Completed Logs:** Searchable archive of past deliveries, completion timestamps, assigned riders, and delivery proof records.
+
+---
+
+## 3. PROPOSED TECHNICAL ARCHITECTURE
+* **Mobile Application:** **React Native (Expo)** compiled for **Android** (`.apk`/`.aab`) and **iOS** (`.ipa`), optimized for low memory usage and low-cost smartphones.
+* **Web Admin Dashboard:** **Next.js (React)** styled with Tailwind CSS, built for fast operation on desktop laptops and office tablets.
+* **Backend API & Real-Time Sync:** **Node.js (NestJS)** utilizing WebSockets to broadcast live rider coordinates directly to the web dashboard map without refreshing the page.
+* **Database & Location Cache:** **PostgreSQL** for persistent delivery records and driver profiles, paired with **Redis** for sub-second coordinate storage.
+* **Cost-Controlled Geospatial Mapping:** Open-source tile rendering (OpenStreetMap / Leaflet) to eliminate expensive recurring Google Maps API bills.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
+*(Third-party infrastructure fees paid directly by the client to service providers)*
+
+| Infrastructure / Service | Purpose | Estimated Initial Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server & DB** | Runs the backend and live map socket listeners on Railway | **$5.00 - $10.00 / month** |
+| **Custom Domain & SSL Protection** | Brand domain name (.com or .ng) with managed SSL | **~$10.00 - $20.00 / year** |
+| **Mapping & Routing APIs** | OpenStreetMap / Leaflet tile infrastructure | **$0.00 (Free baseline tier)** |
+| **Google Play Developer Account** | One-time Android publishing fee if listing on Play Store | **$25.00 (One-off fee to Google)** |
+| **Apple Developer Program Account** | Annual membership required to publish directly on iOS App Store | **$99.00 / year (Paid to Apple)** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Development Investment:** **₦750,000 (Seven Hundred and Fifty Thousand Naira)**
+* **Project Delivery Timeline:** **3 to 4 Weeks**
+
+### Milestone Payment Schedule
+* **50% Mobilization Deposit (₦375,000):** Paid upon agreement signing. Covers React Native setup, database schema, map server bridge, and UI/UX interface design.
+* **30% Functional Staging Milestone (₦225,000):** Paid upon deployment of the driver app background GPS tracker, live dispatch map, and order creation flow on staging.
+* **20% Production Handover & Go-Live (₦150,000):** Paid upon delivery of production app builds (Android & iOS), live web dashboard deployment, domain setup, and administrative onboarding.
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+Sales Cowboy provides **30 days of complimentary technical warranty support** following live deployment, covering bug resolution, socket connection optimization, and operational training.
+
+---
+
+## 7. PROJECT ACCEPTANCE & AUTHORIZATION
+
+**Prepared By:**  
+Sales Cowboy / Trade Infrastructure LTD  
+Lead Systems Architect  
+Date: November 10, 2026  
+
+**Approved and Accepted By:**  
+Logistics & Transport Enterprise  
+Authorized Representative  
+Date: ________________________  

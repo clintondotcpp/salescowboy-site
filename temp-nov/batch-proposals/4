@@ -1,0 +1,122 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** Integrated Church Management Suite & Member Engagement Platform  
+**Target Delivery:** Cross-Platform Mobile App (Android & iOS via React Native / Expo) + Administrative Web Console (Next.js)  
+**Prepared By:** Trade Infrastructure LTD (Sales Cowboy)  
+**Date:** November 10, 2026  
+
+---
+
+## 1. PROJECT OVERVIEW
+The goal is to design, develop, and deploy a church digital ecosystem combining administrative efficiency with deep congregational engagement. 
+
+The platform delivers a dedicated mobile app for church members (community feeds, live streaming, AI Bible assistant, and announcements) and a centralized administrative web console for ministry leadership, featuring an automated **AI Sermon Assistant** designed to help the Lead Pastor research scriptures, structure message outlines, and archive sermon notes effortlessly.
+
+---
+
+## 2. FUNCTIONAL SYSTEM SPECIFICATIONS
+
+### Module 1: Lead Pastor & Leadership Console (Web Dashboard)
+* **AI Sermon Preparation Assistant:**
+  * Topic and passage research assistant powered by targeted AI integration (OpenAI API).
+  * Automatically suggests cross-references, historical context, sermon outlines, and illustrative sermon points.
+  * Integrated sermon archive: save, edit, tag, and export sermon notes for pulpit delivery.
+* **Membership Directory & Analytics:**
+  * Centralized member database with contact info, baptism status, home cells, and joining dates.
+  * Automatic birthday detection algorithm generating daily celebrant rosters for leadership follow-up.
+* **Announcements & Broadcast Desk:**
+  * Schedule and push targeted announcements, event flyers, and ministry updates directly to members' mobile devices.
+* **Live Service Broadcast Manager:**
+  * Link church live streams (YouTube Live, Facebook Live, or direct HLS/RTMP streams) to broadcast dynamically into the mobile app.
+
+### Module 2: Member Mobile Application (Android & iOS via React Native / Expo)
+* **Member Onboarding & Digital ID:**
+  * Quick phone/email sign-up, profile photo upload, and personal details (birthday, department, cell group).
+* **AI Bible & Devotional Hub:**
+  * Complete offline/online Scripture reader (KJV and modern translations).
+  * In-app AI Bible Study Assistant: Ask questions, search topical passages, and receive biblical contextual explanations.
+* **Live Stream & Sermon Media Vault:**
+  * Integrated video player for live Sunday/midweek church services with zero external ad interruptions.
+  * Audio/video library for previous sermons with playback controls.
+* **Church Community & Fellowship Feed:**
+  * Interactive church wall for testimonies, prayer requests, and fellowship comments.
+  * Birthday celebrants feed highlighting members celebrating each day for communal well-wishes.
+* **Push Notifications & Event Reminders:**
+  * Instant push notifications for church announcements, service start reminders, and leadership broadcasts.
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & INFRASTRUCTURE
+* **Cross-Platform Mobile App:** Built on **React Native (Expo)** to produce native **Android** (`.apk`/`.aab`) and **iOS** (`.ipa`) builds from a single clean codebase.
+* **Administrative Web Portal:** **Next.js 15 (React)** with Tailwind CSS for pastor and administrator management across desktop laptops and tablets.
+* **Backend API & Workflows:** **Node.js (NestJS)** hosted on **Railway**, managing database operations, push notifications, and API connections.
+* **Database & File Storage:** **PostgreSQL** on Railway for structured member records and communication logs, paired with unified cloud storage for media, flyers, and sermon resources.
+* **AI Layer:** Secure backend gateway interfacing with OpenAI API endpoints for the Pastor's Sermon Assistant and Member AI Bible tools.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
+*(Third-party infrastructure and maintenance fees paid directly by the church)*
+
+| Infrastructure / Service | Purpose | Estimated Initial Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server & DB (Railway)** | Runs backend API, database, and background jobs | **$10.00 - $20.00 / month** |
+| **Media & File Storage (Railway / S3)** | Stores sermon notes, church flyers, and avatars | **Included in cloud tier / ~$5.00 / month** |
+| **AI API Usage (OpenAI API)** | Powers Sermon Assistant & AI Bible queries | **Pay-as-you-go (~$5.00 - $15.00 / month)** |
+| **Push Notifications (Firebase Cloud Messaging)** | In-app announcements and birthday alerts | **$0.00 (Free unlimited tier)** |
+| **Custom Domain & SSL Protection** | Church domain name (.org or .ng) with Cloudflare CDN | **~$15.00 - $25.00 / year** |
+| **Google Play Developer Account** | One-time Android publishing fee to Google | **$25.00 (One-off payment)** |
+| **Apple Developer Program Account** | Annual fee to publish on Apple App Store | **$99.00 / year (Paid to Apple)** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Development Investment:** **₦750,000 - ₦850,000** (dependent on initial AI query volume configuration and custom reporting depth)
+* **Project Delivery Timeline:** **4 to 5 Weeks**
+
+### Milestone Payment Schedule (50% / 30% / 20%)
+
+| Milestone Phase | Scope Deliverables | Baseline (₦750,000) | Full Scope (₦850,000) |
+| :--- | :--- | :--- | :--- |
+| **50% Mobilization Deposit** | Agreement signing, React Native environment setup, database schema design, and complete UI/UX interface layouts for mobile app and web portal. | **₦375,000** | **₦425,000** |
+| **30% Functional Staging Milestone** | Delivery of working member registration, AI Bible integration, Pastor's Sermon Assistant, live stream video player, and admin dashboard on staging. | **₦225,000** | **₦255,000** |
+| **20% Production Handover & Go-Live** | Delivery of production-ready Android (`.apk`/`.aab`) and iOS builds, live deployment of the web portal, push notification testing, and administrative handover. | **₦150,000** | **₦170,000** |
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+Sales Cowboy provides **30 days of complimentary technical warranty support** following live deployment, covering bug resolution, live stream feed optimization, and administrative onboarding for church leaders.
+
+---
+
+## 7. PROJECT ACCEPTANCE & AUTHORIZATION
+
+**Prepared By:**  
+Sales Cowboy / Trade Infrastructure LTD  
+Lead Systems Architect  
+Date: November 10, 2026  
+
+**Approved and Accepted By:**  
+Church Leadership & Ministry Board  
+Authorized Representative  
+Date: ________________________  
+
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+Sales Cowboy provides **30 days of complimentary technical warranty support** following live deployment, covering bug resolution, live stream feed optimization, and administrative onboarding for church leaders.
+
+---
+
+## 7. PROJECT ACCEPTANCE & AUTHORIZATION
+
+**Prepared By:**  
+Sales Cowboy / Trade Infrastructure LTD  
+Lead Systems Architect  
+Date: November 10, 2026  
+
+**Approved and Accepted By:**  
+Church Leadership & Ministry Board  
+Authorized Representative  
+Date: ________________________  

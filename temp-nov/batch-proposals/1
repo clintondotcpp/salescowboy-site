@@ -1,0 +1,115 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** Nationwide Cooperative Membership & Loan Application Platform  
+**Target Delivery:** Mobile Apps (Android & iOS via React Native / Expo) + Member & Executive Web Portal (Next.js)  
+**Prepared By:** Trade Infrastructure LTD (Sales Cowboy)  
+**Date:** November 10, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To develop an accessible multi-platform digital system for a nationwide cooperative society. 
+
+The platform allows prospective members across different states to submit formal membership applications, upload required KYC documentation, and apply for cooperative loans directly from their smartphones or web browsers. For cooperative executives, it provides a centralized portal to review applicants by state/chapter, enforce creditworthiness guidelines, and manage loan approvals and disbursements efficiently.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: Member Application & Onboarding Desk (Mobile & Web)
+* **Nationwide Chapter & State Selection:** Applicants pick their operational state, local branch/chapter, and member classification.
+* **Digital KYC & Identity Profiling:**
+  * Personal, residential, and employment/business details.
+  * Digital upload of valid government-issued ID, passport photograph, and utility/proof of address.
+  * Next-of-kin and referee/guarantor contact information.
+* **Application Fee & Registration Payment:** Integrated checkout (Paystack / Monnify) to automate collection of one-time membership registration fees and mandatory share capital commitments.
+* **Application Status Tracker:** Real-time visibility into application progress (Submitted, Under Review, Approved, Action Required).
+
+### Module 2: Loan Application & Credit Assessment Engine
+* **Dynamic Loan Product Catalog:** Display available loan categories (e.g., Soft Loans, Business Expansion, Emergency, Asset Acquisition) with clear interest rates, tenor ranges, and repayment schedules.
+* **Interactive Loan Calculator:** Real-time computation of monthly principal, interest, and total repayment obligations before submission.
+* **Loan Request Workflow:**
+  * Select loan type, amount requested, and repayment duration.
+  * Attach loan purpose details, income declarations, and supporting bank statements.
+  * Internal Cooperative Guarantor Nomination: Assign registered co-members as guarantors with automated in-app confirmation prompts.
+* **Repayment Schedule & Loan Ledger:** Detailed breakdown of active loans, upcoming installment dates, outstanding balances, and repayment history.
+
+### Module 3: Executive Administration & State Chapter Console (Web)
+* **Multi-State Branch Filtering:** Review membership applications and loan requests grouped by state, branch, or nationwide aggregate.
+* **Membership Vetting & Approval Desk:** Approve, request additional documents, or reject member applications with automated SMS/email alerts sent to the applicant.
+* **Loan Underwriting & Multi-Tier Approvals:**
+  * Inspect applicant savings history, guarantor compliance, and uploaded records.
+  * Role-based approval actions (e.g., Chapter Lead Review -> State Exco Review -> Central Disbursement Sign-off).
+* **Financial Ledger & Export:** Comprehensive audit logs and one-click data export (CSV/Excel) for executive board meetings, regulatory filings, and financial audits.
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & PLATFORM STACK
+* **Cross-Platform Mobile Apps:** Built using **React Native (Expo)** to deliver unified, high-performance native applications for both **Android** (`.apk`/`.aab`) and **iOS** (`.ipa`).
+* **Web Portal:** Responsive web portal built with **Next.js (React)** and Tailwind CSS, allowing members and administrative staff to access the platform via desktop and mobile browsers.
+* **Backend API & Workflows:** **Node.js (NestJS)** deployed on secure cloud infrastructure to manage role-based permissions, application workflows, and automated notifications.
+* **Database & File Storage:** **PostgreSQL** relational database for auditable financial ledgers paired with encrypted cloud object storage for applicant documents and IDs.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
+*(Third-party fees paid directly by the cooperative to service providers)*
+
+| Infrastructure / Service | Purpose | Estimated Initial Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server & DB** | Runs the backend API and database on Railway | **$5.00 - $10.00 / month** |
+| **Custom Domain & SSL Protection** | Brand domain name (.com or .ng) with managed SSL | **~$10.00 - $20.00 / year** |
+| **SMS OTP & Transaction Alerts** | Phone verification and loan alerts via Termii | **Pay-as-you-go (~₦5.00 per SMS)** |
+| **Payment Gateway Integration** | Processing membership dues via Paystack/Monnify | **1.5% capped local processing fee** |
+| **Google Play Developer Account** | One-time Android publishing fee to Google | **$25.00 (One-off fee)** |
+| **Apple Developer Program Account** | Annual fee required to publish directly to iOS App Store | **$99.00 / year (Paid to Apple)** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Development Investment:** **₦850,000 (Eight Hundred and Fifty Thousand Naira)**
+* **Project Delivery Timeline:** **4 Weeks**
+
+### Milestone Payment Schedule
+* **50% Mobilization Deposit (₦425,000):** Paid upon agreement signing. Covers React Native Expo environment setup, database schema design, and complete UI/UX interface layouts for mobile and web.
+* **30% Functional Staging Milestone (₦255,000):** Paid upon delivery of working onboarding forms, KYC document uploads, loan calculation logic, and administrative review consoles on staging.
+* **20% Production Handover & Store Builds (₦170,000):** Paid upon delivery of production-ready Android and iOS app builds, deployment of the live web portal, and administrative handover.
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+Sales Cowboy provides **30 days of complimentary technical warranty support** following live deployment, covering bug fixes, ledger calculation audits, and administrative staff onboarding.
+
+---
+
+## 7. PROJECT ACCEPTANCE & AUTHORIZATION
+
+**Prepared By:**  
+Sales Cowboy / Trade Infrastructure LTD  
+Lead Systems Architect  
+Date: November 10, 2026  
+
+**Approved and Accepted By:**  
+Cooperative Society National Executive Committee  
+Authorized Representative  
+Date: ________________________  
+
+
+---
+
+## 6. POST-LAUNCH WARRANTY & SUPPORT
+Sales Cowboy provides **30 days of complimentary technical warranty support** following live deployment, covering bug fixes, ledger calculation audits, and administrative staff onboarding.
+
+---
+
+## 7. PROJECT ACCEPTANCE & AUTHORIZATION
+
+**Prepared By:**  
+Sales Cowboy / Trade Infrastructure LTD  
+Lead Systems Architect  
+Date: November 10, 2026  
+
+**Approved and Accepted By:**  
+Cooperative Society National Executive Committee  
+Authorized Representative  
+Date: ________________________  

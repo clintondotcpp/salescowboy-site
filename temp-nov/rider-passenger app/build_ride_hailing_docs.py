@@ -716,3 +716,4 @@ shutil.copy2(pdf_path, os.path.join(public_dir, pdf_name))
 if os.path.exists(out_dir):
     shutil.copy2(pdf_path, os.path.join(out_dir, pdf_name))
 print(f"[OK] Copied {pdf_name} to public and out")
+

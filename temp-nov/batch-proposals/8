@@ -1,0 +1,83 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** Multi-Vendor E-Commerce & Retail Marketplace Platform  
+**Target Delivery:** Cross-Platform Customer Mobile App (Android & iOS via React Native / Expo) + Responsive Web Storefront (Next.js) + Vendor Portal + Central Master Admin Desk  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Date:** November 11, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To develop an end-to-end multi-vendor e-commerce marketplace modeled after the core functionality of platforms like Jumia. 
+
+The platform enables independent third-party merchants to register, list products, track inventory, and fulfill customer orders. Buyers enjoy a fast, modern shopping experience across mobile apps and the web, complete with multi-category search, integrated local payment gateways, coupon systems, and order tracking. Platform owners retain full control via a master admin dashboard with automated commission splits.
+
+---
+
+## 2. FUNCTIONAL SYSTEM SPECIFICATIONS
+
+### Module 1: Customer Storefront (Web & React Native Mobile App)
+* **Product Catalog & Multi-Level Categories:** Browse across departments (Electronics, Fashion, Home & Living, Groceries, Beauty) with dynamic brand, price, and rating filters.
+* **Smart Search & Autocomplete:** Real-time search bar with keyword matching, recent searches, and popular suggestions.
+* **Product Detail Desk:** Multi-image gallery, product variation selector (sizes, colors, specs), stock status, customer review summaries, and merchant profile cards.
+* **Unified Shopping Cart & Multi-Vendor Checkout:**
+  * Add products from multiple distinct vendors into a single checkout cart.
+  * Delivery address book with auto-calculated shipping estimates.
+  * Coupon code and promo discount engine.
+* **Payment Gateways & Order Tracking:**
+  * Secure checkout via Paystack / Moniepoint / Flutterwave (Debit Cards, Bank Transfer, USSD).
+  * 4-Stage visual order tracking: `Order Placed` ➔ `Confirmed by Vendor` ➔ `Shipped / En Route` ➔ `Delivered`.
+* **User Accounts:** Order history, invoice downloads, product wishlist, and item review/rating submission.
+
+### Module 2: Merchant & Vendor Management Portal (Web / PWA)
+* **Merchant Onboarding & KYC:** Business registration, contact verification, bank payout account details, and store banner branding.
+* **Product & Inventory Catalog Manager:**
+  * Create, edit, and categorize product listings with SKU, pricing, discount tags, and stock counts.
+  * Image upload tool with automated resizing for quick mobile loading.
+* **Order Processing & Fulfillment Desk:**
+  * Live audible order notifications for newly placed items.
+  * Update order lifecycle status (`Package Order`, `Ready for Dispatch`, `Dispatched`).
+* **Vendor Financial Ledger & Payout Requests:**
+  * Real-time breakdown of total sales, platform commission deductions, and net withdrawable balance.
+  * One-tap payout request to their registered Nigerian commercial bank account.
+
+### Module 3: Master Admin Operations & Marketplace Desk (Web)
+* **Merchant Approval & Store Governance:** Review, approve, suspend, or audit vendor applications and storefronts.
+* **Global Product Moderation:** Automatic holding queue or active moderation tools to review, approve, or take down prohibited product listings.
+* **Commission Engine & Payout Settlement:** Set dynamic category commissions (e.g., 5% on Electronics, 15% on Fashion) with automated revenue splits and batch payout approvals.
+* **Banner Ads & Promotion Manager:** Configure promotional homepage sliders, flash sale banners, and featured category tiles without code changes.
+* **Financial & Sales Analytics:** Real-time visibility into Gross Merchandise Value (GMV), net platform earnings, top-selling items, and daily order volumes.
+
+---
+
+## 3. PROPOSED TECHNICAL ARCHITECTURE
+* **Customer Mobile App:** **React Native (Expo)** compiled into native binaries for **Android** (`.apk`/`.aab`) and **iOS** (`.ipa`).
+* **Web Storefront & Admin Portal:** **Next.js 15 (React)** styled with Tailwind CSS, delivering sub-second page loads, mobile responsiveness, and SEO-optimized product pages.
+* **Backend API & Order Engine:** **Node.js (NestJS)** hosted on cloud infrastructure, managing cart state machines, payment webhooks, and vendor payouts.
+* **Database & Asset Storage:** **PostgreSQL** maintaining transactional double-entry accounting records paired with **Cloudflare R2** for fast, zero-egress product photo hosting.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
+*(Third-party infrastructure and maintenance fees paid directly by the client to service providers)*
+
+| Infrastructure / Service | Purpose | Estimated Initial Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server & DB (Railway)** | Runs backend API, database, and background tasks | **$10.00 - $20.00 / month** |
+| **Product Media Storage (Cloudflare R2)** | High-resolution product images with zero bandwidth fees | **Free tier / ~$5.00 / month** |
+| **Payment Gateway Processing** | Paystack / Moniepoint transaction processing | **1.5% capped local processing fee** |
+| **SMS OTP & Transaction Alerts (Termii)** | Customer and vendor phone verification alerts | **Pay-as-you-go (~₦5.00 per SMS)** |
+| **Custom Domain & SSL Protection** | Brand domain name (.com or .ng) with Cloudflare CDN | **~$15.00 - $25.00 / year** |
+| **Google Play Developer Account** | One-time Android publishing fee to Google | **$25.00 (One-off payment)** |
+| **Apple Developer Program (Optional)** | Annual fee required to publish directly to iOS App Store | **$99.00 / year (Paid to Apple)** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Development Investment:** **₦850,000**
+* **Project Delivery Timeline:** **4 to 5 Weeks**
+
+### Milestone Payment Schedule
+* **50% Mobilization Deposit (₦425,000):** Paid upon agreement signing. Covers React Native Expo environment setup, database schema design, and complete UI/UX interface layouts for mobile app, web store, and admin console.
+* **30% Functional Staging Milestone (₦255,000):** Paid upon delivery of working customer catalog, multi-vendor cart checkout, payment gateway integration, vendor dashboard, and order state transitions on staging.
+* **20% Production Handover & Go-Live (₦170,000):** Paid upon delivery of production-ready Android/iOS app builds, live deployment of the web storefront, domain configuration, and administrative handover.

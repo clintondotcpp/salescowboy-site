@@ -1,0 +1,88 @@
+# PRODUCT DEVELOPMENT PROPOSAL
+**Project:** Unified Real Estate Value-Chain & PropTech Ecosystem  
+**Target Delivery:** Cross-Platform iOS & Android Mobile Applications (React Native) + Central Web Management Console  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Date:** November 11, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To develop an integrated PropTech ecosystem that addresses systemic inefficiencies, title uncertainty, middleman inflation, and fragmented services across the Nigerian property ecosystem. 
+
+The platform unifies five key verticals into a single digital marketplace: direct property listings, verified shortlets and hotel bookings, vetted artisanal maintenance services, building material and tool procurement, and a structured land title search and verification request desk.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: Property Sales & Lettings Hub (Direct & Middleman-Free)
+* **Direct Property Listings:** Verified listings for land, residential apartments, duplexes, and commercial spaces.
+* **Direct Contact & Inspection Booking:** Direct buyer-to-developer or verified agent communication channels to eliminate multi-layered intermediary commissions.
+* **Listing Verification Badges:** Visual trust indicators (`Title Inspected`, `Direct Mandate`, `Verified Developer`) based on uploaded documentation.
+* **Multi-Parameter Search & Filtering:** Filter listings by state, LGA, neighborhood, price range, property condition, and land title type.
+
+### Module 2: Land Registry & Title Verification Request Desk
+* **Title Search Request Engine:** Digital intake form allowing prospective buyers or investors to order land title verification before purchase.
+* **Document Intake:** Secure upload of survey plans, Deed of Assignment, Gazette reference, Governor's Consent, or Certificate of Occupancy (C of O) copies.
+* **Registry Tracking Pipeline:** User dashboard tracking title review stages (`Documents Received`, `Registry Search in Progress`, `Survey Coordinate Charting`, `Report Ready`).
+* **Search Report Delivery:** Secure client download of official legal title search reports and surveyor coordinate charting findings.
+
+### Module 3: Verified Artisans & Maintenance Services Hub
+* **Service Directory:** Categorized booking portal for certified trades:
+  * Plumbers, Electricians, AC & Refrigeration Technicians, Carpenters, Painters, and Masons.
+* **Service Request & Dispatch Flow:**
+  * Select trade category, specify issue, upload photos/notes, and set site address.
+  * Receive matched artisan profile, rating, and scheduled arrival time.
+* **Job Completion Sign-Off & Ratings:** Dual confirmation upon job completion and a mutual 5-star rating system to maintain trade standards.
+
+### Module 4: Building Materials & Tool Procurement Desk
+* **Direct Supply Catalog:** Transparent pricing catalog for essential building supplies:
+  * Cement, rebar, gravel/sand, tiles, electrical wiring, plumbing piping, and construction power tools.
+* **Bulk Order Quote & Cart Flow:** Add items to cart, request bulk delivery quotes based on site location, and confirm orders.
+* **Supplier Matching & Dispatch:** System routes supply orders to verified regional suppliers and logistics partners.
+
+### Module 5: Verified Shortlets & Hospitality Bookings
+* **Apartment & Room Inventory:** Detailed photo galleries, amenity checklists (24/7 power, security, Wi-Fi, swimming pool), house rules, and nightly rates.
+* **Calendar Booking Engine:** Date-picker managing real-time check-in and check-out dates to prevent double-booking.
+* **In-App Checkout & Escrow:** Secure payment processing via Paystack/Monnify, holding guest deposits until check-in confirmation.
+
+### Module 6: Master Operations & Administrative Dashboard
+* **Vendor & Artisan Vetting Desk:** Review and approve artisan trade credentials, supplier price sheets, and host property deeds.
+* **Title Verification Workflow Management:** Assign incoming title verification requests to internal legal/surveying partners and upload final search reports.
+* **Order & Booking Ledger:** Centralized tracking of material orders, shortlet reservations, maintenance dispatch tickets, and platform commission cuts.
+* **Dispute & Escrow Control:** Settle artisan disputes, manage security deposit releases, and review user reports.
+
+---
+
+## 3. PROPOSED TECHNICAL ARCHITECTURE
+* **Mobile Applications (iOS & Android):** **React Native (Expo / React Native CLI)** delivering a native, smooth experience for property seekers, property hosts, and service artisans on both Apple iOS and Google Android. Includes push notifications, native geolocation/mapping, and camera document scanning.
+* **Web Portal & Management Console:** **Next.js 15 (React)** with Tailwind CSS, built as a responsive web dashboard for property developers, bulk material procurement buyers, and administrative back-office staff.
+* **Backend API & Workflows:** **Node.js (NestJS)** hosted on lightweight cloud infrastructure to manage multi-module business logic, booking workflows, and role-based permissions.
+* **Database & File Storage:** **PostgreSQL** for relational data integrity (listings, bookings, service requests, and ledgers) paired with **Cloudflare R2** for zero-egress document and property photo storage.
+* **Payment Integration:** **Paystack / Monnify** for automated local card billing, bank transfer payouts, and checkout escrow holding.
+
+---
+
+## 4. ESTIMATED RUNNING & THIRD-PARTY OPERATIONAL COSTS
+*(Third-party infrastructure fees paid directly by the client to service providers)*
+
+| Infrastructure / Service | Purpose | Estimated Initial Cost |
+| :--- | :--- | :--- |
+| **Cloud Application Server & DB (Railway)** | Runs backend API, database, and background tasks | **$10.00 - $20.00 / month** |
+| **Media & Document Storage (Cloudflare R2)** | High-resolution property photos, titles, and IDs | **Free tier / ~$5.00 / month** |
+| **Custom Domain & SSL Protection** | Brand domain name (.com or .ng) with Cloudflare CDN | **~$15.00 - $25.00 / year** |
+| **SMS OTP & Transaction Alerts (Termii)** | User phone number verification and alerts | **Pay-as-you-go (~₦5.00 per SMS)** |
+| **Apple Developer & Google Play Accounts** | Store distribution for iOS and Android apps | **$99.00 / year (Apple) + $25.00 one-off (Google)** |
+| **Payment Gateway Processing** | In-app payment collection via Paystack/Monnify | **1.5% capped local processing fee** |
+
+---
+
+## 5. COMMERCIAL INVESTMENT & PAYMENT SCHEDULE
+
+* **Total Development Investment:** **₦850,000**
+* **Project Delivery Timeline:** **4 to 5 Weeks**
+
+### Milestone Payment Schedule
+* **50% Mobilization Deposit (₦425,000):** Paid upon agreement signing. Covers system architecture, database schema design, and complete UI/UX interface design across React Native mobile apps, web portal, and admin console.
+* **30% Functional Staging Milestone (₦255,000):** Paid upon delivery of property listings, title request intake, service booking flows, material catalog, React Native mobile staging builds (iOS/Android TestFlight/APK), and admin management.
+* **20% Production Handover & Go-Live (₦170,000):** Paid upon final live deployment to cloud servers, custom domain configuration, payment gateway live verification, app store release submission packages, and administrative handover.

@@ -574,7 +574,7 @@ slide_1 = f"""
       </div>
       <div>
         <div class="cf-label">Total Development Investment</div>
-        <div class="cf-val" style="color: #FBBF24;">₦850,000 (50/30/20 Milestones)</div>
+        <div class="cf-val" style="color: #FBBF24;">₦1,000,000 (50/30/20 Milestones)</div>
       </div>
       <div>
         <div class="cf-label">Delivery Timeline</div>
@@ -615,7 +615,7 @@ slide_2 = slide_chrome(
         <div class="stat-sub">Dynamic category percentages deducted cleanly before vendor payouts.</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">₦850k</div>
+        <div class="stat-num">₦1M</div>
         <div class="stat-label">Total Investment</div>
         <div class="stat-sub">Complete turnkey delivery within 4 to 5 weeks from mobilization.</div>
       </div>
@@ -882,11 +882,11 @@ slide_9 = slide_chrome(
 slide_10 = slide_chrome(
     "09 | Commercial Investment",
     "Development Pricing & 50 / 30 / 20 Milestone Schedule",
-    "Investment: ₦850,000",
+    "Investment: ₦1,000,000",
     10, TOTAL_SLIDES,
     """
     <div class="callout">
-      <strong>Total Development Investment:</strong> <strong>₦850,000 (Eight Hundred and Fifty Thousand Naira)</strong> &nbsp;|&nbsp; <strong>Project Delivery Timeline:</strong> <strong>4 to 5 Weeks</strong>
+      <strong>Total Development Investment:</strong> <strong>₦1,000,000 (One Million Naira)</strong> &nbsp;|&nbsp; <strong>Project Delivery Timeline:</strong> <strong>4 to 5 Weeks</strong>
     </div>
     <table>
       <thead>
@@ -900,17 +900,17 @@ slide_10 = slide_chrome(
         <tr>
           <td><strong>1. Mobilization Deposit</strong></td>
           <td>Agreement signing. Covers React Native Expo setup, database schema design, and complete UI/UX layouts for mobile app, web storefront &amp; admin console.</td>
-          <td><strong style="color:var(--accent-dark); font-size:15px;">50% (₦425,000)</strong></td>
+          <td><strong style="color:var(--accent-dark); font-size:15px;">50% (₦500,000)</strong></td>
         </tr>
         <tr>
           <td><strong>2. Functional Staging</strong></td>
           <td>Delivery of live customer catalog, multi-vendor cart checkout, payment gateway integration, vendor dashboard, and order state transitions on staging.</td>
-          <td><strong style="color:var(--accent-dark); font-size:15px;">30% (₦255,000)</strong></td>
+          <td><strong style="color:var(--accent-dark); font-size:15px;">30% (₦300,000)</strong></td>
         </tr>
         <tr>
           <td><strong>3. Production Go-Live</strong></td>
           <td>Production Android &amp; iOS app builds, live web storefront deployment, custom domain configuration, and complete administrative handover.</td>
-          <td><strong style="color:var(--accent-dark); font-size:15px;">20% (₦170,000)</strong></td>
+          <td><strong style="color:var(--accent-dark); font-size:15px;">20% (₦200,000)</strong></td>
         </tr>
       </tbody>
     </table>
@@ -943,7 +943,7 @@ slide_11 = slide_chrome(
     </div>
 
     <div class="card" style="padding: 5.5mm 7mm;">
-      <div class="card-title" style="margin-bottom: 4mm; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px;">Formal Proposal Acceptance &amp; Project Authorization (₦850,000)</div>
+      <div class="card-title" style="margin-bottom: 4mm; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px;">Formal Proposal Acceptance &amp; Project Authorization (₦1,000,000)</div>
       <div class="cols-2" style="gap: 18mm;">
         <div>
           <div style="font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; margin-bottom: 10mm;">For: Sales Cowboy Marketing Solutions</div>
@@ -1036,5 +1036,6 @@ for idx, pg in enumerate(doc):
 full = " ".join(p.get_text() for p in doc)
 print("  Has Trade Infrastructure:", "Trade Infrastructure" in full)
 print("  Has Sales Cowboy MS:", "Sales Cowboy Marketing Solutions" in full)
-print("  Has 850,000:", "850,000" in full)
+print("  Has 1,000,000:", "1,000,000" in full)
 print("  Has em/en dash:", "\u2014" in full or "\u2013" in full)
+

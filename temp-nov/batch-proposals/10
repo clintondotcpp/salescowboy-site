@@ -1,6 +1,6 @@
 # PRODUCT DEVELOPMENT PROPOSAL
 **Project:** On-Demand Home-Visit Medical Consultation Platform  
-**Target Delivery:** Cross-Platform Patient & Practitioner Mobile App (Android & iOS via React Native / Expo) + Medical Operations & Dispatch Web Console (Next.js)  
+**Target Delivery:** Unified Dual-Role Mobile Application (One App for Patients & Practitioners with Role-Switching on Android & iOS via React Native / Expo) + Medical Operations & Dispatch Web Console (Next.js)  
 **Prepared By:** Sales Cowboy Marketing Solutions  
 **Date:** November 18, 2026  
 
@@ -9,35 +9,38 @@
 ## 1. PROJECT OBJECTIVE
 To develop a dedicated, on-demand home-visit healthcare dispatch platform connecting patients directly with licensed doctors, nurses, and mobile healthcare practitioners for physical in-home consultations.
 
+Both patients and healthcare practitioners share a single, unified mobile application. Users sign into their dedicated role mode: patients book house calls and track arrivals, while verified medical practitioners switch into Practitioner Mode to receive incoming visit dispatches, navigate to patient homes, and manage consultation earnings.
+
 By focusing exclusively on physical house-call requests rather than video telemedicine, the platform delivers a fast, streamlined booking experience: patients request a medical visit to their home or office, pay securely in-app, track their assigned practitioner's arrival on a live map, and receive professional care without hospital queues or traffic delays.
 
 ---
 
 ## 2. FUNCTIONAL SYSTEM MODULES
 
-### Module 1: Patient Mobile App (Android & iOS via React Native / Expo)
+### Module 1: Unified Mobile App - Patient Experience (Android & iOS via React Native / Expo)
 * **Fast Onboarding & Medical Profile:**
   * Phone/email authentication with basic emergency profile (blood group, known allergies, chronic conditions, and saved home/office addresses).
 * **Home-Visit Consultation Booking Flow:**
-  * Select practitioner category (e.g., *General Practitioner / Doctor, Registered Nurse, Pediatric Care, Physiotherapy, Mobile Lab Sample Collection*).
-  * Input symptoms/notes, select preferred time (`Immediate Dispatch` or `Scheduled Visit`), and pin exact home GPS location.
+  * Select practitioner category (e.g., General Practitioner / Doctor, Registered Nurse, Pediatric Care, Physiotherapy, Mobile Lab Sample Collection).
+  * Input symptoms/notes, select preferred time (Immediate Dispatch or Scheduled Visit), and pin exact home GPS location.
 * **Transparent Upfront Pricing & Checkout:**
   * Clear display of consultation/house-call fee based on practitioner category and distance zone.
-  * Instant payment via **Paystack / Moniepoint** (Cards, Bank Transfer, USSD).
+  * Instant payment via Paystack / Moniepoint (Cards, Bank Transfer, USSD).
 * **Live Practitioner Tracking & Safety Verification:**
   * Real-time GPS map tracking showing the assigned doctor/nurse en route to the patient's location.
   * **Arrival Security PIN / OTP:** Unique 4-digit verification code exchanged at the door to confirm practitioner identity before starting the consultation.
 * **Visit History & Digital Summary:** Access past house-call receipts, practitioner visit notes, and post-visit ratings.
 
-### Module 2: Medical Practitioner App (Doctors & Nurses)
-* **Credential Onboarding & MDCN / NMCN Verification:**
+### Module 2: Unified Mobile App - Practitioner Experience (Doctors & Nurses in Same App)
+* **In-App Role Switch & Credential Onboarding:**
+  * Single app with seamless profile switching into Practitioner Mode.
   * Upload practicing license (MDCN for doctors, NMCN for nurses), government ID, and specialty profile for admin vetting before going online.
 * **Availability Toggle & House-Call Alerts:**
-  * One-tap `Available for House Calls` / `Offline` toggle.
+  * One-tap Available for House Calls / Offline toggle.
   * Audible dispatch alerts showing patient neighborhood, distance, reported symptoms, and net consultation payout.
 * **Turn-by-Turn Navigation & Visit Progression:**
   * One-tap Google Maps navigation handoff to the patient's home.
-  * Step-by-step visit status: `Accepted` ➔ `En Route` ➔ `Arrived (Verify Patient PIN)` ➔ `Consultation Completed`.
+  * Step-by-step visit status: Accepted -> En Route -> Arrived (Verify Patient PIN) -> Consultation Completed.
 * **Post-Visit Clinical Summary & Earnings Wallet:**
   * Quick mobile form to log brief visit observations/recommendations for the patient's record.
   * Live earnings wallet tracking completed visits, platform commission deductions, and bank payout withdrawals.
@@ -51,7 +54,7 @@ By focusing exclusively on physical house-call requests rather than video teleme
 ---
 
 ## 3. PROPOSED TECHNICAL ARCHITECTURE
-* **Mobile Applications:** **React Native (Expo)** compiled for both **Android** (`.apk`/`.aab`) and **iOS** (`.ipa`) using a unified role-based codebase (Patient Mode & Practitioner Mode).
+* **Single Unified Mobile Application:** One unified **React Native (Expo)** application published to **Google Play Store** (.apk/.aab) and **Apple App Store** (.ipa) with dynamic role-based interfaces (Patient View & Practitioner Workspace inside one app).
 * **Admin Operations Dashboard:** **Next.js (React)** with Tailwind CSS for fast desktop and tablet oversight.
 * **Backend API & Live Tracking Engine:** **Node.js (NestJS)** hosted on **Railway** with WebSockets for real-time practitioner GPS streaming and instant dispatch notifications.
 * **Database & Secure Document Storage:** **PostgreSQL** on Railway for encrypted user/visit records, paired with **Cloudflare R2** for practitioner license storage.
@@ -64,13 +67,13 @@ By focusing exclusively on physical house-call requests rather than video teleme
 
 | Infrastructure / Service | Purpose | Estimated Initial Cost |
 | :--- | :--- | :--- |
-| **Cloud Server & Database (Railway)** | Runs backend API, live GPS sockets, and PostgreSQL | **$10.00 - $20.00 / month** |
-| **Document & Media Storage (Cloudflare R2)** | Stores practitioner licenses and profile photos | **Free tier / ~$5.00 / month** |
-| **Push Notifications (Firebase)** | Instant house-call alerts and arrival updates | **$0.00 (Free unlimited tier)** |
+| **Cloud Server & Database (Railway)** | Runs backend API, live GPS sockets, and PostgreSQL | **.00 - .00 / month** |
+| **Document & Media Storage (Cloudflare R2)** | Stores practitioner licenses and profile photos | **Free tier / ~.00 / month** |
+| **Push Notifications (Firebase)** | Instant house-call alerts and arrival updates | **.00 (Free unlimited tier)** |
 | **SMS OTP & Safety Alerts (Termii)** | User verification and arrival security notifications | **Pay-as-you-go (~₦5.00 per SMS)** |
 | **Payment Gateway Processing** | Paystack / Moniepoint local checkout processing | **1.5% capped local processing fee** |
-| **Custom Domain & SSL (Cloudflare)** | Brand domain (.com or .ng) with SSL protection | **~$15.00 - $25.00 / year** |
-| **Google Play & Apple Store Accounts** | App publishing fees ($25 one-off Google / $99/yr Apple) | **$25.00 / $99.00** |
+| **Custom Domain & SSL (Cloudflare)** | Brand domain (.com or .ng) with SSL protection | **~.00 - .00 / year** |
+| **Google Play & Apple Store Accounts** | Single app publishing fees ( one-off Google / /yr Apple) | **.00 / .00** |
 
 ---
 
@@ -80,6 +83,6 @@ By focusing exclusively on physical house-call requests rather than video teleme
 * **Project Delivery Timeline:** **4 to 5 Weeks**
 
 ### Milestone Payment Schedule
-* **50% Mobilization Deposit (₦275,000):** Paid upon agreement signing. Covers UI/UX design for Patient & Practitioner flows, database architecture, and React Native environment setup.
+* **50% Mobilization Deposit (₦275,000):** Paid upon agreement signing. Covers UI/UX design for single unified app (Patient & Practitioner modes), database architecture, and React Native environment setup.
 * **30% Functional Staging Milestone (₦165,000):** Paid upon delivery of working house-call booking flow, Paystack checkout, live GPS practitioner tracking, arrival PIN verification, and admin vetting console on staging.
-* **20% Production Handover & Go-Live (₦110,000):** Paid upon delivery of production Android/iOS builds, live admin web deployment, payment gateway verification, and staff onboarding.
+* **20% Production Handover & Go-Live (₦110,000):** Paid upon delivery of production unified Android/iOS app builds, live admin web deployment, payment gateway verification, and staff onboarding.

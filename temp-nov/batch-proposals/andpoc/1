@@ -1,0 +1,39 @@
+# PRODUCT DEVELOPMENT PROPOSAL - OPTION 1: FOUNDATION
+**Project:** ANDPOC Institutional Mobile App & Centralized Web Admin Dashboard  
+**Target Entities:** ANDPOC Royal Schools (Nursery, Primary, Secondary) & ANDPOC Universal Study Center (Andpoc University)  
+**Target Delivery:** Cross-Platform Mobile App (Android & iOS via React Native / Expo) + Web Admin Management Console (Next.js)  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Date:** November 18, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To launch the official **ANDPOC Mobile Application (Android & iOS)** alongside a centralized **Web Admin Management Console**, uniting **ANDPOC Royal Schools** (Nursery, Primary, Secondary), **ANDPOC Universal Study Center (Andpoc University)**, and the **ANDPOC Standard Educational Programs** under one digital ecosystem.
+
+This foundational tier establishes digital admissions intake, curriculum directories, automated fee checkout, and real-time push broadcast communications to parents and students.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: ANDPOC Mobile App (Android & iOS via React Native / Expo)
+* **Dual-Wing Institutional Hub:** Distinct in-app portals for **ANDPOC Royal Schools (K-12)** and **ANDPOC Universal Study Center (Higher Education)** highlighting accredited faculties, academic calendars, and campus locations.
+* **ANDPOC Standard Curriculum Directory:** Structured prospectus outlining Nursery, Primary, Secondary, and Tertiary academic curriculum structures.
+* **Digital Admission Application Flow:** Prospective parents and students complete admission questionnaires, upload passport photographs and credentials, and track admission status in real time.
+* **Instant Mobile Fee Checkout (Paystack / Moniepoint):** Secure in-app fee payments for application forms and termly tuition via debit cards, bank transfers, and USSD with digital payment receipts.
+* **Direct Broadcast & Push Notifications:** Instant broadcast notifications informing parents and students about school resumptions, entrance examinations, PTA assemblies, and official institutional announcements.
+
+### Module 2: Centralized Web Admin Management Console (Next.js)
+* **Admissions & Applicant Review Desk:** Review submitted admissions, verify uploaded student credentials, approve candidates, and issue automated digital admission letters.
+* **Curriculum & Academic Calendar Manager:** Update program offerings, class tiers, session calendars, and tuition schedules without technical assistance.
+* **Bursary Payment & Ledger Overview:** Monitor processed admission and tuition payments with exportable financial reports.
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & COMMERCIAL TERMS
+* **Technology Stack:** Single React Native (Expo) codebase for Android and iOS + Next.js 15 Web Console + Node.js (NestJS) API + PostgreSQL on Railway + Cloudflare R2 media storage.
+* **Delivery Timeline:** **3 to 4 Weeks**
+* **Total Development Investment:** **₦700,000**
+  * *50% Mobilization Deposit:* **₦350,000**
+  * *30% Functional Staging Milestone:* **₦210,000**
+  * *20% Final Production Handover & Go-Live:* **₦140,000**

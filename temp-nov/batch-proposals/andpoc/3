@@ -1,0 +1,56 @@
+# PRODUCT DEVELOPMENT PROPOSAL - OPTION 3: ENTERPRISE LMS & CBT
+**Project:** ANDPOC Enterprise Academic ERP, Digital Curriculum LMS & CBT Mobile Ecosystem  
+**Target Entities:** ANDPOC Royal Schools, ANDPOC Universal Study Center & ANDPOC Standard Educational Programs  
+**Target Delivery:** Full Mobile App (Android & iOS) + Web Admin/Bursary ERP + Custom E-Learning & CBT Platform  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Date:** November 18, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To deliver the flagship digital campus ecosystem that digitizes not only school administration and fees, but the **ANDPOC Standard Educational Curriculum** itself. This tier enables blended and distance learning for Universal Study Center students, timed Computer-Based Testing (CBT), digital video/audio lectures, and interactive e-learning accessible through mobile devices and web browsers.
+
+This comprehensive tier contains **all capabilities of Proposal Option 1 and Option 2** (Admissions, Curriculum, Paystack Fees, Push Notifications, K-12 Report Cards, University CGPA/Transcripts, Automated Virtual Accounts, and Staff Portals) supplemented with a full-fledged Learning Management System (LMS) and examination engine.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: Foundational Admissions & Hub (All Features of Proposal Option 1)
+* Dual-Wing Institutional Hub (Royal Schools & Universal Study Center).
+* Prospectus and Curriculum Directory for Nursery through Tertiary tiers.
+* Digital Admission Application Engine with document/photo uploads.
+* Paystack / Moniepoint mobile payment gateway integration.
+* Instant push notification broadcasts for parents, students, and staff.
+
+### Module 2: Multi-Institutional Academic ERP & Bursary (All Features of Proposal Option 2)
+* **Dual Academic Engines:**
+  * K-12 termly report cards with CA/Exam breakdown and psychomotor ratings.
+  * University semester course registrations, credit-unit weights, and automated GPA/CGPA computation.
+* **Automated Bursary Engine:** Dedicated virtual account reconciliation, real-time fee defaulter tracking, and financial ledgers.
+* **Multi-Role Staff Portals:** Teacher attendance marking, CA grade uploads, and Super-Admin cross-campus oversight.
+
+### Module 3: ANDPOC Digital Curriculum & E-Learning LMS (Option 3 Expansion)
+* **Digital Curriculum Repository:** Structured in-app delivery of the ANDPOC Standard Educational Programs:
+  * High-definition video lectures streamed securely via Cloudflare Stream.
+  * Downloadable weekly lecture notes (PDFs), course slides, and audio recordings for offline study.
+  * Weekly syllabus and scheme-of-work progression trackers.
+* **Assignment & Coursework Submission Desk:** Students upload homework, project essays, and assignments via mobile app or web; teachers/lecturers evaluate, mark, and return feedback directly within the platform.
+
+### Module 4: Computer-Based Testing (CBT) & Examination Engine (Option 3 Expansion)
+* **Automated CBT Testing Desk:** Timed objective multiple-choice and short-answer exams for both secondary school mock exams and tertiary mid-semester assessments.
+* **Question Bank & Randomization:** Anti-cheat randomization of questions and answer options per student with countdown timer locks.
+* **Instant Auto-Grading & Sync:** Objective tests graded immediately upon submission with test scores synced straight into the academic CA and result computation engine.
+
+### Module 5: Enterprise Command Center & Analytics (Option 3 Expansion)
+* Unified analytics tracking student LMS engagement, video watch completion rates, CBT pass percentages, and cross-campus revenue performance.
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & COMMERCIAL TERMS
+* **Technology Stack:** Single React Native (Expo) Student/Parent/Staff mobile app + Next.js 15 Web ERP & LMS Portals + Node.js (NestJS) API + PostgreSQL + Redis caching + Cloudflare R2 & Video Streaming.
+* **Delivery Timeline:** **8 to 9 Weeks**
+* **Total Development Investment:** **₦2,200,000**
+  * *40% Mobilization Deposit:* **₦880,000**
+  * *40% Functional Staging Milestone:* **₦880,000**
+  * *20% Final Production Handover & Go-Live:* **₦440,000**

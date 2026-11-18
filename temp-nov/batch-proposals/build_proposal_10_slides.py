@@ -516,12 +516,12 @@ html_content = f"""<!DOCTYPE html>
     <div class="cover-center">
       <div class="cover-category">Healthcare Dispatch &amp; Clinical Operations Technology</div>
       <h1 class="cover-title">On-Demand Home-Visit Medical Consultation Platform</h1>
-      <p class="cover-subtitle">Direct Physical Doctor &amp; Nurse House-Call Dispatch, Live GPS Provider Tracking, Secure Arrival Verification PIN, and Full Clinical Operations Oversight.</p>
+      <p class="cover-subtitle">Single Unified Mobile App for Patients &amp; Practitioners, Direct House-Call Dispatch, Live GPS Tracking, Arrival Verification PIN, and Central Web Operations.</p>
     </div>
     <div class="cover-footer">
       <div>
         <div class="cover-meta-label">Client Target Delivery</div>
-        <div class="cover-meta-val">iOS &amp; Android Apps + Web Console</div>
+        <div class="cover-meta-val">1 Unified App (iOS &amp; Android) + Web Admin</div>
       </div>
       <div>
         <div class="cover-meta-label">Turnkey Investment</div>
@@ -561,12 +561,12 @@ html_content = f"""<!DOCTYPE html>
           </ul>
         </div>
         <div class="card card-navy">
-          <div class="card-title">Complete Turnkey Ecosystem</div>
-          <p class="card-desc">We engineer three unified applications connected through a high-speed real-time dispatch backend:</p>
+          <div class="card-title">Single App Architecture</div>
+          <p class="card-desc">Both patients and healthcare practitioners share <strong>one unified mobile application</strong> with seamless role switching:</p>
           <ul class="bullet-list">
-            <li><strong>Patient Mobile App:</strong> Fast request flow, upfront pricing, map tracking.</li>
-            <li><strong>Practitioner Mobile App:</strong> Availability toggle, navigation handoff, earnings.</li>
-            <li><strong>Medical Operations Console:</strong> License vetting, live safety radar, ledger.</li>
+            <li><strong>Patient Workspace:</strong> Instant booking, upfront fees, live en-route tracking.</li>
+            <li><strong>Practitioner Mode:</strong> Availability toggle, navigation handoff, earnings.</li>
+            <li><strong>Web Operations Console:</strong> License vetting, live safety radar, ledger.</li>
           </ul>
         </div>
       </div>
@@ -591,25 +591,25 @@ html_content = f"""<!DOCTYPE html>
     <div class="slide-body">
       <div class="grid-4">
         <div class="card card-accent">
-          <div class="card-title">MDCN / NMCN Vetting</div>
-          <p class="card-desc">Rigorous credential verification gate preventing unauthorized practitioners from receiving requests.</p>
+          <div class="card-title">Single Shared App</div>
+          <p class="card-desc">Patients and practitioners download one app. Vetted doctors switch into Practitioner Mode directly.</p>
         </div>
         <div class="card card-navy">
+          <div class="card-title">MDCN / NMCN Gate</div>
+          <p class="card-desc">Rigorous credential verification gate preventing unauthorized practitioners from receiving requests.</p>
+        </div>
+        <div class="card card-accent">
           <div class="card-title">Live GPS En Route</div>
           <p class="card-desc">Patients track assigned medical practitioners on an interactive live map in real time.</p>
         </div>
-        <div class="card card-accent">
-          <div class="card-title">Arrival Security PIN</div>
-          <p class="card-desc">4-digit verification code exchanged at the door ensuring patient and practitioner safety.</p>
-        </div>
         <div class="card card-navy">
-          <div class="card-title">Instant Card &amp; Transfer</div>
-          <p class="card-desc">Paystack &amp; Moniepoint integration for guaranteed upfront fees and instant wallet settlement.</p>
+          <div class="card-title">Doorstep PIN</div>
+          <p class="card-desc">4-digit verification code exchanged at the door ensuring patient and practitioner safety.</p>
         </div>
       </div>
       <div class="highlight-banner">
-        <div><strong>High Reliability Architecture:</strong> Unified cross-platform React Native code ensures feature parity between Android and iOS.</div>
-        <div class="badge-accent">Fast Deployment</div>
+        <div><strong>High Efficiency Architecture:</strong> Publishing a single mobile application halves store submission friction and simplifies user acquisition.</div>
+        <div class="badge-accent">Single App Publishing</div>
       </div>
     </div>
     <div class="slide-footer">
@@ -640,7 +640,7 @@ html_content = f"""<!DOCTYPE html>
         <div class="flow-step">
           <div class="flow-step-num">Step 2</div>
           <div class="flow-step-title">Pay &amp; Dispatch</div>
-          <div class="flow-step-desc">Upfront payment secured via Paystack/Moniepoint; nearest available doctor alerted.</div>
+          <div class="flow-step-desc">Upfront payment secured via Paystack/Moniepoint; nearest available doctor alerted in-app.</div>
         </div>
         <div class="flow-arrow">&rarr;</div>
         <div class="flow-step">
@@ -662,12 +662,12 @@ html_content = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SLIDE 5: MODULE 1 - PATIENT MOBILE APP -->
+  <!-- SLIDE 5: MODULE 1 - PATIENT MODE -->
   <div class="slide">
     <div class="slide-header">
       <div class="header-left">
         <div class="slide-num">04 | Mobile Experience</div>
-        <div class="slide-title">Module 1: Patient Mobile App</div>
+        <div class="slide-title">Module 1: Unified App - Patient Mode</div>
       </div>
       <div class="header-right">
         <img src="{logo_data_uri}" alt="Logo">
@@ -707,12 +707,12 @@ html_content = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SLIDE 6: MODULE 2 - PRACTITIONER APP -->
+  <!-- SLIDE 6: MODULE 2 - PRACTITIONER MODE -->
   <div class="slide">
     <div class="slide-header">
       <div class="header-left">
         <div class="slide-num">05 | Mobile Experience</div>
-        <div class="slide-title">Module 2: Practitioner Mobile App</div>
+        <div class="slide-title">Module 2: Unified App - Practitioner Mode</div>
       </div>
       <div class="header-right">
         <img src="{logo_data_uri}" alt="Logo">
@@ -723,8 +723,8 @@ html_content = f"""<!DOCTYPE html>
         <div class="card card-accent">
           <div class="card-title">License &amp; Credentials</div>
           <ul class="bullet-list">
+            <li>In-app switch to Practitioner Workspace.</li>
             <li>Upload MDCN / NMCN practicing license.</li>
-            <li>Government ID and facial verification.</li>
             <li>Admin verification badge before dispatch.</li>
           </ul>
         </div>
@@ -805,9 +805,9 @@ html_content = f"""<!DOCTYPE html>
     <div class="slide-body">
       <div class="grid-4">
         <div class="card card-accent">
-          <div class="card-title">Mobile Apps</div>
+          <div class="card-title">Single App</div>
           <p class="card-desc"><strong>React Native &amp; Expo</strong></p>
-          <p class="card-desc" style="margin-top:6px; font-size:12.5px;">Unified role-based codebase compiled into native Android and iOS applications.</p>
+          <p class="card-desc" style="margin-top:6px; font-size:12.5px;">One codebase serving both Patients and Practitioners on Android &amp; iOS via role switching.</p>
         </div>
         <div class="card card-navy">
           <div class="card-title">Web Portal</div>
@@ -879,7 +879,7 @@ html_content = f"""<!DOCTYPE html>
           </tr>
           <tr>
             <td><strong>App Store Accounts (Google &amp; Apple)</strong></td>
-            <td>Official patient and practitioner mobile app distribution</td>
+            <td>Single unified mobile application publishing on Play Store &amp; App Store</td>
             <td><strong>$25 one-off (Google) / $99/yr (Apple)</strong></td>
           </tr>
         </tbody>
@@ -910,7 +910,7 @@ html_content = f"""<!DOCTYPE html>
           <div style="font-size: 14px; color: #CBD5E1;">Turnkey Engineering &bull; 4 to 5 Weeks Timeline</div>
           <div style="margin-top: 18px; text-align: left; background: rgba(255,255,255,0.06); padding: 14px 18px; border-radius: 8px;">
             <div style="font-size: 12.5px; color: #FCD34D; font-weight: 700; margin-bottom: 4px;">Investment Inclusions:</div>
-            <div style="font-size: 12px; color: #E2E8F0; line-height: 1.45;">Patient &amp; Practitioner Mobile Apps (Android &amp; iOS), Medical Operations Console, Real-time GPS sockets, and 30-day post-launch warranty.</div>
+            <div style="font-size: 12px; color: #E2E8F0; line-height: 1.45;">Single Unified Mobile App (Patient &amp; Practitioner Modes for Android &amp; iOS), Medical Operations Web Console, Real-time GPS sockets, and 30-day warranty.</div>
           </div>
         </div>
         <div class="card card-accent" style="display:flex; flex-direction:column; justify-content:center;">
@@ -933,7 +933,7 @@ html_content = f"""<!DOCTYPE html>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <div>
                 <div style="font-weight:700; color:var(--navy);">20% Handover &amp; Go-Live</div>
-                <div style="font-size:12px; color:var(--muted);">Production mobile builds, live admin web &amp; staff onboarding</div>
+                <div style="font-size:12px; color:var(--muted);">Production unified mobile builds, live admin web &amp; staff onboarding</div>
               </div>
               <div style="font-weight:800; font-size:16px; color:var(--navy);">&#8358;110,000</div>
             </div>
@@ -963,7 +963,7 @@ html_content = f"""<!DOCTYPE html>
         <div class="card card-accent">
           <div class="card-title">Phase 1: Setup</div>
           <div class="flow-step-num" style="text-align:left; margin-bottom:8px;">Week 1</div>
-          <p class="card-desc">UI/UX prototype Figma screens for patient and practitioner modes, DB schema design, and server provisioning.</p>
+          <p class="card-desc">UI/UX prototype Figma screens for unified app modes, DB schema design, and server provisioning.</p>
         </div>
         <div class="card card-navy">
           <div class="card-title">Phase 2: Booking</div>
@@ -978,7 +978,7 @@ html_content = f"""<!DOCTYPE html>
         <div class="card card-navy">
           <div class="card-title">Phase 4: Launch</div>
           <div class="flow-step-num" style="text-align:left; margin-bottom:8px;">Week 5</div>
-          <p class="card-desc">Full end-to-end integration testing, payment verification, app store build generation, and team handover.</p>
+          <p class="card-desc">Full end-to-end integration testing, payment verification, single app store build generation, and handover.</p>
         </div>
       </div>
     </div>
@@ -1061,9 +1061,6 @@ all_text = ""
 for idx, page in enumerate(doc):
     text = page.get_text()
     all_text += text
-    title_line = [line.strip() for line in text.splitlines() if line.strip()][:2]
-    rect = page.rect
-    print(f"  Slide {idx+1}: {int(rect.width)}x{int(rect.height)}pt | {len(text)} chars | {' - '.join(title_line)}")
 
 print("  Has Trade Infrastructure:", "trade infrastructure" in all_text.lower())
 print("  Has Sales Cowboy MS:", "sales cowboy" in all_text.lower())

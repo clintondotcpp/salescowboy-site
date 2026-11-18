@@ -1,0 +1,55 @@
+# PRODUCT DEVELOPMENT PROPOSAL - OPTION 2: MULTI-INSTITUTIONAL ERP
+**Project:** ANDPOC Unified Multi-Institutional Academic & Bursary Mobile ERP  
+**Target Entities:** ANDPOC Royal Schools (K-12) & ANDPOC Universal Study Center (Higher Education)  
+**Target Delivery:** Cross-Platform Student/Parent/Staff Mobile App (Android & iOS) + Multi-Role Web Admin & Bursary Dashboard  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Date:** November 18, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To engineer a complete academic management mobile app and web ERP built specifically to handle the structural differences between **K-12 term-based schooling** (ANDPOC Royal Schools) and **credit-unit/semester-based tertiary education** (ANDPOC Universal Study Center) in one unified system.
+
+This tier encompasses **all foundational features from Proposal Option 1** (Dual-wing mobile hub, digital admissions engine, curriculum directory, Paystack/Moniepoint checkout, and push notifications) while adding complete academic report generation, automated bursary reconciliation, and staff management portals.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: Complete Foundational Ecosystem (All Features of Proposal Option 1)
+* **Dual-Wing Institutional Hub:** Separate mobile wings for Royal Schools (K-12) and Universal Study Center (University).
+* **Digital Curriculum Directory:** Full syllabus prospectus for Nursery, Primary, Secondary, and Tertiary education.
+* **In-App Admission Intake:** Digital candidate registration, passport/credential uploads, and status tracking.
+* **Mobile Payment Engine:** Instant card, transfer, and USSD payments via Paystack / Moniepoint with digital receipts.
+* **Real-Time Push Notifications:** Instant broadcast alerts to parents and students for campus announcements and schedules.
+* **Central Web Admin Desk:** Applicant review, curriculum configuration, and transaction ledgers.
+
+### Module 2: Dual-Architecture Academic & Result Engine (Option 2 Expansion)
+* **K-12 Engine (ANDPOC Royal Schools - Nursery, Primary, Secondary):**
+  * Class and arm allocations (JSS1-SSS3, Primary 1-6, Nursery).
+  * Continuous Assessment (CA 30% / 40%) + Examination score entry by subject teachers.
+  * Behavioral, affective, and psychomotor trait ratings with teacher/principal remarks.
+  * Automated **Termly Report Cards** generated as downloadable, watermarked PDFs viewable inside the mobile app.
+* **Tertiary / Study Center Engine (ANDPOC Universal Study Center / Andpoc University):**
+  * Faculty, Department, and Level management (100L - 400L+).
+  * Semester course registration and credit-unit weighting.
+  * Automated **GPA and CGPA computation** (5-point Nigerian university standard) with digital transcript and result sheet previews.
+
+### Module 3: Bursary & Automated Fee Reconciliation (Option 2 Expansion)
+* **Dynamic Multi-Tier Fee Structures:** Configure distinct tuition, lab, development, and uniform fees across classes and study centers.
+* **Dedicated Virtual Bank Accounts:** Automated virtual account numbers generated per student for instant bank app transfers with automatic reconciliation.
+* **Debtor & Revenue Ledger:** Real-time financial dashboard tracking collected fees, outstanding balances, partial payments, and defaulter lists.
+
+### Module 4: Multi-Role Web Admin & Staff Management (Option 2 Expansion)
+* **Super-Admin Master Console:** Comprehensive cross-campus oversight of enrollment figures, student performance, staff roles, and institutional cash flow.
+* **Teacher & Lecturer Portal:** Attendance registers, assignment distribution, continuous assessment uploads, and syllabus tracking.
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & COMMERCIAL TERMS
+* **Technology Stack:** Single React Native (Expo) multi-role mobile app + Next.js 15 Web ERP + Node.js (NestJS) API + PostgreSQL Multi-Tenant Database on Railway + Cloudflare R2 secure document storage.
+* **Delivery Timeline:** **5 to 6 Weeks**
+* **Total Development Investment:** **₦1,350,000**
+  * *40% Mobilization Deposit:* **₦540,000**
+  * *40% Functional Staging Milestone:* **₦540,000**
+  * *20% Final Production Handover & Go-Live:* **₦270,000**

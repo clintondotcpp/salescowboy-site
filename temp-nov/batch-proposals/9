@@ -1,0 +1,84 @@
+# PRODUCT ARCHITECTURE & DEVELOPMENT PROPOSAL
+**Project:** Smart Real Estate Marketplace & Pay-Per-Location Unlock Platform  
+**Target Delivery:** Cross-Platform Mobile App (Android & iOS via React Native / Expo) + Responsive Web Platform (Next.js) + Master Admin Moderation Console  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Date:** November 18, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE
+To design, engineer, and launch a high-trust Nigerian real estate marketplace (Web + Mobile App) that eliminates exorbitant physical "inspection fees" and middleman frustration.
+
+Instead of paying ₦5,000+ upfront for an agent to drive them around, property seekers browse verified listings from the comfort of their homes and pay a micro-fee (e.g., **₦100 per property unlock**) to reveal exact street locations, map directions, and direct contact details, while automatically sharing revenue with verified Landlords and Agents.
+
+---
+
+## 2. USER JOURNEY & SYSTEM ARCHITECTURE
+
+### A. Unified Role-Based Experience (Web & Mobile App)
+Rather than forcing users to download multiple confusing apps, the platform operates as a **single unified Web & Mobile application** that dynamically adapts its interface based on the user's selected role:
+1. **Property Seekers:** Renters & Buyers.
+2. **Property Listers:** Explicitly separated and badged as **Direct Landlords** or **Verified Agents** (covering Rentals, Leases, and Outright Sales).
+
+### B. Hierarchical Location & Intent Funnel
+1. **Step 1 - State & City Selection:** Users immediately select their target hub (e.g., *Owerri / Imo State, Abuja FCT, Port Harcourt*).
+2. **Step 2 - Intent Selection:** Choose between *Rent an Apartment, Buy Property, Lease Commercial Space,* or *List a Property*.
+3. **Step 3 - Hyper-Local Drill-Down:** Narrow results down by **Local Government Area (LGA)** and **Specific Ward / Neighborhood** (e.g., *Owerri Municipal -> Ikenegbu / Aladinma / New Owerri*).
+
+---
+
+## 3. FUNCTIONAL SYSTEM MODULES
+
+### Module 1: Seeker Discovery & Location Unlock Engine
+* **Masked Preview Browsing:** Seekers view high-resolution property photos, rent/sale price, apartment specs, amenities, and lister badge (*Direct Landlord* vs. *Agent*) for free. Exact street address, GPS pin, and phone contacts remain locked.
+* **Location Credit Wallet (Paystack / Moniepoint):**
+  * Top up unlock credits in bundles (e.g., *₦1,000 for 10 location unlocks*, *₦5,000 for 50 location unlocks*).
+  * One-tap **Unlock Location (1 Credit)** instantly reveals the exact street address, interactive map pin, and direct WhatsApp/Call button for that property.
+* **Unlocked History Vault:** Previously unlocked properties remain permanently accessible in the seeker's account without paying twice.
+
+### Module 2: Landlord & Agent Partner Dashboard
+* **Distinct Role Verification:** Separate onboarding tracks for **Direct Landlords** and **Agents**, displaying clear trust badges on every listing.
+* **Property Upload Studio:** Easy mobile/web upload tool for apartment photos, video walkthroughs, pricing, LGA/Ward tagging, and exact map pin placement.
+* **Automated Commission Wallet:**
+  * Every time a seeker unlocks a listing, the system automatically credits the lister's configured commission percentage (e.g., 30% or 50% of the unlock fee) into their in-app wallet.
+  * Track total views, total unlocks, pending earnings, available withdrawable balance, and bank withdrawal requests.
+
+### Module 3: Master Admin Moderation & Anti-Fraud Console
+* **Listing Approval Queue:** No property goes live to the public until reviewed and approved by the Admin team.
+* **Dynamic Commission & Pricing Control:** Adjust unlock credit prices (e.g., ₦100 per unlock) and modify revenue split percentages (e.g., 50/50 or 70/30) at any time from the dashboard.
+* **Anti-Fraud & Penalty Governance:**
+  * Seekers can flag fake, overpriced, or already-rented listings directly after unlocking.
+  * Admin tools to suspend dishonest agents, deduct penalty fines directly from partner wallets, and refund unlock credits to affected seekers.
+* **Payout & Financial Ledger:** Approve partner wallet withdrawals and monitor total platform revenue across states and LGAs.
+
+---
+
+## 4. PROPOSED TECHNICAL STACK
+* **Mobile Applications (Android & iOS):** **React Native (Expo)** - Single clean codebase compiled for both Google Play Store and Apple App Store.
+* **Web Marketplace & Admin Console:** **Next.js (React)** with Tailwind CSS - Fast, SEO-indexed web platform optimized for low-data Nigerian mobile networks.
+* **Backend API & Ledger Engine:** **Node.js (NestJS)** hosted on **Railway**, handling automated wallet splits, credit deductions, and role permissions.
+* **Database & Media Storage:** **PostgreSQL** for double-entry wallet accuracy, paired with **Cloudflare R2** for zero-egress property photo storage.
+* **Payments:** **Paystack / Moniepoint** for instant card, bank transfer, and USSD wallet funding.
+
+---
+
+## 5. DEDICATED DELIVERY TIMELINE & ANTI-ABANDONMENT GUARANTEE
+To ensure complete transparency, accountability, and zero delays, this project is executed under a **strict 5-Week Dedicated Delivery Schedule** with weekly live staging deployments, allowing you to test progress every week before releasing subsequent milestone payments.
+
+* **Week 1 - Architecture & UI/UX Blueprint:** Complete Figma wireframes for Seeker, Landlord/Agent, and Admin interfaces + database schema sign-off.
+* **Week 2 - Core Marketplace & Location Funnel:** State -> LGA -> Ward filtering, Landlord vs. Agent listing upload flow, and Admin approval queue deployed on staging.
+* **Week 3 - Credit Wallet & Automated Split Engine:** Paystack integration, ₦100 location unlock masking/unmasking logic, and automated agent wallet commission splits.
+* **Week 4 - Anti-Fraud Controls & Mobile App Builds:** Penalty/dispute system, withdrawal requests, and React Native Android/iOS staging builds.
+* **Week 5 - QA Testing, Store Submission & Go-Live:** End-to-end payment testing, security hardening, production cloud launch, and 60 days of free post-launch technical support.
+
+---
+
+## 6. COMMERCIAL INVESTMENT & MILESTONE PAYMENT SCHEDULE
+
+* **Total Development Investment:** **₦850,000**
+* **Project Delivery Timeline:** **5 Weeks**
+
+### Milestone Payment Structure (50 / 30 / 20)
+* **50% Mobilization Deposit (₦425,000):** Paid upon contract signing to initiate UI/UX design, server setup, and core architecture.
+* **30% Functional Staging Milestone (₦255,000):** Paid at the end of Week 3 after you personally test the live staging web/mobile app (location search, listing upload, and credit unlock flow).
+* **20% Final Production Handover & Go-Live (₦170,000):** Paid in Week 5 upon final delivery of production Android/iOS builds, live web deployment, payment gateway verification, and admin training.

@@ -1142,3 +1142,4 @@ print("  Has 700,000:", "700,000" in all_text)
 print("  Has 1,350,000:", "1,350,000" in all_text)
 print("  Has 2,200,000:", "2,200,000" in all_text)
 print("  Has em/en dash:", bool(re.search(r"[\u2013\u2014]", all_text)))
+

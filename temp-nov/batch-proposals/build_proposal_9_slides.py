@@ -24,9 +24,9 @@ css = """
     :root {
       --navy: #0F172A;
       --navy-light: #1E293B;
-      --emerald: #059669;
-      --emerald-dark: #047857;
-      --emerald-light: #D1FAE5;
+      --accent: #D97706;
+      --accent-dark: #B45309;
+      --accent-light: #FEF3C7;
       --amber: #D97706;
       --pearl: #F8FAFC;
       --white: #FFFFFF;
@@ -84,9 +84,9 @@ css = """
       text-decoration: none;
     }
 
-    .btn-emerald {
-      background: var(--emerald);
-      border-color: var(--emerald-dark);
+    .btn-accent {
+      background: var(--accent);
+      border-color: var(--accent-dark);
       color: #FFFFFF;
     }
 
@@ -113,7 +113,7 @@ css = """
 
     /* Cover Slide */
     .slide-cover {
-      background: linear-gradient(135deg, #061A14 0%, #0F172A 55%, #132E27 100%);
+      background: linear-gradient(135deg, #090E1A 0%, #0F172A 55%, #1E293B 100%);
       color: #FFFFFF;
       padding: 18mm 22mm;
     }
@@ -122,7 +122,7 @@ css = """
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(16, 185, 129, 0.35);
+      border-bottom: 1px solid rgba(217, 119, 6, 0.35);
       padding-bottom: 6mm;
     }
 
@@ -149,14 +149,14 @@ css = """
 
     .cover-brand-sub {
       font-size: 12px;
-      color: #34D399;
+      color: #F59E0B;
       font-weight: 500;
     }
 
     .cover-pill {
-      background: rgba(16, 185, 129, 0.18);
-      border: 1px solid #34D399;
-      color: #34D399;
+      background: rgba(217, 119, 6, 0.18);
+      border: 1px solid #F59E0B;
+      color: #F59E0B;
       padding: 7px 16px;
       border-radius: 20px;
       font-size: 12px;
@@ -175,7 +175,7 @@ css = """
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #34D399;
+      color: #F59E0B;
       margin-bottom: 5mm;
     }
 
@@ -199,7 +199,7 @@ css = """
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      border-top: 1px solid rgba(16, 185, 129, 0.35);
+      border-top: 1px solid rgba(217, 119, 6, 0.35);
       padding-top: 6mm;
     }
 
@@ -207,7 +207,7 @@ css = """
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      color: #34D399;
+      color: #F59E0B;
       font-weight: 700;
       margin-bottom: 3px;
     }
@@ -226,7 +226,7 @@ css = """
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 3.5px solid var(--emerald);
+      border-bottom: 3.5px solid var(--accent);
     }
 
     .sh-kicker {
@@ -234,7 +234,7 @@ css = """
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.3px;
-      color: #34D399;
+      color: #F59E0B;
       margin-bottom: 2px;
     }
 
@@ -248,7 +248,7 @@ css = """
     .sh-tag {
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(52, 211, 153, 0.45);
-      color: #34D399;
+      color: #F59E0B;
       font-size: 12px;
       font-weight: 700;
       padding: 5px 12px;
@@ -326,7 +326,7 @@ css = """
     }
 
     .card-emerald {
-      border-top: 4px solid var(--emerald);
+      border-top: 4px solid var(--accent);
     }
 
     .card-amber {
@@ -346,7 +346,7 @@ css = """
 
     .badge-num {
       background: var(--navy);
-      color: #34D399;
+      color: #F59E0B;
       font-size: 12px;
       font-weight: 800;
       padding: 3px 8px;
@@ -381,7 +381,7 @@ css = """
       content: "▪";
       position: absolute;
       left: 0;
-      color: var(--emerald);
+      color: var(--accent);
       font-weight: 900;
       font-size: 17px;
     }
@@ -390,7 +390,7 @@ css = """
     .stat-box {
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-left: 5px solid var(--emerald);
+      border-left: 5px solid var(--accent);
       border-radius: 9px;
       padding: 6.5mm 7mm;
     }
@@ -406,7 +406,7 @@ css = """
     .stat-label {
       font-size: 13px;
       font-weight: 800;
-      color: var(--emerald-dark);
+      color: var(--accent-dark);
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -447,7 +447,7 @@ css = """
     .flow-arr {
       font-size: 20px;
       font-weight: 900;
-      color: var(--emerald);
+      color: var(--accent);
     }
 
     /* Tables */
@@ -485,13 +485,13 @@ css = """
     }
 
     .callout {
-      background: #ECFDF5;
-      border: 1px solid #A7F3D0;
-      border-left: 5px solid var(--emerald);
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-left: 5px solid var(--accent);
       padding: 5mm 7mm;
       border-radius: 8px;
       font-size: 15px;
-      color: #065F46;
+      color: #92400E;
       line-height: 1.55;
     }
 
@@ -579,7 +579,7 @@ slide_1 = f"""
       </div>
       <div>
         <div class="cf-label">Total Development Investment</div>
-        <div class="cf-val" style="color: #34D399;">₦850,000 (50/30/20 Milestones)</div>
+        <div class="cf-val" style="color: #F59E0B;">₦850,000 (50/30/20 Milestones)</div>
       </div>
       <div>
         <div class="cf-label">Delivery Timeline</div>
@@ -610,7 +610,7 @@ slide_2 = slide_chrome(
         </ul>
       </div>
       <div class="card card-emerald">
-        <div class="card-title" style="color: var(--emerald);"><span class="badge-num">✓</span>The Platform Solution</div>
+        <div class="card-title" style="color: var(--accent);"><span class="badge-num">✓</span>The Platform Solution</div>
         <ul class="big-list">
           <li><strong>Free Previews from Home:</strong> Seekers browse high-resolution photos, exact pricing, and verified amenities at zero cost.</li>
           <li><strong>Micro-Fee Location Unlock:</strong> Pay just <strong>₦100</strong> to unmask the exact street address, interactive map pin, and direct WhatsApp contact.</li>
@@ -701,19 +701,19 @@ slide_5 = slide_chrome(
     </div>
     <div class="flow-wrap">
       <div class="flow-node">
-        <div style="font-size:12px; color:var(--emerald); text-transform:uppercase; margin-bottom:4px;">Step 1</div>
+        <div style="font-size:12px; color:var(--accent); text-transform:uppercase; margin-bottom:4px;">Step 1</div>
         State &amp; City Selection<br>
         <span style="font-size:12px; color:var(--muted); font-weight:normal;">(e.g., Owerri / Imo, Abuja FCT, Port Harcourt)</span>
       </div>
       <div class="flow-arr">&rarr;</div>
       <div class="flow-node">
-        <div style="font-size:12px; color:var(--emerald); text-transform:uppercase; margin-bottom:4px;">Step 2</div>
+        <div style="font-size:12px; color:var(--accent); text-transform:uppercase; margin-bottom:4px;">Step 2</div>
         Transaction Intent<br>
         <span style="font-size:12px; color:var(--muted); font-weight:normal;">(Rent, Buy, Commercial Lease, or List)</span>
       </div>
       <div class="flow-arr">&rarr;</div>
       <div class="flow-node">
-        <div style="font-size:12px; color:var(--emerald); text-transform:uppercase; margin-bottom:4px;">Step 3</div>
+        <div style="font-size:12px; color:var(--accent); text-transform:uppercase; margin-bottom:4px;">Step 3</div>
         Hyper-Local Drill-Down<br>
         <span style="font-size:12px; color:var(--muted); font-weight:normal;">(LGA &rarr; Specific Ward / Neighborhood)</span>
       </div>
@@ -943,17 +943,17 @@ slide_11 = slide_chrome(
         <tr>
           <td><strong>1. Mobilization Deposit</strong></td>
           <td>Agreement signing. Covers React Native Expo environment setup, database schema design, and complete UI/UX interface layouts for mobile app, web marketplace, and admin console.</td>
-          <td><strong style="color:var(--emerald-dark); font-size:15px;">50% (₦425,000)</strong></td>
+          <td><strong style="color:var(--accent-dark); font-size:15px;">50% (₦425,000)</strong></td>
         </tr>
         <tr>
           <td><strong>2. Functional Staging</strong></td>
           <td>Delivery of live location search funnel, listing upload studio, credit wallet funding, ₦100 unlock unmasking logic, and agent commission splits on staging.</td>
-          <td><strong style="color:var(--emerald-dark); font-size:15px;">30% (₦255,000)</strong></td>
+          <td><strong style="color:var(--accent-dark); font-size:15px;">30% (₦255,000)</strong></td>
         </tr>
         <tr>
           <td><strong>3. Production Go-Live</strong></td>
           <td>Delivery of production-ready Android/iOS app builds, live deployment of the web marketplace, custom domain configuration, and administrative handover.</td>
-          <td><strong style="color:var(--emerald-dark); font-size:15px;">20% (₦170,000)</strong></td>
+          <td><strong style="color:var(--accent-dark); font-size:15px;">20% (₦170,000)</strong></td>
         </tr>
       </tbody>
     </table>
@@ -1050,7 +1050,7 @@ html_content = f"""<!DOCTYPE html>
   <div class="toolbar">
     <div class="toolbar-title">Smart Real Estate Marketplace | Pay-Per-Location Unlock Platform Deck (16:9)</div>
     <div class="toolbar-actions">
-      <button class="btn btn-emerald" onclick="window.print()">Print / Save Slide PDF</button>
+      <button class="btn btn-accent" onclick="window.print()">Print / Save Slide PDF</button>
       <a href="/Smart-Real-Estate-Pay-Per-Location-Unlock-Proposal.pdf" class="btn" download>Download Slide PDF</a>
     </div>
   </div>
@@ -1113,3 +1113,4 @@ print("  Has Trade Infrastructure:", "Trade Infrastructure" in full)
 print("  Has Sales Cowboy MS:", "Sales Cowboy Marketing Solutions" in full)
 print("  Has 850,000:", "850,000" in full)
 print("  Has em/en dash:", "\u2014" in full or "\u2013" in full)
+

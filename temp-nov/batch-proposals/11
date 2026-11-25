@@ -1,0 +1,55 @@
+# PRODUCT ARCHITECTURE & COMMERCIAL PROPOSAL
+**Project:** Jamsador Integrated B2B Trade, Sales & Logistics Web Ecosystem (Phase 1 MVP)  
+**Client:** Jamsador Distribution & Market Solutions Limited  
+**Target Delivery:** Unified Mobile-Responsive Web Application (Next.js + NestJS + PostgreSQL)  
+**Prepared By:** Sales Cowboy Marketing Solutions  
+**Date:** November 25, 2026  
+
+---
+
+## 1. PROJECT OBJECTIVE & LEAN LAUNCH STRATEGY
+To engineer and launch a fast, unified, cloud-based web platform connecting **Jamsador TradeHub**, **Jamsador SalesHub**, and **Jamsador LogisticsHub** under a single backend, database, and administrative command center.
+
+To ensure rapid time-to-market and cost efficiency for your initial rollout, all three hubs are delivered as **integrated, role-based workspaces inside one mobile-responsive web application**, allowing manufacturers, distributors, wholesalers, retailers, field reps, and warehouse/logistics staff to collaborate seamlessly from any smartphone, tablet, or desktop browser without app store delays.
+
+---
+
+## 2. FUNCTIONAL SYSTEM MODULES
+
+### Core Foundation: Unified Identity & Master Admin Console
+* **Single Sign-On & Role-Based Access (RBAC):** Centralized user onboarding and permission controls across Manufacturers/Suppliers, Distributors, Wholesalers, Retailers, Field Sales Reps, and Warehouse/Logistics Partners.
+* **Central Administration Desk:** Executive dashboard monitoring total wholesale orders, active inventory levels, field rep performance, pending deliveries, and revenue summaries.
+
+### Module 1: Jamsador TradeHub (B2B Wholesale Marketplace)
+* **Bulk Wholesale Catalog:** Categorized product listings displaying wholesale unit/carton pricing, Minimum Order Quantities (MOQ), and live stock availability.
+* **B2B Cart & Checkout (Paystack / Bank Transfer):** Streamlined bulk ordering for wholesalers and retailers with automated digital invoice and receipt generation.
+* **Quick Reorder History:** One-click reordering from past purchase invoices to speed up repeat restocking.
+
+### Module 2: Jamsador SalesHub (Field Sales & Distributor Portal)
+* **Mobile-Friendly Field Rep Workspace:** Field representatives log into the web app on their phones during market runs to register new retailers and place orders directly on a customer's behalf.
+* **Retailer & Distributor Directory:** Simple CRM log tracking assigned customer accounts, order history, and visit notes.
+* **Sales & Commission Tracker:** Automated tally of closed orders and earned sales commissions per representative.
+
+### Module 3: Jamsador LogisticsHub (Inventory & Dispatch Coordination)
+* **Warehouse Stock & Batch Ledger:** Real-time stock-in / stock-out inventory management with automatic stock deduction upon order confirmation and low-stock alerts.
+* **Digital Waybill & Dispatch Assignment:** Assign confirmed orders to warehouse packers and logistics/delivery partners with printable waybills.
+* **4-Stage Delivery Tracking & Confirmation:** Status updates across `Order Confirmed` ➔ `Packed` ➔ `Out for Delivery` ➔ `Delivered` (with recipient delivery code/confirmation).
+
+---
+
+## 3. TECHNICAL ARCHITECTURE & RUNNING COSTS
+* **Frontend Web Ecosystem:** **Next.js 15 (React)** with Tailwind CSS - Ultra-fast, mobile-responsive interface optimized for low-data mobile networks.
+* **Unified Backend & Database:** **Node.js (NestJS)** + **PostgreSQL** hosted on **Railway**, ensuring a single source of truth across all three hubs.
+* **Payments & Media:** **Paystack** for online collections + **Cloudflare R2** for product images and waybill/invoice documents.
+* **Third-Party Operational Costs (Paid Directly by Client):** Cloud server/DB hosting (~$10-$15/mo on Railway), custom domain (~₦15,000/yr), and standard 1.5% capped Paystack processing fees.
+
+---
+
+## 4. DELIVERY ROADMAP & COMMERCIAL INVESTMENT
+
+* **Total Development Investment:** **₦650,000**
+* **Project Delivery Timeline:** **3 to 4 Weeks**
+
+### Milestone Payment Schedule
+* **60% Mobilization Deposit (₦390,000):** Paid upon contract signing. Covers database architecture, unified role permissions, UI/UX setup, and core product/inventory engine.
+* **40% Final Handover & Go-Live (₦260,000):** Paid upon live staging demonstration of TradeHub ordering, SalesHub field rep logging, LogisticsHub waybill/delivery tracking, payment verification, and production launch.
